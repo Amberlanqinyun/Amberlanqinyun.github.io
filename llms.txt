@@ -14,6 +14,7 @@ Key facts:
 Site structure:
 - / (landing): the service offer, CRO-focused. Book a discovery call.
 - /work.html: full body of work, organised by a framework, the go-to-market machine, into three pillars: Strategy, Demand engines, Built to ship.
+- /cv.html: Amber Lan's full CV and portfolio, with every shipped project linked to its open-source GitHub repository, grouped into Featured, AI & marketing systems, Product & web apps, and Wellbeing.
 - /tools/pricing.html: a free interactive pricing model.
 
 Tools (free, public):
