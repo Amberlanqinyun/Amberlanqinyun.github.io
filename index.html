@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow AI · Marketing engineer for startups</title>
+<meta name="description" content="You build the product. Flow AI builds the pipeline: a marketing engineer plus AI systems for go-to-market strategy, inbound, outbound, and content. Qualified leads, live in days, from $997.">
+<meta name="theme-color" content="#0E0E0D">
+<link rel="canonical" href="https://www.flowai.co.nz/">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<meta property="og:title" content="Flow AI · Marketing engineer for startups">
+<meta property="og:description" content="You build the product. Flow AI builds the pipeline. Strategy plus working systems: inbound, outbound, content, analytics. Qualified leads, not activity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.flowai.co.nz/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.flowai.co.nz/#flowai",
+      "name": "Flow AI",
+      "url": "https://www.flowai.co.nz/",
+      "email": "amber.lan.growth.digital@gmail.com",
+      "description": "Marketing engineering for startups: go-to-market strategy plus the inbound, outbound, and content systems that generate qualified leads.",
+      "founder": { "@id": "https://www.flowai.co.nz/#amber" },
+      "areaServed": ["New Zealand", "Australia", "Remote"],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Starter sprint", "price": "997", "priceCurrency": "NZD", "description": "One campaign or system, live within days." },
+        { "@type": "Offer", "name": "Growth sprint", "price": "2500", "priceCurrency": "NZD", "description": "Go-to-market strategy plus two systems built and launched." },
+        { "@type": "Offer", "name": "Enterprise sprint", "price": "4500", "priceCurrency": "NZD", "description": "Full go-to-market build: strategy, inbound, outbound, content, analytics." },
+        { "@type": "Offer", "name": "Retainer", "price": "1500", "priceCurrency": "NZD", "description": "Monthly: systems operated, reported, and improved." }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.flowai.co.nz/#amber",
+      "name": "Amber Lan",
+      "jobTitle": "Marketing Engineer",
+      "description": "Marketing engineer. Founder of Flow AI. Builds go-to-market strategy and the AI systems that run it: content engines, inbound and outbound automation, analytics.",
+      "email": "mailto:amber.lan.growth.digital@gmail.com",
+      "url": "https://www.flowai.co.nz/#behind",
+      "worksFor": { "@id": "https://www.flowai.co.nz/#flowai" },
+      "sameAs": [
+        "https://github.com/Amberlanqinyun",
+        "https://www.linkedin.com/in/amberlan/"
+      ],
+      "knowsAbout": ["Marketing Engineering", "Go-to-Market Strategy", "AI Content Systems", "SEO", "Generative Engine Optimization", "Outbound Automation", "Lead Generation", "Python", "TypeScript", "Swift", "Claude Code"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a marketing engineer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the software that executes it. Instead of a strategist who hands you a deck and an agency that bills hours, one person designs your positioning and ships the inbound, outbound, and content systems that run it." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Flow AI different from a marketing agency?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Agencies sell hours across a team you never meet. Flow AI is one marketing engineer directing specialized AI agents, so the work is systems that keep running, not deliverables that stop when the invoice does. First assets are live within 48 to 72 hours, and every engagement has a 30-day money-back guarantee." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost to hire a marketing engineer through Flow AI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sprints are one-time: Starter at $997, Growth at $2,500, Enterprise at $4,500. Ongoing operation is a $1,500 per month retainer. All pricing is NZD, with NZ and AU timezone support and a 30-day money-back guarantee." }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can marketing systems be live?",
+          "acceptedAnswer": { "@type": "Answer", "text": "First assets ship within 48 to 72 hours of the discovery call. A full go-to-market build, strategy plus inbound, outbound, content, and analytics, is live within weeks, not quarters." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with startups outside New Zealand and Australia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Flow AI is based in New Zealand and works remotely with startups anywhere. NZ and AU get timezone-native support." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who actually does the work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "I do. I'm Amber Lan, a marketing engineer and the founder of Flow AI. I write the strategy and I build the systems, directing specialized AI agents for scale. No account managers, no handoffs." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  /* Google Sans Flex, self-hosted variable font (latin) */
+  @font-face {
+    font-family: "Google Sans Flex";
+    src: url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /*
+    Flow AI. Novie palette on a dark editorial canvas.
+    Architecture: wide 1120px stage for display moments, narrow measures for reading.
+    Hierarchy by colour (bright cream vs dim) and by scale (display numerals, giant type).
+    One motif: flow lines. They draw themselves in, and the hero artery runs forever.
+    Warm ink #0E0E0D, never pure black. Cream #FAF8F3, never pure white. Film grain at 4%.
+  */
+  :root {
+    --bg:    #0E0E0D;
+    --panel: #171715;
+    --cream: #FAF8F3;
+    --fg:    #FAF8F3;
+    --dim:   rgba(250,248,243,0.58);
+    --mute:  rgba(250,248,243,0.40);
+    --hair:  rgba(250,248,243,0.11);
+    --ink:   #0E0E0D;
+    --gsf: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* Type scale: wide ratio steps so each level is unmistakable.
+       display ~76 · h2 ~40 · h3 21 · lede 22 · body 16.5 · label 11 */
+    --fs-display: clamp(48px, 7.2vw, 78px);
+    --fs-h2:      clamp(27px, 3.2vw, 38px);
+    --fs-h3:      21px;
+    --fs-lede:    clamp(19px, 1.7vw, 22px);
+    --fs-body:    16.5px;
+    --fs-label:   11px;
+    --r-m: 24px; --r-s: 999px; /* surfaces: continuous 24px curves · interactive: pills */
+    --t-fast: 150ms; --t-normal: 200ms; --t-slow: 300ms;
+    --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1); /* strong ease-out for entrances */
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--dim);
+    font-family: var(--gsf);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--cream); color: var(--ink); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 48px); }
+  a { color: inherit; text-decoration: none; }
+  b, strong { color: var(--fg); font-weight: 600; }
+
+  /* Film grain: fixed, non-interactive, 4% */
+  .grain {
+    position: fixed; inset: -50%; z-index: 80; pointer-events: none; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Scroll progress hairline (native scroll timeline; absent gracefully elsewhere) */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      .progress {
+        position: fixed; top: 0; left: 0; height: 2px; width: 100%; z-index: 90;
+        background: var(--cream); opacity: 0.45;
+        transform-origin: 0 50%; transform: scaleX(0);
+        animation: prog linear both; animation-timeline: scroll();
+      }
+      @keyframes prog { to { transform: scaleX(1); } }
+    }
+  }
+
+  /* ---------- Nav: sticky, quiet ---------- */
+  .nav-bar {
+    position: sticky; top: 0; z-index: 70;
+    background: rgba(14,14,13,0.75);
+    backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--hair);
+  }
+  .nav {
+    display: flex; justify-content: space-between; align-items: center; height: 60px;
+  }
+  .nav .name { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.02em; font-size: 16px; color: var(--fg); white-space: nowrap; }
+  .nav .name svg { width: 21px; height: 21px; color: var(--cream); }
+  .nav nav a { color: var(--mute); margin-left: 28px; font-size: 13.5px; font-weight: 500; letter-spacing: 0.01em; transition: color var(--t-normal) var(--ease); }
+  .nav nav a:hover { color: var(--fg); }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; isolation: isolate; }
+  .hero-body { padding: clamp(96px, 15vh, 180px) 0 0; text-align: center; }
+  .eyebrow {
+    font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mute); font-weight: 500; margin-bottom: 44px;
+  }
+  h1 {
+    /* Sized so the longest line holds on one line at every viewport */
+    font-weight: 600; font-size: var(--fs-display);
+    line-height: 1.02; letter-spacing: -0.045em; color: var(--fg);
+    margin: 0 auto;
+  }
+  h1 .line { display: block; }
+  h1 .off { color: var(--mute); }
+  .hero-sub {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 36px; margin-top: clamp(36px, 5.5vh, 56px);
+  }
+  .lede {
+    font-weight: 300; font-size: var(--fs-lede);
+    line-height: 1.5; letter-spacing: -0.01em; color: var(--dim);
+    max-width: 42ch; margin: 0 auto; text-wrap: balance;
+  }
+  .cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .btn {
+    display: inline-block; padding: 17px 34px; font-size: 15px; font-weight: 500;
+    letter-spacing: -0.005em; white-space: nowrap; border-radius: var(--r-s);
+    transition: background-color var(--t-normal) var(--ease), color var(--t-normal) var(--ease), transform 160ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { transform: scale(1.03); }
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn.primary { background: var(--cream); color: var(--ink); }
+  .btn.primary:hover { background: rgba(250,248,243,0.9); }
+  .btn.ghost { color: var(--fg); background: rgba(250,248,243,0.08); }
+  .btn.ghost:hover { background: rgba(250,248,243,0.14); }
+  :focus-visible { outline: 2px solid rgba(250,248,243,0.7); outline-offset: 3px; }
+
+  /* Hero pipeline: draws once, then the flow runs forever */
+  .hero-fig { margin-top: clamp(56px, 9vh, 96px); }
+  .hero-fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
+  .hero-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    padding: 34px 0 60px; border-top: 1px solid var(--hair); text-align: center;
+  }
+  .hero-meta b {
+    display: block; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--mute); margin-bottom: 10px; font-weight: 500;
+  }
+  .hero-meta span { font-size: 14px; color: var(--dim); line-height: 1.5; display: inline-block; max-width: 30ch; }
+
+  /* ---------- Sections ---------- */
+  section { padding: clamp(110px, 17vh, 200px) 0 0; }
+  section p { text-wrap: pretty; }
+  h2 {
+    font-weight: 600; font-size: var(--fs-h2);
+    line-height: 1.1; letter-spacing: -0.03em; color: var(--fg);
+    margin-bottom: clamp(48px, 8vh, 88px); max-width: 20ch; text-wrap: balance;
+  }
+  h2 .off { color: var(--mute); }
+  a.go {
+    font-weight: 500; font-size: 15px; color: var(--fg);
+    border-bottom: 1px solid rgba(250,248,243,0.35);
+    transition: border-color var(--t-normal) var(--ease);
+  }
+  a.go:hover { border-color: var(--cream); }
+
+  /* Statement: words brighten as you scroll through them (fail-safe: full opacity without support) */
+  .statement {
+    font-weight: 300; font-size: clamp(25px, 3.3vw, 42px);
+    line-height: 1.38; letter-spacing: -0.022em; color: var(--mute);
+    max-width: 26ch;
+  }
+  .statement .w { display: inline-block; }
+  .statement .w.hi { font-weight: 500; color: var(--fg); }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .statement .w {
+        animation: wordin linear both;
+        animation-timeline: view();
+        animation-range: cover calc(4% + var(--i) * 1.3%) cover calc(18% + var(--i) * 1.3%);
+      }
+      @keyframes wordin { from { opacity: 0.16; } to { opacity: 1; } }
+    }
+  }
+
+  /* Results: display numerals */
+  .result {
+    display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: clamp(28px, 5vw, 72px); align-items: center;
+    padding: clamp(40px, 6vh, 60px) 0; border-top: 1px solid var(--hair);
+  }
+  .result:last-of-type { border-bottom: 1px solid var(--hair); }
+  .result .num {
+    font-weight: 600; font-size: clamp(48px, 7vw, 92px); letter-spacing: -0.05em;
+    line-height: 0.95; color: var(--fg); font-feature-settings: "tnum";
+    transition: font-weight 900ms var(--ease) 200ms;
+  }
+  .reveal.pre .num { font-weight: 200; }
+  .result .spark { width: min(150px, 34%); height: auto; color: var(--cream); opacity: 0.9; margin-bottom: 18px; }
+  .result .what { font-size: 16px; color: var(--dim); max-width: 40ch; }
+  .result .who { margin-top: 14px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); font-weight: 500; }
+  .results-note { margin-top: 36px; font-size: 14.5px; color: var(--mute); max-width: 54ch; }
+
+  /* Offer: sticky heading left, rows right */
+  .offer-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+  .offer-left { position: sticky; top: 120px; }
+  .offer-left h2 { margin-bottom: 24px; }
+  .offer-left p { font-size: 16px; color: var(--mute); max-width: 34ch; }
+  .offer-row { padding: 34px 0; border-top: 1px solid var(--hair); }
+  .offer-row:last-of-type { border-bottom: 1px solid var(--hair); }
+  .offer-row h3 { font-size: var(--fs-h3); font-weight: 600; letter-spacing: -0.02em; color: var(--fg); line-height: 1.3; margin-bottom: 10px; }
+  .offer-row p { font-size: 16px; color: var(--dim); max-width: 50ch; }
+
+  /* Process: a connected line of three nodes */
+  .process-line { margin-bottom: 40px; }
+  .process-line svg { display: block; width: 100%; height: auto; color: var(--cream); }
+  .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 56px); }
+  .process .pw { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mute); font-weight: 500; margin-bottom: 10px; }
+  .process .ph { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; color: var(--fg); margin-bottom: 12px; }
+  .process p { font-size: 15px; color: var(--dim); max-width: 30ch; }
+
+  /* Pricing */
+  .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .price {
+    background: var(--panel); border: 1px solid rgba(250,248,243,0.08); border-radius: var(--r-m);
+    padding: clamp(30px, 3.8vw, 48px);
+    box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
+    transition: transform var(--t-slow) var(--ease), border-color var(--t-slow) var(--ease);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .price:hover { transform: translateY(-4px) scale(1.005); border-color: rgba(250,248,243,0.22); }
+  }
+  .price .pn { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--mute); margin-bottom: 20px; }
+  .price .pv { font-weight: 600; font-size: clamp(38px, 4.4vw, 54px); letter-spacing: -0.04em; color: var(--fg); font-feature-settings: "tnum"; line-height: 1; }
+  .price .pv small { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--mute); }
+  .price p { margin-top: 14px; font-size: 15px; color: var(--dim); max-width: 36ch; }
+  .price.anchor { background: var(--cream); border-color: var(--cream); }
+  .price.anchor .pn { color: rgba(14,14,13,0.55); }
+  .price.anchor .pv { color: var(--ink); }
+  .price.anchor .pv small { color: rgba(14,14,13,0.55); }
+  .price.anchor p { color: rgba(14,14,13,0.75); }
+  .prices-note { margin-top: 28px; font-size: 14px; color: var(--mute); }
+
+  /* Proof: alternating compositions */
+  .case { margin-bottom: clamp(80px, 12vh, 130px); }
+  .case:last-child { margin-bottom: 0; }
+  .case.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 88px); align-items: center; }
+  .case.split.flip .fig { order: -1; }
+  .fig {
+    background: var(--panel); border: 1px solid rgba(250,248,243,0.08); border-radius: var(--r-m);
+    overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
+  }
+  .fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
+  .fig path, .spark path, .process-line path { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 800ms var(--ease); }
+  .fig circle, .process-line circle { transition: opacity var(--t-slow) var(--ease) 500ms; }
+  .undrawn path { stroke-dashoffset: 1 !important; transition: none !important; }
+  .undrawn circle { opacity: 0 !important; transition: none !important; }
+  .case.wide .fig { margin-bottom: 34px; }
+  .case-duo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); margin-bottom: clamp(80px, 12vh, 130px); }
+  .case-duo .fig { margin-bottom: 26px; }
+  .proof-more { margin-top: clamp(52px, 8vh, 88px); padding-top: clamp(44px, 6vh, 64px); border-top: 1px solid var(--hair); text-align: center; }
+  .proof-more p { color: var(--dim); max-width: 48ch; margin: 0 auto 26px; font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); }
+  .role { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mute); font-weight: 500; margin-bottom: 16px; }
+  .case h3 { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 14px; color: var(--fg); }
+  .case p { font-size: 16px; color: var(--dim); max-width: 46ch; }
+  .case .go { display: inline-block; margin-top: 20px; }
+  .note { margin-top: 18px; font-size: 14px; color: var(--mute); }
+
+  /* Behind */
+  .behind-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+  .bio { font-weight: 300; font-size: clamp(19px, 2.2vw, 25px); line-height: 1.5; letter-spacing: -0.014em; color: var(--dim); max-width: 40ch; }
+  .bio b { font-weight: 500; }
+  .behind-list { list-style: none; }
+  .behind-list li { padding: 16px 0; border-top: 1px solid var(--hair); font-size: 15.5px; color: var(--dim); }
+  .behind-list li:last-child { border-bottom: 1px solid var(--hair); }
+  .links { margin-top: 28px; display: flex; gap: 24px; }
+  .hiring {
+    margin-top: clamp(64px, 9vh, 96px); padding: clamp(32px, 4.5vw, 56px);
+    background: var(--panel); border: 1px solid var(--hair); border-radius: var(--r-m);
+    display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap;
+  }
+  .hiring h3 { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; color: var(--fg); margin-bottom: 8px; }
+  .hiring p { font-size: 15px; color: var(--dim); max-width: 46ch; }
+
+  /* FAQ */
+  .faq { max-width: 860px; }
+  .faq details { border-top: 1px solid var(--hair); }
+  .faq details:last-child { border-bottom: 1px solid var(--hair); }
+  .faq summary {
+    cursor: pointer; list-style: none; padding: 28px 44px 28px 0;
+    font-weight: 600; font-size: 18px; letter-spacing: -0.015em; color: var(--fg);
+    position: relative; transition: color var(--t-normal) var(--ease);
+  }
+  .faq summary:hover { color: var(--cream); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+    font-weight: 300; font-size: 24px; color: var(--mute);
+    transition: transform var(--t-normal) var(--ease);
+  }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq details p { padding: 0 0 30px; max-width: 56ch; font-size: 15.5px; color: var(--dim); }
+
+  /* End */
+  .end { position: relative; overflow: hidden; isolation: isolate; padding: clamp(130px, 20vh, 240px) 0 56px; text-align: center; }
+  .end h2, .end p { margin-left: auto; margin-right: auto; }
+  .end .end-meta { text-align: left; }
+  .end .bleed {
+    position: absolute; bottom: -30%; left: -14%; width: min(48vw, 520px); height: auto;
+    color: var(--cream); opacity: 0.05; z-index: -1; pointer-events: none; transform: rotate(180deg);
+  }
+  .end h2 { font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.045em; max-width: 16ch; margin-bottom: 0; }
+  .end p { margin: 32px auto 52px; font-weight: 300; font-size: var(--fs-lede); line-height: 1.5; color: var(--dim); max-width: 40ch; text-wrap: balance; }
+  .end-meta {
+    margin-top: clamp(90px, 14vh, 150px); padding-top: 30px;
+    border-top: 1px solid var(--hair);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--mute);
+  }
+  .end-meta a { transition: color var(--t-normal) var(--ease); }
+  .end-meta a:hover { color: var(--fg); }
+
+  /* ---------- Motion ---------- */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero .eyebrow, .hero h1 .line, .hero .lede, .hero .cta, .hero-meta {
+      opacity: 0; transform: translateY(22px);
+      animation: rise 560ms var(--ease-out) forwards;
+    }
+    .hero .eyebrow { animation-delay: 40ms; }
+    .hero h1 .line:nth-child(1) { animation-delay: 100ms; }
+    .hero h1 .line:nth-child(2) { animation-delay: 190ms; }
+    .hero .lede { animation-delay: 300ms; }
+    .hero .cta { animation-delay: 380ms; }
+    .hero-meta { animation-delay: 480ms; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+    /* Hero headline settles from light to full weight as it lands */
+    .hero h1 .line:nth-child(2) { animation-name: rise, weigh; animation-duration: 560ms, 900ms; animation-delay: 190ms, 190ms; animation-fill-mode: forwards, forwards; animation-timing-function: var(--ease-out), var(--ease-out); }
+    @keyframes weigh { from { font-weight: 250; } to { font-weight: 600; } }
+
+    /* Hero pipeline draws on load... */
+    .hero-fig path.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawin 1300ms var(--ease-out) 760ms forwards; }
+    @keyframes drawin { to { stroke-dashoffset: 0; } }
+    .hero-fig circle { opacity: 0; animation: appear 300ms var(--ease-out) 1700ms forwards; }
+    @keyframes appear { to { opacity: 1; } }
+    /* ...then the flow runs forever: dots drifting along the artery */
+    .hero-fig path.flow {
+      stroke-dasharray: 0.001 0.024; stroke-linecap: round; stroke-dashoffset: 0;
+      opacity: 0; animation: appear 600ms var(--ease) 2100ms forwards, drift 26s linear 2100ms infinite;
+    }
+    @keyframes drift { to { stroke-dashoffset: -1; } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-fig path.flow { display: none; }
+  }
+  /* Scroll reveal: content visible by default; JS applies .pre only when it can remove it. */
+  .reveal { transition: opacity 640ms var(--ease-out), transform 640ms var(--ease-out); }
+  .reveal.pre { opacity: 0; transform: translateY(20px); }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 760px) {
+    section { padding: 80px 0 0; }
+    .hero-sub { gap: 28px; }
+    .hero-meta { grid-template-columns: 1fr; gap: 22px; }
+    .result { grid-template-columns: 1fr; gap: 18px; }
+    .offer-grid, .behind-grid { grid-template-columns: 1fr; }
+    .offer-left { position: relative; top: 0; }
+    .process, .prices { grid-template-columns: 1fr; }
+    .process p { max-width: 46ch; }
+    .case.split { grid-template-columns: 1fr; }
+    .case.split.flip .fig { order: 0; }
+    .case-duo { grid-template-columns: 1fr; gap: 56px; }
+    .nav nav a { margin-left: 14px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+
+<div class="nav-bar">
+  <div class="wrap">
+    <header class="nav">
+      <span class="name">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/>
+          <path d="M2.5 12 H 21.5"/>
+          <path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
+        </svg>
+        Flow AI.
+      </span>
+      <nav>
+        <a href="work.html">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-body">
+      <div class="eyebrow">Marketing engineering for startups</div>
+      <h1><span class="line off">You build the product.</span><span class="line">Flow AI builds the pipeline.</span></h1>
+      <div class="hero-sub">
+        <p class="lede">One marketing engineer plus the AI systems that run your go-to-market. <b>Qualified leads within days.</b></p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
+          <a class="btn ghost" href="#proof">See the proof</a>
+        </div>
+      </div>
+      <!-- The pipeline: draws on load, then the flow never stops -->
+      <div class="hero-fig" aria-hidden="true">
+        <svg viewBox="0 0 1200 340">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path class="draw" pathLength="1" d="M60 170 H 430" opacity=".7"/>
+            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 60,  700 60  H 1120" opacity=".35"/>
+            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 115, 700 115 H 1120" opacity=".35"/>
+            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 170, 700 170 H 1120" opacity=".35"/>
+            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 225, 700 225 H 1120" opacity=".35"/>
+            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 280, 700 280 H 1120" opacity=".35"/>
+            <path class="flow" pathLength="1" stroke-width="3" d="M60 170 H 430 C 560 170, 560 60, 700 60 H 1120" opacity=".5"/>
+            <path class="flow" pathLength="1" stroke-width="3" d="M60 170 H 430 C 560 170, 560 280, 700 280 H 1120" opacity=".35"/>
+            <circle cx="430" cy="170" r="7"/>
+            <circle cx="1120" cy="60" r="5" opacity=".6"/><circle cx="1120" cy="115" r="5" opacity=".6"/>
+            <circle cx="1120" cy="170" r="5" opacity=".6"/><circle cx="1120" cy="225" r="5" opacity=".6"/>
+            <circle cx="1120" cy="280" r="5" opacity=".6"/>
+          </g>
+          <circle cx="60" cy="170" r="11" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="hero-meta">
+        <div><b>For</b><span>Early-stage startups with no marketing hire, and no time to make one.</span></div>
+        <div><b>Sets up</b><span>Positioning · inbound · outbound agents · content · analytics.</span></div>
+        <div><b>Terms</b><span>First assets live in 48 to 72 hours. 30-day money-back guarantee.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section id="problem">
+  <p class="statement"><span class="w" style="--i:0">The</span> <span class="w" style="--i:1">product</span> <span class="w" style="--i:2">is</span> <span class="w" style="--i:3">ready.</span> <span class="w hi" style="--i:4">The</span> <span class="w hi" style="--i:5">pipeline</span> <span class="w hi" style="--i:6">isn't.</span> <span class="w" style="--i:7">Founders</span> <span class="w" style="--i:8">sell</span> <span class="w" style="--i:9">by</span> <span class="w" style="--i:10">hand.</span> <span class="w" style="--i:11">Agencies</span> <span class="w" style="--i:12">quote</span> <span class="w" style="--i:13">in</span> <span class="w" style="--i:14">months.</span> <span class="w" style="--i:15">The</span> <span class="w" style="--i:16">first</span> <span class="w" style="--i:17">hire</span> <span class="w" style="--i:18">is</span> <span class="w" style="--i:19">two</span> <span class="w" style="--i:20">quarters</span> <span class="w" style="--i:21">away.</span> <span class="w hi" style="--i:22">What's</span> <span class="w hi" style="--i:23">missing</span> <span class="w hi" style="--i:24">is</span> <span class="w hi" style="--i:25">one</span> <span class="w hi" style="--i:26">person</span> <span class="w hi" style="--i:27">who</span> <span class="w hi" style="--i:28">can</span> <span class="w hi" style="--i:29">do</span> <span class="w hi" style="--i:30">strategy</span> <span class="w hi" style="--i:31">and</span> <span class="w hi" style="--i:32">ship</span> <span class="w hi" style="--i:33">code.</span></p>
+</section>
+
+<section id="results">
+  <h2 class="reveal">What changed <span class="off">for recent clients.</span></h2>
+  <div class="result reveal">
+    <div class="num">1.8x <span style="color:var(--mute)">to</span> 4.6x</div>
+    <div>
+      <svg class="spark" viewBox="0 0 150 54" aria-hidden="true">
+        <path pathLength="1" d="M4 46 L 40 40 L 78 30 L 116 14 L 146 7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="4" cy="46" r="2.5" fill="currentColor"/><circle cx="146" cy="7" r="4" fill="currentColor"/>
+      </svg>
+      <p class="what">Return on ad spend, after rebuilding account structure, creative, and landing pages.</p>
+      <div class="who">Paid media rebuild · Melbourne SaaS</div>
+    </div>
+  </div>
+  <div class="result reveal">
+    <div class="num">$47 <span style="color:var(--mute)">to</span> $11</div>
+    <div>
+      <svg class="spark" viewBox="0 0 150 54" aria-hidden="true">
+        <path pathLength="1" d="M4 8 L 40 13 L 78 27 L 116 41 L 146 47" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="4" cy="8" r="2.5" fill="currentColor"/><circle cx="146" cy="47" r="4" fill="currentColor"/>
+      </svg>
+      <p class="what">Cost per lead at the same volume, after channel and landing page rework.</p>
+      <div class="who">Channel and landing rework · Brisbane trades</div>
+    </div>
+  </div>
+  <div class="result reveal">
+    <div class="num">60% <span style="color:var(--mute)">less spend</span></div>
+    <div>
+      <svg class="spark" viewBox="0 0 150 54" aria-hidden="true">
+        <path pathLength="1" d="M4 27 L 52 32 L 100 42 L 146 47" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+        <path pathLength="1" d="M4 27 L 52 22 L 100 14 L 146 7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="146" cy="47" r="2.5" fill="currentColor" opacity=".4"/><circle cx="146" cy="7" r="4" fill="currentColor"/>
+      </svg>
+      <p class="what">Marketing spend down, lead volume up, after systems replaced retainers.</p>
+      <div class="who">Systems replacing retainers · Auckland ecommerce</div>
+    </div>
+  </div>
+  <p class="results-note reveal">Results from client engagements, 2025 to 2026. <b>References available on the discovery call</b>, so you hear it from them, not from me.</p>
+</section>
+
+<section id="offer">
+  <div class="offer-grid">
+    <div class="offer-left reveal">
+      <h2>What gets built<span class="off">, and what it changes.</span></h2>
+      <p>Five systems, one engineer. Each one exists to move a number you care about.</p>
+    </div>
+    <div>
+      <div class="offer-row reveal">
+        <h3>Go-to-market strategy.</h3>
+        <p>Positioning, ICP, message, and your first two channels. <b>A plan you can execute this month.</b></p>
+      </div>
+      <div class="offer-row reveal">
+        <h3>Inbound engine.</h3>
+        <p>Search and generative engine optimization from day one. <b>Found on Google, cited by ChatGPT.</b></p>
+      </div>
+      <div class="offer-row reveal">
+        <h3>Outbound agents.</h3>
+        <p>Research and personalized outreach, running daily. <b>Qualified meetings land on your calendar.</b></p>
+      </div>
+      <div class="offer-row reveal">
+        <h3>Content engine.</h3>
+        <p>One source becomes a month of on-brand posts. <b>Shipped on schedule.</b></p>
+      </div>
+      <div class="offer-row reveal">
+        <h3>Analytics.</h3>
+        <p>Tracking wired from the first visitor. <b>You know which channel pays.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <h2 class="reveal">How it runs.</h2>
+  <div class="process-line reveal" aria-hidden="true">
+    <svg viewBox="0 0 1024 40">
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <path pathLength="1" d="M8 20 H 1016" opacity=".3"/>
+        <circle cx="12" cy="20" r="6"/>
+        <circle cx="512" cy="20" r="6"/>
+        <circle cx="1012" cy="20" r="6"/>
+      </g>
+      <circle cx="12" cy="20" r="3" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="process">
+    <div class="reveal">
+      <div class="pw">Day one</div>
+      <div class="ph">Diagnose.</div>
+      <p>A 30-minute call. You get the go-to-market read in writing, either way.</p>
+    </div>
+    <div class="reveal">
+      <div class="pw">Within 72 hours</div>
+      <div class="ph">Build.</div>
+      <p>First assets live: positioning, pages, agents, tracking. Systems, not mockups.</p>
+    </div>
+    <div class="reveal">
+      <div class="pw">Ongoing</div>
+      <div class="ph">Run.</div>
+      <p>Reporting you can read in a minute. Clean handover when you hire.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="reveal">Pricing <span class="off">you don't have to ask for.</span></h2>
+  <div class="prices">
+    <div class="price reveal">
+      <div class="pn">Starter sprint</div>
+      <div class="pv">$997 <small>one-time</small></div>
+      <p>One campaign or one system, live within days.</p>
+    </div>
+    <div class="price anchor reveal">
+      <div class="pn">Growth sprint · most chosen</div>
+      <div class="pv">$2,500 <small>one-time</small></div>
+      <p>Strategy plus two systems, built and launched.</p>
+    </div>
+    <div class="price reveal">
+      <div class="pn">Enterprise sprint</div>
+      <div class="pv">$4,500 <small>one-time</small></div>
+      <p>The full build: strategy, inbound, outbound, content, analytics.</p>
+    </div>
+    <div class="price reveal">
+      <div class="pn">Retainer</div>
+      <div class="pv">$1,500 <small>per month</small></div>
+      <p>Systems operated, reported, improved. Cancel anytime.</p>
+    </div>
+  </div>
+  <p class="prices-note reveal">All prices NZD. NZ and AU timezone support. <b>30-day money-back guarantee</b> on every engagement.</p>
+</section>
+
+<section id="proof">
+  <h2 class="reveal">Proof, <span class="off">not promises.</span></h2>
+
+  <div class="case split reveal">
+    <div>
+      <div class="role">Pricing model · live, interactive</div>
+      <h3>A pricing strategy, built as a working economic model.</h3>
+      <p>Cost, customer value, and elasticity resolve to a profit-maximising price using the published Lerner rule, <b>strategy you can actually click, not a slide.</b> Built and hosted here.</p>
+      <a class="go" href="tools/pricing.html">Try the live model →</a>
+    </div>
+    <!-- Abstract diagram: a profit curve peaking at the optimum. -->
+    <div class="fig" aria-hidden="true">
+      <svg viewBox="0 0 800 480">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path pathLength="1" d="M110 420 H 690" opacity=".25" stroke-dasharray="5 5"/>
+          <path pathLength="1" d="M110 410 C 200 150, 270 130, 320 130 C 470 130, 560 320, 700 400" stroke-width="3" opacity=".9"/>
+        </g>
+        <circle cx="320" cy="130" r="9" fill="currentColor"/>
+        <circle cx="410" cy="158" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="case split flip reveal">
+    <div>
+      <div class="role">Go-to-market strategy · enterprise AI platform</div>
+      <h3>Three demand engines, one pipeline, one launch.</h3>
+      <p>A full go-to-market plan for an enterprise AI platform: outbound, inbound, and partnership engines feeding a single pipeline, sequenced toward one launch moment. <b>Positioning, message architecture, channel design, and the operating timeline</b>, built as a navigable deck.</p>
+      <div class="note">Sanitised case. Full walkthrough on request.</div>
+    </div>
+    <!-- Abstract diagram: three engines converge into one pipeline. -->
+    <div class="fig" aria-hidden="true">
+      <svg viewBox="0 0 800 620">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path pathLength="1" d="M150 150 C 320 150, 320 310, 470 310" opacity=".5"/>
+          <path pathLength="1" d="M150 310 H 470" opacity=".5"/>
+          <path pathLength="1" d="M150 470 C 320 470, 320 310, 470 310" opacity=".5"/>
+          <path pathLength="1" d="M490 310 H 690" stroke-width="3" opacity=".9"/>
+        </g>
+        <circle cx="150" cy="150" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="150" cy="310" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="150" cy="470" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="470" cy="310" r="12" fill="currentColor"/>
+        <circle cx="700" cy="310" r="6" fill="currentColor" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="proof-more reveal">
+    <p>These are two parts of a bigger machine, strategy, demand engines, and the software that runs them.</p>
+    <a class="btn ghost" href="work.html">See the full body of work →</a>
+  </div>
+</section>
+
+<section id="behind">
+  <div class="behind-grid">
+    <div>
+      <h2 class="reveal">Who you <span class="off">work with.</span></h2>
+      <!-- TODO: add a real headshot here when ready, in a .fig frame. A face measurably lifts conversion. -->
+      <p class="bio reveal">I'm <b>Amber Lan, a marketing engineer.</b> I write your strategy and I ship your systems. No account managers, no handoffs: <b>you work with me directly.</b></p>
+      <div class="links reveal">
+        <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a>
+        <a class="go" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <ul class="behind-list reveal">
+      <li><b>Strategy.</b> Positioning, offers, channel selection, brand voice.</li>
+      <li><b>Engineering.</b> Python, TypeScript, Swift, agentic AI tooling.</li>
+      <li><b>Track record.</b> A content engine, distribution tooling, and a shipped iOS app, built solo.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq">
+  <h2 class="reveal">Questions, <span class="off">answered straight.</span></h2>
+  <div class="faq reveal">
+    <details>
+      <summary>What is a marketing engineer?</summary>
+      <p>Someone who does two jobs that are usually split: writes the go-to-market strategy, and builds the software that executes it. One person designs your positioning and ships the inbound, outbound, and content systems that run it.</p>
+    </details>
+    <details>
+      <summary>How is Flow AI different from a marketing agency?</summary>
+      <p>Agencies sell hours across a team you never meet. Here, one marketing engineer directs specialized AI agents, so the work is systems that keep running, not deliverables that stop when the invoice does.</p>
+    </details>
+    <details>
+      <summary>What does it cost?</summary>
+      <p>Sprints are one-time: Starter at $997, Growth at $2,500, Enterprise at $4,500. Ongoing operation is $1,500 per month. All NZD, all with a 30-day money-back guarantee.</p>
+    </details>
+    <details>
+      <summary>How quickly can systems be live?</summary>
+      <p>First assets ship within 48 to 72 hours of the discovery call. A full go-to-market build is live within weeks, not quarters.</p>
+    </details>
+    <details>
+      <summary>Do you work outside New Zealand and Australia?</summary>
+      <p>Yes. Flow AI is based in New Zealand and works remotely with startups anywhere. NZ and AU get timezone-native support.</p>
+    </details>
+    <details>
+      <summary>Who actually does the work?</summary>
+      <p>I do. I'm Amber Lan, a marketing engineer and the founder of Flow AI. I write the strategy and I build the systems, directing specialized AI agents for scale. No account managers, no handoffs.</p>
+    </details>
+  </div>
+</section>
+
+</div>
+
+<div class="end" id="contact">
+  <svg class="bleed" viewBox="0 0 600 600" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="600" cy="0" r="120"/><circle cx="600" cy="0" r="210"/><circle cx="600" cy="0" r="300"/>
+      <circle cx="600" cy="0" r="390"/><circle cx="600" cy="0" r="480"/><circle cx="600" cy="0" r="570"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h2 class="reveal"><span class="off">Ready to build</span> the pipeline?</h2>
+    <p class="reveal">Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within two days</b>, before any commitment.</p>
+    <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
+    <div class="end-meta">
+      <span>© 2026 Flow AI · Amber Lan</span>
+      <span>amber.lan.growth.digital@gmail.com</span>
+      <span>
+        <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Lazy reveal + line-draw. Fail-safe by construction: everything is visible
+  // by default; hidden states apply only below the fold, only when
+  // IntersectionObserver exists, and an insurance timeout clears leftovers.
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var vh = window.innerHeight;
+  var pending = [];
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    if (el.getBoundingClientRect().top > vh * 0.95) {
+      el.classList.add('pre');
+      el.querySelectorAll('.fig, .spark, .process-line').forEach(function (f) { f.classList.add('undrawn'); });
+      if (el.classList.contains('fig') || el.classList.contains('process-line')) el.classList.add('undrawn');
+      pending.push(el);
+    }
+  });
+  var io = new IntersectionObserver(function (entries) {
+    var i = 0;
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        el.style.transitionDelay = (i * 70) + 'ms';
+        el.classList.remove('pre');
+        setTimeout(function () {
+          (el.classList.contains('undrawn') ? [el] : [].slice.call(el.querySelectorAll('.undrawn'))).forEach(function (f) {
+            void f.offsetWidth;
+            f.classList.remove('undrawn');
+          });
+        }, 200 + i * 70);
+        io.unobserve(el);
+        i++;
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+  pending.forEach(function (el) { io.observe(el); });
+  setTimeout(function () {
+    pending.forEach(function (el) {
+      el.classList.remove('pre');
+      el.classList.remove('undrawn');
+      el.querySelectorAll('.undrawn').forEach(function (f) { f.classList.remove('undrawn'); });
+    });
+  }, 15000);
+})();
+</script>
+</body>
+</html>

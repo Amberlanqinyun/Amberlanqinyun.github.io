@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing model · Flow AI</title>
+<meta name="description" content="A free interactive pricing model for startups: find your profit-maximising price from cost, customer value, and elasticity, using the published Lerner rule. Built by Amber Lan, Flow AI.">
+<meta name="theme-color" content="#0E0E0D">
+<link rel="canonical" href="https://www.flowai.co.nz/tools/pricing.html">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<meta property="og:title" content="Pricing model · Flow AI">
+<meta property="og:description" content="Find your profit-maximising price from cost, value, and elasticity. The published economics, made interactive.">
+<meta property="og:type" content="website">
+<style>
+  @font-face {
+    font-family: "Google Sans Flex";
+    src: url("../fonts/google-sans-flex-vf.woff2") format("woff2-variations");
+    font-weight: 100 900; font-style: normal; font-display: swap;
+  }
+  :root{
+    --bg:#0E0E0D; --panel:#171715; --cream:#FAF8F3; --fg:#FAF8F3;
+    --dim:rgba(250,248,243,0.58); --mute:rgba(250,248,243,0.40); --hair:rgba(250,248,243,0.11);
+    --ink:#0E0E0D;
+    --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --r-m:18px; --r-s:999px;
+    --t-fast:150ms; --t-normal:200ms; --t-slow:300ms;
+    --ease:cubic-bezier(0.2,0.8,0.2,1); --ease-out:cubic-bezier(0.23,1,0.32,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  ::selection{background:var(--cream);color:var(--ink);}
+  .wrap{max-width:920px;margin:0 auto;padding:0 clamp(24px,5vw,40px);}
+  a{color:inherit;text-decoration:none;}
+  b,strong{color:var(--fg);font-weight:600;}
+  @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;}}
+
+  .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.75);
+    backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
+  .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);}
+  .nav .name svg{width:21px;height:21px;color:var(--cream);}
+  .nav .back{color:var(--mute);font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
+  .nav .back:hover{color:var(--fg);}
+
+  .hero{padding:clamp(72px,12vh,120px) 0 clamp(40px,6vh,64px);}
+  .eyebrow{font-size:11.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:26px;}
+  h1{font-weight:600;font-size:clamp(36px,5.4vw,58px);line-height:1.03;letter-spacing:-0.04em;color:var(--fg);max-width:18ch;}
+  .lede{margin-top:26px;font-weight:300;font-size:clamp(18px,2vw,22px);line-height:1.5;letter-spacing:-0.01em;color:var(--dim);max-width:52ch;}
+  .lede b{font-weight:500;}
+  .byline{margin-top:26px;font-size:13.5px;color:var(--mute);}
+  .byline a{color:var(--fg);border-bottom:1px solid rgba(250,248,243,0.35);}
+
+  section{padding:clamp(48px,7vh,80px) 0;border-top:1px solid var(--hair);}
+  .step-k{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:14px;}
+  h2{font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-0.03em;line-height:1.1;color:var(--fg);margin-bottom:14px;}
+  section > .wrap > p, .sec-lead{color:var(--dim);max-width:60ch;margin-bottom:32px;font-size:16px;}
+  .sec-lead b{font-weight:500;}
+
+  .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:24px;}
+  .num{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:20px 22px;}
+  .num label{display:block;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px;line-height:1.5;}
+  .num input{width:100%;border:none;background:transparent;color:var(--fg);font-size:24px;font-weight:600;font-family:inherit;padding:0;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;}
+  .num input::placeholder{color:var(--mute);font-weight:400;font-size:16px;}
+  .num input:focus{outline:none;}
+  .num input:focus-visible{outline:none;}
+  .num.focus{border-color:rgba(250,248,243,0.4);}
+
+  .dials2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+  @media(max-width:640px){.dials2{grid-template-columns:1fr;}}
+  .dial{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:20px 24px;}
+  .dial .dl{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .dial .dn{font-size:13px;font-weight:600;letter-spacing:-0.01em;color:var(--fg);}
+  .dial .dv{font-size:18px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--fg);}
+  .dial .dd{font-size:12px;color:var(--mute);line-height:1.6;margin-top:10px;}
+  input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:3px;border-radius:2px;background:var(--hair);outline:none;margin:18px 0 4px;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--cream);cursor:pointer;border:3px solid var(--bg);}
+  input[type=range]::-moz-range-thumb{width:19px;height:19px;border-radius:50%;background:var(--cream);cursor:pointer;border:3px solid var(--bg);}
+
+  .readout{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:26px 30px;margin-bottom:24px;}
+  .stats{display:flex;flex-wrap:wrap;}
+  .stat{flex:1;min-width:150px;padding:0 26px;border-left:1px solid var(--hair);}
+  .stat:first-child{padding-left:0;border-left:none;}
+  .stat .sv{font-size:28px;font-weight:600;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;line-height:1.15;color:var(--fg);}
+  .stat .sk{font-size:11.5px;color:var(--mute);margin-top:6px;line-height:1.5;}
+  .cavt{font-size:12.5px;color:var(--dim);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--hair);}
+  .cavt b{color:var(--fg);font-weight:600;}
+  @media(max-width:640px){.stat{flex:1 1 100%;padding:12px 0;border-left:none;border-top:1px solid var(--hair);}.stat:first-child{border-top:none;padding-top:0;}}
+
+  .chartbox{position:relative;background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:26px 28px;margin-bottom:20px;}
+  .chartbox svg{width:100%;height:auto;display:block;}
+  .tip{position:absolute;pointer-events:none;background:var(--cream);color:var(--ink);border-radius:10px;padding:11px 14px;font-size:11.5px;line-height:1.6;white-space:nowrap;display:none;z-index:5;}
+  .tip b{font-weight:700;}.tip .tk{color:var(--mute);}
+  .keys{display:flex;gap:22px;flex-wrap:wrap;font-size:11.5px;color:var(--mute);font-weight:500;margin-top:16px;line-height:1.5;}
+  .keys span{display:inline-flex;align-items:center;gap:8px;}
+  .keys i.ln{width:24px;border-top:3px solid var(--cream);display:inline-block;}
+  .keys i.dsh{width:24px;border-top:2px dashed var(--mute);display:inline-block;}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:24px;}
+  .kpi{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:20px 22px;}
+  .kpi .v{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.02em;line-height:1.2;color:var(--fg);}
+  .kpi .k{font-size:11px;color:var(--mute);margin-top:6px;line-height:1.5;}
+  .kpi.on{background:var(--cream);border-color:var(--cream);}
+  .kpi.on .v{color:var(--ink);}.kpi.on .k{color:rgba(14,14,13,0.55);}
+
+  .corr{display:flex;flex-direction:column;gap:14px;}
+  .crow{display:flex;gap:26px;align-items:center;background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:22px 28px;}
+  .crow.hero{background:var(--cream);color:var(--ink);border-color:var(--cream);}
+  .crow .cp{flex:0 0 200px;font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.02em;line-height:1.3;color:var(--fg);}
+  .crow.hero .cp{color:var(--ink);}
+  .crow .cb h3{font-size:14.5px;font-weight:600;margin-bottom:4px;letter-spacing:-0.01em;color:var(--fg);}
+  .crow.hero .cb h3{color:var(--ink);}
+  .crow .cb p{font-size:12.5px;color:var(--mute);margin:0;line-height:1.6;}
+  .crow.hero .cb p{color:rgba(14,14,13,0.62);}
+  @media(max-width:640px){.crow{flex-direction:column;align-items:flex-start;gap:8px;}.crow .cp{flex:none;}}
+
+  .refs{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:8px 28px;}
+  .ref{display:flex;gap:20px;padding:20px 0;border-top:1px solid var(--hair);font-size:13.5px;line-height:1.65;color:var(--dim);}
+  .ref:first-child{border-top:none;}
+  .ref .rn{flex:0 0 26px;height:26px;border-radius:50%;background:var(--cream);color:var(--ink);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+  .ref b{color:var(--fg);}
+  .ref .cite{display:block;font-size:11px;color:var(--mute);margin-top:5px;line-height:1.6;}
+
+  .note{font-size:12.5px;color:var(--mute);margin-top:22px;line-height:1.65;max-width:64ch;}
+
+  .cta-end{border-top:1px solid var(--hair);padding:clamp(56px,9vh,96px) 0 64px;text-align:center;}
+  .cta-end h2{max-width:20ch;margin:0 auto 18px;}
+  .cta-end p{color:var(--dim);max-width:44ch;margin:0 auto 32px;font-weight:300;font-size:17px;}
+  .btn{display:inline-block;padding:16px 32px;font-size:15px;font-weight:500;border-radius:var(--r-s);
+    background:var(--cream);color:var(--ink);transition:transform var(--t-fast) var(--ease-out),background var(--t-normal) var(--ease);}
+  @media (hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}}
+  .btn:active{transform:scale(0.97);}
+  footer{border-top:1px solid var(--hair);padding:28px 0 44px;color:var(--mute);font-size:11px;line-height:1.8;}
+  footer a{color:var(--dim);text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="nav-bar"><div class="wrap"><div class="nav">
+  <span class="name">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+      <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
+    </svg>
+    Flow AI.
+  </span>
+  <a class="back" href="../index.html">← Back to Flow AI</a>
+</div></div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">A working tool · free to use</div>
+  <h1>Price your product with the math, not a guess.</h1>
+  <p class="lede">Most startups pick a price by feel. This finds your <b>profit-maximising price</b> from three inputs, cost, customer value, and how sensitive buyers are, using the published economics.</p>
+  <p class="byline">Built by <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">Amber Lan</a>, the pricing model behind every <a href="../index.html">Flow AI</a> engagement. Your numbers stay in your browser.</p>
+</div></div>
+
+<!-- COST -->
+<section><div class="wrap">
+  <div class="step-k">Step 1 · Your cost</div>
+  <h2>What one unit costs you to deliver.</h2>
+  <p class="sec-lead">Enter the <b>marginal cost</b>: what it costs to serve one more customer for one month. Cost is the floor, you never price below it. Your ROI rule is the target the model checks your price against.</p>
+  <div class="nums">
+    <div class="num"><label>Marginal cost · $/unit/mo</label><input type="number" id="mc" value="120" min="0"></div>
+    <div class="num"><label>Fixed cost · $/mo (optional)</label><input type="number" id="fixed" placeholder="e.g. 400" min="0"></div>
+  </div>
+  <div class="dial">
+    <div class="dl"><span class="dn">Your ROI target</span><span class="dv" id="vRoi">2×</span></div>
+    <input type="range" id="roiReq" min="1" max="10" step="1" value="2">
+    <div class="dd">ROI = (price − cost) ÷ cost. A target of 2 means every dollar of cost should return two. The model flags whether your price clears it.</div>
+  </div>
+</div></section>
+
+<!-- VALUE -->
+<section><div class="wrap">
+  <div class="step-k">Step 2 · Customer value</div>
+  <h2>What the outcome is worth to the buyer.</h2>
+  <p class="sec-lead">Value-based pricing sets the ceiling: what the customer would pay to get the same result another way. Method: Economic Value to the Customer (Forbis &amp; Mehta, 1981).</p>
+  <div class="nums">
+    <div class="num"><label>Value delivered · $/mo, low</label><input type="number" id="valLow" value="800" min="0"></div>
+    <div class="num"><label>Value delivered · $/mo, high</label><input type="number" id="valHigh" value="2400" min="0"></div>
+    <div class="num"><label>Cheapest alternative · $/mo</label><input type="number" id="alt" placeholder="optional" min="0"></div>
+  </div>
+  <div class="readout"><div class="stats">
+    <div class="stat"><div class="sv" id="sValLow">–</div><div class="sk">value, low</div></div>
+    <div class="stat"><div class="sv" id="sValHigh">–</div><div class="sk">value, high</div></div>
+    <div class="stat"><div class="sv" id="sCeil">–</div><div class="sk">the value ceiling</div></div>
+  </div><div class="cavt" id="valCaveat">–</div></div>
+</div></section>
+
+<!-- PRICE -->
+<section><div class="wrap">
+  <div class="step-k">Step 3 · The price</div>
+  <h2>The optimum, from the published rule.</h2>
+  <p class="sec-lead">The Lerner rule (1934) gives the profit-maximising price from two inputs only: <b>marginal cost</b> and <b>price elasticity</b>. Drag the price, or click anywhere on the curve.</p>
+  <div class="dials2">
+    <div class="dial">
+      <div class="dl"><span class="dn">Your price</span><span class="dv" id="vPrice">–</span></div>
+      <input type="range" id="price" min="50" max="6000" step="25" value="400">
+      <div class="dd">Height on the chart is profit relative to the best achievable.</div>
+    </div>
+    <div class="dial">
+      <div class="dl"><span class="dn">Price elasticity</span><span class="dv" id="vEps">2.0</span></div>
+      <input type="range" id="eps" min="1.2" max="3" step="0.1" value="1.5">
+      <div class="dd">SMB buyers sit near 2.0, enterprise near 0.5. A price test measures yours.</div>
+    </div>
+  </div>
+  <div class="chartbox" id="chartbox">
+    <svg id="chart" viewBox="0 0 900 380" role="img" aria-label="Relative monthly profit against price"></svg>
+    <div class="tip" id="tip"></div>
+    <div class="keys">
+      <span><i class="ln"></i> Relative profit, peak = 100</span>
+      <span><i class="dsh"></i> ROI floor · value ceiling</span>
+    </div>
+  </div>
+  <div class="kpis">
+    <div class="kpi on"><div class="v" id="kOpt">–</div><div class="k">Lerner optimum</div></div>
+    <div class="kpi"><div class="v" id="kMargin">–</div><div class="k">Margin per unit at your price</div></div>
+    <div class="kpi on"><div class="v" id="kRoi">–</div><div class="k">ROI · rule ≥ <span id="kRoiReq">3</span></div></div>
+    <div class="kpi"><div class="v" id="kPos">–</div><div class="k">Where your price sits</div></div>
+  </div>
+  <div class="readout"><div class="cavt" id="priceCalc" style="margin-top:0;padding-top:0;border-top:none;">–</div></div>
+</div></section>
+
+<!-- CORRIDOR -->
+<section><div class="wrap">
+  <div class="step-k">Step 4 · The recommendation</div>
+  <h2>Your pricing corridor.</h2>
+  <p class="sec-lead">Cost sets the floor. Value sets the ceiling. Elasticity finds the optimum between them. Price inside this corridor and the math is on your side.</p>
+  <div class="corr" id="corr"></div>
+</div></section>
+
+<!-- METHODOLOGY -->
+<section><div class="wrap">
+  <div class="step-k">Methodology</div>
+  <h2>The research behind each step.</h2>
+  <p class="sec-lead">Every mechanism traces to a published source. The only inputs are yours.</p>
+  <div class="refs">
+    <div class="ref"><span class="rn">1</span><span><b>The Lerner markup rule</b> · Step 3. The profit-maximising price satisfies (P − MC) / P = 1 / ε, so P* = MC × ε / (ε − 1).<span class="cite">Lerner, A. P. (1934). The Concept of Monopoly and the Measurement of Monopoly Power. Review of Economic Studies, 1(3), 157–175.</span></span></div>
+    <div class="ref"><span class="rn">2</span><span><b>Economic Value to the Customer</b> · Step 2. Price is capped by the customer's best alternative.<span class="cite">Forbis, J. L. &amp; Mehta, N. T. (1981). Value-based strategies for industrial products. Business Horizons, 24(3), 32–42.</span></span></div>
+    <div class="ref"><span class="rn">3</span><span><b>Cost–competition–value triangulation</b> · the corridor. The standard framework for setting a price inside the floor-to-ceiling range.<span class="cite">Nagle, T. T. &amp; Müller, G. (2018). The Strategy and Tactics of Pricing, 6th ed. Routledge.</span></span></div>
+    <div class="ref"><span class="rn">4</span><span><b>Gabor–Granger price testing</b> · measuring your elasticity. Purchase intent at set price points draws the real demand curve.<span class="cite">Gabor, A. &amp; Granger, C. W. J. (1966). Price as an Indicator of Quality. Economica, 33(129), 43–70.</span></span></div>
+  </div>
+  <p class="note">This tool is a decision aid, not financial advice. It uses the models above with the numbers you enter; a live price test replaces the elasticity assumption with your measured value.</p>
+</div></section>
+
+<div class="cta-end"><div class="wrap">
+  <h2>Want this built into your go-to-market?</h2>
+  <p>This is one of the systems I build for startups at Flow AI, alongside inbound, outbound, and content.</p>
+  <a class="btn" href="../index.html#contact">See what Flow AI does</a>
+</div></div>
+
+<footer><div class="wrap">
+  © 2026 Flow AI · Amber Lan · <a href="../index.html">flowai.co.nz</a> ·
+  Academic sources cited above · Your inputs are stored only in this browser.
+</div></footer>
+
+<script>
+(function(){
+  var LS='flowai-pricing-v1';
+  var FIELDS=['mc','fixed','roiReq','valLow','valHigh','alt','price','eps'];
+  var DEF={mc:120,fixed:null,roiReq:2,valLow:800,valHigh:2400,alt:null,price:400,eps:1.5};
+  var PMIN=50,PMAX=6000;
+  var W=900,H=380,ML=52,MR=16,MT=30,MB=42;
+  var state=load();
+
+  function $(id){return document.getElementById(id);}
+  function money(n){if(!isFinite(n))return '–';var s='$'+Math.round(Math.abs(n)).toLocaleString('en-US');return n<0?'-'+s:s;}
+  function moneyK(n){return Math.abs(n)>=1000?'$'+(n/1000).toFixed(Math.abs(n)>=10000?0:1).replace(/\.0$/,'')+'k':money(n);}
+  function load(){try{var r=localStorage.getItem(LS);if(r)return JSON.parse(r);}catch(e){}return Object.assign({},DEF);}
+  function persist(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+  function val(id){var raw=$(id).value;if(raw==='')return null;var v=parseFloat(raw);return isFinite(v)?v:null;}
+  function n0(v){return v==null?0:v;}
+
+  function d(){
+    var mc=n0(state.mc);
+    var floor=mc;   /* the economic floor: you never price below cost */
+    var ceilLow=n0(state.valLow), ceilHigh=n0(state.valHigh);
+    var ceiling=(state.alt!=null&&state.alt>0)?Math.min(ceilHigh,Math.max(ceilLow,state.alt)):ceilHigh;
+    var opt=state.eps>1?mc*state.eps/(state.eps-1):Infinity;
+    var pref=(ceilLow+ceilHigh)/2||1200;
+    return {mc:mc,floor:floor,ceilLow:ceilLow,ceilHigh:ceilHigh,ceiling:ceiling,opt:opt,pref:pref};
+  }
+  function profitIdx(P,q){return Math.pow(P/q.pref,-state.eps)*(P-q.mc);}
+  var xs=function(P){return ML+(P-PMIN)/(PMAX-PMIN)*(W-ML-MR);};
+
+  function draw(q){
+    var pts=[],best=0,P;
+    for(P=PMIN;P<=PMAX;P+=20){var v=profitIdx(P,q);pts.push({P:P,v:v});if(v>best)best=v;}
+    pts.forEach(function(p){p.idx=Math.max(-15,p.v/best*100);});
+    var yMin=-15,yMax=108;
+    var ys=function(v){return MT+(yMax-v)/(yMax-yMin)*(H-MT-MB);};
+    var g='';
+    g+='<line x1="'+ML+'" y1="'+ys(0)+'" x2="'+(W-MR)+'" y2="'+ys(0)+'" stroke="rgba(250,248,243,0.4)" stroke-width="1" stroke-dasharray="4 3"/>';
+    g+='<text x="'+(ML-6)+'" y="'+(ys(100)+4)+'" text-anchor="end" font-size="10" fill="rgba(250,248,243,0.4)">100</text>';
+    g+='<text x="'+(ML-6)+'" y="'+(ys(0)+4)+'" text-anchor="end" font-size="10" fill="rgba(250,248,243,0.4)">0</text>';
+    for(P=1000;P<=PMAX;P+=1000){g+='<text x="'+xs(P)+'" y="'+(H-14)+'" text-anchor="middle" font-size="10" fill="rgba(250,248,243,0.4)">'+moneyK(P)+'</text>';}
+    g+='<text x="'+((ML+W-MR)/2)+'" y="'+(H-1)+'" text-anchor="middle" font-size="9" fill="rgba(250,248,243,0.4)" letter-spacing="1.2" font-weight="700">PRICE PER UNIT PER MONTH</text>';
+    [[q.floor,'floor'],[q.ceiling,'ceiling']].forEach(function(m){
+      if(m[0]>PMIN&&m[0]<PMAX){
+        g+='<line x1="'+xs(m[0])+'" y1="'+MT+'" x2="'+xs(m[0])+'" y2="'+(H-MB)+'" stroke="rgba(250,248,243,0.4)" stroke-width="1.2" stroke-dasharray="5 4"/>';
+        g+='<text x="'+xs(m[0])+'" y="'+(H-MB+14)+'" text-anchor="middle" font-size="9" font-weight="700" fill="rgba(250,248,243,0.5)">'+m[1]+' '+moneyK(m[0])+'</text>';
+      }
+    });
+    g+='<path d="'+pts.map(function(p,k){return (k?'L':'M')+xs(p.P).toFixed(1)+','+ys(p.idx).toFixed(1);}).join('')+'" fill="none" stroke="#FAF8F3" stroke-width="3"/>';
+    if(isFinite(q.opt)&&q.opt<PMAX&&q.opt>PMIN){
+      g+='<circle cx="'+xs(q.opt)+'" cy="'+ys(Math.max(-15,profitIdx(q.opt,q)/best*100))+'" r="5" fill="#FAF8F3"/>';
+      g+='<text x="'+Math.max(xs(q.opt),ML+80)+'" y="'+(ys(100)-8)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF8F3">optimum '+moneyK(q.opt)+'</text>';
+    }
+    var yv=Math.max(-15,profitIdx(state.price,q)/best*100);
+    g+='<line x1="'+xs(state.price)+'" y1="'+MT+'" x2="'+xs(state.price)+'" y2="'+(H-MB)+'" stroke="rgba(250,248,243,0.55)" stroke-width="1.3"/>';
+    g+='<circle cx="'+xs(state.price)+'" cy="'+ys(yv)+'" r="5.5" fill="#0E0E0D" stroke="#FAF8F3" stroke-width="2.5"/>';
+    g+='<rect x="'+(xs(state.price)-30)+'" y="'+(MT-22)+'" width="60" height="17" rx="8.5" fill="#FAF8F3"/>';
+    g+='<text x="'+xs(state.price)+'" y="'+(MT-10)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#0E0E0D">you '+moneyK(state.price)+'</text>';
+    g+='<g id="xh" style="display:none"><line id="xhl" y1="'+MT+'" y2="'+(H-MB)+'" stroke="rgba(250,248,243,0.4)" stroke-width="1" stroke-dasharray="3 3"/><circle id="xhp" r="4" fill="#FAF8F3"/></g>';
+    $('chart').innerHTML=g;
+    draw.ys=ys; draw.best=best;
+  }
+
+  function render(){
+    var q=d();
+    $('vRoi').textContent=n0(state.roiReq)+'×';
+    $('vPrice').textContent=money(state.price);
+    $('vEps').textContent=state.eps.toFixed(1);
+    $('kRoiReq').textContent=n0(state.roiReq);
+
+    $('sValLow').textContent=money(q.ceilLow);
+    $('sValHigh').textContent=money(q.ceilHigh);
+    $('sCeil').textContent=money(q.ceiling);
+    $('valCaveat').innerHTML=(state.alt!=null&&state.alt>0)?
+      'The cheapest alternative at <b>'+money(state.alt)+'</b> caps what a rational buyer pays, so it sets the ceiling.':
+      'No alternative entered, so the ceiling is the top of your value range. Add the buyer’s next-best option to tighten it.';
+
+    draw(q);
+    $('kOpt').textContent=isFinite(q.opt)?money(q.opt):'ceiling-bound';
+    $('kMargin').textContent=money(state.price-q.mc);
+    var roiNow=q.mc>0?(state.price-q.mc)/q.mc:Infinity;
+    $('kRoi').textContent=isFinite(roiNow)?roiNow.toFixed(1)+'×':'–';
+    var pos=state.price<q.floor?'below your floor':state.price>q.ceiling?'above the ceiling':'inside the corridor';
+    $('kPos').textContent=pos;
+    var optLo=q.mc*2, optHi=q.mc*3;
+    $('priceCalc').innerHTML='P* = MC × ε/(ε−1) = '+money(q.mc)+' × '+state.eps.toFixed(1)+'/'+(state.eps-1).toFixed(1)+
+      ' = <b>'+(isFinite(q.opt)?money(q.opt):'the ceiling')+'</b>. Across elasticity 2.0 to 1.5 the optimum runs <b>'+
+      money(optLo)+' to '+money(optHi)+'</b>. Your price is '+pos+', and its ROI of <b>'+
+      (isFinite(roiNow)?roiNow.toFixed(1)+'×':'–')+'</b> '+(roiNow>=n0(state.roiReq)?'clears':'misses')+' your rule of '+n0(state.roiReq)+'.';
+
+    $('corr').innerHTML=
+      '<div class="crow"><span class="cp">'+money(q.floor)+'</span><div class="cb"><h3>The floor · your cost</h3><p>Below your marginal cost of '+money(q.mc)+'/unit you lose money on every sale. Your '+n0(state.roiReq)+'× ROI target lands at '+money(q.mc*(n0(state.roiReq)+1))+'.</p></div></div>'+
+      '<div class="crow hero"><span class="cp">'+money(optLo)+' – '+money(optHi)+'</span><div class="cb"><h3>The optimum range · Lerner rule</h3><p>Elasticity 2.0 to 1.5. A price test collapses this to a single number.</p></div></div>'+
+      '<div class="crow"><span class="cp">'+money(q.ceiling)+'</span><div class="cb"><h3>The ceiling · customer value</h3><p>The buyer’s cheapest alternative to your outcome.</p></div></div>';
+  }
+
+  var svg=$('chart'), box=$('chartbox'), tip=$('tip');
+  function pxToPrice(evt){
+    var rect=svg.getBoundingClientRect();
+    var x=(evt.clientX-rect.left)/rect.width*W;
+    var P=PMIN+(x-ML)/(W-ML-MR)*(PMAX-PMIN);
+    return Math.max(PMIN,Math.min(PMAX,Math.round(P/25)*25));
+  }
+  svg.addEventListener('mousemove',function(evt){
+    var q=d(), P=pxToPrice(evt), x=xs(P);
+    var idx=Math.max(-15,profitIdx(P,q)/draw.best*100);
+    var xh=$('xh');if(xh){xh.style.display='';$('xhl').setAttribute('x1',x);$('xhl').setAttribute('x2',x);$('xhp').setAttribute('cx',x);$('xhp').setAttribute('cy',draw.ys(idx));}
+    tip.style.display='block';
+    tip.innerHTML='<b>'+money(P)+'/unit/mo</b><br><span class="tk">relative profit</span> '+Math.round(idx)+' / 100<br><span class="tk">margin per unit</span> '+money(P-q.mc);
+    var bx=box.getBoundingClientRect();
+    var left=(evt.clientX-bx.left)+16, top=(evt.clientY-bx.top)-10;
+    if(left+180>bx.width)left-=200;
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  });
+  svg.addEventListener('mouseleave',function(){tip.style.display='none';var xh=$('xh');if(xh)xh.style.display='none';});
+  svg.addEventListener('click',function(evt){state.price=pxToPrice(evt);$('price').value=state.price;persist();render();});
+
+  FIELDS.forEach(function(f){
+    var el=$(f);
+    el.addEventListener('input',function(){state[f]=val(f);persist();render();});
+    el.addEventListener('focus',function(){if(el.closest('.num'))el.closest('.num').classList.add('focus');});
+    el.addEventListener('blur',function(){if(el.closest('.num'))el.closest('.num').classList.remove('focus');});
+  });
+
+  FIELDS.forEach(function(f){$(f).value=(state[f]==null?'':state[f]);});
+  render();
+})();
+</script>
+</body>
+</html>

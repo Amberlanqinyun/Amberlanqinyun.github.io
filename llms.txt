@@ -1,0 +1,30 @@
+# Flow AI
+
+> Flow AI is a marketing engineering service for startups, run by Amber Lan, a marketing engineer based in New Zealand. It pairs early-stage startups that have no marketing team with one person who writes the go-to-market strategy and builds the systems that run it: inbound (SEO and generative engine optimization), outbound agents, content engines, and analytics. The goal is qualified leads, not activity.
+
+Key facts:
+- Service: go-to-market strategy, inbound engine (SEO/GEO), outbound automation, content engine, analytics.
+- Audience: early-stage startups without a marketing hire.
+- Pricing (NZD): Starter sprint $997, Growth sprint $2,500, Enterprise sprint $4,500, Retainer $1,500/month. 30-day money-back guarantee.
+- Delivery: first assets live within 48 to 72 hours of the discovery call.
+- Founder: Amber Lan, marketing engineer. Builds with Python, TypeScript, Swift, and agentic AI tooling (Claude Code).
+- Contact: amber.lan.growth.digital@gmail.com
+- Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
+
+Site structure:
+- / (landing): the service offer, CRO-focused. Book a discovery call.
+- /work.html: full body of work, organised by a framework, the go-to-market machine, into three pillars: Strategy, Demand engines, Built to ship.
+- /tools/pricing.html: a free interactive pricing model.
+
+Tools (free, public):
+- Pricing model (/tools/pricing.html): finds a product's profit-maximising price from cost, customer value, and price elasticity, using the published Lerner rule and Economic Value to the Customer. Built by Amber Lan.
+- AI-readiness benchmark: a self-serve diagnostic that scores a company's AI maturity (owned public demo in progress).
+
+Selected work (proof), organised as the go-to-market machine:
+- Strategy: a full go-to-market strategy for an enterprise AI platform (three demand engines feeding one pipeline toward a launch); a pricing model built as working software.
+- Demand engines: an AI content engine with a codified brand voice (one source to a month of on-brand posts); a signal-triggered outbound acquisition system (automation opens, a human closes); the AI-readiness benchmark.
+- Built to ship: Latticework, a shipped iOS app (Swift, SwiftUI, CI); Social Media OS, multi-platform distribution tooling (TypeScript).
+
+## What is a marketing engineer?
+
+A marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the software that executes it. One person designs the positioning and ships the inbound, outbound, and content systems that run it.

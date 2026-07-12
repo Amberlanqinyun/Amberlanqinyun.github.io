@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selected work · Flow AI · Amber Lan</title>
+<meta name="description" content="The go-to-market machine and the parts I've built: strategy, demand engines, and shipped software. Case studies from Amber Lan, marketing engineer and founder of Flow AI.">
+<meta name="theme-color" content="#0E0E0D">
+<link rel="canonical" href="https://www.flowai.co.nz/work.html">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<meta property="og:title" content="Selected work · Amber Lan, marketing engineer">
+<meta property="og:description" content="The go-to-market machine and the parts I've built: strategy, demand engines, and shipped software.">
+<meta property="og:type" content="website">
+<style>
+  @font-face{font-family:"Google Sans Flex";src:url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap;}
+  :root{
+    --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;
+    --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.40);--hair:rgba(250,248,243,0.11);--ink:#0E0E0D;
+    --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --r-m:18px;--r-s:999px;--t-fast:150ms;--t-normal:200ms;--t-slow:300ms;
+    --ease:cubic-bezier(0.2,0.8,0.2,1);--ease-out:cubic-bezier(0.23,1,0.32,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  ::selection{background:var(--cream);color:var(--ink);}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
+  a{color:inherit;text-decoration:none;}
+  b,strong{color:var(--fg);font-weight:600;}
+  @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;}}
+
+  .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.75);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
+  .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);}
+  .nav .name svg{width:21px;height:21px;color:var(--cream);}
+  .nav nav a{color:var(--mute);margin-left:26px;font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
+  .nav nav a:hover{color:var(--fg);}
+
+  .hero{padding:clamp(80px,13vh,140px) 0 clamp(40px,6vh,64px);}
+  .eyebrow{font-size:11.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:28px;}
+  h1{font-weight:600;font-size:clamp(38px,6vw,66px);line-height:1.02;letter-spacing:-0.04em;color:var(--fg);max-width:16ch;}
+  .lede{margin-top:28px;font-weight:300;font-size:clamp(18px,2vw,23px);line-height:1.5;letter-spacing:-0.01em;color:var(--dim);max-width:52ch;}
+  .lede b{font-weight:500;}
+
+  /* framework diagram: create -> convert -> run */
+  .machine{margin-top:clamp(48px,7vh,80px);border-top:1px solid var(--hair);padding-top:clamp(40px,6vh,56px);}
+  .machine svg{width:100%;height:auto;display:block;color:var(--cream);max-width:820px;margin:0 auto;}
+
+  section{padding:clamp(64px,9vh,110px) 0 0;}
+  .pillar-k{display:flex;align-items:baseline;gap:16px;margin-bottom:clamp(32px,5vh,52px);}
+  .pillar-k .pk-n{font-weight:600;font-size:15px;color:var(--mute);font-variant-numeric:tabular-nums;}
+  .pillar-k h2{font-weight:600;font-size:clamp(24px,3.4vw,36px);letter-spacing:-0.03em;line-height:1.1;color:var(--fg);}
+  .pillar-k .pk-d{font-size:14.5px;color:var(--mute);margin-left:auto;max-width:34ch;text-align:right;}
+  @media(max-width:640px){.pillar-k{flex-direction:column;gap:8px;}.pillar-k .pk-d{margin-left:0;text-align:left;}}
+
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:720px){.cases{grid-template-columns:1fr;}}
+  .card{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:28px 30px;display:flex;flex-direction:column;
+    box-shadow:inset 0 1px 0 rgba(250,248,243,0.05);transition:transform var(--t-slow) var(--ease),border-color var(--t-slow) var(--ease);}
+  .card.span{grid-column:1 / -1;}
+  @media(hover:hover){.card:hover{transform:translateY(-3px);border-color:rgba(250,248,243,0.22);}}
+  .card .role{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:14px;}
+  .card h3{font-weight:600;font-size:20px;letter-spacing:-0.02em;line-height:1.2;color:var(--fg);margin-bottom:10px;}
+  .card p{font-size:15px;color:var(--dim);margin-bottom:18px;}
+  .card p b{font-weight:600;}
+  .card .link{margin-top:auto;font-size:14px;font-weight:500;color:var(--fg);border-bottom:1px solid rgba(250,248,243,0.35);align-self:flex-start;transition:border-color var(--t-normal) var(--ease);}
+  .card .link:hover{border-color:var(--cream);}
+  .card .muted-link{margin-top:auto;font-size:13.5px;color:var(--mute);align-self:flex-start;}
+  .tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px;}
+  .tag{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:5px 11px;border:1px solid var(--hair);border-radius:999px;color:var(--mute);}
+
+  .end{padding:clamp(80px,12vh,140px) 0 60px;text-align:center;}
+  .end h2{font-weight:600;font-size:clamp(30px,4.6vw,46px);letter-spacing:-0.035em;line-height:1.06;color:var(--fg);max-width:20ch;margin:0 auto 20px;}
+  .end p{color:var(--dim);max-width:44ch;margin:0 auto 32px;font-weight:300;font-size:17px;}
+  .btn{display:inline-block;padding:16px 32px;font-size:15px;font-weight:500;border-radius:var(--r-s);background:var(--cream);color:var(--ink);transition:transform var(--t-fast) var(--ease-out),background var(--t-normal) var(--ease);}
+  @media(hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}}
+  .btn:active{transform:scale(0.97);}
+  footer{border-top:1px solid var(--hair);padding:28px 0 44px;color:var(--mute);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  footer a:hover{color:var(--fg);}
+</style>
+</head>
+<body>
+
+<div class="nav-bar"><div class="wrap"><div class="nav">
+  <span class="name">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+      <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
+    </svg>
+    Flow AI.
+  </span>
+  <nav>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html">← Home</a>
+  </nav>
+</div></div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Selected work</div>
+  <h1>The machine, and the parts I've built.</h1>
+  <p class="lede">Marketing is a system: a <b>strategy</b> aims it, <b>demand engines</b> fill the pipeline, and someone has to <b>build</b> the software that runs it. I do all three. Here's proof of each, organised the way I think about go-to-market, not as a scrapbook.</p>
+  <div class="machine">
+    <svg viewBox="0 0 820 150" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M70 75 H 300" opacity=".5"/>
+        <path d="M300 75 C 380 75, 380 42, 470 42" opacity=".4"/>
+        <path d="M300 75 H 470" opacity=".4"/>
+        <path d="M300 75 C 380 75, 380 108, 470 108" opacity=".4"/>
+        <path d="M470 42 C 620 42, 620 75, 700 75" opacity=".4"/>
+        <path d="M470 75 H 700" opacity=".4"/>
+        <path d="M470 108 C 620 108, 620 75, 700 75" opacity=".4"/>
+        <path d="M700 75 H 780" stroke-width="3" opacity=".9"/>
+        <circle cx="300" cy="75" r="7"/><circle cx="470" cy="42" r="6"/><circle cx="470" cy="75" r="6"/><circle cx="470" cy="108" r="6"/><circle cx="700" cy="75" r="7"/>
+      </g>
+      <circle cx="70" cy="75" r="10" fill="currentColor"/>
+      <circle cx="780" cy="75" r="6" fill="currentColor" opacity=".6"/>
+      <text x="70" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="currentColor" opacity=".55" letter-spacing="0.5">STRATEGY</text>
+      <text x="385" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="currentColor" opacity=".55" letter-spacing="0.5">DEMAND</text>
+      <text x="740" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="currentColor" opacity=".55" letter-spacing="0.5">PIPELINE</text>
+    </svg>
+  </div>
+</div></div>
+
+<!-- STRATEGY -->
+<section><div class="wrap">
+  <div class="pillar-k">
+    <span class="pk-n">01</span>
+    <h2>Strategy</h2>
+    <span class="pk-d">Where to play and how to win. The plan that aims the machine.</span>
+  </div>
+  <div class="cases">
+    <div class="card">
+      <div class="role">Go-to-market strategy · enterprise AI</div>
+      <h3>Three demand engines, one pipeline, one launch.</h3>
+      <div class="tags"><span class="tag">Positioning</span><span class="tag">GTM</span><span class="tag">Message architecture</span></div>
+      <p>A full go-to-market plan for an enterprise AI platform: outbound, inbound, and partnership engines feeding a single pipeline, sequenced toward one launch. <b>Built as a navigable deck.</b></p>
+      <span class="muted-link">Sanitised case · full walkthrough on request</span>
+    </div>
+    <div class="card">
+      <div class="role">Pricing model · live &amp; interactive</div>
+      <h3>A pricing strategy, built as a working model.</h3>
+      <div class="tags"><span class="tag">Pricing</span><span class="tag">Economics</span><span class="tag">Built in code</span></div>
+      <p>Cost, customer value, and elasticity resolve to a profit-maximising price using the published Lerner rule. <b>Strategy you can click, not a slide.</b></p>
+      <a class="link" href="tools/pricing.html">Try the live model →</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- DEMAND -->
+<section><div class="wrap">
+  <div class="pillar-k">
+    <span class="pk-n">02</span>
+    <h2>Demand engines</h2>
+    <span class="pk-d">The systems that fill the pipeline: get found, get in front of buyers.</span>
+  </div>
+  <div class="cases">
+    <div class="card">
+      <div class="role">Inbound · content system</div>
+      <h3>One book PDF in. A month of publishable posts out.</h3>
+      <div class="tags"><span class="tag">Content engine</span><span class="tag">Brand voice</span><span class="tag">Python</span></div>
+      <p>A content engine with a codified brand voice: every line passes a Voice Law before it ships, <b>so the output reads human, not generated.</b> Packaged as a reusable skill.</p>
+      <span class="muted-link">Private build · shown on the discovery call</span>
+    </div>
+    <div class="card">
+      <div class="role">Inbound · lead diagnostic</div>
+      <h3>An AI-readiness benchmark that qualifies while it helps.</h3>
+      <div class="tags"><span class="tag">Assessment</span><span class="tag">Lead gen</span><span class="tag">Interactive</span></div>
+      <p>A self-serve diagnostic that scores where a company sits on AI maturity and hands back a tailored read. <b>It earns the lead by being useful first.</b></p>
+      <a class="link" href="tools/benchmark.html">Take the benchmark →</a>
+    </div>
+    <div class="card span">
+      <div class="role">Outbound · targeted acquisition system</div>
+      <h3>Software opens the door. A person closes it.</h3>
+      <div class="tags"><span class="tag">Outbound agents</span><span class="tag">Sequencing</span><span class="tag">CRM pipeline</span></div>
+      <p>A signal-triggered outbound system: enrichment builds the target list, automation runs connection and follow-up inside safe limits, and <b>the moment a buyer replies, automation stops and a human takes over.</b> Five campaigns, keyed to how each buyer was sourced, all landing in one measured pipeline.</p>
+      <span class="muted-link">Sanitised case · full walkthrough on request</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- BUILD -->
+<section><div class="wrap">
+  <div class="pillar-k">
+    <span class="pk-n">03</span>
+    <h2>Built to ship</h2>
+    <span class="pk-d">Proof the strategist writes the code. Real software, shipped solo.</span>
+  </div>
+  <div class="cases">
+    <div class="card">
+      <div class="role">Shipped product · iOS</div>
+      <h3>Latticework. A mental-models app.</h3>
+      <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">CI</span></div>
+      <p>Daily wisdom, recall drills, and a decision journal, on a tested logic core with CI. <b>The same hands that write your strategy ship working software.</b></p>
+      <a class="link" href="https://github.com/Amberlanqinyun/latticework" target="_blank" rel="noopener">View repository →</a>
+    </div>
+    <div class="card">
+      <div class="role">Distribution tooling · TypeScript</div>
+      <h3>Social Media OS. Publishing as an operation.</h3>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Multi-platform</span></div>
+      <p>Plan once, adapt per platform, publish on schedule. <b>The distribution half of the content engine.</b></p>
+      <a class="link" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">View repository →</a>
+    </div>
+  </div>
+</div></section>
+
+<div class="end"><div class="wrap">
+  <h2>Want this machine built for your startup?</h2>
+  <p>This is exactly what Flow AI does: the strategy, the engines, and the systems that run them.</p>
+  <a class="btn" href="index.html#contact">Book a discovery call</a>
+</div></div>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%;max-width:1060px;margin:0 auto;">
+  <span>© 2026 Flow AI · Amber Lan</span>
+  <span><a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a></span>
+</div></footer>
+
+</body>
+</html>
