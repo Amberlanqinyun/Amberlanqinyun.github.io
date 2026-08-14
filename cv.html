@@ -2,285 +2,420 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV · Amber Lan · Marketing Engineer</title>
-<meta name="description" content="The full portfolio behind Flow AI: every project Amber Lan has shipped — AI marketing systems, content engines, SEO/AEO tooling, and product apps. With links to each GitHub repository.">
-<meta name="theme-color" content="#0E0E0D">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amber Lan · AI marketing engineer · CV</title>
+<meta name="description" content="Amber Lan, AI marketing engineer. I run marketing solo at an AI startup, on an agent stack I built myself. This page is the receipts: every system linked to its source.">
+<meta name="theme-color" content="#1E1B17">
 <link rel="canonical" href="https://amberlanqinyun.github.io/cv.html">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
-<meta property="og:title" content="CV · Amber Lan, marketing engineer">
-<meta property="og:description" content="Every project I've shipped — AI marketing systems, content engines, SEO/AEO tooling, and product apps — each linked to its source.">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%231E1B17"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23F6F3EA" text-anchor="middle">A.</text></svg>'>
+<meta property="og:title" content="Amber Lan · AI marketing engineer">
+<meta property="og:description" content="I run marketing solo at an AI startup, on an agent stack I built myself. This page is the receipts: every system linked to its source.">
 <meta property="og:type" content="profile">
+
 <style>
-  @font-face{font-family:"Google Sans Flex";src:url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap;}
-  :root{
-    --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;
-    --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.40);--hair:rgba(250,248,243,0.11);--ink:#0E0E0D;
-    --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    --r-m:18px;--r-s:999px;--t-fast:150ms;--t-normal:200ms;--t-slow:300ms;
-    --ease:cubic-bezier(0.2,0.8,0.2,1);--ease-out:cubic-bezier(0.23,1,0.32,1);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  ::selection{background:var(--cream);color:var(--ink);}
-  .wrap{max-width:1060px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
-  a{color:inherit;text-decoration:none;}
-  b,strong{color:var(--fg);font-weight:600;}
-  @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;}}
+/* =============================================================================
+   AMBER LAN · CV · v3.0
+   Editorial broadsheet. Warm ink-on-cream with a dark cover.
+   Practitioner positioning: receipts first, every system linked to source.
+   ============================================================================= */
+@font-face{font-family:"Google Sans Flex";src:url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap;}
 
-  .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.75);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
-  .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
-  .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);}
-  .nav .name svg{width:21px;height:21px;color:var(--cream);}
-  .nav nav a{color:var(--mute);margin-left:26px;font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
-  .nav nav a:hover{color:var(--fg);}
+:root {
+  --ink:    #2B2622;
+  --char:   #1E1B17;
+  --mid:    #4A443C;
+  --cream:  #F6F3EA;
+  --shell:  #EDE9DC;
+  --paper:  #FCFAF4;
+  --green:  #3C6E47;
 
-  .hero{padding:clamp(80px,13vh,140px) 0 clamp(40px,6vh,56px);}
-  .eyebrow{font-size:11.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:28px;}
-  h1{font-weight:600;font-size:clamp(38px,6vw,66px);line-height:1.02;letter-spacing:-0.04em;color:var(--fg);max-width:15ch;}
-  .lede{margin-top:28px;font-weight:300;font-size:clamp(18px,2vw,23px);line-height:1.5;letter-spacing:-0.01em;color:var(--dim);max-width:54ch;}
-  .lede b{font-weight:500;}
-  .meta-row{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;}
-  .chip{font-size:12px;letter-spacing:0.02em;padding:8px 15px;border:1px solid var(--hair);border-radius:999px;color:var(--dim);}
-  .chip b{color:var(--fg);font-weight:600;}
-  .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;}
-  .btn{display:inline-block;padding:14px 26px;font-size:14.5px;font-weight:500;border-radius:var(--r-s);background:var(--cream);color:var(--ink);transition:transform var(--t-fast) var(--ease-out),background var(--t-normal) var(--ease);}
-  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--hair);}
-  @media(hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}.btn.ghost:hover{border-color:rgba(250,248,243,0.4);background:transparent;}}
-  .btn:active{transform:scale(0.97);}
+  --body:   #2B2622;
+  --mute:   #6B6358;
+  --rule:   #D8D2C4;
+  --hair:   #E7E2D4;
 
-  section{padding:clamp(56px,8vh,96px) 0 0;}
-  .pillar-k{display:flex;align-items:baseline;gap:16px;margin-bottom:clamp(28px,4vh,44px);border-top:1px solid var(--hair);padding-top:clamp(28px,4vh,40px);}
-  .pillar-k .pk-n{font-weight:600;font-size:15px;color:var(--mute);font-variant-numeric:tabular-nums;}
-  .pillar-k h2{font-weight:600;font-size:clamp(24px,3.4vw,36px);letter-spacing:-0.03em;line-height:1.1;color:var(--fg);}
-  .pillar-k .pk-d{font-size:14.5px;color:var(--mute);margin-left:auto;max-width:34ch;text-align:right;}
-  @media(max-width:640px){.pillar-k{flex-direction:column;gap:8px;}.pillar-k .pk-d{margin-left:0;text-align:left;}}
+  --face: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --pad: clamp(20px, 4vw, 64px);
+  --max: 1160px;
 
-  .cases{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  @media(max-width:720px){.cases{grid-template-columns:1fr;}}
-  .card{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:26px 28px;display:flex;flex-direction:column;
-    box-shadow:inset 0 1px 0 rgba(250,248,243,0.05);transition:transform var(--t-slow) var(--ease),border-color var(--t-slow) var(--ease);}
-  .card.span{grid-column:1 / -1;}
-  @media(hover:hover){.card:hover{transform:translateY(-3px);border-color:rgba(250,248,243,0.22);}}
-  .card .role{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:13px;}
-  .card h3{font-weight:600;font-size:19px;letter-spacing:-0.02em;line-height:1.2;color:var(--fg);margin-bottom:9px;}
-  .card p{font-size:14.5px;color:var(--dim);margin-bottom:16px;}
-  .card p b{font-weight:600;}
-  .card .link{margin-top:auto;font-size:13.5px;font-weight:500;color:var(--fg);border-bottom:1px solid rgba(250,248,243,0.35);align-self:flex-start;transition:border-color var(--t-normal) var(--ease);}
-  .card .link:hover{border-color:var(--cream);}
-  .tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px;}
-  .tag{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:5px 11px;border:1px solid var(--hair);border-radius:999px;color:var(--mute);}
+  --t-fast: 150ms; --t-normal: 200ms; --t-slow: 300ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 
-  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:8px;}
-  .skill{border:1px solid var(--hair);border-radius:var(--r-m);padding:20px 22px;}
-  .skill .sk-h{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px;}
-  .skill p{font-size:14.5px;color:var(--dim);}
-  .skill p b{color:var(--fg);font-weight:600;}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--cream); color: var(--body); font-family: var(--face); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--ink); color: var(--cream); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; } }
 
-  .end{padding:clamp(80px,12vh,140px) 0 60px;text-align:center;}
-  .end h2{font-weight:600;font-size:clamp(30px,4.6vw,46px);letter-spacing:-0.035em;line-height:1.06;color:var(--fg);max-width:20ch;margin:0 auto 20px;}
-  .end p{color:var(--dim);max-width:44ch;margin:0 auto 32px;font-weight:300;font-size:17px;}
-  .end .btn{padding:16px 32px;font-size:15px;}
-  footer{border-top:1px solid var(--hair);padding:28px 0 44px;color:var(--mute);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-  footer a:hover{color:var(--fg);}
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 1px; background: rgba(43,38,34,0.06); z-index: 100; }
+.progress::after { content: ""; display: block; height: 100%; width: var(--p, 0%); background: var(--ink); transition: width var(--t-fast) linear; }
+
+.masthead {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px var(--pad);
+  background: rgba(246, 243, 234, 0.78);
+  backdrop-filter: saturate(140%) blur(14px); -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: background var(--t-normal) var(--ease-out), border-color var(--t-normal) var(--ease-out);
+}
+.masthead.scrolled { background: rgba(246, 243, 234, 0.94); border-bottom-color: var(--rule); }
+.masthead-mark { font-size: 15px; font-weight: 650; letter-spacing: -0.02em; color: var(--ink); }
+.masthead nav a { color: var(--mute); margin-left: 22px; font-size: 13px; font-weight: 500; transition: color var(--t-normal) var(--ease-out); }
+.masthead nav a:hover { color: var(--ink); }
+
+/* Cover */
+.cover { position: relative; min-height: 92vh; background: var(--char); color: var(--cream); padding: clamp(90px,13vh,150px) var(--pad) clamp(40px,6vh,64px); overflow: hidden; display: flex; flex-direction: column; }
+.cover::after { content: ""; position: absolute; bottom: 0; left: var(--pad); right: var(--pad); height: 1px; background: rgba(246,243,234,0.10); }
+.cover-inner { max-width: var(--max); margin: 0 auto; width: 100%; flex: 1; display: flex; flex-direction: column; }
+.cover-eyebrow { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(246,243,234,0.55); margin: 0 0 28px; }
+.cover-hero { margin: 0 0 36px; font-weight: 650; font-size: clamp(48px,9vw,130px); line-height: 0.96; letter-spacing: -0.045em; color: var(--cream); max-width: 16ch; }
+.cover-hero .word { display: inline-block; opacity: 0; transform: translateY(20px); animation: heroWord var(--t-slow) var(--ease-out) forwards; }
+.cover-hero .word:nth-child(1){animation-delay:100ms} .cover-hero .word:nth-child(2){animation-delay:200ms} .cover-hero .word:nth-child(3){animation-delay:300ms}
+@keyframes heroWord { to { opacity:1; transform: translateY(0); } }
+.cover-lede { font-weight: 300; font-size: clamp(19px,2.2vw,27px); line-height: 1.42; letter-spacing: -0.012em; color: rgba(246,243,234,0.88); max-width: 54ch; margin: 0 0 auto; opacity: 0; animation: fadeUp var(--t-slow) var(--ease-out) 500ms forwards; }
+.cover-lede b { font-weight: 550; color: var(--cream); }
+@keyframes fadeUp { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+.cover-cta { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px; opacity: 0; animation: fadeUp var(--t-slow) var(--ease-out) 600ms forwards; }
+.btn { display: inline-block; padding: 14px 26px; font-size: 14.5px; font-weight: 500; border-radius: 999px; background: var(--cream); color: var(--char); transition: transform var(--t-fast) var(--ease-out); }
+.btn.ghost { background: transparent; color: var(--cream); border: 1px solid rgba(246,243,234,0.3); }
+.btn:hover { transform: scale(1.03); }
+.btn:active { transform: scale(0.97); }
+.cover-meta { margin-top: clamp(48px,8vh,88px); padding-top: 32px; border-top: 1px solid rgba(246,243,234,0.18); display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; opacity: 0; animation: fadeUp var(--t-slow) var(--ease-out) 700ms forwards; }
+.cover-meta-item b { display: block; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(246,243,234,0.45); margin-bottom: 10px; font-weight: 500; }
+.cover-meta-item span { font-size: 14px; color: rgba(246,243,234,0.92); line-height: 1.4; }
+@media (max-width: 900px){ .cover-meta { grid-template-columns: repeat(2,1fr); gap: 24px; } }
+@media (max-width: 540px){ .cover-meta { grid-template-columns: 1fr; } }
+
+/* Page + sections */
+.page { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+section.sec { padding: clamp(72px,10vh,120px) 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 80px; }
+section.sec:last-of-type { border-bottom: none; }
+.sec-head { display: grid; grid-template-columns: minmax(0,0.4fr) minmax(0,1.2fr); gap: clamp(24px,5vw,80px); align-items: start; margin-bottom: clamp(40px,6vh,72px); }
+.sec-num { position: sticky; top: 96px; font-weight: 700; font-size: clamp(40px,5vw,64px); letter-spacing: -0.04em; line-height: .9; color: var(--ink); }
+.sec-num span { display:block; margin-top: 12px; font-weight: 600; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mute); }
+.sec-titles h2 { margin: 0 0 16px; font-weight: 650; font-size: clamp(30px,4.6vw,54px); line-height: 1.04; letter-spacing: -0.035em; color: var(--ink); max-width: 24ch; }
+.sec-titles .sec-sub { font-weight: 300; font-size: clamp(16px,1.6vw,20px); line-height: 1.45; color: var(--mid); max-width: 58ch; margin: 0; }
+@media (max-width: 800px){ .sec-head { grid-template-columns: 1fr; gap: 18px; } .sec-num { position: relative; top: 0; font-size: 48px; } }
+.sec-body { display: grid; grid-template-columns: minmax(0,0.4fr) minmax(0,1.2fr); gap: clamp(24px,5vw,80px); align-items: start; }
+.sec-body-margin { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); position: sticky; top: 96px; }
+@media (max-width: 800px){ .sec-body { grid-template-columns: 1fr; } .sec-body-margin { position: relative; top: 0; } }
+.sec h3 { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); margin: 0 0 14px; }
+.sec p { font-size: 16px; line-height: 1.6; color: var(--body); max-width: 64ch; margin: 0 0 18px; }
+.subsec { padding-top: clamp(36px,5vh,56px); border-top: 1px solid var(--hair); margin-top: clamp(36px,5vh,56px); }
+.subsec:first-child { padding-top: 0; border-top: none; margin-top: 0; }
+.zh { color: var(--mute); }
+
+/* Claim */
+.claim { border-left: 2px solid var(--ink); padding: 6px 0 6px 28px; margin: 8px 0 28px; }
+.claim .q { font-weight: 500; font-size: clamp(21px,2.4vw,30px); line-height: 1.24; letter-spacing: -0.02em; color: var(--ink); max-width: 28ch; }
+.claim .tag { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); margin-top: 12px; }
+
+/* Lists */
+.list-clean { list-style: none; padding: 0; margin: 0 0 8px; }
+.list-clean li { font-size: 15.5px; line-height: 1.55; color: var(--body); padding: 13px 0; border-bottom: 1px solid var(--hair); position: relative; padding-left: 28px; }
+.list-clean li::before { content:""; position:absolute; left:0; top:21px; width:14px; height:1px; background: var(--ink); }
+.list-clean li:last-child { border-bottom: none; }
+.list-clean li b { color: var(--ink); font-weight: 600; }
+
+/* Role panel */
+.panel { background: var(--paper); border: 1px solid var(--rule); padding: clamp(26px,3.6vw,40px); margin: 0 0 24px; }
+.role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+.role-head h4 { margin: 0; font-weight: 650; font-size: 21px; letter-spacing: -0.02em; color: var(--ink); }
+.role-head .when { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); }
+.role-sub { font-size: 14px; color: var(--mute); margin: 0 0 14px; }
+
+/* Cards */
+.cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 720px){ .cases { grid-template-columns: 1fr; } }
+.card { background: var(--paper); border: 1px solid var(--rule); padding: 24px 26px; display: flex; flex-direction: column; transition: transform var(--t-slow) var(--ease-out), border-color var(--t-slow) var(--ease-out); }
+@media (hover:hover){ .card:hover { transform: translateY(-3px); border-color: var(--mute); } }
+.card .role { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mute); font-weight: 600; margin-bottom: 12px; }
+.card h4 { font-weight: 650; font-size: 18px; letter-spacing: -0.02em; line-height: 1.2; color: var(--ink); margin: 0 0 8px; }
+.card p { font-size: 14.5px; color: var(--mid); margin: 0 0 16px; max-width: none; }
+.card p b { color: var(--ink); font-weight: 600; }
+.card .link { margin-top: auto; font-size: 13.5px; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--rule); align-self: flex-start; transition: border-color var(--t-normal) var(--ease-out); }
+.card .link:hover { border-color: var(--ink); }
+
+/* Spec table */
+.spec { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--paper); border: 1px solid var(--rule); }
+.spec thead th { text-align: left; padding: 13px 16px; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mute); background: var(--shell); border-bottom: 1px solid var(--rule); }
+.spec tbody td { padding: 13px 16px; border-bottom: 1px solid var(--hair); vertical-align: top; line-height: 1.5; color: var(--mid); }
+.spec tbody tr:last-child td { border-bottom: none; }
+.spec tbody td b { color: var(--ink); font-weight: 600; font-size: 14.5px; }
+.spec tbody td a { border-bottom: 1px solid var(--rule); transition: border-color var(--t-normal) var(--ease-out); }
+.spec tbody td a:hover { border-color: var(--ink); }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 14px; }
+.skill { border: 1px solid var(--rule); background: var(--paper); padding: 20px 22px; }
+.skill .sk-h { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); font-weight: 600; margin-bottom: 10px; }
+.skill p { font-size: 14.5px; color: var(--mid); margin: 0; max-width: none; }
+.skill p b { color: var(--ink); font-weight: 600; }
+
+/* Principles */
+.principles { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+@media (max-width: 680px){ .principles { grid-template-columns: 1fr; } }
+.principle { background: var(--paper); padding: 26px; }
+.principle .pn { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
+.principle h4 { font-weight: 650; font-size: 18px; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 8px; }
+.principle p { font-size: 14.5px; color: var(--mid); margin: 0; max-width: none; line-height: 1.55; }
+
+/* End + footer */
+.end { background: var(--char); color: var(--cream); padding: clamp(80px,12vh,140px) var(--pad) 64px; }
+.end-inner { max-width: var(--max); margin: 0 auto; }
+.end h2 { font-weight: 650; font-size: clamp(34px,5.6vw,72px); line-height: 1.02; letter-spacing: -0.045em; color: var(--cream); margin: 0 0 20px; max-width: 18ch; }
+.end p { color: rgba(246,243,234,0.75); max-width: 52ch; margin: 0 0 32px; font-weight: 300; font-size: 17px; }
+.end .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 72px; }
+.end-rule { height: 1px; background: rgba(246,243,234,0.18); margin: 0 0 28px; }
+.end-meta { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(246,243,234,0.55); }
+.end-meta a:hover { color: var(--cream); }
+
+/* Reveals */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity var(--t-slow) var(--ease-out), transform var(--t-slow) var(--ease-out); will-change: opacity, transform; }
+.reveal.in { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
 
-<div class="nav-bar"><div class="wrap"><div class="nav">
-  <span class="name">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-      <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
-    </svg>
-    Flow AI.
-  </span>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="masthead" id="masthead">
+  <a class="masthead-mark" href="#top">Amber Lan</a>
   <nav>
     <a href="work.html">Work</a>
-    <a href="index.html#pricing">Pricing</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="index.html">← Home</a>
+    <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a>
+    <a href="index.html">Flow AI home</a>
   </nav>
-</div></div></div>
+</header>
 
-<div class="hero"><div class="wrap">
-  <div class="eyebrow">Curriculum vitae</div>
-  <h1>Amber Lan. Marketing engineer.</h1>
-  <p class="lede">I write the go-to-market strategy <b>and</b> build the AI systems that run it — content engines, SEO/AEO tooling, inbound &amp; outbound automation, and the software underneath. Below is <b>everything I've shipped</b>, each project linked to its source.</p>
-  <div class="meta-row">
-    <span class="chip">📍 <b>Auckland, NZ</b></span>
-    <span class="chip">🛠 <b>Python · TypeScript · Swift</b></span>
-    <span class="chip">🤖 <b>Claude Code · AI systems</b></span>
-    <span class="chip">🌏 NZ · AU · Remote</span>
+<!-- =========================== COVER =========================== -->
+<section class="cover" id="top">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">Curriculum vitae · Amber Lan</div>
+    <h1 class="cover-hero">
+      <span class="word">Show</span>
+      <span class="word">the</span>
+      <span class="word">work.</span>
+    </h1>
+    <p class="cover-lede">I'm Amber Lan, an <b>AI marketing engineer</b>. I run marketing solo at an AI startup, on an agent stack I built myself, and I publish what works, what breaks, and the real numbers. This page is the receipts: <b>every system linked to its source.</b></p>
+    <div class="cover-cta">
+      <a class="btn" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub profile</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com">Email me</a>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><b>Base</b><span>Auckland, New Zealand · NZ / AU / remote</span></div>
+      <div class="cover-meta-item"><b>Languages</b><span>English · 中文 (native)</span></div>
+      <div class="cover-meta-item"><b>Stack</b><span>Claude agents · Python · TypeScript · Swift</span></div>
+      <div class="cover-meta-item"><b>Position</b><span>Practitioner. Receipts over claims.</span></div>
+    </div>
   </div>
-  <div class="cta-row">
-    <a class="btn" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub profile →</a>
-    <a class="btn ghost" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com">Email me</a>
-  </div>
-</div></div>
+</section>
 
-<!-- FEATURED -->
-<section><div class="wrap">
-  <div class="pillar-k">
-    <span class="pk-n">01</span>
-    <h2>Featured</h2>
-    <span class="pk-d">The work that best shows the marketing-engineer combination: strategy plus shipped systems.</span>
-  </div>
-  <div class="cases">
-    <div class="card">
-      <div class="role">SEO / AEO tooling · Python</div>
-      <h3>geo-seo-claude</h3>
-      <div class="tags"><span class="tag">GEO / AEO</span><span class="tag">Claude Code</span><span class="tag">Schema</span></div>
-      <p>A GEO/AEO-first SEO toolkit for Claude Code: citability scoring, AI-crawler analysis, brand-authority and schema markup, plus PDF reports — <b>so a brand gets cited by ChatGPT, Claude &amp; Perplexity, not just ranked on Google.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">View repository →</a>
-    </div>
-    <div class="card">
-      <div class="role">Inbound · content system · React</div>
-      <h3>Flow AI — automated SEO content</h3>
-      <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Content</span></div>
-      <p>Automated, AI-search-optimised content for NZ service businesses. A short brief in; <b>publish-ready service, location &amp; FAQ pages out</b> — tuned for how customers actually search.</p>
-      <a class="link" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">View repository →</a>
-    </div>
-    <div class="card">
-      <div class="role">Content engine · Python + Claude Code</div>
-      <h3>Novie content engine</h3>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Brand voice</span><span class="tag">Notion</span></div>
-      <p>One book PDF in, a month of on-brand posts out. Every line passes a codified <b>Voice Law</b> before it ships, <b>so the output reads human, not generated.</b> Packaged as a reusable skill.</p>
-      <a class="link" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">View repository →</a>
-    </div>
-    <div class="card">
-      <div class="role">Distribution tooling · TypeScript</div>
-      <h3>Social Media OS</h3>
-      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Multi-platform</span></div>
-      <p>Publishing as an operation: plan once, adapt per platform, ship on schedule. <b>The distribution half of the content engine.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">View repository →</a>
-    </div>
-  </div>
-</div></section>
+<div class="page">
 
-<!-- AI & MARKETING SYSTEMS -->
-<section><div class="wrap">
-  <div class="pillar-k">
-    <span class="pk-n">02</span>
-    <h2>AI &amp; marketing systems</h2>
-    <span class="pk-d">The engines that find, qualify, and reach buyers.</span>
-  </div>
-  <div class="cases">
-    <div class="card">
-      <div class="role">Lead discovery · AI</div>
-      <h3>Finding users on Reddit with AI</h3>
-      <div class="tags"><span class="tag">AI</span><span class="tag">Lead gen</span></div>
-      <p>Surface and qualify potential users from Reddit threads with AI — <b>intent signal, not spray-and-pray.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/finding-users-on-reddit-using-ai" target="_blank" rel="noopener">View repository →</a>
+  <!-- =========================== 01 · POSITION =========================== -->
+  <section class="sec" id="s01">
+    <div class="sec-head reveal">
+      <div class="sec-num">01<span>Position</span></div>
+      <div class="sec-titles">
+        <h2>One person, two crafts.</h2>
+        <div class="sec-sub">Almost everyone in this market is either a marketer who prompts or an engineer who can't market. I work in the overlap, and I keep a live production system as standing evidence.</div>
+      </div>
     </div>
-    <div class="card">
-      <div class="role">Dashboard · Next.js + Vercel</div>
-      <h3>Novie content viewer</h3>
-      <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel KV</span></div>
-      <p>A read-only, auth-gated Vercel mirror of the content-engine cockpit, <b>so the team can browse packets without running the engine locally.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/novie-content-viewer" target="_blank" rel="noopener">View repository →</a>
+    <div class="sec-body">
+      <div class="sec-body-margin">The claim</div>
+      <div>
+        <div class="claim reveal">
+          <div class="q">The AI marketing engineer who builds and runs the machine in production, and shows the work.</div>
+          <div class="tag">双语营销工程师 · practitioner, never authority</div>
+        </div>
+        <p class="reveal">That means I write the go-to-market strategy and then build the systems that execute it: content engines with codified voice audits, outbound lanes, SEO and AEO tooling, event operations, rendering pipelines. No handoffs, because there's no one to hand off to. When I say a system works, the receipt ships with the claim.</p>
+      </div>
     </div>
-    <div class="card">
-      <div class="role">Demo · web</div>
-      <h3>Flow AI — alpha</h3>
-      <div class="tags"><span class="tag">Web</span><span class="tag">Prototype</span></div>
-      <p>The early alpha demo for the Flow AI product line.</p>
-      <a class="link" href="https://github.com/Amberlanqinyun/flow-ai" target="_blank" rel="noopener">View repository →</a>
-    </div>
-  </div>
-</div></section>
+  </section>
 
-<!-- PRODUCT & WEB APPS -->
-<section><div class="wrap">
-  <div class="pillar-k">
-    <span class="pk-n">03</span>
-    <h2>Product &amp; web apps</h2>
-    <span class="pk-d">Proof the strategist ships software — end to end, solo.</span>
-  </div>
-  <div class="cases">
-    <div class="card">
-      <div class="role">Shipped product · iOS</div>
-      <h3>Latticework</h3>
-      <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">CI</span></div>
-      <p>A Charlie Munger mental-models app: daily wisdom, recall drills, and a decision journal on a tested logic core with CI.</p>
-      <a class="link" href="https://github.com/Amberlanqinyun/latticework" target="_blank" rel="noopener">View repository →</a>
+  <!-- =========================== 02 · NOW =========================== -->
+  <section class="sec" id="s02">
+    <div class="sec-head reveal">
+      <div class="sec-num">02<span>Now</span></div>
+      <div class="sec-titles">
+        <h2>Running marketing solo at an AI startup.</h2>
+        <div class="sec-sub">The whole function, one person plus an agent stack: positioning through launch.</div>
+      </div>
     </div>
-    <div class="card">
-      <div class="role">Product site · React</div>
-      <h3>flowai studio — reMarkable templates</h3>
-      <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Playwright</span></div>
-      <p>Purposeful planner &amp; journal templates for the reMarkable paper tablet, with a consistent design system and e2e tests.</p>
-      <a class="link" href="https://github.com/Amberlanqinyun/flowaistudio" target="_blank" rel="noopener">View repository →</a>
+    <div class="sec-body">
+      <div class="sec-body-margin">Current role</div>
+      <div>
+        <div class="panel reveal">
+          <div class="role-head">
+            <h4>Marketing Lead · Novamind Labs</h4>
+            <span class="when">Auckland · current</span>
+          </div>
+          <p class="role-sub">Sole marketing function for Novie, an enterprise AI operating system, from pre-launch positioning to launch execution.</p>
+          <ul class="list-clean">
+            <li><b>Category and positioning.</b> Own the message architecture, the claims register, and the go-to-market plan across two quarters and a product launch.</li>
+            <li><b>An agent-run content engine.</b> Brief in, audited platform-native content out: every artefact passes a codified brand and voice gate before it ships. The clean-room version is <a href="https://github.com/Amberlanqinyun/novie-content-engine" style="border-bottom:1px solid var(--rule)">public on GitHub</a>.</li>
+            <li><b>Executive thought-leadership program.</b> Three leadership voices on LinkedIn, quarterly calendars, every statistic verified against a source before publication.</li>
+            <li><b>Marketing infrastructure as software.</b> An HTML-to-video rendering pipeline (Playwright + ffmpeg), a live benchmark kiosk app, interactive GTM plans and dashboards the leadership team actually uses.</li>
+            <li><b>Event go-to-market end to end.</b> Exhibitor operations, booth systems, and collateral for national tech events, run as production systems rather than one-off scrambles.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="card span">
-      <div class="role">Product · Next.js</div>
-      <h3>Mind Traveler — travel without leaving</h3>
-      <div class="tags"><span class="tag">Next.js</span><span class="tag">Product design</span><span class="tag">Content skill</span></div>
-      <p>A cultural-immersion app: pick a country, get a curated four-week programme — music, films, books, food, and local heroes, with an editorial layer on the Chinese diaspora. <b>Shipped with a full PRD and a custom content-generation skill.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/mind-traveller-storybook" target="_blank" rel="noopener">View repository →</a>
-    </div>
-  </div>
-</div></section>
+  </section>
 
-<!-- WELLBEING -->
-<section><div class="wrap">
-  <div class="pillar-k">
-    <span class="pk-n">04</span>
-    <h2>Wellbeing</h2>
-    <span class="pk-d">Calm-by-design tools built for people's hardest moments.</span>
-  </div>
-  <div class="cases">
-    <div class="card">
-      <div class="role">Support app · React</div>
-      <h3>Unhook</h3>
-      <div class="tags"><span class="tag">React</span><span class="tag">MUI</span></div>
-      <p>Connects people to NZ mental-health crisis &amp; wellbeing services fast — <b>plain-language, low-barrier, built for stress.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/Unhook" target="_blank" rel="noopener">View repository →</a>
+  <!-- =========================== 03 · SYSTEMS =========================== -->
+  <section class="sec" id="s03">
+    <div class="sec-head reveal">
+      <div class="sec-num">03<span>Systems</span></div>
+      <div class="sec-titles">
+        <h2>Shipped systems, linked to source.</h2>
+        <div class="sec-sub">The four that best show the combination, then the rest. Public code, public receipts.</div>
+      </div>
     </div>
-    <div class="card">
-      <div class="role">Wellness app · React</div>
-      <h3>one day at a time</h3>
-      <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span></div>
-      <p>A gentle app for hard moments: pause, breathe, and take one small step. <b>No streaks, no guilt.</b></p>
-      <a class="link" href="https://github.com/Amberlanqinyun/onedayatatime" target="_blank" rel="noopener">View repository →</a>
+    <div class="sec-body">
+      <div class="sec-body-margin">The receipts</div>
+      <div>
+        <div class="cases reveal">
+          <div class="card">
+            <div class="role">SEO / AEO tooling · Python</div>
+            <h4>geo-seo-claude</h4>
+            <p>A GEO/AEO-first SEO toolkit for Claude Code: citability scoring, AI-crawler analysis, schema markup, PDF reports. <b>Built so a brand gets cited by ChatGPT, Claude and Perplexity, not just ranked on Google.</b></p>
+            <a class="link" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">View repository →</a>
+          </div>
+          <div class="card">
+            <div class="role">Content system · React + TS</div>
+            <h4>Flow AI</h4>
+            <p>Automated, AI-search-optimised content for NZ service businesses. A short brief in, <b>publish-ready service, location and FAQ pages out</b>, tuned for how customers actually search.</p>
+            <a class="link" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">View repository →</a>
+          </div>
+          <div class="card">
+            <div class="role">Content engine · Python + Claude</div>
+            <h4>Novie content engine</h4>
+            <p>One source document in, a month of on-brand posts out. Every line passes a codified voice audit before it ships, <b>so the output reads human, not generated.</b></p>
+            <a class="link" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">View repository →</a>
+          </div>
+          <div class="card">
+            <div class="role">Distribution · TypeScript</div>
+            <h4>Social Media OS</h4>
+            <p>Publishing as an operation: plan once, adapt per platform, ship on schedule. <b>The distribution half of the content engine.</b></p>
+            <a class="link" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">View repository →</a>
+          </div>
+        </div>
+
+        <div class="subsec">
+          <h3>More systems</h3>
+          <table class="spec reveal">
+            <thead><tr><th>System</th><th>What it does</th><th>Stack</th></tr></thead>
+            <tbody>
+              <tr><td><b><a href="https://github.com/Amberlanqinyun/finding-users-on-reddit-using-ai" target="_blank" rel="noopener">Reddit user discovery</a></b></td><td>Surface and qualify potential users from Reddit with AI: intent signal, not spray-and-pray.</td><td>AI · Python</td></tr>
+              <tr><td><b><a href="https://github.com/Amberlanqinyun/novie-content-viewer" target="_blank" rel="noopener">Novie content viewer</a></b></td><td>Auth-gated read-only mirror of the content-engine dashboard for the team.</td><td>Next.js · Vercel KV</td></tr>
+              <tr><td><b><a href="https://github.com/Amberlanqinyun/latticework" target="_blank" rel="noopener">Latticework</a></b></td><td>A Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.</td><td>Swift · SwiftUI</td></tr>
+              <tr><td><b><a href="https://github.com/Amberlanqinyun/mind-traveller-storybook" target="_blank" rel="noopener">Mind Traveler</a></b></td><td>Cultural immersion: pick a country, get a curated four-week programme. Shipped with a full PRD and a custom content skill.</td><td>Next.js</td></tr>
+              <tr><td><b><a href="https://github.com/Amberlanqinyun/flowaistudio" target="_blank" rel="noopener">flowai studio</a></b></td><td>Planner and journal templates for the reMarkable tablet, with a design system and e2e tests.</td><td>React · Playwright</td></tr>
+              <tr><td><b><a href="https://github.com/Amberlanqinyun/Unhook" target="_blank" rel="noopener">Unhook</a></b> · <a href="https://github.com/Amberlanqinyun/onedayatatime" target="_blank" rel="noopener">one day at a time</a></td><td>Calm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.</td><td>React · TS</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <div class="role">AI audio · Python</div>
-      <h3>Breathin</h3>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Generative AI</span></div>
-      <p>AI-generated guided meditation.</p>
-      <a class="link" href="https://github.com/Amberlanqinyun/Breathin-AI-Generated-Meditation" target="_blank" rel="noopener">View repository →</a>
+  </section>
+
+  <!-- =========================== 04 · CAPABILITIES =========================== -->
+  <section class="sec" id="s04">
+    <div class="sec-head reveal">
+      <div class="sec-num">04<span>Capabilities</span></div>
+      <div class="sec-titles">
+        <h2>Strategy through code.</h2>
+        <div class="sec-sub">The full stack of the job, from the claim at the top to the pipeline underneath it.</div>
+      </div>
+    </div>
+    <div class="sec-body">
+      <div class="sec-body-margin">The stack</div>
+      <div>
+        <div class="skills reveal">
+          <div class="skill"><div class="sk-h">Strategy</div><p><b>Go-to-market</b>, category positioning, message architecture, launch planning.</p></div>
+          <div class="skill"><div class="sk-h">Demand</div><p><b>SEO and AEO/GEO</b>, content engines, inbound diagnostics, outbound automation.</p></div>
+          <div class="skill"><div class="sk-h">AI systems</div><p><b>Claude agents and skills</b>, brand-voice codification, LLM pipelines, MCP integrations.</p></div>
+          <div class="skill"><div class="sk-h">Engineering</div><p><b>Python · TypeScript · Swift</b>, React/Next.js, Playwright + ffmpeg rendering.</p></div>
+          <div class="skill"><div class="sk-h">Ship</div><p>Vercel, GitHub, CI, e2e testing. <b>Production, not prototypes.</b></p></div>
+          <div class="skill"><div class="sk-h">Bilingual</div><p><b>English and 中文</b>, native Mandarin: strategy and content in both markets.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== 05 · HOW I WORK =========================== -->
+  <section class="sec" id="s05">
+    <div class="sec-head reveal">
+      <div class="sec-num">05<span>Method</span></div>
+      <div class="sec-titles">
+        <h2>How I work.</h2>
+        <div class="sec-sub">The same rules I publish under. They apply to client work too.</div>
+      </div>
+    </div>
+    <div class="sec-body">
+      <div class="sec-body-margin">Four rules</div>
+      <div>
+        <div class="principles reveal">
+          <div class="principle"><div class="pn">01</div><h4>Report, don't prescribe.</h4><p>"I tested it, here's what happened" beats "you should." Observations from a real system, not advice from a podium.</p></div>
+          <div class="principle"><div class="pn">02</div><h4>Receipts persuade.</h4><p>Numbers and screenshots, a before and an after. If there's no receipt, it doesn't ship.</p></div>
+          <div class="principle"><div class="pn">03</div><h4>Failures are episodes.</h4><p>What broke, the root cause, the fix, and what it cost. Published at the same rate as the wins.</p></div>
+          <div class="principle"><div class="pn">04</div><h4>Leverage over labor.</h4><p>Anything done twice by hand becomes a system. The agent stack is the team; I stay on strategy and judgment.</p></div>
+        </div>
+        <p class="reveal zh" style="margin-top:20px;">卖过程和凭证，不卖真理。</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== END =========================== -->
+<footer class="end">
+  <div class="end-inner">
+    <h2>Let's build the machine for your startup.</h2>
+    <p>Strategy, demand engines, and the systems that run them. One AI marketing engineer, no handoffs, receipts included.</p>
+    <div class="btn-row">
+      <a class="btn" href="index.html#contact">Book a discovery call</a>
+      <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a>
+    </div>
+    <div class="end-rule"></div>
+    <div class="end-meta">
+      <span>© 2026 Amber Lan · Flow AI</span>
+      <span>Show the work.</span>
+      <span><a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a></span>
     </div>
   </div>
-</div></section>
+</footer>
 
-<!-- SKILLS -->
-<section><div class="wrap">
-  <div class="pillar-k">
-    <span class="pk-n">05</span>
-    <h2>Capabilities</h2>
-    <span class="pk-d">The full marketing-engineer stack, strategy through code.</span>
-  </div>
-  <div class="skills">
-    <div class="skill"><div class="sk-h">Strategy</div><p><b>Go-to-market</b>, positioning, message architecture, pricing models.</p></div>
-    <div class="skill"><div class="sk-h">Demand</div><p><b>SEO &amp; AEO/GEO</b>, content engines, inbound diagnostics, outbound automation.</p></div>
-    <div class="skill"><div class="sk-h">Engineering</div><p><b>Python · TypeScript · Swift</b>, React/Next.js, Vite, Tailwind.</p></div>
-    <div class="skill"><div class="sk-h">AI</div><p><b>Claude Code</b> skills &amp; agents, brand-voice systems, LLM pipelines.</p></div>
-    <div class="skill"><div class="sk-h">Ship</div><p>Vercel, GitHub, CI, e2e testing with Playwright.</p></div>
-  </div>
-</div></section>
-
-<div class="end"><div class="wrap">
-  <h2>Let's build the machine for your startup.</h2>
-  <p>Strategy, demand engines, and the systems that run them — one marketing engineer, no handoffs.</p>
-  <a class="btn" href="index.html#contact">Book a discovery call</a>
-</div></div>
-
-<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%;max-width:1060px;margin:0 auto;">
-  <span>© 2026 Flow AI · Amber Lan</span>
-  <span><a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a></span>
-</div></footer>
-
+<script>
+(function(){
+  var progress = document.getElementById('progress');
+  var masthead = document.getElementById('masthead');
+  var ticking = false;
+  function update(){
+    var doc = document.documentElement;
+    var top = window.scrollY || doc.scrollTop;
+    var max = (doc.scrollHeight - doc.clientHeight) || 1;
+    progress.style.setProperty('--p', Math.min(100, Math.max(0,(top/max)*100)) + '%');
+    if (top > 24) masthead.classList.add('scrolled'); else masthead.classList.remove('scrolled');
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){ if(!ticking){ window.requestAnimationFrame(update); ticking = true; } }, { passive:true });
+  update();
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
 </body>
 </html>
