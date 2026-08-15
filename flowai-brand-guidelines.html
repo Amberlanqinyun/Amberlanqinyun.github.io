@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow AI · Brand guidelines</title>
+<meta name="description" content="The Flow AI brand system: entity, marks, colour, typography, voice, and language. One source of truth for every surface that carries the name.">
+<meta name="theme-color" content="#0E0E0D">
+<link rel="canonical" href="https://www.flowai.co.nz/flowai-brand-guidelines.html">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<meta name="robots" content="noindex">
+<style>
+  @font-face{font-family:"Google Sans Flex";src:url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap;}
+  :root{
+    --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;
+    --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.40);--hair:rgba(250,248,243,0.11);--ink:#0E0E0D;
+    --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --r-m:18px;--t-normal:200ms;--ease:cubic-bezier(0.2,0.8,0.2,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--cream);color:var(--ink);}
+  .wrap{max-width:920px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
+  a{color:inherit;text-decoration:none;}
+  b,strong{color:var(--fg);font-weight:600;}
+
+  .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
+  .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);}
+  .nav .name svg{width:21px;height:21px;color:var(--cream);}
+  .nav nav a{color:var(--mute);margin-left:24px;font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
+  .nav nav a:hover{color:var(--fg);}
+
+  .hero{padding:clamp(80px,13vh,140px) 0 clamp(36px,6vh,56px);}
+  .eyebrow{font-size:11.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:26px;}
+  h1{font-weight:600;font-size:clamp(38px,6vw,64px);line-height:1.04;letter-spacing:-0.04em;color:var(--fg);max-width:16ch;}
+  .lede{margin-top:24px;font-weight:300;font-size:clamp(17px,1.9vw,21px);line-height:1.5;color:var(--dim);max-width:56ch;}
+
+  section{padding:clamp(52px,8vh,88px) 0 0;}
+  .k{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;border-top:1px solid var(--hair);padding-top:clamp(28px,4vh,40px);}
+  .k .n{font-weight:600;font-size:14px;color:var(--mute);font-variant-numeric:tabular-nums;}
+  .k h2{font-weight:600;font-size:clamp(22px,3vw,32px);letter-spacing:-0.03em;color:var(--fg);}
+  h3{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--mute);margin:30px 0 12px;}
+  p{max-width:64ch;margin-bottom:14px;}
+
+  .card{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:24px 26px;margin:14px 0;}
+  .card .lab{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px;}
+  .card .big{font-weight:500;font-size:clamp(18px,2.2vw,24px);line-height:1.3;letter-spacing:-0.015em;color:var(--fg);}
+
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0;}
+  th{text-align:left;padding:10px 12px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--hair);}
+  td{padding:11px 12px;border-bottom:1px solid var(--hair);vertical-align:top;color:var(--dim);}
+  td b{color:var(--fg);}
+  td.del{color:var(--mute);text-decoration:line-through;}
+
+  .sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0;}
+  .sw .s{border:1px solid var(--hair);border-radius:var(--r-m);overflow:hidden;}
+  .sw .chip{height:84px;}
+  .sw .m{padding:10px 14px;font-size:12px;color:var(--mute);}
+  .sw .m b{display:block;color:var(--fg);font-size:13.5px;}
+
+  ul.rules{list-style:none;margin:8px 0 8px;}
+  ul.rules li{padding:11px 0 11px 24px;border-bottom:1px solid var(--hair);position:relative;font-size:15px;}
+  ul.rules li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:1px;background:var(--cream);}
+  ul.rules li:last-child{border-bottom:none;}
+
+  .marks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+  @media(max-width:600px){.marks{grid-template-columns:1fr;}}
+  .mark{border:1px solid var(--hair);border-radius:var(--r-m);display:flex;align-items:center;justify-content:center;gap:12px;min-height:150px;background:var(--panel);}
+  .mark.light{background:var(--cream);}
+  .mark svg{width:34px;height:34px;color:var(--cream);}
+  .mark.light svg{color:var(--ink);}
+  .mark .wm{font-weight:600;font-size:30px;letter-spacing:-0.03em;color:var(--fg);}
+  .mark.light .wm{color:var(--ink);}
+
+  footer{margin-top:clamp(60px,10vh,100px);border-top:1px solid var(--hair);padding:26px 0 44px;color:var(--mute);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+</style>
+</head>
+<body>
+
+<div class="nav-bar"><div class="wrap"><div class="nav">
+  <a class="name" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+      <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
+    </svg>
+    Flow AI.
+  </a>
+  <nav><a href="index.html">Home</a><a href="work.html">Work</a><a href="cv.html">CV</a></nav>
+</div></div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Brand guidelines · v1.0 · 2026</div>
+  <h1>The Flow AI brand system.</h1>
+  <p class="lede">One source of truth for how Flow AI looks, sounds, and holds its position. Every surface that carries the name passes through here: site, socials, proposals, reports, directory profiles.</p>
+</div></div>
+
+<div class="wrap">
+
+<section>
+  <div class="k"><span class="n">01</span><h2>Foundation: the entity and the claims.</h2></div>
+  <h3>The entity string · use verbatim everywhere</h3>
+  <div class="card">
+    <div class="lab">Canonical entity</div>
+    <div class="big">Flow AI (flowai.co.nz) · Amber Lan, AI marketing engineer · Auckland, New Zealand</div>
+  </div>
+  <p>Search and AI engines resolve brands by name, and "Flow" is contested in NZ marketing: Flow Digital (flow.co.nz), Flow Marketing NZ, and Discflow's FLOWAI product all exist. The full entity string, name plus domain plus person plus place, is what keeps citations resolving to us. Use it in every bio, directory profile, and byline. Never "Flow" alone.</p>
+  <h3>The claims</h3>
+  <div class="card">
+    <div class="lab">Category line · leads every surface</div>
+    <div class="big">You run the business. Flow AI runs the marketing.</div>
+  </div>
+  <div class="card">
+    <div class="lab">The offer, one breath</div>
+    <div class="big">Your marketing, run by an AI system built and operated by one engineer. NZ$1,000 a month, cancel anytime, first report in 14 days.</div>
+  </div>
+  <div class="card">
+    <div class="lab">The person</div>
+    <div class="big">I run marketing solo at an AI startup, on an agent stack I built myself. Flow AI is the same method, pointed at your business.</div>
+  </div>
+  <p><b>Category vocabulary we are claiming:</b> AI marketing engineer, marketing engineering, growth engineering, answer engine optimization (AEO). Use these terms consistently; they're unclaimed in NZ and consistency is what claims them.</p>
+</section>
+
+<section>
+  <div class="k"><span class="n">02</span><h2>The marks.</h2></div>
+  <div class="marks">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
+      </svg>
+      <span class="wm">Flow AI.</span>
+    </div>
+    <div class="mark light">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
+      </svg>
+      <span class="wm">Flow AI.</span>
+    </div>
+  </div>
+  <ul class="rules">
+    <li><b>The flow-lines symbol:</b> three lines converging into one. Always stroke, never filled; cream on ink or ink on cream.</li>
+    <li><b>The wordmark is "Flow AI."</b> with the full stop, set in the brand face at weight 600. "Flow AI" without the stop mid-sentence. Never "FlowAI", "flowai", or "Flow".</li>
+    <li><b>Favicon:</b> the "F." tile, ink square, cream letter.</li>
+    <li>No shadows, glows, gradients on the marks. No rotation, no stretching, no recolouring.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="k"><span class="n">03</span><h2>Colour: warm ink and cream, nothing else.</h2></div>
+  <div class="sw">
+    <div class="s"><div class="chip" style="background:#0E0E0D;border-bottom:1px solid var(--hair);"></div><div class="m"><b>Warm ink</b>#0E0E0D · canvas, text on light</div></div>
+    <div class="s"><div class="chip" style="background:#171715;"></div><div class="m"><b>Panel</b>#171715 · cards on ink</div></div>
+    <div class="s"><div class="chip" style="background:#FAF8F3;"></div><div class="m"><b>Cream</b>#FAF8F3 · text on ink, light surfaces</div></div>
+    <div class="s"><div class="chip" style="background:rgba(250,248,243,0.58);"></div><div class="m"><b>Dim</b>cream at 58% · body text on ink</div></div>
+  </div>
+  <ul class="rules">
+    <li>No pure black (#000) and no pure white (#FFF); both read cold. The warmth is the system.</li>
+    <li>No accent colour, no gradients, no glassmorphism, no neon. Hierarchy comes from brightness and scale.</li>
+    <li>Film grain at 4% is permitted on the site canvas only.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="k"><span class="n">04</span><h2>Typography: one face, weight does the work.</h2></div>
+  <ul class="rules">
+    <li><b>Face:</b> Google Sans Flex (self-hosted variable), falling back to the system sans stack.</li>
+    <li><b>Weights:</b> 300 for ledes and large quiet text, 400 body, 500 sub-heads and values, 600 headlines and the wordmark. 700 only at display sizes.</li>
+    <li><b>Tracking:</b> negative on headlines (−0.02 to −0.045em, tighter as size grows); wide uppercase tracking (0.16 to 0.22em) reserved for labels.</li>
+    <li><b>Case:</b> sentence case everywhere. No title case, no all-caps headlines. Labels may be uppercase.</li>
+    <li>Never a second typeface, never decorative type effects.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="k"><span class="n">05</span><h2>Voice: the practitioner, receipts first.</h2></div>
+  <p>Flow AI speaks as one person who does the work, never as a faceless firm. Four rules govern every sentence, on every surface:</p>
+  <ul class="rules">
+    <li><b>Report, don't prescribe.</b> "I tested it, here's what happened" beats "you should."</li>
+    <li><b>Receipts persuade, adjectives get cut.</b> A number and a screenshot beat any superlative. No receipt, no claim.</li>
+    <li><b>Failures are episodes.</b> What broke, the cause, the fix, the cost. Published at the same rate as wins.</li>
+    <li><b>Honest pricing is voice.</b> Numbers appear in plain text, in NZD, with the comparison anchors. We never make the reader ask.</li>
+  </ul>
+  <h3>Never claim</h3>
+  <p>Expert, guru, authority, No.1, guaranteed results, "the right way", client outcomes that don't exist yet. Founding-client honesty is a feature: "no client logos yet, on purpose" is on-brand; an invented case study is a fireable offence.</p>
+</section>
+
+<section>
+  <div class="k"><span class="n">06</span><h2>Language rules.</h2></div>
+  <table>
+    <thead><tr><th>Never</th><th>Why</th><th>Instead</th></tr></thead>
+    <tbody>
+      <tr><td class="del">unlock / seamless / revolutionary / cutting-edge / next-gen</td><td>Empty AI-tell vocabulary.</td><td>Say what it does.</td></tr>
+      <tr><td class="del">leverage (verb)</td><td>Jargon.</td><td>use</td></tr>
+      <tr><td class="del">world-class / best-in-class</td><td>Unverifiable claim.</td><td>A receipt, or nothing.</td></tr>
+      <tr><td class="del">"AI-powered" as decoration</td><td>Everyone says it.</td><td>Name the actual system.</td></tr>
+      <tr><td class="del">Exclamation marks</td><td>Performed excitement.</td><td>Full stops.</td></tr>
+      <tr><td class="del">More than one triad per piece</td><td>Machine rhythm.</td><td>Pairs, fours, asymmetry.</td></tr>
+      <tr><td class="del">Em dashes</td><td>House style.</td><td>Commas, colons, full stops.</td></tr>
+    </tbody>
+  </table>
+  <ul class="rules">
+    <li>Prices always as <b>NZ$1,000</b> style: currency marker, comma, no decimals.</li>
+    <li>AEO on first mention: <b>answer engine optimization (AEO)</b>; after that, AEO.</li>
+    <li>Mandarin welcome on social surfaces; site copy stays English with the bilingual fact stated, not performed.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="k"><span class="n">07</span><h2>Before anything ships.</h2></div>
+  <ul class="rules">
+    <li>Entity string correct and complete where identity appears.</li>
+    <li>Every claim carries a receipt or a link to one. No invented results, no borrowed numbers.</li>
+    <li>Prices current: $997 sprint, $1,000/month retainer, $500 referral. One source of truth, this file and the site.</li>
+    <li>Voice passes the podium test: would a practitioner say it, or a podium.</li>
+    <li>Marks, colour, and type per sections 02 to 04. No exceptions for "just this once."</li>
+  </ul>
+</section>
+
+</div>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%;max-width:920px;margin:0 auto;">
+  <span>© 2026 Flow AI · Amber Lan</span>
+  <span>Brand guidelines · v1.0 · owner: Amber Lan</span>
+</div></footer>
+
+</body>
+</html>
