@@ -100,11 +100,12 @@
   }
 
   /*
-    Flow AI. Novie palette on a dark editorial canvas.
-    Architecture: wide 1120px stage for display moments, narrow measures for reading.
-    Hierarchy by colour (bright cream vs dim) and by scale (display numerals, giant type).
-    One motif: flow lines. They draw themselves in, and the hero artery runs forever.
-    Warm ink #0E0E0D, never pure black. Cream #FAF8F3, never pure white. Film grain at 4%.
+    Flow AI. Warm ink and cream, one amber accent.
+    Architecture: 1120px stage, asymmetric hero (text left, live pipeline right),
+    hierarchy by colour and scale. One motif: flow lines that draw in once,
+    then run forever. The amber accent means "the system is live": it appears
+    only on the moving flow, the wordmark, functional links, and open states.
+    Warm ink #0E0E0D, never pure black. Cream #FAF8F3, never pure white.
   */
   :root {
     --bg:    #0E0E0D;
@@ -115,19 +116,18 @@
     --mute:  rgba(250,248,243,0.40);
     --hair:  rgba(250,248,243,0.11);
     --ink:   #0E0E0D;
+    --acc:   #E4A43C;                    /* amber: live-system signal, links, open states */
+    --acc-dim: rgba(228,164,60,0.55);
     --gsf: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    /* Type scale: wide ratio steps so each level is unmistakable.
-       display ~76 · h2 ~40 · h3 21 · lede 22 · body 16.5 · label 11 */
-    --fs-display: clamp(48px, 7.2vw, 78px);
+    --fs-display: clamp(44px, 5.6vw, 72px);
     --fs-h2:      clamp(27px, 3.2vw, 38px);
     --fs-h3:      21px;
     --fs-lede:    clamp(19px, 1.7vw, 22px);
     --fs-body:    16.5px;
-    --fs-label:   11px;
     --r-m: 24px; --r-s: 999px; /* surfaces: continuous 24px curves · interactive: pills */
     --t-fast: 150ms; --t-normal: 200ms; --t-slow: 300ms;
     --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-    --ease-out: cubic-bezier(0.23, 1, 0.32, 1); /* strong ease-out for entrances */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -142,7 +142,7 @@
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
-  ::selection { background: var(--cream); color: var(--ink); }
+  ::selection { background: var(--acc); color: var(--ink); }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 48px); }
   a { color: inherit; text-decoration: none; }
   b, strong { color: var(--fg); font-weight: 600; }
@@ -158,7 +158,7 @@
     @supports (animation-timeline: scroll()) {
       .progress {
         position: fixed; top: 0; left: 0; height: 2px; width: 100%; z-index: 90;
-        background: var(--cream); opacity: 0.45;
+        background: var(--acc); opacity: 0.7;
         transform-origin: 0 50%; transform: scaleX(0);
         animation: prog linear both; animation-timeline: scroll();
       }
@@ -177,35 +177,34 @@
     display: flex; justify-content: space-between; align-items: center; height: 60px;
   }
   .nav .name { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.02em; font-size: 16px; color: var(--fg); white-space: nowrap; }
-  .nav .name svg { width: 21px; height: 21px; color: var(--cream); }
+  .nav .name svg { width: 21px; height: 21px; color: var(--acc); }
   .nav nav a { color: var(--mute); margin-left: 28px; font-size: 13.5px; font-weight: 500; letter-spacing: 0.01em; transition: color var(--t-normal) var(--ease); }
   .nav nav a:hover { color: var(--fg); }
 
-  /* ---------- Hero ---------- */
+  /* ---------- Hero: asymmetric split. Text left, live pipeline right. ---------- */
   .hero { position: relative; overflow: hidden; isolation: isolate; }
-  .hero-body { padding: clamp(96px, 15vh, 180px) 0 0; text-align: center; }
+  .hero-body { padding: clamp(72px, 11vh, 120px) 0 clamp(56px, 8vh, 88px); }
   .eyebrow {
     font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--mute); font-weight: 500; margin-bottom: 44px;
+    color: var(--mute); font-weight: 500; margin-bottom: 36px;
   }
   h1 {
-    /* Sized so the longest line holds on one line at every viewport */
     font-weight: 600; font-size: var(--fs-display);
-    line-height: 1.02; letter-spacing: -0.045em; color: var(--fg);
-    margin: 0 auto;
+    line-height: 1.04; letter-spacing: -0.045em; color: var(--fg);
   }
   h1 .line { display: block; }
   h1 .off { color: var(--mute); }
   .hero-sub {
-    display: flex; flex-direction: column; align-items: center;
-    gap: 36px; margin-top: clamp(36px, 5.5vh, 56px);
+    display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 6fr);
+    gap: clamp(32px, 5vw, 80px); align-items: center;
+    margin-top: clamp(36px, 6vh, 56px);
   }
   .lede {
     font-weight: 300; font-size: var(--fs-lede);
     line-height: 1.5; letter-spacing: -0.01em; color: var(--dim);
-    max-width: 42ch; margin: 0 auto; text-wrap: balance;
+    max-width: 38ch; text-wrap: balance;
   }
-  .cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: clamp(28px, 4vh, 40px); }
   .btn {
     display: inline-block; padding: 17px 34px; font-size: 15px; font-weight: 500;
     letter-spacing: -0.005em; white-space: nowrap; border-radius: var(--r-s);
@@ -219,20 +218,21 @@
   .btn.primary:hover { background: rgba(250,248,243,0.9); }
   .btn.ghost { color: var(--fg); background: rgba(250,248,243,0.08); }
   .btn.ghost:hover { background: rgba(250,248,243,0.14); }
-  :focus-visible { outline: 2px solid rgba(250,248,243,0.7); outline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
 
-  /* Hero pipeline: draws once, then the flow runs forever */
-  .hero-fig { margin-top: clamp(56px, 9vh, 96px); }
+  /* Hero pipeline: one artery in from the left, five branches out.
+     Draws once on load, then the amber flow runs forever. */
   .hero-fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
-  .hero-meta {
+  .hero-fig .flow { color: var(--acc); }
+
+  /* Meta band: audience, scope, terms. Own section, out of the hero. */
+  .meta-band { border-top: 1px solid var(--hair); }
+  .meta-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
-    padding: 34px 0 60px; border-top: 1px solid var(--hair); text-align: center;
+    padding: 34px 0;
   }
-  .hero-meta b {
-    display: block; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--mute); margin-bottom: 10px; font-weight: 500;
-  }
-  .hero-meta span { font-size: 14px; color: var(--dim); line-height: 1.5; display: inline-block; max-width: 30ch; }
+  .meta-grid b { display: block; font-size: 13px; color: var(--fg); margin-bottom: 8px; font-weight: 600; }
+  .meta-grid span { font-size: 14px; color: var(--dim); line-height: 1.5; display: inline-block; max-width: 34ch; }
 
   /* ---------- Sections ---------- */
   section { padding: clamp(110px, 17vh, 200px) 0 0; scroll-margin-top: 72px; }
@@ -246,10 +246,10 @@
   h2 .off { color: var(--mute); }
   a.go {
     font-weight: 500; font-size: 15px; color: var(--fg);
-    border-bottom: 1px solid rgba(250,248,243,0.35);
-    transition: border-color var(--t-normal) var(--ease);
+    border-bottom: 1px solid var(--acc-dim);
+    transition: border-color var(--t-normal) var(--ease), color var(--t-normal) var(--ease);
   }
-  a.go:hover { border-color: var(--cream); }
+  a.go:hover { border-color: var(--acc); color: var(--cream); }
 
   /* Statement: words brighten as you scroll through them (fail-safe: full opacity without support) */
   .statement {
@@ -283,9 +283,8 @@
     transition: font-weight 900ms var(--ease) 200ms;
   }
   .reveal.pre .num { font-weight: 200; }
-  .result .spark { width: min(150px, 34%); height: auto; color: var(--cream); opacity: 0.9; margin-bottom: 18px; }
   .result .what { font-size: 16px; color: var(--dim); max-width: 40ch; }
-  .result .who { margin-top: 14px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); font-weight: 500; }
+  .result .who { margin-top: 14px; font-size: 13px; color: var(--mute); font-weight: 500; }
   .results-note { margin-top: 36px; font-size: 14.5px; color: var(--mute); max-width: 54ch; }
 
   /* Offer: sticky heading left, rows right */
@@ -293,8 +292,15 @@
   .offer-left { position: sticky; top: 120px; }
   .offer-left h2 { margin-bottom: 24px; }
   .offer-left p { font-size: 16px; color: var(--mute); max-width: 34ch; }
-  .offer-row { padding: 34px 0; border-top: 1px solid var(--hair); }
+  .offer-row {
+    padding: 34px 0 34px 0; border-top: 1px solid var(--hair);
+    border-left: 2px solid transparent;
+    transition: padding-left var(--t-slow) var(--ease), border-left-color var(--t-slow) var(--ease);
+  }
   .offer-row:last-of-type { border-bottom: 1px solid var(--hair); }
+  @media (hover: hover) and (pointer: fine) {
+    .offer-row:hover { padding-left: 18px; border-left-color: var(--acc); }
+  }
   .offer-row h3 { font-size: var(--fs-h3); font-weight: 600; letter-spacing: -0.02em; color: var(--fg); line-height: 1.3; margin-bottom: 10px; }
   .offer-row p { font-size: 16px; color: var(--dim); max-width: 50ch; }
 
@@ -302,9 +308,28 @@
   .process-line { margin-bottom: 40px; }
   .process-line svg { display: block; width: 100%; height: auto; color: var(--cream); }
   .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 56px); }
-  .process .pw { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mute); font-weight: 500; margin-bottom: 10px; }
+  .process .pw { font-size: 13px; color: var(--acc); font-weight: 500; margin-bottom: 10px; }
   .process .ph { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; color: var(--fg); margin-bottom: 12px; }
   .process p { font-size: 15px; color: var(--dim); max-width: 30ch; }
+
+  /* Free tools: one wide panel, two halves on a hairline. Distinct from pricing cards. */
+  .tools-panel {
+    background: var(--panel); border: 1px solid rgba(250,248,243,0.08); border-radius: var(--r-m);
+    box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
+    display: grid; grid-template-columns: 1fr 1fr; overflow: hidden;
+  }
+  .tool {
+    padding: clamp(30px, 3.8vw, 48px);
+    position: relative;
+  }
+  .tool + .tool { border-left: 1px solid var(--hair); }
+  .tool:first-child {
+    background: radial-gradient(120% 140% at 0% 0%, rgba(228,164,60,0.10), transparent 55%);
+  }
+  .tool .tn { font-size: 13px; color: var(--mute); font-weight: 500; margin-bottom: 18px; }
+  .tool h3 { font-weight: 600; font-size: clamp(22px, 2.4vw, 28px); letter-spacing: -0.025em; color: var(--fg); line-height: 1.2; margin-bottom: 14px; }
+  .tool p { font-size: 15px; color: var(--dim); max-width: 38ch; }
+  .tool .go { display: inline-block; margin-top: 22px; }
 
   /* Pricing */
   .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -317,12 +342,13 @@
   @media (hover: hover) and (pointer: fine) {
     .price:hover { transform: translateY(-4px) scale(1.005); border-color: rgba(250,248,243,0.22); }
   }
-  .price .pn { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--mute); margin-bottom: 20px; }
+  .price .pn { font-size: 13px; font-weight: 500; color: var(--mute); margin-bottom: 20px; }
   .price .pv { font-weight: 600; font-size: clamp(38px, 4.4vw, 54px); letter-spacing: -0.04em; color: var(--fg); font-feature-settings: "tnum"; line-height: 1; }
   .price .pv small { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--mute); }
   .price p { margin-top: 14px; font-size: 15px; color: var(--dim); max-width: 36ch; }
   .price.anchor { background: var(--cream); border-color: var(--cream); }
   .price.anchor .pn { color: rgba(14,14,13,0.55); }
+  .price.anchor .pn b { color: #8A5A14; font-weight: 600; }
   .price.anchor .pv { color: var(--ink); }
   .price.anchor .pv small { color: rgba(14,14,13,0.55); }
   .price.anchor p { color: rgba(14,14,13,0.75); }
@@ -339,16 +365,13 @@
     box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
   }
   .fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
-  .fig path, .spark path, .process-line path { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 800ms var(--ease); }
+  .fig path, .process-line path { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 800ms var(--ease); }
   .fig circle, .process-line circle { transition: opacity var(--t-slow) var(--ease) 500ms; }
   .undrawn path { stroke-dashoffset: 1 !important; transition: none !important; }
   .undrawn circle { opacity: 0 !important; transition: none !important; }
-  .case.wide .fig { margin-bottom: 34px; }
-  .case-duo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); margin-bottom: clamp(80px, 12vh, 130px); }
-  .case-duo .fig { margin-bottom: 26px; }
   .proof-more { margin-top: clamp(52px, 8vh, 88px); padding-top: clamp(44px, 6vh, 64px); border-top: 1px solid var(--hair); text-align: center; }
   .proof-more p { color: var(--dim); max-width: 48ch; margin: 0 auto 26px; font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); }
-  .role { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mute); font-weight: 500; margin-bottom: 16px; }
+  .role { font-size: 13px; color: var(--mute); font-weight: 500; margin-bottom: 16px; }
   .case h3 { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 14px; color: var(--fg); }
   .case p { font-size: 16px; color: var(--dim); max-width: 46ch; }
   .case .go { display: inline-block; margin-top: 20px; }
@@ -362,13 +385,6 @@
   .behind-list li { padding: 16px 0; border-top: 1px solid var(--hair); font-size: 15.5px; color: var(--dim); }
   .behind-list li:last-child { border-bottom: 1px solid var(--hair); }
   .links { margin-top: 28px; display: flex; gap: 24px; }
-  .hiring {
-    margin-top: clamp(64px, 9vh, 96px); padding: clamp(32px, 4.5vw, 56px);
-    background: var(--panel); border: 1px solid var(--hair); border-radius: var(--r-m);
-    display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap;
-  }
-  .hiring h3 { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; color: var(--fg); margin-bottom: 8px; }
-  .hiring p { font-size: 15px; color: var(--dim); max-width: 46ch; }
 
   /* FAQ */
   .faq { max-width: 860px; }
@@ -384,9 +400,9 @@
   .faq summary::after {
     content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
     font-weight: 300; font-size: 24px; color: var(--mute);
-    transition: transform var(--t-normal) var(--ease);
+    transition: transform var(--t-normal) var(--ease), color var(--t-normal) var(--ease);
   }
-  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); color: var(--acc); }
   .faq details p { padding: 0 0 30px; max-width: 56ch; font-size: 15.5px; color: var(--dim); }
   /* Animated accordion: height interpolates where supported; elsewhere it opens instantly (fine) */
   @supports (interpolate-size: allow-keywords) {
@@ -419,15 +435,14 @@
     margin-top: clamp(90px, 14vh, 150px); padding-top: 30px;
     border-top: 1px solid var(--hair);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
-    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--mute);
+    font-size: 12.5px; color: var(--mute);
   }
   .end-meta a { transition: color var(--t-normal) var(--ease); }
   .end-meta a:hover { color: var(--fg); }
 
   /* ---------- Motion ---------- */
   @media (prefers-reduced-motion: no-preference) {
-    .hero .eyebrow, .hero h1 .line, .hero .lede, .hero .cta, .hero-meta {
+    .hero .eyebrow, .hero h1 .line, .hero .lede, .hero .cta, .hero-fig {
       opacity: 0; transform: translateY(22px);
       animation: rise 560ms var(--ease-out) forwards;
     }
@@ -436,7 +451,7 @@
     .hero h1 .line:nth-child(2) { animation-delay: 190ms; }
     .hero .lede { animation-delay: 300ms; }
     .hero .cta { animation-delay: 380ms; }
-    .hero-meta { animation-delay: 480ms; }
+    .hero-fig { animation-delay: 300ms; }
     @keyframes rise { to { opacity: 1; transform: translateY(0); } }
 
     /* Hero headline settles from light to full weight as it lands */
@@ -444,14 +459,14 @@
     @keyframes weigh { from { font-weight: 250; } to { font-weight: 600; } }
 
     /* Hero pipeline draws on load... */
-    .hero-fig path.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawin 1300ms var(--ease-out) 760ms forwards; }
+    .hero-fig path.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawin 1300ms var(--ease-out) 700ms forwards; }
     @keyframes drawin { to { stroke-dashoffset: 0; } }
-    .hero-fig circle { opacity: 0; animation: appear 300ms var(--ease-out) 1700ms forwards; }
+    .hero-fig circle { opacity: 0; animation: appear 300ms var(--ease-out) 1600ms forwards; }
     @keyframes appear { to { opacity: 1; } }
-    /* ...then the flow runs forever: dots drifting along the artery */
+    /* ...then the flow runs forever: amber dots drifting along the arteries */
     .hero-fig path.flow {
       stroke-dasharray: 0.001 0.024; stroke-linecap: round; stroke-dashoffset: 0;
-      opacity: 0; animation: appear 600ms var(--ease) 2100ms forwards, drift 26s linear 2100ms infinite;
+      opacity: 0; animation: appear 600ms var(--ease) 2000ms forwards, drift 22s linear 2000ms infinite;
     }
     @keyframes drift { to { stroke-dashoffset: -1; } }
   }
@@ -463,19 +478,27 @@
   .reveal.pre { opacity: 0; transform: translateY(16px); }
 
   /* ---------- Mobile ---------- */
+  @media (max-width: 860px) {
+    .hero-body { padding-top: 64px; }
+    .hero-sub { grid-template-columns: 1fr; gap: 44px; }
+    .hero-fig { max-width: 480px; }
+  }
   @media (max-width: 760px) {
     section { padding: 80px 0 0; }
-    .hero-sub { gap: 28px; }
-    .hero-meta { grid-template-columns: 1fr; gap: 22px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 22px; }
     .result { grid-template-columns: 1fr; gap: 18px; }
     .offer-grid, .behind-grid { grid-template-columns: 1fr; }
     .offer-left { position: relative; top: 0; }
     .process, .prices { grid-template-columns: 1fr; }
     .process p { max-width: 46ch; }
+    .tools-panel { grid-template-columns: 1fr; }
+    .tool + .tool { border-left: 0; border-top: 1px solid var(--hair); }
     .case.split { grid-template-columns: 1fr; }
     .case.split.flip .fig { order: 0; }
-    .case-duo { grid-template-columns: 1fr; gap: 56px; }
     .nav nav a { margin-left: 14px; font-size: 13px; }
+  }
+  @media (max-width: 460px) {
+    .nav nav a.sec { display: none; }
   }
 </style>
 </head>
@@ -498,8 +521,8 @@
       <nav>
         <a href="work.html">Work</a>
         <a href="cv.html">CV</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a class="sec" href="#pricing">Pricing</a>
+        <a class="sec" href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -512,37 +535,46 @@
       <div class="eyebrow">AI marketing engineering · Auckland, New Zealand</div>
       <h1><span class="line off">You run the business.</span><span class="line">Flow AI runs the marketing.</span></h1>
       <div class="hero-sub">
-        <p class="lede">One AI marketing engineer plus the agent systems that run your inbound, content, and outbound. <b>Found on Google, cited by ChatGPT, reported monthly.</b></p>
-        <div class="cta">
-          <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
-          <a class="btn ghost" href="tools/benchmark.html">Run the free AI-readiness check</a>
+        <div>
+          <p class="lede">One engineer, plus the agent systems that run your marketing. <b>Found on Google, cited by ChatGPT, reported monthly.</b></p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
+            <a class="btn ghost" href="tools/benchmark.html">Run the AI-readiness check</a>
+          </div>
+        </div>
+        <!-- The pipeline: one artery in, five systems out. Draws on load, then the amber flow never stops. -->
+        <div class="hero-fig" aria-hidden="true">
+          <svg viewBox="0 0 560 360">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path class="draw" pathLength="1" d="M28 180 H 180" opacity=".7"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 40,  400 40  H 528" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 110, 400 110 H 528" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 180, 400 180 H 528" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 250, 400 250 H 528" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 320, 400 320 H 528" opacity=".35"/>
+              <circle cx="180" cy="180" r="7"/>
+              <circle cx="528" cy="40"  r="5" opacity=".6"/><circle cx="528" cy="110" r="5" opacity=".6"/>
+              <circle cx="528" cy="180" r="5" opacity=".6"/><circle cx="528" cy="250" r="5" opacity=".6"/>
+              <circle cx="528" cy="320" r="5" opacity=".6"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="3">
+              <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 40, 400 40 H 528" opacity=".8" style="color:#E4A43C"/>
+              <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 320, 400 320 H 528" opacity=".55" style="color:#E4A43C"/>
+            </g>
+            <circle cx="28" cy="180" r="11" fill="#E4A43C"/>
+          </svg>
         </div>
       </div>
-      <!-- The pipeline: draws on load, then the flow never stops -->
-      <div class="hero-fig" aria-hidden="true">
-        <svg viewBox="0 0 1200 340">
-          <g fill="none" stroke="currentColor" stroke-width="1.5">
-            <path class="draw" pathLength="1" d="M60 170 H 430" opacity=".7"/>
-            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 60,  700 60  H 1120" opacity=".35"/>
-            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 115, 700 115 H 1120" opacity=".35"/>
-            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 170, 700 170 H 1120" opacity=".35"/>
-            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 225, 700 225 H 1120" opacity=".35"/>
-            <path class="draw" pathLength="1" d="M430 170 C 560 170, 560 280, 700 280 H 1120" opacity=".35"/>
-            <path class="flow" pathLength="1" stroke-width="3" d="M60 170 H 430 C 560 170, 560 60, 700 60 H 1120" opacity=".5"/>
-            <path class="flow" pathLength="1" stroke-width="3" d="M60 170 H 430 C 560 170, 560 280, 700 280 H 1120" opacity=".35"/>
-            <circle cx="430" cy="170" r="7"/>
-            <circle cx="1120" cy="60" r="5" opacity=".6"/><circle cx="1120" cy="115" r="5" opacity=".6"/>
-            <circle cx="1120" cy="170" r="5" opacity=".6"/><circle cx="1120" cy="225" r="5" opacity=".6"/>
-            <circle cx="1120" cy="280" r="5" opacity=".6"/>
-          </g>
-          <circle cx="60" cy="170" r="11" fill="currentColor"/>
-        </svg>
-      </div>
-      <div class="hero-meta">
-        <div><b>For</b><span>NZ small and medium businesses, and early-stage teams without a marketing hire.</span></div>
-        <div><b>Sets up</b><span>Positioning · SEO and AI-search visibility · content engine · outbound agents · analytics.</span></div>
-        <div><b>Terms</b><span>Starter sprint NZ$997. Retainer NZ$1,000/month, cancel anytime. 30-day money-back guarantee.</span></div>
-      </div>
+    </div>
+  </div>
+</div>
+
+<div class="meta-band">
+  <div class="wrap">
+    <div class="meta-grid">
+      <div><b>For</b><span>NZ small and medium businesses, and early-stage teams without a marketing hire.</span></div>
+      <div><b>Sets up</b><span>Positioning · SEO and AI-search visibility · content engine · outbound agents · analytics.</span></div>
+      <div><b>Terms</b><span>Starter sprint NZ$997. Retainer NZ$1,000/month, cancel anytime. 30-day money-back guarantee.</span></div>
     </div>
   </div>
 </div>
@@ -602,7 +634,7 @@
         <circle cx="512" cy="20" r="6"/>
         <circle cx="1012" cy="20" r="6"/>
       </g>
-      <circle cx="12" cy="20" r="3" fill="currentColor"/>
+      <circle cx="12" cy="20" r="3" fill="#E4A43C"/>
     </svg>
   </div>
   <div class="process">
@@ -626,18 +658,18 @@
 
 <section id="tools">
   <h2 class="reveal">Check where you stand, <span class="off">free, before we talk.</span></h2>
-  <div class="prices">
-    <div class="price reveal">
-      <div class="pn">Free tool · 2 minutes</div>
-      <div class="pv" style="font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.02em;">AI-readiness benchmark</div>
+  <div class="tools-panel reveal">
+    <div class="tool">
+      <div class="tn">Free tool · 2 minutes</div>
+      <h3>AI-readiness benchmark</h3>
       <p>Score how ready your business is to grow with AI, across strategy, data, tooling, governance, and team. No email required.</p>
-      <p style="margin-top:18px;"><a class="go" href="tools/benchmark.html">Run the benchmark →</a></p>
+      <a class="go" href="tools/benchmark.html">Run the AI-readiness check →</a>
     </div>
-    <div class="price reveal">
-      <div class="pn">Free tool · interactive</div>
-      <div class="pv" style="font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.02em;">Pricing model</div>
+    <div class="tool">
+      <div class="tn">Free tool · interactive</div>
+      <h3>Pricing model</h3>
       <p>Find your profit-maximising price from cost, customer value, and elasticity, using the published Lerner rule. Strategy you can click.</p>
-      <p style="margin-top:18px;"><a class="go" href="tools/pricing.html">Try the model →</a></p>
+      <a class="go" href="tools/pricing.html">Open the pricing model →</a>
     </div>
   </div>
   <p class="prices-note reveal">Ask ChatGPT or Google who does what you do. If your business doesn't come up, that's the gap the retainer closes: search visibility where buyers actually ask, including <b>ChatGPT, Perplexity, Gemini, Copilot, and Google's AI Overviews</b>.</p>
@@ -678,7 +710,7 @@
       <p>One marketing system, built and live within days. The way most clients start.</p>
     </div>
     <div class="price anchor reveal">
-      <div class="pn">Marketing engine · founding rate</div>
+      <div class="pn">Marketing engine · <b>founding rate</b></div>
       <div class="pv">$1,000 <small>per month</small></div>
       <p>Your marketing run end to end: content shipped, SEO and AI-search visibility working, outbound running, one clear monthly report. Cancel anytime.</p>
     </div>
@@ -691,10 +723,10 @@
 
   <div class="case split reveal">
     <div>
-      <div class="role">Pricing model · live, interactive</div>
+      <div class="role">Pricing model, live and interactive</div>
       <h3>A pricing strategy, built as a working economic model.</h3>
       <p>Cost, customer value, and elasticity resolve to a profit-maximising price using the published Lerner rule, <b>strategy you can actually click, not a slide.</b> Built and hosted here.</p>
-      <a class="go" href="tools/pricing.html">Try the live model →</a>
+      <a class="go" href="tools/pricing.html">Open the pricing model →</a>
     </div>
     <!-- Abstract diagram: a profit curve peaking at the optimum. -->
     <div class="fig" aria-hidden="true">
@@ -703,7 +735,7 @@
           <path pathLength="1" d="M110 420 H 690" opacity=".25" stroke-dasharray="5 5"/>
           <path pathLength="1" d="M110 410 C 200 150, 270 130, 320 130 C 470 130, 560 320, 700 400" stroke-width="3" opacity=".9"/>
         </g>
-        <circle cx="320" cy="130" r="9" fill="currentColor"/>
+        <circle cx="320" cy="130" r="9" fill="#E4A43C"/>
         <circle cx="410" cy="158" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
       </svg>
     </div>
@@ -711,7 +743,7 @@
 
   <div class="case split flip reveal">
     <div>
-      <div class="role">Go-to-market strategy · enterprise AI platform</div>
+      <div class="role">Go-to-market strategy, enterprise AI platform</div>
       <h3>Three demand engines, one pipeline, one launch.</h3>
       <p>A full go-to-market plan for an enterprise AI platform: outbound, inbound, and partnership engines feeding a single pipeline, sequenced toward one launch moment. <b>Positioning, message architecture, channel design, and the operating timeline</b>, built as a navigable deck.</p>
       <div class="note">Sanitised case. Full walkthrough on request.</div>
@@ -728,7 +760,7 @@
         <circle cx="150" cy="150" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
         <circle cx="150" cy="310" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
         <circle cx="150" cy="470" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="470" cy="310" r="12" fill="currentColor"/>
+        <circle cx="470" cy="310" r="12" fill="#E4A43C"/>
         <circle cx="700" cy="310" r="6" fill="currentColor" opacity=".6"/>
       </svg>
     </div>
@@ -831,7 +863,7 @@
   document.querySelectorAll('.reveal').forEach(function (el) {
     if (el.getBoundingClientRect().top > vh * 0.95) {
       el.classList.add('pre');
-      el.querySelectorAll('.fig, .spark, .process-line').forEach(function (f) { f.classList.add('undrawn'); });
+      el.querySelectorAll('.fig, .process-line').forEach(function (f) { f.classList.add('undrawn'); });
       if (el.classList.contains('fig') || el.classList.contains('process-line')) el.classList.add('undrawn');
       pending.push(el);
     }
