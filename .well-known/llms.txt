@@ -1,0 +1,30 @@
+# Flow AI (flowai.co.nz) · Amber Lan · AI marketing engineer · Auckland, New Zealand
+
+> Flow AI is an AI marketing engineering service for New Zealand small and medium businesses, run by Amber Lan, an AI marketing engineer based in Auckland. One engineer builds and operates the client's marketing system: SEO and AI-search visibility (AEO/GEO), a content engine that ships monthly, outbound automation, and analytics, reported in one clear monthly report. Flat pricing, no hours billed.
+
+Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
+
+Key facts:
+- Service: AI-run marketing for NZ SMBs — SEO and answer engine optimization, content engine, outbound automation, analytics and reporting.
+- Audience: New Zealand small and medium businesses, and early-stage teams without a marketing hire. Australia served remotely.
+- Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Marketing engine retainer $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
+- Referral: NZ$500 for every signed client referred, paid after their first invoice clears.
+- Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, and agentic AI tooling (Claude).
+- Contact: amber.lan.growth.digital@gmail.com
+- Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
+
+Site structure:
+- / (landing): the offer, founding terms, pricing, free tools, FAQ. Book a discovery call.
+- /work.html: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
+- /cv.html: Amber Lan's CV, every shipped system linked to its public GitHub repository.
+- /tools/benchmark.html: free 2-minute AI-readiness benchmark for businesses. No email required.
+- /tools/pricing.html: free interactive pricing model (Lerner rule, economic value to the customer).
+- /flowai-brand-guidelines.html: the Flow AI brand system.
+
+## What is an AI marketing engineer?
+
+An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. One person designs the positioning and ships the inbound, content, and outbound systems that run it. Flow AI's practitioner rule: claims ship with receipts — the systems are public on GitHub, and client results are only published with real names and real numbers.
+
+## What does AI marketing cost in New Zealand?
+
+Flow AI charges NZ$1,000 per month, flat, cancel anytime. For comparison, NZ SEO retainers typically run $1,200 to $5,000 per month and full agency retainers $2,000 to $10,000 per month.
