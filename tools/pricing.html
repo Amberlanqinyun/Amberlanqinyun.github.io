@@ -7,10 +7,15 @@
 <meta name="description" content="A free interactive pricing model for startups: find your profit-maximising price from cost, customer value, and elasticity, using the published Lerner rule. Built by Amber Lan, Flow AI.">
 <meta name="theme-color" content="#0E0E0D">
 <link rel="canonical" href="https://www.flowai.co.nz/tools/pricing.html">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="30" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4" fill="%23E4A43C"/></svg>'>
 <meta property="og:title" content="Pricing model · Flow AI">
 <meta property="og:description" content="Find your profit-maximising price from cost, value, and elasticity. The published economics, made interactive.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/tools/pricing.html">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   @font-face {
     font-family: "Google Sans Flex";
@@ -22,13 +27,12 @@
     --dim:rgba(250,248,243,0.58); --mute:rgba(250,248,243,0.40); --hair:rgba(250,248,243,0.11);
     --ink:#0E0E0D;--acc:#E4A43C;
     --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    --r-m:18px; --r-s:999px;
+    --r-m:24px; --r-s:999px;
     --t-fast:150ms; --t-normal:200ms; --t-slow:300ms;
     --ease:cubic-bezier(0.2,0.8,0.2,1); --ease-out:cubic-bezier(0.23,1,0.32,1);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
   @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
   body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;
     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
@@ -36,6 +40,7 @@
   .wrap{max-width:920px;margin:0 auto;padding:0 clamp(24px,5vw,40px);}
   a{color:inherit;text-decoration:none;}
   b,strong{color:var(--fg);font-weight:600;}
+  :focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
   @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;}}
 
   .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.75);
@@ -55,19 +60,19 @@
   .byline a{color:var(--fg);border-bottom:1px solid rgba(250,248,243,0.35);}
 
   section{padding:clamp(48px,7vh,80px) 0;border-top:1px solid var(--hair);}
-  .step-k{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:14px;}
+  .step-k{font-size:13px;color:var(--acc);font-weight:500;margin-bottom:14px;}
   h2{font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-0.03em;line-height:1.1;color:var(--fg);margin-bottom:14px;}
   section > .wrap > p, .sec-lead{color:var(--dim);max-width:60ch;margin-bottom:32px;font-size:16px;}
   .sec-lead b{font-weight:500;}
 
   .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:24px;}
   .num{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:20px 22px;}
-  .num label{display:block;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px;line-height:1.5;}
+  .num label{display:block;font-size:12.5px;color:var(--mute);font-weight:500;margin-bottom:10px;line-height:1.5;}
   .num input{width:100%;border:none;background:transparent;color:var(--fg);font-size:24px;font-weight:600;font-family:inherit;padding:0;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;}
   .num input::placeholder{color:var(--mute);font-weight:400;font-size:16px;}
   .num input:focus{outline:none;}
   .num input:focus-visible{outline:none;}
-  .num.focus{border-color:rgba(250,248,243,0.4);}
+  .num.focus{border-color:var(--acc-d,rgba(228,164,60,0.6));}
 
   .dials2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
   @media(max-width:640px){.dials2{grid-template-columns:1fr;}}
@@ -140,13 +145,13 @@
 <body>
 
 <div class="nav-bar"><div class="wrap"><div class="nav">
-  <span class="name">
+  <a class="name" href="../index.html" aria-label="Flow AI home">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
       <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
     </svg>
     Flow AI.
-  </span>
-  <a class="back" href="../index.html">← Back to Flow AI</a>
+  </a>
+  <nav><a class="back" href="../index.html">Home</a> &nbsp;&nbsp; <a class="back" href="../work.html">Work</a></nav>
 </div></div></div>
 
 <div class="hero"><div class="wrap">
@@ -158,7 +163,7 @@
 
 <!-- COST -->
 <section><div class="wrap">
-  <div class="step-k">Step 1 · Your cost</div>
+  <div class="step-k">Your cost</div>
   <h2>What one unit costs you to deliver.</h2>
   <p class="sec-lead">Enter the <b>marginal cost</b>: what it costs to serve one more customer for one month. Cost is the floor, you never price below it. Your ROI rule is the target the model checks your price against.</p>
   <div class="nums">
@@ -174,7 +179,7 @@
 
 <!-- VALUE -->
 <section><div class="wrap">
-  <div class="step-k">Step 2 · Customer value</div>
+  <div class="step-k">Customer value</div>
   <h2>What the outcome is worth to the buyer.</h2>
   <p class="sec-lead">Value-based pricing sets the ceiling: what the customer would pay to get the same result another way. Method: Economic Value to the Customer (Forbis &amp; Mehta, 1981).</p>
   <div class="nums">
@@ -183,20 +188,20 @@
     <div class="num"><label>Cheapest alternative · $/mo</label><input type="number" id="alt" placeholder="optional" min="0"></div>
   </div>
   <div class="readout"><div class="stats">
-    <div class="stat"><div class="sv" id="sValLow">–</div><div class="sk">value, low</div></div>
-    <div class="stat"><div class="sv" id="sValHigh">–</div><div class="sk">value, high</div></div>
-    <div class="stat"><div class="sv" id="sCeil">–</div><div class="sk">the value ceiling</div></div>
-  </div><div class="cavt" id="valCaveat">–</div></div>
+    <div class="stat"><div class="sv" id="sValLow">·</div><div class="sk">value, low</div></div>
+    <div class="stat"><div class="sv" id="sValHigh">·</div><div class="sk">value, high</div></div>
+    <div class="stat"><div class="sv" id="sCeil">·</div><div class="sk">the value ceiling</div></div>
+  </div><div class="cavt" id="valCaveat">·</div></div>
 </div></section>
 
 <!-- PRICE -->
 <section><div class="wrap">
-  <div class="step-k">Step 3 · The price</div>
+  <div class="step-k">The price</div>
   <h2>The optimum, from the published rule.</h2>
   <p class="sec-lead">The Lerner rule (1934) gives the profit-maximising price from two inputs only: <b>marginal cost</b> and <b>price elasticity</b>. Drag the price, or click anywhere on the curve.</p>
   <div class="dials2">
     <div class="dial">
-      <div class="dl"><span class="dn">Your price</span><span class="dv" id="vPrice">–</span></div>
+      <div class="dl"><span class="dn">Your price</span><span class="dv" id="vPrice">·</span></div>
       <input type="range" id="price" min="50" max="6000" step="25" value="400">
       <div class="dd">Height on the chart is profit relative to the best achievable.</div>
     </div>
@@ -215,17 +220,17 @@
     </div>
   </div>
   <div class="kpis">
-    <div class="kpi on"><div class="v" id="kOpt">–</div><div class="k">Lerner optimum</div></div>
-    <div class="kpi"><div class="v" id="kMargin">–</div><div class="k">Margin per unit at your price</div></div>
-    <div class="kpi on"><div class="v" id="kRoi">–</div><div class="k">ROI · rule ≥ <span id="kRoiReq">3</span></div></div>
-    <div class="kpi"><div class="v" id="kPos">–</div><div class="k">Where your price sits</div></div>
+    <div class="kpi on"><div class="v" id="kOpt">·</div><div class="k">Lerner optimum</div></div>
+    <div class="kpi"><div class="v" id="kMargin">·</div><div class="k">Margin per unit at your price</div></div>
+    <div class="kpi on"><div class="v" id="kRoi">·</div><div class="k">ROI · rule ≥ <span id="kRoiReq">3</span></div></div>
+    <div class="kpi"><div class="v" id="kPos">·</div><div class="k">Where your price sits</div></div>
   </div>
-  <div class="readout"><div class="cavt" id="priceCalc" style="margin-top:0;padding-top:0;border-top:none;">–</div></div>
+  <div class="readout"><div class="cavt" id="priceCalc" style="margin-top:0;padding-top:0;border-top:none;">·</div></div>
 </div></section>
 
 <!-- CORRIDOR -->
 <section><div class="wrap">
-  <div class="step-k">Step 4 · The recommendation</div>
+  <div class="step-k">The recommendation</div>
   <h2>Your pricing corridor.</h2>
   <p class="sec-lead">Cost sets the floor. Value sets the ceiling. Elasticity finds the optimum between them. Price inside this corridor and the math is on your side.</p>
   <div class="corr" id="corr"></div>
@@ -237,10 +242,10 @@
   <h2>The research behind each step.</h2>
   <p class="sec-lead">Every mechanism traces to a published source. The only inputs are yours.</p>
   <div class="refs">
-    <div class="ref"><span class="rn">1</span><span><b>The Lerner markup rule</b> · Step 3. The profit-maximising price satisfies (P − MC) / P = 1 / ε, so P* = MC × ε / (ε − 1).<span class="cite">Lerner, A. P. (1934). The Concept of Monopoly and the Measurement of Monopoly Power. Review of Economic Studies, 1(3), 157–175.</span></span></div>
-    <div class="ref"><span class="rn">2</span><span><b>Economic Value to the Customer</b> · Step 2. Price is capped by the customer's best alternative.<span class="cite">Forbis, J. L. &amp; Mehta, N. T. (1981). Value-based strategies for industrial products. Business Horizons, 24(3), 32–42.</span></span></div>
-    <div class="ref"><span class="rn">3</span><span><b>Cost–competition–value triangulation</b> · the corridor. The standard framework for setting a price inside the floor-to-ceiling range.<span class="cite">Nagle, T. T. &amp; Müller, G. (2018). The Strategy and Tactics of Pricing, 6th ed. Routledge.</span></span></div>
-    <div class="ref"><span class="rn">4</span><span><b>Gabor–Granger price testing</b> · measuring your elasticity. Purchase intent at set price points draws the real demand curve.<span class="cite">Gabor, A. &amp; Granger, C. W. J. (1966). Price as an Indicator of Quality. Economica, 33(129), 43–70.</span></span></div>
+    <div class="ref"><span class="rn">1</span><span><b>The Lerner markup rule</b> · the price. The profit-maximising price satisfies (P − MC) / P = 1 / ε, so P* = MC × ε / (ε − 1).<span class="cite">Lerner, A. P. (1934). The Concept of Monopoly and the Measurement of Monopoly Power. Review of Economic Studies, 1(3), 157-175.</span></span></div>
+    <div class="ref"><span class="rn">2</span><span><b>Economic Value to the Customer</b> · customer value. Price is capped by the customer's best alternative.<span class="cite">Forbis, J. L. &amp; Mehta, N. T. (1981). Value-based strategies for industrial products. Business Horizons, 24(3), 32-42.</span></span></div>
+    <div class="ref"><span class="rn">3</span><span><b>Cost-competition-value triangulation</b> · the corridor. The standard framework for setting a price inside the floor-to-ceiling range.<span class="cite">Nagle, T. T. &amp; Müller, G. (2018). The Strategy and Tactics of Pricing, 6th ed. Routledge.</span></span></div>
+    <div class="ref"><span class="rn">4</span><span><b>Gabor-Granger price testing</b> · measuring your elasticity. Purchase intent at set price points draws the real demand curve.<span class="cite">Gabor, A. &amp; Granger, C. W. J. (1966). Price as an Indicator of Quality. Economica, 33(129), 43-70.</span></span></div>
   </div>
   <p class="note">This tool is a decision aid, not financial advice. It uses the models above with the numbers you enter; a live price test replaces the elasticity assumption with your measured value.</p>
 </div></section>
@@ -248,7 +253,7 @@
 <div class="cta-end"><div class="wrap">
   <h2>Want this built into your go-to-market?</h2>
   <p>This is one of the systems I build for startups at Flow AI, alongside inbound, outbound, and content.</p>
-  <a class="btn" href="../index.html#contact">See what Flow AI does</a>
+  <a class="btn" href="../index.html">See what Flow AI does</a>
 </div></div>
 
 <footer><div class="wrap">
@@ -266,7 +271,7 @@
   var state=load();
 
   function $(id){return document.getElementById(id);}
-  function money(n){if(!isFinite(n))return '–';var s='$'+Math.round(Math.abs(n)).toLocaleString('en-US');return n<0?'-'+s:s;}
+  function money(n){if(!isFinite(n))return '·';var s='$'+Math.round(Math.abs(n)).toLocaleString('en-US');return n<0?'-'+s:s;}
   function moneyK(n){return Math.abs(n)>=1000?'$'+(n/1000).toFixed(Math.abs(n)>=10000?0:1).replace(/\.0$/,'')+'k':money(n);}
   function load(){try{var r=localStorage.getItem(LS);if(r)return JSON.parse(r);}catch(e){}return Object.assign({},DEF);}
   function persist(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
@@ -296,7 +301,7 @@
     g+='<text x="'+(ML-6)+'" y="'+(ys(100)+4)+'" text-anchor="end" font-size="10" fill="rgba(250,248,243,0.4)">100</text>';
     g+='<text x="'+(ML-6)+'" y="'+(ys(0)+4)+'" text-anchor="end" font-size="10" fill="rgba(250,248,243,0.4)">0</text>';
     for(P=1000;P<=PMAX;P+=1000){g+='<text x="'+xs(P)+'" y="'+(H-14)+'" text-anchor="middle" font-size="10" fill="rgba(250,248,243,0.4)">'+moneyK(P)+'</text>';}
-    g+='<text x="'+((ML+W-MR)/2)+'" y="'+(H-1)+'" text-anchor="middle" font-size="9" fill="rgba(250,248,243,0.4)" letter-spacing="1.2" font-weight="700">PRICE PER UNIT PER MONTH</text>';
+    g+='<text x="'+((ML+W-MR)/2)+'" y="'+(H-1)+'" text-anchor="middle" font-size="9" fill="rgba(250,248,243,0.4)" font-weight="500">Price per unit per month</text>';
     [[q.floor,'floor'],[q.ceiling,'ceiling']].forEach(function(m){
       if(m[0]>PMIN&&m[0]<PMAX){
         g+='<line x1="'+xs(m[0])+'" y1="'+MT+'" x2="'+xs(m[0])+'" y2="'+(H-MB)+'" stroke="rgba(250,248,243,0.4)" stroke-width="1.2" stroke-dasharray="5 4"/>';
@@ -305,8 +310,8 @@
     });
     g+='<path d="'+pts.map(function(p,k){return (k?'L':'M')+xs(p.P).toFixed(1)+','+ys(p.idx).toFixed(1);}).join('')+'" fill="none" stroke="#FAF8F3" stroke-width="3"/>';
     if(isFinite(q.opt)&&q.opt<PMAX&&q.opt>PMIN){
-      g+='<circle cx="'+xs(q.opt)+'" cy="'+ys(Math.max(-15,profitIdx(q.opt,q)/best*100))+'" r="5" fill="#FAF8F3"/>';
-      g+='<text x="'+Math.max(xs(q.opt),ML+80)+'" y="'+(ys(100)-8)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF8F3">optimum '+moneyK(q.opt)+'</text>';
+      g+='<circle cx="'+xs(q.opt)+'" cy="'+ys(Math.max(-15,profitIdx(q.opt,q)/best*100))+'" r="5" fill="#E4A43C"/>';
+      g+='<text x="'+Math.max(xs(q.opt),ML+80)+'" y="'+(ys(100)-8)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#E4A43C">optimum '+moneyK(q.opt)+'</text>';
     }
     var yv=Math.max(-15,profitIdx(state.price,q)/best*100);
     g+='<line x1="'+xs(state.price)+'" y1="'+MT+'" x2="'+xs(state.price)+'" y2="'+(H-MB)+'" stroke="rgba(250,248,243,0.55)" stroke-width="1.3"/>';
@@ -336,18 +341,18 @@
     $('kOpt').textContent=isFinite(q.opt)?money(q.opt):'ceiling-bound';
     $('kMargin').textContent=money(state.price-q.mc);
     var roiNow=q.mc>0?(state.price-q.mc)/q.mc:Infinity;
-    $('kRoi').textContent=isFinite(roiNow)?roiNow.toFixed(1)+'×':'–';
+    $('kRoi').textContent=isFinite(roiNow)?roiNow.toFixed(1)+'×':'·';
     var pos=state.price<q.floor?'below your floor':state.price>q.ceiling?'above the ceiling':'inside the corridor';
     $('kPos').textContent=pos;
     var optLo=q.mc*2, optHi=q.mc*3;
     $('priceCalc').innerHTML='P* = MC × ε/(ε−1) = '+money(q.mc)+' × '+state.eps.toFixed(1)+'/'+(state.eps-1).toFixed(1)+
       ' = <b>'+(isFinite(q.opt)?money(q.opt):'the ceiling')+'</b>. Across elasticity 2.0 to 1.5 the optimum runs <b>'+
       money(optLo)+' to '+money(optHi)+'</b>. Your price is '+pos+', and its ROI of <b>'+
-      (isFinite(roiNow)?roiNow.toFixed(1)+'×':'–')+'</b> '+(roiNow>=n0(state.roiReq)?'clears':'misses')+' your rule of '+n0(state.roiReq)+'.';
+      (isFinite(roiNow)?roiNow.toFixed(1)+'×':'·')+'</b> '+(roiNow>=n0(state.roiReq)?'clears':'misses')+' your rule of '+n0(state.roiReq)+'.';
 
     $('corr').innerHTML=
       '<div class="crow"><span class="cp">'+money(q.floor)+'</span><div class="cb"><h3>The floor · your cost</h3><p>Below your marginal cost of '+money(q.mc)+'/unit you lose money on every sale. Your '+n0(state.roiReq)+'× ROI target lands at '+money(q.mc*(n0(state.roiReq)+1))+'.</p></div></div>'+
-      '<div class="crow hero"><span class="cp">'+money(optLo)+' – '+money(optHi)+'</span><div class="cb"><h3>The optimum range · Lerner rule</h3><p>Elasticity 2.0 to 1.5. A price test collapses this to a single number.</p></div></div>'+
+      '<div class="crow hero"><span class="cp">'+money(optLo)+' to '+money(optHi)+'</span><div class="cb"><h3>The optimum range · Lerner rule</h3><p>Elasticity 2.0 to 1.5. A price test collapses this to a single number.</p></div></div>'+
       '<div class="crow"><span class="cp">'+money(q.ceiling)+'</span><div class="cb"><h3>The ceiling · customer value</h3><p>The buyer’s cheapest alternative to your outcome.</p></div></div>';
   }
 

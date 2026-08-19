@@ -7,28 +7,33 @@
 <meta name="description" content="A free two-minute self-assessment that scores how ready your company is to grow with AI, across strategy, data, tooling, governance, and team. Built by Amber Lan, Flow AI.">
 <meta name="theme-color" content="#0E0E0D">
 <link rel="canonical" href="https://www.flowai.co.nz/tools/benchmark.html">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="30" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4" fill="%23E4A43C"/></svg>'>
 <meta property="og:title" content="AI-readiness benchmark · Flow AI">
 <meta property="og:description" content="Score how ready your company is to grow with AI, in two minutes.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/tools/benchmark.html">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   @font-face{font-family:"Google Sans Flex";src:url("../fonts/google-sans-flex-vf.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap;}
   :root{
     --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;
     --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.40);--hair:rgba(250,248,243,0.11);--ink:#0E0E0D;--acc:#E4A43C;
     --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    --r-m:18px;--r-s:999px;--t-fast:150ms;--t-normal:200ms;--t-slow:300ms;
+    --r-m:24px;--r-s:999px;--t-fast:150ms;--t-normal:200ms;--t-slow:300ms;
     --ease:cubic-bezier(0.2,0.8,0.2,1);--ease-out:cubic-bezier(0.23,1,0.32,1);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
   @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
   body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
   ::selection{background:var(--acc);color:var(--ink);}
   .wrap{max-width:900px;margin:0 auto;padding:0 clamp(24px,5vw,40px);}
   a{color:inherit;text-decoration:none;}
   b,strong{color:var(--fg);font-weight:600;}
+  :focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
   @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important;animation-duration:.001ms!important;}}
 
   .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.75);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
@@ -49,12 +54,12 @@
   .layout{display:grid;grid-template-columns:1fr;gap:16px;padding-bottom:24px;}
 
   .q{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:24px 26px;box-shadow:inset 0 1px 0 rgba(250,248,243,0.05);}
-  .q .qk{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px;}
+  .q .qk{font-size:13px;color:var(--mute);font-weight:500;margin-bottom:10px;}
   .q h3{font-weight:600;font-size:19px;letter-spacing:-0.015em;color:var(--fg);margin-bottom:18px;line-height:1.25;}
   .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   @media(max-width:560px){.opts{grid-template-columns:1fr;}}
   .opt{text-align:left;font-family:inherit;font-size:14px;line-height:1.4;color:var(--dim);background:transparent;border:1px solid var(--hair);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color var(--t-fast) var(--ease),background var(--t-fast) var(--ease),color var(--t-fast) var(--ease);}
-  .opt .on{display:block;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:5px;}
+  .opt .on{display:block;font-size:11.5px;color:var(--mute);font-weight:500;margin-bottom:5px;}
   .opt:hover{border-color:rgba(250,248,243,0.3);color:var(--fg);}
   .opt.sel{background:var(--cream);border-color:var(--cream);color:var(--ink);}
   .opt.sel .on{color:rgba(14,14,13,0.55);}
@@ -62,16 +67,18 @@
   .result{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:clamp(28px,4vw,40px);margin-top:8px;position:sticky;bottom:16px;}
   .result.locked{opacity:0.55;}
   .result-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--hair);padding-bottom:22px;margin-bottom:22px;}
-  .result .stage{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:10px;}
+  .result .stage{font-size:13px;color:var(--mute);font-weight:500;margin-bottom:10px;}
   .result .stage-name{font-weight:600;font-size:clamp(26px,3.6vw,40px);letter-spacing:-0.03em;color:var(--fg);line-height:1;}
   .result .score{text-align:right;}
   .result .score .sv{font-weight:600;font-size:clamp(34px,4.6vw,52px);letter-spacing:-0.03em;color:var(--fg);font-variant-numeric:tabular-nums;line-height:1;}
-  .result .score .sk{font-size:11px;color:var(--mute);margin-top:6px;letter-spacing:0.06em;text-transform:uppercase;}
+  .result .score .sk{font-size:12.5px;color:var(--mute);margin-top:6px;}
   .bars{display:flex;flex-direction:column;gap:12px;margin-bottom:22px;}
   .brow{display:grid;grid-template-columns:130px 1fr 30px;gap:14px;align-items:center;}
   .brow .bl{font-size:13px;color:var(--dim);font-weight:500;}
   .btrack{height:8px;background:var(--hair);border-radius:6px;overflow:hidden;}
-  .bfill{height:100%;background:var(--cream);border-radius:6px;width:0;transition:width var(--t-slow) var(--ease);}
+  .bfill{height:100%;background:var(--cream);border-radius:6px;width:0;transition:width var(--t-slow) var(--ease),background-color var(--t-slow) var(--ease);}
+  .brow.weak .bfill{background:var(--acc);}
+  .brow.weak .bl{color:var(--fg);}
   .brow .bn{font-size:12px;color:var(--mute);text-align:right;font-variant-numeric:tabular-nums;}
   @media(max-width:560px){.brow{grid-template-columns:96px 1fr 26px;gap:10px;}.brow .bl{font-size:12px;}}
   .read{font-size:15.5px;line-height:1.6;color:var(--dim);}
@@ -91,13 +98,13 @@
 <body>
 
 <div class="nav-bar"><div class="wrap"><div class="nav">
-  <span class="name">
+  <a class="name" href="../index.html" aria-label="Flow AI home">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
       <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
     </svg>
     Flow AI.
-  </span>
-  <a class="back" href="../work.html">← Back to work</a>
+  </a>
+  <nav><a class="back" href="../index.html">Home</a> &nbsp;&nbsp; <a class="back" href="../work.html">Work</a></nav>
 </div></div></div>
 
 <div class="hero"><div class="wrap">
@@ -112,7 +119,7 @@
   <div class="result locked" id="result">
     <div class="result-top">
       <div><div class="stage">Your stage</div><div class="stage-name" id="stageName">Answer to begin</div></div>
-      <div class="score"><div class="sv" id="scoreVal">–</div><div class="sk">readiness</div></div>
+      <div class="score"><div class="sv" id="scoreVal">·</div><div class="sk">readiness</div></div>
     </div>
     <div class="bars" id="bars"></div>
     <div class="read" id="read">Pick an answer for each of the five dimensions. Your score and a tailored read appear here, and update as you go.</div>
@@ -122,7 +129,7 @@
 <div class="cta-end"><div class="wrap">
   <h2>Want a real plan against this score?</h2>
   <p>This is the kind of diagnostic I build into a go-to-market. Flow AI turns the gaps into a system that closes them.</p>
-  <a class="btn" href="../index.html#contact">Book a discovery call</a>
+  <a class="btn" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
 </div></div>
 
 <footer><div class="wrap">
@@ -165,7 +172,7 @@
       var sel=answers[dim.key]===oi?' sel':'';
       opts+='<button class="opt'+sel+'" data-dim="'+dim.key+'" data-lvl="'+oi+'"><span class="on">Level '+(oi+1)+'</span>'+o+'</button>';
     });
-    card.innerHTML='<div class="qk">'+(di+1)+' · '+dim.label+'</div><h3>'+dim.q+'</h3><div class="opts">'+opts+'</div>';
+    card.innerHTML='<div class="qk">'+dim.label+'</div><h3>'+dim.q+'</h3><div class="opts">'+opts+'</div>';
     quiz.appendChild(card);
   });
 
@@ -183,18 +190,22 @@
     var answered=keys.filter(function(k){return answers[k]!=null;});
     var res=$('result');
     // per-dimension bars
+    var complete=answered.length===DIMS.length;
+    var weakKey=null;
+    if(complete){weakKey=DIMS.slice().sort(function(a,b){return answers[a.key]-answers[b.key];})[0].key;}
     var barsHtml='';
     DIMS.forEach(function(d){
       var lvl=answers[d.key];
       var pct=lvl!=null?((lvl+1)/4*100):0;
-      barsHtml+='<div class="brow"><span class="bl">'+d.label+'</span><div class="btrack"><div class="bfill" style="width:'+pct+'%"></div></div><span class="bn">'+(lvl!=null?(lvl+1)+'/4':'–')+'</span></div>';
+      var wk=(complete&&d.key===weakKey)?' weak':'';
+      barsHtml+='<div class="brow'+wk+'"><span class="bl">'+d.label+'</span><div class="btrack"><div class="bfill" style="width:'+pct+'%"></div></div><span class="bn">'+(lvl!=null?(lvl+1)+'/4':'\u00B7')+'</span></div>';
     });
     $('bars').innerHTML=barsHtml;
 
     if(answered.length<DIMS.length){
       res.classList.add('locked');
       $('stageName').textContent=answered.length+' / '+DIMS.length+' answered';
-      $('scoreVal').textContent='–';
+      $('scoreVal').textContent='\u00B7';
       $('read').innerHTML='Pick an answer for each of the five dimensions. Your score and a tailored read appear here, and update as you go.';
       return;
     }
