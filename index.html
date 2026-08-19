@@ -7,14 +7,17 @@
 <meta name="description" content="Your marketing, run by an AI system built and operated by one engineer: SEO and AI-search visibility, a month of content shipped, outbound running, one clear monthly report. NZ$1,000/month, cancel anytime. Auckland, New Zealand.">
 <meta name="theme-color" content="#0E0E0D">
 <link rel="canonical" href="https://www.flowai.co.nz/">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="32" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F.</text></svg>'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="30" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4" fill="%23E4A43C"/></svg>'>
 <meta property="og:title" content="Flow AI · AI marketing engineer for NZ small business">
 <meta property="og:description" content="One engineer builds and runs your marketing: SEO and AI-search visibility, content, outbound, reporting. NZ$1,000/month, cancel anytime.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:locale" content="en_NZ">
 <meta property="og:url" content="https://www.flowai.co.nz/">
 <meta property="og:image" content="https://www.flowai.co.nz/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Flow AI: You run the business. Flow AI runs the marketing.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -137,6 +140,16 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  /* Cross-document page transitions (progressive: crossfade where supported) */
+  @media (prefers-reduced-motion: no-preference) {
+    @view-transition { navigation: auto; }
+  }
+  .skip {
+    position: absolute; left: -9999px; top: 0; z-index: 100;
+    background: var(--cream); color: var(--ink); padding: 12px 20px; border-radius: 0 0 12px 0;
+    font-weight: 500; font-size: 14px;
+  }
+  .skip:focus { left: 0; }
   body {
     background: var(--bg);
     color: var(--dim);
@@ -462,8 +475,15 @@
   }
   .end h2 { font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.045em; max-width: 16ch; margin-bottom: 0; }
   .end p { margin: 32px auto 52px; font-weight: 300; font-size: var(--fs-lede); line-height: 1.5; color: var(--dim); max-width: 40ch; text-wrap: balance; }
+  .foot-nav {
+    margin-top: clamp(64px, 10vh, 110px);
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 30px;
+    font-size: 14px; font-weight: 500;
+  }
+  .foot-nav a { color: var(--mute); transition: color var(--t-normal) var(--ease); }
+  .foot-nav a:hover { color: var(--fg); }
   .end-meta {
-    margin-top: clamp(90px, 14vh, 150px); padding-top: 30px;
+    margin-top: clamp(56px, 8vh, 90px); padding-top: 30px;
     border-top: 1px solid var(--hair);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
     font-size: 12.5px; color: var(--mute);
@@ -530,25 +550,27 @@
   }
   @media (max-width: 460px) {
     .nav nav a.sec { display: none; }
+    .eyebrow { letter-spacing: 0.15em; font-size: 11px; }
   }
 </style>
 </head>
 <body>
 
+<a class="skip" href="#problem">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"></div>
 
 <div class="nav-bar">
   <div class="wrap">
     <header class="nav">
-      <span class="name">
+      <a class="name" href="index.html" aria-label="Flow AI home">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
           <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/>
           <path d="M2.5 12 H 21.5"/>
           <path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
         </svg>
         Flow AI.
-      </span>
+      </a>
       <nav>
         <a href="work.html">Work</a>
         <a href="cv.html">CV</a>
@@ -881,6 +903,14 @@
     <h2 class="reveal">Your next customer <span class="off">is already asking.</span></h2>
     <p class="reveal">Tonight, somewhere in New Zealand, someone asks an AI for exactly what you do. Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within two days</b>, before any commitment.</p>
     <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
+    <nav class="foot-nav" aria-label="Site">
+      <a href="work.html">Work</a>
+      <a href="cv.html">CV</a>
+      <a href="tools/benchmark.html">AI-readiness benchmark</a>
+      <a href="tools/pricing.html">Pricing model</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="end-meta">
       <span>© 2026 Flow AI · Amber Lan</span>
       <span>amber.lan.growth.digital@gmail.com</span>

@@ -22,6 +22,8 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
+  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
   body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
   ::selection{background:var(--acc);color:var(--ink);}
   .wrap{max-width:900px;margin:0 auto;padding:0 clamp(24px,5vw,40px);}
