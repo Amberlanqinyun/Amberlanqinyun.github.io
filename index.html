@@ -12,6 +12,11 @@
 <meta property="og:description" content="One engineer builds and runs your marketing: SEO and AI-search visibility, content, outbound, reporting. NZ$1,000/month, cancel anytime.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.flowai.co.nz/">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -113,7 +118,7 @@
     --cream: #FAF8F3;
     --fg:    #FAF8F3;
     --dim:   rgba(250,248,243,0.58);
-    --mute:  rgba(250,248,243,0.40);
+    --mute:  rgba(250,248,243,0.44);
     --hair:  rgba(250,248,243,0.11);
     --ink:   #0E0E0D;
     --acc:   #E4A43C;                    /* amber: live-system signal, links, open states */
@@ -180,6 +185,12 @@
   .nav .name svg { width: 21px; height: 21px; color: var(--acc); }
   .nav nav a { color: var(--mute); margin-left: 28px; font-size: 13.5px; font-weight: 500; letter-spacing: 0.01em; transition: color var(--t-normal) var(--ease); }
   .nav nav a:hover { color: var(--fg); }
+  .nav nav a.nav-cta {
+    color: var(--ink); background: var(--cream); padding: 9px 18px; border-radius: var(--r-s);
+    transition: background-color var(--t-normal) var(--ease);
+  }
+  .nav nav a.nav-cta:hover { color: var(--ink); background: rgba(250,248,243,0.88); }
+  @media (max-width: 860px) { .nav nav a.nav-cta { display: none; } }
 
   /* ---------- Hero: asymmetric split. Text left, live pipeline right. ---------- */
   .hero { position: relative; overflow: hidden; isolation: isolate; }
@@ -208,12 +219,14 @@
   .btn {
     display: inline-block; padding: 17px 34px; font-size: 15px; font-weight: 500;
     letter-spacing: -0.005em; white-space: nowrap; border-radius: var(--r-s);
-    transition: background-color var(--t-normal) var(--ease), color var(--t-normal) var(--ease), transform 160ms var(--ease-out);
+    /* Magnetic: JS feeds --mx/--my (clamped to a few px); scale rides the same transform. */
+    transform: translate(var(--mx, 0px), var(--my, 0px)) scale(var(--s, 1));
+    transition: background-color var(--t-normal) var(--ease), color var(--t-normal) var(--ease), transform 200ms var(--ease-out);
   }
   @media (hover: hover) and (pointer: fine) {
-    .btn:hover { transform: scale(1.03); }
+    .btn:hover { --s: 1.03; }
   }
-  .btn:active { transform: scale(0.97); }
+  .btn:active { --s: 0.97; }
   .btn.primary { background: var(--cream); color: var(--ink); }
   .btn.primary:hover { background: rgba(250,248,243,0.9); }
   .btn.ghost { color: var(--fg); background: rgba(250,248,243,0.08); }
@@ -224,6 +237,7 @@
      Draws once on load, then the amber flow runs forever. */
   .hero-fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
   .hero-fig .flow { color: var(--acc); }
+  .fig-label text { font-family: var(--gsf); font-size: 15px; font-weight: 500; fill-opacity: 0.5; }
 
   /* Meta band: audience, scope, terms. Own section, out of the hero. */
   .meta-band { border-top: 1px solid var(--hair); }
@@ -268,6 +282,23 @@
       }
       @keyframes wordin { from { opacity: 0.16; } to { opacity: 1; } }
     }
+  }
+
+  /* Ask: the literal prompt, framed. The amber slots are the reader's variables. */
+  .ask-frame {
+    border: 1px solid var(--hair); border-radius: var(--r-m);
+    padding: clamp(36px, 5vw, 64px);
+    background: radial-gradient(110% 130% at 0% 0%, rgba(228,164,60,0.07), transparent 55%);
+  }
+  .ask-q {
+    font-weight: 300; font-size: clamp(23px, 3vw, 36px); line-height: 1.3;
+    letter-spacing: -0.022em; color: var(--fg); max-width: 26ch; text-wrap: balance;
+  }
+  .ask-q .slot { color: var(--acc); }
+  .ask-body {
+    margin-top: clamp(24px, 3.5vh, 36px);
+    font-weight: 300; font-size: clamp(17px, 1.8vw, 21px); line-height: 1.55;
+    letter-spacing: -0.01em; color: var(--dim); max-width: 46ch;
   }
 
   /* Results: display numerals */
@@ -461,7 +492,7 @@
     /* Hero pipeline draws on load... */
     .hero-fig path.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawin 1300ms var(--ease-out) 700ms forwards; }
     @keyframes drawin { to { stroke-dashoffset: 0; } }
-    .hero-fig circle { opacity: 0; animation: appear 300ms var(--ease-out) 1600ms forwards; }
+    .hero-fig circle, .hero-fig .fig-label text { opacity: 0; animation: appear 300ms var(--ease-out) 1600ms forwards; }
     @keyframes appear { to { opacity: 1; } }
     /* ...then the flow runs forever: amber dots drifting along the arteries */
     .hero-fig path.flow {
@@ -524,6 +555,7 @@
         <a class="sec" href="#pricing">Pricing</a>
         <a class="sec" href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
+        <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call">Book a discovery call</a>
       </nav>
     </header>
   </div>
@@ -542,24 +574,32 @@
             <a class="btn ghost" href="tools/benchmark.html">Run the AI-readiness check</a>
           </div>
         </div>
-        <!-- The pipeline: one artery in, five systems out. Draws on load, then the amber flow never stops. -->
+        <!-- The pipeline: one artery in, five named systems out.
+             Draws on load, then the amber flow never stops. Labels make it a map, not decoration. -->
         <div class="hero-fig" aria-hidden="true">
-          <svg viewBox="0 0 560 360">
+          <svg viewBox="0 0 660 360">
             <g fill="none" stroke="currentColor" stroke-width="1.5">
               <path class="draw" pathLength="1" d="M28 180 H 180" opacity=".7"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 40,  400 40  H 528" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 110, 400 110 H 528" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 180, 400 180 H 528" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 250, 400 250 H 528" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 320, 400 320 H 528" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 40,  400 40  H 508" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 110, 400 110 H 508" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 180, 400 180 H 508" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 250, 400 250 H 508" opacity=".35"/>
+              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 320, 400 320 H 508" opacity=".35"/>
               <circle cx="180" cy="180" r="7"/>
-              <circle cx="528" cy="40"  r="5" opacity=".6"/><circle cx="528" cy="110" r="5" opacity=".6"/>
-              <circle cx="528" cy="180" r="5" opacity=".6"/><circle cx="528" cy="250" r="5" opacity=".6"/>
-              <circle cx="528" cy="320" r="5" opacity=".6"/>
+              <circle cx="508" cy="40"  r="5" opacity=".6"/><circle cx="508" cy="110" r="5" opacity=".6"/>
+              <circle cx="508" cy="180" r="5" opacity=".6"/><circle cx="508" cy="250" r="5" opacity=".6"/>
+              <circle cx="508" cy="320" r="5" opacity=".6"/>
+            </g>
+            <g class="fig-label" fill="currentColor">
+              <text x="524" y="45">Strategy</text>
+              <text x="524" y="115">Inbound</text>
+              <text x="524" y="185">Content</text>
+              <text x="524" y="255">Outbound</text>
+              <text x="524" y="325">Analytics</text>
             </g>
             <g fill="none" stroke="currentColor" stroke-width="3">
-              <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 40, 400 40 H 528" opacity=".8" style="color:#E4A43C"/>
-              <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 320, 400 320 H 528" opacity=".55" style="color:#E4A43C"/>
+              <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 40, 400 40 H 508" opacity=".8" style="color:#E4A43C"/>
+              <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 320, 400 320 H 508" opacity=".55" style="color:#E4A43C"/>
             </g>
             <circle cx="28" cy="180" r="11" fill="#E4A43C"/>
           </svg>
@@ -587,9 +627,10 @@
 
 <section id="ask">
   <h2 class="reveal">Don't take my word for it. <span class="off">Ask the machines.</span></h2>
-  <div class="reveal">
-    <p style="font-weight:300;font-size:clamp(19px,2.2vw,26px);line-height:1.5;letter-spacing:-0.014em;color:var(--dim);max-width:44ch;">Open ChatGPT right now and ask it to recommend a business that does what you do, in your town. <b>Watch it answer with names.</b> That answer is the new front page, and getting into it is an engineering job.</p>
-    <p class="results-note" style="margin-top:22px;">The same goes for Google: AI Overviews now answers many buying questions before any website gets the click. Both are winnable. That's the job the retainer does.</p>
+  <div class="ask-frame reveal">
+    <p class="ask-q">"Who should I hire for <span class="slot">what you do</span> in <span class="slot">your town</span>?"</p>
+    <p class="ask-body">Open ChatGPT right now and ask it exactly that. <b>Watch it answer with names.</b> That answer is the new front page, and getting into it is an engineering job.</p>
+    <p class="results-note" style="margin-top:18px;">The same goes for Google: AI Overviews now answers many buying questions before any website gets the click. Both are winnable. That's the job the retainer does.</p>
   </div>
 </section>
 
@@ -894,6 +935,24 @@
       el.querySelectorAll('.undrawn').forEach(function (f) { f.classList.remove('undrawn'); });
     });
   }, 15000);
+
+  // Magnetic buttons: a few px of pull toward the cursor, mouse-only,
+  // CSS custom properties so the existing transform transition does the smoothing.
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.btn').forEach(function (btn) {
+      btn.addEventListener('pointermove', function (e) {
+        var r = btn.getBoundingClientRect();
+        var dx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+        var dy = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+        btn.style.setProperty('--mx', (dx * 5).toFixed(1) + 'px');
+        btn.style.setProperty('--my', (dy * 4).toFixed(1) + 'px');
+      });
+      btn.addEventListener('pointerleave', function () {
+        btn.style.setProperty('--mx', '0px');
+        btn.style.setProperty('--my', '0px');
+      });
+    });
+  }
 })();
 </script>
 </body>
