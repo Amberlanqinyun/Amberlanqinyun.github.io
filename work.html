@@ -40,7 +40,7 @@
 }
 </script>
 <style>
-  @font-face{font-family:"Google Sans Flex";src:url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Google Sans Flex";src:url("fonts/google-sans-flex-vf.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
   :root{
     --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;
     --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.40);--hair:rgba(250,248,243,0.11);--ink:#0E0E0D;--acc:#E4A43C;
@@ -61,7 +61,8 @@
   .nav-bar{position:sticky;top:0;z-index:40;background:rgba(14,14,13,0.75);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
   .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
   .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);}
-  .nav .name svg{width:21px;height:21px;color:var(--acc);}
+  .nav .name svg{width:26px;height:26px;}
+  .nav .name svg text{font-family:var(--gsf);}
   .nav nav a{color:var(--mute);margin-left:26px;font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
   .nav nav a:hover{color:var(--fg);}
   .nav nav a[aria-current="page"]{color:var(--fg);}
@@ -72,8 +73,8 @@
 
   .hero{padding:clamp(80px,13vh,140px) 0 clamp(40px,6vh,64px);}
   .eyebrow{font-size:11.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:28px;}
-  h1{font-weight:600;font-size:clamp(38px,6vw,66px);line-height:1.02;letter-spacing:-0.04em;color:var(--fg);max-width:16ch;}
-  .lede{margin-top:28px;font-weight:300;font-size:clamp(18px,2vw,23px);line-height:1.5;letter-spacing:-0.01em;color:var(--dim);max-width:52ch;}
+  h1{font-weight:600;font-size:clamp(42px,5.2vw,68px);line-height:1.04;letter-spacing:-0.04em;color:var(--fg);max-width:16ch;}
+  .lede{margin-top:28px;font-weight:300;font-size:clamp(18px,1.7vw,21px);line-height:1.5;letter-spacing:-0.01em;color:var(--dim);max-width:52ch;}
   .lede b{font-weight:500;}
 
   /* framework diagram: create -> convert -> run */
@@ -82,7 +83,7 @@
 
   section{padding:clamp(64px,9vh,110px) 0 0;}
   .pillar-k{margin-bottom:clamp(32px,5vh,52px);}
-  .pillar-k h2{font-weight:600;font-size:clamp(24px,3.4vw,36px);letter-spacing:-0.03em;line-height:1.1;color:var(--fg);}
+  .pillar-k h2{font-weight:600;font-size:clamp(26px,3vw,36px);letter-spacing:-0.03em;line-height:1.1;color:var(--fg);}
   .pillar-k .pk-d{display:block;margin-top:10px;font-size:15px;color:var(--mute);max-width:52ch;}
 
   .cases{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
@@ -102,7 +103,7 @@
   .tag{font-size:12px;font-weight:500;padding:5px 12px;border:1px solid var(--hair);border-radius:999px;color:var(--mute);}
 
   .end{padding:clamp(80px,12vh,140px) 0 60px;text-align:center;}
-  .end h2{font-weight:600;font-size:clamp(30px,4.6vw,46px);letter-spacing:-0.035em;line-height:1.06;color:var(--fg);max-width:20ch;margin:0 auto 20px;}
+  .end h2{font-weight:600;font-size:clamp(34px,4.2vw,52px);letter-spacing:-0.035em;line-height:1.06;color:var(--fg);max-width:20ch;margin:0 auto 20px;}
   .end p{color:var(--dim);max-width:44ch;margin:0 auto 32px;font-weight:300;font-size:17px;}
   .btn{display:inline-block;padding:16px 32px;font-size:15px;font-weight:500;border-radius:var(--r-s);background:var(--cream);color:var(--ink);transition:transform var(--t-fast) var(--ease-out),background var(--t-normal) var(--ease);}
   @media(hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}}
@@ -115,9 +116,7 @@
 
 <div class="nav-bar"><div class="wrap"><div class="nav">
   <a class="name" href="index.html" aria-label="Flow AI home">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-      <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/><path d="M2.5 12 H 21.5"/><path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
-    </svg>
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
     Flow AI.
   </a>
   <nav>

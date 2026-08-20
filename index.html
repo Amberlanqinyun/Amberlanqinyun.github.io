@@ -88,7 +88,7 @@
         {
           "@type": "Question",
           "name": "How quickly can marketing systems be live?",
-          "acceptedAnswer": { "@type": "Answer", "text": "First assets ship within 48 to 72 hours of the discovery call. A full go-to-market build, strategy plus inbound, outbound, content, and analytics, is live within weeks, not quarters." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The go-to-market read arrives in writing within the first week of the discovery call, and the first system goes live in week one. A full go-to-market build, strategy plus inbound, outbound, content, and analytics, is live within weeks, not quarters." }
         },
         {
           "@type": "Question",
@@ -114,7 +114,7 @@
   /* Google Sans Flex, self-hosted variable font (latin) */
   @font-face {
     font-family: "Google Sans Flex";
-    src: url("fonts/google-sans-flex-vf.woff2") format("woff2-variations");
+    src: url("fonts/google-sans-flex-vf.woff2") format("woff2");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -140,10 +140,10 @@
     --acc:   #E4A43C;                    /* amber: live-system signal, links, open states */
     --acc-dim: rgba(228,164,60,0.55);
     --gsf: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --fs-display: clamp(44px, 5.6vw, 72px);
-    --fs-h2:      clamp(27px, 3.2vw, 38px);
-    --fs-h3:      21px;
-    --fs-lede:    clamp(19px, 1.7vw, 22px);
+    --fs-display: clamp(42px, 5.2vw, 68px);
+    --fs-h2:      clamp(26px, 3vw, 36px);
+    --fs-h3:      20px;
+    --fs-lede:    clamp(18px, 1.7vw, 21px);
     --fs-body:    16.5px;
     --r-m: 24px; --r-s: 999px; /* surfaces: continuous 24px curves · interactive: pills */
     --t-fast: 150ms; --t-normal: 200ms; --t-slow: 300ms;
@@ -208,7 +208,8 @@
     display: flex; justify-content: space-between; align-items: center; height: 60px;
   }
   .nav .name { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.02em; font-size: 16px; color: var(--fg); white-space: nowrap; }
-  .nav .name svg { width: 21px; height: 21px; color: var(--acc); }
+  .nav .name svg { width: 26px; height: 26px; }
+  .nav .name svg text { font-family: var(--gsf); }
   .nav nav a { color: var(--mute); margin-left: 28px; font-size: 13.5px; font-weight: 500; letter-spacing: 0.01em; transition: color var(--t-normal) var(--ease); }
   .nav nav a:hover { color: var(--fg); }
   .nav nav a.nav-cta {
@@ -293,8 +294,8 @@
 
   /* Statement: words brighten as you scroll through them (fail-safe: full opacity without support) */
   .statement {
-    font-weight: 300; font-size: clamp(25px, 3.3vw, 42px);
-    line-height: 1.38; letter-spacing: -0.022em; color: var(--mute);
+    font-weight: 300; font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.42; letter-spacing: -0.022em; color: var(--mute);
     max-width: 26ch;
   }
   .statement .w { display: inline-block; }
@@ -317,13 +318,13 @@
     background: radial-gradient(110% 130% at 0% 0%, rgba(228,164,60,0.07), transparent 55%);
   }
   .ask-q {
-    font-weight: 300; font-size: clamp(23px, 3vw, 36px); line-height: 1.3;
+    font-weight: 300; font-size: clamp(22px, 2.8vw, 34px); line-height: 1.32;
     letter-spacing: -0.022em; color: var(--fg); max-width: 26ch; text-wrap: balance;
   }
   .ask-q .slot { color: var(--acc); }
   .ask-body {
     margin-top: clamp(24px, 3.5vh, 36px);
-    font-weight: 300; font-size: clamp(17px, 1.8vw, 21px); line-height: 1.55;
+    font-weight: 300; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.55;
     letter-spacing: -0.01em; color: var(--dim); max-width: 46ch;
   }
 
@@ -335,7 +336,7 @@
   }
   .result:last-of-type { border-bottom: 1px solid var(--hair); }
   .result .num {
-    font-weight: 600; font-size: clamp(48px, 7vw, 92px); letter-spacing: -0.05em;
+    font-weight: 600; font-size: clamp(44px, 6vw, 78px); letter-spacing: -0.05em;
     line-height: 0.95; color: var(--fg); font-feature-settings: "tnum";
     transition: font-weight 900ms var(--ease) 200ms;
   }
@@ -400,7 +401,7 @@
     .price:hover { transform: translateY(-4px) scale(1.005); border-color: rgba(250,248,243,0.22); }
   }
   .price .pn { font-size: 13px; font-weight: 500; color: var(--mute); margin-bottom: 20px; }
-  .price .pv { font-weight: 600; font-size: clamp(38px, 4.4vw, 54px); letter-spacing: -0.04em; color: var(--fg); font-feature-settings: "tnum"; line-height: 1; }
+  .price .pv { font-weight: 600; font-size: clamp(36px, 4vw, 50px); letter-spacing: -0.04em; color: var(--fg); font-feature-settings: "tnum"; line-height: 1; }
   .price .pv small { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--mute); }
   .price p { margin-top: 14px; font-size: 15px; color: var(--dim); max-width: 36ch; }
   .price.anchor { background: var(--cream); border-color: var(--cream); }
@@ -440,6 +441,11 @@
   .case p { font-size: 16px; color: var(--dim); max-width: 46ch; }
   .case .go { display: inline-block; margin-top: 20px; }
   .note { margin-top: 18px; font-size: 14px; color: var(--mute); }
+
+  .offer-fig { display: block; margin-top: 44px; width: min(170px, 55%); height: auto; color: var(--cream); }
+  @media (max-width: 760px) { .offer-fig { display: none; } }
+  .bio-fig { margin-bottom: 32px; max-width: 480px; }
+  .bio-fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
 
   /* Behind */
   .behind-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
@@ -584,11 +590,7 @@
   <div class="wrap">
     <header class="nav">
       <a class="name" href="index.html" aria-label="Flow AI home">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-          <path d="M2.5 5.5 C 10 5.5, 14 12, 21.5 12"/>
-          <path d="M2.5 12 H 21.5"/>
-          <path d="M2.5 18.5 C 10 18.5, 14 12, 21.5 12"/>
-        </svg>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
         Flow AI.
       </a>
       <nav>
@@ -681,6 +683,21 @@
     <div class="offer-left reveal">
       <h2>What gets built<span class="off">, and what it changes.</span></h2>
       <p>Five systems, one engineer. Each one exists to move a number you care about.</p>
+      <!-- One artery, five branches: the same map as the hero, one per row opposite. -->
+      <svg class="offer-fig" viewBox="0 0 200 260" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 28 V 236" opacity=".45"/>
+          <path d="M24 44  C 60 44,  60 44,  120 44"  opacity=".3"/>
+          <path d="M24 92  C 60 92,  60 92,  120 92"  opacity=".3"/>
+          <path d="M24 140 C 60 140, 60 140, 120 140" opacity=".3"/>
+          <path d="M24 188 C 60 188, 60 188, 120 188" opacity=".3"/>
+          <path d="M24 236 C 60 236, 60 236, 120 236" opacity=".3"/>
+          <circle cx="126" cy="44" r="5" opacity=".55"/><circle cx="126" cy="92" r="5" opacity=".55"/>
+          <circle cx="126" cy="140" r="5" opacity=".55"/><circle cx="126" cy="188" r="5" opacity=".55"/>
+          <circle cx="126" cy="236" r="5" opacity=".55"/>
+        </g>
+        <circle cx="24" cy="24" r="8" fill="#E4A43C"/>
+      </svg>
     </div>
     <div>
       <div class="offer-row reveal">
@@ -724,10 +741,10 @@
     <div class="reveal">
       <div class="pw">Day one</div>
       <div class="ph">Diagnose.</div>
-      <p>A 30-minute call. You get the go-to-market read in writing, either way.</p>
+      <p>A 30-minute call. Your go-to-market read follows in writing within the week, either way.</p>
     </div>
     <div class="reveal">
-      <div class="pw">Within 72 hours</div>
+      <div class="pw">Week one</div>
       <div class="ph">Build.</div>
       <p>First assets live: positioning, pages, agents, tracking. Systems, not mockups.</p>
     </div>
@@ -869,7 +886,20 @@
   <div class="behind-grid">
     <div>
       <h2 class="reveal">Who you <span class="off">work with.</span></h2>
-      <!-- TODO: add a real headshot here when ready, in a .fig frame. A face measurably lifts conversion. -->
+      <!-- TODO: swap this abstract figure for a real headshot when ready. A face measurably lifts conversion. -->
+      <div class="fig bio-fig reveal" aria-hidden="true">
+        <svg viewBox="0 0 800 380">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="560" cy="190" r="40"  opacity=".3"/>
+            <circle cx="560" cy="190" r="80"  opacity=".22"/>
+            <circle cx="560" cy="190" r="120" opacity=".15"/>
+            <circle cx="560" cy="190" r="160" opacity=".09"/>
+            <path d="M60 190 H 512" opacity=".45"/>
+          </g>
+          <circle cx="60" cy="190" r="9" fill="currentColor" opacity=".7"/>
+          <circle cx="560" cy="190" r="9" fill="#E4A43C"/>
+        </svg>
+      </div>
       <p class="bio reveal">I'm <b>Amber Lan, an AI marketing engineer</b> in Auckland. By day I run marketing solo at an AI startup, on agent systems I built myself. Flow AI is the same method, pointed at your business. <b>You work with me directly</b>, and I publish what works, what breaks, and the real numbers.</p>
       <div class="links reveal">
         <a class="go" href="about.html">More about me</a>
@@ -907,7 +937,7 @@
     </details>
     <details>
       <summary>How quickly can systems be live?</summary>
-      <p>First assets ship within 48 to 72 hours of the discovery call. A full go-to-market build is live within weeks, not quarters.</p>
+      <p>The go-to-market read arrives in writing within the first week, and the first system goes live in week one. A full build is live within weeks, not quarters.</p>
     </details>
     <details>
       <summary>Do you work outside New Zealand and Australia?</summary>
@@ -935,7 +965,7 @@
   </svg>
   <div class="wrap">
     <h2 class="reveal">Your next customer <span class="off">is already asking.</span></h2>
-    <p class="reveal">Tonight, somewhere in New Zealand, someone asks an AI for exactly what you do. Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within two days</b>, before any commitment.</p>
+    <p class="reveal">Tonight, somewhere in New Zealand, someone asks an AI for exactly what you do. Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within the first week</b>, before any commitment.</p>
     <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Book a discovery call</a>
     <nav class="foot-nav" aria-label="Site">
       <a href="work.html">Work</a>
