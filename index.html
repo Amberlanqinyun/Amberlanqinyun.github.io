@@ -68,23 +68,23 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is an AI marketing engineer?",
-          "acceptedAnswer": { "@type": "Answer", "text": "An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. One person designs your positioning and ships the inbound, content, and outbound systems that run it." }
-        },
-        {
-          "@type": "Question",
           "name": "Who is Flow AI for?",
           "acceptedAnswer": { "@type": "Answer", "text": "New Zealand small and medium businesses and early-stage teams without a marketing hire. If your customers search on Google or ask ChatGPT for recommendations, the systems are designed to make your business the answer." }
         },
         {
           "@type": "Question",
-          "name": "What does it cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Flow AI pricing is public: a one-time starter sprint at NZ$997 for one system, or the full marketing engine retainer at NZ$1,000 per month, cancel anytime, with a 30-day money-back guarantee on the first month. Clients own the systems: documented, portable, handover included." }
+          "name": "What happens in the first week of working with Flow AI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A 30-minute call, then a written go-to-market read within the week, either way. If the engagement goes ahead, the first system is scoped and under way in week one." }
         },
         {
           "@type": "Question",
-          "name": "How do I get my business mentioned by ChatGPT and other AI assistants?",
-          "acceptedAnswer": { "@type": "Answer", "text": "That practice is called answer engine optimization (AEO). It combines question-formatted content, structured data markup, consistent business information across the web, and placements on the sources AI assistants cite. AEO is included in every Flow AI retainer alongside traditional SEO." }
+          "name": "What does the client own?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Everything: the systems, the documentation, the accounts, and the source code. It is all portable and handover is included, so there is no lock-in." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why choose Flow AI instead of a marketing agency?",
+          "acceptedAnswer": { "@type": "Answer", "text": "With Flow AI you work directly with the person who designs the strategy and builds the system. The work is systems that keep running rather than deliverables that stop with an invoice, and the flat NZ$1,000 a month is possible because the systems do the production." }
         }
       ]
     }
@@ -111,16 +111,18 @@
   */
   :root {
     --bg:    #0E0E0D;
-    --panel: #171715;
+    --panel: #151511;
+    --raised: #1C1B16;
     --cream: #FAF8F3;
     --fg:    #FAF8F3;
-    --dim:   rgba(250,248,243,0.58);
+    --dim:   rgba(250,248,243,0.64);
     --mute:  rgba(250,248,243,0.52);
     --hair:  rgba(250,248,243,0.11);
     --ink:   #0E0E0D;
     --acc:   #E4A43C;                    /* amber: live-system signal, links, open states */
     --acc-dim: rgba(228,164,60,0.55);
     --gsf: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     --fs-display: clamp(36px, 4.8vw, 64px);
     --fs-h2:      clamp(26px, 3vw, 36px);
     --fs-h3:      20px;
@@ -224,6 +226,7 @@
     max-width: 38ch; text-wrap: balance;
   }
   .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: clamp(28px, 4vh, 40px); }
+  .tertiary { margin-top: 18px; font-size: 13.5px; color: var(--mute); }
   .btn {
     display: inline-block; padding: 17px 34px; font-size: 15px; font-weight: 500;
     letter-spacing: -0.005em; white-space: nowrap; border-radius: var(--r-s);
@@ -245,7 +248,14 @@
      Draws once on load, then the amber flow runs forever. */
   .hero-fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
   .hero-fig .flow { color: var(--acc); }
-  .fig-label text { font-family: var(--gsf); font-size: 15px; font-weight: 500; fill-opacity: 0.5; }
+  .hero-fig .branch text { font-family: var(--gsf); font-size: 15px; font-weight: 500; fill: currentColor; fill-opacity: 0.5; transition: fill-opacity var(--t-normal) var(--ease); }
+  .hero-fig .branch path { transition: stroke var(--t-normal) var(--ease), opacity var(--t-normal) var(--ease); }
+  .hero-fig .branch circle { transition: stroke var(--t-normal) var(--ease), opacity var(--t-normal) var(--ease); }
+  @media (hover: hover) and (pointer: fine) {
+    .hero-fig .branch:hover path { stroke: var(--acc); opacity: .9; }
+    .hero-fig .branch:hover circle { stroke: var(--acc); opacity: 1; }
+    .hero-fig .branch:hover text { fill-opacity: 1; }
+  }
 
   /* Meta band: audience, scope, terms. Own section, out of the hero. */
   .meta-band { border-top: 1px solid var(--hair); }
@@ -307,6 +317,48 @@
     margin-top: clamp(24px, 3.5vh, 36px);
     font-weight: 300; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.55;
     letter-spacing: -0.01em; color: var(--dim); max-width: 46ch;
+  }
+
+  /* Bento: five systems, one asymmetric composition, no empty cells */
+  .bento {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "s s s s s s s a a a a a"
+      "s s s s s s s c c c c c"
+      "o o o o o n n n n n n n";
+  }
+  .tile {
+    background: var(--panel); border: 1px solid rgba(250,248,243,0.08); border-radius: 28px;
+    padding: clamp(24px, 2.6vw, 36px);
+    box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
+    background-image: radial-gradient(120% 130% at 100% 0%, rgba(228,164,60,0.05), transparent 55%);
+    display: flex; flex-direction: column;
+  }
+  .t-strategy { grid-area: s; background-color: var(--raised); }
+  .t-search { grid-area: a; }
+  .t-content { grid-area: c; }
+  .t-outbound { grid-area: o; }
+  .t-analytics { grid-area: n; }
+  .tile h3 { font-weight: 600; font-size: var(--fs-h3); letter-spacing: -0.02em; color: var(--fg); margin-bottom: 8px; }
+  .tile p { font-size: 15px; color: var(--dim); max-width: 44ch; }
+  .tile-fig { display: block; width: 100%; height: auto; color: var(--cream); margin-top: auto; padding-top: 18px; }
+  .checks { list-style: none; margin-top: auto; padding-top: 16px; }
+  .checks li { font-family: var(--mono); font-size: 12.5px; color: var(--dim); padding: 7px 0; border-top: 1px solid var(--hair); }
+  .checks li::before { content: "✓ "; color: var(--acc); }
+  .mini-flow { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 20px; }
+  .mini-flow .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--dim); }
+  .mini-flow .dot.acc { background: var(--acc); }
+  .mini-flow .ln { flex: 1; height: 1.5px; background: var(--hair); }
+  .mini-flow .gate { width: 22px; height: 26px; border: 2px solid var(--acc); border-radius: 8px; }
+  .mini-flow .outs { display: flex; flex-direction: column; gap: 5px; }
+  .mini-flow .outs i { display: block; width: 34px; height: 1.5px; background: rgba(250,248,243,0.35); }
+  .hand { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 12.5px; color: var(--acc); }
+  .mini-bars { display: flex; align-items: flex-end; gap: 8px; height: 56px; margin-top: auto; padding-top: 18px; }
+  .mini-bars i { flex: 1; max-width: 34px; height: var(--h); background: rgba(250,248,243,0.25); border-radius: 4px 4px 0 0; }
+  .mini-bars i:last-child { background: var(--acc); }
+  @media (max-width: 860px) {
+    .bento { grid-template-columns: 1fr; grid-template-areas: "s" "a" "c" "o" "n"; }
   }
 
   /* Offer: sticky heading left, rows right */
@@ -374,6 +426,37 @@
   .price.anchor .pv { color: var(--ink); }
   .price.anchor .pv small { color: rgba(14,14,13,0.55); }
   .price.anchor p { color: rgba(14,14,13,0.75); }
+  /* The Action chapter: the page's one deliberate light surface */
+  section.light {
+    background: var(--cream); color: rgba(14,14,13,0.72);
+    margin-inline: calc(50% - 50vw); padding-inline: calc(50vw - 50%);
+    padding-block: clamp(72px, 11vh, 120px); margin-top: clamp(80px, 12vh, 144px);
+  }
+  section.light h2, section.light b { color: var(--ink); }
+  section.light h2 .off { color: rgba(14,14,13,0.42); }
+  section.light .price { background: transparent; border-color: rgba(14,14,13,0.16); box-shadow: none; }
+  section.light .price .pn { color: rgba(14,14,13,0.55); }
+  section.light .price .pv { color: var(--ink); }
+  section.light .price .pv small { color: rgba(14,14,13,0.5); }
+  section.light .price p { color: rgba(14,14,13,0.72); }
+  section.light .price .btn.ghost { background: transparent; border: 1px solid rgba(14,14,13,0.3); color: var(--ink); }
+  section.light .price .btn.ghost:hover { background: rgba(14,14,13,0.06); }
+  section.light .price.anchor { background: var(--ink); border-color: var(--ink); }
+  section.light .price.anchor .pn { color: rgba(250,248,243,0.6); }
+  section.light .price.anchor .pn b { color: var(--acc); }
+  section.light .price.anchor .pv { color: var(--cream); }
+  section.light .price.anchor .pv small { color: rgba(250,248,243,0.55); }
+  section.light .price.anchor p { color: rgba(250,248,243,0.72); }
+  section.light .price.anchor .btn.primary { background: var(--cream); color: var(--ink); }
+  section.light .price.anchor .btn.primary:hover { background: rgba(250,248,243,0.9); }
+  section.light .pnote { color: rgba(14,14,13,0.5); }
+  section.light .price.anchor .pnote { color: rgba(250,248,243,0.55); }
+  section.light .founding { border-top-color: rgba(14,14,13,0.14); }
+  section.light .founding b { color: var(--ink); }
+  section.light .founding span { color: rgba(14,14,13,0.66); }
+  section.light .prices-note { color: rgba(14,14,13,0.6); }
+  section.light ::selection { background: var(--ink); color: var(--cream); }
+
   .founding { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; padding-top: 34px; border-top: 1px solid var(--hair); }
   .founding b { display: block; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; letter-spacing: -0.03em; color: var(--fg); margin-bottom: 10px; font-feature-settings: "tnum"; transition: font-weight 900ms var(--ease) 200ms; }
   .founding.reveal.pre b { font-weight: 200; }
@@ -398,6 +481,7 @@
   .undrawn path { stroke-dashoffset: 1 !important; transition: none !important; }
   .undrawn circle { opacity: 0 !important; transition: none !important; }
   .case-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
   .ccard {
     display: flex; flex-direction: column;
     background: var(--panel); border: 1px solid rgba(250,248,243,0.08); border-radius: var(--r-m);
@@ -409,11 +493,26 @@
     .ccard:hover { transform: translateY(-4px); border-color: rgba(250,248,243,0.22); }
   }
   .ccard .fig { border: none; border-radius: 0; box-shadow: none; margin: 0 0 18px; background: transparent; border-bottom: 1px solid var(--hair); }
+  .ccard .cbody { padding: 0 24px 0; display: contents; }
   .ccard h3 { font-weight: 600; font-size: 18px; letter-spacing: -0.015em; line-height: 1.25; color: var(--fg); margin: 0 24px 8px; }
   .ccard p { font-size: 14.5px; color: var(--dim); margin: 0 24px 14px; }
   .ccard .go { margin: auto 24px 0; align-self: flex-start; font-size: 14px; }
   @media (max-width: 860px) { .case-cards { grid-template-columns: 1fr; } }
   .ctx-cta { margin-top: 28px; font-size: 15.5px; color: var(--dim); }
+  @media (min-width: 861px) {
+    .case-cards { display: block; }
+    .case-cards .ccard {
+      position: sticky; top: calc(84px + var(--n, 0) * 30px); margin-bottom: 30px;
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      background: var(--raised); padding-bottom: 0;
+    }
+    .case-cards .ccard .cbody { align-self: center; padding: 40px; display: block; }
+    .case-cards .ccard .fig { grid-column: 2; grid-row: 1; border-bottom: none; border-left: 1px solid var(--hair); margin: 0; height: 100%; display: flex; align-items: center; }
+    .case-cards .ccard .cbody { grid-column: 1; grid-row: 1; }
+    .case-cards .ccard h3 { font-size: clamp(20px, 2.2vw, 26px); margin: 0 0 10px; }
+    .case-cards .ccard p { font-size: 15.5px; margin: 0 0 16px; max-width: 40ch; }
+    .case-cards .ccard .go { margin: 0; }
+  }
   .pbtn { margin-top: 22px; align-self: flex-start; padding: 13px 26px; font-size: 14px; }
   .price { display: flex; flex-direction: column; }
   .price .btn.ghost { border: 1px solid rgba(250,248,243,0.18); }
@@ -438,6 +537,10 @@
 
   .offer-fig { display: block; margin-top: 44px; width: min(170px, 55%); height: auto; color: var(--cream); }
   @media (max-width: 760px) { .offer-fig { display: none; } }
+  .qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px) clamp(36px, 5vw, 72px); max-width: 980px; }
+  .qa h3 { font-weight: 600; font-size: 18px; letter-spacing: -0.015em; color: var(--fg); margin-bottom: 10px; }
+  .qa p { font-size: 15.5px; color: var(--dim); max-width: 46ch; }
+  @media (max-width: 700px) { .qa-grid { grid-template-columns: 1fr; } }
   /* FAQ */
   .faq { max-width: 860px; }
   .faq details { border-top: 1px solid var(--hair); }
@@ -487,15 +590,8 @@
   }
   .end h2 { font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.045em; max-width: 16ch; margin-bottom: 0; }
   .end p { margin: 32px auto 52px; font-weight: 300; font-size: var(--fs-lede); line-height: 1.5; color: var(--dim); max-width: 40ch; text-wrap: balance; }
-  .foot-nav {
-    margin-top: clamp(64px, 10vh, 110px);
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 30px;
-    font-size: 14px; font-weight: 500;
-  }
-  .foot-nav a { color: var(--mute); transition: color var(--t-normal) var(--ease); }
-  .foot-nav a:hover { color: var(--fg); }
   .end-meta {
-    margin-top: clamp(56px, 8vh, 90px); padding-top: 30px;
+    margin-top: clamp(90px, 13vh, 140px); padding-top: 30px;
     border-top: 1px solid var(--hair);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
     font-size: 12.5px; color: var(--mute);
@@ -529,7 +625,7 @@
     /* Hero pipeline draws on load... */
     .hero-fig path.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawin 1300ms var(--ease-out) 700ms forwards; }
     @keyframes drawin { to { stroke-dashoffset: 0; } }
-    .hero-fig circle, .hero-fig .fig-label text { opacity: 0; animation: appear 300ms var(--ease-out) 1600ms forwards; }
+    .hero-fig circle, .hero-fig .branch text { opacity: 0; animation: appear 300ms var(--ease-out) calc(1450ms + var(--i, 0) * 130ms) forwards; }
     @keyframes appear { to { opacity: 1; } }
     /* ...then the flow runs forever: amber dots drifting along the arteries */
     .hero-fig path.flow {
@@ -581,7 +677,7 @@
     <header class="nav">
       <a class="name" href="/" aria-label="Flow AI home">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
-        Amber Lan · Flow AI.
+        Amber Lan<span class="bsub"> · Flow AI.</span>
       </a>
       <nav>
         <a href="/work.html">Work</a>
@@ -589,7 +685,7 @@
         <a class="sec" href="#pricing">Pricing</a>
         <a class="sec" href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems review</a>
+        <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a>
       </nav>
     </header>
   </div>
@@ -599,38 +695,27 @@
   <div class="wrap">
     <div class="hero-body">
       <div class="eyebrow">Amber Lan · AI marketing engineer · Auckland</div>
-      <h1><span class="line">I build marketing systems that turn</span><span class="line">strategy into <span class="hi">consistent demand</span>.</span></h1>
+      <h1><span class="line">I build marketing systems</span><span class="line">that turn strategy into <span class="hi">pipeline</span>.</span></h1>
       <div class="hero-sub">
         <div>
           <p class="lede">Positioning, AI-search visibility, content, outbound, and reporting. <b>I design and ship these systems while running marketing inside an AI startup.</b></p>
           <div class="cta">
-            <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a free systems review</a>
-            <a class="btn ghost" href="/work.html">View the case studies</a>
+            <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a>
+            <a class="btn ghost" href="/work.html">View selected work</a>
           </div>
+          <p class="tertiary">Prefer plain email? <a class="go" href="mailto:amber.lan.growth.digital@gmail.com">Email Amber</a></p>
         </div>
         <!-- The pipeline: one artery in, five named systems out.
              Draws on load, then the amber flow never stops. Labels make it a map, not decoration. -->
         <div class="hero-fig" aria-hidden="true">
           <svg viewBox="0 0 660 360">
-            <g fill="none" stroke="currentColor" stroke-width="1.5">
-              <path class="draw" pathLength="1" d="M28 180 H 180" opacity=".7"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 40,  400 40  H 508" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 110, 400 110 H 508" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 180, 400 180 H 508" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 250, 400 250 H 508" opacity=".35"/>
-              <path class="draw" pathLength="1" d="M180 180 C 290 180, 290 320, 400 320 H 508" opacity=".35"/>
-              <circle cx="180" cy="180" r="7"/>
-              <circle cx="508" cy="40"  r="5" opacity=".6"/><circle cx="508" cy="110" r="5" opacity=".6"/>
-              <circle cx="508" cy="180" r="5" opacity=".6"/><circle cx="508" cy="250" r="5" opacity=".6"/>
-              <circle cx="508" cy="320" r="5" opacity=".6"/>
-            </g>
-            <g class="fig-label" fill="currentColor">
-              <text x="524" y="45">Strategy</text>
-              <text x="524" y="115">Inbound</text>
-              <text x="524" y="185">Content</text>
-              <text x="524" y="255">Outbound</text>
-              <text x="524" y="325">Analytics</text>
-            </g>
+            <path class="draw" pathLength="1" d="M28 180 H 180" opacity=".7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <g class="branch" style="--i:0"><path class="draw" pathLength="1" d="M180 180 C 290 180, 290 40,  400 40  H 508" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="508" cy="40" r="5" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/><text x="524" y="45">Strategy</text></g>
+            <g class="branch" style="--i:1"><path class="draw" pathLength="1" d="M180 180 C 290 180, 290 110, 400 110 H 508" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="508" cy="110" r="5" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/><text x="524" y="115">Inbound</text></g>
+            <g class="branch" style="--i:2"><path class="draw" pathLength="1" d="M180 180 C 290 180, 290 180, 400 180 H 508" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="508" cy="180" r="5" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/><text x="524" y="185">Content</text></g>
+            <g class="branch" style="--i:3"><path class="draw" pathLength="1" d="M180 180 C 290 180, 290 250, 400 250 H 508" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="508" cy="250" r="5" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/><text x="524" y="255">Outbound</text></g>
+            <g class="branch" style="--i:4"><path class="draw" pathLength="1" d="M180 180 C 290 180, 290 320, 400 320 H 508" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="508" cy="320" r="5" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/><text x="524" y="325">Analytics</text></g>
+            <circle cx="180" cy="180" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
             <g fill="none" stroke="currentColor" stroke-width="3">
               <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 40, 400 40 H 508" opacity=".8" style="color:#E4A43C"/>
               <path class="flow" pathLength="1" d="M28 180 H 180 C 290 180, 290 320, 400 320 H 508" opacity=".55" style="color:#E4A43C"/>
@@ -659,49 +744,131 @@
 
 
 <section id="offer">
-  <div class="offer-grid">
-    <div class="offer-left reveal">
-      <h2>What gets built<span class="off">, and what it changes.</span></h2>
-      <p>Five systems, one engineer. Each one exists to move a number you care about.</p>
-      <!-- One artery, five branches: the same map as the hero, one per row opposite. -->
-      <svg class="offer-fig" viewBox="0 0 200 260" aria-hidden="true">
+  <h2 class="reveal">What gets built<span class="off">, and what it changes.</span></h2>
+  <div class="bento reveal">
+    <div class="tile t-strategy">
+      <h3>Go-to-market strategy.</h3>
+      <p>Positioning, ICP, message, and your first two channels. A plan you can execute this month, then the systems below to run it.</p>
+      <svg class="tile-fig" viewBox="0 0 460 250" aria-hidden="true">
         <g fill="none" stroke="currentColor" stroke-width="1.5">
-          <path pathLength="1" d="M24 28 V 236" opacity=".45"/>
-          <path pathLength="1" d="M24 44  C 60 44,  60 44,  120 44"  opacity=".3"/>
-          <path pathLength="1" d="M24 92  C 60 92,  60 92,  120 92"  opacity=".3"/>
-          <path pathLength="1" d="M24 140 C 60 140, 60 140, 120 140" opacity=".3"/>
-          <path pathLength="1" d="M24 188 C 60 188, 60 188, 120 188" opacity=".3"/>
-          <path pathLength="1" d="M24 236 C 60 236, 60 236, 120 236" opacity=".3"/>
-          <circle cx="126" cy="44" r="5" opacity=".55"/><circle cx="126" cy="92" r="5" opacity=".55"/>
-          <circle cx="126" cy="140" r="5" opacity=".55"/><circle cx="126" cy="188" r="5" opacity=".55"/>
-          <circle cx="126" cy="236" r="5" opacity=".55"/>
+          <path d="M70 60 C 170 60, 170 125, 250 125" opacity=".45"/>
+          <path d="M70 125 H 250" opacity=".45"/>
+          <path d="M70 190 C 170 190, 170 125, 250 125" opacity=".45"/>
+          <path d="M268 125 H 400" stroke-width="3" opacity=".9"/>
         </g>
-        <circle cx="24" cy="24" r="8" fill="#E4A43C"/>
+        <circle cx="70" cy="60" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="70" cy="125" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="70" cy="190" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="250" cy="125" r="10" fill="#E4A43C"/>
+        <circle cx="408" cy="125" r="5" fill="currentColor" opacity=".6"/>
       </svg>
     </div>
-    <div>
-      <div class="offer-row reveal">
-        <h3>Go-to-market strategy.</h3>
-        <p>Positioning, ICP, message, and your first two channels. <b>A plan you can execute this month.</b></p>
-      </div>
-      <div class="offer-row reveal">
-        <h3>Inbound engine.</h3>
-        <p>Search and generative engine optimization from day one. <b>The technical and content foundations for Google and AI search.</b></p>
-      </div>
-      <div class="offer-row reveal">
-        <h3>Outbound agents.</h3>
-        <p>Targeted research and personalised outreach, running daily, with <b>a human taking over the moment a buyer replies.</b></p>
-      </div>
-      <div class="offer-row reveal">
-        <h3>Content engine.</h3>
-        <p>One source becomes a month of on-brand posts. <b>Shipped on schedule.</b></p>
-      </div>
-      <div class="offer-row reveal">
-        <h3>Analytics.</h3>
-        <p>Tracking wired from the first visitor. <b>Activity connected to pipeline through clean reporting.</b></p>
-      </div>
-      <p class="ctx-cta reveal">Not sure which system you need first? <a class="go" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a free systems review</a> and I'll tell you honestly.</p>
+    <div class="tile t-search">
+      <h3>AI-search visibility.</h3>
+      <p>SEO plus answer engine optimization, so the machines can find, parse, and cite you.</p>
+      <ul class="checks">
+        <li>AI crawlers allowed</li>
+        <li>llms.txt served</li>
+        <li>Schema on every page</li>
+        <li>Answer-first content</li>
+      </ul>
     </div>
+    <div class="tile t-content">
+      <h3>Content engine.</h3>
+      <p>One source becomes a month of platform-native posts, each past a codified voice gate.</p>
+      <div class="mini-flow" aria-hidden="true"><span class="dot acc"></span><span class="ln"></span><span class="gate"></span><span class="ln"></span><span class="outs"><i></i><i></i><i></i></span></div>
+    </div>
+    <div class="tile t-outbound">
+      <h3>Outbound.</h3>
+      <p>Researched, personalised outreach in safe limits. <span class="hand">Reply → a human takes over.</span></p>
+    </div>
+    <div class="tile t-analytics">
+      <h3>Analytics and reporting.</h3>
+      <p>Tracking wired from the first visitor, one page of numbers a month. Activity connected to pipeline.</p>
+      <div class="mini-bars" aria-hidden="true"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:46%"></i><i style="--h:78%"></i><i style="--h:58%"></i><i style="--h:88%"></i></div>
+    </div>
+  </div>
+  <p class="ctx-cta reveal">Not sure which system you need first? <a class="go" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a> and I'll answer honestly.</p>
+</section>
+
+<section id="proof">
+  <h2 class="reveal">Proof, <span class="off">not promises.</span></h2>
+
+  <div class="case-cards">
+    <a class="ccard reveal" style="--n:0" href="/work/enterprise-gtm.html">
+      <div class="fig" aria-hidden="true">
+        <svg viewBox="0 0 800 460">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path pathLength="1" d="M120 110 C 300 110, 300 230, 450 230" opacity=".5"/>
+            <path pathLength="1" d="M120 230 H 450" opacity=".5"/>
+            <path pathLength="1" d="M120 350 C 300 350, 300 230, 450 230" opacity=".5"/>
+            <path pathLength="1" d="M470 230 H 680" stroke-width="3" opacity=".9"/>
+          </g>
+          <circle cx="120" cy="110" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="120" cy="230" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="120" cy="350" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="450" cy="230" r="12" fill="#E4A43C"/>
+        </svg>
+      </div>
+      <div class="cbody">
+      <h3>Three demand engines, one pipeline, one launch.</h3>
+      <p>The full go-to-market system for an enterprise AI platform, in production ahead of launch.</p>
+      <span class="go">Read the case study →</span>
+      </div>
+    </a>
+    <a class="ccard reveal" style="--n:1" href="/work/content-engine.html">
+      <div class="fig" aria-hidden="true">
+        <svg viewBox="0 0 800 460">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path pathLength="1" d="M90 230 H 320" opacity=".6"/>
+            <path pathLength="1" d="M360 230 C 460 230, 460 110, 550 110 H 700" opacity=".35"/>
+            <path pathLength="1" d="M360 230 C 460 230, 460 230, 550 230 H 700" opacity=".35"/>
+            <path pathLength="1" d="M360 230 C 460 230, 460 350, 550 350 H 700" opacity=".35"/>
+          </g>
+          <rect x="320" y="204" width="44" height="52" rx="10" fill="none" stroke="#E4A43C" stroke-width="2"/>
+          <circle cx="90" cy="230" r="9" fill="#E4A43C"/>
+          <circle cx="700" cy="110" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="700" cy="230" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="700" cy="350" r="5" fill="currentColor" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="cbody">
+      <h3>One source in. A month of content out.</h3>
+      <p>Every line passes a codified voice gate before it ships. The clean-room code is public.</p>
+      <span class="go">Read the case study →</span>
+      </div>
+    </a>
+    <a class="ccard reveal" style="--n:2" href="/work/geo-seo-toolkit.html">
+      <div class="fig" aria-hidden="true">
+        <svg viewBox="0 0 800 460">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path pathLength="1" d="M110 230 H 330" opacity=".6"/>
+            <path pathLength="1" d="M370 230 C 470 230, 470 120, 560 120 H 690" opacity=".35"/>
+            <path pathLength="1" d="M370 230 C 470 230, 470 230, 560 230 H 690" opacity=".35"/>
+            <path pathLength="1" d="M370 230 C 470 230, 470 340, 560 340 H 690" opacity=".35"/>
+            <circle cx="350" cy="230" r="22" stroke="#E4A43C" stroke-width="2"/>
+          </g>
+          <circle cx="110" cy="230" r="9" fill="#E4A43C"/>
+          <circle cx="694" cy="120" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="694" cy="230" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="694" cy="340" r="5" fill="currentColor" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="cbody">
+      <h3>Cited by the machines, by design.</h3>
+      <p>The open-source AEO toolkit, running live on this site. Inspect the output in this page's source.</p>
+      <span class="go">Read the case study →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="receipts reveal">
+    <p class="receipts-lede">The code is public: <a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude</a>, <a class="go" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">the content engine</a>, <a class="go" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">Social Media OS</a>, and <a class="go" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">the Flow AI content system</a>. Founding-client results will be published here with real names as they land.</p>
+  </div>
+
+  <div class="proof-more reveal">
+    <p>All of it built and run by <a class="go" href="/about.html">Amber Lan</a>. Want to know which of these your business needs?</p>
+    <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a>
   </div>
 </section>
 
@@ -737,102 +904,21 @@
   </div>
 </section>
 
-<section id="proof">
-  <h2 class="reveal">Proof, <span class="off">not promises.</span></h2>
-
-  <div class="case-cards">
-    <a class="ccard reveal" href="/work/enterprise-gtm.html">
-      <div class="fig" aria-hidden="true">
-        <svg viewBox="0 0 800 460">
-          <g fill="none" stroke="currentColor" stroke-width="1.5">
-            <path pathLength="1" d="M120 110 C 300 110, 300 230, 450 230" opacity=".5"/>
-            <path pathLength="1" d="M120 230 H 450" opacity=".5"/>
-            <path pathLength="1" d="M120 350 C 300 350, 300 230, 450 230" opacity=".5"/>
-            <path pathLength="1" d="M470 230 H 680" stroke-width="3" opacity=".9"/>
-          </g>
-          <circle cx="120" cy="110" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="120" cy="230" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="120" cy="350" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="450" cy="230" r="12" fill="#E4A43C"/>
-        </svg>
-      </div>
-      <h3>Three demand engines, one pipeline, one launch.</h3>
-      <p>The full go-to-market system for an enterprise AI platform, in production ahead of launch.</p>
-      <span class="go">Read the case study →</span>
-    </a>
-    <a class="ccard reveal" href="/work/content-engine.html">
-      <div class="fig" aria-hidden="true">
-        <svg viewBox="0 0 800 460">
-          <g fill="none" stroke="currentColor" stroke-width="1.5">
-            <path pathLength="1" d="M90 230 H 320" opacity=".6"/>
-            <path pathLength="1" d="M360 230 C 460 230, 460 110, 550 110 H 700" opacity=".35"/>
-            <path pathLength="1" d="M360 230 C 460 230, 460 230, 550 230 H 700" opacity=".35"/>
-            <path pathLength="1" d="M360 230 C 460 230, 460 350, 550 350 H 700" opacity=".35"/>
-          </g>
-          <rect x="320" y="204" width="44" height="52" rx="10" fill="none" stroke="#E4A43C" stroke-width="2"/>
-          <circle cx="90" cy="230" r="9" fill="#E4A43C"/>
-          <circle cx="700" cy="110" r="5" fill="currentColor" opacity=".6"/>
-          <circle cx="700" cy="230" r="5" fill="currentColor" opacity=".6"/>
-          <circle cx="700" cy="350" r="5" fill="currentColor" opacity=".6"/>
-        </svg>
-      </div>
-      <h3>One source in. A month of content out.</h3>
-      <p>Every line passes a codified voice gate before it ships. The clean-room code is public.</p>
-      <span class="go">Read the case study →</span>
-    </a>
-    <a class="ccard reveal" href="/work/geo-seo-toolkit.html">
-      <div class="fig" aria-hidden="true">
-        <svg viewBox="0 0 800 460">
-          <g fill="none" stroke="currentColor" stroke-width="1.5">
-            <path pathLength="1" d="M110 230 H 330" opacity=".6"/>
-            <path pathLength="1" d="M370 230 C 470 230, 470 120, 560 120 H 690" opacity=".35"/>
-            <path pathLength="1" d="M370 230 C 470 230, 470 230, 560 230 H 690" opacity=".35"/>
-            <path pathLength="1" d="M370 230 C 470 230, 470 340, 560 340 H 690" opacity=".35"/>
-            <circle cx="350" cy="230" r="22" stroke="#E4A43C" stroke-width="2"/>
-          </g>
-          <circle cx="110" cy="230" r="9" fill="#E4A43C"/>
-          <circle cx="694" cy="120" r="5" fill="currentColor" opacity=".6"/>
-          <circle cx="694" cy="230" r="5" fill="currentColor" opacity=".6"/>
-          <circle cx="694" cy="340" r="5" fill="currentColor" opacity=".6"/>
-        </svg>
-      </div>
-      <h3>Cited by the machines, by design.</h3>
-      <p>The open-source AEO toolkit, running live on this site. Inspect the output in this page's source.</p>
-      <span class="go">Read the case study →</span>
-    </a>
-  </div>
-
-  <div class="receipts reveal">
-    <p class="receipts-lede">The code is public: <a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude</a>, <a class="go" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">the content engine</a>, <a class="go" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">Social Media OS</a>, and <a class="go" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">the Flow AI content system</a>. Founding-client results will be published here with real names as they land.</p>
-  </div>
-
-  <div class="proof-more reveal">
-    <p>All of it built and run by <a class="go" href="/about.html">Amber Lan</a>. Want to know which of these your business needs?</p>
-    <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a>
-  </div>
-</section>
 
 <section id="tools">
   <h2 class="reveal">Check where you stand, <span class="off">free, before we talk.</span></h2>
   <div class="tools-panel reveal">
     <div class="tool">
-      <div class="tn">Free tool · 2 minutes</div>
+      <div class="tn">Free tool · 2 minutes · no email gate</div>
       <h3>AI-readiness benchmark</h3>
-      <p>Score how ready your business is to grow with AI, across strategy, data, tooling, governance, and team. No email required.</p>
+      <p>Score how ready your business is to grow with AI, across strategy, data, tooling, governance, and team. You get a stage, a score, and the one place to start.</p>
       <a class="go" href="/tools/benchmark.html">Run the AI-readiness check →</a>
     </div>
-    <div class="tool">
-      <div class="tn">Free tool · interactive</div>
-      <h3>Pricing model</h3>
-      <p>Find your profit-maximising price from cost, customer value, and elasticity, using the published Lerner rule. Strategy you can click.</p>
-      <a class="go" href="/tools/pricing.html">Open the pricing model →</a>
-    </div>
   </div>
-  <p class="prices-note reveal">Both tools are free, with no email gate. The retainer closes the gap they reveal: visibility where buyers actually ask, including <b>ChatGPT, Perplexity, Gemini, Copilot, and Google's AI Overviews</b>.</p>
 </section>
 
 
-<section id="pricing">
+<section id="pricing" class="light">
   <h2 class="reveal">Pricing <span class="off">you don't have to ask for.</span></h2>
   <div class="prices">
     <div class="price reveal">
@@ -861,24 +947,24 @@
 
 
 <section id="faq">
-  <h2 class="reveal">Questions, <span class="off">answered straight.</span></h2>
-  <div class="faq reveal">
-    <details>
-      <summary>What is an AI marketing engineer?</summary>
-      <p>Someone who does two jobs that are usually split: writes the go-to-market strategy, and builds the AI systems that execute it. One person designs your positioning and ships the inbound, content, and outbound systems that run it.</p>
-    </details>
-    <details>
-      <summary>Who is Flow AI for?</summary>
+  <h2 class="reveal">Before we <span class="off">work together.</span></h2>
+  <div class="qa-grid reveal">
+    <div class="qa">
+      <h3>Who is this for?</h3>
       <p>New Zealand small and medium businesses and early-stage teams without a marketing hire. If your customers search on Google or ask ChatGPT for recommendations, the systems are designed to make your business the answer.</p>
-    </details>
-    <details>
-      <summary>What does it cost?</summary>
-      <p>Pricing is public: a starter sprint is NZ$997 one-time, and the full marketing engine is NZ$1,000 per month, cancel anytime, with a 30-day money-back guarantee on the first month. You own the systems either way: documented, portable, handover included.</p>
-    </details>
-    <details>
-      <summary>How do I get my business mentioned by ChatGPT?</summary>
-      <p>The practice is called answer engine optimization (AEO). It combines question-formatted content, structured data, consistent business information across the web, and placements on the sources AI assistants actually cite. It's included in every Flow AI retainer alongside traditional SEO. The full picture is in <a class="go" href="/blog/ai-marketing-for-small-business-nz.html">the AI marketing guide for NZ small businesses</a>.</p>
-    </details>
+    </div>
+    <div class="qa">
+      <h3>What happens in the first week?</h3>
+      <p>A 30-minute call, then your go-to-market read in writing within the week, either way. If we go ahead, the first system is scoped and under way in week one.</p>
+    </div>
+    <div class="qa">
+      <h3>What do I own?</h3>
+      <p>Everything. The systems, the documentation, the accounts, and the source. It's all portable, and handover is included, so you're never locked in.</p>
+    </div>
+    <div class="qa">
+      <h3>Why not hire an agency?</h3>
+      <p>You can, and for some businesses it's right. Here you work directly with the person who designs the strategy and builds the system, the work keeps running rather than stopping with an invoice, and the flat price is possible because systems do the production.</p>
+    </div>
   </div>
 </section>
 
@@ -894,17 +980,8 @@
   <div class="wrap">
     <h2 class="reveal">Your next customer <span class="off">is already asking.</span></h2>
     <p class="reveal">Tonight, somewhere in New Zealand, someone asks an AI for exactly what you do. Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within the first week</b>, before any commitment.</p>
-    <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a free systems review</a>
-    <nav class="foot-nav" aria-label="Site">
-      <a href="/work.html">Work</a>
-      <a href="/about.html">About</a>
-      <a href="/blog/">Guides</a>
-      <a href="/tools/benchmark.html">AI-readiness benchmark</a>
-      <a href="/tools/pricing.html">Pricing model</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div class="end-meta">
+    <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a>
+        <div class="end-meta">
       <span>© 2026 Flow AI · Amber Lan</span>
       <span>amber.lan.growth.digital@gmail.com</span>
       <span>
