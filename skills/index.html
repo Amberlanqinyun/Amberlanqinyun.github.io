@@ -381,10 +381,7 @@
       padding: clamp(5.5rem, 10vw, 9rem) 0;
     }
     .library-head {
-      display: grid;
-      grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1.2fr);
-      align-items: end;
-      gap: clamp(2rem, 7vw, 7rem);
+      max-width: 790px;
       margin-bottom: 36px;
     }
     .library-head h2 {
@@ -392,8 +389,8 @@
       font-size: clamp(2.5rem, 5vw, 5rem);
     }
     .library-head p {
-      max-width: 560px;
-      justify-self: end;
+      max-width: 660px;
+      margin-top: 22px;
       font-size: 18px;
     }
 
@@ -686,7 +683,6 @@
       .contact-grid { grid-template-columns: 1fr; }
       .hero-grid { align-items: start; }
       .hero-aside { max-width: 600px; }
-      .library-head p { justify-self: start; }
       .starter-inner { grid-template-columns: 1fr; gap: 16px; }
       .contact-copy { max-width: 560px; }
     }
