@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Library | AI Marketing Systems by Amber Lan</title>
+  <meta name="description" content="Inspect the systems, product builds, and public repositories behind Amber Lan's work as an AI marketing engineer and founder of Flow AI.">
+  <meta name="theme-color" content="#0e0e0d">
+  <link rel="canonical" href="https://www.flowai.co.nz/cases.html">
+  <link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+  <link rel="preload" href="fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Case Library | Amber Lan, AI Marketing Engineer">
+  <meta property="og:description" content="Working systems, open source tools, and product builds. Inspect the evidence behind the work.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Flow AI">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:url" content="https://www.flowai.co.nz/cases.html">
+  <meta property="og:image" content="https://www.flowai.co.nz/assets/flow-system-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.flowai.co.nz/cases.html#page",
+        "url": "https://www.flowai.co.nz/cases.html",
+        "name": "Case Library",
+        "description": "A library of AI marketing systems, open source tools, and human centred products built by Amber Lan.",
+        "inLanguage": "en-NZ",
+        "author": { "@id": "https://www.flowai.co.nz/#amber" },
+        "isPartOf": { "@id": "https://www.flowai.co.nz/#website" },
+        "mainEntity": { "@id": "https://www.flowai.co.nz/cases.html#case-list" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.flowai.co.nz/cases.html#case-list",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Novie content engine", "url": "https://www.flowai.co.nz/work/content-engine.html" },
+          { "@type": "ListItem", "position": 2, "name": "GEO and SEO toolkit", "url": "https://www.flowai.co.nz/work/geo-seo-toolkit.html" },
+          { "@type": "ListItem", "position": 3, "name": "Flow AI NZ content product", "url": "https://github.com/Amberlanqinyun/flowainz" },
+          { "@type": "ListItem", "position": 4, "name": "Reddit opportunity finder", "url": "https://github.com/Amberlanqinyun/finding-users-on-reddit-using-ai" },
+          { "@type": "ListItem", "position": 5, "name": "Social Media OS", "url": "https://github.com/Amberlanqinyun/social-media-os" },
+          { "@type": "ListItem", "position": 6, "name": "Latticework", "url": "https://github.com/Amberlanqinyun/latticework" },
+          { "@type": "ListItem", "position": 7, "name": "Mind Traveler Storybook", "url": "https://github.com/Amberlanqinyun/mind-traveller-storybook" },
+          { "@type": "ListItem", "position": 8, "name": "Unhook", "url": "https://github.com/Amberlanqinyun/Unhook" },
+          { "@type": "ListItem", "position": 9, "name": "One Day at a Time", "url": "https://github.com/Amberlanqinyun/onedayatatime" },
+          { "@type": "ListItem", "position": 10, "name": "Flow AI Studio", "url": "https://github.com/Amberlanqinyun/flowaistudio" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Flow AI", "item": "https://www.flowai.co.nz/" },
+          { "@type": "ListItem", "position": 2, "name": "Cases", "item": "https://www.flowai.co.nz/cases.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: "Google Sans Flex";
+      src: url("fonts/google-sans-flex-vf.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --bg: #0e0e0d;
+      --surface: #171715;
+      --surface-2: #1d1c19;
+      --fg: #faf8f3;
+      --muted: rgba(250, 248, 243, 0.67);
+      --soft: rgba(250, 248, 243, 0.46);
+      --hair: rgba(250, 248, 243, 0.13);
+      --hair-strong: rgba(250, 248, 243, 0.24);
+      --accent: #e4a43c;
+      --ink: #0e0e0d;
+      --font: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --radius: 22px;
+      --pill: 999px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--muted);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      z-index: -2;
+      inset: 0;
+      opacity: 0.3;
+      background-image:
+        linear-gradient(rgba(250, 248, 243, 0.034) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(250, 248, 243, 0.034) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black 0, transparent 62rem);
+    }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    strong { color: var(--fg); font-weight: 650; }
+    ::selection { background: var(--accent); color: var(--ink); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .wrap { width: min(100% - 48px, 1180px); margin-inline: auto; }
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      padding: 10px 16px;
+      border-radius: var(--pill);
+      background: var(--fg);
+      color: var(--ink);
+      font-weight: 700;
+      transform: translateY(-160%);
+      transition: transform 180ms var(--ease);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .grain {
+      position: fixed;
+      z-index: 60;
+      inset: -50%;
+      pointer-events: none;
+      opacity: 0.022;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .nav-bar {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      border-bottom: 1px solid var(--hair);
+      background: rgba(14, 14, 13, 0.84);
+      backdrop-filter: blur(18px) saturate(125%);
+      -webkit-backdrop-filter: blur(18px) saturate(125%);
+    }
+    .nav {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--fg);
+      font-weight: 720;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      display: grid;
+      width: 31px;
+      height: 31px;
+      place-items: center;
+      border: 1px solid var(--hair-strong);
+      border-radius: 50%;
+      color: var(--fg);
+      font-size: 14px;
+      font-weight: 760;
+    }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: color 180ms ease;
+    }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--fg); }
+    .nav-links .nav-cta {
+      padding: 10px 17px;
+      border-radius: var(--pill);
+      background: var(--fg);
+      color: var(--ink);
+    }
+
+    .hero { padding: clamp(72px, 10vw, 132px) 0 clamp(58px, 8vw, 104px); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+      align-items: end;
+      gap: clamp(42px, 7vw, 92px);
+    }
+    .eyebrow {
+      margin-bottom: 25px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 720;
+      letter-spacing: 0.21em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 11ch;
+      color: var(--fg);
+      font-size: clamp(48px, 7vw, 92px);
+      font-weight: 610;
+      letter-spacing: -0.056em;
+      line-height: 0.94;
+    }
+    .lede {
+      max-width: 47ch;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: clamp(17px, 1.8vw, 21px);
+      font-weight: 350;
+      line-height: 1.5;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button {
+      display: inline-flex;
+      min-height: 47px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 21px;
+      border: 1px solid var(--hair-strong);
+      border-radius: var(--pill);
+      background: transparent;
+      cursor: pointer;
+      color: var(--fg);
+      font-weight: 650;
+      transition: transform 180ms var(--ease), border-color 180ms ease, background 180ms ease;
+    }
+    .button.primary { border-color: var(--fg); background: var(--fg); color: var(--ink); }
+    .button:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .hero-visual img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(0.72) contrast(1.04); }
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14, 14, 13, 0.52), transparent 58%);
+      pointer-events: none;
+    }
+    .artifact-label {
+      position: absolute;
+      z-index: 2;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--fg);
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .artifact-label span:last-child { color: rgba(250, 248, 243, 0.62); font-weight: 520; }
+
+    .proof-strip { border-block: 1px solid var(--hair); }
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .proof-item { padding: 25px 28px 27px 0; }
+    .proof-item + .proof-item { padding-left: 28px; border-left: 1px solid var(--hair); }
+    .proof-item strong { display: block; margin-bottom: 3px; font-size: 16px; }
+    .proof-item span { color: var(--soft); font-size: 13px; }
+
+    main section { padding-top: clamp(82px, 11vw, 136px); }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(280px, 0.3fr);
+      align-items: end;
+      gap: 36px;
+      margin-bottom: 38px;
+    }
+    .kicker { margin-bottom: 13px; color: var(--accent); font-size: 11px; font-weight: 720; letter-spacing: 0.18em; text-transform: uppercase; }
+    h2 { max-width: 18ch; color: var(--fg); font-size: clamp(32px, 4.4vw, 55px); font-weight: 590; letter-spacing: -0.045em; line-height: 1.02; }
+    .section-note { max-width: 38ch; justify-self: end; color: var(--soft); font-size: 14px; }
+
+    .feature-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 16px; }
+    .feature-card {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: transform 240ms var(--ease), border-color 180ms ease;
+    }
+    .feature-card:first-child { grid-row: span 2; }
+    .feature-card:not(:first-child) { min-height: 272px; }
+    .feature-card:hover { transform: translateY(-3px); border-color: var(--hair-strong); }
+    .feature-card img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 650ms var(--ease); }
+    .feature-card:hover img { transform: scale(1.025); }
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.96) 0, rgba(8, 8, 7, 0.3) 58%, rgba(8, 8, 7, 0.04) 100%);
+    }
+    .feature-content { position: absolute; z-index: 2; right: 30px; bottom: 28px; left: 30px; }
+    .status { display: flex; align-items: center; gap: 8px; margin-bottom: 13px; color: rgba(250, 248, 243, 0.64); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .status::before { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); content: ""; }
+    .feature-content h3 { max-width: 20ch; color: var(--fg); font-size: clamp(25px, 3vw, 38px); font-weight: 610; letter-spacing: -0.035em; line-height: 1.05; }
+    .feature-card:not(:first-child) .feature-content h3 { font-size: clamp(21px, 2.4vw, 29px); }
+    .feature-content p { max-width: 49ch; margin-top: 12px; color: rgba(250, 248, 243, 0.67); font-size: 14px; }
+    .feature-link { display: inline-block; margin-top: 17px; border-bottom: 1px solid rgba(228, 164, 60, 0.7); color: var(--fg); font-size: 13px; font-weight: 670; }
+
+    .case-cluster { display: grid; grid-template-columns: 0.42fr 1fr; gap: clamp(42px, 8vw, 104px); padding-block: 42px; border-top: 1px solid var(--hair); }
+    .case-cluster:last-child { border-bottom: 1px solid var(--hair); }
+    .cluster-intro h3 { max-width: 12ch; color: var(--fg); font-size: clamp(25px, 3vw, 36px); font-weight: 590; letter-spacing: -0.035em; line-height: 1.08; }
+    .cluster-intro p { max-width: 31ch; margin-top: 15px; color: var(--soft); font-size: 14px; }
+    .case-list { display: grid; }
+    .case-row {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 19px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--hair);
+    }
+    .case-row:first-child { padding-top: 0; }
+    .case-row:last-child { padding-bottom: 0; border-bottom: 0; }
+    .case-number { color: var(--soft); font-size: 12px; font-variant-numeric: tabular-nums; }
+    .case-copy h4 { color: var(--fg); font-size: 19px; font-weight: 620; letter-spacing: -0.02em; line-height: 1.2; }
+    .case-copy p { max-width: 55ch; margin-top: 8px; color: var(--muted); font-size: 14px; }
+    .case-meta { display: block; margin-top: 10px; color: var(--soft); font-size: 11px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; }
+    .case-arrow { color: var(--accent); font-size: 20px; transition: transform 180ms var(--ease); }
+    .case-row:hover .case-arrow { transform: translate(3px, -3px); }
+
+    .principle {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(300px, 0.36fr);
+      gap: clamp(44px, 9vw, 120px);
+      align-items: end;
+      margin-top: clamp(86px, 12vw, 150px);
+      padding: clamp(44px, 7vw, 78px);
+      border-radius: var(--radius);
+      background: var(--fg);
+      color: rgba(14, 14, 13, 0.7);
+    }
+    .principle h2 { color: var(--ink); }
+    .principle p { max-width: 40ch; font-size: 16px; }
+    .principle strong { color: var(--ink); }
+    .principle a { display: inline-block; margin-top: 20px; border-bottom: 1px solid rgba(14, 14, 13, 0.45); color: var(--ink); font-weight: 670; }
+
+    footer { margin-top: clamp(80px, 11vw, 130px); border-top: 1px solid var(--hair); }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 30px 0 44px; color: var(--soft); font-size: 13px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 22px; }
+    .footer-links a:hover { color: var(--fg); }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 17px; }
+      .nav-cta { display: none; }
+      .hero-grid, .section-head, .principle { grid-template-columns: 1fr; }
+      .hero-visual { max-width: 650px; }
+      .section-note { justify-self: start; }
+    }
+    @media (max-width: 740px) {
+      .wrap { width: min(100% - 32px, 1180px); }
+      .brand span:last-child { display: none; }
+      .nav-links .minor { display: none; }
+      .hero { padding-top: 72px; }
+      .hero-grid { gap: 42px; }
+      .proof-grid, .feature-grid { grid-template-columns: 1fr; }
+      .proof-item, .proof-item + .proof-item { padding: 19px 0; border-left: 0; }
+      .proof-item + .proof-item { border-top: 1px solid var(--hair); }
+      .feature-card, .feature-card:not(:first-child) { min-height: 390px; }
+      .feature-card:first-child { grid-row: auto; }
+      .case-cluster { grid-template-columns: 1fr; gap: 35px; }
+      .case-row { grid-template-columns: 28px minmax(0, 1fr) auto; gap: 12px; }
+      .principle { padding: 36px 26px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: 12.5px; }
+      .nav-links .mobile-hide { display: none; }
+      .feature-card, .feature-card:not(:first-child) { min-height: 340px; }
+      .feature-content { right: 22px; bottom: 22px; left: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to cases</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav-bar">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Flow AI home"><span class="brand-mark" aria-hidden="true">F</span><span>Amber Lan · Flow AI</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/work.html">Work</a>
+        <a href="/cases.html" aria-current="page">Cases</a>
+        <a href="/skills/">Skills</a>
+        <a class="mobile-hide" href="/about.html">About</a>
+        <a class="minor" href="/#contact">Contact</a>
+        <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Case library · Public proof</p>
+          <h1>Systems, products, and proof.</h1>
+          <p class="lede">Public artifacts showing how I turn strategy into working marketing systems and human centred products.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#featured">Explore cases</a>
+            <button class="button" type="button" data-share data-share-title="Flow AI case library" data-share-text="Working AI marketing systems and product builds by Amber Lan." data-share-url="https://www.flowai.co.nz/cases.html">Share cases</button>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="assets/flow-system-hero.webp" width="1448" height="1086" alt="Flow AI system interface showing a connected marketing workflow">
+          <figcaption class="artifact-label"><span>Flow AI system artifact</span><span>Strategy to shipped product</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="proof-strip">
+      <div class="wrap proof-grid" aria-label="Evidence principles">
+        <div class="proof-item"><strong>Source visible</strong><span>Inspect the public repository or working artifact.</span></div>
+        <div class="proof-item"><strong>Status honest</strong><span>Working system, open source tool, MVP, or prototype.</span></div>
+        <div class="proof-item"><strong>Claim restrained</strong><span>No invented outcomes or decorative performance numbers.</span></div>
+      </div>
+    </div>
+
+    <section id="featured">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Featured proof</p><h2>Three systems worth opening.</h2></div>
+          <p class="section-note">Each case exposes a different layer of the work: editorial judgement, discoverability engineering, and a productised operating system.</p>
+        </div>
+
+        <div class="feature-grid">
+          <a class="feature-card" href="/work/content-engine.html">
+            <img src="assets/novie-content-engine.webp" width="1200" height="600" alt="Editorial content engine artifact for Novie">
+            <div class="feature-content">
+              <span class="status">Production content system</span>
+              <h3>A brand voice turned into an operating system.</h3>
+              <p>Source material, editorial rules, quality gates, and repeatable production packaged into one inspectable workflow.</p>
+              <span class="feature-link">Read the case study ↗</span>
+            </div>
+          </a>
+          <a class="feature-card" href="/work/geo-seo-toolkit.html">
+            <img src="assets/geo-seo-claude.webp" width="1200" height="600" alt="GEO and SEO command line toolkit interface">
+            <div class="feature-content">
+              <span class="status">Open source toolkit</span>
+              <h3>Search visibility built for humans and answer engines.</h3>
+              <span class="feature-link">Inspect the system ↗</span>
+            </div>
+          </a>
+          <a class="feature-card" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">
+            <img src="assets/flow-system-hero.webp" width="1448" height="1086" alt="Flow AI NZ content workflow interface">
+            <div class="feature-content">
+              <span class="status">Working product build</span>
+              <h3>AI search content for New Zealand service businesses.</h3>
+              <span class="feature-link">View repository ↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="catalogue-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Repository evidence</p><h2 id="catalogue-title">The wider build catalogue.</h2></div>
+          <p class="section-note">Not every repository is a finished commercial case study. It is labelled for what it is, so the evidence stays useful.</p>
+        </div>
+
+        <div class="case-cluster">
+          <div class="cluster-intro">
+            <h3>Research and distribution.</h3>
+            <p>Systems that find demand, preserve human judgement, and turn one plan into consistent execution.</p>
+          </div>
+          <div class="case-list">
+            <a class="case-row" href="https://github.com/Amberlanqinyun/finding-users-on-reddit-using-ai" target="_blank" rel="noopener">
+              <span class="case-number">01</span>
+              <span class="case-copy"><h4>Reddit opportunity finder</h4><p>A human reviewed intent research system using FastAPI, Postgres, Redis, Celery, and Next.js. It explicitly avoids auto posting and automated direct messages.</p><span class="case-meta">MVP architecture · Audience research</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="case-row" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">
+              <span class="case-number">02</span>
+              <span class="case-copy"><h4>Social Media OS</h4><p>A TypeScript workflow for planning once, adapting to each platform, and shipping on schedule.</p><span class="case-meta">Distribution tooling · TypeScript</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="case-row" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">
+              <span class="case-number">03</span>
+              <span class="case-copy"><h4>Flow AI NZ</h4><p>A React and TypeScript content product designed around AI search visibility for New Zealand service businesses.</p><span class="case-meta">Working product · React and TypeScript</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="case-cluster">
+          <div class="cluster-intro">
+            <h3>Human centred products.</h3>
+            <p>Product thinking expressed through tested logic, considered interaction, and practical prototypes.</p>
+          </div>
+          <div class="case-list">
+            <a class="case-row" href="https://github.com/Amberlanqinyun/latticework" target="_blank" rel="noopener">
+              <span class="case-number">04</span>
+              <span class="case-copy"><h4>Latticework</h4><p>A SwiftUI mental model app with daily wisdom, recall drills, a decision journal, and a tested core.</p><span class="case-meta">Working iOS build · Swift and SwiftUI</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="case-row" href="https://github.com/Amberlanqinyun/mind-traveller-storybook" target="_blank" rel="noopener">
+              <span class="case-number">05</span>
+              <span class="case-copy"><h4>Mind Traveler Storybook</h4><p>A cultural immersion product with a component library, custom agent skills, and a documented path from concept to build.</p><span class="case-meta">In development · Next.js and Storybook</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="case-row" href="https://github.com/Amberlanqinyun/Unhook" target="_blank" rel="noopener">
+              <span class="case-number">06</span>
+              <span class="case-copy"><h4>Unhook</h4><p>A New Zealand mental health support prototype built with React, TypeScript, and Material UI.</p><span class="case-meta">Prototype · React and TypeScript</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="case-row" href="https://github.com/Amberlanqinyun/onedayatatime" target="_blank" rel="noopener">
+              <span class="case-number">07</span>
+              <span class="case-copy"><h4>One Day at a Time</h4><p>A calm wellness interface exploring daily progress without turning self care into another performance dashboard.</p><span class="case-meta">Product prototype · React and Vite</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="case-row" href="https://github.com/Amberlanqinyun/flowaistudio" target="_blank" rel="noopener">
+              <span class="case-number">08</span>
+              <span class="case-copy"><h4>Flow AI Studio</h4><p>A planner and template product for reMarkable, with a live interface and Playwright backed quality checks.</p><span class="case-meta">Working product build · React and Playwright</span></span>
+              <span class="case-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="principle" aria-labelledby="principle-title">
+        <div><p class="kicker">The operating principle</p><h2 id="principle-title">Strategy should leave an artifact.</h2></div>
+        <div><p>A recommendation becomes more valuable when the team can inspect it, run it, and improve it. <strong>That is the standard behind every system here.</strong></p><a href="/work.html">See how the work is structured ↗</a></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 Amber Lan · Flow AI</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/work.html">Work</a><a href="/cases.html">Cases</a><a href="/skills/">Skills</a><a href="/blog/">Guides</a><a href="/about.html">About</a><a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/assets/share.js" defer></script>
+</body>
+</html>
