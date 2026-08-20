@@ -16,7 +16,7 @@ Key facts:
 Site structure:
 - / (landing): the offer, founding terms, pricing, free tools, FAQ. Book a discovery call.
 - /work.html: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
-- /cv.html: Amber Lan's CV, every shipped system linked to its public GitHub repository.
+- /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /tools/benchmark.html: free 2-minute AI-readiness benchmark for businesses. No email required.
 - /tools/pricing.html: free interactive pricing model (Lerner rule, economic value to the customer).
 - /flowai-brand-guidelines.html: the Flow AI brand system.
