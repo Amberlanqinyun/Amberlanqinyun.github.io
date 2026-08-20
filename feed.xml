@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Flow AI · Amber Lan</title>
+  <subtitle>Marketing systems, built and run in production. Case studies and lessons from an AI marketing engineer in Auckland.</subtitle>
+  <link href="https://www.flowai.co.nz/feed.xml" rel="self"/>
+  <link href="https://www.flowai.co.nz/"/>
+  <id>https://www.flowai.co.nz/</id>
+  <updated>2026-08-20T12:00:00+12:00</updated>
+  <author><name>Amber Lan</name></author>
+  <entry>
+    <title>Three demand engines, one pipeline, one launch</title>
+    <link href="https://www.flowai.co.nz/work/enterprise-gtm.html"/>
+    <id>https://www.flowai.co.nz/work/enterprise-gtm.html</id>
+    <updated>2026-08-20T12:00:00+12:00</updated>
+    <summary>A complete go-to-market system for an enterprise AI platform: outbound, inbound, and partnership engines feeding one measured pipeline, designed and operated by one person.</summary>
+  </entry>
+  <entry>
+    <title>A content engine with a codified voice gate</title>
+    <link href="https://www.flowai.co.nz/work/content-engine.html"/>
+    <id>https://www.flowai.co.nz/work/content-engine.html</id>
+    <updated>2026-08-20T12:00:00+12:00</updated>
+    <summary>One source document in, a month of platform-native posts out. Every line passes a codified voice audit before it ships. Clean-room code public on GitHub.</summary>
+  </entry>
+  <entry>
+    <title>Built so the machines cite you, not just rank you</title>
+    <link href="https://www.flowai.co.nz/work/geo-seo-toolkit.html"/>
+    <id>https://www.flowai.co.nz/work/geo-seo-toolkit.html</id>
+    <updated>2026-08-20T12:00:00+12:00</updated>
+    <summary>geo-seo-claude: citability scoring, AI-crawler analysis, and schema generation, so a brand gets cited by ChatGPT, Claude, and Perplexity. Running on flowai.co.nz itself.</summary>
+  </entry>
+</feed>
