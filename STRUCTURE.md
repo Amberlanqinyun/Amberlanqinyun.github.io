@@ -9,6 +9,9 @@ Last updated: 2026-08-20
 | `/` | The offer: hero, problem, what gets built, process, free tools, founding terms, pricing, proof, bio teaser, FAQ, contact | Primary conversion page. FAQPage + Organization + Person + WebSite schema. |
 | `/about.html` | Everything about Amber under one page: position, current role, shipped systems with source links, capabilities | Consolidated from the former `/cv.html`. ProfilePage schema. |
 | `/work.html` | Portfolio organised as the go-to-market machine: Strategy, Demand engines, Built to ship | WebPage + BreadcrumbList schema. |
+| `/work/enterprise-gtm.html` | Case study: three demand engines, one pipeline, one launch | Article + BreadcrumbList schema. |
+| `/work/content-engine.html` | Case study: the voice-gated content engine | Article + BreadcrumbList schema. |
+| `/work/geo-seo-toolkit.html` | Case study: the GEO/AEO toolkit, running on this site | Article + BreadcrumbList schema. |
 | `/tools/benchmark.html` | Free AI-readiness benchmark (lead magnet, no email gate) | WebApplication schema. |
 | `/tools/pricing.html` | Free interactive Lerner-rule pricing model | WebApplication schema. |
 

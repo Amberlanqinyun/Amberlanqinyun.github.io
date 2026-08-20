@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A content engine with a codified voice gate · Case study · Flow AI</title>
+<meta name="description" content="One source document in, a month of platform-native posts out. Every line passes a codified brand-voice audit before it ships, so the output reads human. Clean-room version public on GitHub.">
+<meta name="theme-color" content="#0E0E0D">
+<link rel="canonical" href="https://www.flowai.co.nz/work/content-engine.html">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="30" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4" fill="%23E4A43C"/></svg>'>
+<meta property="og:title" content="A content engine with a codified voice gate · Case study">
+<meta property="og:description" content="One source document in, a month of platform-native posts out. Every line passes a codified brand-voice audit before it ships, so the output reads human. Clean-room version public on GitHub.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/work/content-engine.html">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-08-20T00:00:00+12:00">
+<meta property="article:modified_time" content="2026-08-20T00:00:00+12:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.flowai.co.nz/work/content-engine.html",
+      "headline": "A content engine with a codified voice gate",
+      "description": "One source document in, a month of platform-native posts out. Every line passes a codified brand-voice audit before it ships, so the output reads human. Clean-room version public on GitHub.",
+      "datePublished": "2026-08-20",
+      "dateModified": "2026-08-20",
+      "author": { "@id": "https://www.flowai.co.nz/#amber" },
+      "publisher": { "@id": "https://www.flowai.co.nz/#flowai" },
+      "isPartOf": { "@id": "https://www.flowai.co.nz/#website" },
+      "mainEntityOfPage": "https://www.flowai.co.nz/work/content-engine.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Flow AI", "item": "https://www.flowai.co.nz/" },
+        { "@type": "ListItem", "position": 2, "name": "Selected work", "item": "https://www.flowai.co.nz/work.html" },
+        { "@type": "ListItem", "position": 3, "name": "A content engine with a codified voice gate", "item": "https://www.flowai.co.nz/work/content-engine.html" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  @font-face{font-family:"Google Sans Flex";src:url("../fonts/google-sans-flex-vf.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+  :root{
+    --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;--ink:#0E0E0D;--acc:#E4A43C;--acc-dim:rgba(228,164,60,0.55);
+    --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.52);--hair:rgba(250,248,243,0.11);
+    --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --r-m:24px;--r-s:999px;--t-normal:200ms;--t-slow:300ms;
+    --ease:cubic-bezier(0.2,0.8,0.2,1);--ease-out:cubic-bezier(0.23,1,0.32,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
+  body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  ::selection{background:var(--acc);color:var(--ink);}
+  .wrap{max-width:820px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
+  a{color:inherit;text-decoration:none;}
+  b,strong{color:var(--fg);font-weight:600;}
+  :focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+  .grain{position:fixed;inset:-50%;z-index:80;pointer-events:none;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .nav-bar{position:sticky;top:0;z-index:70;background:rgba(14,14,13,0.75);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
+  .navwrap{max-width:1120px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
+  .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);white-space:nowrap;}
+  .nav .name svg{width:26px;height:26px;}
+  .nav .name svg text{font-family:var(--gsf);}
+  .nav nav a{color:var(--mute);margin-left:28px;font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
+  .nav nav a:hover{color:var(--fg);}
+  .nav nav a[aria-current="page"]{color:var(--fg);}
+  .nav nav a.nav-cta{color:var(--ink);background:var(--cream);padding:9px 18px;border-radius:var(--r-s);}
+  .nav nav a.nav-cta:hover{color:var(--ink);background:rgba(250,248,243,0.88);}
+  @media(max-width:860px){.nav nav a.nav-cta{display:none;}}
+  @media(max-width:760px){.nav nav a{margin-left:14px;font-size:13px;}}
+  @media(max-width:460px){.nav nav a.sec{display:none;}}
+  .hero{padding:clamp(64px,10vh,110px) 0 clamp(36px,5vh,56px);}
+  .crumb{font-size:13.5px;color:var(--mute);margin-bottom:28px;}
+  .crumb a{border-bottom:1px solid var(--acc-dim);color:var(--dim);}
+  .crumb a:hover{border-color:var(--acc);color:var(--fg);}
+  h1{font-weight:600;font-size:clamp(32px,4.2vw,50px);line-height:1.08;letter-spacing:-0.04em;color:var(--fg);max-width:22ch;}
+  .answer{margin-top:26px;font-weight:300;font-size:clamp(18px,1.7vw,21px);line-height:1.55;color:var(--dim);max-width:56ch;}
+  .answer b{font-weight:500;}
+  .byline{margin-top:24px;font-size:13.5px;color:var(--mute);}
+  .fig{background:var(--panel);border:1px solid rgba(250,248,243,0.08);border-radius:var(--r-m);overflow:hidden;box-shadow:inset 0 1px 0 rgba(250,248,243,0.06);margin:clamp(36px,5vh,52px) 0;}
+  .fig svg{display:block;width:100%;height:auto;color:var(--cream);}
+  .figcap{font-size:13.5px;color:var(--mute);margin:-24px 0 0;padding:0 4px 0;}
+  section{padding:clamp(40px,6vh,64px) 0 0;}
+  h2{font-weight:600;font-size:clamp(22px,2.6vw,30px);letter-spacing:-0.025em;line-height:1.15;color:var(--fg);margin-bottom:18px;}
+  section p{max-width:62ch;margin-bottom:16px;text-wrap:pretty;}
+  ul.plain{list-style:none;max-width:62ch;}
+  ul.plain li{padding:12px 0;border-top:1px solid var(--hair);font-size:16px;}
+  ul.plain li:last-child{border-bottom:1px solid var(--hair);}
+  a.go{font-weight:500;color:var(--fg);border-bottom:1px solid var(--acc-dim);transition:border-color var(--t-normal) var(--ease);}
+  a.go:hover{border-color:var(--acc);}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px;}
+  .fact{background:var(--panel);border:1px solid rgba(250,248,243,0.08);border-radius:16px;padding:20px 22px;}
+  .fact b{display:block;font-size:13px;color:var(--acc);font-weight:500;margin-bottom:6px;}
+  .fact span{font-size:15px;color:var(--dim);line-height:1.55;}
+  @media(max-width:640px){.facts{grid-template-columns:1fr;}}
+  .end{padding:clamp(72px,11vh,120px) 0 56px;text-align:center;}
+  .end h2{max-width:22ch;margin:0 auto 16px;}
+  .end p{margin:0 auto 32px;max-width:44ch;font-weight:300;}
+  .btn{display:inline-block;padding:16px 32px;font-size:15px;font-weight:500;border-radius:var(--r-s);background:var(--cream);color:var(--ink);transition:transform 160ms var(--ease-out),background-color var(--t-normal) var(--ease);}
+  @media(hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}}
+  .btn:active{transform:scale(0.97);}
+  .end-meta{margin-top:clamp(56px,8vh,80px);padding-top:28px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--mute);text-align:left;}
+  .end-meta a:hover{color:var(--fg);}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="nav-bar"><div class="navwrap"><header class="nav">
+  <a class="name" href="/" aria-label="Flow AI home">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
+    Flow AI.
+  </a>
+  <nav>
+    <a href="/work.html" aria-current="page">Work</a>
+    <a href="/about.html">About</a>
+    <a class="sec" href="/#pricing">Pricing</a>
+    <a class="sec" href="/#faq">FAQ</a>
+    <a href="/#contact">Contact</a>
+    <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+  </nav>
+</header></div></div>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="crumb"><a href="/work.html">Selected work</a> &nbsp;/&nbsp; Case study</div>
+    <h1>One source in. A month of publishable content out.</h1>
+    <p class="answer">A content engine that turns one source document into a month of platform-native posts, where <b>every line passes a codified voice audit before it ships</b>. Built in Python on Claude agents; the clean-room version is public on GitHub.</p>
+    <p class="byline">By Amber Lan, AI marketing engineer · Last updated 20 August 2026</p>
+  </div>
+
+  <div class="fig" aria-hidden="true"><svg viewBox="0 0 800 420">
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M70 210 H 300" opacity=".6"/>
+    <path d="M340 210 C 440 210, 440 70,  540 70  H 700" opacity=".35"/>
+    <path d="M340 210 C 440 210, 440 140, 540 140 H 700" opacity=".35"/>
+    <path d="M340 210 C 440 210, 440 210, 540 210 H 700" opacity=".35"/>
+    <path d="M340 210 C 440 210, 440 280, 540 280 H 700" opacity=".35"/>
+    <path d="M340 210 C 440 210, 440 350, 540 350 H 700" opacity=".35"/>
+  </g>
+  <rect x="300" y="186" width="44" height="48" rx="10" fill="none" stroke="#E4A43C" stroke-width="2"/>
+  <g fill="currentColor" opacity=".55" font-size="15" font-weight="500">
+    <text x="70" y="186" text-anchor="middle">Source</text>
+    <text x="322" y="266" text-anchor="middle">Voice gate</text>
+    <text x="716" y="75">LinkedIn</text>
+    <text x="716" y="145">X</text>
+    <text x="716" y="215">Blog</text>
+    <text x="716" y="285">Email</text>
+    <text x="716" y="355">Cards</text>
+  </g>
+  <circle cx="70" cy="210" r="9" fill="#E4A43C"/>
+  <circle cx="700" cy="70" r="5" fill="currentColor" opacity=".6"/><circle cx="700" cy="140" r="5" fill="currentColor" opacity=".6"/>
+  <circle cx="700" cy="210" r="5" fill="currentColor" opacity=".6"/><circle cx="700" cy="280" r="5" fill="currentColor" opacity=".6"/>
+  <circle cx="700" cy="350" r="5" fill="currentColor" opacity=".6"/>
+</svg></div>
+  <p class="figcap">The pipeline: one source document fans out to platform-native artefacts, but nothing passes the amber gate until it survives the voice audit.</p>
+
+  <section><h2>The challenge</h2><p>One person cannot hand-write platform-native content at the volume a brand needs, and raw model output fails a different way: it reads generated. The tells are recognisable, the voice drifts, and the volume that was supposed to build trust starts eroding it. The problem is not generation. It is quality control at scale.</p></section>
+  <section><h2>Constraints</h2><p>The voice had to be codified, not vibes: rules a machine can check, written down as law. Zero tolerance for recognisable AI patterns. Each platform needed its native shape rather than one post cross-pasted five ways. And the whole pipeline had to run solo, as one stage in a bigger operating week.</p></section>
+  <section><h2>The system</h2><p>Source document in. The engine plans a skeleton per artefact, generates platform-native drafts, then runs every line through a voice gate: a codified audit covering banned words and patterns, sentence rhythm, claim discipline, and the brand's specific rules. Artefacts that fail are rewritten against the specific violations, not regenerated blind. What comes out is a packet: posts shaped for each platform, ready for a human yes or no.</p></section>
+  <section><h2>Key decisions</h2><ul class="plain"><li><b>The audit is the product.</b> Generation is cheap; the gate is what makes the output shippable. Most of the engineering lives there.</li><li><b>Voice as law, not prompt.</b> Style guidance in a prompt decays; codified rules checked line by line do not.</li><li><b>Human approves, machine produces.</b> The operator's job collapsed from writing to judging, which is the only part that needed a human.</li><li><b>Packets, not posts.</b> One source becomes a coordinated set across platforms, so the calendar fills in one pass.</li></ul></section>
+  <section><h2>Output and result</h2><p>In production use: one source document reliably becomes a month of on-brand, platform-native content, with the operator's time spent on judgment instead of drafting. The engine is packaged as a reusable skill, so pointing it at a new brand means codifying that brand's voice rules rather than rebuilding the pipeline.</p></section>
+  <section><h2>Evidence</h2><p>The clean-room version is public: <a class="go" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">read the code on GitHub</a>. The distribution half of the same system is also public: <a class="go" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">Social Media OS</a>.</p></section>
+  <section><h2>What I learned</h2><p>Generated content fails at the last metre, in the specific lines a reader flags as machine-made. Fixing that at the gate, line by line against written law, is what separates a content engine from a content faucet.</p></section>
+</main>
+
+<div class="end">
+  <div class="wrap">
+    <h2>Want a system like this pointed at your business?</h2>
+    <p>Tell me what you do and where the pipeline stalls. You'll get a written read within the first week.</p>
+    <a class="btn" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+    <div class="end-meta">
+      <span>© 2026 Flow AI · Amber Lan</span>
+      <span><a class="go" href="/work.html">More work</a></span>
+      <span><a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
