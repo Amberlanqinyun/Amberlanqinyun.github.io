@@ -39,20 +39,20 @@
         "@id": "https://www.flowai.co.nz/skills/#list",
         "numberOfItems": 14,
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "GEO operator", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/geo" },
-          { "@type": "ListItem", "position": 2, "name": "Full GEO audit", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-audit" },
-          { "@type": "ListItem", "position": 3, "name": "AI citability scorer", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-citability" },
-          { "@type": "ListItem", "position": 4, "name": "AI crawler access", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-crawlers" },
-          { "@type": "ListItem", "position": 5, "name": "llms.txt builder", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-llmstxt" },
-          { "@type": "ListItem", "position": 6, "name": "Brand mention scanner", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-brand-mentions" },
-          { "@type": "ListItem", "position": 7, "name": "AI platform optimiser", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-platform-optimizer" },
-          { "@type": "ListItem", "position": 8, "name": "Schema architect", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-schema" },
-          { "@type": "ListItem", "position": 9, "name": "Technical SEO audit", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-technical" },
-          { "@type": "ListItem", "position": 10, "name": "Content quality audit", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-content" },
-          { "@type": "ListItem", "position": 11, "name": "Client report writer", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-report" },
-          { "@type": "ListItem", "position": 12, "name": "PDF report generator", "url": "https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-report-pdf" },
-          { "@type": "ListItem", "position": 13, "name": "Novie content engine", "url": "https://github.com/Amberlanqinyun/novie-content-engine/tree/main/skill" },
-          { "@type": "ListItem", "position": 14, "name": "Latticework build brief", "url": "https://github.com/Amberlanqinyun/latticework/tree/main/skills/latticework" }
+          { "@type": "ListItem", "position": 1, "name": "GEO operator", "url": "https://www.flowai.co.nz/skills/#geo" },
+          { "@type": "ListItem", "position": 2, "name": "Full GEO audit", "url": "https://www.flowai.co.nz/skills/#geo-audit" },
+          { "@type": "ListItem", "position": 3, "name": "AI citability scorer", "url": "https://www.flowai.co.nz/skills/#geo-citability" },
+          { "@type": "ListItem", "position": 4, "name": "AI crawler access", "url": "https://www.flowai.co.nz/skills/#geo-crawlers" },
+          { "@type": "ListItem", "position": 5, "name": "llms.txt builder", "url": "https://www.flowai.co.nz/skills/#geo-llmstxt" },
+          { "@type": "ListItem", "position": 6, "name": "Brand mention scanner", "url": "https://www.flowai.co.nz/skills/#geo-brand-mentions" },
+          { "@type": "ListItem", "position": 7, "name": "AI platform optimiser", "url": "https://www.flowai.co.nz/skills/#geo-platform-optimizer" },
+          { "@type": "ListItem", "position": 8, "name": "Schema architect", "url": "https://www.flowai.co.nz/skills/#geo-schema" },
+          { "@type": "ListItem", "position": 9, "name": "Technical SEO audit", "url": "https://www.flowai.co.nz/skills/#geo-technical" },
+          { "@type": "ListItem", "position": 10, "name": "Content quality audit", "url": "https://www.flowai.co.nz/skills/#geo-content" },
+          { "@type": "ListItem", "position": 11, "name": "Client report writer", "url": "https://www.flowai.co.nz/skills/#geo-report" },
+          { "@type": "ListItem", "position": 12, "name": "PDF report generator", "url": "https://www.flowai.co.nz/skills/#geo-report-pdf" },
+          { "@type": "ListItem", "position": 13, "name": "Novie content engine", "url": "https://www.flowai.co.nz/skills/#novie-content-engine" },
+          { "@type": "ListItem", "position": 14, "name": "Latticework build brief", "url": "https://www.flowai.co.nz/skills/#latticework" }
         ]
       },
       {
@@ -277,7 +277,12 @@
       font-size: clamp(1.05rem, 1.6vw, 1.35rem);
       line-height: 1.5;
     }
-    .hero-cta { margin-top: 28px; }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
     .hero-aside {
       position: relative;
       overflow: hidden;
@@ -474,6 +479,7 @@
       display: flex;
       min-width: 0;
       min-height: 310px;
+      scroll-margin-top: 230px;
       flex-direction: column;
       justify-content: space-between;
       gap: 36px;
@@ -482,6 +488,10 @@
       border-radius: var(--radius);
       background: var(--surface);
       transition: transform 280ms var(--ease), border-color 280ms ease, background 280ms ease;
+    }
+    .skill-card:target {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px var(--accent);
     }
     .skill-card:hover {
       border-color: var(--hair-strong);
@@ -544,18 +554,31 @@
     .skill-bottom { min-width: 0; }
     .skill-bottom .command { margin-bottom: 17px; }
     .skill-links {
-      display: flex;
+      display: grid;
+      grid-template-columns: auto auto minmax(0, 1fr);
       align-items: center;
-      justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       color: var(--soft);
       font-size: 13px;
     }
+    .skill-links > span { justify-self: end; text-align: right; }
     .source-link {
       color: var(--fg);
       font-weight: 620;
     }
     .source-link:hover { color: var(--accent); }
+    .share-link {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid var(--hair-strong);
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 620;
+      cursor: pointer;
+      transition: border-color 180ms ease, color 180ms ease;
+    }
+    .share-link:hover { border-color: var(--accent); color: var(--accent); }
     .empty-state {
       padding: 64px 24px;
       border: 1px solid var(--hair);
@@ -644,14 +667,22 @@
       align-items: center;
       justify-content: center;
       padding: 12px 19px;
+      border: 0;
       border-radius: var(--pill);
       background: var(--accent);
       color: var(--ink);
       font-weight: 700;
       white-space: nowrap;
+      cursor: pointer;
       transition: transform 180ms var(--ease), background 180ms ease;
     }
     .btn:hover { background: #efb24f; transform: translateY(-2px); }
+    .share-control {
+      border: 1px solid var(--hair-strong);
+      background: transparent;
+      color: var(--fg);
+    }
+    .share-control:hover { background: var(--surface-strong); color: var(--fg); }
     .footer-meta {
       display: flex;
       align-items: center;
@@ -712,7 +743,9 @@
       .copy-button { min-width: 62px; padding-inline: 9px; }
       .controls-shell { margin-inline: -4px; }
       .filter { padding: 7px 11px; }
-      .skill-links { align-items: flex-start; flex-direction: column; }
+      .skill-links { grid-template-columns: 1fr; align-items: flex-start; }
+      .skill-links > span { justify-self: start; text-align: left; }
+      .hero-cta { flex-direction: column; }
       .btn { width: 100%; }
     }
 
@@ -758,7 +791,10 @@
           <p class="eyebrow">Flow AI skill library</p>
           <h1 id="hero-title">Operator knowledge for AI agents.</h1>
           <p class="hero-copy">Install focused workflows for AI search, content operations, and product systems. Read the source before you run it.</p>
-          <p class="hero-cta"><a class="btn" href="#library">Browse 14 skills</a></p>
+          <div class="hero-cta">
+            <a class="btn" href="#library">Browse 14 skills</a>
+            <button class="btn share-control" type="button" data-share-library>Share library</button>
+          </div>
         </div>
 
         <aside class="hero-aside reveal" aria-label="How a Flow AI skill works">
@@ -815,7 +851,7 @@
         </div>
 
         <div class="skills-grid" id="skills-grid">
-          <article class="skill-card featured reveal" data-category="search" data-search="geo operator ai search seo full suite router citability crawlers llms schema technical content report">
+          <article class="skill-card featured reveal" id="geo" data-category="search" data-search="geo operator ai search seo full suite router citability crawlers llms schema technical content report">
             <div class="featured-layout">
               <div>
                 <div class="skill-meta"><span>AI search / 12 skill suite</span><span>Maintained fork</span></div>
@@ -841,7 +877,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="full geo audit site crawl score action plan search ai visibility seo">
+          <article class="skill-card reveal" id="geo-audit" data-category="search" data-search="full geo audit site crawl score action plan search ai visibility seo">
             <div>
               <div class="skill-meta"><span>AI search</span><span>01</span></div>
               <h3>Full GEO audit</h3>
@@ -853,7 +889,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="ai citability scorer citations answer blocks evidence density page content llm">
+          <article class="skill-card reveal" id="geo-citability" data-category="search" data-search="ai citability scorer citations answer blocks evidence density page content llm">
             <div>
               <div class="skill-meta"><span>AI search</span><span>02</span></div>
               <h3>AI citability scorer</h3>
@@ -865,7 +901,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="ai crawler access robots txt gptbot claudebot perplexitybot discoverability">
+          <article class="skill-card reveal" id="geo-crawlers" data-category="search" data-search="ai crawler access robots txt gptbot claudebot perplexitybot discoverability">
             <div>
               <div class="skill-meta"><span>AI search</span><span>03</span></div>
               <h3>AI crawler access</h3>
@@ -877,7 +913,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="llms txt builder generator ai crawler site map content discoverability">
+          <article class="skill-card reveal" id="geo-llmstxt" data-category="search" data-search="llms txt builder generator ai crawler site map content discoverability">
             <div>
               <div class="skill-meta"><span>AI search</span><span>04</span></div>
               <h3>llms.txt builder</h3>
@@ -889,7 +925,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="brand mentions authority entity reddit youtube wikipedia linkedin scan">
+          <article class="skill-card reveal" id="geo-brand-mentions" data-category="search" data-search="brand mentions authority entity reddit youtube wikipedia linkedin scan">
             <div>
               <div class="skill-meta"><span>AI search</span><span>05</span></div>
               <h3>Brand mention scanner</h3>
@@ -901,7 +937,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="ai platform optimiser optimizer chatgpt perplexity gemini google ai overviews recommendations">
+          <article class="skill-card reveal" id="geo-platform-optimizer" data-category="search" data-search="ai platform optimiser optimizer chatgpt perplexity gemini google ai overviews recommendations">
             <div>
               <div class="skill-meta"><span>AI search</span><span>06</span></div>
               <h3>AI platform optimiser</h3>
@@ -913,7 +949,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="schema architect structured data json ld organization local business article product software">
+          <article class="skill-card reveal" id="geo-schema" data-category="search" data-search="schema architect structured data json ld organization local business article product software">
             <div>
               <div class="skill-meta"><span>AI search</span><span>07</span></div>
               <h3>Schema architect</h3>
@@ -925,7 +961,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="technical seo audit crawl rendering mobile core web vitals performance indexability">
+          <article class="skill-card reveal" id="geo-technical" data-category="search" data-search="technical seo audit crawl rendering mobile core web vitals performance indexability">
             <div>
               <div class="skill-meta"><span>AI search</span><span>08</span></div>
               <h3>Technical SEO audit</h3>
@@ -937,7 +973,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="content quality audit eeat e-e-a-t information gain readability freshness helpful content">
+          <article class="skill-card reveal" id="geo-content" data-category="search" data-search="content quality audit eeat e-e-a-t information gain readability freshness helpful content">
             <div>
               <div class="skill-meta"><span>AI search</span><span>09</span></div>
               <h3>Content quality audit</h3>
@@ -949,7 +985,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="client report writer geo seo findings action plan executive deliverable markdown">
+          <article class="skill-card reveal" id="geo-report" data-category="search" data-search="client report writer geo seo findings action plan executive deliverable markdown">
             <div>
               <div class="skill-meta"><span>Reporting</span><span>10</span></div>
               <h3>Client report writer</h3>
@@ -961,7 +997,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="search" data-search="pdf report generator charts scores professional deliverable geo audit">
+          <article class="skill-card reveal" id="geo-report-pdf" data-category="search" data-search="pdf report generator charts scores professional deliverable geo audit">
             <div>
               <div class="skill-meta"><span>Reporting</span><span>11</span></div>
               <h3>PDF report generator</h3>
@@ -973,7 +1009,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="content" data-search="novie content engine brand voice social posts artifacts artefacts source document production workflow">
+          <article class="skill-card reveal" id="novie-content-engine" data-category="content" data-search="novie content engine brand voice social posts artifacts artefacts source document production workflow">
             <div>
               <div class="skill-meta"><span>Content operations</span><span>Production system</span></div>
               <h3>Novie content engine</h3>
@@ -985,7 +1021,7 @@
             </div>
           </article>
 
-          <article class="skill-card reveal" data-category="product" data-search="latticework product build brief ios swiftui swiftdata tdd design system app mental models">
+          <article class="skill-card reveal" id="latticework" data-category="product" data-search="latticework product build brief ios swiftui swiftdata tdd design system app mental models">
             <div>
               <div class="skill-meta"><span>Product system</span><span>Build brief</span></div>
               <h3>Latticework build brief</h3>
@@ -1072,6 +1108,66 @@
       var empty = document.getElementById('empty-state');
       var activeFilter = 'all';
 
+      cards.forEach(function (card) {
+        var links = card.querySelector('.skill-links');
+        var title = card.querySelector('h3').textContent;
+        var share = document.createElement('button');
+        share.type = 'button';
+        share.className = 'share-link';
+        share.setAttribute('data-share-skill', '');
+        share.setAttribute('aria-label', 'Share ' + title);
+        share.textContent = 'Share';
+        links.insertBefore(share, links.lastElementChild);
+      });
+
+      function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(value);
+        }
+
+        return new Promise(function (resolve, reject) {
+          var field = document.createElement('textarea');
+          field.value = value;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+          var copied = document.execCommand('copy');
+          field.remove();
+          if (copied) resolve();
+          else reject(new Error('Copy unavailable'));
+        });
+      }
+
+      function feedback(button, message) {
+        var original = button.textContent;
+        button.textContent = message;
+        window.setTimeout(function () { button.textContent = original; }, 1800);
+      }
+
+      function shareItem(button, payload) {
+        if (typeof navigator.share === 'function') {
+          navigator.share(payload).then(function () {
+            feedback(button, 'Shared');
+          }).catch(function (error) {
+            if (error && error.name === 'AbortError') return;
+            copyText(payload.url).then(function () {
+              feedback(button, 'Link copied');
+            }).catch(function () {
+              feedback(button, 'Copy failed');
+            });
+          });
+          return;
+        }
+
+        copyText(payload.url).then(function () {
+          feedback(button, 'Link copied');
+        }).catch(function () {
+          feedback(button, 'Copy failed');
+        });
+      }
+
       function updateLibrary() {
         var query = search.value.trim().toLowerCase();
         var visible = 0;
@@ -1107,10 +1203,30 @@
       });
 
       document.addEventListener('click', function (event) {
+        var shareButton = event.target.closest('[data-share-library], [data-share-skill]');
+        if (shareButton) {
+          var url = new URL(window.location.href);
+          var title = 'Flow AI Skill Library';
+          var text = 'Fourteen inspectable AI agent skills for search, content operations, reporting, and product systems.';
+          url.search = '';
+          url.hash = '';
+
+          if (shareButton.hasAttribute('data-share-skill')) {
+            var card = shareButton.closest('.skill-card');
+            var skillTitle = card.querySelector('h3').textContent;
+            title = skillTitle + ' | Flow AI Skill Library';
+            text = skillTitle + ': ' + card.querySelector('.skill-description').textContent;
+            url.hash = card.id;
+          }
+
+          shareItem(shareButton, { title: title, text: text, url: url.href });
+          return;
+        }
+
         var button = event.target.closest('[data-copy]');
         if (!button) return;
         var original = button.textContent;
-        navigator.clipboard.writeText(button.dataset.copy).then(function () {
+        copyText(button.dataset.copy).then(function () {
           button.textContent = 'Copied';
           window.setTimeout(function () { button.textContent = original; }, 1600);
         }).catch(function () {
