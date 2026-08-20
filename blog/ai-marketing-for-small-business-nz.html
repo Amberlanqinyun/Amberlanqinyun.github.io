@@ -19,6 +19,7 @@
 <meta property="article:modified_time" content="2026-08-20T00:00:00+12:00">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="../fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/assets/share.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -129,6 +130,12 @@
   .end p{margin:0 auto 30px;max-width:44ch;font-weight:300;}
   .btn{display:inline-block;padding:16px 32px;font-size:15px;font-weight:500;border-radius:var(--r-s);background:var(--cream);color:var(--ink);transition:transform 160ms var(--ease-out),background-color var(--t-normal) var(--ease);}
   @media(hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}}
+  .article-actions{display:flex;gap:10px;margin-top:22px;}
+  .share-button{appearance:none;border:1px solid var(--hair);border-radius:var(--r-s);background:transparent;color:var(--fg);font:500 13.5px/1 var(--gsf);padding:12px 18px;cursor:pointer;white-space:nowrap;transition:transform 160ms var(--ease-out),border-color var(--t-normal) var(--ease),background-color var(--t-normal) var(--ease),color var(--t-normal) var(--ease);}
+  .share-button:hover{border-color:var(--acc-dim);background:rgba(250,248,243,0.05);}
+  .share-button:active{transform:scale(0.98);}
+  .share-button[data-state="success"]{background:var(--acc);border-color:var(--acc);color:var(--ink);}
+  .share-button[data-state="error"]{border-color:var(--acc);color:var(--acc);}
   .end-meta{margin-top:clamp(48px,7vh,72px);padding-top:26px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--mute);text-align:left;}
   .end-meta a:hover{color:var(--fg);}
 </style>
@@ -156,6 +163,9 @@
     <h1>AI marketing for small business in NZ: the complete guide.</h1>
     <p class="answer">AI marketing means using AI systems to run the repetitive parts of marketing, so a business without a marketing hire can still show up consistently: found on Google, cited by AI assistants, publishing every week, and following up with every lead. <b>This guide covers what that includes, what it costs, and where to start.</b></p>
     <p class="byline">By Amber Lan, AI marketing engineer · Last updated 20 August 2026</p>
+    <div class="article-actions">
+      <button class="share-button" type="button" data-share data-share-title="AI Marketing for Small Business in NZ: The Complete Guide" data-share-text="AI search visibility, content engines, outbound automation, costs, and where to start." data-share-url="/blog/ai-marketing-for-small-business-nz.html" aria-label="Share this guide" aria-live="polite">Share guide</button>
+    </div>
   </div>
 
   <article>
