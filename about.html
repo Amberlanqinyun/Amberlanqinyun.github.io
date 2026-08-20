@@ -31,6 +31,7 @@
     "email": "mailto:amber.lan.growth.digital@gmail.com",
     "url": "https://www.flowai.co.nz/",
     "worksFor": { "@type": "Organization", "name": "Flow AI", "@id": "https://www.flowai.co.nz/#flowai" },
+    "image": "https://www.flowai.co.nz/images/amber-lan.png",
     "sameAs": ["https://github.com/Amberlanqinyun", "https://www.linkedin.com/in/amberlan/"],
     "knowsLanguage": ["en", "zh"],
     "knowsAbout": ["AI Marketing", "Answer Engine Optimization", "Generative Engine Optimization", "SEO", "Marketing Automation", "AI Agents", "Go-to-Market Strategy", "Python", "TypeScript"]
@@ -126,6 +127,13 @@
 
   /* ---------- Hero ---------- */
   .hero-body { padding: clamp(72px, 11vh, 120px) 0 clamp(48px, 7vh, 72px); }
+  .hero-split { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+  .portrait {
+    width: min(300px, 56vw); height: auto; border-radius: 50%;
+    border: 1px solid var(--hair); justify-self: end;
+    box-shadow: 0 0 0 10px rgba(228,164,60,0.06);
+  }
+  @media (max-width: 760px) { .hero-split { grid-template-columns: 1fr; } .portrait { justify-self: start; margin-top: 8px; } }
   .eyebrow {
     font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--mute); font-weight: 500; margin-bottom: 36px;
@@ -315,12 +323,17 @@
 
 <div class="wrap">
   <div class="hero-body">
+    <div class="hero-split">
+    <div>
     <div class="eyebrow">About · Auckland, New Zealand</div>
     <h1>Amber Lan. <span class="off">AI marketing engineer.</span></h1>
     <p class="lede">I'm Amber Lan, an <b>AI marketing engineer</b>. I run marketing solo at an AI startup, on an agent stack I built myself, and I publish what works, what breaks, and the real numbers. This page is the receipts: <b>every system linked to its source.</b></p>
     <div class="cta">
       <a class="btn primary" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub profile</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    </div>
+    <img class="portrait" src="images/amber-lan.png" alt="Amber Lan, AI marketing engineer, Auckland" width="560" height="560" fetchpriority="high">
     </div>
   </div>
 </div>
