@@ -69,42 +69,22 @@
         {
           "@type": "Question",
           "name": "What is an AI marketing engineer?",
-          "acceptedAnswer": { "@type": "Answer", "text": "An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. Instead of a strategist who hands you a deck and an agency that bills hours, one person designs your positioning and ships the inbound, content, and outbound systems that run it." }
+          "acceptedAnswer": { "@type": "Answer", "text": "An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. One person designs your positioning and ships the inbound, content, and outbound systems that run it." }
         },
         {
           "@type": "Question",
-          "name": "How is Flow AI different from a marketing agency?",
-          "acceptedAnswer": { "@type": "Answer", "text": "With Flow AI you work directly with the person who designs the strategy and builds the system. The work is systems that keep running, not deliverables that stop when the invoice does. The flat NZ$1,000 a month is possible because the delivery is automated and one person is accountable for it." }
+          "name": "Who is Flow AI for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "New Zealand small and medium businesses and early-stage teams without a marketing hire. If your customers search on Google or ask ChatGPT for recommendations, the systems are designed to make your business the answer." }
         },
         {
           "@type": "Question",
-          "name": "What does AI marketing cost in New Zealand?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Flow AI pricing is public: a one-time starter sprint at NZ$997 for one system, or the full marketing engine retainer at NZ$1,000 per month, cancel anytime, with a 30-day money-back guarantee on the first month." }
+          "name": "What does it cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Flow AI pricing is public: a one-time starter sprint at NZ$997 for one system, or the full marketing engine retainer at NZ$1,000 per month, cancel anytime, with a 30-day money-back guarantee on the first month. Clients own the systems: documented, portable, handover included." }
         },
         {
           "@type": "Question",
           "name": "How do I get my business mentioned by ChatGPT and other AI assistants?",
           "acceptedAnswer": { "@type": "Answer", "text": "That practice is called answer engine optimization (AEO). It combines question-formatted content, structured data markup, consistent business information across the web, and placements on the sources AI assistants cite. AEO is included in every Flow AI retainer alongside traditional SEO." }
-        },
-        {
-          "@type": "Question",
-          "name": "How quickly can marketing systems be live?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The go-to-market read arrives in writing within the first week of the discovery call, and the first system goes live in week one. A full go-to-market build, strategy plus inbound, outbound, content, and analytics, is live within weeks, not quarters." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work with startups outside New Zealand and Australia?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Flow AI is based in New Zealand and works remotely with startups anywhere. NZ and AU get timezone-native support." }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is Flow AI for?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Flow AI is built for New Zealand small and medium businesses and early-stage teams without a marketing hire: trades, professional services, clinics, e-commerce, and B2B startups. If your customers search on Google or ask ChatGPT for recommendations, the retainer is designed to make your business the answer." }
-        },
-        {
-          "@type": "Question",
-          "name": "Who actually does the work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "I do. I'm Amber Lan, a marketing engineer and the founder of Flow AI. I write the strategy and I build the systems, directing specialized AI agents for scale. No account managers, no handoffs." }
         }
       ]
     }
@@ -232,7 +212,7 @@
     line-height: 1.04; letter-spacing: -0.045em; color: var(--fg);
   }
   h1 .line { display: block; }
-  h1 .off { color: var(--mute); }
+  h1 .hi { color: var(--acc); }
   .hero-sub {
     display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 6fr);
     gap: clamp(32px, 5vw, 80px); align-items: center;
@@ -277,7 +257,7 @@
   .meta-grid span { font-size: 14px; color: var(--dim); line-height: 1.5; display: inline-block; max-width: 34ch; }
 
   /* ---------- Sections ---------- */
-  section { padding: clamp(110px, 17vh, 200px) 0 0; scroll-margin-top: 72px; }
+  section { padding: clamp(80px, 12vh, 144px) 0 0; scroll-margin-top: 72px; }
   .end { scroll-margin-top: 72px; }
   section p { text-wrap: pretty; }
   h2 {
@@ -417,6 +397,30 @@
   .fig circle, .process-line circle, .offer-fig circle { transition: opacity var(--t-slow) var(--ease) 500ms; }
   .undrawn path { stroke-dashoffset: 1 !important; transition: none !important; }
   .undrawn circle { opacity: 0 !important; transition: none !important; }
+  .case-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .ccard {
+    display: flex; flex-direction: column;
+    background: var(--panel); border: 1px solid rgba(250,248,243,0.08); border-radius: var(--r-m);
+    overflow: hidden; box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
+    transition: transform var(--t-slow) var(--ease), border-color var(--t-slow) var(--ease);
+    padding-bottom: 26px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .ccard:hover { transform: translateY(-4px); border-color: rgba(250,248,243,0.22); }
+  }
+  .ccard .fig { border: none; border-radius: 0; box-shadow: none; margin: 0 0 18px; background: transparent; border-bottom: 1px solid var(--hair); }
+  .ccard h3 { font-weight: 600; font-size: 18px; letter-spacing: -0.015em; line-height: 1.25; color: var(--fg); margin: 0 24px 8px; }
+  .ccard p { font-size: 14.5px; color: var(--dim); margin: 0 24px 14px; }
+  .ccard .go { margin: auto 24px 0; align-self: flex-start; font-size: 14px; }
+  @media (max-width: 860px) { .case-cards { grid-template-columns: 1fr; } }
+  .ctx-cta { margin-top: 28px; font-size: 15.5px; color: var(--dim); }
+  .pbtn { margin-top: 22px; align-self: flex-start; padding: 13px 26px; font-size: 14px; }
+  .price { display: flex; flex-direction: column; }
+  .price .btn.ghost { border: 1px solid rgba(250,248,243,0.18); }
+  .price.anchor .btn.primary { background: var(--ink); color: var(--cream); }
+  .price.anchor .btn.primary:hover { background: rgba(14,14,13,0.85); }
+  .pnote { display: block; margin-top: 10px; font-size: 12.5px; color: var(--mute); }
+  .price.anchor .pnote { color: rgba(14,14,13,0.55); }
   .receipts { margin-top: clamp(52px, 8vh, 88px); padding-top: clamp(36px, 5vh, 52px); border-top: 1px solid var(--hair); }
   .receipts-lede { font-size: 15px; color: var(--mute); margin-bottom: 26px; }
   .receipts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 36px); }
@@ -548,7 +552,7 @@
     .hero-fig { max-width: 480px; }
   }
   @media (max-width: 760px) {
-    section { padding: 80px 0 0; }
+    section { padding: 56px 0 0; }
     .meta-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
     .offer-grid { grid-template-columns: 1fr; }
     .offer-left { position: relative; top: 0; }
@@ -568,7 +572,7 @@
 </head>
 <body>
 
-<a class="skip" href="#ask">Skip to content</a>
+<a class="skip" href="#offer">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"></div>
 
@@ -577,7 +581,7 @@
     <header class="nav">
       <a class="name" href="/" aria-label="Flow AI home">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
-        Flow AI.
+        Amber Lan · Flow AI.
       </a>
       <nav>
         <a href="/work.html">Work</a>
@@ -585,7 +589,7 @@
         <a class="sec" href="#pricing">Pricing</a>
         <a class="sec" href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+        <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems review</a>
       </nav>
     </header>
   </div>
@@ -595,13 +599,13 @@
   <div class="wrap">
     <div class="hero-body">
       <div class="eyebrow">Amber Lan · AI marketing engineer · Auckland</div>
-      <h1><span class="line off">I build the marketing systems</span><span class="line">that turn strategy into pipeline.</span></h1>
+      <h1><span class="line">I build marketing systems that turn</span><span class="line">strategy into <span class="hi">consistent demand</span>.</span></h1>
       <div class="hero-sub">
         <div>
-          <p class="lede">Positioning, AI-search visibility, content, outbound, and analytics. <b>Designed and shipped by the practitioner who runs marketing inside an AI startup.</b></p>
+          <p class="lede">Positioning, AI-search visibility, content, outbound, and reporting. <b>I design and ship these systems while running marketing inside an AI startup.</b></p>
           <div class="cta">
-            <a class="btn primary" href="/work.html">See the systems I've built</a>
-            <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+            <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a free systems review</a>
+            <a class="btn ghost" href="/work.html">View the case studies</a>
           </div>
         </div>
         <!-- The pipeline: one artery in, five named systems out.
@@ -642,7 +646,7 @@
 <div class="meta-band">
   <div class="wrap">
     <div class="meta-grid">
-      <div><b>Day job</b><span>Marketing Lead at Novamind Labs, running the function solo on an agent stack she built.</span></div>
+      <div><b>Day job</b><span>Marketing Lead at Novamind Labs, running the function solo on an agent stack I built.</span></div>
       <div><b>Stack</b><span>Python, TypeScript, and Claude agents. Production systems, public on GitHub.</span></div>
       <div><b>Languages</b><span>English and Mandarin, native. Both markets, one engineer.</span></div>
       <div><b>Base</b><span>Auckland, New Zealand. NZ and AU timezones, remote anywhere.</span></div>
@@ -653,14 +657,6 @@
 <div class="wrap">
 
 
-<section id="ask">
-  <h2 class="reveal">Don't take my word for it. <span class="off">Ask the machines.</span></h2>
-  <div class="ask-frame reveal">
-    <p class="ask-q">"Who should I hire for <span class="slot">what you do</span> in <span class="slot">your town</span>?"</p>
-    <p class="ask-body">Open ChatGPT right now and ask it exactly that. <b>Watch it answer with names.</b> That answer is the new front page, and getting into it is an engineering job.</p>
-    <p class="results-note" style="margin-top:18px;">The same goes for Google: AI Overviews now answers many buying questions before any website gets the click. Both are winnable. That's the job the retainer does.</p>
-  </div>
-</section>
 
 <section id="offer">
   <div class="offer-grid">
@@ -690,11 +686,11 @@
       </div>
       <div class="offer-row reveal">
         <h3>Inbound engine.</h3>
-        <p>Search and generative engine optimization from day one. <b>Found on Google, cited by ChatGPT.</b></p>
+        <p>Search and generative engine optimization from day one. <b>The technical and content foundations for Google and AI search.</b></p>
       </div>
       <div class="offer-row reveal">
         <h3>Outbound agents.</h3>
-        <p>Research and personalized outreach, running daily. <b>Qualified meetings land on your calendar.</b></p>
+        <p>Targeted research and personalised outreach, running daily, with <b>a human taking over the moment a buyer replies.</b></p>
       </div>
       <div class="offer-row reveal">
         <h3>Content engine.</h3>
@@ -702,8 +698,9 @@
       </div>
       <div class="offer-row reveal">
         <h3>Analytics.</h3>
-        <p>Tracking wired from the first visitor. <b>You know which channel pays.</b></p>
+        <p>Tracking wired from the first visitor. <b>Activity connected to pipeline through clean reporting.</b></p>
       </div>
+      <p class="ctx-cta reveal">Not sure which system you need first? <a class="go" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a free systems review</a> and I'll tell you honestly.</p>
     </div>
   </div>
 </section>
@@ -743,46 +740,75 @@
 <section id="proof">
   <h2 class="reveal">Proof, <span class="off">not promises.</span></h2>
 
-  <div class="case split reveal">
-    <div>
-      <div class="role">Go-to-market strategy, enterprise AI platform</div>
+  <div class="case-cards">
+    <a class="ccard reveal" href="/work/enterprise-gtm.html">
+      <div class="fig" aria-hidden="true">
+        <svg viewBox="0 0 800 460">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path pathLength="1" d="M120 110 C 300 110, 300 230, 450 230" opacity=".5"/>
+            <path pathLength="1" d="M120 230 H 450" opacity=".5"/>
+            <path pathLength="1" d="M120 350 C 300 350, 300 230, 450 230" opacity=".5"/>
+            <path pathLength="1" d="M470 230 H 680" stroke-width="3" opacity=".9"/>
+          </g>
+          <circle cx="120" cy="110" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="120" cy="230" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="120" cy="350" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="450" cy="230" r="12" fill="#E4A43C"/>
+        </svg>
+      </div>
       <h3>Three demand engines, one pipeline, one launch.</h3>
-      <p>A full go-to-market plan for an enterprise AI platform: outbound, inbound, and partnership engines feeding a single pipeline, sequenced toward one launch moment. <b>Positioning, message architecture, channel design, and the operating timeline</b>, built as a navigable deck.</p>
-      <div class="note">Sanitised case. Full walkthrough on request.</div>
-    </div>
-    <!-- Abstract diagram: three engines converge into one pipeline. -->
-    <div class="fig" aria-hidden="true">
-      <svg viewBox="0 0 800 620">
-        <g fill="none" stroke="currentColor" stroke-width="1.5">
-          <path pathLength="1" d="M150 150 C 320 150, 320 310, 470 310" opacity=".5"/>
-          <path pathLength="1" d="M150 310 H 470" opacity=".5"/>
-          <path pathLength="1" d="M150 470 C 320 470, 320 310, 470 310" opacity=".5"/>
-          <path pathLength="1" d="M490 310 H 690" stroke-width="3" opacity=".9"/>
-        </g>
-        <circle cx="150" cy="150" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="150" cy="310" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="150" cy="470" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="470" cy="310" r="12" fill="#E4A43C"/>
-        <circle cx="700" cy="310" r="6" fill="currentColor" opacity=".6"/>
-      </svg>
-    </div>
+      <p>The full go-to-market system for an enterprise AI platform, in production ahead of launch.</p>
+      <span class="go">Read the case study →</span>
+    </a>
+    <a class="ccard reveal" href="/work/content-engine.html">
+      <div class="fig" aria-hidden="true">
+        <svg viewBox="0 0 800 460">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path pathLength="1" d="M90 230 H 320" opacity=".6"/>
+            <path pathLength="1" d="M360 230 C 460 230, 460 110, 550 110 H 700" opacity=".35"/>
+            <path pathLength="1" d="M360 230 C 460 230, 460 230, 550 230 H 700" opacity=".35"/>
+            <path pathLength="1" d="M360 230 C 460 230, 460 350, 550 350 H 700" opacity=".35"/>
+          </g>
+          <rect x="320" y="204" width="44" height="52" rx="10" fill="none" stroke="#E4A43C" stroke-width="2"/>
+          <circle cx="90" cy="230" r="9" fill="#E4A43C"/>
+          <circle cx="700" cy="110" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="700" cy="230" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="700" cy="350" r="5" fill="currentColor" opacity=".6"/>
+        </svg>
+      </div>
+      <h3>One source in. A month of content out.</h3>
+      <p>Every line passes a codified voice gate before it ships. The clean-room code is public.</p>
+      <span class="go">Read the case study →</span>
+    </a>
+    <a class="ccard reveal" href="/work/geo-seo-toolkit.html">
+      <div class="fig" aria-hidden="true">
+        <svg viewBox="0 0 800 460">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path pathLength="1" d="M110 230 H 330" opacity=".6"/>
+            <path pathLength="1" d="M370 230 C 470 230, 470 120, 560 120 H 690" opacity=".35"/>
+            <path pathLength="1" d="M370 230 C 470 230, 470 230, 560 230 H 690" opacity=".35"/>
+            <path pathLength="1" d="M370 230 C 470 230, 470 340, 560 340 H 690" opacity=".35"/>
+            <circle cx="350" cy="230" r="22" stroke="#E4A43C" stroke-width="2"/>
+          </g>
+          <circle cx="110" cy="230" r="9" fill="#E4A43C"/>
+          <circle cx="694" cy="120" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="694" cy="230" r="5" fill="currentColor" opacity=".6"/>
+          <circle cx="694" cy="340" r="5" fill="currentColor" opacity=".6"/>
+        </svg>
+      </div>
+      <h3>Cited by the machines, by design.</h3>
+      <p>The open-source AEO toolkit, running live on this site. Inspect the output in this page's source.</p>
+      <span class="go">Read the case study →</span>
+    </a>
   </div>
 
   <div class="receipts reveal">
-    <p class="receipts-lede">The code is public. Four systems you can read right now:</p>
-    <div class="receipts-grid">
-      <div><a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude</a><span>AEO/GEO toolkit: citability scoring, AI-crawler analysis, schema.</span></div>
-      <div><a class="go" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">Flow AI content system</a><span>Brief in, publish-ready NZ service pages out.</span></div>
-      <div><a class="go" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">Content engine</a><span>One source in, a month of voice-audited posts out.</span></div>
-      <div><a class="go" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">Social Media OS</a><span>Plan once, adapt per platform, ship on schedule.</span></div>
-    </div>
+    <p class="receipts-lede">The code is public: <a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude</a>, <a class="go" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">the content engine</a>, <a class="go" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">Social Media OS</a>, and <a class="go" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">the Flow AI content system</a>. Founding-client results will be published here with real names as they land.</p>
   </div>
 
-  <p class="results-note reveal">Why there are no client logos here yet: Flow AI opened to founding clients in 2026, and I don't publish numbers I can't back. The receipts that do exist are public, <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">the systems on GitHub</a> and the AI startup whose marketing I run by day. Founding-client results will be published here with real names and real numbers as they land.</p>
-
   <div class="proof-more reveal">
-    <p>All of it is built and run by one engineer, <a class="go" href="/about.html">Amber Lan</a>: strategy, demand engines, and the software underneath them.</p>
-    <a class="btn ghost" href="/work.html">See the full body of work →</a>
+    <p>All of it built and run by <a class="go" href="/about.html">Amber Lan</a>. Want to know which of these your business needs?</p>
+    <a class="btn ghost" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a systems recommendation</a>
   </div>
 </section>
 
@@ -813,19 +839,23 @@
       <div class="pn">Starter sprint</div>
       <div class="pv">$997 <small>one-time</small></div>
       <p>One marketing system, built and live within days. The way most clients start.</p>
+      <a class="btn ghost pbtn" href="mailto:amber.lan.growth.digital@gmail.com?subject=Starter%20sprint&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0AThe%20one%20system%20we%20need%20first%3A%20%0A%0A">Start with one system</a>
+      <span class="pnote">Opens a short email with three questions. I reply personally.</span>
     </div>
     <div class="price anchor reveal">
       <div class="pn">Marketing engine · <b>founding rate</b></div>
       <div class="pv">$1,000 <small>per month</small></div>
       <p>Your marketing run end to end: content shipped, SEO and AI-search visibility working, outbound running, one clear monthly report. Cancel anytime.</p>
+      <a class="btn primary pbtn" href="mailto:amber.lan.growth.digital@gmail.com?subject=Marketing%20engine&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Discuss the monthly engine</a>
+      <span class="pnote anchor-note">Opens a short email with three questions. I reply personally.</span>
     </div>
   </div>
   <div class="founding reveal">
     <div><b>5 seats</b><span>Founding-client places for 2026. The price locks at NZ$1,000 a month for as long as you stay.</span></div>
     <div><b>14 days</b><span>To your first report: what shipped, what it changed, what happens next. One page, numbers first, every month.</span></div>
-    <div><b>NZ$500</b><span>Referral fee for every signed client you send, paid after their first invoice clears.</span></div>
+    <div><b>30 days</b><span>Money-back guarantee on the first month of the engine. If it isn't working, you don't pay for it.</span></div>
   </div>
-  <p class="prices-note reveal">All prices NZD. NZ and AU timezone support. <b>30-day money-back guarantee on the first month.</b> The price is possible because the systems do the production and one engineer does the judgment.</p>
+  <p class="prices-note reveal">All prices NZD. NZ and AU timezone support. The price is possible because the systems do the production and one person does the judgment. <b>You own everything I build:</b> documented, portable, handover included.</p>
 </section>
 
 
@@ -838,32 +868,16 @@
       <p>Someone who does two jobs that are usually split: writes the go-to-market strategy, and builds the AI systems that execute it. One person designs your positioning and ships the inbound, content, and outbound systems that run it.</p>
     </details>
     <details>
-      <summary>How is Flow AI different from a marketing agency?</summary>
-      <p>You work directly with the person who designs the strategy and builds the system. The work is systems that keep running, not deliverables that stop when the invoice does. The flat $1,000 a month is possible because the delivery is automated and one person is accountable for it.</p>
+      <summary>Who is Flow AI for?</summary>
+      <p>New Zealand small and medium businesses and early-stage teams without a marketing hire. If your customers search on Google or ask ChatGPT for recommendations, the systems are designed to make your business the answer.</p>
     </details>
     <details>
-      <summary>What does AI marketing cost in New Zealand?</summary>
-      <p>Pricing here is public: a starter sprint is NZ$997 one-time, and the full marketing engine is NZ$1,000 per month, cancel anytime, with a 30-day money-back guarantee on the first month.</p>
+      <summary>What does it cost?</summary>
+      <p>Pricing is public: a starter sprint is NZ$997 one-time, and the full marketing engine is NZ$1,000 per month, cancel anytime, with a 30-day money-back guarantee on the first month. You own the systems either way: documented, portable, handover included.</p>
     </details>
     <details>
       <summary>How do I get my business mentioned by ChatGPT?</summary>
       <p>The practice is called answer engine optimization (AEO). It combines question-formatted content, structured data, consistent business information across the web, and placements on the sources AI assistants actually cite. It's included in every Flow AI retainer alongside traditional SEO.</p>
-    </details>
-    <details>
-      <summary>How quickly can systems be live?</summary>
-      <p>The go-to-market read arrives in writing within the first week, and the first system goes live in week one. A full build is live within weeks, not quarters.</p>
-    </details>
-    <details>
-      <summary>Do you work outside New Zealand and Australia?</summary>
-      <p>Yes. Flow AI is based in New Zealand and works remotely with startups anywhere. NZ and AU get timezone-native support.</p>
-    </details>
-    <details>
-      <summary>Who is Flow AI for?</summary>
-      <p>New Zealand small and medium businesses and early-stage teams without a marketing hire: trades, professional services, clinics, e-commerce, and B2B startups. If your customers search on Google or ask ChatGPT for recommendations, the retainer is designed to make your business the answer.</p>
-    </details>
-    <details>
-      <summary>Who actually does the work?</summary>
-      <p>I do. I'm Amber Lan, a marketing engineer and the founder of Flow AI. I write the strategy and I build the systems, directing specialized AI agents for scale. No account managers, no handoffs.</p>
     </details>
   </div>
 </section>
@@ -880,7 +894,7 @@
   <div class="wrap">
     <h2 class="reveal">Your next customer <span class="off">is already asking.</span></h2>
     <p class="reveal">Tonight, somewhere in New Zealand, someone asks an AI for exactly what you do. Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within the first week</b>, before any commitment.</p>
-    <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+    <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Systems%20review&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Get a free systems review</a>
     <nav class="foot-nav" aria-label="Site">
       <a href="/work.html">Work</a>
       <a href="/about.html">About</a>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog · Flow AI · Amber Lan</title>
+<meta name="description" content="Guides and working notes from Amber Lan, AI marketing engineer in Auckland: AI search visibility, content systems, outbound automation, and what marketing costs in NZ.">
+<meta name="theme-color" content="#0E0E0D">
+<link rel="canonical" href="https://www.flowai.co.nz/blog/">
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230E0E0D"/><text x="30" y="44" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="%23FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4" fill="%23E4A43C"/></svg>'>
+<meta property="og:title" content="Blog · Flow AI · Amber Lan">
+<meta property="og:description" content="Guides and working notes from an AI marketing engineer: AI search visibility, content systems, outbound automation, and marketing costs in NZ.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/blog/">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:"Google Sans Flex";src:url("../fonts/google-sans-flex-vf.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+  :root{
+    --bg:#0E0E0D;--panel:#171715;--cream:#FAF8F3;--fg:#FAF8F3;--ink:#0E0E0D;--acc:#E4A43C;--acc-dim:rgba(228,164,60,0.55);
+    --dim:rgba(250,248,243,0.58);--mute:rgba(250,248,243,0.52);--hair:rgba(250,248,243,0.11);
+    --gsf:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --r-m:24px;--r-s:999px;--t-normal:200ms;--ease:cubic-bezier(0.2,0.8,0.2,1);--ease-out:cubic-bezier(0.23,1,0.32,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
+  body{background:var(--bg);color:var(--dim);font-family:var(--gsf);font-size:17.5px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  ::selection{background:var(--acc);color:var(--ink);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
+  a{color:inherit;text-decoration:none;}
+  b,strong{color:var(--fg);font-weight:600;}
+  :focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+  .grain{position:fixed;inset:-50%;z-index:80;pointer-events:none;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .nav-bar{position:sticky;top:0;z-index:70;background:rgba(14,14,13,0.75);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair);}
+  .navwrap{max-width:1120px;margin:0 auto;padding:0 clamp(24px,5vw,48px);}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
+  .nav .name{display:inline-flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-0.02em;font-size:16px;color:var(--fg);white-space:nowrap;}
+  .nav .name svg{width:26px;height:26px;}
+  .nav .name svg text{font-family:var(--gsf);}
+  .nav nav a{color:var(--mute);margin-left:28px;font-size:13.5px;font-weight:500;transition:color var(--t-normal) var(--ease);}
+  .nav nav a:hover{color:var(--fg);}
+  .nav nav a.nav-cta{color:var(--ink);background:var(--cream);padding:9px 18px;border-radius:var(--r-s);}
+  .nav nav a.nav-cta:hover{color:var(--ink);background:rgba(250,248,243,0.88);}
+  @media(max-width:860px){.nav nav a.nav-cta{display:none;}}
+  @media(max-width:760px){.nav nav a{margin-left:14px;font-size:13px;}}
+  @media(max-width:460px){.nav nav a.sec{display:none;}}
+  .hero{padding:clamp(56px,9vh,96px) 0 clamp(28px,4vh,44px);}
+  .crumb{font-size:13.5px;color:var(--mute);margin-bottom:26px;}
+  .crumb a{border-bottom:1px solid var(--acc-dim);color:var(--dim);}
+  .crumb a:hover{border-color:var(--acc);color:var(--fg);}
+  h1{font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-0.035em;color:var(--fg);}
+  .answer{margin-top:24px;font-weight:300;font-size:clamp(18px,1.7vw,21px);line-height:1.6;color:var(--dim);}
+  .answer b{font-weight:500;}
+  .byline{margin-top:22px;font-size:13.5px;color:var(--mute);padding-bottom:8px;}
+  article h2{font-weight:600;font-size:clamp(23px,2.7vw,31px);letter-spacing:-0.025em;line-height:1.15;color:var(--fg);margin:clamp(44px,7vh,64px) 0 18px;}
+  article h3{font-weight:600;font-size:19px;letter-spacing:-0.015em;color:var(--fg);margin:30px 0 10px;}
+  article p{margin-bottom:18px;text-wrap:pretty;}
+  article ul,article ol{margin:0 0 18px 22px;}
+  article li{margin-bottom:10px;}
+  a.go{font-weight:500;color:var(--fg);border-bottom:1px solid var(--acc-dim);transition:border-color var(--t-normal) var(--ease);}
+  a.go:hover{border-color:var(--acc);}
+  .tablewrap{overflow-x:auto;margin:24px 0;border:1px solid var(--hair);border-radius:16px;}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;}
+  th{text-align:left;font-weight:600;color:var(--fg);padding:14px 16px;border-bottom:1px solid var(--hair);background:var(--panel);}
+  td{padding:13px 16px;border-bottom:1px solid var(--hair);vertical-align:top;color:var(--dim);}
+  tr:last-child td{border-bottom:none;}
+  td b{white-space:nowrap;}
+  .end{padding:clamp(64px,10vh,100px) 0 56px;text-align:center;}
+  .end h2{font-weight:600;font-size:clamp(26px,3vw,36px);letter-spacing:-0.03em;color:var(--fg);max-width:22ch;margin:0 auto 16px;}
+  .end p{margin:0 auto 30px;max-width:44ch;font-weight:300;}
+  .btn{display:inline-block;padding:16px 32px;font-size:15px;font-weight:500;border-radius:var(--r-s);background:var(--cream);color:var(--ink);transition:transform 160ms var(--ease-out),background-color var(--t-normal) var(--ease);}
+  @media(hover:hover){.btn:hover{transform:scale(1.03);background:rgba(250,248,243,0.9);}}
+  .end-meta{margin-top:clamp(48px,7vh,72px);padding-top:26px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--mute);text-align:left;}
+  .end-meta a:hover{color:var(--fg);}
+</style>
+<style>
+  .post{display:block;padding:28px 0;border-top:1px solid var(--hair);}
+  .post:last-of-type{border-bottom:1px solid var(--hair);}
+  .post .pk{font-size:13px;color:var(--mute);margin-bottom:8px;}
+  .post h2{margin:0 0 10px;font-size:clamp(21px,2.4vw,27px);font-weight:600;letter-spacing:-0.02em;color:var(--fg);line-height:1.2;}
+  .post p{margin:0;font-size:16px;max-width:60ch;}
+  .post .go{display:inline-block;margin-top:14px;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="nav-bar"><div class="navwrap"><header class="nav">
+  <a class="name" href="/" aria-label="Flow AI home">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
+    Amber Lan · Flow AI.
+  </a>
+  <nav>
+    <a href="/work.html">Work</a>
+    <a href="/about.html">About</a>
+    <a class="sec" href="/#pricing">Pricing</a>
+    <a class="sec" href="/#faq">FAQ</a>
+    <a href="/#contact">Contact</a>
+    <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
+  </nav>
+</header></div></div>
+<main class="wrap">
+  <div class="hero">
+    <h1>Guides and working notes.</h1>
+    <p class="answer">What I learn running marketing systems in production, written up for NZ small business owners and founders. <b>One substantial piece a week.</b></p>
+  </div>
+  <a class="post" href="/blog/ai-marketing-for-small-business-nz.html">
+    <div class="pk">Guide · 20 August 2026</div>
+    <h2>AI marketing for small business in NZ: the complete guide.</h2>
+    <p>What AI marketing actually covers, what it costs against an agency or a hire, the mistakes to skip, and a starting checklist that compounds.</p>
+    <span class="go">Read the guide →</span>
+  </a>
+</main>
+<div class="end">
+  <div class="wrap">
+    <div class="end-meta">
+      <span>© 2026 Flow AI · Amber Lan</span>
+      <span><a class="go" href="/feed.xml">Atom feed</a></span>
+      <span><a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
