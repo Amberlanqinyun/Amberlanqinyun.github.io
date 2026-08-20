@@ -17,6 +17,7 @@
 <meta property="og:image" content="https://www.flowai.co.nz/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/amber-lan-editorial-hero-v2.webp" as="image" type="image/webp" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -129,11 +130,16 @@
   .hero-body { padding: clamp(72px, 11vh, 120px) 0 clamp(48px, 7vh, 72px); }
   .hero-split { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
   .portrait {
-    width: min(300px, 56vw); height: auto; border-radius: 50%;
-    border: 1px solid var(--hair); justify-self: end;
-    box-shadow: 0 0 0 10px rgba(228,164,60,0.06);
+    position: relative; overflow: hidden; width: min(100%, 440px); aspect-ratio: 4 / 3;
+    border: 1px solid var(--hair); border-radius: 18px; justify-self: end; background: var(--panel);
+    box-shadow: inset 0 1px 0 rgba(250,248,243,0.07), 0 30px 80px rgba(0,0,0,0.28);
   }
-  @media (max-width: 760px) { .hero-split { grid-template-columns: 1fr; } .portrait { justify-self: start; margin-top: 8px; } }
+  .portrait::after {
+    content: ""; position: absolute; inset: 0;
+    box-shadow: inset 0 0 80px rgba(14,14,13,0.38); pointer-events: none;
+  }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 760px) { .hero-split { grid-template-columns: 1fr; } .portrait { width: min(100%, 640px); justify-self: start; margin-top: 8px; } }
   .eyebrow {
     font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--mute); font-weight: 500; margin-bottom: 36px;
@@ -270,6 +276,10 @@
       opacity: 0; transform: translateY(22px);
       animation: rise 560ms var(--ease-out) forwards;
     }
+    .hero-body .portrait {
+      opacity: 0; transform: translateY(20px);
+      animation: rise 760ms var(--ease-out) 120ms forwards;
+    }
     .hero-body .eyebrow { animation-delay: 40ms; }
     .hero-body h1 { animation-delay: 120ms; }
     .hero-body .lede { animation-delay: 240ms; }
@@ -315,7 +325,7 @@
         <a href="/about.html" aria-current="page">About</a>
         <a class="sec" href="/#pricing">Pricing</a>
         <a class="sec" href="/#faq">FAQ</a>
-        <a href="/#contact">Contact</a>
+        <a class="sec" href="/#contact">Contact</a>
         <a class="nav-cta" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Email Amber</a>
       </nav>
     </header>
@@ -334,7 +344,9 @@
       <a class="btn ghost" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     </div>
-    <img class="portrait" src="images/amber-lan.png" alt="Amber Lan, AI marketing engineer, Auckland" width="560" height="560" fetchpriority="high">
+    <figure class="portrait">
+      <img src="assets/amber-lan-editorial-hero-v2.webp" alt="Editorial halftone portrait of Amber Lan in the Flow AI ink, cream, and amber palette" width="1448" height="1086" fetchpriority="high">
+    </figure>
     </div>
   </div>
 </div>
