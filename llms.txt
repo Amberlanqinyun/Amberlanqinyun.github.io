@@ -20,6 +20,8 @@ Site structure:
 - /work/content-engine.html: case study, a content engine with a codified voice gate; clean-room code public on GitHub.
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
+- /blog/: guides and working notes, published weekly.
+- /blog/ai-marketing-for-small-business-nz.html: the complete guide to AI marketing for NZ small businesses - what it covers, costs versus an agency or hire, and a starting checklist.
 - /tools/benchmark.html: free 2-minute AI-readiness benchmark for businesses. No email required.
 - /tools/pricing.html: free interactive pricing model (Lerner rule, economic value to the customer).
 - /flowai-brand-guidelines.html: the Flow AI brand system.

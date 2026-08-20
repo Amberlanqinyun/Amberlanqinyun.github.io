@@ -12,6 +12,8 @@ Last updated: 2026-08-20
 | `/work/enterprise-gtm.html` | Case study: three demand engines, one pipeline, one launch | Article + BreadcrumbList schema. |
 | `/work/content-engine.html` | Case study: the voice-gated content engine | Article + BreadcrumbList schema. |
 | `/work/geo-seo-toolkit.html` | Case study: the GEO/AEO toolkit, running on this site | Article + BreadcrumbList schema. |
+| `/blog/` | Guide index, one substantial piece a week | Cluster plan at ~/Desktop/flowai-seo-cluster/. |
+| `/blog/ai-marketing-for-small-business-nz.html` | Pillar guide for the content cluster | Article + FAQPage + BreadcrumbList schema. |
 | `/tools/benchmark.html` | Free AI-readiness benchmark (lead magnet, no email gate) | WebApplication schema. |
 | `/tools/pricing.html` | Free interactive Lerner-rule pricing model | WebApplication schema. |
 
@@ -23,9 +25,7 @@ Last updated: 2026-08-20
 
 ## Planned
 
-- `/blog/` — 13-post hub-and-spoke cluster per `~/Desktop/flowai-seo-cluster/cluster-plan.md`
-  (1 pillar + 3 clusters × 4 spokes; publish order and briefs in that directory). Add each
-  post to the sitemap with its real publish date as `lastmod`.
+- Remaining 12 spoke posts of the `/blog/` cluster per `~/Desktop/flowai-seo-cluster/cluster-plan.md` (pillar is live; add each spoke to sitemap and feed with its real publish date, and swap in the spoke links held as HTML comments in the pillar).
 
 ## Conventions
 
