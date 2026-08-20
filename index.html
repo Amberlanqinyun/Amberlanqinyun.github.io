@@ -426,6 +426,13 @@
   .fig circle, .process-line circle { transition: opacity var(--t-slow) var(--ease) 500ms; }
   .undrawn path { stroke-dashoffset: 1 !important; transition: none !important; }
   .undrawn circle { opacity: 0 !important; transition: none !important; }
+  .receipts { margin-top: clamp(52px, 8vh, 88px); padding-top: clamp(36px, 5vh, 52px); border-top: 1px solid var(--hair); }
+  .receipts-lede { font-size: 15px; color: var(--mute); margin-bottom: 26px; }
+  .receipts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 36px); }
+  .receipts-grid a.go { font-size: 15px; }
+  .receipts-grid span { display: block; margin-top: 8px; font-size: 13.5px; color: var(--mute); line-height: 1.55; }
+  @media (max-width: 760px) { .receipts-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 460px) { .receipts-grid { grid-template-columns: 1fr; } }
   .proof-more { margin-top: clamp(52px, 8vh, 88px); padding-top: clamp(44px, 6vh, 64px); border-top: 1px solid var(--hair); text-align: center; }
   .proof-more p { color: var(--dim); max-width: 48ch; margin: 0 auto 26px; font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); }
   .role { font-size: 13px; color: var(--mute); font-weight: 500; margin-bottom: 16px; }
@@ -842,8 +849,18 @@
     </div>
   </div>
 
+  <div class="receipts reveal">
+    <p class="receipts-lede">The code is public. Four systems you can read right now:</p>
+    <div class="receipts-grid">
+      <div><a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude</a><span>AEO/GEO toolkit: citability scoring, AI-crawler analysis, schema.</span></div>
+      <div><a class="go" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">Flow AI content system</a><span>Brief in, publish-ready NZ service pages out.</span></div>
+      <div><a class="go" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">Content engine</a><span>One source in, a month of voice-audited posts out.</span></div>
+      <div><a class="go" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">Social Media OS</a><span>Plan once, adapt per platform, ship on schedule.</span></div>
+    </div>
+  </div>
+
   <div class="proof-more reveal">
-    <p>These are two parts of a bigger machine, strategy, demand engines, and the software that runs them.</p>
+    <p>These are parts of a bigger machine, strategy, demand engines, and the software that runs them.</p>
     <a class="btn ghost" href="work.html">See the full body of work →</a>
   </div>
 </section>
