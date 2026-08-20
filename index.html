@@ -54,7 +54,7 @@
       "jobTitle": "AI Marketing Engineer",
       "description": "AI marketing engineer. Founder of Flow AI. Runs marketing solo at an AI startup on an agent stack she built, and builds the same systems for NZ small and medium businesses: content engines, SEO and answer engine optimization, outbound automation, analytics.",
       "email": "mailto:amber.lan.growth.digital@gmail.com",
-      "url": "https://www.flowai.co.nz/#behind",
+      "url": "https://www.flowai.co.nz/about.html",
       "worksFor": { "@id": "https://www.flowai.co.nz/#flowai" },
       "sameAs": [
         "https://github.com/Amberlanqinyun",
@@ -328,23 +328,6 @@
     letter-spacing: -0.01em; color: var(--dim); max-width: 46ch;
   }
 
-  /* Results: display numerals */
-  .result {
-    display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-    gap: clamp(28px, 5vw, 72px); align-items: center;
-    padding: clamp(40px, 6vh, 60px) 0; border-top: 1px solid var(--hair);
-  }
-  .result:last-of-type { border-bottom: 1px solid var(--hair); }
-  .result .num {
-    font-weight: 600; font-size: clamp(44px, 6vw, 78px); letter-spacing: -0.05em;
-    line-height: 0.95; color: var(--fg); font-feature-settings: "tnum";
-    transition: font-weight 900ms var(--ease) 200ms;
-  }
-  .reveal.pre .num { font-weight: 200; }
-  .result .what { font-size: 16px; color: var(--dim); max-width: 40ch; }
-  .result .who { margin-top: 14px; font-size: 13px; color: var(--mute); font-weight: 500; }
-  .results-note { margin-top: 36px; font-size: 14.5px; color: var(--mute); max-width: 54ch; }
-
   /* Offer: sticky heading left, rows right */
   .offer-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
   .offer-left { position: sticky; top: 120px; }
@@ -410,6 +393,12 @@
   .price.anchor .pv { color: var(--ink); }
   .price.anchor .pv small { color: rgba(14,14,13,0.55); }
   .price.anchor p { color: rgba(14,14,13,0.75); }
+  .founding { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; padding-top: 34px; border-top: 1px solid var(--hair); }
+  .founding b { display: block; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; letter-spacing: -0.03em; color: var(--fg); margin-bottom: 10px; font-feature-settings: "tnum"; transition: font-weight 900ms var(--ease) 200ms; }
+  .founding.reveal.pre b { font-weight: 200; }
+  .founding span { font-size: 14px; color: var(--dim); line-height: 1.55; display: inline-block; max-width: 34ch; }
+  @media (max-width: 760px) { .founding { grid-template-columns: 1fr; gap: 24px; } }
+  .results-note { margin-top: 36px; font-size: 14.5px; color: var(--mute); max-width: 54ch; }
   .prices-note { margin-top: 28px; font-size: 14px; color: var(--mute); }
 
   /* Proof: alternating compositions */
@@ -423,8 +412,8 @@
     box-shadow: inset 0 1px 0 rgba(250,248,243,0.06);
   }
   .fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
-  .fig path, .process-line path { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 800ms var(--ease); }
-  .fig circle, .process-line circle { transition: opacity var(--t-slow) var(--ease) 500ms; }
+  .fig path, .process-line path, .offer-fig path { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 800ms var(--ease); }
+  .fig circle, .process-line circle, .offer-fig circle { transition: opacity var(--t-slow) var(--ease) 500ms; }
   .undrawn path { stroke-dashoffset: 1 !important; transition: none !important; }
   .undrawn circle { opacity: 0 !important; transition: none !important; }
   .receipts { margin-top: clamp(52px, 8vh, 88px); padding-top: clamp(36px, 5vh, 52px); border-top: 1px solid var(--hair); }
@@ -444,18 +433,6 @@
 
   .offer-fig { display: block; margin-top: 44px; width: min(170px, 55%); height: auto; color: var(--cream); }
   @media (max-width: 760px) { .offer-fig { display: none; } }
-  .bio-fig { margin-bottom: 32px; max-width: 480px; }
-  .bio-fig svg { display: block; width: 100%; height: auto; color: var(--cream); }
-
-  /* Behind */
-  .behind-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
-  .bio { font-weight: 300; font-size: clamp(19px, 2.2vw, 25px); line-height: 1.5; letter-spacing: -0.014em; color: var(--dim); max-width: 40ch; }
-  .bio b { font-weight: 500; }
-  .behind-list { list-style: none; }
-  .behind-list li { padding: 16px 0; border-top: 1px solid var(--hair); font-size: 15.5px; color: var(--dim); }
-  .behind-list li:last-child { border-bottom: 1px solid var(--hair); }
-  .links { margin-top: 28px; display: flex; gap: 24px; }
-
   /* FAQ */
   .faq { max-width: 860px; }
   .faq details { border-top: 1px solid var(--hair); }
@@ -499,6 +476,10 @@
     position: absolute; bottom: -30%; left: -14%; width: min(48vw, 520px); height: auto;
     color: var(--cream); opacity: 0.05; z-index: -1; pointer-events: none; transform: rotate(180deg);
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .end .bleed { animation: ringspin 140s linear infinite; }
+    @keyframes ringspin { from { transform: rotate(180deg); } to { transform: rotate(540deg); } }
+  }
   .end h2 { font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.045em; max-width: 16ch; margin-bottom: 0; }
   .end p { margin: 32px auto 52px; font-weight: 300; font-size: var(--fs-lede); line-height: 1.5; color: var(--dim); max-width: 40ch; text-wrap: balance; }
   .foot-nav {
@@ -535,6 +516,11 @@
     .hero h1 .line:nth-child(2) { animation-name: rise, weigh; animation-duration: 560ms, 900ms; animation-delay: 190ms, 190ms; animation-fill-mode: forwards, forwards; animation-timing-function: var(--ease-out), var(--ease-out); }
     @keyframes weigh { from { font-weight: 250; } to { font-weight: 600; } }
 
+    /* Hero pipeline drifts gently as you scroll past it (depth) */
+    @supports (animation-timeline: view()) {
+      .hero-fig { animation: rise 560ms var(--ease-out) 300ms forwards, heroDrift linear both; animation-timeline: auto, view(); animation-range: normal, exit 0% exit 100%; }
+      @keyframes heroDrift { to { translate: 0 -28px; } }
+    }
     /* Hero pipeline draws on load... */
     .hero-fig path.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawin 1300ms var(--ease-out) 700ms forwards; }
     @keyframes drawin { to { stroke-dashoffset: 0; } }
@@ -563,8 +549,7 @@
   @media (max-width: 760px) {
     section { padding: 80px 0 0; }
     .meta-grid { grid-template-columns: 1fr; gap: 22px; }
-    .result { grid-template-columns: 1fr; gap: 18px; }
-    .offer-grid, .behind-grid { grid-template-columns: 1fr; }
+    .offer-grid { grid-template-columns: 1fr; }
     .offer-left { position: relative; top: 0; }
     .process, .prices { grid-template-columns: 1fr; }
     .process p { max-width: 46ch; }
@@ -589,13 +574,13 @@
 <div class="nav-bar">
   <div class="wrap">
     <header class="nav">
-      <a class="name" href="index.html" aria-label="Flow AI home">
+      <a class="name" href="/" aria-label="Flow AI home">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="#171715" stroke="rgba(250,248,243,0.22)" stroke-width="2"/><text x="30" y="44" font-size="34" font-weight="600" fill="#FAF8F3" text-anchor="middle">F</text><circle cx="46" cy="41" r="4.5" fill="#E4A43C"/></svg>
         Flow AI.
       </a>
       <nav>
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
         <a class="sec" href="#pricing">Pricing</a>
         <a class="sec" href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -615,7 +600,7 @@
           <p class="lede">One engineer, plus the agent systems that run your marketing. <b>Found on Google, cited by ChatGPT, reported monthly.</b></p>
           <div class="cta">
             <a class="btn primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Book a discovery call</a>
-            <a class="btn ghost" href="tools/benchmark.html">Run the AI-readiness check</a>
+            <a class="btn ghost" href="/tools/benchmark.html">Run the AI-readiness check</a>
           </div>
         </div>
         <!-- The pipeline: one artery in, five named systems out.
@@ -686,12 +671,12 @@
       <!-- One artery, five branches: the same map as the hero, one per row opposite. -->
       <svg class="offer-fig" viewBox="0 0 200 260" aria-hidden="true">
         <g fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M24 28 V 236" opacity=".45"/>
-          <path d="M24 44  C 60 44,  60 44,  120 44"  opacity=".3"/>
-          <path d="M24 92  C 60 92,  60 92,  120 92"  opacity=".3"/>
-          <path d="M24 140 C 60 140, 60 140, 120 140" opacity=".3"/>
-          <path d="M24 188 C 60 188, 60 188, 120 188" opacity=".3"/>
-          <path d="M24 236 C 60 236, 60 236, 120 236" opacity=".3"/>
+          <path pathLength="1" d="M24 28 V 236" opacity=".45"/>
+          <path pathLength="1" d="M24 44  C 60 44,  60 44,  120 44"  opacity=".3"/>
+          <path pathLength="1" d="M24 92  C 60 92,  60 92,  120 92"  opacity=".3"/>
+          <path pathLength="1" d="M24 140 C 60 140, 60 140, 120 140" opacity=".3"/>
+          <path pathLength="1" d="M24 188 C 60 188, 60 188, 120 188" opacity=".3"/>
+          <path pathLength="1" d="M24 236 C 60 236, 60 236, 120 236" opacity=".3"/>
           <circle cx="126" cy="44" r="5" opacity=".55"/><circle cx="126" cy="92" r="5" opacity=".55"/>
           <circle cx="126" cy="140" r="5" opacity=".55"/><circle cx="126" cy="188" r="5" opacity=".55"/>
           <circle cx="126" cy="236" r="5" opacity=".55"/>
@@ -756,92 +741,10 @@
   </div>
 </section>
 
-<section id="tools">
-  <h2 class="reveal">Check where you stand, <span class="off">free, before we talk.</span></h2>
-  <div class="tools-panel reveal">
-    <div class="tool">
-      <div class="tn">Free tool · 2 minutes</div>
-      <h3>AI-readiness benchmark</h3>
-      <p>Score how ready your business is to grow with AI, across strategy, data, tooling, governance, and team. No email required.</p>
-      <a class="go" href="tools/benchmark.html">Run the AI-readiness check →</a>
-    </div>
-    <div class="tool">
-      <div class="tn">Free tool · interactive</div>
-      <h3>Pricing model</h3>
-      <p>Find your profit-maximising price from cost, customer value, and elasticity, using the published Lerner rule. Strategy you can click.</p>
-      <a class="go" href="tools/pricing.html">Open the pricing model →</a>
-    </div>
-  </div>
-  <p class="prices-note reveal">Ask ChatGPT or Google who does what you do. If your business doesn't come up, that's the gap the retainer closes: search visibility where buyers actually ask, including <b>ChatGPT, Perplexity, Gemini, Copilot, and Google's AI Overviews</b>.</p>
-</section>
-
-<section id="results">
-  <h2 class="reveal">Founding terms, <span class="off">honest numbers.</span></h2>
-  <div class="result reveal">
-    <div class="num">5 <span style="color:var(--mute)">seats</span></div>
-    <div>
-      <p class="what">Founding-client places for 2026. The price locks at NZ$1,000 a month for as long as you stay.</p>
-      <div class="who">Founding offer</div>
-    </div>
-  </div>
-  <div class="result reveal">
-    <div class="num">14 <span style="color:var(--mute)">days</span></div>
-    <div>
-      <p class="what">To your first report: what shipped, what it changed, what happens next. Same report every month, one page, numbers first.</p>
-      <div class="who">First report</div>
-    </div>
-  </div>
-  <div class="result reveal">
-    <div class="num">$500</div>
-    <div>
-      <p class="what">Referral fee for every signed client you send, paid after their first invoice clears.</p>
-      <div class="who">Referral</div>
-    </div>
-  </div>
-  <p class="results-note reveal">Why there are no client logos here yet: Flow AI opened to founding clients in 2026, and I don't publish numbers I can't back. The receipts that do exist are public, <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">the systems on GitHub</a> and the AI startup whose marketing I run by day. Founding-client results will be published here with real names and real numbers as they land.</p>
-</section>
-
-<section id="pricing">
-  <h2 class="reveal">Pricing <span class="off">you don't have to ask for.</span></h2>
-  <div class="prices">
-    <div class="price reveal">
-      <div class="pn">Starter sprint</div>
-      <div class="pv">$997 <small>one-time</small></div>
-      <p>One marketing system, built and live within days. The way most clients start.</p>
-    </div>
-    <div class="price anchor reveal">
-      <div class="pn">Marketing engine · <b>founding rate</b></div>
-      <div class="pv">$1,000 <small>per month</small></div>
-      <p>Your marketing run end to end: content shipped, SEO and AI-search visibility working, outbound running, one clear monthly report. Cancel anytime.</p>
-    </div>
-  </div>
-  <p class="prices-note reveal">All prices NZD. NZ and AU timezone support. <b>30-day money-back guarantee on the first month.</b> For comparison: NZ agency retainers typically run $2,000 to $10,000 a month. The gap isn't corner-cutting, it's automation: the systems do the production, one engineer does the judgment. And if you send a client who signs, <b>you get NZ$500</b> after their first invoice clears.</p>
-</section>
-
 <section id="proof">
   <h2 class="reveal">Proof, <span class="off">not promises.</span></h2>
 
   <div class="case split reveal">
-    <div>
-      <div class="role">Pricing model, live and interactive</div>
-      <h3>A pricing strategy, built as a working economic model.</h3>
-      <p>Cost, customer value, and elasticity resolve to a profit-maximising price using the published Lerner rule, <b>strategy you can actually click, not a slide.</b> Built and hosted here.</p>
-      <a class="go" href="tools/pricing.html">Open the pricing model →</a>
-    </div>
-    <!-- Abstract diagram: a profit curve peaking at the optimum. -->
-    <div class="fig" aria-hidden="true">
-      <svg viewBox="0 0 800 480">
-        <g fill="none" stroke="currentColor" stroke-width="1.5">
-          <path pathLength="1" d="M110 420 H 690" opacity=".25" stroke-dasharray="5 5"/>
-          <path pathLength="1" d="M110 410 C 200 150, 270 130, 320 130 C 470 130, 560 320, 700 400" stroke-width="3" opacity=".9"/>
-        </g>
-        <circle cx="320" cy="130" r="9" fill="#E4A43C"/>
-        <circle cx="410" cy="158" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="case split flip reveal">
     <div>
       <div class="role">Go-to-market strategy, enterprise AI platform</div>
       <h3>Three demand engines, one pipeline, one launch.</h3>
@@ -876,45 +779,57 @@
     </div>
   </div>
 
+  <p class="results-note reveal">Why there are no client logos here yet: Flow AI opened to founding clients in 2026, and I don't publish numbers I can't back. The receipts that do exist are public, <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">the systems on GitHub</a> and the AI startup whose marketing I run by day. Founding-client results will be published here with real names and real numbers as they land.</p>
+
   <div class="proof-more reveal">
-    <p>These are parts of a bigger machine, strategy, demand engines, and the software that runs them.</p>
-    <a class="btn ghost" href="work.html">See the full body of work →</a>
+    <p>All of it is built and run by one engineer, <a class="go" href="/about.html">Amber Lan</a>: strategy, demand engines, and the software underneath them.</p>
+    <a class="btn ghost" href="/work.html">See the full body of work →</a>
   </div>
 </section>
 
-<section id="behind">
-  <div class="behind-grid">
-    <div>
-      <h2 class="reveal">Who you <span class="off">work with.</span></h2>
-      <!-- TODO: swap this abstract figure for a real headshot when ready. A face measurably lifts conversion. -->
-      <div class="fig bio-fig reveal" aria-hidden="true">
-        <svg viewBox="0 0 800 380">
-          <g fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="560" cy="190" r="40"  opacity=".3"/>
-            <circle cx="560" cy="190" r="80"  opacity=".22"/>
-            <circle cx="560" cy="190" r="120" opacity=".15"/>
-            <circle cx="560" cy="190" r="160" opacity=".09"/>
-            <path d="M60 190 H 512" opacity=".45"/>
-          </g>
-          <circle cx="60" cy="190" r="9" fill="currentColor" opacity=".7"/>
-          <circle cx="560" cy="190" r="9" fill="#E4A43C"/>
-        </svg>
-      </div>
-      <p class="bio reveal">I'm <b>Amber Lan, an AI marketing engineer</b> in Auckland. By day I run marketing solo at an AI startup, on agent systems I built myself. Flow AI is the same method, pointed at your business. <b>You work with me directly</b>, and I publish what works, what breaks, and the real numbers.</p>
-      <div class="links reveal">
-        <a class="go" href="about.html">More about me</a>
-        <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a>
-        <a class="go" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+<section id="tools">
+  <h2 class="reveal">Check where you stand, <span class="off">free, before we talk.</span></h2>
+  <div class="tools-panel reveal">
+    <div class="tool">
+      <div class="tn">Free tool · 2 minutes</div>
+      <h3>AI-readiness benchmark</h3>
+      <p>Score how ready your business is to grow with AI, across strategy, data, tooling, governance, and team. No email required.</p>
+      <a class="go" href="/tools/benchmark.html">Run the AI-readiness check →</a>
     </div>
-    <ul class="behind-list reveal">
-      <li><b>Strategy.</b> Positioning, offers, channel selection, brand voice.</li>
-      <li><b>Engineering.</b> AI automation, agent systems, growth engineering. Python, TypeScript, Swift.</li>
-      <li><b>Track record.</b> A content engine, distribution tooling, and a shipped iOS app, built solo. All public on GitHub.</li>
-      <li><b>Bilingual.</b> English and Mandarin, native. Both markets, one engineer.</li>
-    </ul>
+    <div class="tool">
+      <div class="tn">Free tool · interactive</div>
+      <h3>Pricing model</h3>
+      <p>Find your profit-maximising price from cost, customer value, and elasticity, using the published Lerner rule. Strategy you can click.</p>
+      <a class="go" href="/tools/pricing.html">Open the pricing model →</a>
+    </div>
   </div>
+  <p class="prices-note reveal">Ask ChatGPT or Google who does what you do. If your business doesn't come up, that's the gap the retainer closes: search visibility where buyers actually ask, including <b>ChatGPT, Perplexity, Gemini, Copilot, and Google's AI Overviews</b>.</p>
 </section>
+
+
+<section id="pricing">
+  <h2 class="reveal">Pricing <span class="off">you don't have to ask for.</span></h2>
+  <div class="prices">
+    <div class="price reveal">
+      <div class="pn">Starter sprint</div>
+      <div class="pv">$997 <small>one-time</small></div>
+      <p>One marketing system, built and live within days. The way most clients start.</p>
+    </div>
+    <div class="price anchor reveal">
+      <div class="pn">Marketing engine · <b>founding rate</b></div>
+      <div class="pv">$1,000 <small>per month</small></div>
+      <p>Your marketing run end to end: content shipped, SEO and AI-search visibility working, outbound running, one clear monthly report. Cancel anytime.</p>
+    </div>
+  </div>
+  <div class="founding reveal">
+    <div><b>5 seats</b><span>Founding-client places for 2026. The price locks at NZ$1,000 a month for as long as you stay.</span></div>
+    <div><b>14 days</b><span>To your first report: what shipped, what it changed, what happens next. One page, numbers first, every month.</span></div>
+    <div><b>NZ$500</b><span>Referral fee for every signed client you send, paid after their first invoice clears.</span></div>
+  </div>
+  <p class="prices-note reveal">All prices NZD. NZ and AU timezone support. <b>30-day money-back guarantee on the first month.</b> For comparison: NZ agency retainers typically run $2,000 to $10,000 a month. The gap isn't corner-cutting, it's automation: the systems do the production, one engineer does the judgment. And if you send a client who signs, <b>you get NZ$500</b> after their first invoice clears.</p>
+</section>
+
+
 
 <section id="faq">
   <h2 class="reveal">Questions, <span class="off">answered straight.</span></h2>
@@ -968,10 +883,10 @@
     <p class="reveal">Tonight, somewhere in New Zealand, someone asks an AI for exactly what you do. Tell me what you've built and who it's for. <b>You'll get your go-to-market read, in writing, within the first week</b>, before any commitment.</p>
     <a class="btn primary reveal" href="mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A">Book a discovery call</a>
     <nav class="foot-nav" aria-label="Site">
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="tools/benchmark.html">AI-readiness benchmark</a>
-      <a href="tools/pricing.html">Pricing model</a>
+      <a href="/work.html">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/tools/benchmark.html">AI-readiness benchmark</a>
+      <a href="/tools/pricing.html">Pricing model</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -998,7 +913,7 @@
   document.querySelectorAll('.reveal').forEach(function (el) {
     if (el.getBoundingClientRect().top > vh * 0.95) {
       el.classList.add('pre');
-      el.querySelectorAll('.fig, .process-line').forEach(function (f) { f.classList.add('undrawn'); });
+      el.querySelectorAll('.fig, .process-line, .offer-fig').forEach(function (f) { f.classList.add('undrawn'); });
       if (el.classList.contains('fig') || el.classList.contains('process-line')) el.classList.add('undrawn');
       pending.push(el);
     }
