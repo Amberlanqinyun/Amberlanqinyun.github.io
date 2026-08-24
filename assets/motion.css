@@ -1,0 +1,83 @@
+/* Flow AI shared motion layer.
+   Scroll reveals, grid stagger, image load-in, and card hover polish.
+   Hidden states are applied by motion.js only when the browser supports
+   IntersectionObserver and the visitor has not asked for reduced motion,
+   so content is always visible if the script never runs. */
+
+:root {
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-duration: 680ms;
+  --motion-distance: 18px;
+  --motion-stagger: 65ms;
+}
+
+/* --- scroll reveal --- */
+
+[data-motion-item] {
+  transition:
+    opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+  transition-delay: calc(var(--motion-index, 0) * var(--motion-stagger));
+  will-change: opacity, transform;
+}
+
+[data-motion-item="hidden"] {
+  opacity: 0;
+  transform: translate3d(0, var(--motion-distance), 0);
+}
+
+[data-motion-item="shown"] {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Cards travel a touch further and scale a hair, which reads as depth
+   rather than a flat slide. */
+[data-motion-item][data-motion-card="hidden"] {
+  transform: translate3d(0, calc(var(--motion-distance) + 8px), 0) scale(0.985);
+}
+
+/* --- image load-in --- */
+
+[data-motion-img] {
+  transition:
+    opacity 760ms var(--motion-ease),
+    transform 760ms var(--motion-ease),
+    filter 760ms var(--motion-ease);
+}
+
+[data-motion-img="loading"] {
+  opacity: 0;
+  transform: scale(1.03);
+  filter: blur(8px);
+}
+
+[data-motion-img="loaded"] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* --- focus safety ---
+   A keyboard user tabbing to something still hidden reveals it instantly. */
+[data-motion-item="hidden"]:focus-within {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion-item],
+  [data-motion-item="hidden"],
+  [data-motion-item="shown"],
+  [data-motion-img],
+  [data-motion-img="loading"],
+  [data-motion-img="loaded"] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
