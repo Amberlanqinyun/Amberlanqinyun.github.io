@@ -20,6 +20,7 @@ Site structure:
 - /work/enterprise-gtm.html: case study, three demand engines feeding one pipeline for an enterprise AI platform launch.
 - /work/content-engine.html: case study, a content engine with a codified voice gate; clean-room code public on GitHub.
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
+- /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /sprints/: five fixed-scope NZ$997 starter sprints, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 58 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus 41 curated Gingiris growth playbooks by Iris Wei covering launch, growth, community, open source, and ASO. Every entry names its author and links to source.

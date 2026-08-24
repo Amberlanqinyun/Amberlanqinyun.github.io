@@ -1,0 +1,139 @@
+/* Flow AI shared footer. One structure on every page: a brand column,
+   four link columns grouped by what the visitor is trying to do, and a
+   legal bar. Self-contained colours so it renders identically on pages
+   with different CSS variable names. */
+
+.site-footer {
+  margin-top: clamp(5rem, 10vw, 9rem);
+  border-top: 1px solid rgba(250, 248, 243, 0.13);
+  background: #0e0e0d;
+  color: rgba(250, 248, 243, 0.56);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.site-footer a { color: inherit; text-decoration: none; }
+
+.site-footer__inner {
+  display: grid;
+  width: min(calc(100% - 48px), 1180px);
+  margin-inline: auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr));
+  gap: clamp(32px, 4vw, 56px);
+}
+
+/* brand column */
+
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #faf8f3;
+  font-size: 16px;
+  font-weight: 680;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.site-footer__mark {
+  position: relative;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(250, 248, 243, 0.24);
+  border-radius: 8px;
+  background: #171715;
+  font-size: 15px;
+}
+
+.site-footer__mark::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #e4a43c;
+}
+
+.site-footer__blurb {
+  max-width: 34ch;
+  margin-top: 18px;
+  color: rgba(250, 248, 243, 0.56);
+  font-size: 14px;
+}
+
+.site-footer__mail {
+  display: inline-block;
+  margin-top: 18px;
+  color: #faf8f3;
+  font-size: 14px;
+  font-weight: 560;
+  border-bottom: 1px solid rgba(228, 164, 60, 0.55);
+  transition: border-color 180ms ease;
+}
+
+.site-footer__mail:hover { border-color: #e4a43c; }
+
+/* link columns */
+
+.site-footer__label {
+  margin: 0 0 18px;
+  color: #faf8f3;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 660;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-footer__col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__col li + li { margin-top: 11px; }
+
+.site-footer__col a {
+  color: rgba(250, 248, 243, 0.56);
+  transition: color 180ms ease;
+}
+
+.site-footer__col a:hover { color: #faf8f3; }
+
+/* legal bar */
+
+.site-footer__bar {
+  display: flex;
+  width: min(calc(100% - 48px), 1180px);
+  margin-inline: auto;
+  padding: 22px 0 40px;
+  border-top: 1px solid rgba(250, 248, 243, 0.13);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 28px;
+  color: rgba(250, 248, 243, 0.42);
+  font-size: 12.5px;
+}
+
+.site-footer__social { display: flex; gap: 20px; }
+.site-footer__social a { transition: color 180ms ease; }
+.site-footer__social a:hover { color: #faf8f3; }
+
+@media (max-width: 900px) {
+  .site-footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-footer__brand-col { grid-column: 1 / -1; }
+}
+
+@media (max-width: 640px) {
+  .site-footer__inner,
+  .site-footer__bar { width: min(calc(100% - 32px), 1180px); }
+  .site-footer__bar { flex-direction: column; align-items: flex-start; }
+}
