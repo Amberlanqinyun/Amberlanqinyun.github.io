@@ -22,7 +22,7 @@ Site structure:
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /sprints/: five fixed-scope NZ$997 starter sprints, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
-- /skills/: Flow AI skill library with 17 inspectable SKILL.md files for research, GEO, SEO, content operations, reporting, and product systems.
+- /skills/: Flow AI skill library with 58 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus 41 curated Gingiris growth playbooks by Iris Wei covering launch, growth, community, open source, and ASO. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
