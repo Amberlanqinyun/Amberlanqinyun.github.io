@@ -269,7 +269,7 @@
     var weak=DIMS.slice().sort(function(a,b){return answers[a.key]-answers[b.key];})[0];
     $('stageName').textContent=stage.name;
     $('scoreVal').textContent=score;
-    $('read').innerHTML=stage.read+' <span class="weak">Your weakest dimension is <b>'+weak.label.toLowerCase()+'</b>, that is where I would start.</span> <a href=\"mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call%20%C2%B7%20benchmark&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A\" style=\"color:var(--fg);border-bottom:1px solid rgba(228,164,60,0.55);\">Want the plan for closing it? Email Amber.</a>';
+    $('read').innerHTML=stage.read+' <span class="weak">Your weakest dimension is <b>'+weak.label.toLowerCase()+'</b>, that is where I would start.</span> <a href=\"mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call%20%C2%B7%20benchmark&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A\" style=\"color:var(--fg);border-bottom:1px solid rgba(228,164,60,0.55);\">Want the plan for closing it? Email Amber.</a> <a href=\"/sprints/\" style=\"color:var(--fg);border-bottom:1px solid rgba(228,164,60,0.55)\">Or see which sprint fixes it.</a>';
   }
 
   render();
