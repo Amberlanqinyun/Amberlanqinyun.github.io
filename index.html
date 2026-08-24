@@ -157,7 +157,7 @@
       --display: clamp(3.25rem, 6.5vw, 6.75rem);
       --h2: clamp(2.25rem, 4.5vw, 4.75rem);
       --h3: clamp(1.25rem, 2vw, 1.65rem);
-      --section: clamp(6rem, 12vw, 10rem);
+      --section: clamp(8rem, 15vw, 13.5rem);
       --radius: 18px;
       --pill: 999px;
       --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -394,7 +394,7 @@
       display: grid;
       grid-template-columns: 1.15fr 1fr 0.85fr;
       gap: 36px;
-      padding: 30px 0;
+      padding: 38px 0;
     }
     .trust-item b {
       display: block;
@@ -406,7 +406,7 @@
     .trust-item span { display: block; max-width: 36ch; color: var(--soft); font-size: 14px; line-height: 1.5; }
 
     section { padding-top: var(--section); scroll-margin-top: 84px; }
-    .section-intro { max-width: 760px; margin-bottom: clamp(42px, 6vw, 74px); }
+    .section-intro { max-width: 760px; margin-bottom: clamp(52px, 7vw, 92px); }
     h2 {
       max-width: 14ch;
       font-size: var(--h2);
@@ -423,25 +423,25 @@
     }
 
     .reality-check {
-      display: grid;
-      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-      gap: clamp(36px, 7vw, 100px);
-      align-items: end;
+      max-width: 920px;
+      margin-inline: auto;
+      padding: clamp(1rem, 3vw, 2.5rem) 0;
+      text-align: center;
     }
     .reality-check .statement {
-      max-width: 24ch;
+      max-width: 22ch;
+      margin-inline: auto;
       color: var(--fg);
-      font-size: clamp(1.6rem, 3.3vw, 2.8rem);
+      font-size: clamp(1.9rem, 4vw, 3.4rem);
       font-weight: 450;
       letter-spacing: -0.035em;
-      line-height: 1.15;
+      line-height: 1.14;
     }
     .reality-check .statement span { color: var(--soft); }
     .reality-check .explain {
       max-width: 52ch;
-      padding-top: 26px;
-      border-top: 1px solid var(--hair-strong);
-      font-size: 17px;
+      margin: 32px auto 0;
+      font-size: 17.5px;
     }
 
     .bento {
@@ -522,6 +522,7 @@
     }
     .bento-cta p { max-width: 47ch; color: var(--muted); font-size: 15px; }
 
+    .offer-process { margin-top: clamp(76px, 10vw, 120px); }
     .process-grid {
       position: relative;
       display: grid;
@@ -609,6 +610,7 @@
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       overflow: hidden;
+      margin-top: clamp(60px, 8vw, 92px);
       border: 1px solid var(--hair);
       border-radius: var(--radius);
       background: var(--surface);
@@ -620,7 +622,13 @@
       padding: clamp(30px, 5vw, 58px);
       background: var(--accent-soft);
     }
-    .tool-intro h2 { font-size: clamp(2rem, 4vw, 3.8rem); }
+    .tool-intro h3 {
+      max-width: 13ch;
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+    }
     .tool-intro p { max-width: 34ch; margin-top: 20px; font-size: 15px; }
     .tool-list { display: grid; }
     .tool {
@@ -797,7 +805,9 @@
       .trust-grid { grid-template-columns: 1fr; gap: 22px; }
       section { padding-top: 72px; }
       .section-intro { margin-bottom: 38px; }
-      .reality-check { grid-template-columns: 1fr; align-items: start; }
+      .reality-check { text-align: left; }
+      .reality-check .statement,
+      .reality-check .explain { margin-inline: 0; }
       .bento { display: grid; grid-template-columns: 1fr; grid-template-rows: auto; }
       .capability,
       .capability.strategy,
@@ -861,7 +871,7 @@
         <div class="hero-copy-block">
           <p class="eyebrow">Amber Lan / AI marketing engineer</p>
           <h1 id="hero-title">I build strategy into pipeline.</h1>
-          <p class="hero-copy">Positioning, AI-search visibility, content, outbound, and analytics, engineered as one operating system.</p>
+          <p class="hero-copy">Positioning, AI-search visibility, content, outbound, and analytics, built as one system you can inspect, measure, and keep.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/work.html">View systems</a>
             <a class="btn btn-secondary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Flow%20AI%20project&amp;body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%0AOur%20website%3A%0AThe%20marketing%20gap%20we%20need%20to%20solve%3A%0A">Email Amber</a>
@@ -908,52 +918,50 @@
         <div class="bento reveal">
           <article class="capability strategy">
             <h3>Go-to-market strategy</h3>
-            <p>Positioning, ideal customer profile, message, and channel choices. <strong>A plan designed to be built.</strong></p>
+            <p>Know who you sell to, what to say, and which channels deserve budget. <strong>A plan designed to be built.</strong></p>
           </article>
           <article class="capability inbound">
             <h3>AI-search visibility</h3>
-            <p>Technical SEO, answer-ready content, structured data, and source authority.</p>
+            <p>Get found and cited when buyers ask Google or an AI assistant about your problem space.</p>
           </article>
           <article class="capability content">
             <h3>Content operations</h3>
-            <p>One source becomes useful, voice-consistent assets across channels.</p>
+            <p>One strong idea becomes a month of voice-consistent assets, without the treadmill.</p>
           </article>
           <article class="capability outbound">
             <h3>Outbound systems</h3>
-            <p>Research, segmentation, personalization, and follow-up with human judgment retained.</p>
+            <p>Researched, personal outreach to the right buyers, with human judgment on every send.</p>
           </article>
           <article class="capability analytics">
             <h3>Measurement</h3>
-            <p>Tracking from the first visit to the qualified conversation, with reporting built for decisions.</p>
+            <p>See which effort produced which conversation, so next month's budget goes where it worked.</p>
           </article>
+        </div>
+
+        <div class="offer-process reveal" id="process">
+          <p class="eyebrow">From diagnosis to operation</p>
+          <div class="process-grid">
+            <article class="process-item">
+              <h3>Diagnose</h3>
+              <p>A focused call, followed by a written go-to-market read and a ranked set of opportunities.</p>
+              <small>Delivered within the first week</small>
+            </article>
+            <article class="process-item">
+              <h3>Build</h3>
+              <p>The first agreed system goes live with the assets, automation, and tracking needed to run it.</p>
+              <small>First launch targeted for week one</small>
+            </article>
+            <article class="process-item">
+              <h3>Run</h3>
+              <p>Monthly operation, iteration, and a concise report on what shipped, what changed, and what comes next.</p>
+              <small>Clear ownership, clean handover</small>
+            </article>
+          </div>
         </div>
 
         <div class="bento-cta reveal">
           <p>Need one part first? Five fixed-scope sprints each install one station of the line: <a href="/sprints/" style="color:var(--fg);border-bottom:1px solid rgba(228,164,60,0.55)">compare them</a>.</p>
           <a class="btn btn-secondary" href="mailto:amber.lan.growth.digital@gmail.com?subject=Starter%20sprint&amp;body=Hi%20Amber%2C%0A%0AThe%20system%20we%20need%20first%3A%0AOur%20website%3A%0A">Email Amber</a>
-        </div>
-      </section>
-
-      <section id="process" aria-labelledby="process-title">
-        <div class="section-intro reveal">
-          <h2 id="process-title">A direct path from diagnosis to operation.</h2>
-        </div>
-        <div class="process-grid">
-          <article class="process-item reveal">
-            <h3>Diagnose</h3>
-            <p>A focused call, followed by a written go-to-market read and a ranked set of opportunities.</p>
-            <small>Delivered within the first week</small>
-          </article>
-          <article class="process-item reveal">
-            <h3>Build</h3>
-            <p>The first agreed system goes live with the assets, automation, and tracking needed to run it.</p>
-            <small>First launch targeted for week one</small>
-          </article>
-          <article class="process-item reveal">
-            <h3>Run</h3>
-            <p>Monthly operation, iteration, and a concise report on what shipped, what changed, and what comes next.</p>
-            <small>Clear ownership, clean handover</small>
-          </article>
         </div>
       </section>
 
@@ -999,37 +1007,10 @@
         </div>
       </section>
 
-      <section id="tools" aria-labelledby="tools-title">
-        <div class="tools-panel reveal">
-          <div class="tool-intro">
-            <div>
-              <h2 id="tools-title">Useful before a sales call.</h2>
-              <p>Two no-gate tools that help you see the commercial problem more clearly.</p>
-            </div>
-          </div>
-          <div class="tool-list">
-            <a class="tool" href="/tools/benchmark.html">
-              <div>
-                <h3>AI-readiness benchmark</h3>
-                <p>Assess strategy, data, tooling, governance, and team readiness in two minutes.</p>
-              </div>
-              <span class="tool-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="tool" href="/tools/pricing.html">
-              <div>
-                <h3>Pricing model</h3>
-                <p>Explore cost, customer value, elasticity, and a profit-maximising price.</p>
-              </div>
-              <span class="tool-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section id="pricing" aria-labelledby="pricing-title">
         <div class="section-intro reveal">
-          <h2 id="pricing-title">Start with one system or the whole engine.</h2>
-          <p>Public pricing, direct access to the builder, and a clear difference between a launch project and ongoing operation.</p>
+          <h2 id="pricing-title">Start with one sprint. Scale to the whole engine.</h2>
+          <p>Public pricing and direct access to the builder. Take the highest-leverage system first, or hand over the whole line.</p>
         </div>
 
         <div class="pricing-grid">
@@ -1062,6 +1043,31 @@
           </article>
         </div>
         <p class="pricing-note reveal">All prices are in New Zealand dollars. The first retainer month includes a 30-day money-back guarantee.</p>
+
+        <div class="tools-panel reveal" id="tools">
+          <div class="tool-intro">
+            <div>
+              <h3 id="tools-title">Useful before you pay anything.</h3>
+              <p>Two open tools, no email gate, that show the commercial problem more clearly.</p>
+            </div>
+          </div>
+          <div class="tool-list">
+            <a class="tool" href="/tools/benchmark.html">
+              <div>
+                <h3>AI-readiness benchmark</h3>
+                <p>Assess strategy, data, tooling, governance, and team readiness in two minutes.</p>
+              </div>
+              <span class="tool-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="tool" href="/tools/pricing.html">
+              <div>
+                <h3>Pricing model</h3>
+                <p>Explore cost, customer value, elasticity, and a profit-maximising price.</p>
+              </div>
+              <span class="tool-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <section id="faq" aria-labelledby="faq-title">
