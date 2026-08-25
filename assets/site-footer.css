@@ -6,7 +6,9 @@
 .site-footer {
   margin-top: clamp(5rem, 10vw, 9rem);
   border-top: 1px solid rgba(250, 248, 243, 0.13);
-  background: #0e0e0d;
+  background:
+    radial-gradient(62% 130% at 50% 100%, rgba(228, 164, 60, 0.12), transparent 60%),
+    #0e0e0d;
   color: rgba(250, 248, 243, 0.56);
   font-size: 14px;
   line-height: 1.55;

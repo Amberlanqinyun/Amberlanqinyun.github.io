@@ -29,4 +29,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Full site text for AI assistants, with canonical URLs for citation:
+# https://www.flowai.co.nz/llms-full.txt
+
 Sitemap: https://www.flowai.co.nz/sitemap.xml

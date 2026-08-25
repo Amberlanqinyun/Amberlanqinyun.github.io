@@ -13,6 +13,8 @@ Key facts:
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
+Full text of every page, for direct AI consumption and accurate citation: https://www.flowai.co.nz/llms-full.txt
+
 Site structure:
 - / (landing): the offer, founding terms, pricing, free tools, FAQ. Book a discovery call.
 - /work.html: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
