@@ -630,49 +630,10 @@
     }
     .proof-actions p { max-width: 54ch; color: var(--soft); font-size: 14px; }
 
-    .tools-panel {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      overflow: hidden;
-      margin-top: clamp(60px, 8vw, 92px);
-      border: 1px solid var(--hair);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-    .tool-intro {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: clamp(30px, 5vw, 58px);
-      background: var(--accent-soft);
-    }
-    .tool-intro h3 {
-      max-width: 13ch;
-      font-size: clamp(1.7rem, 3vw, 2.7rem);
-      font-weight: 600;
-      letter-spacing: -0.045em;
-      line-height: 1.02;
-    }
-    .tool-intro p { max-width: 34ch; margin-top: 20px; font-size: 15px; }
-    .tool-list { display: grid; }
-    .tool {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 24px;
-      padding: clamp(28px, 4vw, 44px);
-      transition: background-color 180ms ease;
-    }
-    .tool + .tool { border-top: 1px solid var(--hair); }
-    .tool:hover { background: rgba(250, 248, 243, 0.035); }
-    .tool h3 { font-size: 20px; font-weight: 630; letter-spacing: -0.025em; }
-    .tool p { max-width: 42ch; margin-top: 8px; color: var(--soft); font-size: 14px; }
-    .tool-arrow { color: var(--accent); font-size: 22px; transition: transform 180ms var(--ease); }
-    .tool:hover .tool-arrow { transform: translateX(4px); }
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
     }
     .price-card {
@@ -885,8 +846,6 @@
       .proof-layout { grid-template-columns: 1fr; }
       .featured-case { min-height: 520px; }
       .repo-stack { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .tools-panel { grid-template-columns: 1fr; }
-      .tool-intro { min-height: 340px; }
     }
 
     @media (max-width: 760px) {
@@ -930,7 +889,6 @@
       .featured-case { min-height: 440px; }
       .pricing-grid { grid-template-columns: 1fr; }
       .price-card { min-height: auto; }
-      .tool { padding: 28px 24px; }
       .footer-meta { flex-direction: column; align-items: center; text-align: center; }
     }
 
@@ -1205,31 +1163,6 @@
           </article>
         </div>
         <p class="pricing-note reveal">All prices are in New Zealand dollars. The first retainer month includes a 30-day money-back guarantee.</p>
-
-        <div class="tools-panel reveal" id="tools">
-          <div class="tool-intro">
-            <div>
-              <h3 id="tools-title">Useful before you pay anything.</h3>
-              <p>Two open tools, no email gate, that show the commercial problem more clearly.</p>
-            </div>
-          </div>
-          <div class="tool-list">
-            <a class="tool" href="/tools/benchmark.html">
-              <div>
-                <h3>AI-readiness benchmark</h3>
-                <p>Assess strategy, data, tooling, governance, and team readiness in two minutes.</p>
-              </div>
-              <span class="tool-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="tool" href="/tools/pricing.html">
-              <div>
-                <h3>Pricing model</h3>
-                <p>Explore cost, customer value, elasticity, and a profit-maximising price.</p>
-              </div>
-              <span class="tool-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
       </section>
 
       <section id="faq" aria-labelledby="faq-title">
