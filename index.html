@@ -417,18 +417,61 @@
     .trust-band { border-block: 1px solid var(--hair); }
     .trust-grid {
       display: grid;
-      grid-template-columns: 1.15fr 1fr 0.85fr;
-      gap: 36px;
-      padding: 38px 0;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      padding: 0;
+      background: var(--hair);
     }
+    .trust-item {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 3.4vw, 44px) clamp(24px, 2.6vw, 36px);
+      background: var(--bg);
+      transition: background-color 320ms var(--ease);
+    }
+    .trust-item::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: opacity 380ms var(--ease), transform 620ms var(--ease);
+    }
+    .trust-item:hover { background: #131312; }
+    .trust-item:hover::after { opacity: 0.55; transform: scaleX(1); }
+    .trust-mark {
+      display: block;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 26px;
+      color: var(--fg);
+      overflow: visible;
+    }
+    .trust-mark .line { transition: opacity 420ms var(--ease); }
+    .trust-item:hover .trust-mark .line { opacity: 0.75; }
+    .trust-mark .pulse { transform-box: fill-box; transform-origin: center; }
     .trust-item b {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       color: var(--fg);
       font-size: 13px;
       font-weight: 660;
+      letter-spacing: 0.01em;
     }
-    .trust-item span { display: block; max-width: 36ch; color: var(--soft); font-size: 14px; line-height: 1.5; }
+    .trust-item span { display: block; max-width: 34ch; color: var(--soft); font-size: 14px; line-height: 1.55; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .trust-mark .pulse { animation: mark-pulse 3.6s var(--ease) infinite; }
+      .trust-item:nth-child(2) .trust-mark .pulse { animation-delay: 1.2s; }
+      .trust-item:nth-child(3) .trust-mark .pulse { animation-delay: 2.4s; }
+      @keyframes mark-pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.72; transform: scale(1.18); }
+      }
+    }
 
     section { padding-top: var(--section); scroll-margin-top: 84px; }
     .section-intro { max-width: 760px; margin-bottom: clamp(52px, 7vw, 92px); }
@@ -791,8 +834,15 @@
       transition: transform 240ms var(--ease), border-color 240ms ease, background 240ms ease;
     }
     .scenario:hover { border-color: var(--hair-strong); background: var(--surface-strong); transform: translateY(-3px); }
-    .scenario-tag {
+    .scenario-mark {
+      display: block;
+      width: 64px;
+      height: 40px;
       margin-bottom: 22px;
+      color: var(--fg);
+    }
+    .scenario-tag {
+      margin-bottom: 14px;
       color: var(--accent);
       font-size: 11.5px;
       font-weight: 660;
@@ -866,7 +916,8 @@
       .hero-copy { margin-top: 22px; font-size: 17px; }
       .hero-art { aspect-ratio: 3 / 2; }
       .hero-art img { object-position: 52% center; }
-      .trust-grid { grid-template-columns: 1fr; gap: 22px; }
+      .trust-grid { grid-template-columns: 1fr; gap: 1px; }
+      .trust-mark { width: 46px; height: 46px; margin-bottom: 20px; }
       section { padding-top: 72px; }
       .section-intro { margin-bottom: 38px; }
       .reality-check { text-align: left; }
@@ -960,14 +1011,44 @@
     <aside class="trust-band" aria-label="Amber Lan at a glance">
       <div class="wrap trust-grid">
         <div class="trust-item">
+          <svg class="trust-mark" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+            <g class="line" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.42">
+              <path d="M21.6 21.6 L 14.4 14.4"/>
+              <path d="M34.4 21.6 L 41.6 14.4"/>
+              <path d="M21.6 34.4 L 14.4 41.6"/>
+              <path d="M34.4 34.4 L 41.6 41.6"/>
+              <circle cx="12" cy="12" r="3.4" fill="#0e0e0d"/>
+              <circle cx="44" cy="12" r="3.4" fill="#0e0e0d"/>
+              <circle cx="12" cy="44" r="3.4" fill="#0e0e0d"/>
+              <circle cx="44" cy="44" r="3.4" fill="#0e0e0d"/>
+            </g>
+            <circle class="pulse" cx="28" cy="28" r="6" fill="#e4a43c"/>
+          </svg>
           <b>Operator</b>
           <span>Marketing Lead at Novamind Labs, running the function on an agent stack I built.</span>
         </div>
         <div class="trust-item">
+          <svg class="trust-mark" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+            <g class="line" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.42">
+              <path d="M20 14 V 41"/>
+              <path d="M20 22 C 30 22, 38 25, 38 32"/>
+              <circle cx="20" cy="14" r="3.4" fill="#0e0e0d"/>
+              <circle cx="38" cy="32" r="3.4" fill="#0e0e0d"/>
+            </g>
+            <circle class="pulse" cx="20" cy="46" r="5" fill="#e4a43c"/>
+          </svg>
           <b>Open source</b>
           <span>Production systems in Python and TypeScript, with working repositories on GitHub.</span>
         </div>
         <div class="trust-item">
+          <svg class="trust-mark" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+            <g class="line" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.42">
+              <path d="M12 46 A 20 20 0 0 1 32 26"/>
+              <path d="M12 46 A 30 30 0 0 1 42 16"/>
+              <path d="M12 46 A 40 40 0 0 1 52 6"/>
+            </g>
+            <circle class="pulse" cx="12" cy="46" r="5.5" fill="#e4a43c"/>
+          </svg>
           <b>Coverage</b>
           <span>Auckland based. New Zealand and Australia timezones, remote anywhere.</span>
         </div>
@@ -981,18 +1062,51 @@
         </div>
         <div class="scenario-grid reveal">
           <a class="scenario" href="/sprints/ai-search.html">
+            <svg class="scenario-mark" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.4">
+                <path d="M8 8 C 22 8, 26 16, 34 20"/>
+                <path d="M6 20 H 34"/>
+                <path d="M8 32 C 22 32, 26 24, 34 20"/>
+                <circle cx="8" cy="8" r="2.6" fill="#0e0e0d"/>
+                <circle cx="6" cy="20" r="2.6" fill="#0e0e0d"/>
+                <circle cx="8" cy="32" r="2.6" fill="#0e0e0d"/>
+              </g>
+              <circle cx="42" cy="20" r="5.5" fill="#e4a43c"/>
+            </svg>
             <p class="scenario-tag">AI search</p>
             <h3>Be the answer AI gives about your category.</h3>
             <p>Buyers now ask ChatGPT, Claude, and Google AI who to trust. The AI-search sprint structures your site so those engines cite you as the source.</p>
             <span class="scenario-link">The AI-search sprint →</span>
           </a>
           <a class="scenario" href="/sprints/content-engine.html">
+            <svg class="scenario-mark" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.4">
+                <path d="M18 20 C 30 20, 34 7, 46 7"/>
+                <path d="M18 20 H 46"/>
+                <path d="M18 20 C 30 20, 34 33, 46 33"/>
+                <circle cx="49" cy="7" r="2.6" fill="#0e0e0d"/>
+                <circle cx="49" cy="20" r="2.6" fill="#0e0e0d"/>
+                <circle cx="49" cy="33" r="2.6" fill="#0e0e0d"/>
+              </g>
+              <circle cx="12" cy="20" r="5.5" fill="#e4a43c"/>
+            </svg>
             <p class="scenario-tag">Content</p>
             <h3>One idea becomes a month of content.</h3>
             <p>A content engine turns one strong source, a call, a talk, a case, into a month of voice-consistent assets your team approves rather than writes.</p>
             <span class="scenario-link">The content engine sprint →</span>
           </a>
           <a class="scenario" href="/sprints/outbound.html">
+            <svg class="scenario-mark" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.4">
+                <circle cx="12" cy="9" r="2.6" fill="#0e0e0d"/>
+                <circle cx="12" cy="31" r="2.6" fill="#0e0e0d"/>
+                <circle cx="28" cy="9" r="2.6" fill="#0e0e0d"/>
+                <circle cx="28" cy="31" r="2.6" fill="#0e0e0d"/>
+                <path d="M8 20 H 40" stroke-dasharray="3 4"/>
+              </g>
+              <circle cx="47" cy="20" r="5.5" fill="#e4a43c"/>
+              <circle cx="47" cy="20" r="10.5" fill="none" stroke="#e4a43c" stroke-width="1.2" opacity="0.32"/>
+            </svg>
             <p class="scenario-tag">Outbound</p>
             <h3>The right hundred buyers, reached personally.</h3>
             <p>Researched, segmented outreach with human judgment on every send, so the first sales conversations arrive without an SDR hire.</p>
