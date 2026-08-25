@@ -77,7 +77,7 @@
       --surface-2: #1d1c19;
       --fg: #faf8f3;
       --muted: rgba(250, 248, 243, 0.67);
-      --soft: rgba(250, 248, 243, 0.46);
+      --soft: rgba(250, 248, 243, 0.52);
       --hair: rgba(250, 248, 243, 0.13);
       --hair-strong: rgba(250, 248, 243, 0.24);
       --accent: #e4a43c;
@@ -289,6 +289,9 @@
       margin-bottom: 38px;
     }
     .kicker { margin-bottom: 13px; color: var(--accent); font-size: 11px; font-weight: 720; letter-spacing: 0.18em; text-transform: uppercase; }
+    /* The accent is tuned for dark ground. On the cream panel it drops to
+       2:1, so the kicker takes a bronze that keeps the signal and passes AA. */
+    .principle .kicker { color: #8a5a12; }
     h2 { max-width: 18ch; color: var(--fg); font-size: clamp(32px, 4.4vw, 55px); font-weight: 590; letter-spacing: -0.045em; line-height: 1.02; }
     .section-note { max-width: 38ch; justify-self: end; color: var(--soft); font-size: 14px; }
 

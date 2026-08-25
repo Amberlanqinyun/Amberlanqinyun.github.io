@@ -94,7 +94,7 @@
 
   .q{background:var(--panel);border:1px solid var(--hair);border-radius:var(--r-m);padding:24px 26px;box-shadow:inset 0 1px 0 rgba(250,248,243,0.05);}
   .q .qk{font-size:13px;color:var(--mute);font-weight:500;margin-bottom:10px;}
-  .q h3{font-weight:600;font-size:19px;letter-spacing:-0.015em;color:var(--fg);margin-bottom:18px;line-height:1.25;}
+  .q h2{font-weight:600;font-size:19px;letter-spacing:-0.015em;color:var(--fg);margin-bottom:18px;line-height:1.25;}
   .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   @media(max-width:560px){.opts{grid-template-columns:1fr;}}
   .opt{text-align:left;font-family:inherit;font-size:14px;line-height:1.4;color:var(--dim);background:transparent;border:1px solid var(--hair);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color var(--t-fast) var(--ease),background var(--t-fast) var(--ease),color var(--t-fast) var(--ease);}
@@ -220,7 +220,7 @@
       var sel=answers[dim.key]===oi?' sel':'';
       opts+='<button class="opt'+sel+'" data-dim="'+dim.key+'" data-lvl="'+oi+'"><span class="on">Level '+(oi+1)+'</span>'+o+'</button>';
     });
-    card.innerHTML='<div class="qk">'+dim.label+'</div><h3>'+dim.q+'</h3><div class="opts">'+opts+'</div>';
+    card.innerHTML='<div class="qk">'+dim.label+'</div><h2>'+dim.q+'</h2><div class="opts">'+opts+'</div>';
     quiz.appendChild(card);
   });
 
