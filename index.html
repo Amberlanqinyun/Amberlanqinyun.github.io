@@ -873,6 +873,61 @@
       transition: transform 240ms var(--ease), border-color 240ms ease, background 240ms ease;
     }
     .scenario:hover { border-color: var(--hair-strong); background: var(--surface-strong); transform: translateY(-3px); }
+    .clients {
+      border-bottom: 1px solid var(--hair);
+    }
+    .clients-inner {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: clamp(20px, 4vw, 56px);
+      padding: clamp(26px, 3vw, 34px) 0;
+    }
+    .clients-label {
+      flex: 0 0 auto;
+      color: var(--soft);
+      font-size: 11.5px;
+      font-weight: 660;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .clients-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: clamp(22px, 3.5vw, 52px);
+    }
+    /* Wordmarks stand in until real logo files land in assets/clients/.
+       Dropping an <img class="client-logo"> inside the link replaces the
+       text with no other change. */
+    .client {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+      font-weight: 640;
+      letter-spacing: -0.03em;
+      opacity: 0.72;
+      transition: opacity 260ms var(--ease), color 260ms var(--ease);
+    }
+    .client:hover { opacity: 1; color: var(--fg); }
+    .client-logo {
+      height: clamp(22px, 2.2vw, 28px);
+      width: auto;
+      filter: grayscale(1) brightness(1.7);
+      opacity: 0.8;
+      transition: filter 260ms var(--ease), opacity 260ms var(--ease);
+    }
+    .client:hover .client-logo { filter: none; opacity: 1; }
+    .client-tld { color: var(--soft); font-size: 0.7em; font-weight: 520; letter-spacing: 0; }
+    .client:hover .client-tld { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .clients-inner { gap: 16px; }
+      .clients-row { gap: 20px 26px; }
+    }
+
     .scenario-mark {
       display: block;
       width: 76px;
@@ -1121,6 +1176,17 @@
           </svg>
           <b>Coverage</b>
           <span>Auckland based. New Zealand and Australia timezones, remote anywhere.</span>
+        </div>
+      </div>
+    </aside>
+
+    <aside class="clients" aria-label="Recent client work">
+      <div class="wrap clients-inner">
+        <p class="clients-label">Recent work for</p>
+        <div class="clients-row">
+          <a class="client" href="https://goat.co.nz" target="_blank" rel="noopener">Goat<span class="client-tld">.co.nz</span></a>
+          <a class="client" href="https://lullaby.co.nz" target="_blank" rel="noopener">Lullaby<span class="client-tld">.co.nz</span></a>
+          <a class="client" href="https://resaido.co.nz" target="_blank" rel="noopener">Resaido<span class="client-tld">.co.nz</span></a>
         </div>
       </div>
     </aside>

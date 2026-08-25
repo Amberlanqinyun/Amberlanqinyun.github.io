@@ -252,6 +252,10 @@ The AI-search toolkit I run for clients. Open source, inspectable, one of 58 ski
 
 OperatorMarketing Lead at Novamind Labs, running the function on an agent stack I built.Open sourceProduction systems in Python and TypeScript, with working repositories on GitHub.CoverageAuckland based. New Zealand and Australia timezones, remote anywhere.
 
+Recent work for
+
+Goat.co.nzLullaby.co.nzResaido.co.nz
+
 ## What that looks like in your business.
 
 AI search
@@ -460,31 +464,31 @@ Not sure which station that is? The free AI-readiness benchmark takes two minute
 
 Strategy · NZ$997
 
-### Positioning Sprint.
+## Positioning Sprint.
 
 Claims register, one-page positioning, message architecture, and your first two channels, delivered in one week.
 
 See the fixed scope →AI search · NZ$997
 
-### AI-Search Sprint.
+## AI-Search Sprint.
 
 AI-crawler access, llms.txt, structured data, citability fixes, and search submission, installed in one week.
 
 See the fixed scope →Content · NZ$997
 
-### Content Engine Sprint.
+## Content Engine Sprint.
 
 Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.
 
 See the fixed scope →Outbound · NZ$997
 
-### Outbound Sprint.
+## Outbound Sprint.
 
 A signal-based prospect list, one personalised sequence inside safe limits, and instant human handoff, live in one week.
 
 See the fixed scope →Analytics · NZ$997
 
-### Analytics Sprint.
+## Analytics Sprint.
 
 Tracking installed, conversion events wired, and a one-page monthly report connected to your real numbers.
 
