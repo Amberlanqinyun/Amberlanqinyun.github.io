@@ -435,6 +435,11 @@
     }
     .copy-button:hover { border-color: var(--accent); background: var(--accent); color: var(--ink); }
 
+    @media (pointer: coarse) {
+      .copy-button { min-height: 44px; min-width: 78px; }
+      .command { padding: 8px 8px 8px 16px; }
+    }
+
     .library {
       padding: clamp(5.5rem, 10vw, 9rem) 0;
     }
