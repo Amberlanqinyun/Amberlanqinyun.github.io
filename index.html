@@ -178,7 +178,7 @@
       --accent-soft: rgba(228, 164, 60, 0.14);
       --ink: #0e0e0d;
       --font: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --display: clamp(3.25rem, 6.5vw, 6.75rem);
+      --display: clamp(2.75rem, 5.4vw, 5.75rem);
       --h2: clamp(2.25rem, 4.5vw, 4.75rem);
       --h3: clamp(1.25rem, 2vw, 1.65rem);
       --section: clamp(8rem, 15vw, 13.5rem);
@@ -324,7 +324,7 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
       align-items: center;
       gap: clamp(44px, 7vw, 96px);
     }
@@ -337,8 +337,9 @@
       text-transform: uppercase;
     }
     h1, h2, h3 { color: var(--fg); text-wrap: balance; }
+    #hero-title span { display: block; }
     h1 {
-      max-width: 9.5ch;
+      max-width: 20ch;
       font-size: var(--display);
       font-weight: 610;
       letter-spacing: -0.065em;
@@ -736,10 +737,12 @@
     }
 
     .hero-install {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 14px;
+      width: fit-content;
       max-width: 100%;
+      min-width: 0;
       margin-top: 30px;
       padding: 11px 12px 11px 18px;
       border: 1px solid var(--hair);
@@ -747,6 +750,9 @@
       background: var(--surface);
     }
     .hero-install code {
+      /* min-width:0 lets the nowrap command scroll inside the pill instead of
+         forcing the whole hero column wider than a phone viewport. */
+      min-width: 0;
       overflow-x: auto;
       color: var(--muted);
       font-family: "SFMono-Regular", Consolas, monospace;
@@ -838,9 +844,9 @@
 
     @media (max-width: 920px) {
       .hero { min-height: auto; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-copy-block { max-width: 720px; }
-      h1 { max-width: 10.5ch; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr); }
+      .hero-copy-block { max-width: 720px; min-width: 0; }
+      h1 { max-width: 16ch; }
       .hero-art { width: min(100%, 720px); }
       .proof-layout { grid-template-columns: 1fr; }
       .featured-case { min-height: 520px; }
@@ -856,7 +862,7 @@
       .nav-links .nav-cta { padding: 8px 14px; }
       .hero { padding: 52px 0 32px; }
       .hero-grid { gap: 42px; }
-      h1 { max-width: 11ch; font-size: clamp(3rem, 15vw, 4.4rem); }
+      h1 { max-width: 15ch; font-size: clamp(2.5rem, 11vw, 3.6rem); }
       .hero-copy { margin-top: 22px; font-size: 17px; }
       .hero-art { aspect-ratio: 3 / 2; }
       .hero-art img { object-position: 52% center; }
@@ -932,8 +938,8 @@
       <div class="wrap hero-grid">
         <div class="hero-copy-block">
           <p class="eyebrow">Amber Lan / AI marketing engineer</p>
-          <h1 id="hero-title">I build strategy into pipeline.</h1>
-          <p class="hero-copy">Positioning, AI-search visibility, content, outbound, and analytics, built as one system you can inspect, measure, and keep.</p>
+          <h1 id="hero-title">One engineer. <span>Your whole marketing function.</span></h1>
+          <p class="hero-copy">Everything from getting found to following up, built once and run for you. You own all of it.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/work.html">View systems</a>
             <a class="btn btn-secondary" href="/contact.html">Get a first read</a>
