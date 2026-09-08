@@ -133,7 +133,7 @@
     .field textarea { min-height: 150px; resize: vertical; }
     .field input:hover, .field textarea:hover, .field select:hover { border-color: var(--hair-strong); }
     .field input:focus, .field textarea:focus, .field select:focus {
-      border-color: var(--accent); background: #1b1a17; outline: none;
+      border-color: var(--accent); background: var(--surface-strong); outline: none;
     }
     .field input::placeholder, .field textarea::placeholder { color: rgba(250, 248, 243, 0.32); }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
@@ -146,7 +146,7 @@
       cursor: pointer;
       transition: transform 200ms var(--ease), background-color 200ms ease;
     }
-    .btn:hover { background: #efb856; transform: translateY(-2px); }
+    .btn:hover { filter: brightness(1.08); transform: translateY(-2px); }
     .btn:active { transform: translateY(1px); }
     .btn[disabled] { opacity: 0.6; cursor: progress; transform: none; }
 

@@ -297,8 +297,9 @@
     }
     .kicker { margin-bottom: 13px; color: var(--accent); font-size: 11px; font-weight: 720; letter-spacing: 0.18em; text-transform: uppercase; }
     /* The accent is tuned for dark ground. On the cream panel it drops to
-       2:1, so the kicker takes a bronze that keeps the signal and passes AA. */
-    .principle .kicker { color: #8a5a12; }
+       2:1, so the kicker is set in Warm Ink at reduced density: same plate,
+       passes AA, and no fourth colour enters the system. */
+    .principle .kicker { color: rgba(14, 14, 13, 0.62); }
     h2 { max-width: 18ch; color: var(--fg); font-size: clamp(32px, 4.4vw, 55px); font-weight: 590; letter-spacing: -0.045em; line-height: 1.02; }
     .section-note { max-width: 38ch; justify-self: end; color: var(--soft); font-size: 14px; }
 
@@ -331,7 +332,7 @@
       box-shadow: 0 0 0 46px rgba(228, 164, 60, 0.04), 0 0 0 92px rgba(228, 164, 60, 0.02);
     }
     .feature-card--geo {
-      background: #131312;
+      background: var(--surface);
     }
     .feature-card--geo::before {
       content: "";

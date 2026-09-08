@@ -384,7 +384,7 @@
     .btn:hover { transform: translateY(-2px); }
     .btn:active { transform: translateY(1px) scale(0.98); }
     .btn-primary { background: var(--accent); color: var(--ink); }
-    .btn-primary:hover { background: #efb856; }
+    .btn-primary:hover { filter: brightness(1.08); }
     .btn-secondary {
       border-color: var(--hair-strong);
       background: rgba(250, 248, 243, 0.04);
@@ -447,7 +447,7 @@
       transform-origin: left;
       transition: opacity 380ms var(--ease), transform 620ms var(--ease);
     }
-    .trust-item:hover { background: #131312; }
+    .trust-item:hover { background: var(--surface); }
     .trust-item:hover::after { opacity: 0.55; transform: scaleX(1); }
     .trust-mark {
       display: block;
@@ -611,7 +611,7 @@
     .capability.inbound::before { top: -170px; right: -70px; box-shadow: 0 0 0 42px rgba(228, 164, 60, 0.03), 0 0 0 84px rgba(228, 164, 60, 0.02); }
     .capability.analytics::before { right: 40px; bottom: -215px; width: 360px; height: 360px; }
     .capability.content { background: linear-gradient(145deg, var(--surface-strong), rgba(228, 164, 60, 0.12)); }
-    .capability.outbound { background: #131312; }
+    .capability.outbound { background: var(--surface); }
     .capability.outbound::before {
       content: "";
       position: absolute;
@@ -701,7 +701,7 @@
     .repo-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 18px; }
     .repo-card { display: grid; grid-template-rows: auto 1fr; transition: transform 240ms var(--ease), border-color 240ms ease; }
     .repo-card:hover { transform: translateY(-3px); border-color: var(--hair-strong); }
-    .repo-card img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-bottom: 1px solid var(--hair); }
+    .repo-card img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-bottom: 1px solid var(--hair); filter: grayscale(1) brightness(0.98); }
     .repo-copy { padding: 24px; }
     .repo-copy h3 { font-size: 19px; font-weight: 640; letter-spacing: -0.025em; }
     .repo-copy p { margin-top: 8px; color: var(--soft); font-size: 14px; line-height: 1.45; }
@@ -1196,7 +1196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap clients-inner">
         <p class="clients-label">Recent work for</p>
         <div class="clients-row">
-          <a class="client" href="https://goat.co.nz" target="_blank" rel="noopener">Goat<span class="client-tld">.co.nz</span></a>
+          <a class="client" href="https://gota.co.nz" target="_blank" rel="noopener">Gota<span class="client-tld">.co.nz</span></a>
           <a class="client" href="https://lullaby.co.nz" target="_blank" rel="noopener">Lullaby<span class="client-tld">.co.nz</span></a>
           <a class="client" href="https://resaido.com" target="_blank" rel="noopener">Resaido<span class="client-tld">.com</span></a>
         </div>
@@ -1342,7 +1342,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="bento-cta reveal">
           <p>Need one part first? Five fixed-scope sprints each install one station of the line: <a href="/sprints/" style="color:var(--fg);border-bottom:1px solid rgba(228,164,60,0.55)">compare them</a>.</p>
-          <a class="btn btn-secondary" href="/contact.html">Ask which sprint fits</a>
+          <a class="btn btn-secondary" href="/contact.html">Get a first read</a>
         </div>
       </section>
 
@@ -1445,7 +1445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>Cancel at any time</li>
               </ul>
             </div>
-            <a class="btn btn-primary" href="/contact.html">Get a read on your gap</a>
+            <a class="btn btn-primary" href="/contact.html">Get a first read</a>
           </article>
         </div>
         <p class="pricing-note reveal">All prices are in New Zealand dollars. The first retainer month includes a 30-day money-back guarantee.</p>
@@ -1494,7 +1494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="reveal">Bring me the gap between plan and pipeline.</h2>
       <p class="reveal">Tell me what you sell, who it is for, and where growth is getting stuck. I will reply with the most useful next question.</p>
       <div class="cta-row reveal">
-        <a class="btn btn-primary" href="/contact.html">Send me your gap</a>
+        <a class="btn btn-primary" href="/contact.html">Get a first read</a>
       </div>
     </div>
   </section>

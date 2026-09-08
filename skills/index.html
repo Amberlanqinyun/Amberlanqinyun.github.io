@@ -228,7 +228,7 @@
       --bg: #0e0e0d;
       --surface: #171715;
       --surface-strong: #1d1c19;
-      --surface-soft: #141412;
+      --surface-soft: #171715;
       --fg: #faf8f3;
       --muted: rgba(250, 248, 243, 0.68);
       --soft: rgba(250, 248, 243, 0.48);
@@ -567,7 +567,7 @@
       padding: 11px 16px 11px 38px;
       border: 1px solid var(--hair-strong);
       border-radius: 12px;
-      background: #11110f;
+      background: var(--surface-soft);
       color: var(--fg);
       outline: 0;
     }
@@ -809,7 +809,7 @@
       cursor: pointer;
       transition: transform 180ms var(--ease), background 180ms ease;
     }
-    .btn:hover { background: #efb24f; transform: translateY(-2px); }
+    .btn:hover { filter: brightness(1.08); transform: translateY(-2px); }
     .share-control {
       border: 1px solid var(--hair-strong);
       background: transparent;
