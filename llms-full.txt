@@ -240,151 +240,109 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-Amber Lan / AI marketing engineer
+Amber Lan
 
 # One engineer. Your whole marketing function.
 
-Everything from getting found to following up, built once and run for you. You own all of it.
+Getting found, content, outbound and reporting. Built once, run for you, owned by you.
 
-View systemsGet a first readnpx skills add Amberlanqinyun/geo-seo-claudeCopy
+Get a first readSee the work
 
-The AI-search toolkit I run for clients. Open source, inspectable, one of 58 skills in the library.
+Recent work forGota.co.nzLullaby.co.nzResaido.com
 
-OperatorMarketing Lead at Novamind Labs, running the function on an agent stack I built.Open sourceProduction systems in Python and TypeScript, with working repositories on GitHub.CoverageAuckland based. New Zealand and Australia timezones, remote anywhere.
+What I build
 
-Recent work for
+## Five parts. One machine.
 
-Gota.co.nzLullaby.co.nzResaido.com
+Each part works on its own. Together they are a marketing function a small team can run.
 
-## What that looks like in your business.
+### Positioning
 
-AI search
+Who you sell to, what to say, and where the budget goes.
 
-### Be the answer AI gives about your category.
+The positioning sprint
 
-Buyers now ask ChatGPT, Claude, and Google AI who to trust. The AI-search sprint structures your site so those engines cite you as the source.
+### AI search
 
-The AI-search sprint →
+Be the answer ChatGPT, Claude and Google give about your category.
 
-Content
+The AI-search sprint
 
-### One idea becomes a month of content.
+### Content
 
-A content engine turns one strong source, a call, a talk, a case, into a month of voice-consistent assets your team approves rather than writes.
+One strong idea becomes a month of content your team approves, not writes.
 
-The content engine sprint →
+The content sprint
 
-Outbound
+### Outbound
 
-### The right hundred buyers, reached personally.
+The right hundred buyers, reached personally, with a human on every send.
 
-Researched, segmented outreach with human judgment on every send, so the first sales conversations arrive without an SDR hire.
-
-The outbound sprint →
-
-Five sprints cover the whole line: compare all five.
-
-## Most marketing stalls between the plan and the work. I connect them.
-
-I translate positioning into pages, search visibility, content workflows, outbound systems, and measurement. The same practitioner makes the decisions and ships the machinery.
-
-## One system. Five connected parts.
-
-Each part has a clear job. Together they create a marketing function a small team can operate and measure.
-
-### Go-to-market strategy
-
-Know who you sell to, what to say, and which channels deserve budget. A plan designed to be built.
-
-### AI-search visibility
-
-Get found and cited when buyers ask Google or an AI assistant about your problem space.
-
-### Content operations
-
-One strong idea becomes a month of voice-consistent assets, without the treadmill.
-
-### Outbound systems
-
-Researched, personal outreach to the right buyers, with human judgment on every send.
+The outbound sprint
 
 ### Measurement
 
 See which effort produced which conversation, so next month's budget goes where it worked.
 
-From diagnosis to operation
+The analytics sprint
+
+## Diagnose. Build. Run.
+
+The same person writes the plan and ships the machine. Nothing is lost between the deck and the delivery.
+
+01
 
 ### Diagnose
 
-A focused call, followed by a written go-to-market read and a ranked set of opportunities.
+A call, then a written read of your go-to-market with the opportunities ranked. Inside the first week.
 
-Delivered within the first week
+02
 
 ### Build
 
-The first agreed system goes live with the assets, automation, and tracking needed to run it.
+The first system goes live with the assets, automation and tracking it needs to run.
 
-First launch targeted for week one
+03
 
 ### Run
 
-Monthly operation, iteration, and a concise report on what shipped, what changed, and what comes next.
+Monthly operation, iteration, and one short report on what shipped and what comes next.
 
-Clear ownership, clean handover
-
-Need one part first? Five fixed-scope sprints each install one station of the line: compare them.
-
-Ask which sprint fits
+Proof
 
 ## The work is visible.
 
 Strategy is only credible when you can inspect the systems beneath it.
 
-Enterprise AI go-to-market
-
-### Three demand engines. One pipeline.
-
-A complete launch plan connecting outbound, inbound, and partnerships to one pipeline. The work covered positioning, message architecture, channel design, and operating cadence.
-
-Sanitised case. Full walkthrough available on request.
-
 ### geo-seo-claude
 
-Citability scoring, AI-crawler analysis, and structured-data workflows.
+Citability scoring, AI-crawler analysis and structured-data workflows. The toolkit I run for clients.
+
+Open on GitHub
 
 ### Content engine
 
 One source becomes a month of voice-audited, channel-ready content.
 
-View systems
+Open on GitHub
 
-## Why teams pick Flow AI.
+### Three demand engines. One pipeline.
 
-### The strategist ships the work
+An enterprise AI launch: positioning, channel design and operating cadence, connected to one pipeline. Sanitised case.
 
-Flow AI has no handoffs. The person who writes the positioning also builds the pages, the content engine, the outbound system, and the reporting, so nothing gets lost between the deck and the delivery.
+Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
-### Senior thinking without the hire
+Open source and inspectable, one of 58 skills in the library.
 
-A small business gets a working marketing function for NZ$1,000 a month, without recruiting, managing, or waiting for a full-time marketer to ramp.
+## Start with one sprint.
 
-### Systems keep running, campaigns stop
-
-Flow AI builds systems rather than one-off campaigns. Every engagement leaves automation, documentation, and tracking that keep producing after the invoice is paid.
-
-### You own everything
-
-Clients own every repository, account, asset, and document Flow AI creates. The work is documented so any competent operator could take it over, which is exactly why clients stay.
-
-## Start with one sprint. Scale to the whole engine.
-
-Public pricing and direct access to the builder. Take the highest-leverage system first, or hand over the whole line.
+Public prices. Direct access to the builder.
 
 Starter sprint
 
 NZ$997 one time
 
-Choose the highest-leverage system and take it from diagnosis to launch.
+One system, taken from diagnosis to launch and handed over documented.
 
 - One defined marketing system
 
@@ -398,19 +356,19 @@ Marketing engine
 
 NZ$1,000 per month
 
-Ongoing operation across content, AI-search visibility, outbound, analytics, and reporting.
+Content, AI search, outbound and reporting, run for you every month.
 
 - Systems built and operated
 
-- One concise monthly report
+- One short monthly report
 
 - Cancel at any time
 
-Get a read on your gap
+Get a first read
 
-All prices are in New Zealand dollars. The first retainer month includes a 30-day money-back guarantee.
+New Zealand dollars. The first retainer month carries a 30-day money-back guarantee.
 
-## The practical questions.
+## Questions.
 
 ### What is an AI marketing engineer?
 
@@ -440,11 +398,13 @@ Flow AI publishes its pricing. A starter sprint is NZ$997 one time and installs 
 
 AI-search optimisation, also called answer engine optimisation (AEO) or generative engine optimisation (GEO), is the practice of structuring a website so AI assistants such as ChatGPT, Claude, and Perplexity cite it when answering buyers' questions. Research presented at KDD 2024 by Aggarwal et al. found that adding quotations to a page improved its visibility in AI-generated answers by up to 41 percent, and adding statistics by up to 33 percent.
 
-## Bring me the gap between plan and pipeline.
+## Bring me the gap.
 
-Tell me what you sell, who it is for, and where growth is getting stuck. I will reply with the most useful next question.
+Tell me what you sell, who it is for, and where growth is stuck. I reply with the most useful next question.
 
-Send me your gap
+Get a first read
+
+Amber Lan. Marketing Lead at Novamind Labs, working from Auckland.
 
 ---
 
