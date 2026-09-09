@@ -242,9 +242,9 @@ Author: Amber Lan (Flow AI)
 
 Amber Lan
 
-# One engineer. Your whole marketing function.
+# More leads. Less work. Yours to keep.
 
-Getting found, content, outbound and reporting. Built once, run for you, owned by you.
+AI marketing systems for New Zealand small businesses, built and run by one engineer. Start with a free first read.
 
 Get a first readSee the work
 
@@ -334,69 +334,37 @@ Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
 Open source and inspectable, one of 58 skills in the library.
 
-## Start with one sprint.
+## Try the tools first.
 
-Public prices. Direct access to the builder.
+Two free models I use with clients. No email gate.
 
-Starter sprint
+### AI-readiness benchmark
 
-NZ$997 one time
+Two minutes. A score for how ready your company is to grow with AI, and what to fix first.
 
-One system, taken from diagnosis to launch and handed over documented.
+Run the benchmark
 
-- One defined marketing system
+### Pricing model
 
-- Build and launch included
+Find the profit-maximising price for your product from cost and customer value.
 
-- Documented handover
+Open the model
 
-Compare the five sprints
+## Read before you buy.
 
-Marketing engine
+Long guides on what AI marketing costs and where to start. One a week.
 
-NZ$1,000 per month
+### AI marketing for small business in NZ
 
-Content, AI search, outbound and reporting, run for you every month.
+What it covers, what it costs against an agency or a hire, the mistakes to skip, and a starting checklist.
 
-- Systems built and operated
+Read the guide
 
-- One short monthly report
+### All guides
 
-- Cancel at any time
+Every guide in one place, with a feed you can follow.
 
-Get a first read
-
-New Zealand dollars. The first retainer month carries a 30-day money-back guarantee.
-
-## Questions.
-
-### What is an AI marketing engineer?
-
-An AI marketing engineer connects go-to-market strategy to the systems that execute it. The role combines positioning, search visibility, content operations, outbound automation, and measurement.
-
-### How is Flow AI different from a marketing agency?
-
-You work directly with the practitioner who writes the strategy and builds the systems. There are no account-manager handoffs, and the work is designed to keep operating after launch.
-
-### How quickly can the first system go live?
-
-The written go-to-market read arrives within the first week, and the first agreed system is designed to go live in week one.
-
-### Who is Flow AI for?
-
-Early-stage teams and New Zealand businesses that need senior marketing thinking and hands-on execution without hiring a full internal function.
-
-### Who owns the systems Flow AI builds?
-
-The client does. Code repositories, analytics accounts, content, and documentation are created in the client's name or handed over at launch. Cancelling the retainer never means losing the machine.
-
-### What does AI marketing cost in New Zealand?
-
-Flow AI publishes its pricing. A starter sprint is NZ$997 one time and installs one working system. The marketing engine retainer is NZ$1,000 per month, covers content, AI-search visibility, outbound, and reporting, and can be cancelled at any time. The first retainer month carries a 30-day money-back guarantee.
-
-### What is AI-search optimisation?
-
-AI-search optimisation, also called answer engine optimisation (AEO) or generative engine optimisation (GEO), is the practice of structuring a website so AI assistants such as ChatGPT, Claude, and Perplexity cite it when answering buyers' questions. Research presented at KDD 2024 by Aggarwal et al. found that adding quotations to a page improved its visibility in AI-generated answers by up to 41 percent, and adding statistics by up to 33 percent.
+Open the guides
 
 ## Bring me the gap.
 
@@ -480,7 +448,7 @@ Every station, run for you, every month.
 
 Get a first read
 
-See engine pricing next to the sprints on the home page.
+Compare the five sprints next to the sprints on the home page.
 
 ---
 
@@ -1319,3 +1287,33 @@ The gap I would close first, and why.
 If a sprint fits, I say which one. If nothing fits, I say that too.
 
 Prefer plain email? Nothing here is a trick to capture your address. Write to amber.lan.growth.digital@gmail.com and you get the same reply.
+
+## Questions.
+
+### What is an AI marketing engineer?
+
+An AI marketing engineer connects go-to-market strategy to the systems that execute it. The role combines positioning, search visibility, content operations, outbound automation, and measurement.
+
+### How is Flow AI different from a marketing agency?
+
+You work directly with the practitioner who writes the strategy and builds the systems. There are no account-manager handoffs, and the work is designed to keep operating after launch.
+
+### How quickly can the first system go live?
+
+The written go-to-market read arrives within the first week, and the first agreed system is designed to go live in week one.
+
+### Who is Flow AI for?
+
+Early-stage teams and New Zealand businesses that need senior marketing thinking and hands-on execution without hiring a full internal function.
+
+### Who owns the systems Flow AI builds?
+
+The client does. Code repositories, analytics accounts, content, and documentation are created in the client's name or handed over at launch. Cancelling the retainer never means losing the machine.
+
+### What does AI marketing cost in New Zealand?
+
+Flow AI publishes its pricing. A starter sprint is NZ$997 one time and installs one working system. The marketing engine retainer is NZ$1,000 per month, covers content, AI-search visibility, outbound, and reporting, and can be cancelled at any time. The first retainer month carries a 30-day money-back guarantee.
+
+### What is AI-search optimisation?
+
+AI-search optimisation, also called answer engine optimisation (AEO) or generative engine optimisation (GEO), is the practice of structuring a website so AI assistants such as ChatGPT, Claude, and Perplexity cite it when answering buyers' questions. Research presented at KDD 2024 by Aggarwal et al. found that adding quotations to a page improved its visibility in AI-generated answers by up to 41 percent, and adding statistics by up to 33 percent.
