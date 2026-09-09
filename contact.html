@@ -52,139 +52,50 @@
   </script>
 
   <style>
-    @font-face {
-      font-family: "Google Sans Flex";
-      src: url("/fonts/google-sans-flex-vf.woff2") format("woff2");
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
-      --bg: #0e0e0d;
-      --surface: #171715;
-      --fg: #faf8f3;
-      --muted: rgba(250, 248, 243, 0.68);
-      --soft: rgba(250, 248, 243, 0.5);
-      --hair: rgba(250, 248, 243, 0.13);
-      --hair-strong: rgba(250, 248, 243, 0.24);
-      --accent: #e4a43c;
-      --ink: #0e0e0d;
-      --font: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --pill: 999px;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    * { margin: 0; }
-    body {
-      min-width: 320px;
-      background: var(--bg);
-      color: var(--muted);
-      font-family: var(--font);
-      font-size: 17px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    ::selection { background: var(--accent); color: var(--ink); }
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-    .wrap { width: min(100% - 48px, 1180px); margin-inline: auto; }
-    .skip-link {
-      position: fixed; z-index: 100; top: 12px; left: 12px;
-      padding: 10px 16px; border-radius: var(--pill);
-      background: var(--fg); color: var(--ink); font-weight: 650;
-      transform: translateY(-160%); transition: transform 180ms var(--ease);
-    }
-    .skip-link:focus { transform: translateY(0); }
+    /* Contact page. Everything else comes from /assets/site.css. */
 
-    .contact-hero { padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2rem, 4vw, 3rem); }
-    .eyebrow {
-      margin-bottom: 22px; color: var(--accent); font-size: 12px; font-weight: 650;
-      letter-spacing: 0.17em; text-transform: uppercase;
+    /* The form sits inside the hero, below the stack */
+    .contact-form {
+      width: min(100%, 40rem); margin: clamp(3.5rem, 7vw, 5rem) auto 0;
+      padding-bottom: clamp(4rem, 8vw, 7rem); text-align: left;
     }
-    h1 {
-      max-width: 16ch; color: var(--fg);
-      font-size: clamp(2.6rem, 5.2vw, 4.6rem); font-weight: 610;
-      letter-spacing: -0.055em; line-height: 0.98; text-wrap: balance;
-    }
-    .contact-lede {
-      max-width: 54ch; margin-top: 24px;
-      font-size: clamp(1.05rem, 1.6vw, 1.2rem); font-weight: 380; line-height: 1.5;
-    }
-    .contact-lede strong { color: var(--fg); font-weight: 620; }
-
-    .contact-grid {
-      display: grid; align-items: start;
-      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-      gap: clamp(40px, 6vw, 84px);
-      padding-bottom: clamp(4rem, 8vw, 7rem);
-    }
-
-    form { display: grid; gap: 22px; }
-    .field { display: grid; gap: 9px; }
+    form { display: grid; gap: 1.5rem; }
+    .field { display: grid; gap: 0.5rem; }
     .field label { color: var(--fg); font-size: 14.5px; font-weight: 600; }
     .field label span { color: var(--soft); font-weight: 400; }
     .field input, .field textarea, .field select {
       width: 100%; padding: 14px 16px;
-      border: 1px solid var(--hair); border-radius: 12px;
-      background: var(--surface); color: var(--fg);
+      border: 1px solid var(--hair-strong); border-radius: var(--radius);
+      background: var(--surface); color: var(--fg); color-scheme: dark;
       font-family: var(--font); font-size: 16px; line-height: 1.5;
-      transition: border-color 180ms ease, background-color 180ms ease;
     }
     .field textarea { min-height: 150px; resize: vertical; }
-    .field input:hover, .field textarea:hover, .field select:hover { border-color: var(--hair-strong); }
-    .field input:focus, .field textarea:focus, .field select:focus {
-      border-color: var(--accent); background: var(--surface-strong); outline: none;
-    }
-    .field input::placeholder, .field textarea::placeholder { color: rgba(250, 248, 243, 0.32); }
-    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .field input::placeholder, .field textarea::placeholder { color: var(--soft); }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 
-    .btn {
-      display: inline-flex; min-height: 54px; align-items: center; justify-content: center;
-      padding: 14px 28px; border: 1px solid transparent; border-radius: var(--pill);
-      background: var(--accent); color: var(--ink);
-      font-family: var(--font); font-size: 15.5px; font-weight: 650; line-height: 1;
-      cursor: pointer;
-      transition: transform 200ms var(--ease), background-color 200ms ease;
-    }
-    .btn:hover { filter: brightness(1.08); transform: translateY(-2px); }
-    .btn:active { transform: translateY(1px); }
+    button.btn { font-family: var(--font); cursor: pointer; }
     .btn[disabled] { opacity: 0.6; cursor: progress; transform: none; }
+    .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+    .form-actions .small { flex: 1 1 16rem; }
 
-    .form-note { color: var(--soft); font-size: 13.5px; }
-    .form-status { display: none; padding: 16px 18px; border-radius: 12px; font-size: 15px; }
+    .form-status {
+      display: none; padding: 1rem 1.25rem;
+      border: 1px solid var(--hair-strong); border-radius: var(--radius);
+      color: var(--fg); font-size: 15px;
+    }
     .form-status.is-visible { display: block; }
-    .form-status.is-ok { border: 1px solid rgba(228, 164, 60, 0.5); background: rgba(228, 164, 60, 0.1); color: var(--fg); }
-    .form-status.is-error { border: 1px solid rgba(250, 248, 243, 0.3); background: rgba(250, 248, 243, 0.05); color: var(--fg); }
-    .form-status a { color: var(--fg); border-bottom: 1px solid var(--accent); }
-
-    .aside-card {
-      padding: clamp(26px, 3vw, 34px);
-      border: 1px solid var(--hair); border-radius: 18px; background: var(--surface);
-    }
-    .aside-card + .aside-card { margin-top: 18px; }
-    .aside-card h2 {
-      color: var(--fg); font-size: 19px; font-weight: 630; letter-spacing: -0.025em; line-height: 1.15;
-    }
-    .aside-card ol { margin: 18px 0 0; padding-left: 20px; display: grid; gap: 12px; font-size: 14.5px; }
-    .aside-card ol::marker, .aside-card li::marker { color: var(--accent); }
-    .aside-card p { margin-top: 14px; font-size: 14.5px; }
-    .aside-card .direct { margin-top: 16px; font-size: 14.5px; }
-    .aside-card .direct a { color: var(--fg); border-bottom: 1px solid rgba(228, 164, 60, 0.55); }
+    .form-status a { color: var(--fg); border-bottom: 1px solid var(--hair-strong); }
 
     .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
-    @media (max-width: 860px) {
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 560px) {
-      .wrap { width: min(100% - 32px, 1180px); }
+    .direct { max-width: 46ch; margin: clamp(3.5rem, 7vw, 5.5rem) auto 0; text-wrap: pretty; }
+
+    @media (max-width: 720px) {
       .field-row { grid-template-columns: 1fr; }
-      .btn { width: 100%; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      * { transition-duration: 0.01ms !important; }
+      .form-actions { flex-direction: column; align-items: stretch; text-align: center; }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site.css">
   <link rel="stylesheet" href="/assets/site-header.css">
   <link rel="stylesheet" href="/assets/site-footer.css">
   <link rel="stylesheet" href="/assets/motion.css">
@@ -198,6 +109,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
   <a class="skip-link" href="#contact-form">Skip to the form</a>
+  <div class="grain" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="site-header__inner">
@@ -217,17 +129,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
   <main>
-    <section class="contact-hero">
+    <section class="hero centered" aria-labelledby="contact-title">
       <div class="wrap">
-        <p class="eyebrow">Contact</p>
-        <h1>Tell me where growth is stuck.</h1>
-        <p class="contact-lede">Answer four questions and you get a <strong>written read on your marketing gap within the first week</strong>. No obligation, no sales sequence, and no agency pitch deck.</p>
-      </div>
-    </section>
+        <div class="stack">
+          <p class="eyebrow">Contact</p>
+          <h1 id="contact-title">Tell me where growth is stuck.</h1>
+          <p class="lead">Four questions. You get a <strong>written read on your marketing gap within the first week.</strong> No obligation, no sales sequence, no agency deck.</p>
+        </div>
 
-    <div class="wrap">
-      <div class="contact-grid">
-        <div>
+        <div class="contact-form">
           <form id="contact-form" novalidate>
             <div class="field-row">
               <div class="field">
@@ -270,32 +180,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <input id="company-role" name="company-role" type="text" tabindex="-1" autocomplete="off">
             </div>
 
-            <div>
-              <button class="btn" type="submit" id="submit-button">Send this to Amber</button>
-              <p class="form-note" style="margin-top:14px">I read every message myself and reply personally, usually within two working days.</p>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" id="submit-button">Send this to Amber</button>
+              <p class="small">I read every message myself and reply personally, usually within two working days.</p>
             </div>
 
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
-
-        <aside>
-          <div class="aside-card">
-            <h2>What happens next</h2>
-            <ol>
-              <li>I read what you sent and check your site myself.</li>
-              <li>You get a written read: the gap I would close first, and why.</li>
-              <li>If a sprint fits, I say which one. If nothing fits, I say that too.</li>
-            </ol>
-          </div>
-          <div class="aside-card">
-            <h2>Prefer plain email?</h2>
-            <p>Nothing here is a trick to capture your address. Write to me directly and you will get the same reply.</p>
-            <p class="direct"><a href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a></p>
-          </div>
-        </aside>
       </div>
-    </div>
+    </section>
+
+    <section class="centered" aria-labelledby="next-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="next-title">What happens next.</h2>
+          <p class="lead">Three steps, all done by me.</p>
+        </div>
+        <div class="grid grid-3 reveal" style="text-align:left">
+          <div class="step">
+            <span class="small">01</span>
+            <h3>I read it</h3>
+            <p>I read what you sent and check your site myself.</p>
+          </div>
+          <div class="step">
+            <span class="small">02</span>
+            <h3>You get a written read</h3>
+            <p>The gap I would close first, and why.</p>
+          </div>
+          <div class="step">
+            <span class="small">03</span>
+            <h3>I say what fits</h3>
+            <p>If a sprint fits, I say which one. If nothing fits, I say that too.</p>
+          </div>
+        </div>
+        <p class="direct small reveal">Prefer plain email? Nothing here is a trick to capture your address. Write to <a class="text-link" href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a> and you get the same reply.</p>
+      </div>
+    </section>
   </main>
 
   <script>
@@ -404,6 +325,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           window.setTimeout(function () { mailtoFallback(d); }, 1200);
         });
       });
+    }());
+
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+      var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      items.forEach(function (item) {
+        if (item.getBoundingClientRect().top > window.innerHeight * 0.94) {
+          item.classList.add('is-hidden');
+        }
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.remove('is-hidden');
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+      items.forEach(function (item) {
+        if (item.classList.contains('is-hidden')) observer.observe(item);
+      });
+
+      window.setTimeout(function () {
+        items.forEach(function (item) { item.classList.remove('is-hidden'); });
+        observer.disconnect();
+      }, 12000);
     }());
   </script>
 <footer class="site-footer">
