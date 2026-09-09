@@ -242,17 +242,19 @@ Author: Amber Lan (Flow AI)
 
 Amber Lan
 
-# More leads. Less work. Yours to keep.
+# More leads. Less work. One engineer.
 
-AI marketing systems for New Zealand small businesses, built and run by one engineer. Start with a free first read.
+AI marketing and AI transformation for small businesses in Australia and New Zealand. Start with a free first read.
 
 Get a first readSee the work
+
+Amber Lan. AI marketing engineer, Auckland.
 
 Recent work forGota.co.nzLullaby.co.nzResaido.com
 
 What I build
 
-## Five parts. One machine.
+## Six parts. One machine.
 
 Each part works on its own. Together they are a marketing function a small team can run.
 
@@ -285,6 +287,12 @@ The outbound sprint
 See which effort produced which conversation, so next month's budget goes where it worked.
 
 The analytics sprint
+
+### AI transformation
+
+Agents and workflows that take repetitive work off your team, starting with marketing.
+
+The skills library
 
 ## Diagnose. Build. Run.
 
@@ -324,7 +332,7 @@ Open on GitHub
 
 One source becomes a month of voice-audited, channel-ready content.
 
-Open on GitHub
+Read the case
 
 ### Three demand engines. One pipeline.
 
@@ -371,8 +379,6 @@ Open the guides
 Tell me what you sell, who it is for, and where growth is stuck. I reply with the most useful next question.
 
 Get a first read
-
-Amber Lan. Marketing Lead at Novamind Labs, working from Auckland.
 
 ---
 
@@ -474,7 +480,7 @@ Positioning sprint
 
 NZ$997 one time
 
-You own everything: documented, portable, handover included.
+Documented, portable, handover included.
 
 - Claims register: every public claim with its evidence and status
 
@@ -550,7 +556,7 @@ AI-search sprint
 
 NZ$997 one time
 
-You own everything: documented, portable, handover included.
+Documented, portable, handover included.
 
 - AI-crawler access: robots.txt opened to the nine crawlers that matter
 
@@ -626,7 +632,7 @@ Content engine sprint
 
 NZ$997 one time
 
-You own everything: documented, portable, handover included.
+Documented, portable, handover included.
 
 - Voice codified: your tone, banned patterns, and rules a machine can check
 
@@ -702,7 +708,7 @@ Outbound sprint
 
 NZ$997 one time
 
-You own everything: documented, portable, handover included.
+Documented, portable, handover included.
 
 - ICP definition and a signal-based prospect list, built and verified
 
@@ -778,7 +784,7 @@ Analytics sprint
 
 NZ$997 one time
 
-You own everything: documented, portable, handover included.
+Documented, portable, handover included.
 
 - Privacy-respecting analytics installed and verified
 
@@ -1132,7 +1138,7 @@ No handoffs, because there is no one to hand off to. When I say a system works, 
 
 ## Running marketing solo at an AI startup.
 
-Marketing Lead at Novamind Labs, Auckland, current. The whole function, one person plus an agent stack.
+Runs the whole marketing function at an AI startup in Auckland, one person plus an agent stack.
 
 ### Category and positioning
 
@@ -1176,7 +1182,7 @@ Automated, AI-search-optimised content for NZ service businesses. A short brief 
 
 View repositoryContent engine · Python + Claude
 
-### Novie content engine
+### Content engine
 
 One source document in, a month of on-brand posts out. Every line passes a codified voice audit, so the output reads human, not generated.
 
@@ -1190,7 +1196,7 @@ View repository
 
 ### More systems
 
-Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonNovie content viewerAuth-gated read-only mirror of the content-engine dashboard for the team.Next.js · Vercel KVLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
+Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonContent viewerAuth-gated read-only mirror of the content-engine dashboard for the team.Next.js · Vercel KVLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
 
 ## Strategy through code.
 
@@ -1304,13 +1310,9 @@ The written go-to-market read arrives within the first week, and the first agree
 
 ### Who is Flow AI for?
 
-Early-stage teams and New Zealand businesses that need senior marketing thinking and hands-on execution without hiring a full internal function.
+Early-stage teams and small businesses in Australia and New Zealand that need senior marketing thinking and hands-on execution without hiring a full internal function.
 
-### Who owns the systems Flow AI builds?
-
-The client does. Code repositories, analytics accounts, content, and documentation are created in the client's name or handed over at launch. Cancelling the retainer never means losing the machine.
-
-### What does AI marketing cost in New Zealand?
+### What does AI marketing cost in Australia and New Zealand?
 
 Flow AI publishes its pricing. A starter sprint is NZ$997 one time and installs one working system. The marketing engine retainer is NZ$1,000 per month, covers content, AI-search visibility, outbound, and reporting, and can be cancelled at any time. The first retainer month carries a 30-day money-back guarantee.
 
