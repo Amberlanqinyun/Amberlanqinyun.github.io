@@ -30,6 +30,7 @@ Site structure:
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
 - /blog/: guides and working notes, published weekly.
+- /blog/ai-marketing-statistics-australia-new-zealand.html: 62 sourced statistics on AI adoption and AI marketing in Australia and New Zealand, free to quote with attribution.
 - /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and department by department.
 - /blog/what-is-an-ai-marketing-agent.html: defines the AI marketing agent for small business, the ten marketing jobs it covers, and how it differs from marketing automation, general AI tools and an agency.
 - /blog/ai-marketing-cost-australia-new-zealand.html: what AI marketing costs in Australia and New Zealand in 2026, with sourced ranges for tools, freelancers, AI agents, agencies and in-house hires.
@@ -245,13 +246,13 @@ Author: Amber Lan (Flow AI)
 
 Flow, the marketing agent
 
-# One agent runs your search, content, social, outbound and reporting.search.content.social.outbound.reporting.
+# More leads. Without hiring an agency, a marketer or a freelancer.Without an agency.Without a hire.Without the hours.
 
-Most of marketing is now work AI should be doing. Flow runs ten marketing departments for small businesses in Australia and New Zealand. You review. It ships.
+Flow AI is an AI marketing agent for small and medium businesses in Australia and New Zealand. It runs the marketing an agency would charge you a retainer for, built by a marketer with ten years in the job. You review. It ships.
 
-- 126 published skills
+- 10+ years marketing, 3+ building AI
 
-- Open source and inspectable
+- 126 published skills, open source
 
 - A human reviews everything
 
@@ -263,11 +264,83 @@ Recent work forGota.co.nzLullaby.co.nzResaido.com
 
 What Flow does
 
-## Ten departments. One agent.
+## Get found. Get leads. Keep customers.
 
-Every marketing job a small business needs, built from 126 published skills. Install one department or hand over the line.
+Three jobs, ten marketing departments underneath them, all run by one agent. Install the job you need most.
 
-PositioningWho you sell to, what to say, and where the budget goes.9 skillsSearch and AI searchBe the answer Google, ChatGPT and Claude give about your category.20 skillsContentOne strong idea becomes a month of content your team approves, not writes.15 skillsSocialPosts, threads and carousels in your voice, on a calendar that holds.14 skillsOutboundThe right hundred buyers, reached personally, with a human on every send.in growthGrowth and conversionOffers, landing pages and funnels, tested and tuned every month.29 skillsLaunchProduct and campaign launches sequenced across every channel.14 skillsCommunityReddit, forums and groups answered honestly and on time.12 skillsPaid and dataAd creative, audiences, and the numbers behind them.4 skillsMeasurementSee which effort produced which conversation, so next month's budget goes where it worked.reporting
+### Get found
+
+Show up when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews, where a quarter of searches now end without a click.
+
+Positioning · Search and AI search · Content · Social
+
+The AI-search department
+
+### Get leads
+
+Turn attention into enquiries. Researched outbound to the right hundred buyers, offers and landing pages that convert, launches that actually land.
+
+Outbound · Growth and conversion · Launch · Paid
+
+The outbound department
+
+### Keep customers
+
+Follow up on time, stay in front of the people who already know you, and see which effort produced which conversation.
+
+Community · Measurement · Reporting
+
+The measurement department
+
+See all ten departments
+
+## Instead of a marketing agency.
+
+Agencies solved this with people: an account manager, a strategist, a writer, a media buyer, billed monthly. Flow solves it with systems, and one marketing engineer who reviews the work.
+
+What you are buying
+
+A marketing agency
+
+Flow AI
+
+Who does the work
+
+A team you rarely meet, often juniors behind a senior pitch
+
+An agent stack, reviewed by the engineer who built it
+
+Who you talk to
+
+An account manager
+
+The person doing the work
+
+Scope
+
+The channels in your retainer
+
+Ten marketing departments, install what you need
+
+Speed to first output
+
+Onboarding, then a strategy deck
+
+A written read of your marketing in the first week
+
+What you can inspect
+
+A monthly report
+
+The systems themselves, and 126 published skills on GitHub
+
+When it ends
+
+The work stops
+
+The systems keep running, documented
+
+Agencies are still the right answer for big paid media and brand campaigns. What each option costs, honestly.
 
 ## Read. Install. Run.
 
@@ -1085,7 +1158,7 @@ Get a first read
 
 ---
 
-## About Amber Lan · AI marketing engineer · Flow AI
+## About Amber Lan | 10 years marketing, 3 building the AI
 
 Source URL: https://www.flowai.co.nz/about.html
 Type: Page
@@ -1093,21 +1166,25 @@ Author: Amber Lan (Flow AI)
 
 About
 
-# Amber Lan. AI marketing engineer.
+# Ten years in marketing. Three building the AI that runs it.
 
-I run marketing solo at an AI startup, on an agent stack I built. This page is the receipts: every system linked to its source.
+Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. This page is the receipts.
 
-Get a first readGitHubLinkedInBaseAuckland, New Zealand · NZ / AU / remoteLanguagesEnglish · 中文 (native)StackClaude agents · Python · TypeScript · SwiftPositionPractitioner. Receipts over claims.
+Get a first readGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland · Australia, New Zealand, remoteLanguagesEnglish · 中文 (native)Published126 skills, open source
 
-## One person, two crafts.
+## I was the marketing team of one.
 
-The AI marketing engineer who builds and runs the machine in production, and shows the work.
+Flow AI exists because I needed it first.
 
-Most people in this market are marketers who prompt, or engineers who can't market. I work in the overlap.
+Ten years in marketing, across every part of it. Positioning and category work. Search, back when that meant Google and now that it means ChatGPT too. Content calendars, brand voice, social, email, outbound, paid, events, analytics. Not one specialism: the whole function, in agencies and in house, for businesses from local operators to enterprise software.
 
-I write the go-to-market strategy, then build the systems that execute it. Agent systems, content engines with codified voice audits, outbound lanes, SEO and AEO tooling, growth engineering, rendering pipelines.
+Which means I know exactly what a marketer's week looks like. You are one person against a list that assumes five. The strategy sits in a document nobody opens because there is no time to execute it. The content calendar slips, then slips again. Leads arrive and nobody follows up for four days. You are not bad at your job. There is simply more work than hours, and every quarter the list gets longer.
 
-No handoffs, because there is no one to hand off to. When I say a system works, the receipt ships with the claim.
+Three years ago I started building my way out of it. Not prompts and not a tool subscription: real systems. Agents with the strategy written into them, content engines that hold a codified brand voice, outbound lanes that research before they send, search tooling that gets a business cited by AI assistants and not just ranked on Google.
+
+Then I ran a whole marketing function on it. One marketer, no team, the full remit at an AI company: strategy, launches, content, thought leadership for three executives, events, and the reporting. The system did the production. I did the judgment. That is the only reason one person could hold it.
+
+Flow AI is that system, opened up. Every business owner I meet has the same problem I had, with less time and no marketing background. So the agents that ran my function now run theirs.
 
 双语营销工程师 · Practitioner. Systems in production. Receipts included.
 
@@ -1136,6 +1213,34 @@ An HTML-to-video rendering pipeline (Playwright + ffmpeg), a live benchmark kios
 ### Event go-to-market end to end
 
 Exhibitor operations, booth systems, and collateral for national tech events, run as production systems rather than one-off scrambles.
+
+## Every part of marketing, done personally.
+
+Not a specialist who outsources the rest. This is why Flow can run ten departments and know when each one is wrong.
+
+### Strategy and positioning
+
+Category work, message architecture, claims registers, launch plans across quarters.
+
+### Search and AI search
+
+Technical SEO through to answer engine optimisation, with the toolkit published open source.
+
+### Content and brand voice
+
+Calendars, long form, executive ghostwriting, and voice codified strictly enough that a machine can hold it.
+
+### Social and community
+
+Platform-native distribution, founder voices, and the unglamorous work of replying on time.
+
+### Outbound and lifecycle
+
+Researched prospect lists, sequences inside safe limits, email and follow-up that a human still signs off.
+
+### Paid, analytics and events
+
+Ad creative and audiences, tracking wired properly, and national events run as systems rather than scrambles.
 
 Proof
 
@@ -1221,9 +1326,9 @@ What broke, the root cause, the fix, and what it cost. Published at the same rat
 
 Anything done twice by hand becomes a system. The agent stack is the team; I stay on strategy and judgment.
 
-## Let's build the machine for your startup.
+## One person with an agent stack, instead of an agency.
 
-Strategy, demand engines, and the systems that run them. One engineer, no handoffs, receipts included.
+You talk to the person who does the work. No account manager, no junior doing the writing, no retainer for hours nobody can show you. Tell Flow what you sell and where growth is stuck, and a written read comes back within the week.
 
 Get a first read
 
@@ -1293,4 +1398,4 @@ Flow AI prices by department: a fixed-scope one-week install, then a monthly run
 
 ### What is AI-search optimisation?
 
-AI-search optimisation, also called answer engine optimisation (AEO) or generative engine optimisation (GEO), is the practice of structuring a website so AI assistants such as ChatGPT, Claude, and Perplexity cite it when answering buyers' questions. Research presented at KDD 2024 by Aggarwal et al. found that adding quotations to a page improved its visibility in AI-generated answers by up to 41 percent, and adding statistics by up to 33 percent.
+AI-search optimisation, also called answer engine optimisation (AEO) or generative engine optimisation (GEO), is the practice of structuring a website so AI assistants such as ChatGPT, Claude, and Perplexity cite it when answering buyers' questions. Research presented at KDD 2024 by Aggarwal et al. found generative engine optimisation lifted visibility by up to 40 percent, with the largest gains going to pages that rank fifth rather than first.

@@ -30,6 +30,7 @@ Site structure:
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
 - /blog/: guides and working notes, published weekly.
+- /blog/ai-marketing-statistics-australia-new-zealand.html: 62 sourced statistics on AI adoption and AI marketing in Australia and New Zealand, free to quote with attribution.
 - /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and department by department.
 - /blog/what-is-an-ai-marketing-agent.html: defines the AI marketing agent for small business, the ten marketing jobs it covers, and how it differs from marketing automation, general AI tools and an agency.
 - /blog/ai-marketing-cost-australia-new-zealand.html: what AI marketing costs in Australia and New Zealand in 2026, with sourced ranges for tools, freelancers, AI agents, agencies and in-house hires.
