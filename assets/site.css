@@ -232,6 +232,97 @@ section + section::before {
   .hero-proof { gap: 0.35rem 1.25rem; font-size: 12px; }
 }
 
+/* ---- Blueprint rails ---------------------------------------------------
+   Profound runs two dashed verticals down the page at the container edges, so
+   the content reads as drawn on a technical sheet rather than floating. Pure
+   decoration, so it is hidden from assistive tech and dropped on small screens. */
+body::before, body::after {
+  content: ""; position: fixed; top: 0; bottom: 0; width: 0;
+  border-left: 1px dashed rgba(250, 248, 243, 0.07);
+  pointer-events: none; z-index: 1;
+}
+body::before { left: max(24px, calc(50% - 540px)); }
+body::after { right: max(24px, calc(50% - 540px)); }
+
+/* ---- Feature rows: label left, detail right, dashed divider between ---- */
+.rows { margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left; }
+.row {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  border-top: 1px solid var(--hair);
+  position: relative;
+}
+.row:last-child { border-bottom: 1px solid var(--hair); }
+/* the dashed divider between the two columns, the row's own vertical rule */
+.row::after {
+  content: ""; position: absolute; top: clamp(2.5rem, 5vw, 3.5rem); bottom: clamp(2.5rem, 5vw, 3.5rem);
+  left: calc(41.666% - clamp(1rem, 2.5vw, 2rem));
+  border-left: 1px dashed var(--hair);
+}
+.row-label h3 { margin-bottom: 0.75rem; }
+.row-label p { color: var(--muted); font-size: 15px; line-height: 1.55; max-width: 34ch; text-wrap: pretty; }
+.pill {
+  display: inline-flex; align-items: center; min-height: 36px; margin-top: 1.25rem;
+  padding: 0 1rem; border-radius: var(--pill); background: var(--surface-strong);
+  color: var(--fg); font-size: 13.5px; font-weight: 600;
+  transition: background-color 200ms ease;
+}
+.pill:hover { background: #24231f; }
+
+.systems { margin: 0; padding: 0; list-style: none; }
+.systems li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.35rem 1.5rem; padding: 0.85rem 0; border-top: 1px solid var(--hair); }
+.systems li:first-child { border-top: 0; padding-top: 0; }
+.systems b { color: var(--fg); font-weight: 600; font-size: 15px; }
+.systems span { color: var(--muted); font-size: 15px; line-height: 1.5; text-wrap: pretty; }
+
+@media (max-width: 900px) {
+  body::before, body::after { display: none; }
+  .row { grid-template-columns: 1fr; gap: 2rem; }
+  .row::after { display: none; }
+  .systems li { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+/* ---- Versus: the agency side recedes, the Flow side is raised ----------- */
+.versus {
+  position: relative; display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: 0; margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left;
+}
+/* the raised panel behind the whole Flow column */
+.versus::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%; right: 0; z-index: 0;
+  background: var(--surface); border: 1px solid var(--hair-strong); border-radius: var(--radius);
+}
+.versus > * { position: relative; z-index: 1; }
+.versus-head {
+  padding: 1.35rem 1.75rem 1.1rem; margin: 0;
+  color: var(--soft); font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  border-bottom: 1px solid var(--hair);
+}
+.versus-us-head { color: var(--fg); display: flex; align-items: center; gap: 0.6rem; }
+.versus-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+/* each criterion spans both columns, set above its pair */
+.versus-label {
+  grid-column: 1 / -1; margin: 0; padding: 1.5rem 1.75rem 0.4rem;
+  color: var(--soft); font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+}
+.versus-them, .versus-us { padding: 0 1.75rem 1.5rem; font-size: 15.5px; line-height: 1.5; text-wrap: pretty; }
+.versus-them { color: var(--soft); border-right: 1px dashed var(--hair); }
+.versus-us { color: var(--fg); }
+/* hairline between criteria, on both columns */
+.versus-label:not(:nth-of-type(1)) { border-top: 1px solid var(--hair); }
+
+@media (max-width: 720px) {
+  .versus { grid-template-columns: 1fr; }
+  .versus::before { left: 0; top: auto; bottom: auto; display: none; }
+  .versus-head { display: none; }
+  .versus-them, .versus-us { padding-left: 0; padding-right: 0; border-right: 0; }
+  .versus-them::before { content: "Agency: "; color: var(--soft); font-weight: 600; }
+  .versus-us::before { content: "Flow AI: "; color: var(--fg); font-weight: 600; }
+  .versus-us { padding-top: 0.25rem; }
+  .versus-label { padding-left: 0; padding-right: 0; }
+}
+
 /* Three outcome pillars */
 .pillar { border-top: 1px solid var(--hair); padding-top: 1.35rem; }
 .pillar h3 { margin-bottom: 0.6rem; }

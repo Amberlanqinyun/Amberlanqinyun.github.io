@@ -284,39 +284,51 @@ What Flow does
 
 ## Get found. Get leads. Keep customers.
 
-Three outcomes, ten marketing systems underneath them, one engineered function. Start where the gap is widest.
+Three outcomes, ten engineered systems underneath them. Start where the gap is widest.
 
 ### Get found
 
-Be the answer when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews, where a quarter of searches now end without a click.
+Be the answer when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews.
 
-Positioning, search and AI search, content, social
+How it works
 
-How the search system works
+- PositioningWho you sell to, what to say, and where the budget goes.
+
+- Search and AI searchTechnical SEO through to answer engine optimisation, so assistants cite you.
+
+- ContentOne strong idea becomes a month of content your team approves, not writes.
+
+- SocialPosts and threads in your voice, on a calendar that holds.
 
 ### Get leads
 
-Turn attention into enquiries. Researched outbound to the right hundred buyers, offers and landing pages that convert, launches that actually land.
+Turn attention into enquiries, with a human on every send that reaches a customer.
 
-Outbound, growth and conversion, launch, paid
+How it works
 
-How the outbound system works
+- OutboundThe right hundred buyers, researched and reached personally.
+
+- Growth and conversionOffers, landing pages and funnels, tested and tuned monthly.
+
+- LaunchProduct and campaign launches sequenced across every channel.
+
+- PaidAd creative and audiences, with the numbers behind them.
 
 ### Keep customers
 
-Follow up on time, stay in front of the people who already know you, and see which effort produced which conversation.
+Stay in front of the people who already know you, and know which effort produced which conversation.
 
-Community, measurement, reporting
+How it works
 
-How the measurement system works
+- CommunityReddit, forums and groups answered honestly and on time.
 
-See all ten systems
+- MeasurementTracking wired properly, so next month's budget goes where it worked.
+
+- ReportingOne short monthly read on what shipped and what comes next.
 
 ## Instead of a marketing agency.
 
 Agencies solved this with people: an account manager, a strategist, a writer, a media buyer, billed monthly. Flow solves it with systems, and one marketing engineer who reviews the work.
-
-What you are buying
 
 A marketing agency
 
@@ -324,39 +336,27 @@ Flow AI
 
 Who does the work
 
-A team you rarely meet, often juniors behind a senior pitch
-
-An agent stack, reviewed by the engineer who built it
+A team you rarely meet, often juniors behind a senior pitchAn agent stack, reviewed by the engineer who built it
 
 Who you talk to
 
-An account manager
-
-The person doing the work
+An account managerThe person doing the work
 
 Scope
 
-The channels in your retainer
-
-Ten marketing systems, engineered to your business
+The channels in your retainerTen marketing systems, engineered to your business
 
 Speed to first output
 
-Onboarding, then a strategy deck
-
-A written read of your marketing in the first week
+Onboarding, then a strategy deckA written read of your marketing in the first week
 
 What you can inspect
 
-A monthly report
-
-The systems themselves, and 126 published skills on GitHub
+A monthly reportThe systems themselves, and 126 published skills on GitHub
 
 When it ends
 
-The work stops
-
-The systems keep running, documented
+The work stopsThe systems keep running, documented
 
 Agencies are still the right answer for big paid media and brand campaigns. What each option costs, honestly.
 
