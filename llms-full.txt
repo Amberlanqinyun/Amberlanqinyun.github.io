@@ -243,9 +243,15 @@ Author: Amber Lan (Flow AI)
 
 Flow, the marketing agent
 
-# One marketing agent. Ten marketers' work.
+# One agent runs your search, content, social, outbound and reporting.search.content.social.outbound.reporting.
 
-Most of marketing is now work AI should be doing. Flow runs your search, content, social, outbound and reporting, for small businesses in Australia and New Zealand. You review. It ships.
+Most of marketing is now work AI should be doing. Flow runs ten marketing departments for small businesses in Australia and New Zealand. You review. It ships.
+
+- 126 published skills
+
+- Open source and inspectable
+
+- A human reviews everything
 
 Get a first readSee how it works
 
