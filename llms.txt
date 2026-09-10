@@ -24,14 +24,14 @@ Site structure:
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
-- /sprints/: five fixed-scope one-week department installs, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
+- /sprints/: five of the ten marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus two curated MIT-licensed libraries — 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
 - /blog/: guides and working notes, published weekly.
 - /blog/ai-marketing-statistics-australia-new-zealand.html: 62 sourced statistics on AI adoption and AI marketing in Australia and New Zealand, free to quote with attribution.
-- /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and department by department.
+- /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and system by system.
 - /blog/what-is-an-ai-marketing-agent.html: defines the AI marketing agent for small business, the ten marketing jobs it covers, and how it differs from marketing automation, general AI tools and an agency.
 - /blog/ai-marketing-cost-australia-new-zealand.html: what AI marketing costs in Australia and New Zealand in 2026, with sourced ranges for tools, freelancers, AI agents, agencies and in-house hires.
 - /blog/ai-marketing-for-small-business-nz.html: the complete guide to AI marketing for NZ small businesses - what it covers, costs versus an agency or hire, and a starting checklist.
@@ -45,4 +45,4 @@ An AI marketing engineer does two jobs that are usually split: they write the go
 
 ## What does AI marketing cost in New Zealand?
 
-Flow AI prices by department: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.

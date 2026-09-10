@@ -24,14 +24,14 @@ Site structure:
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
-- /sprints/: five fixed-scope one-week department installs, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
+- /sprints/: five of the ten marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus two curated MIT-licensed libraries — 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
 - /blog/: guides and working notes, published weekly.
 - /blog/ai-marketing-statistics-australia-new-zealand.html: 62 sourced statistics on AI adoption and AI marketing in Australia and New Zealand, free to quote with attribution.
-- /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and department by department.
+- /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and system by system.
 - /blog/what-is-an-ai-marketing-agent.html: defines the AI marketing agent for small business, the ten marketing jobs it covers, and how it differs from marketing automation, general AI tools and an agency.
 - /blog/ai-marketing-cost-australia-new-zealand.html: what AI marketing costs in Australia and New Zealand in 2026, with sourced ranges for tools, freelancers, AI agents, agencies and in-house hires.
 - /blog/ai-marketing-for-small-business-nz.html: the complete guide to AI marketing for NZ small businesses - what it covers, costs versus an agency or hire, and a starting checklist.
@@ -45,7 +45,7 @@ An AI marketing engineer does two jobs that are usually split: they write the go
 
 ## What does AI marketing cost in New Zealand?
 
-Flow AI prices by department: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.
 
 
 ---
@@ -284,33 +284,33 @@ What Flow does
 
 ## Get found. Get leads. Keep customers.
 
-Three outcomes, ten marketing departments underneath them, one engineered system. Transform the function that matters most first.
+Three outcomes, ten marketing systems underneath them, one engineered function. Start where the gap is widest.
 
 ### Get found
 
 Be the answer when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews, where a quarter of searches now end without a click.
 
-Positioning · Search and AI search · Content · Social
+Positioning, search and AI search, content, social
 
-The AI-search department
+How the search system works
 
 ### Get leads
 
 Turn attention into enquiries. Researched outbound to the right hundred buyers, offers and landing pages that convert, launches that actually land.
 
-Outbound · Growth and conversion · Launch · Paid
+Outbound, growth and conversion, launch, paid
 
-The outbound department
+How the outbound system works
 
 ### Keep customers
 
 Follow up on time, stay in front of the people who already know you, and see which effort produced which conversation.
 
-Community · Measurement · Reporting
+Community, measurement, reporting
 
-The measurement department
+How the measurement system works
 
-See all ten departments
+See all ten systems
 
 ## Instead of a marketing agency.
 
@@ -338,7 +338,7 @@ Scope
 
 The channels in your retainer
 
-Ten marketing departments, install what you need
+Ten marketing systems, engineered to your business
 
 Speed to first output
 
@@ -362,7 +362,7 @@ Agencies are still the right answer for big paid media and brand campaigns. What
 
 ## Read. Install. Run.
 
-Flow reads your business first. You choose the first department. A human reviews everything before it ships.
+Flow reads your business first. You choose where it starts. A human reviews everything before it ships.
 
 01
 
@@ -374,7 +374,7 @@ Tell Flow what you sell and who buys it. A written read of your marketing, with 
 
 ### Install
 
-Pick the department with the most to gain. It goes live with the assets, automation and tracking it needs to run.
+Pick the system with the most to gain. It goes live with the assets, automation and tracking it needs to run.
 
 03
 
@@ -454,11 +454,11 @@ Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-Departments · installed one at a time
+The practice · engineered one system at a time
 
-# Ten departments. Install one at a time.
+# Ten systems. One engineered marketing function.
 
-Flow runs marketing as ten departments. Five come as one-week installs today: positioning, search, content, outbound and measurement. Start where your line is broken.
+Flow runs marketing as ten engineered systems. Five are ready to install in a week: positioning, search, content, outbound and measurement. Start where the gap is widest.
 
 Get a first readSee the five installs
 
@@ -592,7 +592,7 @@ This is the method behind the enterprise go-to-market case study, applied at you
 
 ## Book the positioning sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
 Get a first readCompare the five sprints
 
@@ -668,7 +668,7 @@ Open source and running on this site. Read the case study, then inspect the live
 
 ## Book the AI-search sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
 Get a first readCompare the five sprints
 
@@ -744,7 +744,7 @@ The clean-room version is public: the case study and the code.
 
 ## Book the content engine sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
 Get a first readCompare the five sprints
 
@@ -820,7 +820,7 @@ The design pattern is documented in the outbound system on the work page.
 
 ## Book the outbound sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
 Get a first readCompare the five sprints
 
@@ -896,7 +896,7 @@ Try the free AI-readiness benchmark for a taste of the diagnostic style.
 
 ## Book the analytics sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
 Get a first readCompare the five sprints
 
@@ -1234,7 +1234,7 @@ Exhibitor operations, booth systems, and collateral for national tech events, ru
 
 ## Every part of marketing, done personally.
 
-Not a specialist who outsources the rest. This is why Flow can run ten departments and know when each one is wrong.
+Not a specialist who outsources the rest. This is why Flow can run ten marketing systems and know when each one is wrong.
 
 ### Strategy and positioning
 
@@ -1364,7 +1364,7 @@ Contact
 
 Four questions. You get a written read on your marketing gap within the first week. No obligation, no sales sequence, no agency deck.
 
-Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetA one-department installThe monthly marketing engineJust after a second opinionSend this to Amber
+Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetOne system installedThe monthly marketing engineJust after a second opinionSend this to Amber
 
 I read every message myself and reply personally, usually within two working days.
 
@@ -1412,7 +1412,7 @@ Early-stage teams and small businesses in Australia and New Zealand that need se
 
 ### What does AI marketing cost in Australia and New Zealand?
 
-Flow AI prices by department: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read, so you see the number against your own situation rather than a rate card.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read, so you see the number against your own situation rather than a rate card.
 
 ### What is AI-search optimisation?
 
