@@ -246,19 +246,21 @@ Author: Amber Lan (Flow AI)
 
 Flow, the marketing agent
 
-# More leads. Without hiring an agency, a marketer or a freelancer.Without an agency.Without a hire.Without the hours.
+# Your marketing is losing a day a week to work AI should be doing.
 
-Flow AI is an AI marketing agent for small and medium businesses in Australia and New Zealand. It runs the marketing an agency would charge you a retainer for, built by a marketer with ten years in the job. You review. It ships.
+You already know AI works. You have the ChatGPT tabs to prove it. But the content still ships late, the follow-ups still wait, and nobody is watching what Google and ChatGPT say about you. Flow does that work every week and hands it to you to approve.
 
-- 10+ years marketing, 3+ building AI
+- No agency retainer
 
-- 126 published skills, open source
+- No new hire
 
-- A human reviews everything
+- A human reviews every send
 
-Get a first readSee how it works
+Get a free first readCompare it to an agency
 
-Built and run in Auckland by Amber Lan, marketing engineer.
+Free, no card, no call required. AI agents free up 6 to 7 hours a week for small business marketers, according to Salesforce research on 4,450 marketers.
+
+Built and run in Auckland by Amber Lan, marketing engineer. Ten years in marketing, three building the agents.
 
 Recent work forGota.co.nzLullaby.co.nzResaido.com
 
