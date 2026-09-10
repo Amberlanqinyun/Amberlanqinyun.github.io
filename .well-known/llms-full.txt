@@ -8,7 +8,7 @@ Key facts:
 - Service: AI-run marketing for NZ SMBs — SEO and answer engine optimization, content engine, outbound automation, analytics and reporting.
 - Audience: New Zealand small and medium businesses, and early-stage teams without a marketing hire. Australia served remotely.
 - Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Marketing engine retainer $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
-- Referral: NZ$500 for every signed client referred, paid after their first invoice clears.
+- Referral: a referral fee for every signed client referred, paid after their first invoice clears.
 - Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, and agentic AI tooling (Claude).
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
@@ -24,12 +24,13 @@ Site structure:
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
-- /sprints/: five fixed-scope NZ$997 starter sprints, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
+- /sprints/: five fixed-scope one-week department installs, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus two curated MIT-licensed libraries — 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
 - /blog/: guides and working notes, published weekly.
+- /blog/ai-marketing-cost-australia-new-zealand.html: what AI marketing costs in Australia and New Zealand in 2026, with sourced ranges for tools, freelancers, AI agents, agencies and in-house hires.
 - /blog/ai-marketing-for-small-business-nz.html: the complete guide to AI marketing for NZ small businesses - what it covers, costs versus an agency or hire, and a starting checklist.
 - /tools/benchmark.html: free 2-minute AI-readiness benchmark for businesses. No email required.
 - /tools/pricing.html: free interactive pricing model (Lerner rule, economic value to the customer).
@@ -41,7 +42,7 @@ An AI marketing engineer does two jobs that are usually split: they write the go
 
 ## What does AI marketing cost in New Zealand?
 
-Flow AI charges NZ$1,000 per month, flat, cancel anytime.
+Flow AI prices by department: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.
 
 
 ---
@@ -234,87 +235,53 @@ Get a first read
 
 ---
 
-## Amber Lan | AI Marketing Engineer in Auckland
+## Flow AI | The AI marketing agent for small business in Australia and NZ
 
 Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-Amber Lan
+Flow, the marketing agent
 
-# More leads. Less work. One engineer.
+# One marketing agent. Ten marketers' work.
 
-AI marketing and AI transformation for small businesses in Australia and New Zealand. Start with a free first read.
+Most of marketing is now work AI should be doing. Flow runs your search, content, social, outbound and reporting, for small businesses in Australia and New Zealand. You review. It ships.
 
-Get a first readSee the work
+Get a first readSee how it works
 
-Amber Lan. AI marketing engineer, Auckland.
+Built and run in Auckland by Amber Lan, marketing engineer.
 
 Recent work forGota.co.nzLullaby.co.nzResaido.com
 
-What I build
+What Flow does
 
-## Six parts. One machine.
+## Ten departments. One agent.
 
-Each part works on its own. Together they are a marketing function a small team can run.
+Every marketing job a small business needs, built from 126 published skills. Install one department or hand over the line.
 
-### Positioning
+PositioningWho you sell to, what to say, and where the budget goes.9 skillsSearch and AI searchBe the answer Google, ChatGPT and Claude give about your category.20 skillsContentOne strong idea becomes a month of content your team approves, not writes.15 skillsSocialPosts, threads and carousels in your voice, on a calendar that holds.14 skillsOutboundThe right hundred buyers, reached personally, with a human on every send.in growthGrowth and conversionOffers, landing pages and funnels, tested and tuned every month.29 skillsLaunchProduct and campaign launches sequenced across every channel.14 skillsCommunityReddit, forums and groups answered honestly and on time.12 skillsPaid and dataAd creative, audiences, and the numbers behind them.4 skillsMeasurementSee which effort produced which conversation, so next month's budget goes where it worked.reporting
 
-Who you sell to, what to say, and where the budget goes.
+## Read. Install. Run.
 
-The positioning sprint
-
-### AI search
-
-Be the answer ChatGPT, Claude and Google give about your category.
-
-The AI-search sprint
-
-### Content
-
-One strong idea becomes a month of content your team approves, not writes.
-
-The content sprint
-
-### Outbound
-
-The right hundred buyers, reached personally, with a human on every send.
-
-The outbound sprint
-
-### Measurement
-
-See which effort produced which conversation, so next month's budget goes where it worked.
-
-The analytics sprint
-
-### AI transformation
-
-Agents and workflows that take repetitive work off your team, starting with marketing.
-
-The skills library
-
-## Diagnose. Build. Run.
-
-The same person writes the plan and ships the machine. Nothing is lost between the deck and the delivery.
+Flow reads your business first. You choose the first department. A human reviews everything before it ships.
 
 01
 
-### Diagnose
+### Read
 
-A call, then a written read of your go-to-market with the opportunities ranked. Inside the first week.
+Tell Flow what you sell and who buys it. A written read of your marketing, with the opportunities ranked, comes back inside the first week.
 
 02
 
-### Build
+### Install
 
-The first system goes live with the assets, automation and tracking it needs to run.
+Pick the department with the most to gain. It goes live with the assets, automation and tracking it needs to run.
 
 03
 
 ### Run
 
-Monthly operation, iteration, and one short report on what shipped and what comes next.
+Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.
 
 Proof
 
@@ -324,7 +291,7 @@ Strategy is only credible when you can inspect the systems beneath it.
 
 ### geo-seo-claude
 
-Citability scoring, AI-crawler analysis and structured-data workflows. The toolkit I run for clients.
+Citability scoring, AI-crawler analysis and structured-data workflows. The toolkit Flow runs on client sites.
 
 Open on GitHub
 
@@ -374,9 +341,9 @@ Every guide in one place, with a feed you can follow.
 
 Open the guides
 
-## Bring me the gap.
+## Start with a first read.
 
-Tell me what you sell, who it is for, and where growth is stuck. I reply with the most useful next question.
+Tell Flow what you sell, who it is for, and where growth is stuck. A written read of your marketing comes back within the week.
 
 Get a first read
 
@@ -388,45 +355,45 @@ Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-Starter sprints · NZ$997 · one week each
+Departments · installed one at a time
 
-# Five sprints. One station each.
+# Ten departments. Install one at a time.
 
-Marketing runs as a line: position, be found, publish, reach out, measure. Each sprint installs one station. Start where your line is broken.
+Flow runs marketing as ten departments. Five come as one-week installs today: positioning, search, content, outbound and measurement. Start where your line is broken.
 
-Get a first readSee the five stations
+Get a first readSee the five installs
 
-Not sure which station is broken? The free AI-readiness benchmark takes two minutes and points at your weakest one, or email me and I'll tell you honestly.
+Not sure which station is broken? The free AI-readiness benchmark takes two minutes and points at your weakest one, or Get a first read and Flow will tell you.
 
 ## Pick a station.
 
 A fixed deliverables checklist, a one-week clock and full handover, every time.
 
-Strategy · NZ$997
+Strategy · one week
 
 ### Positioning sprint
 
 Claims register, one-page positioning, message architecture, and your first two channels.
 
-See the fixed scopeAI search · NZ$997
+See the fixed scopeAI search · one week
 
 ### AI-search sprint
 
 AI-crawler access, llms.txt, structured data, citability fixes, and search submission.
 
-See the fixed scopeContent · NZ$997
+See the fixed scopeContent · one week
 
 ### Content engine sprint
 
 Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.
 
-See the fixed scopeOutbound · NZ$997
+See the fixed scopeOutbound · one week
 
 ### Outbound sprint
 
 A signal-based prospect list, one personalised sequence inside safe limits, and instant human handoff.
 
-See the fixed scopeAnalytics · NZ$997
+See the fixed scopeAnalytics · one week
 
 ### Analytics sprint
 
@@ -440,7 +407,7 @@ The marketing engine operates every station for you. Sprints buy your understand
 
 Marketing engine
 
-NZ$1,000 per month
+Monthly cancel any time
 
 Every station, run for you, every month.
 
@@ -458,13 +425,13 @@ Compare the five sprints next to the sprints on the home page.
 
 ---
 
-## Positioning Sprint · NZ$997 fixed scope · Flow AI
+## Positioning Sprint · fixed scope · Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/positioning.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Positioning sprint · NZ$997 · one week
+Positioning sprint · one week
 
 # One week to a position you can execute.
 
@@ -478,7 +445,7 @@ Fixed scope, so everything ships inside the week.
 
 Positioning sprint
 
-NZ$997 one time
+One week fixed scope
 
 Documented, portable, handover included.
 
@@ -526,7 +493,7 @@ This is the method behind the enterprise go-to-market case study, applied at you
 
 ## Book the positioning sprint.
 
-NZ$997, fixed scope, one week. If the fit is wrong I will say so and point you at the sprint you need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
 
 Get a first readCompare the five sprints
 
@@ -534,13 +501,13 @@ A short form. I reply personally.
 
 ---
 
-## AI-Search Sprint · NZ$997 fixed scope · Flow AI
+## AI-Search Sprint · fixed scope · Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/ai-search.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-AI-search sprint · NZ$997 · one week
+AI-search sprint · one week
 
 # Make your business legible to Google and the AI assistants.
 
@@ -554,7 +521,7 @@ Fixed scope, so everything ships inside the week.
 
 AI-search sprint
 
-NZ$997 one time
+One week fixed scope
 
 Documented, portable, handover included.
 
@@ -602,7 +569,7 @@ Open source and running on this site. Read the case study, then inspect the live
 
 ## Book the AI-search sprint.
 
-NZ$997, fixed scope, one week. If the fit is wrong I will say so and point you at the sprint you need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
 
 Get a first readCompare the five sprints
 
@@ -610,13 +577,13 @@ A short form. I reply personally.
 
 ---
 
-## Content Engine Sprint · NZ$997 fixed scope · Flow AI
+## Content Engine Sprint · fixed scope · Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/content-engine.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Content engine sprint · NZ$997 · one week
+Content engine sprint · one week
 
 # A month of on-voice content from one source document.
 
@@ -630,7 +597,7 @@ Fixed scope, so everything ships inside the week.
 
 Content engine sprint
 
-NZ$997 one time
+One week fixed scope
 
 Documented, portable, handover included.
 
@@ -678,7 +645,7 @@ The clean-room version is public: the case study and the code.
 
 ## Book the content engine sprint.
 
-NZ$997, fixed scope, one week. If the fit is wrong I will say so and point you at the sprint you need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
 
 Get a first readCompare the five sprints
 
@@ -686,13 +653,13 @@ A short form. I reply personally.
 
 ---
 
-## Outbound Sprint · NZ$997 fixed scope · Flow AI
+## Outbound Sprint · fixed scope · Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/outbound.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Outbound sprint · NZ$997 · one week
+Outbound sprint · one week
 
 # One outreach lane, live, with a human takeover rule.
 
@@ -706,7 +673,7 @@ Fixed scope, so everything ships inside the week.
 
 Outbound sprint
 
-NZ$997 one time
+One week fixed scope
 
 Documented, portable, handover included.
 
@@ -754,7 +721,7 @@ The design pattern is documented in the outbound system on the work page.
 
 ## Book the outbound sprint.
 
-NZ$997, fixed scope, one week. If the fit is wrong I will say so and point you at the sprint you need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
 
 Get a first readCompare the five sprints
 
@@ -762,13 +729,13 @@ A short form. I reply personally.
 
 ---
 
-## Analytics Sprint · NZ$997 fixed scope · Flow AI
+## Analytics Sprint · fixed scope · Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/analytics.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Analytics sprint · NZ$997 · one week
+Analytics sprint · one week
 
 # Know which channel pays, on one page a month.
 
@@ -782,7 +749,7 @@ Fixed scope, so everything ships inside the week.
 
 Analytics sprint
 
-NZ$997 one time
+One week fixed scope
 
 Documented, portable, handover included.
 
@@ -830,7 +797,7 @@ Try the free AI-readiness benchmark for a taste of the diagnostic style.
 
 ## Book the analytics sprint.
 
-NZ$997, fixed scope, one week. If the fit is wrong I will say so and point you at the sprint you need.
+Fixed scope, one week. If the fit is wrong, Flow says so and points you at the department you actually need.
 
 Get a first readCompare the five sprints
 
@@ -1266,13 +1233,13 @@ Contact
 
 Four questions. You get a written read on your marketing gap within the first week. No obligation, no sales sequence, no agency deck.
 
-Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetA starter sprint (NZ$997)The marketing engine retainer (NZ$1,000/month)Just after a second opinionSend this to Amber
+Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetA one-department installThe monthly marketing engineJust after a second opinionSend this to Amber
 
 I read every message myself and reply personally, usually within two working days.
 
 ## What happens next.
 
-Three steps, all done by me.
+Three steps. Flow does the work, a marketing engineer reviews it.
 
 01
 
@@ -1314,7 +1281,7 @@ Early-stage teams and small businesses in Australia and New Zealand that need se
 
 ### What does AI marketing cost in Australia and New Zealand?
 
-Flow AI publishes its pricing. A starter sprint is NZ$997 one time and installs one working system. The marketing engine retainer is NZ$1,000 per month, covers content, AI-search visibility, outbound, and reporting, and can be cancelled at any time. The first retainer month carries a 30-day money-back guarantee.
+Flow AI prices by department: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read, so you see the number against your own situation rather than a rate card.
 
 ### What is AI-search optimisation?
 

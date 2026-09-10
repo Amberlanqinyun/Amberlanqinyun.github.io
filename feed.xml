@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Flow AI · Amber Lan</title>
-  <subtitle>Marketing systems, built and run in production. Case studies and lessons from an AI marketing engineer in Auckland.</subtitle>
+  <subtitle>AI marketing for small and medium businesses in Australia and New Zealand. Guides, case studies and working notes from Flow AI.</subtitle>
   <link href="https://www.flowai.co.nz/feed.xml" rel="self"/>
   <link href="https://www.flowai.co.nz/"/>
   <id>https://www.flowai.co.nz/</id>
-  <updated>2026-08-20T12:00:00+12:00</updated>
+  <updated>2026-09-10T09:00:00+12:00</updated>
   <author><name>Amber Lan</name></author>
+  <entry>
+    <title>How much does AI marketing cost in Australia and New Zealand? (2026)</title>
+    <link href="https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand.html"/>
+    <id>https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand.html</id>
+    <updated>2026-09-10T09:00:00+12:00</updated>
+    <summary>Sourced 2026 price ranges in AUD and NZD for five ways to run marketing: tools you run yourself, a freelancer, an AI marketing agent, an agency retainer, and an in-house hire.</summary>
+  </entry>
   <entry>
     <title>AI Marketing for Small Business in NZ: The Complete Guide (2026)</title>
     <link href="https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html"/>

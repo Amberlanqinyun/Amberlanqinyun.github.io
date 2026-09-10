@@ -98,9 +98,6 @@ h3 {
   letter-spacing: -0.014em;
   line-height: 1.06;
 }
-/* The second clause of a headline steps back to a light weight: a statement, then its qualifier */
-h1 .light, h2 .light { font-weight: 300; color: var(--muted); letter-spacing: -0.012em; }
-
 .lead {
   color: var(--muted);
   font-size: var(--lead);
@@ -213,6 +210,15 @@ section + section::before {
   /* Printed as Cream on Warm Ink: the card is inverted into the page's own ground, so no white slab sits on the dark page */
   filter: grayscale(1) invert(0.93) contrast(0.92);
 }
+/* Ten departments as hairline rows, two columns on desktop */
+.dept-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 5vw, 4.5rem); margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left; }
+.dept { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name meta" "line line"; gap: 0.35rem 1.5rem; padding: 1.35rem 0; border-top: 1px solid var(--hair); transition: border-color 220ms ease; }
+.dept:nth-last-child(-n+2) { border-bottom: 1px solid var(--hair); }
+.dept:hover { border-color: var(--hair-strong); }
+.dept-name { grid-area: name; color: var(--fg); font-size: 1.2rem; font-weight: 600; letter-spacing: -0.014em; }
+.dept-line { grid-area: line; color: var(--muted); font-size: 15px; line-height: 1.5; text-wrap: pretty; }
+.dept-meta { grid-area: meta; align-self: baseline; letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
+@media (max-width: 720px) { .dept-list { grid-template-columns: 1fr; } .dept:nth-last-child(2) { border-bottom: 0; } }
 .guide-card img { filter: grayscale(1); }
 
 .proof-case {
