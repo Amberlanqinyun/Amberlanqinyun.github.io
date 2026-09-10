@@ -1,6 +1,6 @@
 # Flow AI (flowai.co.nz) · Amber Lan · AI marketing engineer · Auckland, New Zealand
 
-> Flow AI is an AI marketing engineering service for New Zealand small and medium businesses, run by Amber Lan, an AI marketing engineer based in Auckland. One engineer builds and operates the client's marketing system: SEO and AI-search visibility (AEO/GEO), a content engine that ships monthly, outbound automation, and analytics, reported in one clear monthly report. Flat pricing, no hours billed.
+> Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Founded and run by Amber Lan, AI marketing engineer, from Auckland, New Zealand, working worldwide.
 
 Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
@@ -238,41 +238,57 @@ Get a first read
 
 ---
 
-## Flow AI | The AI marketing agent for small business in Australia and NZ
+## Flow AI | AI marketing transformation, engineered end to end
 
 Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-Flow, the marketing agent
+AI marketing transformation
 
-# Your marketing is losing a day a week to work AI should be doing.
+# Marketing no longer scales by hiring.
 
-You already know AI works. You have the ChatGPT tabs to prove it. But the content still ships late, the follow-ups still wait, and nobody is watching what Google and ChatGPT say about you. Flow does that work every week and hands it to you to approve.
+Every marketing function was built people-shaped: a specialist for each channel, a retainer for each gap, a headcount case for each ambition. Flow AI re-engineers the function itself, so what compounds is the system and not the payroll. Strategy, systems and the agents that run them, built by a marketing engineer.
 
-- No agency retainer
+- Ten years in marketing, three building the systems
 
-- No new hire
+- No agency retainer, no new hire
 
 - A human reviews every send
 
 Get a free first readCompare it to an agency
 
-Free, no card, no call required. AI agents free up 6 to 7 hours a week for small business marketers, according to Salesforce research on 4,450 marketers.
+A written read of your marketing within the week. No card, no call required.
 
-Built and run in Auckland by Amber Lan, marketing engineer. Ten years in marketing, three building the agents.
+Amber Lan, AI marketing engineer. Ten years in marketing, three building the agents. Working from Auckland, worldwide.
 
 Recent work forGota.co.nzLullaby.co.nzResaido.com
+
+## You already know AI works. It still is not running your marketing.
+
+Most businesses have the ChatGPT tabs to prove it. The content still ships late, the follow-ups still wait, and nobody is watching what Google and ChatGPT say about them. Tools do not close that gap. Engineered systems do.
+
+### A prompt is not a process
+
+A good answer once is not a system. Flow writes the strategy into the agents, so the same standard holds on the fiftieth run as the first.
+
+### The work is weekly, not clever
+
+Marketing fails on cadence, not ideas. AI agents free up 6 to 7 hours a week for small business marketers, according to Salesforce research on 4,450 marketers.
+
+### Judgment stays yours
+
+Machines produce, a human decides. Every send passes a review before it reaches a customer, which is the only way a small team can safely run this much output.
 
 What Flow does
 
 ## Get found. Get leads. Keep customers.
 
-Three jobs, ten marketing departments underneath them, all run by one agent. Install the job you need most.
+Three outcomes, ten marketing departments underneath them, one engineered system. Transform the function that matters most first.
 
 ### Get found
 
-Show up when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews, where a quarter of searches now end without a click.
+Be the answer when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews, where a quarter of searches now end without a click.
 
 Positioning · Search and AI search · Content · Social
 
@@ -1172,7 +1188,7 @@ About
 
 Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. This page is the receipts.
 
-Get a first readGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland · Australia, New Zealand, remoteLanguagesEnglish · 中文 (native)Published126 skills, open source
+Get a first readGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published126 skills, open source
 
 ## I was the marketing team of one.
 
