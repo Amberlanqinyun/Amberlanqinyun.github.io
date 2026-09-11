@@ -29,7 +29,7 @@
   --h2: clamp(2rem, 3.4vw, 3rem);                /* 48px */
   --h3: clamp(1.5rem, 2.4vw, 2.125rem);          /* 34px */
   --lead: clamp(1.125rem, 1.5vw, 1.3125rem);     /* 21px */
-  --section: clamp(6rem, 13vw, 11rem);
+  --section: clamp(7.5rem, 15vw, 13.5rem);
   --radius: 12px;
   --pill: 999px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -102,7 +102,7 @@ h3 {
   color: var(--muted);
   font-size: var(--lead);
   font-weight: 300;
-  line-height: 1.45;
+  line-height: 1.55;
   text-wrap: pretty;
 }
 .small { color: var(--soft); font-size: 13px; font-variant-numeric: tabular-nums; }
@@ -115,22 +115,22 @@ section + section::before {
 }
 .centered { text-align: center; }
 .centered .lead, .centered .small { margin-inline: auto; }
-.stack > * + * { margin-top: 1.25rem; }
-.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: 1.5rem; }
-.stack > h1 + .lead, .stack > h2 + .lead { margin-top: 1.75rem; }
-.stack > .lead + .cta-row, .stack > h2 + .cta-row { margin-top: 2.5rem; }
-.stack > .hero-proof + .cta-row { margin-top: 2.25rem; }
-.lead { max-width: 36ch; }
+.stack > * + * { margin-top: 1.5rem; }
+.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: 1.875rem; }
+.stack > h1 + .lead, .stack > h2 + .lead { margin-top: 2.25rem; }
+.stack > .lead + .cta-row, .stack > h2 + .cta-row { margin-top: 3rem; }
+.stack > .hero-proof + .cta-row { margin-top: 2.75rem; }
+.lead { max-width: 44ch; }
 
 /* ---- Hero ------------------------------------------------------- */
 .hero {
-  padding-block: clamp(5rem, 12vw, 9rem) 0;
+  padding-block: clamp(6.5rem, 14vw, 11rem) 0;
 }
 .hero .stack { max-width: 60rem; margin-inline: auto; }
 .hero h1 { max-width: 22ch; margin-inline: auto; }
 .hero-art {
   width: min(100%, 52rem);
-  margin: clamp(4rem, 8vw, 6rem) auto 0;
+  margin: clamp(5rem, 10vw, 7.5rem) auto 0;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--surface);
@@ -167,7 +167,7 @@ section + section::before {
 .text-link:hover { border-color: var(--fg); }
 
 /* ---- Clients ---------------------------------------------------- */
-.clients { padding-block: clamp(3rem, 6vw, 4.5rem); }
+.clients { padding-block: clamp(4rem, 8vw, 6rem); }
 .clients p {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2.25rem;
   color: var(--soft); font-size: 14px;
@@ -177,7 +177,7 @@ section + section::before {
 .clients a span { color: var(--soft); font-weight: 400; }
 
 /* ---- Grids ------------------------------------------------------ */
-.grid { display: grid; gap: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 4vw, 3.5rem); margin-top: clamp(3.5rem, 7vw, 5.5rem); }
+.grid { display: grid; gap: clamp(3rem, 6vw, 5rem) clamp(2.5rem, 4.5vw, 4rem); margin-top: clamp(4.5rem, 9vw, 7rem); }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* Five parts on a six-column grid: three across, then two wider. No empty cell. */
@@ -187,7 +187,7 @@ section + section::before {
 .grid-5 > *:nth-child(4) .part-inner, .grid-5 > *:nth-child(5) .part-inner { max-width: 26rem; }
 .grid-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* Framed text cards: a small label row, then the object */
-.proof-text { padding: 1.75rem 1.75rem 1.9rem; }
+.proof-text { padding: 2.25rem 2.25rem 2.4rem; }
 .proof-text h3, .proof-text p, .proof-text .text-link { margin-left: 0; margin-right: 0; }
 .proof-text::before { content: "Open source"; display: block; margin-bottom: 1.25rem; color: var(--soft); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
 
@@ -245,18 +245,18 @@ body::before { left: max(24px, calc(50% - 540px)); }
 body::after { right: max(24px, calc(50% - 540px)); }
 
 /* ---- Feature rows: label left, detail right, dashed divider between ---- */
-.rows { margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left; }
+.rows { margin-top: clamp(4.5rem, 9vw, 7rem); text-align: left; }
 .row {
   display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
   border-top: 1px solid var(--hair);
   position: relative;
 }
 .row:last-child { border-bottom: 1px solid var(--hair); }
 /* the dashed divider between the two columns, the row's own vertical rule */
 .row::after {
-  content: ""; position: absolute; top: clamp(2.5rem, 5vw, 3.5rem); bottom: clamp(2.5rem, 5vw, 3.5rem);
+  content: ""; position: absolute; top: clamp(3rem, 6vw, 4.5rem); bottom: clamp(3rem, 6vw, 4.5rem);
   left: calc(41.666% - clamp(1rem, 2.5vw, 2rem));
   border-left: 1px dashed var(--hair);
 }
@@ -271,7 +271,7 @@ body::after { right: max(24px, calc(50% - 540px)); }
 .pill:hover { background: #24231f; }
 
 .systems { margin: 0; padding: 0; list-style: none; }
-.systems li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.35rem 1.5rem; padding: 0.85rem 0; border-top: 1px solid var(--hair); }
+.systems li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.4rem 1.5rem; padding: 1.1rem 0; border-top: 1px solid var(--hair); }
 .systems li:first-child { border-top: 0; padding-top: 0; }
 .systems b { color: var(--fg); font-weight: 600; font-size: 15px; }
 .systems span { color: var(--muted); font-size: 15px; line-height: 1.5; text-wrap: pretty; }
@@ -303,10 +303,10 @@ body::after { right: max(24px, calc(50% - 540px)); }
 .versus-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 /* each criterion spans both columns, set above its pair */
 .versus-label {
-  grid-column: 1 / -1; margin: 0; padding: 1.5rem 1.75rem 0.4rem;
+  grid-column: 1 / -1; margin: 0; padding: 2rem 2.25rem 0.6rem;
   color: var(--soft); font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
 }
-.versus-them, .versus-us { padding: 0 1.75rem 1.5rem; font-size: 15.5px; line-height: 1.5; text-wrap: pretty; }
+.versus-them, .versus-us { padding: 0 2.25rem 2rem; font-size: 15.5px; line-height: 1.55; text-wrap: pretty; }
 .versus-them { color: var(--soft); border-right: 1px dashed var(--hair); }
 .versus-us { color: var(--fg); }
 /* hairline between criteria, on both columns */
@@ -324,23 +324,23 @@ body::after { right: max(24px, calc(50% - 540px)); }
 }
 
 /* Three outcome pillars */
-.pillar { border-top: 1px solid var(--hair); padding-top: 1.35rem; }
-.pillar h3 { margin-bottom: 0.6rem; }
+.pillar { border-top: 1px solid var(--hair); padding-top: 1.75rem; }
+.pillar h3 { margin-bottom: 0.85rem; }
 .pillar p { color: var(--muted); font-size: 15px; line-height: 1.55; text-wrap: pretty; }
 .pillar p.small { margin-top: 0.85rem; color: var(--soft); }
-.pillar .text-link { display: inline-block; margin-top: 1rem; font-size: 15px; }
+.pillar .text-link { display: inline-block; margin-top: 1.4rem; font-size: 15px; }
 
 /* Comparison table, on hairlines like everything else */
-.tablewrap { overflow-x: auto; margin-top: clamp(3rem, 6vw, 4.5rem); }
+.tablewrap { overflow-x: auto; margin-top: clamp(4rem, 8vw, 6rem); }
 .tablewrap table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
 .tablewrap th { padding: 0 1.25rem 0.85rem 0; border-bottom: 1px solid var(--hair-strong); color: var(--fg); font-weight: 600; text-align: left; }
-.tablewrap td { padding: 0.95rem 1.25rem 0.95rem 0; border-bottom: 1px solid var(--hair); color: var(--muted); vertical-align: top; }
+.tablewrap td { padding: 1.15rem 1.25rem 1.15rem 0; border-bottom: 1px solid var(--hair); color: var(--muted); vertical-align: top; }
 .tablewrap th:last-child, .tablewrap td:last-child { padding-right: 0; }
 .tablewrap tbody tr:last-child td { border-bottom: 0; }
 
 /* Ten departments as hairline rows, two columns on desktop */
 .dept-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 5vw, 4.5rem); margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left; }
-.dept { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name meta" "line line"; gap: 0.35rem 1.5rem; padding: 1.35rem 0; border-top: 1px solid var(--hair); transition: border-color 220ms ease; }
+.dept { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name meta" "line line"; gap: 0.45rem 1.5rem; padding: 1.75rem 0; border-top: 1px solid var(--hair); transition: border-color 220ms ease; }
 .dept:nth-last-child(-n+2) { border-bottom: 1px solid var(--hair); }
 .dept:hover { border-color: var(--hair-strong); }
 .dept-name { grid-area: name; color: var(--fg); font-size: 1.2rem; font-weight: 600; letter-spacing: -0.014em; }
@@ -378,18 +378,18 @@ body::after { right: max(24px, calc(50% - 540px)); }
 .plan-price small { margin-left: 0.5rem; color: var(--soft); font-size: 1rem; font-weight: 400; letter-spacing: 0; }
 .plan p { color: var(--muted); text-wrap: pretty; }
 .plan ul { padding: 0; list-style: none; color: var(--muted); }
-.plan li { padding: 0.55rem 0; border-top: 1px solid var(--hair); }
+.plan li { padding: 0.85rem 0; border-top: 1px solid var(--hair); }
 .plan li:last-child { border-bottom: 1px solid var(--hair); }
 .plan .btn { margin-top: 0.5rem; }
 .pricing-note { margin-top: clamp(2.5rem, 5vw, 3.5rem); text-align: center; }
 
 /* ---- FAQ -------------------------------------------------------- */
-.faq { max-width: 44rem; margin: clamp(3rem, 6vw, 4.5rem) auto 0; }
+.faq { max-width: 44rem; margin: clamp(4rem, 8vw, 6rem) auto 0; }
 .faq details { border-top: 1px solid var(--hair); }
 .faq details:last-child { border-bottom: 1px solid var(--hair); }
 .faq summary {
   display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
-  padding: 1.25rem 0; color: var(--fg); font-size: 1.05rem; font-weight: 600; cursor: pointer; list-style: none;
+  padding: 1.6rem 0; color: var(--fg); font-size: 1.05rem; font-weight: 600; cursor: pointer; list-style: none;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; flex: none; color: var(--soft); font-size: 1.4rem; font-weight: 300; line-height: 1; transition: transform 220ms var(--ease); }

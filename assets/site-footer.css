@@ -20,7 +20,7 @@
   display: grid;
   width: min(calc(100% - 48px), 1180px);
   margin-inline: auto;
-  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+  padding: clamp(5rem, 9vw, 7.5rem) 0 clamp(3rem, 5vw, 4.5rem);
   grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr));
   gap: clamp(32px, 4vw, 56px);
 }
@@ -115,7 +115,7 @@
   display: flex;
   width: min(calc(100% - 48px), 1180px);
   margin-inline: auto;
-  padding: 22px 0 40px;
+  padding: 30px 0 52px;
   border-top: 1px solid rgba(250, 248, 243, 0.13);
   flex-wrap: wrap;
   align-items: center;
