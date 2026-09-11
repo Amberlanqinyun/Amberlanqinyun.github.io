@@ -268,7 +268,7 @@ body::after { right: max(24px, calc(50% - 540px)); }
   color: var(--fg); font-size: 13.5px; font-weight: 600;
   transition: background-color 200ms ease;
 }
-.pill:hover { background: #24231f; }
+.pill:hover { background: var(--surface-strong); }
 
 .systems { margin: 0; padding: 0; list-style: none; }
 .systems li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.4rem 1.5rem; padding: 1.1rem 0; border-top: 1px solid var(--hair); }
