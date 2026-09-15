@@ -8,21 +8,23 @@
   -webkit-backdrop-filter: blur(18px) saturate(125%);
 }
 
+/* Same measure and gutter as .wrap in site.css, so the logo starts on the
+   same line as the content and the blueprint rails, at every width. */
 .site-header__inner {
   display: flex;
-  width: min(calc(100% - 48px), 1180px);
+  width: min(100% - (var(--gutter) * 2), var(--measure));
   min-height: 68px;
   margin-inline: auto;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: var(--s-6);
 }
 
 .site-header__brand {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 10px;
+  gap: var(--s-3);
   color: #faf8f3;
   font-size: 16px;
   font-weight: 680;
@@ -63,7 +65,7 @@
   min-width: 0;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(16px, 2vw, 28px);
+  gap: clamp(var(--s-4), 2vw, var(--s-6));
   white-space: nowrap;
 }
 
@@ -94,8 +96,8 @@
 }
 
 .site-header__nav .site-header__cta {
-  padding: 11px 18px;
-  border-radius: 999px;
+  padding: var(--s-3) var(--s-5);
+  border-radius: var(--pill);
   background: #faf8f3;
   color: #0e0e0d;
   font-weight: 650;
@@ -108,34 +110,81 @@
 
 @media (max-width: 820px) {
   .site-header__secondary { display: none; }
-  .site-header__nav { gap: 17px; }
+  .site-header__nav { gap: var(--s-4); }
 }
 
 @media (max-width: 640px) {
+  /* Two rows on a phone. Row one carries the brand and the one control that
+     earns money; row two carries the five links. The CTA is lifted out of the
+     nav's flow so it never competes with them for horizontal space.
+
+     This block used to hide the CTA outright, which left every mobile visitor
+     with no path to convert from the header at all, and let the five links
+     overflow back underneath the logo. Both were the same root cause: one row
+     asked to hold more than one row holds. The gutter does not change with
+     the breakpoint. Only the height does. */
   .site-header__inner {
-    width: min(calc(100% - 32px), 1180px);
-    min-height: 62px;
-    gap: 18px;
+    position: relative;
+    min-height: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-5);
+    row-gap: var(--s-2);
+    padding-block: var(--s-2);
   }
 
+  /* Row one. The brand sets the row's height so the absolutely positioned
+     CTA has something to be centred against. */
+  .site-header__brand {
+    order: 1;
+    min-height: 44px;
+  }
+
+  /* Row two. Scrollable only as a safety net below 360px: at 375px the five
+     links fit without it. */
   .site-header__nav {
-    gap: 14px;
+    order: 2;
+    width: 100%;
+    /* 16px, not 24: at 375px the five labels plus four 24px gaps overflow
+       the row and clip "About". At 16px they fit with ~2px to spare. */
+    gap: var(--s-4);
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior-x: contain;
   }
 
+  .site-header__nav::-webkit-scrollbar { display: none; }
+
+  /* Navigation labels are UI, not prose, so they are pinned here rather than
+     taking --t-small. The reading scale can then move without pushing this
+     row into a scroll. Padding carries each link past the 24px minimum
+     target height (WCAG 2.2, SC 2.5.8) without changing how it looks. */
   .site-header__nav a {
+    padding-block: var(--s-2);
     font-size: 13px;
   }
 
-  .site-header__contact,
-  .site-header__cta {
-    display: none;
+  .site-header__contact { display: none; }
+
+  .site-header__nav .site-header__cta {
+    position: absolute;
+    top: var(--s-2);
+    right: 0;
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding-block: 0;
+    padding-inline: var(--s-4);
+    font-size: 13px;
   }
 }
 
 @media (max-width: 400px) {
   .site-header__brand-text { display: none; }
-  .site-header__inner { gap: 14px; }
-  .site-header__nav { gap: 13px; }
+  .site-header__inner { gap: var(--s-4); }
+  .site-header__nav { gap: var(--s-3); }
 }
 
 @media (prefers-reduced-transparency: reduce) {

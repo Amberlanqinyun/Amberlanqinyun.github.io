@@ -29,7 +29,41 @@
   --h2: clamp(2rem, 3.4vw, 3rem);                /* 48px */
   --h3: clamp(1.5rem, 2.4vw, 2.125rem);          /* 34px */
   --lead: clamp(1.125rem, 1.5vw, 1.3125rem);     /* 21px */
+
+  /* Body sizes as tokens, so the reading scale moves in one place.
+     On the 16px reading floor as of 15 Sep 2026. Navigation labels are UI,
+     not prose, and are pinned separately in site-header.css. */
+  --t-body: 1rem;      /* 16 */
+  --t-small: 0.875rem; /* 14 */
+  --t-label: 14.5px;
+  --t-eyebrow: 12px;
+
+  /* ---- Spacing scale -----------------------------------------------
+     Every margin, padding and gap on the site comes off this ladder, so
+     the gap between two groups always beats the gap inside one. Nothing
+     in between: if a value is not here, it does not ship. */
+  --s-1: 0.25rem;   /*  4 */
+  --s-2: 0.5rem;    /*  8 */
+  --s-3: 0.75rem;   /* 12 */
+  --s-4: 1rem;      /* 16 */
+  --s-5: 1.5rem;    /* 24 */
+  --s-6: 2rem;      /* 32 */
+  --s-7: 2.5rem;    /* 40 */
+  --s-8: 3rem;      /* 48 */
+  --s-9: 4rem;      /* 64 */
+  --s-10: 5rem;     /* 80 */
+
+  /* Four fluid rhythms above the scale: the page's own breathing.
+     tight < band < block < section, and nothing else. */
+  --space-tight: clamp(2.5rem, 5vw, 3.5rem);
+  --space-band: clamp(3.5rem, 7vw, 5.5rem);
+  --space-block: clamp(4.5rem, 9vw, 7rem);
+  --space-hero: clamp(6.5rem, 14vw, 11rem);   /* the hero clears the sticky header */
   --section: clamp(7.5rem, 15vw, 13.5rem);
+
+  --gutter: 24px;   /* the one page margin, left and right, every breakpoint */
+  --measure: 1080px;
+
   --radius: 12px;
   --pill: 999px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -44,7 +78,7 @@ body {
   background: var(--bg);
   color: var(--muted);
   font-family: var(--font);
-  font-size: 15px;
+  font-size: var(--t-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -56,12 +90,12 @@ strong { color: var(--fg); font-weight: 600; }
 ::selection { background: var(--accent); color: var(--ink); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
-.wrap { width: min(100% - 48px, 1080px); margin-inline: auto; }
+.wrap { width: min(100% - (var(--gutter) * 2), var(--measure)); margin-inline: auto; }
 .narrow { width: min(100%, 44rem); margin-inline: auto; }
 
 .skip-link {
-  position: fixed; z-index: 100; top: 12px; left: 12px;
-  padding: 10px 16px; border-radius: var(--pill);
+  position: fixed; z-index: 100; top: var(--s-3); left: var(--s-3);
+  padding: var(--s-3) var(--s-4); border-radius: var(--pill);
   background: var(--fg); color: var(--ink); font-weight: 600;
   transform: translateY(-160%); transition: transform 180ms var(--ease);
 }
@@ -76,7 +110,7 @@ strong { color: var(--fg); font-weight: 600; }
 /* ---- Type ------------------------------------------------------- */
 .eyebrow {
   color: var(--soft);
-  font-size: 12px;
+  font-size: var(--t-eyebrow);
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -85,7 +119,9 @@ h1, h2 {
   color: var(--fg);
   font-weight: 640;
   letter-spacing: -0.022em;
-  line-height: 0.98;
+  /* 0.98 collided descenders into ascenders the moment a heading ran to
+     three lines. 1.04 keeps the display tension without the collision. */
+  line-height: 1.04;
   font-feature-settings: "kern", "liga";
   text-wrap: balance;
 }
@@ -101,55 +137,59 @@ h3 {
 .lead {
   color: var(--muted);
   font-size: var(--lead);
-  font-weight: 300;
+  /* 300 bloomed and lost definition on the near-black ground. On dark,
+     one step heavier is the standard correction. */
+  font-weight: 400;
   line-height: 1.55;
   text-wrap: pretty;
 }
-.small { color: var(--soft); font-size: 13px; font-variant-numeric: tabular-nums; }
+.small { color: var(--soft); font-size: var(--t-small); font-variant-numeric: tabular-nums; }
 
 /* ---- Sections --------------------------------------------------- */
 section { position: relative; padding-block: var(--section) calc(var(--section) * 0.92); }
 section + section::before {
-  content: ""; position: absolute; top: 0; left: 50%; width: min(100% - 48px, 1080px);
+  content: ""; position: absolute; top: 0; left: 50%; width: min(100% - (var(--gutter) * 2), var(--measure));
   height: 1px; background: var(--hair); transform: translateX(-50%);
 }
 .centered { text-align: center; }
 .centered .lead, .centered .small { margin-inline: auto; }
-.stack > * + * { margin-top: 1.5rem; }
-.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: 1.875rem; }
-.stack > h1 + .lead, .stack > h2 + .lead { margin-top: 2.25rem; }
-.stack > .lead + .cta-row, .stack > h2 + .cta-row { margin-top: 3rem; }
-.stack > .hero-proof + .cta-row { margin-top: 2.75rem; }
-.lead { max-width: 44ch; }
+/* Four steps only: inside a group, between label and heading, heading and
+   lead, lead and action. Each one step up the scale from the last. */
+.stack > * + * { margin-top: var(--s-5); }
+.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: var(--s-6); }
+.stack > h1 + .lead, .stack > h2 + .lead { margin-top: var(--s-7); }
+.stack > .lead + .cta-row, .stack > h2 + .cta-row,
+.stack > .hero-proof + .cta-row { margin-top: var(--s-8); }
+.lead { max-width: 56ch; }  /* 44ch sat under the 45-75 reading range */
 
 /* ---- Hero ------------------------------------------------------- */
 .hero {
-  padding-block: clamp(6.5rem, 14vw, 11rem) 0;
+  padding-block: var(--space-hero) 0;
 }
 .hero .stack { max-width: 60rem; margin-inline: auto; }
 .hero h1 { max-width: 22ch; margin-inline: auto; }
 .hero-art {
   width: min(100%, 52rem);
-  margin: clamp(5rem, 10vw, 7.5rem) auto 0;
+  margin: var(--space-block) auto 0;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--surface);
 }
 .hero-art img { width: 100%; height: auto; }
 .hero-art figcaption {
-  padding: 0.9rem 0 0; color: var(--soft); font-size: 12px; letter-spacing: 0.06em; text-align: center;
+  padding: var(--s-4) 0 0; color: var(--soft); font-size: var(--t-eyebrow); letter-spacing: 0.06em; text-align: center;
 }
 .hero-art { background: none; }
 
 /* ---- Buttons and links ------------------------------------------ */
 .cta-row {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-  gap: 1rem 1.75rem;
+  gap: var(--s-4) var(--s-6);
 }
 .btn {
   display: inline-flex; min-height: 48px; align-items: center; justify-content: center;
-  padding: 0 24px; border: 1px solid transparent; border-radius: var(--pill);
-  font-size: 14.5px; font-weight: 600; letter-spacing: -0.005em; line-height: 1; white-space: nowrap;
+  padding: 0 var(--s-5); border: 1px solid transparent; border-radius: var(--pill);
+  font-size: var(--t-label); font-weight: 600; letter-spacing: -0.005em; line-height: 1; white-space: nowrap;
   transition: transform 200ms var(--ease), filter 200ms ease, border-color 200ms ease, background-color 200ms ease;
 }
 .btn:hover { transform: translateY(-2px); }
@@ -167,17 +207,17 @@ section + section::before {
 .text-link:hover { border-color: var(--fg); }
 
 /* ---- Clients ---------------------------------------------------- */
-.clients { padding-block: clamp(4rem, 8vw, 6rem); }
+.clients { padding-block: var(--space-band); }
 .clients p {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2.25rem;
-  color: var(--soft); font-size: 14px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2) var(--s-7);
+  color: var(--soft); font-size: var(--t-label);
 }
 .clients a { color: var(--muted); font-weight: 500; }
 .clients a:hover { color: var(--fg); }
 .clients a span { color: var(--soft); font-weight: 400; }
 
 /* ---- Grids ------------------------------------------------------ */
-.grid { display: grid; gap: clamp(3rem, 6vw, 5rem) clamp(2.5rem, 4.5vw, 4rem); margin-top: clamp(4.5rem, 9vw, 7rem); }
+.grid { display: grid; gap: var(--space-tight) var(--s-9); margin-top: var(--space-block); }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* Five parts on a six-column grid: three across, then two wider. No empty cell. */
@@ -187,27 +227,27 @@ section + section::before {
 .grid-5 > *:nth-child(4) .part-inner, .grid-5 > *:nth-child(5) .part-inner { max-width: 26rem; }
 .grid-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* Framed text cards: a small label row, then the object */
-.proof-text { padding: 2.25rem 2.25rem 2.4rem; }
+.proof-text { padding: var(--s-7); }
 .proof-text h3, .proof-text p, .proof-text .text-link { margin-left: 0; margin-right: 0; }
-.proof-text::before { content: "Open source"; display: block; margin-bottom: 1.25rem; color: var(--soft); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+.proof-text::before { content: "Open source"; display: block; margin-bottom: var(--s-5); color: var(--soft); font-size: var(--t-eyebrow); letter-spacing: 0.2em; text-transform: uppercase; }
 
 .part, .step, .proof-card { display: block; }
-.part p, .step p, .proof-card p { margin-top: 0.75rem; color: var(--muted); font-size: 15px; line-height: 1.55; text-wrap: pretty; }
-.part .text-link, .proof-card .text-link { display: inline-block; margin-top: 1rem; font-size: 15px; }
+.part p, .step p, .proof-card p { margin-top: var(--s-3); color: var(--muted); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
+.part .text-link, .proof-card .text-link { display: inline-block; margin-top: var(--s-4); font-size: var(--t-body); }
 .part:hover h3, .proof-card:hover h3 { color: var(--fg); }
 .part:hover .text-link, .proof-card:hover .text-link { border-color: var(--fg); }
-.step .small { display: block; margin-bottom: 0.75rem; font-weight: 500; letter-spacing: 0.12em; }
+.step .small { display: block; margin-bottom: var(--s-3); font-weight: 500; letter-spacing: 0.12em; }
 
 /* ---- Proof ------------------------------------------------------ */
 .proof-card {
-  padding: 1rem 1rem 1.5rem; border: 1px solid var(--hair); border-radius: var(--radius);
+  padding: var(--s-4) var(--s-4) var(--s-5); border: 1px solid var(--hair); border-radius: var(--radius);
   transition: border-color 220ms ease;
 }
 .proof-card:hover { border-color: var(--hair-strong); }
-.proof-card h3, .proof-card p, .proof-card .text-link { margin-left: 0.25rem; margin-right: 0.25rem; }
+.proof-card h3, .proof-card p, .proof-card .text-link { margin-left: var(--s-1); margin-right: var(--s-1); }
 .proof-card img {
   width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover;
-  margin-bottom: 1.5rem; border-radius: calc(var(--radius) - 4px); background: var(--surface);
+  margin-bottom: var(--s-5); border-radius: calc(var(--radius) - 4px); background: var(--surface);
   /* Printed as Cream on Warm Ink: the card is inverted into the page's own ground, so no white slab sits on the dark page */
   filter: grayscale(1) invert(0.93) contrast(0.92);
 }
@@ -219,17 +259,18 @@ section + section::before {
 
 /* Inline proof, the one element worth borrowing from a light-mode reference */
 .hero-proof {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.75rem;
-  margin: 2rem 0 0; padding: 0; list-style: none;
-  color: var(--soft); font-size: 13px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2) var(--s-6);
+  margin: var(--s-6) 0 0; padding: 0; list-style: none;
+  color: var(--soft); font-size: var(--t-small);
 }
 .hero-proof li { position: relative; }
-.hero-note { max-width: 46ch; margin: 1.75rem auto 0; line-height: 1.5; }
+.hero-note { max-width: 46ch; margin: var(--s-6) auto 0; line-height: 1.5; }
 .hero-note .text-link { font-size: inherit; }
-.hero-proof li + li::before { content: ""; position: absolute; left: -0.9rem; top: 50%; width: 3px; height: 3px; border-radius: 50%; background: var(--hair-strong); transform: translateY(-50%); }
+.hero-proof li + li::before { content: ""; position: absolute; left: calc(var(--s-6) / -2); top: 50%; width: 3px; height: 3px; border-radius: 50%; background: var(--hair-strong); transform: translateY(-50%); }
 
 @media (max-width: 720px) {
-  .hero-proof { gap: 0.35rem 1.25rem; font-size: 12px; }
+  .hero-proof { gap: var(--s-1) var(--s-5); font-size: var(--t-eyebrow); }
+  .hero-proof li + li::before { left: calc(var(--s-5) / -2); }
 }
 
 /* ---- Blueprint rails ---------------------------------------------------
@@ -241,52 +282,54 @@ body::before, body::after {
   border-left: 1px dashed rgba(250, 248, 243, 0.07);
   pointer-events: none; z-index: 1;
 }
-body::before { left: max(24px, calc(50% - 540px)); }
-body::after { right: max(24px, calc(50% - 540px)); }
+body::before { left: max(var(--gutter), calc(50% - (var(--measure) / 2))); }
+body::after { right: max(var(--gutter), calc(50% - (var(--measure) / 2))); }
 
 /* ---- Feature rows: label left, detail right, dashed divider between ---- */
-.rows { margin-top: clamp(4.5rem, 9vw, 7rem); text-align: left; }
+.rows { margin-top: var(--space-block); text-align: left; }
 .row {
   display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: clamp(2.5rem, 6vw, 5rem);
-  padding: clamp(3rem, 6vw, 4.5rem) 0;
+  gap: var(--s-9);
+  padding: var(--space-tight) 0;
   border-top: 1px solid var(--hair);
   position: relative;
 }
 .row:last-child { border-bottom: 1px solid var(--hair); }
-/* the dashed divider between the two columns, the row's own vertical rule */
+/* the dashed divider between the two columns, the row's own vertical rule.
+   Inset matches the row's own vertical padding, and it sits on the midpoint
+   of the column gap rather than a guessed offset. */
 .row::after {
-  content: ""; position: absolute; top: clamp(3rem, 6vw, 4.5rem); bottom: clamp(3rem, 6vw, 4.5rem);
-  left: calc(41.666% - clamp(1rem, 2.5vw, 2rem));
+  content: ""; position: absolute; top: var(--space-tight); bottom: var(--space-tight);
+  left: calc(41.666% - (var(--s-9) / 2));
   border-left: 1px dashed var(--hair);
 }
-.row-label h3 { margin-bottom: 0.75rem; }
-.row-label p { color: var(--muted); font-size: 15px; line-height: 1.55; max-width: 34ch; text-wrap: pretty; }
+.row-label h3 { margin-bottom: var(--s-3); }
+.row-label p { color: var(--muted); font-size: var(--t-body); line-height: 1.55; max-width: 34ch; text-wrap: pretty; }
 .pill {
-  display: inline-flex; align-items: center; min-height: 36px; margin-top: 1.25rem;
-  padding: 0 1rem; border-radius: var(--pill); background: var(--surface-strong);
-  color: var(--fg); font-size: 13.5px; font-weight: 600;
+  display: inline-flex; align-items: center; min-height: 36px; margin-top: var(--s-5);
+  padding: 0 var(--s-4); border-radius: var(--pill); background: var(--surface-strong);
+  color: var(--fg); font-size: var(--t-small); font-weight: 600;
   transition: background-color 200ms ease;
 }
 .pill:hover { background: var(--surface-strong); }
 
 .systems { margin: 0; padding: 0; list-style: none; }
-.systems li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 0.4rem 1.5rem; padding: 1.1rem 0; border-top: 1px solid var(--hair); }
+.systems li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: var(--s-2) var(--s-5); padding: var(--s-4) 0; border-top: 1px solid var(--hair); }
 .systems li:first-child { border-top: 0; padding-top: 0; }
-.systems b { color: var(--fg); font-weight: 600; font-size: 15px; }
-.systems span { color: var(--muted); font-size: 15px; line-height: 1.5; text-wrap: pretty; }
+.systems b { color: var(--fg); font-weight: 600; font-size: var(--t-body); }
+.systems span { color: var(--muted); font-size: var(--t-body); line-height: 1.5; text-wrap: pretty; }
 
 @media (max-width: 900px) {
   body::before, body::after { display: none; }
-  .row { grid-template-columns: 1fr; gap: 2rem; }
+  .row { grid-template-columns: 1fr; gap: var(--s-6); }
   .row::after { display: none; }
-  .systems li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .systems li { grid-template-columns: 1fr; gap: var(--s-1); }
 }
 
 /* ---- Versus: the agency side recedes, the Flow side is raised ----------- */
 .versus {
   position: relative; display: grid; grid-template-columns: 1fr 1fr;
-  column-gap: 0; margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left;
+  column-gap: 0; margin-top: var(--space-band); text-align: left;
 }
 /* the raised panel behind the whole Flow column */
 .versus::before {
@@ -295,18 +338,19 @@ body::after { right: max(24px, calc(50% - 540px)); }
 }
 .versus > * { position: relative; z-index: 1; }
 .versus-head {
-  padding: 1.35rem 1.75rem 1.1rem; margin: 0;
-  color: var(--soft); font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: var(--s-5) var(--s-6) var(--s-4); margin: 0;
+  color: var(--soft); font-size: var(--t-eyebrow); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
   border-bottom: 1px solid var(--hair);
 }
-.versus-us-head { color: var(--fg); display: flex; align-items: center; gap: 0.6rem; }
+.versus-us-head { color: var(--fg); display: flex; align-items: center; gap: var(--s-3); }
 .versus-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
-/* each criterion spans both columns, set above its pair */
+/* each criterion spans both columns, set above its pair. One inset for the
+   whole panel: label, agency column and Flow column all start on it. */
 .versus-label {
-  grid-column: 1 / -1; margin: 0; padding: 2rem 2.25rem 0.6rem;
-  color: var(--soft); font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  grid-column: 1 / -1; margin: 0; padding: var(--s-6) var(--s-6) var(--s-2);
+  color: var(--soft); font-size: var(--t-eyebrow); font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
 }
-.versus-them, .versus-us { padding: 0 2.25rem 2rem; font-size: 15.5px; line-height: 1.55; text-wrap: pretty; }
+.versus-them, .versus-us { padding: 0 var(--s-6) var(--s-6); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
 .versus-them { color: var(--soft); border-right: 1px dashed var(--hair); }
 .versus-us { color: var(--fg); }
 /* hairline between criteria, on both columns */
@@ -319,52 +363,58 @@ body::after { right: max(24px, calc(50% - 540px)); }
   .versus-them, .versus-us { padding-left: 0; padding-right: 0; border-right: 0; }
   .versus-them::before { content: "Agency: "; color: var(--soft); font-weight: 600; }
   .versus-us::before { content: "Flow AI: "; color: var(--fg); font-weight: 600; }
-  .versus-us { padding-top: 0.25rem; }
+  .versus-us { padding-top: var(--s-1); }
   .versus-label { padding-left: 0; padding-right: 0; }
 }
 
 /* Three outcome pillars */
-.pillar { border-top: 1px solid var(--hair); padding-top: 1.75rem; }
-.pillar h3 { margin-bottom: 0.85rem; }
-.pillar p { color: var(--muted); font-size: 15px; line-height: 1.55; text-wrap: pretty; }
-.pillar p.small { margin-top: 0.85rem; color: var(--soft); }
-.pillar .text-link { display: inline-block; margin-top: 1.4rem; font-size: 15px; }
+.pillar { border-top: 1px solid var(--hair); padding-top: var(--s-6); }
+.pillar h3 { margin-bottom: var(--s-3); }
+.pillar p { color: var(--muted); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
+.pillar p.small { margin-top: var(--s-3); color: var(--soft); }
+.pillar .text-link { display: inline-block; margin-top: var(--s-5); font-size: var(--t-body); }
 
 /* Comparison table, on hairlines like everything else */
-.tablewrap { overflow-x: auto; margin-top: clamp(4rem, 8vw, 6rem); }
-.tablewrap table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
-.tablewrap th { padding: 0 1.25rem 0.85rem 0; border-bottom: 1px solid var(--hair-strong); color: var(--fg); font-weight: 600; text-align: left; }
-.tablewrap td { padding: 1.15rem 1.25rem 1.15rem 0; border-bottom: 1px solid var(--hair); color: var(--muted); vertical-align: top; }
+.tablewrap { overflow-x: auto; margin-top: var(--space-band); }
+.tablewrap table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: var(--t-body); line-height: 1.5; }
+.tablewrap th { padding: 0 var(--s-5) var(--s-3) 0; border-bottom: 1px solid var(--hair-strong); color: var(--fg); font-weight: 600; text-align: left; }
+.tablewrap td { padding: var(--s-4) var(--s-5) var(--s-4) 0; border-bottom: 1px solid var(--hair); color: var(--muted); vertical-align: top; }
 .tablewrap th:last-child, .tablewrap td:last-child { padding-right: 0; }
 .tablewrap tbody tr:last-child td { border-bottom: 0; }
 
 /* Ten departments as hairline rows, two columns on desktop */
-.dept-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 5vw, 4.5rem); margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left; }
-.dept { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name meta" "line line"; gap: 0.45rem 1.5rem; padding: 1.75rem 0; border-top: 1px solid var(--hair); transition: border-color 220ms ease; }
+.dept-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-9); margin-top: var(--space-band); text-align: left; }
+.dept { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name meta" "line line"; gap: var(--s-2) var(--s-5); padding: var(--s-6) 0; border-top: 1px solid var(--hair); transition: border-color 220ms ease; }
 .dept:nth-last-child(-n+2) { border-bottom: 1px solid var(--hair); }
 .dept:hover { border-color: var(--hair-strong); }
 .dept-name { grid-area: name; color: var(--fg); font-size: 1.2rem; font-weight: 600; letter-spacing: -0.014em; }
-.dept-line { grid-area: line; color: var(--muted); font-size: 15px; line-height: 1.5; text-wrap: pretty; }
-.dept-meta { grid-area: meta; align-self: baseline; letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
+.dept-line { grid-area: line; color: var(--muted); font-size: var(--t-body); line-height: 1.5; text-wrap: pretty; }
+.dept-meta { grid-area: meta; align-self: baseline; letter-spacing: 0.06em; text-transform: uppercase; font-size: var(--t-eyebrow); }
 @media (max-width: 720px) { .dept-list { grid-template-columns: 1fr; } .dept:nth-last-child(2) { border-bottom: 0; } }
 .guide-card img { filter: grayscale(1); }
 
 .proof-case {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 2rem;
-  margin-top: clamp(3.5rem, 7vw, 5.5rem); padding-top: clamp(2rem, 4vw, 3rem);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--s-6);
+  margin-top: var(--space-band); padding-top: var(--s-7);
   border-top: 1px solid var(--hair);
 }
 .install {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.75rem 1rem;
-  margin-top: clamp(3.5rem, 7vw, 5.5rem);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--s-3) var(--s-4);
+  margin-top: var(--space-band);
+}
+/* The code pill and the copy button sit side by side, so they share a height
+   and an inset. Padding alone drifted them apart. */
+.install code, .copy-button {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: 0 var(--s-4); font-size: var(--t-label);
 }
 .install code {
-  padding: 0.7rem 1rem; border: 1px solid var(--hair); border-radius: var(--radius);
-  color: var(--fg); font-family: "SFMono-Regular", Consolas, monospace; font-size: 14px;
+  border: 1px solid var(--hair); border-radius: var(--radius);
+  color: var(--fg); font-family: "SFMono-Regular", Consolas, monospace;
 }
 .copy-button {
-  padding: 0.6rem 1rem; border: 1px solid var(--hair-strong); border-radius: var(--pill);
-  background: none; color: var(--fg); font: inherit; font-size: 14px; font-weight: 600;
+  border: 1px solid var(--hair-strong); border-radius: var(--pill);
+  background: none; color: var(--fg); font-family: var(--font); font-weight: 600;
   cursor: pointer; transition: border-color 180ms ease, transform 200ms var(--ease);
 }
 .copy-button:hover { border-color: var(--fg); }
@@ -372,32 +422,46 @@ body::after { right: max(24px, calc(50% - 540px)); }
 .install .small { flex-basis: 100%; text-align: center; }
 
 /* ---- Pricing ---------------------------------------------------- */
-.plan { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-.plan-name { color: var(--soft); font-size: 14px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.plan { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-5); }
+.plan-name { color: var(--soft); font-size: var(--t-label); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
 .plan-price { color: var(--fg); font-size: clamp(2.5rem, 4.6vw, 3.75rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
-.plan-price small { margin-left: 0.5rem; color: var(--soft); font-size: 1rem; font-weight: 400; letter-spacing: 0; }
+.plan-price small { margin-left: var(--s-2); color: var(--soft); font-size: 1rem; font-weight: 400; letter-spacing: 0; }
 .plan p { color: var(--muted); text-wrap: pretty; }
 .plan ul { padding: 0; list-style: none; color: var(--muted); }
-.plan li { padding: 0.85rem 0; border-top: 1px solid var(--hair); }
+.plan li { padding: var(--s-3) 0; border-top: 1px solid var(--hair); }
 .plan li:last-child { border-bottom: 1px solid var(--hair); }
-.plan .btn { margin-top: 0.5rem; }
-.pricing-note { margin-top: clamp(2.5rem, 5vw, 3.5rem); text-align: center; }
+.plan .btn { margin-top: var(--s-2); }
+.pricing-note { margin-top: var(--space-tight); text-align: center; }
 
 /* ---- FAQ -------------------------------------------------------- */
-.faq { max-width: 44rem; margin: clamp(4rem, 8vw, 6rem) auto 0; }
+.faq { max-width: 44rem; margin: var(--space-band) auto 0; }
 .faq details { border-top: 1px solid var(--hair); }
 .faq details:last-child { border-bottom: 1px solid var(--hair); }
 .faq summary {
-  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
-  padding: 1.6rem 0; color: var(--fg); font-size: 1.05rem; font-weight: 600; cursor: pointer; list-style: none;
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s-5);
+  padding: var(--s-5) 0; color: var(--fg); font-size: 1.05rem; font-weight: 600; cursor: pointer; list-style: none;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; flex: none; color: var(--soft); font-size: 1.4rem; font-weight: 300; line-height: 1; transition: transform 220ms var(--ease); }
 .faq details[open] summary::after { transform: rotate(45deg); }
-.faq details p { padding: 0 0 1.5rem; color: var(--muted); max-width: 60ch; }
+.faq details p { padding: 0 0 var(--s-5); color: var(--muted); max-width: 60ch; }
 
 /* ---- Contact ---------------------------------------------------- */
-.contact .small { margin-top: 2.5rem; }
+.contact .small { margin-top: var(--s-7); }
+
+/* ---- Diagrams ---------------------------------------------------
+   Editorial SVGs in the two-ink system. They carry their own type, so
+   they sit on the page as a printed plate rather than a UI panel. */
+.diagram { width: min(100%, 60rem); margin: var(--space-block) auto 0; }
+.diagram img { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+/* The labels are set for a plate about 960px wide. Below that they fall under
+   12px and stop being readable, so the diagram steps aside — the rows directly
+   beneath it already carry every system as text. */
+@media (max-width: 900px) { .diagram { display: none; } }
+.diagram figcaption {
+  padding: var(--s-4) 0 0; color: var(--soft);
+  font-size: var(--t-eyebrow); letter-spacing: 0.06em; text-align: center;
+}
 
 /* ---- Reveal ----------------------------------------------------- */
 .reveal { transition: opacity 680ms var(--ease), transform 680ms var(--ease); }
@@ -414,7 +478,6 @@ body::after { right: max(24px, calc(50% - 540px)); }
   .grid-5 > *, .grid-5 > *:nth-child(4), .grid-5 > *:nth-child(5) { grid-column: span 3; }
 }
 @media (max-width: 720px) {
-  body { font-size: 15px; }
   .copy-button, .share-button, .share-link, .share-control, .filter { min-height: 44px; }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-5 > *, .grid-5 > *:nth-child(4), .grid-5 > *:nth-child(5) { grid-column: span 6; }

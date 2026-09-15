@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Flow AI — Keep customers</title><desc id="d">Stay in front of the people who know you.</desc>
+<defs>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+    <feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="1600" height="900" fill="#0E0E0D"/>
+<rect width="1600" height="900" filter="url(#grain)" opacity="0.028"/>
+<text x="96" y="156" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="500" letter-spacing="0.2em" text-transform="uppercase" fill="#FAF8F3" fill-opacity="0.54" text-anchor="start">KEEP CUSTOMERS</text>
+<text x="96" y="268" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="66" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="1.0" text-anchor="start">Stay in front</text>
+<text x="96" y="348" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="66" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="0.38" text-anchor="start">of the people who know you.</text>
+<text x="96" y="420" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" font-weight="300" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.72" text-anchor="start">Stay in front of the people who know you.</text>
+<path d="M 1163.5 760.0 A 250 250 0 0 1 1399.3 562.2" fill="none" stroke="#FAF8F3" stroke-opacity="0.08" stroke-width="1"/>
+<path d="M 1020.7 729.7 A 396 396 0 0 1 1394.2 416.2" fill="none" stroke="#FAF8F3" stroke-opacity="0.08" stroke-width="1"/>
+<path d="M 877.8 699.3 A 542 542 0 0 1 1389.1 270.3" fill="none" stroke="#FAF8F3" stroke-opacity="0.34" stroke-width="1"/>
+<circle cx="950.0" cy="522.2" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 950.0 522.2 L 968.6 534.0" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="958.5608660625098" y="541.9833681876773" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Community</text>
+<circle cx="1097.0" cy="368.1" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 1097.0 368.1 L 1109.6 386.1" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="1099.641135999313" y="394.1103566976304" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Measurement</text>
+<circle cx="1292.1" cy="282.5" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 1292.1 282.5 L 1296.8 304.0" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="1286.810424656716" y="312.0266952535988" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Reporting</text>
+<circle cx="1408" cy="812" r="8" fill="#E4A43C"/>
+</svg>

@@ -24,7 +24,7 @@ Site structure:
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
-- /sprints/: five of the ten marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
+- /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus two curated MIT-licensed libraries — 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
@@ -284,13 +284,13 @@ What Flow does
 
 ## Get found. Get leads. Keep customers.
 
-Three outcomes, ten engineered systems underneath them. Start where the gap is widest.
+Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.
 
 ### Get found
 
 Be the answer when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews.
 
-How it works
+Inside search and AI search
 
 - PositioningWho you sell to, what to say, and where the budget goes.
 
@@ -304,7 +304,7 @@ How it works
 
 Turn attention into enquiries, with a human on every send that reaches a customer.
 
-How it works
+Inside outbound
 
 - OutboundThe right hundred buyers, researched and reached personally.
 
@@ -318,7 +318,7 @@ How it works
 
 Stay in front of the people who already know you, and know which effort produced which conversation.
 
-How it works
+Inside measurement
 
 - CommunityReddit, forums and groups answered honestly and on time.
 
@@ -344,7 +344,7 @@ An account managerThe person doing the work
 
 Scope
 
-The channels in your retainerTen marketing systems, engineered to your business
+The channels in your retainerEleven marketing systems, engineered to your business
 
 Speed to first output
 
@@ -406,7 +406,7 @@ An enterprise AI launch: positioning, channel design and operating cadence, conn
 
 Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
-Open source and inspectable, one of 58 skills in the library.
+Open source and inspectable, one of 126 skills in the library.
 
 ## Try the tools first.
 
@@ -478,9 +478,9 @@ Author: Amber Lan (Flow AI)
 
 The practice · engineered one system at a time
 
-# Ten systems. One engineered marketing function.
+# Eleven systems. One engineered marketing function.
 
-Flow runs marketing as ten engineered systems. Five are ready to install in a week: positioning, search, content, outbound and measurement. Start where the gap is widest.
+Flow runs marketing as eleven engineered systems. Five are ready to install in a week: positioning, search, content, outbound and measurement. Start where the gap is widest.
 
 Get a first readSee the five installs
 
@@ -1160,7 +1160,7 @@ Sequencing beats volume. The same assets, landed in order against one launch mom
 
 - SystemThe positioning system: who you sell to, what to say, where the budget goes.
 
-- SystemsThe ten systems, and which to install first.
+- SystemsThe eleven systems, and which to install first.
 
 ## Want a system like this pointed at your business?
 
@@ -1432,7 +1432,7 @@ Exhibitor operations, booth systems, and collateral for national tech events, ru
 
 ## Every part of marketing, done personally.
 
-Not a specialist who outsources the rest. This is why Flow can run ten marketing systems and know when each one is wrong.
+Not a specialist who outsources the rest. This is why Flow can run eleven marketing systems and know when each one is wrong.
 
 ### Strategy and positioning
 
@@ -1548,7 +1548,7 @@ Anything done twice by hand becomes a system. The agent stack is the team; I sta
 
 - GuideThe 90-day transformation roadmap, system by system.
 
-- SystemsThe ten systems, and which to install first.
+- SystemsThe eleven systems, and which to install first.
 
 - ProofSelected work, the systems in production.
 
@@ -1572,9 +1572,13 @@ Contact
 
 # Get your free first read.
 
-Four questions. You get a written read of your marketing within the week: the gaps ranked and the first system to install named. No card, no call, no sales sequence.
+Three fields, plus your site if you have one. You get a written read of your marketing within the week: the gaps ranked and the first system to install named. No card, no call, no sales sequence.
 
-Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetOne system installedThe monthly marketing engineJust after a second opinionGet my free first read
+Your nameEmailYour website optionalMessage
+
+A few lines is enough. Press ⌘Enter to send.
+
+Send
 
 A marketing engineer reads every message. You hear back within two working days, with the first questions or the read itself.
 
@@ -1600,8 +1604,6 @@ The gap to close first, and why.
 
 If a system fits, you hear which one. If nothing fits, you hear that too.
 
-Prefer plain email? Nothing here is a trick to capture your address. Write to amber.lan.growth.digital@gmail.com and you get the same reply.
-
 ## Still deciding?
 
 Nothing here is gated. Read the numbers before you send anything.
@@ -1612,7 +1614,7 @@ Nothing here is gated. Read the numbers before you send anything.
 
 - PlanThe 90-day transformation roadmap, system by system.
 
-- SystemsThe ten systems, and which one to install first.
+- SystemsThe eleven systems, and which one to install first.
 
 - Free toolThe AI-readiness benchmark, five questions, two minutes, no signup.
 

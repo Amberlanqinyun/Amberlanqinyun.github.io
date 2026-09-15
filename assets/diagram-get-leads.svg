@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="t d">
+<title id="t">Flow AI — Get leads</title><desc id="d">Turn attention into enquiries.</desc>
+<defs>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+    <feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="1600" height="900" fill="#0E0E0D"/>
+<rect width="1600" height="900" filter="url(#grain)" opacity="0.028"/>
+<text x="96" y="156" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="500" letter-spacing="0.2em" text-transform="uppercase" fill="#FAF8F3" fill-opacity="0.54" text-anchor="start">GET LEADS</text>
+<text x="96" y="268" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="66" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="1.0" text-anchor="start">Turn attention</text>
+<text x="96" y="348" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="66" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="0.38" text-anchor="start">into enquiries.</text>
+<text x="96" y="420" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" font-weight="300" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.72" text-anchor="start">Turn attention into enquiries.</text>
+<path d="M 1163.5 760.0 A 250 250 0 0 1 1399.3 562.2" fill="none" stroke="#FAF8F3" stroke-opacity="0.08" stroke-width="1"/>
+<path d="M 1020.7 729.7 A 396 396 0 0 1 1394.2 416.2" fill="none" stroke="#FAF8F3" stroke-opacity="0.34" stroke-width="1"/>
+<circle cx="1059.1" cy="624.6" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 1059.1 624.6 L 1078.5 635.0" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="1068.5159728392914" y="643.0359475883267" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Outbound</text>
+<circle cx="1129.2" cy="530.8" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 1129.2 530.8 L 1144.7 546.4" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="1134.652139490605" y="554.4366283443362" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Growth and conversion</text>
+<circle cx="1223.6" cy="461.6" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 1223.6 461.6 L 1233.8 481.0" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="1223.8024042050595" y="489.04502176389224" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Launch</text>
+<circle cx="1334.1" cy="423.0" r="5" fill="#FAF8F3" fill-opacity="0.95"/>
+<path d="M 1334.1 423.0 L 1338.2 444.6" stroke="#FAF8F3" stroke-opacity="0.25"/>
+<text x="1328.1758818373391" y="452.57573226199827" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.88" text-anchor="end">Paid</text>
+<path d="M 877.8 699.3 A 542 542 0 0 1 1389.1 270.3" fill="none" stroke="#FAF8F3" stroke-opacity="0.08" stroke-width="1"/>
+<circle cx="1408" cy="812" r="8" fill="#E4A43C"/>
+</svg>
