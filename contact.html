@@ -14,6 +14,7 @@
   <meta name="description" content="Tell Amber Lan what you sell and where growth is stuck. You get a written read on your marketing gap within the first week. No obligation, no sales sequence.">
   <meta name="theme-color" content="#0e0e0d">
   <link rel="canonical" href="https://www.flowai.co.nz/contact.html">
+  <link rel="alternate" type="application/atom+xml" title="Flow AI" href="https://www.flowai.co.nz/feed.xml">
   <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
@@ -188,8 +189,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap">
         <div class="stack">
           <p class="eyebrow">Contact</p>
-          <h1 id="contact-title">Tell me where growth is stuck.</h1>
-          <p class="lead">Four questions. You get a <strong>written read on your marketing gap within the first week.</strong> No obligation, no sales sequence, no agency deck.</p>
+          <h1 id="contact-title">Get your free first read.</h1>
+          <p class="lead">Four questions. You get a <strong>written read of your marketing within the week</strong>: the gaps ranked and the first system to install named. No card, no call, no sales sequence.</p>
         </div>
 
         <div class="contact-form">
@@ -236,8 +237,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="form-actions">
-              <button class="btn btn-primary" type="submit" id="submit-button">Send this to Amber</button>
-              <p class="small">I read every message myself and reply personally, usually within two working days.</p>
+              <button class="btn btn-primary" type="submit" id="submit-button">Get my free first read</button>
+              <p class="small">A marketing engineer reads every message. You hear back within two working days, with the first questions or the read itself.</p>
             </div>
 
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
@@ -255,21 +256,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="grid grid-3 reveal" style="text-align:left">
           <div class="step">
             <span class="small">01</span>
-            <h3>I read it</h3>
-            <p>I read what you sent and check your site myself.</p>
+            <h3>Your business gets read</h3>
+            <p>A marketing engineer reads what you sent and checks your site.</p>
           </div>
           <div class="step">
             <span class="small">02</span>
             <h3>You get a written read</h3>
-            <p>The gap I would close first, and why.</p>
+            <p>The gap to close first, and why.</p>
           </div>
           <div class="step">
             <span class="small">03</span>
-            <h3>I say what fits</h3>
-            <p>If a sprint fits, I say which one. If nothing fits, I say that too.</p>
+            <h3>You hear what fits</h3>
+            <p>If a system fits, you hear which one. If nothing fits, you hear that too.</p>
           </div>
         </div>
         <p class="direct small reveal">Prefer plain email? Nothing here is a trick to capture your address. Write to <a class="text-link" href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a> and you get the same reply.</p>
+      </div>
+    </section>
+
+    <section id="related" class="centered" aria-labelledby="related-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="related-title">Still deciding?</h2>
+          <p class="lead">Nothing here is gated. Read the numbers before you send anything.</p>
+        </div>
+        <div class="narrow reveal" style="text-align:left; margin-top: clamp(3rem, 6vw, 4.5rem)">
+          <ul class="systems">
+            <li><b>Costs</b><span><a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand.html">What AI marketing costs</a>, with sourced ranges for tools, freelancers, agents, agencies and hires.</span></li>
+            <li><b>Category</b><span><a class="text-link" href="/blog/what-is-an-ai-marketing-agent.html">What an AI marketing agent is</a>, and how it differs from automation and ChatGPT.</span></li>
+            <li><b>Plan</b><span><a class="text-link" href="/blog/ai-marketing-transformation-small-business.html">The 90-day transformation roadmap</a>, system by system.</span></li>
+            <li><b>Systems</b><span><a class="text-link" href="/sprints/">The ten systems</a>, and which one to install first.</span></li>
+            <li><b>Free tool</b><span><a class="text-link" href="/tools/benchmark.html">The AI-readiness benchmark</a>, five questions, two minutes, no signup.</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -312,13 +331,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     (function () {
       /* ------------------------------------------------------------------
          FORM DELIVERY
-         Paste a Web3Forms access key below to have submissions land in
-         Amber's inbox directly. Get one free at https://web3forms.com by
-         entering the destination email address; the key is safe to publish.
-         While this stays empty the form still works: it composes the same
-         message in the visitor's email client so nothing is ever lost.
+         Submissions post to FormSubmit's AJAX endpoint for the address in
+         TO. No account and no key: the first submission sends one
+         activation email to that inbox, and every message after it lands
+         directly. If the request fails, the same message is composed in the
+         visitor's email client so nothing is lost.
       ------------------------------------------------------------------ */
-      var ACCESS_KEY = '';
       var TO = 'amber.lan.growth.digital@gmail.com';
 
       var form = document.getElementById('contact-form');
@@ -352,7 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           + '?subject=' + encodeURIComponent('Flow AI enquiry from ' + d.name)
           + '&body=' + encodeURIComponent(asText(d));
         window.location.href = href;
-        show('ok', '<b>Your email app is opening</b> with everything filled in. Press send and it reaches me. '
+        show('ok', '<b>Your email app is opening</b> with everything filled in. Press send and it reaches Flow AI. '
           + 'If nothing opened, email <a href="mailto:' + TO + '">' + TO + '</a> directly.');
       }
 
@@ -383,33 +401,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         button.disabled = true;
-        button.textContent = 'Sending';
+        button.textContent = 'Sending your details';
 
-        fetch('https://api.web3forms.com/submit', {
+        fetch('https://formsubmit.co/ajax/' + TO, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
-            access_key: ACCESS_KEY,
-            subject: 'Flow AI enquiry from ' + d.name,
-            from_name: d.name,
-            replyto: d.email,
+            _subject: 'Flow AI first read request from ' + d.name,
+            _template: 'table',
+            _captcha: 'false',
             name: d.name,
             email: d.email,
-            website: d.website,
-            business: d.business,
-            weighing_up: d.interest,
-            message: asText(d)
+            website: d.website || 'not given',
+            'what they sell': d.business,
+            'where growth is stuck': d.gap,
+            'weighing up': d.interest || 'not given'
           })
         }).then(function (response) {
           return response.json();
         }).then(function (result) {
           if (!result || result.success !== true) throw new Error('rejected');
           form.reset();
-          show('ok', '<b>Thank you, that reached me.</b> I read every message myself and will reply personally, usually within two working days.');
+          show('ok', '<b>Your first read is underway.</b> A marketing engineer reads every message and replies within two working days, with the first questions or the read itself.');
           button.textContent = 'Sent';
         }).catch(function () {
           button.disabled = false;
-          button.textContent = 'Send this to Amber';
+          button.textContent = 'Get my free first read';
           show('error', 'That did not send. Opening your email app instead so the message is not lost.');
           window.setTimeout(function () { mailtoFallback(d); }, 1200);
         });

@@ -56,7 +56,7 @@ Everything below is the complete, current text of flowai.co.nz, provided so AI a
 
 ---
 
-## AI Marketing for Small Business in NZ: The Complete Guide (2026)
+## AI Marketing for Small Business in NZ: Complete Guide
 
 Source URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html
 Type: Guide
@@ -440,6 +440,28 @@ Every guide in one place, with a feed you can follow.
 
 Open the guides
 
+## Questions.
+
+### What is Flow AI?
+
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It was built by a marketing engineer with ten years in marketing and three building the agents, and it runs marketing for businesses that would otherwise hire an agency or a marketer.
+
+### How is Flow AI different from a marketing agency?
+
+An agency solves marketing with people: an account manager, a strategist, a writer and a media buyer, billed monthly. Flow AI solves it with engineered systems and one marketing engineer who reviews the work. You talk to the person doing it, the scope is fixed in advance, and everything built is documented and inspectable.
+
+### What is a first read?
+
+A first read is a written assessment of your marketing, delivered within the week, with the gaps ranked and the first system to install named. It is free, needs no card and no call, and it is how every engagement with Flow AI starts.
+
+### Who reviews the work before it goes out?
+
+A marketing engineer reviews every send before it reaches a customer. Agents produce the work; a human decides what ships. That review is the only way a small team can safely run this much marketing output.
+
+### Where does Flow AI work?
+
+Flow AI is based in Auckland, New Zealand and works worldwide. Its published research covers Australia and New Zealand in depth, including sourced pricing and adoption statistics, and the systems themselves run for any English-speaking market.
+
 ## Start with a first read.
 
 Tell Flow what you sell, who it is for, and where growth is stuck. A written read of your marketing comes back within the week.
@@ -590,6 +612,34 @@ Feeds the AI-search and Content Engine sprints: once the claim is settled, every
 
 This is the method behind the enterprise go-to-market case study, applied at your scale.
 
+## Keep going.
+
+- SystemThe search system: be the answer Google and the AI assistants give about your category.
+
+- SystemThe content system: one strong idea becomes a month of content your team approves.
+
+- SystemThe outbound system: the right hundred buyers, researched and reached personally.
+
+- SystemThe measurement system: see which effort produced which conversation.
+
+- GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+## Questions.
+
+### What happens in the first week of the positioning sprint?
+
+The first read comes first: a written assessment of your positioning and message with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+
+### Do I need to hire anyone to run this afterwards?
+
+No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+
+### How is this different from buying the same work from an agency?
+
+You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+
 ## Book the positioning sprint.
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
@@ -665,6 +715,34 @@ Feeds the Content Engine sprint: the cluster plan tells the engine exactly what 
 ## Evidence.
 
 Open source and running on this site. Read the case study, then inspect the live output.
+
+## Keep going.
+
+- SystemThe content system: one strong idea becomes a month of content your team approves.
+
+- SystemThe outbound system: the right hundred buyers, researched and reached personally.
+
+- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+
+- SystemThe measurement system: see which effort produced which conversation.
+
+- GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+## Questions.
+
+### What happens in the first week of the AI-search sprint?
+
+The first read comes first: a written assessment of your search and AI-search visibility with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+
+### Do I need to hire anyone to run this afterwards?
+
+No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+
+### How is this different from buying the same work from an agency?
+
+You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
 
 ## Book the AI-search sprint.
 
@@ -742,6 +820,34 @@ Feeds the Outbound sprint: published proof gives outreach something honest to po
 
 The clean-room version is public: the case study and the code.
 
+## Keep going.
+
+- SystemThe search system: be the answer Google and the AI assistants give about your category.
+
+- SystemThe outbound system: the right hundred buyers, researched and reached personally.
+
+- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+
+- SystemThe measurement system: see which effort produced which conversation.
+
+- GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+## Questions.
+
+### What happens in the first week of the content engine sprint?
+
+The first read comes first: a written assessment of your content operation with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+
+### Do I need to hire anyone to run this afterwards?
+
+No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+
+### How is this different from buying the same work from an agency?
+
+You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+
 ## Book the content engine sprint.
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
@@ -817,6 +923,34 @@ Feeds Analytics: every lane lands in one measured pipeline.
 ## Evidence.
 
 The design pattern is documented in the outbound system on the work page.
+
+## Keep going.
+
+- SystemThe search system: be the answer Google and the AI assistants give about your category.
+
+- SystemThe content system: one strong idea becomes a month of content your team approves.
+
+- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+
+- SystemThe measurement system: see which effort produced which conversation.
+
+- GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+## Questions.
+
+### What happens in the first week of the outbound sprint?
+
+The first read comes first: a written assessment of your outbound pipeline with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+
+### Do I need to hire anyone to run this afterwards?
+
+No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+
+### How is this different from buying the same work from an agency?
+
+You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
 
 ## Book the outbound sprint.
 
@@ -894,6 +1028,34 @@ Feeds Strategy: the numbers revise the claim, and the line runs again.
 
 Try the free AI-readiness benchmark for a taste of the diagnostic style.
 
+## Keep going.
+
+- SystemThe search system: be the answer Google and the AI assistants give about your category.
+
+- SystemThe content system: one strong idea becomes a month of content your team approves.
+
+- SystemThe outbound system: the right hundred buyers, researched and reached personally.
+
+- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+
+- GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+## Questions.
+
+### What happens in the first week of the analytics sprint?
+
+The first read comes first: a written assessment of your tracking and reporting with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+
+### Do I need to hire anyone to run this afterwards?
+
+No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+
+### How is this different from buying the same work from an agency?
+
+You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+
 ## Book the analytics sprint.
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
@@ -904,7 +1066,7 @@ A short form. I reply personally.
 
 ---
 
-## Three demand engines, one pipeline, one launch · Case study · Flow AI
+## Three demand engines, one pipeline | Flow AI
 
 Source URL: https://www.flowai.co.nz/work/enterprise-gtm.html
 Type: Case study
@@ -988,6 +1150,18 @@ A sanitised case: the company's identity and internal numbers stay private, and 
 
 Sequencing beats volume. The same assets, landed in order against one launch moment, do more than twice the assets scattered across a quarter. A claims register is the highest-leverage marketing document nobody writes.
 
+## Keep going.
+
+- CaseThe content engine case, a codified voice gate in production.
+
+- CaseThe AI-search toolkit case, open source on GitHub.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+
+- SystemsThe ten systems, and which to install first.
+
 ## Want a system like this pointed at your business?
 
 Tell me what you do and where the pipeline stalls. You get a written read within the first week.
@@ -996,7 +1170,7 @@ Get a first read
 
 ---
 
-## A content engine with a codified voice gate · Case study · Flow AI
+## Content engine with a codified voice gate | Flow AI
 
 Source URL: https://www.flowai.co.nz/work/content-engine.html
 Type: Case study
@@ -1080,6 +1254,18 @@ The clean-room version is public: read the code on GitHub. The distribution half
 
 Generated content fails at the last metre, in the lines a reader flags as machine-made. Fixing that at the gate, line by line, separates a content engine from a content faucet.
 
+## Keep going.
+
+- CaseThree demand engines, one pipeline, an enterprise launch case.
+
+- CaseThe AI-search toolkit case, open source on GitHub.
+
+- SystemThe content system: one strong idea becomes a month of content your team approves.
+
+- GuideWhat an AI marketing agent is, defined for a small business, and how it differs from automation and ChatGPT.
+
+- LibraryThe skill library, 126 published skills, open source.
+
 ## Want a system like this pointed at your business?
 
 Tell me what you do and where the pipeline stalls. You get a written read within the first week.
@@ -1088,7 +1274,7 @@ Get a first read
 
 ---
 
-## A toolkit that optimises for AI citations, not just rankings · Case study · Flow AI
+## An SEO toolkit built for AI citations | Flow AI
 
 Source URL: https://www.flowai.co.nz/work/geo-seo-toolkit.html
 Type: Case study
@@ -1167,6 +1353,18 @@ Read the toolkit on GitHub. Inspect the live implementation: robots.txt, llms.tx
 ### What I learned
 
 Answer-engine optimisation is discipline, not tricks: let the crawlers in, say who you are in schema, lead with the answer, keep claims sourced. The toolkit makes that discipline repeatable.
+
+## Keep going.
+
+- CaseThree demand engines, one pipeline, an enterprise launch case.
+
+- CaseThe content engine case, a codified voice gate in production.
+
+- SystemThe search system: be the answer Google and the AI assistants give about your category.
+
+- DataAI marketing statistics for Australia and New Zealand, 62 figures, every one sourced.
+
+- LibraryThe skill library, 126 published skills, open source.
 
 ## Want a system like this pointed at your business?
 
@@ -1344,6 +1542,18 @@ What broke, the root cause, the fix, and what it cost. Published at the same rat
 
 Anything done twice by hand becomes a system. The agent stack is the team; I stay on strategy and judgment.
 
+## Keep going.
+
+- GuideWhat an AI marketing agent is, defined for a small business, and how it differs from automation and ChatGPT.
+
+- GuideThe 90-day transformation roadmap, system by system.
+
+- SystemsThe ten systems, and which to install first.
+
+- ProofSelected work, the systems in production.
+
+- DataAI marketing statistics for Australia and New Zealand, 62 figures, every one sourced.
+
 ## One person with an agent stack, instead of an agency.
 
 You talk to the person who does the work. No account manager, no junior doing the writing, no retainer for hours nobody can show you. Tell Flow what you sell and where growth is stuck, and a written read comes back within the week.
@@ -1360,13 +1570,13 @@ Author: Amber Lan (Flow AI)
 
 Contact
 
-# Tell me where growth is stuck.
+# Get your free first read.
 
-Four questions. You get a written read on your marketing gap within the first week. No obligation, no sales sequence, no agency deck.
+Four questions. You get a written read of your marketing within the week: the gaps ranked and the first system to install named. No card, no call, no sales sequence.
 
-Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetOne system installedThe monthly marketing engineJust after a second opinionSend this to Amber
+Your nameEmailYour website optionalWhat do you sell, and who buys it?Where is growth getting stuck?What are you weighing up? optionalNot sure yetOne system installedThe monthly marketing engineJust after a second opinionGet my free first read
 
-I read every message myself and reply personally, usually within two working days.
+A marketing engineer reads every message. You hear back within two working days, with the first questions or the read itself.
 
 ## What happens next.
 
@@ -1374,23 +1584,37 @@ Three steps. Flow does the work, a marketing engineer reviews it.
 
 01
 
-### I read it
+### Your business gets read
 
-I read what you sent and check your site myself.
+A marketing engineer reads what you sent and checks your site.
 
 02
 
 ### You get a written read
 
-The gap I would close first, and why.
+The gap to close first, and why.
 
 03
 
-### I say what fits
+### You hear what fits
 
-If a sprint fits, I say which one. If nothing fits, I say that too.
+If a system fits, you hear which one. If nothing fits, you hear that too.
 
 Prefer plain email? Nothing here is a trick to capture your address. Write to amber.lan.growth.digital@gmail.com and you get the same reply.
+
+## Still deciding?
+
+Nothing here is gated. Read the numbers before you send anything.
+
+- CostsWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
+
+- CategoryWhat an AI marketing agent is, and how it differs from automation and ChatGPT.
+
+- PlanThe 90-day transformation roadmap, system by system.
+
+- SystemsThe ten systems, and which one to install first.
+
+- Free toolThe AI-readiness benchmark, five questions, two minutes, no signup.
 
 ## Questions.
 
