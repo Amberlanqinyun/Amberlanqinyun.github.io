@@ -176,36 +176,57 @@ def pillar(systems, index):
 #    baseline; Amber marks only the step the visitor is at first.
 # ===========================================================================
 def process():
-    # Lines are wrapped to the 470px column, not to the page.
-    steps = [
-        ("01", "Read", "Tell Flow what you sell and who\nbuys it. A written read of your\nmarketing, ranked, in week one."),
-        ("02", "Install", "Pick the system with the most to\ngain. It goes live with the assets,\nautomation and tracking it needs."),
-        ("03", "Run", "Flow runs it every month. A human\nreviews the output, and one short\nreport says what shipped."),
-    ]
-    s = [head("Read. Install. Run.", "The three steps of a Flow AI engagement on a single baseline.")]
-    # The left column carries the time shape, not the section's own heading.
-    # The page already sets "Read. Install. Run." as the H2 directly above this
-    # plate; repeating it verbatim 150px later read as a bug. Same move the
-    # system map makes: restate the idea in the plate's own words.
+    """The three steps drawn to length, not to a grid.
+
+    The page already renders these steps as three equal cards. Three evenly
+    spaced dots on a line says exactly what three equal cards say, so an
+    earlier version of this plate was pure duplication — it even repeated the
+    cards' body copy word for word.
+
+    What the card grid cannot show is that the steps are not equal. Read and
+    Install happen once, in week one. Run repeats every month and does not
+    end. The grid renders all three as siblings, which is a lie about the
+    shape of the engagement and hides the part that actually compounds. So
+    the geometry carries the asymmetry: a finite cream segment for the
+    one-off work, then an amber segment that runs off the right edge because
+    it never stops. The words stay in the cards; the plate keeps the shape.
+    """
+    s = [head("Week one to every month",
+              "The three steps drawn to length on one baseline. Read and Install sit inside a short "
+              "finite segment marked once, in week one. Run sits on an amber segment marked every month "
+              "from then on, which runs off the right edge because the work does not end.")]
+
     s.append(label(96, 156, "How it works", size=15))
     s.append(txt(96, 274, "Week one to", 76, weight=600, track=-0.03))
     s.append(txt(96, 358, "every month.", 76, weight=600, track=-0.03, alpha=0.38))
-    s.append(txt(96, 428, "You choose where it starts.", 26, weight=300, alpha=0.72))
+    s.append(txt(96, 428, "Two steps happen once. The third never stops.", 26, weight=300, alpha=0.72))
 
-    BASE = 600
-    s.append(f'<path d="M 96 {BASE} L 1504 {BASE}" stroke="{CREAM}" stroke-opacity="0.2"/>')
+    BASE = 640
+    SPLIT = 720          # where the one-off work ends and the monthly run begins
 
-    for i, (num, name, body) in enumerate(steps):
-        x = 96 + i * 470
-        # the first step carries the accent: it is the only one the visitor does
-        col = AMBER if i == 0 else CREAM
-        op = 1.0 if i == 0 else 0.34
+    # Phase one: solid, finite, and it visibly ends.
+    s.append(f'<path d="M 96 {BASE} L {SPLIT} {BASE}" stroke="{CREAM}" stroke-opacity="0.2"/>')
+    # Phase two: the accent event. Dotted because it repeats, and it leaves the
+    # canvas rather than terminating, because the run has no last month.
+    s.append(f'<path d="M {SPLIT} {BASE} L 1504 {BASE}" stroke="{AMBER}" stroke-opacity="0.5" '
+             f'stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>')
+
+    s.append(label(96, BASE - 104, "Once, in week one", size=13, alpha=0.38))
+    s.append(label(SPLIT, BASE - 104, "Every month, from then on", size=13, alpha=0.38))
+    s.append(f'<path d="M 96 {BASE - 86} L 96 {BASE - 58}" stroke="{CREAM}" stroke-opacity="0.14"/>')
+    s.append(f'<path d="M {SPLIT} {BASE - 86} L {SPLIT} {BASE - 58}" stroke="{CREAM}" stroke-opacity="0.14"/>')
+
+    # x positions are the real thing being said: Read and Install crowd into the
+    # short phase, Run sits alone out on the long one.
+    steps = [("01", "Read", 240, False), ("02", "Install", 480, False), ("03", "Run", 860, True)]
+
+    for num, name, x, ongoing in steps:
+        col = AMBER if ongoing else CREAM
+        op = 1.0 if ongoing else 0.34
         s.append(f'<circle cx="{x}" cy="{BASE}" r="7" fill="{col}" fill-opacity="{op}"/>')
-        s.append(f'<path d="M {x} {BASE - 52} L {x} {BASE - 14}" stroke="{col}" stroke-opacity="{op * 0.6}"/>')
-        s.append(txt(x, BASE - 68, num, 18, weight=500, alpha=0.54, track=0.16))
-        s.append(txt(x, BASE + 76, name, 42, weight=600, track=-0.02))
-        for k, line in enumerate(body.split("\n")):
-            s.append(txt(x, BASE + 126 + k * 32, line, 21, weight=300, alpha=0.66))
+        s.append(f'<path d="M {x} {BASE - 46} L {x} {BASE - 14}" stroke="{col}" stroke-opacity="{op * 0.5}"/>')
+        s.append(txt(x, BASE - 62, num, 18, weight=500, alpha=0.54, track=0.16))
+        s.append(txt(x, BASE + 78, name, 42, weight=600, track=-0.02))
 
     s.append("</svg>")
     return "\n".join(s)
