@@ -12,21 +12,21 @@
 <text x="96" y="430" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="72" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="0.38" text-anchor="start">underneath.</text>
 <text x="96" y="500" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" font-weight="300" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.72" text-anchor="start">Start where the gap is widest.</text>
 <path d="M 96 556 L 600 556" stroke="#FAF8F3" stroke-opacity="0.2" stroke-width="1"/>
-<path d="M 1177.2 762.9 A 236 236 0 0 1 1358.9 581.2" fill="none" stroke="#FAF8F3" stroke-opacity="0.3" stroke-width="1"/>
-<path d="M 1177.2 762.9 L 1163.2 784.9" stroke="#FAF8F3" stroke-opacity="0.2" stroke-width="1"/>
-<text x="1155.1571662268218" y="806.9328409670088" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="600" letter-spacing="-0.02em" fill="#FAF8F3" fill-opacity="0.95" text-anchor="end">Get found</text>
-<circle cx="1193.2" cy="714.1" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 1193.2 714.1 L 1213.3 723.3" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1203.2682880324198" y="730.2556460715648" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Positioning</text>
-<circle cx="1220.8" cy="668.3" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 1220.8 668.3 L 1238.2 681.7" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1228.2223851776757" y="688.7250541921337" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Search and AI search</text>
-<circle cx="1257.9" cy="629.9" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 1257.9 629.9 L 1271.9 646.9" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1261.8792608605586" y="653.8723391550279" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Content</text>
-<circle cx="1302.7" cy="600.8" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 1302.7 600.8 L 1312.5 620.5" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1302.513667994501" y="627.4840466171667" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Social</text>
+<path d="M 924.1 554.7 A 548 548 0 0 1 1312.8 272.3" fill="none" stroke="#FAF8F3" stroke-opacity="0.3" stroke-width="1"/>
+<path d="M 924.1 554.7 L 910.1 576.7" stroke="#FAF8F3" stroke-opacity="0.2" stroke-width="1"/>
+<text x="902.1447191133082" y="598.7295835933319" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="600" letter-spacing="-0.02em" fill="#FAF8F3" fill-opacity="0.95" text-anchor="end">Get found</text>
+<circle cx="980.6" cy="469.0" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 980.6 469.0 L 997.8 482.8" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="987.7807618931441" y="489.76425363118494" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Positioning</text>
+<circle cx="1043.1" cy="403.2" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 1043.1 403.2 L 1057.7 419.6" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1047.746243683561" y="426.5738207175461" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Search and AI search</text>
+<circle cx="1115.6" cy="348.5" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 1115.6 348.5 L 1127.3 367.1" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1117.3187646283884" y="374.14716578371" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Content</text>
+<circle cx="1196.1" cy="306.6" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 1196.1 306.6 L 1204.6 326.9" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1194.5900341790323" y="333.9222889013424" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Social</text>
 <path d="M 1039.6 677.9 A 392 392 0 0 1 1408.0 420.0" fill="none" stroke="#FAF8F3" stroke-opacity="0.21" stroke-width="1"/>
 <path d="M 1039.6 677.9 L 1025.6 699.9" stroke="#FAF8F3" stroke-opacity="0.2" stroke-width="1"/>
 <text x="1017.640492651924" y="721.9281038163379" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="600" letter-spacing="-0.02em" fill="#FAF8F3" fill-opacity="0.95" text-anchor="end">Get leads</text>
@@ -42,18 +42,18 @@
 <circle cx="1306.5" cy="433.4" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
 <path d="M 1306.5 433.4 L 1312.2 454.6" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
 <text x="1302.2369533120673" y="461.60744427304473" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Paid</text>
-<path d="M 924.1 554.7 A 548 548 0 0 1 1312.8 272.3" fill="none" stroke="#FAF8F3" stroke-opacity="0.15" stroke-width="1"/>
-<path d="M 924.1 554.7 L 910.1 576.7" stroke="#FAF8F3" stroke-opacity="0.2" stroke-width="1"/>
-<text x="902.1447191133082" y="598.7295835933319" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="600" letter-spacing="-0.02em" fill="#FAF8F3" fill-opacity="0.95" text-anchor="end">Keep customers</text>
-<circle cx="990.3" cy="457.3" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 990.3 457.3 L 1007.0 471.6" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="997.0344534419721" y="478.5552460773966" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Community</text>
-<circle cx="1078.2" cy="374.3" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 1078.2 374.3 L 1091.4 391.9" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1081.4452978220227" y="398.91772171512395" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Measurement</text>
-<circle cx="1182.2" cy="312.7" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
-<path d="M 1182.2 312.7 L 1191.3 332.7" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1181.2645814980274" y="339.7278869297998" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Reporting</text>
+<path d="M 1177.2 762.9 A 236 236 0 0 1 1358.9 581.2" fill="none" stroke="#FAF8F3" stroke-opacity="0.15" stroke-width="1"/>
+<path d="M 1177.2 762.9 L 1163.2 784.9" stroke="#FAF8F3" stroke-opacity="0.2" stroke-width="1"/>
+<text x="1155.1571662268218" y="806.9328409670088" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="600" letter-spacing="-0.02em" fill="#FAF8F3" fill-opacity="0.95" text-anchor="end">Keep customers</text>
+<circle cx="1197.1" cy="706.1" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 1197.1 706.1 L 1216.8 716.0" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1206.7626149707899" y="722.9569754371012" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Community</text>
+<circle cx="1238.2" cy="648.1" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 1238.2 648.1 L 1254.1 663.3" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1244.0612827275286" y="670.3431087217746" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Measurement</text>
+<circle cx="1294.8" cy="604.9" r="4.5" fill="#FAF8F3" fill-opacity="0.9"/>
+<path d="M 1294.8 604.9 L 1305.3 624.2" stroke="#FAF8F3" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1295.3413937644473" y="631.2309648377195" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="400" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.74" text-anchor="end">Reporting</text>
 <circle cx="1408" cy="812" r="8" fill="#E4A43C"/>
 <circle cx="1408" cy="812" r="30" fill="none" stroke="#E4A43C" stroke-opacity="0.32" stroke-width="1"/>
 <text x="1362" y="820" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="600" letter-spacing="0em" fill="#E4A43C" fill-opacity="1.0" text-anchor="end">One pipeline</text>

@@ -78,8 +78,13 @@ def system_map(systems, claim_label, boxes=None):
     # whole fan orbits. Each arc gets its own angular span so the eleven
     # labels interleave instead of stacking on one another.
     CX, CY = 1408, 812
-    RADII = [236, 392, 548]
-    SPANS = [(198, 250), (206, 262), (214, 252)]
+    # The fan orbits a centre at the bottom right, so the LARGEST radius sits
+    # highest and reads first. Radii therefore run large to small, putting
+    # Get found at the top and Keep customers at the bottom: the order a
+    # visitor actually walks. Spans are reversed with them so each arc keeps
+    # the angular span it was tuned against.
+    RADII = [548, 392, 236]
+    SPANS = [(214, 252), (206, 262), (198, 250)]
     s = [head("Flow AI system map",
               "Three outcomes with the marketing systems that sit underneath each one, "
               "arranged as three arcs around a single pipeline.")]
@@ -136,7 +141,8 @@ def system_map(systems, claim_label, boxes=None):
 # ===========================================================================
 def pillar(systems, index):
     CX, CY = 1408, 812
-    RADII = [250, 396, 542]
+    # Large to small, matching the system map: Get found reads first.
+    RADII = [542, 396, 250]
     SPAN = (196, 264)
     g = systems[index]
     s = [head(f"Flow AI — {g['name']}", g["line"])]
@@ -177,9 +183,14 @@ def process():
         ("03", "Run", "Flow runs it every month. A human\nreviews the output, and one short\nreport says what shipped."),
     ]
     s = [head("Read. Install. Run.", "The three steps of a Flow AI engagement on a single baseline.")]
+    # The left column carries the time shape, not the section's own heading.
+    # The page already sets "Read. Install. Run." as the H2 directly above this
+    # plate; repeating it verbatim 150px later read as a bug. Same move the
+    # system map makes: restate the idea in the plate's own words.
     s.append(label(96, 156, "How it works", size=15))
-    s.append(txt(96, 274, "Read. Install. Run.", 76, weight=600, track=-0.03))
-    s.append(txt(96, 336, "A human reviews everything before it ships.", 26, weight=300, alpha=0.72))
+    s.append(txt(96, 274, "Week one to", 76, weight=600, track=-0.03))
+    s.append(txt(96, 358, "every month.", 76, weight=600, track=-0.03, alpha=0.38))
+    s.append(txt(96, 428, "You choose where it starts.", 26, weight=300, alpha=0.72))
 
     BASE = 600
     s.append(f'<path d="M 96 {BASE} L 1504 {BASE}" stroke="{CREAM}" stroke-opacity="0.2"/>')

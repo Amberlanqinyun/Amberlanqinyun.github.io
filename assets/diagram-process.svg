@@ -7,8 +7,9 @@
 <rect width="1600" height="900" fill="#0E0E0D"/>
 <rect width="1600" height="900" filter="url(#grain)" opacity="0.028"/>
 <text x="96" y="156" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="500" letter-spacing="0.2em" text-transform="uppercase" fill="#FAF8F3" fill-opacity="0.54" text-anchor="start">HOW IT WORKS</text>
-<text x="96" y="274" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="76" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="1.0" text-anchor="start">Read. Install. Run.</text>
-<text x="96" y="336" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" font-weight="300" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.72" text-anchor="start">A human reviews everything before it ships.</text>
+<text x="96" y="274" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="76" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="1.0" text-anchor="start">Week one to</text>
+<text x="96" y="358" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="76" font-weight="600" letter-spacing="-0.03em" fill="#FAF8F3" fill-opacity="0.38" text-anchor="start">every month.</text>
+<text x="96" y="428" font-family="'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="26" font-weight="300" letter-spacing="0em" fill="#FAF8F3" fill-opacity="0.72" text-anchor="start">You choose where it starts.</text>
 <path d="M 96 600 L 1504 600" stroke="#FAF8F3" stroke-opacity="0.2"/>
 <circle cx="96" cy="600" r="7" fill="#E4A43C" fill-opacity="1.0"/>
 <path d="M 96 548 L 96 586" stroke="#E4A43C" stroke-opacity="0.6"/>
