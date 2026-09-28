@@ -486,3 +486,12 @@ body::after { right: max(var(--gutter), calc(50% - (var(--measure) / 2))); }
   .btn { width: 100%; }
   .cta-row { flex-direction: column; }
 }
+
+/* Value band: headline numbers with provenance (home page). */
+.value-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stat { text-align: left; }
+.stat-num { color: var(--fg); font-size: clamp(2.4rem, 4.5vw, 3.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.stat-label { margin-top: 0.75rem; color: var(--muted); font-size: var(--t-body); line-height: 1.5; max-width: 24ch; text-wrap: pretty; }
+.stat-src { display: block; margin-top: 0.6rem; color: var(--soft); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+@media (max-width: 900px) { .value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .value-grid { grid-template-columns: 1fr; } }
