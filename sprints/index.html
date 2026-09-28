@@ -93,7 +93,9 @@
     .plan-solo { width: min(100%, 32rem); margin: clamp(3.5rem, 7vw, 5.5rem) auto 0; text-align: left; }
     .plan-solo .plan { width: 100%; }
     .part .small { display: block; margin-bottom: 0.75rem; font-weight: 500; letter-spacing: 0.12em; }
-    .part .handoff { display: block; margin-top: 0.9rem; font-size: 0.82em; opacity: 0.65; }
+    .row-label .small { display: block; margin-bottom: 0.75rem; font-weight: 500; letter-spacing: 0.12em; }
+    .row-detail .handoff { display: block; margin-top: 0.9rem; font-size: 0.85em; opacity: 0.65; }
+    .row-detail .text-link { display: inline-block; margin-top: 1rem; }
     .flywheel-fig { width: min(100%, 36rem); margin: clamp(3rem, 6vw, 4.5rem) auto 0; }
     .flywheel-fig svg { width: 100%; height: auto; display: block; }
     .flywheel-note { max-width: 46ch; margin: clamp(2rem, 4vw, 3rem) auto 0; text-align: center; }
@@ -218,52 +220,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="sprints-title">Install one stage at a time.</h2>
           <p class="lead">Each sprint is one stage of the wheel: a fixed deliverables checklist, a one-week clock and full handover, every time.</p>
         </div>
-        <div class="grid grid-5" style="text-align:left">
-          <a class="part" href="/sprints/positioning.html">
-            <div class="part-inner">
+        <div class="rows">
+          <div class="row">
+            <div class="row-label">
               <span class="small">Stage 01 · Aim · one week</span>
               <h3>Positioning sprint</h3>
-              <p>Claims register, one-page positioning, message architecture, and your first two channels.</p>
-              <span class="handoff">Every later stage pulls from this. If nothing is written down, start here.</span>
-              <span class="text-link">See the fixed scope</span>
+              <p>Start here if nobody has written down what you claim, to whom, and why anyone should believe it.</p>
             </div>
-          </a>
-          <a class="part" href="/sprints/ai-search.html">
-            <div class="part-inner">
+            <div class="row-detail">
+              <p>Claims register, one-page positioning, message architecture, and your first two channels.</p>
+              <span class="handoff">Every later stage of the wheel pulls from this.</span>
+              <a class="text-link" href="/sprints/positioning.html">See the fixed scope</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row-label">
               <span class="small">Stage 02 · Get found · one week</span>
               <h3>AI-search sprint</h3>
+              <p>Start here if buyers ask Google and ChatGPT about what you sell and you never come up.</p>
+            </div>
+            <div class="row-detail">
               <p>AI-crawler access, llms.txt, structured data, citability fixes, and search submission.</p>
               <span class="handoff">Your claim becomes machine-readable, so Google and AI assistants cite you.</span>
-              <span class="text-link">See the fixed scope</span>
+              <a class="text-link" href="/sprints/ai-search.html">See the fixed scope</a>
             </div>
-          </a>
-          <a class="part" href="/sprints/content-engine.html">
-            <div class="part-inner">
+          </div>
+          <div class="row">
+            <div class="row-label">
               <span class="small">Stage 03 · Earn belief · one week</span>
               <h3>Content engine sprint</h3>
+              <p>Start here if content only ships when someone finds a spare afternoon.</p>
+            </div>
+            <div class="row-detail">
               <p>Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.</p>
               <span class="handoff">Every piece joins a library that keeps selling long after it ships.</span>
-              <span class="text-link">See the fixed scope</span>
+              <a class="text-link" href="/sprints/content-engine.html">See the fixed scope</a>
             </div>
-          </a>
-          <a class="part" href="/sprints/outbound.html">
-            <div class="part-inner">
+          </div>
+          <div class="row">
+            <div class="row-label">
               <span class="small">Stage 04 · Open doors · one week</span>
               <h3>Outbound sprint</h3>
+              <p>Start here if the pipeline runs on referrals and you cannot say where the next customer comes from.</p>
+            </div>
+            <div class="row-detail">
               <p>A signal-based prospect list and one personalised sequence inside safe limits, with instant human handoff the moment a buyer replies.</p>
               <span class="handoff">Reaches buyers who were not looking yet, warmed by what they find when they check you.</span>
-              <span class="text-link">See the fixed scope</span>
+              <a class="text-link" href="/sprints/outbound.html">See the fixed scope</a>
             </div>
-          </a>
-          <a class="part" href="/sprints/analytics.html">
-            <div class="part-inner">
+          </div>
+          <div class="row">
+            <div class="row-label">
               <span class="small">Stage 05 · Learn · one week</span>
               <h3>Analytics sprint</h3>
+              <p>Start here if you cannot say which marketing effort produced last month's revenue.</p>
+            </div>
+            <div class="row-detail">
               <p>Tracking installed and conversion events wired, with a one-page monthly report connected to your real numbers.</p>
               <span class="handoff">Shows which turn produced revenue and feeds it back into the aim.</span>
-              <span class="text-link">See the fixed scope</span>
+              <a class="text-link" href="/sprints/analytics.html">See the fixed scope</a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
