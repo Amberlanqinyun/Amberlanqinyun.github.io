@@ -288,7 +288,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var weak=DIMS.slice().sort(function(a,b){return answers[a.key]-answers[b.key];})[0];
     $('stageName').textContent=stage.name;
     $('scoreVal').textContent=score;
-    $('read').innerHTML=stage.read+' <span class="weak">Your weakest dimension is <b>'+weak.label.toLowerCase()+'</b>, that is where I would start.</span> <a class=\"text-link\" href=\"mailto:amber.lan.growth.digital@gmail.com?subject=Discovery%20call%20%C2%B7%20benchmark&body=Hi%20Amber%2C%0A%0AWhat%20we%20do%3A%20%0AOur%20website%3A%20%0ABiggest%20marketing%20gap%20right%20now%3A%20%0A%0A\">Want the plan for closing it? Email Amber.</a> <a class=\"text-link\" href=\"/sprints/\">Or see which sprint fixes it.</a>';
+    var SPRINT={
+      strategy:{url:'/sprints/positioning.html',say:'Stage 01, the positioning sprint'},
+      data:{url:'/sprints/analytics.html',say:'Stage 05, the analytics sprint'},
+      tooling:{url:'/sprints/content-engine.html',say:'Stage 03, the content engine sprint'},
+      governance:{url:'/sprints/analytics.html',say:'Stage 05, the analytics sprint'},
+      team:{url:'/contact.html',say:'the free audit, because a team gap needs a plan before a system'}
+    };
+    var rec=SPRINT[weak.key];
+    $('read').innerHTML=stage.read+' <span class="weak">Your weakest dimension is <b>'+weak.label.toLowerCase()+'</b>, that is where I would start.</span> <a class=\"text-link\" href=\"/contact.html\">Get the free audit against this score.</a> <a class=\"text-link\" href=\"'+rec.url+'\">Or start at '+rec.say+'.</a>';
   }
 
   render();
