@@ -23,7 +23,7 @@ Site structure:
 - /work/content-engine.html: case study, a content engine with a codified voice gate; clean-room code public on GitHub.
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /work/six-month-marketing-function.html: flagship case study, six months of one operator running a whole marketing function on AI systems; sanitised.
-- /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
+- /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written audit on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus two curated MIT-licensed libraries — 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
@@ -46,7 +46,7 @@ An AI marketing engineer does two jobs that are usually split: they write the go
 
 ## What does AI marketing cost in New Zealand?
 
-Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the free audit.
 
 
 ---
@@ -233,9 +233,9 @@ Yes, if the systems come first. One person cannot hand-write a month of content 
 
 ## Want this built instead of reading about it?
 
-Tell me what you do and where the pipeline stalls. You get a written read within the first week, either way.
+Tell me what you do and where the pipeline stalls. You get a written audit within the first week, either way.
 
-Get a first read
+Get a free audit
 
 ---
 
@@ -257,9 +257,9 @@ Every marketing function was built people-shaped: a specialist for each channel,
 
 - A human reviews every send
 
-Get a free first readCompare it to an agency
+Get a free auditCompare it to an agency
 
-A written read of your marketing within the week. No card, no call required.
+A written audit of your marketing within the week. No card, no call required.
 
 Amber Lan, AI marketing engineer. Ten years in marketing, three building the agents. Working from Auckland, worldwide.
 
@@ -349,7 +349,7 @@ The channels in your retainerEleven marketing systems, engineered to your busine
 
 Speed to first output
 
-Onboarding, then a strategy deckA written read of your marketing in the first week
+Onboarding, then a strategy deckA written audit of your marketing in the first week
 
 What you can inspect
 
@@ -369,7 +369,7 @@ Flow reads your business first. You choose where it starts. A human reviews ever
 
 ### Read
 
-Tell Flow what you sell and who buys it. A written read of your marketing, with the opportunities ranked, comes back inside the first week.
+Tell Flow what you sell and who buys it. A written audit of your marketing, with the opportunities ranked, comes back inside the first week.
 
 02
 
@@ -451,9 +451,9 @@ Flow AI is an AI marketing transformation practice: the strategy, the systems an
 
 An agency solves marketing with people: an account manager, a strategist, a writer and a media buyer, billed monthly. Flow AI solves it with engineered systems and one marketing engineer who reviews the work. You talk to the person doing it, the scope is fixed in advance, and everything built is documented and inspectable.
 
-### What is a first read?
+### What is the free audit?
 
-A first read is a written assessment of your marketing, delivered within the week, with the gaps ranked and the first system to install named. It is free, needs no card and no call, and it is how every engagement with Flow AI starts.
+A free audit is a written assessment of your marketing, delivered within the week, with the gaps ranked and the first system to install named. It is free, needs no card and no call, and it is how every engagement with Flow AI starts.
 
 ### Who reviews the work before it goes out?
 
@@ -463,11 +463,11 @@ A marketing engineer reviews every send before it reaches a customer. Agents pro
 
 Flow AI is based in Auckland, New Zealand and works worldwide. Its published research covers Australia and New Zealand in depth, including sourced pricing and adoption statistics, and the systems themselves run for any English-speaking market.
 
-## Start with a first read.
+## Start with a free audit.
 
-Tell Flow what you sell, who it is for, and where growth is stuck. A written read of your marketing comes back within the week.
+Tell Flow what you sell, who it is for, and where growth is stuck. A written audit of your marketing comes back within the week.
 
-Get a first read
+Get a free audit
 
 ---
 
@@ -483,9 +483,9 @@ The practice · engineered one system at a time
 
 Flow runs marketing as eleven engineered systems. Five are ready to install in a week: positioning, search, content, outbound and measurement. Start where the gap is widest.
 
-Get a first readSee the five installs
+Get a free auditSee the five installs
 
-Not sure which station is broken? The free AI-readiness benchmark takes two minutes and points at your weakest one, or Get a first read and Flow will tell you.
+Not sure which station is broken? The free AI-readiness benchmark takes two minutes and points at your weakest one, or Get a free audit and Flow will tell you.
 
 ## Pick a station.
 
@@ -541,7 +541,7 @@ Every station, run for you, every month.
 
 - One clear report
 
-Get a first read
+Get a free audit
 
 Compare the five sprints next to the sprints on the home page.
 
@@ -559,7 +559,7 @@ Positioning sprint · one week
 
 For businesses whose marketing stalls because nobody has written down what the company claims, to whom, and why anyone should believe it. Every downstream system needs this settled first.
 
-Get a first readSee the six deliverables
+Get a free auditSee the six deliverables
 
 ## Six deliverables. One week.
 
@@ -583,7 +583,7 @@ Documented, portable, handover included.
 
 - A 90-day recommendation for your first two channels
 
-Get a first read
+Get a free audit
 
 ## How the week runs.
 
@@ -631,7 +631,7 @@ This is the method behind the enterprise go-to-market case study, applied at you
 
 ### What happens in the first week of the positioning sprint?
 
-The first read comes first: a written assessment of your positioning and message with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: a written assessment of your positioning and message with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -645,7 +645,7 @@ You talk to the marketing engineer who does the work, the scope and the week are
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
-Get a first readCompare the five sprints
+Get a free auditCompare the five sprints
 
 A short form. I reply personally.
 
@@ -663,7 +663,7 @@ AI-search sprint · one week
 
 For businesses invisible in ChatGPT, Perplexity and AI Overviews. Today that is almost everyone, so early movers win cheaply.
 
-Get a first readSee the six deliverables
+Get a free auditSee the six deliverables
 
 ## Six deliverables. One week.
 
@@ -687,7 +687,7 @@ Documented, portable, handover included.
 
 - Search submission: IndexNow plus a Search Console walkthrough
 
-Get a first read
+Get a free audit
 
 ## How the week runs.
 
@@ -735,7 +735,7 @@ Open source and running on this site. Read the case study, then inspect the live
 
 ### What happens in the first week of the AI-search sprint?
 
-The first read comes first: a written assessment of your search and AI-search visibility with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: a written assessment of your search and AI-search visibility with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -749,7 +749,7 @@ You talk to the marketing engineer who does the work, the scope and the week are
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
-Get a first readCompare the five sprints
+Get a free auditCompare the five sprints
 
 A short form. I reply personally.
 
@@ -767,7 +767,7 @@ Content engine sprint · one week
 
 For owners who know consistency wins but cannot hand-write posts every week, and won't publish generic AI output under their name.
 
-Get a first readSee the six deliverables
+Get a free auditSee the six deliverables
 
 ## Six deliverables. One week.
 
@@ -791,7 +791,7 @@ Documented, portable, handover included.
 
 - Operator handbook so the system survives without me
 
-Get a first read
+Get a free audit
 
 ## How the week runs.
 
@@ -839,7 +839,7 @@ The clean-room version is public: the case study and the code.
 
 ### What happens in the first week of the content engine sprint?
 
-The first read comes first: a written assessment of your content operation with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: a written assessment of your content operation with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -853,7 +853,7 @@ You talk to the marketing engineer who does the work, the scope and the week are
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
-Get a first readCompare the five sprints
+Get a free auditCompare the five sprints
 
 A short form. I reply personally.
 
@@ -871,7 +871,7 @@ Outbound sprint · one week
 
 For B2B businesses whose next customers will never search for them, and who would rather send fifty honest emails than five thousand spam ones.
 
-Get a first readSee the six deliverables
+Get a free auditSee the six deliverables
 
 ## Six deliverables. One week.
 
@@ -895,7 +895,7 @@ Documented, portable, handover included.
 
 - First sends live before the week ends
 
-Get a first read
+Get a free audit
 
 ## How the week runs.
 
@@ -943,7 +943,7 @@ The design pattern is documented in the outbound system on the work page.
 
 ### What happens in the first week of the outbound sprint?
 
-The first read comes first: a written assessment of your outbound pipeline with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: a written assessment of your outbound pipeline with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -957,7 +957,7 @@ You talk to the marketing engineer who does the work, the scope and the week are
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
-Get a first readCompare the five sprints
+Get a free auditCompare the five sprints
 
 A short form. I reply personally.
 
@@ -975,7 +975,7 @@ Analytics sprint · one week
 
 For businesses spending on marketing without knowing which channel produces customers. Fix the measurement before spending more anywhere.
 
-Get a first readSee the six deliverables
+Get a free auditSee the six deliverables
 
 ## Six deliverables. One week.
 
@@ -999,7 +999,7 @@ Documented, portable, handover included.
 
 - A measurement checklist for every future campaign
 
-Get a first read
+Get a free audit
 
 ## How the week runs.
 
@@ -1047,7 +1047,7 @@ Try the free AI-readiness benchmark for a taste of the diagnostic style.
 
 ### What happens in the first week of the analytics sprint?
 
-The first read comes first: a written assessment of your tracking and reporting with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: a written assessment of your tracking and reporting with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -1061,7 +1061,7 @@ You talk to the marketing engineer who does the work, the scope and the week are
 
 Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
 
-Get a first readCompare the five sprints
+Get a free auditCompare the five sprints
 
 A short form. I reply personally.
 
@@ -1165,9 +1165,9 @@ Sequencing beats volume. The same assets, landed in order against one launch mom
 
 ## Want a system like this pointed at your business?
 
-Tell me what you do and where the pipeline stalls. You get a written read within the first week.
+Tell me what you do and where the pipeline stalls. You get a written audit within the first week.
 
-Get a first read
+Get a free audit
 
 ---
 
@@ -1269,9 +1269,9 @@ Generated content fails at the last metre, in the lines a reader flags as machin
 
 ## Want a system like this pointed at your business?
 
-Tell me what you do and where the pipeline stalls. You get a written read within the first week.
+Tell me what you do and where the pipeline stalls. You get a written audit within the first week.
 
-Get a first read
+Get a free audit
 
 ---
 
@@ -1411,9 +1411,9 @@ Answer-engine optimisation is discipline, not tricks: let the crawlers in, say w
 
 ## Want a system like this pointed at your business?
 
-Tell me what you do and where the pipeline stalls. You get a written read within the first week.
+Tell me what you do and where the pipeline stalls. You get a written audit within the first week.
 
-Get a first read
+Get a free audit
 
 ---
 
@@ -1429,7 +1429,7 @@ About
 
 Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. This page is the receipts.
 
-Get a first readGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published126 skills, open source
+Get a free auditGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published126 skills, open source
 
 ## I was the marketing team of one.
 
@@ -1599,9 +1599,9 @@ Anything done twice by hand becomes a system. The agent stack is the team; I sta
 
 ## One person with an agent stack, instead of an agency.
 
-You talk to the person who does the work. No account manager, no junior doing the writing, no retainer for hours nobody can show you. Tell Flow what you sell and where growth is stuck, and a written read comes back within the week.
+You talk to the person who does the work. No account manager, no junior doing the writing, no retainer for hours nobody can show you. Tell Flow what you sell and where growth is stuck, and a written audit comes back within the week.
 
-Get a first read
+Get a free audit
 
 ---
 
@@ -1613,9 +1613,9 @@ Author: Amber Lan (Flow AI)
 
 Contact
 
-# Get your free first read.
+# Get your free marketing audit.
 
-Three fields, plus your site if you have one. You get a written read of your marketing within the week: the gaps ranked and the first system to install named. No card, no call, no sales sequence.
+Three fields, plus your site if you have one. You get a written audit of your marketing within the week: the gaps ranked and the first system to install named. No card, no call, no sales sequence.
 
 Your nameEmailYour website optionalMessage
 
@@ -1623,7 +1623,7 @@ A few lines is enough. Press ⌘Enter to send.
 
 Send
 
-A marketing engineer reads every message. You hear back within two working days, with the first questions or the read itself.
+A marketing engineer reads every message. You hear back within two working days, with the first questions or the audit itself.
 
 ## What happens next.
 
@@ -1637,7 +1637,7 @@ A marketing engineer reads what you sent and checks your site.
 
 02
 
-### You get a written read
+### You get a written audit
 
 The gap to close first, and why.
 
@@ -1673,7 +1673,7 @@ You work directly with the practitioner who writes the strategy and builds the s
 
 ### How quickly can the first system go live?
 
-The written go-to-market read arrives within the first week, and the first agreed system is designed to go live in week one.
+The written audit arrives within the first week, and the first agreed system is designed to go live in week one.
 
 ### Who is Flow AI for?
 
@@ -1681,7 +1681,7 @@ Early-stage teams and small businesses in Australia and New Zealand that need se
 
 ### What does AI marketing cost in Australia and New Zealand?
 
-Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read, so you see the number against your own situation rather than a rate card.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the free audit, so you see the number against your own situation rather than a rate card.
 
 ### What is AI-search optimisation?
 

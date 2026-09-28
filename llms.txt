@@ -23,7 +23,7 @@ Site structure:
 - /work/content-engine.html: case study, a content engine with a codified voice gate; clean-room code public on GitHub.
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /work/six-month-marketing-function.html: flagship case study, six months of one operator running a whole marketing function on AI systems; sanitised.
-- /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written read on the gap within the first week.
+- /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written audit on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus two curated MIT-licensed libraries — 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
@@ -46,4 +46,4 @@ An AI marketing engineer does two jobs that are usually split: they write the go
 
 ## What does AI marketing cost in New Zealand?
 
-Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the first read.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the free audit.
