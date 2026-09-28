@@ -202,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="stack">
           <p class="eyebrow">Contact</p>
           <h1 id="contact-title">Get your free marketing audit.</h1>
-          <p class="lead">Three fields, plus your site if you have one. You get a <strong>written audit of your marketing within the week</strong>: the gaps ranked and the first system to install named. No card, no call, no sales sequence.</p>
+          <p class="lead">Three fields, plus your site if you have one. You get a <strong>written audit of your marketing within the week</strong>: your weakest flywheel stage named, the gaps ranked, and the first sprint to install. No card, no call, no sales sequence.</p>
         </div>
 
         <div class="contact-form">
@@ -374,9 +374,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         var href = 'mailto:' + TO
           + '?subject=' + encodeURIComponent('Flow AI enquiry from ' + d.name)
           + '&body=' + encodeURIComponent(asText(d));
-        window.location.href = href;
-        show('ok', '<b>Your email app is opening</b> with everything filled in. Press send and it reaches Flow AI. '
-          + 'If nothing opened, email <a href="mailto:' + TO + '">' + TO + '</a> directly.');
+        show('error', 'That did not send, and nothing was lost: <a href="' + href + '">send the same message from your email app</a>, '
+          + 'or email <a href="mailto:' + TO + '">' + TO + '</a> directly.');
       }
 
       /* Clear the error state as soon as the visitor starts fixing the field. */
@@ -429,8 +428,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }).catch(function () {
           button.disabled = false;
           button.textContent = buttonLabel;
-          show('error', 'That did not send. Opening your email app instead so the message is not lost.');
-          window.setTimeout(function () { mailtoFallback(d); }, 1200);
+          mailtoFallback(d);
         });
       }
 
