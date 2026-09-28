@@ -10,6 +10,7 @@ Last updated: 2026-08-20
 | `/about.html` | Everything about Amber under one page: position, current role, shipped systems with source links, capabilities | Consolidated from the former `/cv.html`. ProfilePage schema. |
 | `/work.html` | Portfolio organised as the go-to-market machine: Strategy, Demand engines, Built to ship | WebPage + BreadcrumbList schema. |
 | `/cases.html` | Evidence library for working systems, open source tools, and product builds | CollectionPage + ItemList + BreadcrumbList schema. |
+| `/work/six-month-marketing-function.html` | Flagship case study: six months of one operator running a whole marketing function on AI systems | Article + BreadcrumbList schema. |
 | `/work/enterprise-gtm.html` | Case study: three demand engines, one pipeline, one launch | Article + BreadcrumbList schema. |
 | `/work/content-engine.html` | Case study: the voice-gated content engine | Article + BreadcrumbList schema. |
 | `/work/geo-seo-toolkit.html` | Case study: the GEO/AEO toolkit, running on this site | Article + BreadcrumbList schema. |
