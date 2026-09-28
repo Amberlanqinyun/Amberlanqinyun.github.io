@@ -98,13 +98,14 @@
 .site-header__nav .site-header__cta {
   padding: var(--s-3) var(--s-5);
   border-radius: var(--pill);
-  background: #faf8f3;
+  background: #e4a43c;
   color: #0e0e0d;
   font-weight: 650;
+  transition: filter 200ms ease;
 }
 
 .site-header__nav .site-header__cta:hover {
-  background: rgba(250, 248, 243, 0.9);
+  filter: brightness(1.08);
   color: #0e0e0d;
 }
 

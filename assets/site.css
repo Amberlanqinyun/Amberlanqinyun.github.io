@@ -125,7 +125,7 @@ h1, h2 {
   font-feature-settings: "kern", "liga";
   text-wrap: balance;
 }
-h1 { font-size: var(--display); }
+h1 { font-size: var(--display); font-weight: 680; letter-spacing: -0.03em; }
 h2 { font-size: var(--h2); }
 h3 {
   color: var(--fg);
@@ -495,3 +495,27 @@ body::after { right: max(var(--gutter), calc(50% - (var(--measure) / 2))); }
 .stat-src { display: block; margin-top: 0.6rem; color: var(--soft); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
 @media (max-width: 900px) { .value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 540px) { .value-grid { grid-template-columns: 1fr; } }
+
+/* ---- Editorial alignment arc (design refresh, Sep 2026) -----------------
+   The page opens centered (the hero is a manifesto), reads left-ragged
+   through the body against the blueprint rails, and closes centered on the
+   one conversion moment. Sections opt out only by being a hero or closer. */
+main section.centered:not(.hero):not(.contact),
+main section:not(.hero):not(.contact) .stack.centered { text-align: left; }
+main section.centered:not(.hero):not(.contact) .lead,
+main section.centered:not(.hero):not(.contact) .stack .small,
+main section:not(.hero):not(.contact) .stack.centered .lead,
+main section:not(.hero):not(.contact) .stack.centered .small { margin-inline: 0; }
+main section.centered:not(.hero):not(.contact) .cta-row,
+main section:not(.hero):not(.contact) .stack.centered .cta-row { justify-content: flex-start; }
+main section.centered:not(.hero):not(.contact) .stack > h2,
+main section:not(.hero):not(.contact) .stack.centered > h2 { max-width: 26ch; }
+
+/* Tactile cards: linked parts answer the cursor the way buttons already do. */
+@media (prefers-reduced-motion: no-preference) {
+  a.part, .proof-card { transition: transform 240ms var(--ease), border-color 220ms ease; }
+  a.part:hover, a.proof-card:hover { transform: translateY(-3px); }
+}
+
+/* Headline numbers sit on the blueprint: a hairline rule per stat. */
+.stat { border-left: 1px solid var(--hair); padding-left: var(--s-5); }
