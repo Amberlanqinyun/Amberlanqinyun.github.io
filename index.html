@@ -88,7 +88,17 @@
 
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  /* Page rules only: the living flywheel, the scroll-fill manifesto, the counters. */
+  /* Page rules only: the living flywheel, the scroll-fill manifesto, the counters,
+     and the split hero. */
+  @media (min-width: 880px) {
+    .hero-split { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--s-9); align-items: center; text-align: left; }
+    .hero-split .stack { margin: 0; max-width: none; }
+    .hero-split h1 { margin-inline: 0; max-width: 12ch; }
+    .hero-split .lead { margin-inline: 0; }
+    .hero-split .cta-row { justify-content: flex-start; }
+    .hero-split .hero-art { margin: 0; width: 100%; }
+  }
+  .clients .hero-proof { margin-top: var(--s-4); }
   .machine { width: min(100%, 40rem); margin-inline: auto; }
   .machine svg { width: 100%; height: auto; display: block; }
   @media (prefers-reduced-motion: no-preference) {
@@ -201,21 +211,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main id="main">
     <section class="hero centered" aria-labelledby="hero-title">
-      <div class="wrap">
+      <div class="wrap hero-split">
         <div class="stack">
-          <p class="eyebrow">AI marketing transformation</p>
-          <h1 id="hero-title">Marketing no longer scales by hiring.</h1>
-          <p class="lead">Every marketing function was built people-shaped: a specialist for each channel, a retainer for each gap, a headcount case for each ambition. Flow AI re-engineers the function itself, so what compounds is the system and not the payroll. <b>Strategy, systems and the agents that run them, built by a marketing engineer.</b></p>
-          <ul class="hero-proof">
-            <li>Ten years in marketing, three building the systems</li>
-            <li>No agency retainer, no new hire</li>
-            <li>A human reviews every send</li>
-          </ul>
+          <h1 id="hero-title">Marketing that compounds.</h1>
+          <p class="lead">Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
-            <a class="text-link" href="#instead">Compare it to an agency</a>
+            <a class="text-link" href="/work.html">See it running</a>
           </div>
-          <p class="hero-note small">A written audit of your marketing within the week. No card, no call required.</p>
         </div>
         <figure class="hero-art">
           <img src="assets/amber-lan-editorial-hero-v2.webp"
@@ -225,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                sizes="(max-width: 880px) calc(100vw - 48px), 832px"
                width="1448" height="1086" loading="lazy" decoding="async"
                alt="Editorial halftone portrait of Amber Lan in the Flow AI ink, cream, and amber palette.">
-          <figcaption>Amber Lan, AI marketing engineer. Ten years in marketing, three building the agents. Working from Auckland, worldwide.</figcaption>
+          <figcaption>Amber Lan, AI marketing engineer. Auckland, worldwide.</figcaption>
         </figure>
       </div>
     </section>
@@ -238,6 +241,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://lullaby.co.nz" target="_blank" rel="noopener">Lullaby<span>.co.nz</span></a>
           <a href="https://resaido.com" target="_blank" rel="noopener">Resaido<span>.com</span></a>
         </p>
+        <ul class="hero-proof">
+          <li>Ten years in marketing, three building the systems</li>
+          <li>No agency retainer, no new hire</li>
+          <li>A human reviews every send</li>
+        </ul>
       </div>
     </aside>
 
@@ -245,7 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap">
         <div class="stack reveal">
           <h2 id="why-title">You already know AI works. It still is not running your marketing.</h2>
-          <p class="lead">Most businesses have the ChatGPT tabs to prove it. The content still ships late, the follow-ups still wait, and nobody is watching what Google and ChatGPT say about them. Tools do not close that gap. Engineered systems do.</p>
+          <p class="lead">The ChatGPT tabs are open, yet content still ships late and follow-ups still wait. Tools do not close that gap. Engineered systems do.</p>
         </div>
         <div class="grid grid-3 reveal" style="text-align:left">
           <div class="pillar">
@@ -369,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="stack reveal centered">
           <p class="eyebrow">Why it pays</p>
           <h2 id="value-title">What the machine buys back.</h2>
-          <p class="lead">Buyers do not need a list of skills; they need hours and pipeline back. These are the numbers the systems produce, with their sources attached.</p>
+          <p class="lead">The numbers the systems produce, with their sources attached.</p>
         </div>
         <div class="grid value-grid reveal">
           <div class="stat">
@@ -401,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap">
         <div class="stack reveal centered">
           <h2 id="instead-title">Instead of a marketing agency.</h2>
-          <p class="lead">Agencies solved this with people: an account manager, a strategist, a writer, a media buyer, billed monthly. Flow solves it with systems, and one marketing engineer who reviews the work.</p>
+          <p class="lead">Agencies solve marketing with billed people. Flow solves it with engineered systems, plus one marketing engineer who reviews everything that ships.</p>
         </div>
         <div class="versus reveal" role="table" aria-label="A marketing agency compared with Flow AI">
           <p class="versus-head versus-them-head">A marketing agency</p>
@@ -501,48 +509,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="tools" class="centered" aria-labelledby="tools-title">
       <div class="wrap">
         <div class="stack reveal">
-          <h2 id="tools-title">Try the tools first.</h2>
-          <p class="lead">Two free models I use with clients. No email gate.</p>
+          <h2 id="tools-title">Free to use.</h2>
+          <p class="lead">Try the same models Flow installs. No email gate.</p>
         </div>
-        <div class="grid grid-2 reveal" style="text-align:left">
-          <a class="part" href="/tools/benchmark.html">
-            <div class="part-inner">
-              <h3>AI-readiness benchmark</h3>
-              <p>Two minutes. A score for how ready your company is to grow with AI, and what to fix first.</p>
-              <span class="text-link">Run the benchmark</span>
-            </div>
-          </a>
-          <a class="part" href="/tools/pricing.html">
-            <div class="part-inner">
-              <h3>Pricing model</h3>
-              <p>Find the profit-maximising price for your product from cost and customer value.</p>
-              <span class="text-link">Open the model</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="guides" class="centered" aria-labelledby="guides-title">
-      <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="guides-title">Read before you buy.</h2>
-          <p class="lead">Long guides on what AI marketing costs and where to start. One a week.</p>
-        </div>
-        <div class="grid grid-2 reveal" style="text-align:left">
-          <a class="proof-card guide-card" href="/blog/ai-marketing-for-small-business-nz.html">
-            <img src="assets/flow-system-hero.webp" width="1448" height="1086" loading="lazy" alt="Illustration of the Flow AI marketing system">
-            <h3>AI marketing for small business in NZ</h3>
-            <p>What it covers, what it costs against an agency or a hire, the mistakes to skip, and a starting checklist.</p>
-            <span class="text-link">Read the guide</span>
-          </a>
-          <a class="part" href="/blog/">
-            <div class="part-inner">
-              <h3>All guides</h3>
-              <p>Every guide in one place, with a feed you can follow.</p>
-              <span class="text-link">Open the guides</span>
-            </div>
-          </a>
+        <div class="narrow reveal" style="text-align:left; margin-top: clamp(3rem, 6vw, 4.5rem)">
+          <ul class="systems">
+            <li><b>Benchmark</b><span><a class="text-link" href="/tools/benchmark.html">The AI-readiness benchmark</a>: five questions, a score, and the stage to fix first.</span></li>
+            <li><b>Pricing</b><span><a class="text-link" href="/tools/pricing.html">The live pricing model</a>: the profit-maximising price from cost and customer value.</span></li>
+            <li><b>Guides</b><span><a class="text-link" href="/blog/">Long-form guides</a>, one a week, including <a class="text-link" href="/blog/ai-marketing-for-small-business-nz.html">AI marketing for small business in NZ</a>.</span></li>
+            <li><b>Skills</b><span><a class="text-link" href="/skills/">126 published skills</a>, open source and installable.</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -581,7 +557,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap">
         <div class="stack reveal">
           <h2 id="contact-title">Start with a free audit.</h2>
-          <p class="lead">Tell Flow what you sell, who it is for, and where growth is stuck. A written audit of your marketing comes back within the week.</p>
+          <p class="lead">Tell Flow what you sell and where growth is stuck. A written audit comes back within the week, no card, no call.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
           </div>

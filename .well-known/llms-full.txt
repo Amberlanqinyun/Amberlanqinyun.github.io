@@ -247,9 +247,9 @@ Author: Amber Lan (Flow AI)
 
 AI marketing transformation
 
-# Marketing no longer scales by hiring.
+# Marketing that compounds.
 
-Every marketing function was built people-shaped: a specialist for each channel, a retainer for each gap, a headcount case for each ambition. Flow AI re-engineers the function itself, so what compounds is the system and not the payroll. Strategy, systems and the agents that run them, built by a marketing engineer.
+Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.
 
 - Ten years in marketing, three building the systems
 
