@@ -87,6 +87,38 @@
   </script>
 
 <link rel="stylesheet" href="/assets/site.css">
+<style>
+  /* Page rules only: the living flywheel, the scroll-fill manifesto, the counters. */
+  .machine { width: min(100%, 40rem); margin-inline: auto; }
+  .machine svg { width: 100%; height: auto; display: block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .machine .ring { animation: ringspin 80s linear infinite; }
+    @keyframes ringspin { to { stroke-dashoffset: -1194; } }
+    .machine .node { animation: nodepulse 6s var(--ease) infinite; transform-box: fill-box; transform-origin: center; }
+    .machine .node:nth-of-type(2) { animation-delay: 1.2s; }
+    .machine .node:nth-of-type(3) { animation-delay: 2.4s; }
+    .machine .node:nth-of-type(4) { animation-delay: 3.6s; }
+    .machine .node:nth-of-type(5) { animation-delay: 4.8s; }
+    @keyframes nodepulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.75; } }
+    .machine .comet { offset-path: circle(190px at 380px 280px); animation: orbit 14s linear infinite; }
+    @keyframes orbit { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+  }
+  /* Scroll-fill manifesto: type brightens as it scrolls through the viewport. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      #why h2, #why .lead {
+        background: linear-gradient(to right, var(--fg) 50%, rgba(250, 248, 243, 0.28) 50%) 100% 0 / 200% 100% no-repeat;
+        -webkit-background-clip: text; background-clip: text;
+        color: transparent;
+        animation: scrollfill linear both;
+        animation-timeline: view();
+        animation-range: entry 40% cover 55%;
+      }
+      @keyframes scrollfill { to { background-position: 0 0; } }
+    }
+  }
+</style>
+
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
@@ -240,11 +272,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="lead">Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.</p>
         </div>
 
-        <figure class="diagram reveal">
-          <img src="/assets/diagram-system-map.svg" width="1600" height="900"
-               alt="Three arcs around a single pipeline. Get found holds positioning, search and AI search, content and social. Get leads holds outbound, growth and conversion, launch and paid. Keep customers holds community, measurement and reporting."
-               loading="lazy" decoding="async">
-          <figcaption class="small">Together the systems turn one flywheel with five stages: aim, get found, earn belief, open doors, learn. <a class="text-link" href="/sprints/#flywheel">See the flywheel</a>, or install one stage as a one-week sprint.</figcaption>
+        <figure class="diagram reveal machine" role="img" aria-label="The Flow AI flywheel in motion: five stages in a clockwise loop. Aim with positioning, get found with AI search, earn belief with the content engine, open doors with outbound, learn with analytics, feeding back into aim.">
+          <svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle class="ring" cx="380" cy="280" r="190" fill="none" stroke="#FAF8F3" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="5 7"/>
+            <g fill="#FAF8F3">
+              <circle class="node" cx="380" cy="90" r="6"/>
+              <circle class="node" cx="560.7" cy="221.3" r="6"/>
+              <circle class="node" cx="491.7" cy="433.7" r="6"/>
+              <circle class="node" cx="268.3" cy="433.7" r="6"/>
+              <circle class="node" cx="199.3" cy="221.3" r="6"/>
+            </g>
+            <circle class="comet" r="4" fill="#e4a43c"/>
+            <g font-family="inherit" fill="#FAF8F3">
+              <g text-anchor="middle">
+                <text x="380" y="46" font-size="12" letter-spacing="2" opacity="0.55">01 · AIM</text>
+                <text x="380" y="68" font-size="17">Positioning</text>
+              </g>
+              <g text-anchor="start">
+                <text x="586" y="210" font-size="12" letter-spacing="2" opacity="0.55">02 · GET FOUND</text>
+                <text x="586" y="232" font-size="17">AI search</text>
+              </g>
+              <g text-anchor="start">
+                <text x="512" y="466" font-size="12" letter-spacing="2" opacity="0.55">03 · EARN BELIEF</text>
+                <text x="512" y="488" font-size="17">Content engine</text>
+              </g>
+              <g text-anchor="end">
+                <text x="248" y="466" font-size="12" letter-spacing="2" opacity="0.55">04 · OPEN DOORS</text>
+                <text x="248" y="488" font-size="17">Outbound</text>
+              </g>
+              <g text-anchor="end">
+                <text x="174" y="210" font-size="12" letter-spacing="2" opacity="0.55">05 · LEARN</text>
+                <text x="174" y="232" font-size="17">Analytics</text>
+              </g>
+              <g text-anchor="middle">
+                <text x="380" y="272" font-size="19">One wheel.</text>
+                <text x="380" y="298" font-size="14" opacity="0.6">Every turn compounds.</text>
+              </g>
+            </g>
+          </svg>
+          <figcaption class="small">The eleven systems below turn one flywheel: aim, get found, earn belief, open doors, learn. <a class="text-link" href="/sprints/#flywheel">Install one stage as a one-week sprint</a>.</figcaption>
         </figure>
 
         <div class="rows reveal">
@@ -307,12 +373,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="grid value-grid reveal">
           <div class="stat">
-            <p class="stat-num">10 hrs</p>
+            <p class="stat-num"><span data-count="10">10</span> hrs</p>
             <p class="stat-label">back every week from content creation, with the engine drafting in the background between approvals.</p>
             <span class="stat-src">Measured in production</span>
           </div>
           <div class="stat">
-            <p class="stat-num">20 hrs</p>
+            <p class="stat-num"><span data-count="20">20</span> hrs</p>
             <p class="stat-label">saved every week across three team members on outbound, from list building to follow-up.</p>
             <span class="stat-src">Measured in production</span>
           </div>
@@ -322,7 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="stat-src"><a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand.html">Sourced in the cost guide</a></span>
           </div>
           <div class="stat">
-            <p class="stat-num">up to 40%</p>
+            <p class="stat-num">up to <span data-count="40">40</span>%</p>
             <p class="stat-label">more AI-search visibility for pages optimised the way the AI-search sprint works.</p>
             <span class="stat-src">Aggarwal et al., KDD 2024</span>
           </div>
@@ -632,5 +698,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </span>
   </div>
 </footer>
+<script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var els = document.querySelectorAll('[data-count]');
+    if (!els.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        var el = entry.target, end = parseInt(el.dataset.count, 10), t0 = null;
+        function tick(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / 900, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        el.textContent = '0';
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
 </body>
 </html>
