@@ -46,29 +46,48 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/texture.css">
 <style>
-  /* About page. Everything else comes from /assets/site.css. */
+  /* About page. Everything else comes from /assets/site.css and /assets/texture.css. */
   section { scroll-margin-top: 72px; }
 
-  /* Four facts under the portrait, still inside the hero */
+  /* Four facts under the portrait, still inside the hero: a spec strip on hairlines */
   .facts {
-    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem 1.5rem;
-    width: min(100%, 60rem); margin: clamp(3.5rem, 7vw, 5.5rem) auto 0;
-    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6);
+    width: min(100%, 60rem); margin: var(--space-band) auto 0;
+    padding-bottom: var(--space-band); text-align: left;
   }
+  .facts > div { border-left: 1px solid var(--hair); padding-left: var(--s-5); }
   .facts b { display: block; margin-bottom: 0.35rem; color: var(--fg); font-size: 14px; font-weight: 600; }
-  .facts span { display: block; max-width: 22ch; margin-inline: auto; color: var(--soft); font-size: 14px; line-height: 1.5; text-wrap: balance; }
+  .facts span { display: block; max-width: 22ch; color: var(--soft); font-size: 14px; line-height: 1.5; text-wrap: pretty; }
 
-  /* Short paragraphs in a reading column */
-  .prose { width: min(100%, 40rem); margin: clamp(2.5rem, 5vw, 3.5rem) auto 0; text-align: left; }
+  /* Short paragraphs in a reading column. They light up as they are read. */
+  .prose { width: min(100%, 40rem); margin: clamp(2.5rem, 5vw, 3.5rem) auto 0; text-align: left; --fill-to: rgba(250, 248, 243, 0.82); --fill-from: rgba(250, 248, 243, 0.3); }
   .prose p + p { margin-top: 1rem; }
   .prose .small { margin-top: 1.75rem; }
 
-  /* Labels above the featured systems */
-  .part > .small { display: block; margin-bottom: 0.75rem; font-weight: 500; letter-spacing: 0.12em; }
+  /* Glass panels carry a tighter title than the open grids do */
+  .glass h3 { font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.15; }
+  .part > .tag { margin-bottom: var(--s-4); }
 
-  /* Six more systems as hairline rows */
-  .rows { margin-top: clamp(3.5rem, 7vw, 5.5rem); text-align: left; }
+  /* Open grids sit on the blueprint: a hairline per part */
+  #fields .part, #capabilities .part { border-top: 1px solid var(--hair); padding-top: var(--s-5); }
+
+  /* The four rules, numbered */
+  #method .grid { counter-reset: rule; }
+  #method .part { counter-increment: rule; border-top: 1px solid var(--hair); padding-top: var(--s-5); }
+  #method .part::before {
+    content: "0" counter(rule); display: block; margin-bottom: var(--s-4);
+    color: var(--soft); font-size: var(--t-eyebrow); letter-spacing: 0.2em; font-variant-numeric: tabular-nums;
+  }
+
+  /* Six more systems as hairline rows, name | what it does | stack, with the
+     dashed divider from the site's row language between name and description */
+  .rows { margin-top: var(--space-band); text-align: left; }
   .rows h3 { margin-bottom: 1.25rem; }
   .row {
     display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr) minmax(0, 3fr);
@@ -76,8 +95,12 @@
     border-top: 1px solid var(--hair); color: var(--muted); font-size: 15px;
   }
   .row:last-child { border-bottom: 1px solid var(--hair); }
+  .row::after { top: 1rem; bottom: 1rem; left: calc((100% - 2.5rem) * 0.285714 + 0.625rem); }
   .row .text-link { font-size: 15px; }
   .row .small { text-align: right; }
+
+  /* The closer: amber keeps its one job, and the ground lights it */
+  #contact .btn-primary { box-shadow: 0 18px 50px -18px rgba(228, 164, 60, 0.55); }
 
   @media (max-width: 720px) {
     .facts { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
@@ -85,11 +108,8 @@
     .row .small { text-align: left; }
   }
 </style>
-<link rel="stylesheet" href="/assets/site.css">
-<link rel="stylesheet" href="/assets/site-header.css">
-<link rel="stylesheet" href="/assets/site-footer.css">
-<link rel="stylesheet" href="/assets/motion.css">
 <script src="/assets/motion.js" defer></script>
+<script src="/assets/dotfield.js" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -119,10 +139,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main>
-  <section class="hero centered" aria-labelledby="about-title">
+  <section class="hero centered" aria-labelledby="about-title" data-dotfield="hero">
+    <div class="orb" style="--x: 80%; --y: 24%; --a: 0.065" aria-hidden="true"></div>
+    <div class="orb" style="--x: 12%; --y: 74%; --r: 44rem; --a: 0.045" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="stack">
-        <p class="eyebrow">About</p>
+      <div class="stack" data-dotfield-clear>
+        <p class="eyebrow tag">About Amber Lan</p>
         <h1 id="about-title">Ten years in marketing. Three building the AI that runs it.</h1>
         <p class="lead">Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. <b>This page is the receipts.</b></p>
         <div class="cta-row">
@@ -143,13 +165,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section id="position" class="centered" aria-labelledby="position-title">
+  <section id="position" class="centered lit" aria-labelledby="position-title">
+    <div class="orb" style="--x: 18%; --y: 30%; --a: 0.06" aria-hidden="true"></div>
     <div class="wrap">
       <div class="stack reveal">
-        <h2 id="position-title">I was the marketing team of one.</h2>
-        <p class="lead">Flow AI exists because I needed it first.</p>
+        <h2 id="position-title" class="fill-on-scroll">I was the marketing team of one.</h2>
+        <p class="lead fill-on-scroll">Flow AI exists because I needed it first.</p>
       </div>
-      <div class="prose reveal">
+      <div class="prose reveal fill-prose">
         <p>Ten years in marketing, across every part of it. Positioning and category work. Search, back when that meant Google and now that it means ChatGPT too. Content calendars, brand voice, social, email, outbound, paid, events, analytics. Not one specialism: the whole function, in agencies and in house, for businesses from local operators to enterprise software.</p>
         <p>Which means I know exactly what a marketer's week looks like. You are one person against a list that assumes five. The strategy sits in a document nobody opens because there is no time to execute it. The content calendar slips, then slips again. Leads arrive and nobody follows up for four days. You are not bad at your job. There is simply more work than hours, and every quarter the list gets longer.</p>
         <p>Three years ago I started building my way out of it. Not prompts and not a tool subscription: real systems. Agents with the strategy written into them, content engines that hold a codified brand voice, outbound lanes that research before they send, search tooling that gets a business cited by AI assistants and not just ranked on Google.</p>
@@ -160,39 +183,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section id="now" class="centered" aria-labelledby="now-title">
+  <section id="now" class="centered sheet" aria-labelledby="now-title">
     <div class="wrap">
       <div class="stack reveal">
         <h2 id="now-title">Running marketing solo at an AI startup.</h2>
         <p class="lead">Runs the whole marketing function at an AI startup in Auckland, one person plus an agent stack.</p>
       </div>
-      <div class="grid grid-5 reveal" style="text-align:left">
-        <div class="part">
+      <div class="grid grid-5 glass-grid reveal" style="text-align:left">
+        <div class="part glass">
           <div class="part-inner">
             <h3>Category and positioning</h3>
             <p>Message architecture, the claims register, and the go-to-market plan across two quarters and a product launch.</p>
           </div>
         </div>
-        <div class="part">
+        <div class="part glass">
           <div class="part-inner">
             <h3>An agent-run content engine</h3>
             <p>Brief in, audited platform-native content out. Every artefact passes a codified voice gate before it ships.</p>
             <a class="text-link" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">The clean-room version on GitHub</a>
           </div>
         </div>
-        <div class="part">
+        <div class="part glass">
           <div class="part-inner">
             <h3>Executive thought leadership</h3>
             <p>Three leadership voices on LinkedIn, quarterly calendars, every statistic verified against a source before publication.</p>
           </div>
         </div>
-        <div class="part">
+        <div class="part glass">
           <div class="part-inner">
             <h3>Marketing infrastructure as software</h3>
             <p>An HTML-to-video rendering pipeline (Playwright + ffmpeg), a live benchmark kiosk app, and interactive GTM plans and dashboards the leadership team actually uses.</p>
           </div>
         </div>
-        <div class="part">
+        <div class="part glass">
           <div class="part-inner">
             <h3>Event go-to-market end to end</h3>
             <p>Exhibitor operations, booth systems, and collateral for national tech events, run as production systems rather than one-off scrambles.</p>
@@ -219,34 +242,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section id="systems" class="centered" aria-labelledby="systems-title">
+  <section id="systems" class="centered lit" aria-labelledby="systems-title">
+    <div class="orb" style="--x: 86%; --y: 34%; --a: 0.06" aria-hidden="true"></div>
     <div class="wrap">
       <div class="stack reveal">
-        <p class="eyebrow">Proof</p>
+        <p class="eyebrow tag">Proof</p>
         <h2 id="systems-title">Shipped systems, linked to source.</h2>
         <p class="lead">Four featured, six more. Every one opens on GitHub.</p>
       </div>
-      <div class="grid grid-2 reveal" style="text-align:left">
-        <a class="part" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">
-          <span class="small">SEO / AEO tooling · Python</span>
+      <div class="grid grid-2 glass-grid reveal" style="text-align:left">
+        <a class="part glass" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">
+          <span class="tag tag-sm">SEO / AEO tooling · Python</span>
           <h3>geo-seo-claude</h3>
           <p>A GEO/AEO-first SEO toolkit for Claude Code: citability scoring, AI-crawler analysis, schema markup, PDF reports. <strong>Built so a brand gets cited by ChatGPT, Claude and Perplexity, not just ranked on Google.</strong></p>
           <span class="text-link">View repository</span>
         </a>
-        <a class="part" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">
-          <span class="small">Content system · React + TS</span>
+        <a class="part glass" href="https://github.com/Amberlanqinyun/flowainz" target="_blank" rel="noopener">
+          <span class="tag tag-sm">Content system · React + TS</span>
           <h3>Flow AI</h3>
           <p>Automated, AI-search-optimised content for NZ service businesses. A short brief in, <strong>publish-ready service, location and FAQ pages out.</strong></p>
           <span class="text-link">View repository</span>
         </a>
-        <a class="part" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">
-          <span class="small">Content engine · Python + Claude</span>
+        <a class="part glass" href="https://github.com/Amberlanqinyun/novie-content-engine" target="_blank" rel="noopener">
+          <span class="tag tag-sm">Content engine · Python + Claude</span>
           <h3>Content engine</h3>
           <p>One source document in, a month of on-brand posts out. Every line passes a codified voice audit, <strong>so the output reads human, not generated.</strong></p>
           <span class="text-link">View repository</span>
         </a>
-        <a class="part" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">
-          <span class="small">Distribution · TypeScript</span>
+        <a class="part glass" href="https://github.com/Amberlanqinyun/social-media-os" target="_blank" rel="noopener">
+          <span class="tag tag-sm">Distribution · TypeScript</span>
           <h3>Social Media OS</h3>
           <p>Plan once, adapt per platform, ship on schedule. <strong>The distribution half of the content engine.</strong></p>
           <span class="text-link">View repository</span>
@@ -313,9 +337,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-  <section id="contact" class="centered" aria-labelledby="end-title">
+  <section id="contact" class="contact centered" aria-labelledby="end-title" data-dotfield="closer">
+    <div class="orb" style="--x: 50%; --y: 58%; --r: 60rem; --a: 0.055" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="stack reveal">
+      <div class="stack reveal" data-dotfield-clear>
         <h2 id="end-title">One person with an agent stack, instead of an agency.</h2>
         <p class="lead">You talk to the person who does the work. No account manager, no junior doing the writing, no retainer for hours nobody can show you. Tell Flow what you sell and where growth is stuck, and a written audit comes back within the week.</p>
         <div class="cta-row">

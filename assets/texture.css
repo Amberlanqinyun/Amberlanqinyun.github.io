@@ -1,0 +1,155 @@
+/* Flow AI texture layer.
+
+   The ground the type sits on, in the same language as the card kit and the
+   Profound reference the site already borrows its rails from: a lit ground
+   (soft light behind the focal object), a quiet dot sheet, frosted glass
+   panels, pill tags, and the canvas dot field from /assets/dotfield.js.
+
+   Loaded after site.css by pages that opt in. Every rule is additive and
+   decorative: nothing here changes a text colour, so the accessibility
+   baseline holds; nothing here hides content, so a blocked stylesheet or
+   script leaves the plain page. Amber keeps its one job (the button). */
+
+/* ---- Hosts: the section becomes a stage for a ground layer ------------- */
+[data-dotfield], .lit, .sheet {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+@supports not (overflow: clip) {
+  [data-dotfield], .lit, .sheet { overflow: hidden; }
+}
+[data-dotfield] > .wrap, .lit > .wrap, .sheet > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Dot field: the canvas fills its section ---------------------------- */
+.dotfield {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ---- Lit ground: a soft light orb, so the black has depth, not flatness.
+   Place with custom properties: --x/--y (position), --r (diameter), --a (peak alpha). */
+.orb {
+  position: absolute;
+  z-index: 0;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: var(--r, 56rem);
+  height: var(--r, 56rem);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(250, 248, 243, var(--a, 0.07)) 0%,
+    rgba(250, 248, 243, calc(var(--a, 0.07) * 0.35)) 38%,
+    rgba(250, 248, 243, 0) 70%
+  );
+}
+
+/* ---- Dot sheet: the technical-drawing grid, faded so it never competes.
+   The quiet second texture from the card kit. */
+.sheet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(250, 248, 243, 0.11) 1px, transparent 1.5px);
+  background-size: 26px 26px;
+  background-position: 50% 0;
+  -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 46%, #000 10%, transparent 74%);
+  mask-image: radial-gradient(ellipse 62% 58% at 50% 46%, #000 10%, transparent 74%);
+}
+
+/* ---- Glass panel: the double-bezel card from the kit, as a live surface.
+   A hairline, a whisper of fill, a highlight along the top edge, and a light
+   that brightens under the cursor. Frosted so the dot sheet blurs behind it. */
+.glass {
+  position: relative;
+  padding: var(--s-6);
+  border: 1px solid rgba(250, 248, 243, 0.1);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(250, 248, 243, 0.05), rgba(250, 248, 243, 0.018));
+  box-shadow:
+    inset 0 1px 0 rgba(250, 248, 243, 0.07),
+    0 30px 60px -44px rgba(0, 0, 0, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: border-color 220ms ease, transform 240ms var(--ease);
+}
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(70% 45% at 16% 0%, rgba(250, 248, 243, 0.09), transparent 70%);
+  opacity: 0.75;
+  transition: opacity 240ms ease;
+}
+.glass > * { position: relative; z-index: 1; }
+.glass:hover { border-color: rgba(250, 248, 243, 0.22); }
+.glass:hover::before { opacity: 1; }
+.glass-grid { gap: var(--s-4); }
+
+/* ---- Pill tag: the label with a live dot, in place of a bare eyebrow ---- */
+.tag, .eyebrow.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 32px;
+  padding: 0 var(--s-4) 0 var(--s-3);
+  border: 1px solid rgba(250, 248, 243, 0.14);
+  border-radius: var(--pill);
+  background: rgba(250, 248, 243, 0.04);
+  color: var(--muted);
+  font-size: var(--t-small);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+.tag::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fg);
+  opacity: 0.85;
+}
+.tag-sm {
+  min-height: 26px;
+  padding-right: var(--s-3);
+  font-size: var(--t-eyebrow);
+}
+.tag-sm::before { width: 5px; height: 5px; }
+
+/* ---- Scroll-fill: type brightens as it scrolls through the viewport.
+   The manifesto effect from the home page, as a utility. Gated to browsers
+   with scroll-driven animations and to visitors who allow motion; everyone
+   else reads the settled colour. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fill-on-scroll, .fill-prose > p:not(.small) {
+      background: linear-gradient(to right, var(--fill-to, var(--fg)) 50%, var(--fill-from, rgba(250, 248, 243, 0.28)) 50%) 100% 0 / 200% 100% no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: texture-scrollfill linear both;
+      animation-timeline: view();
+      animation-range: entry 40% cover 55%;
+    }
+    @keyframes texture-scrollfill { to { background-position: 0 0; } }
+  }
+}
