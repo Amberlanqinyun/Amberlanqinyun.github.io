@@ -245,11 +245,15 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-AI marketing transformation
-
 # Marketing that compounds.
 
 Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.
+
+Get a free auditSee it running
+
+Amber Lan, AI marketing engineer. Auckland, worldwide.
+
+Recent work forGota.co.nzLullaby.co.nzResaido.com
 
 - Ten years in marketing, three building the systems
 
@@ -257,17 +261,9 @@ Flow AI installs the systems that run your content, search, outbound and reporti
 
 - A human reviews every send
 
-Get a free auditCompare it to an agency
-
-A written audit of your marketing within the week. No card, no call required.
-
-Amber Lan, AI marketing engineer. Ten years in marketing, three building the agents. Working from Auckland, worldwide.
-
-Recent work forGota.co.nzLullaby.co.nzResaido.com
-
 ## You already know AI works. It still is not running your marketing.
 
-Most businesses have the ChatGPT tabs to prove it. The content still ships late, the follow-ups still wait, and nobody is watching what Google and ChatGPT say about them. Tools do not close that gap. Engineered systems do.
+The ChatGPT tabs are open, yet content still ships late and follow-ups still wait. Tools do not close that gap. Engineered systems do.
 
 ### A prompt is not a process
 
@@ -286,6 +282,8 @@ What Flow does
 ## Get found. Get leads. Keep customers.
 
 Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.
+
+The eleven systems below turn one flywheel: aim, get found, earn belief, open doors, learn. Install one stage as a one-week sprint.
 
 ### Get found
 
@@ -327,9 +325,41 @@ Inside measurement
 
 - ReportingOne short monthly read on what shipped and what comes next.
 
+Why it pays
+
+## What the machine buys back.
+
+The numbers the systems produce, with their sources attached.
+
+10 hrs
+
+back every week from content creation, with the engine drafting in the background between approvals.
+
+Measured in production
+
+20 hrs
+
+saved every week across three team members on outbound, from list building to follow-up.
+
+Measured in production
+
+< 1 salary
+
+runs several channels on a weekly cadence: an in-house hire costs AUD 8,700 to 10,800 a month all in.
+
+Sourced in the cost guide
+
+up to 40%
+
+more AI-search visibility for pages optimised the way the AI-search sprint works.
+
+Aggarwal et al., KDD 2024
+
+Time figures come from running these systems in production at an enterprise AI company. The six-month case shows the whole machine.
+
 ## Instead of a marketing agency.
 
-Agencies solved this with people: an account manager, a strategist, a writer, a media buyer, billed monthly. Flow solves it with systems, and one marketing engineer who reviews the work.
+Agencies solve marketing with billed people. Flow solves it with engineered systems, plus one marketing engineer who reviews everything that ships.
 
 A marketing agency
 
@@ -409,37 +439,17 @@ Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
 Open source and inspectable, one of 126 skills in the library.
 
-## Try the tools first.
+## Free to use.
 
-Two free models I use with clients. No email gate.
+Try the same models Flow installs. No email gate.
 
-### AI-readiness benchmark
+- BenchmarkThe AI-readiness benchmark: five questions, a score, and the stage to fix first.
 
-Two minutes. A score for how ready your company is to grow with AI, and what to fix first.
+- PricingThe live pricing model: the profit-maximising price from cost and customer value.
 
-Run the benchmark
+- GuidesLong-form guides, one a week, including AI marketing for small business in NZ.
 
-### Pricing model
-
-Find the profit-maximising price for your product from cost and customer value.
-
-Open the model
-
-## Read before you buy.
-
-Long guides on what AI marketing costs and where to start. One a week.
-
-### AI marketing for small business in NZ
-
-What it covers, what it costs against an agency or a hire, the mistakes to skip, and a starting checklist.
-
-Read the guide
-
-### All guides
-
-Every guide in one place, with a feed you can follow.
-
-Open the guides
+- Skills126 published skills, open source and installable.
 
 ## Questions.
 
@@ -465,85 +475,121 @@ Flow AI is based in Auckland, New Zealand and works worldwide. Its published res
 
 ## Start with a free audit.
 
-Tell Flow what you sell, who it is for, and where growth is stuck. A written audit of your marketing comes back within the week.
+Tell Flow what you sell and where growth is stuck. A written audit comes back within the week, no card, no call.
 
 Get a free audit
 
 ---
 
-## Five starter sprints, one station each · Flow AI
+## The marketing flywheel: five one-week sprints · Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-The practice · engineered one system at a time
+The practice · one flywheel, five stages
 
-# Eleven systems. One engineered marketing function.
+# Marketing as a flywheel, installed one stage at a time.
 
-Flow runs marketing as eleven engineered systems. Five are ready to install in a week: positioning, search, content, outbound and measurement. Start where the gap is widest.
+Flow runs marketing as one wheel with five stages: aim, get found, earn belief, open doors, learn. Each stage installs as a fixed-scope sprint in a week, and every turn of the wheel makes the next one cheaper.
 
-Get a free auditSee the five installs
+Get a free auditSee the flywheel
 
-Not sure which station is broken? The free AI-readiness benchmark takes two minutes and points at your weakest one, or Get a free audit and Flow will tell you.
+Not sure which stage is weakest? The free AI-readiness benchmark takes two minutes and points at it, or Get a free audit and Flow will tell you.
 
-## Pick a station.
+## The story: why a wheel.
 
-A fixed deliverables checklist, a one-week clock and full handover, every time.
+Campaigns restart from zero every month. A flywheel keeps what every month earned, and spends it on the next turn.
 
-Strategy · one week
+### The turn
+
+Positioning aims the wheel. AI search makes you findable where buyers actually look, and the content engine makes what they find believable. Outbound opens doors those first stages warmed. Analytics shows which effort produced revenue and hands that back to the aim, so the next turn starts sharper than the last.
+
+### The compounding
+
+A citation earned in month two is still answering buyers in month eight. A voice codified once never gets re-briefed. A reply from outbound teaches the claims register something the next campaign uses. Each turn costs less and returns more, and that is the whole design.
+
+Underneath the five stages sit the eleven engineered systems from the home page. A sprint installs the stage that moves first for your business.
+
+## Install one stage at a time.
+
+Each sprint is one stage of the wheel: a fixed deliverables checklist, a one-week clock and full handover, every time.
+
+Stage 01 · Aim · one week
 
 ### Positioning sprint
 
+Start here if nobody has written down what you claim, to whom, and why anyone should believe it.
+
+What it buys: every later stage stops relitigating what to say, and the claims survive handover.
+
 Claims register, one-page positioning, message architecture, and your first two channels.
 
-See the fixed scopeAI search · one week
+Every later stage of the wheel pulls from this.See the fixed scopeStage 02 · Get found · one week
 
 ### AI-search sprint
 
+Start here if buyers ask Google and ChatGPT about what you sell and you never come up.
+
+What it buys: presence in the answers buyers read first; optimised pages have shown up to 40% more AI-search visibility (Aggarwal et al., KDD 2024).
+
 AI-crawler access, llms.txt, structured data, citability fixes, and search submission.
 
-See the fixed scopeContent · one week
+Your claim becomes machine-readable, so Google and AI assistants cite you.See the fixed scopeStage 03 · Earn belief · one week
 
 ### Content engine sprint
 
+Start here if content only ships when someone finds a spare afternoon.
+
+What it buys back: about 10 hours a week of writing time, measured in production, with the engine drafting between approvals.
+
 Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.
 
-See the fixed scopeOutbound · one week
+Every piece joins a library that keeps selling long after it ships.See the fixed scopeStage 04 · Open doors · one week
 
 ### Outbound sprint
 
-A signal-based prospect list, one personalised sequence inside safe limits, and instant human handoff.
+Start here if the pipeline runs on referrals and you cannot say where the next customer comes from.
 
-See the fixed scopeAnalytics · one week
+What it buys back: about 20 hours a week across three team members, measured in production, with reply rates around 30% against the industry’s 1-in-5 median.
+
+A signal-based prospect list and one personalised sequence inside safe limits, with instant human handoff the moment a buyer replies.
+
+Reaches buyers who were not looking yet, warmed by what they find when they check you.See the fixed scopeStage 05 · Learn · one week
 
 ### Analytics sprint
 
-Tracking installed, conversion events wired, and a one-page monthly report connected to your real numbers.
+Start here if you cannot say which marketing effort produced last month's revenue.
 
-See the fixed scope
+What it buys: next month’s budget goes where this month’s revenue came from.
 
-## Or run the whole line.
+Tracking installed and conversion events wired, with a one-page monthly report connected to your real numbers.
 
-The marketing engine operates every station for you. Sprints buy your understanding, the engine keeps it moving.
+Shows which turn produced revenue and feeds it back into the aim.See the fixed scope
+
+## A sprint installs a stage. The engine turns the wheel.
+
+A sprint installs one stage and hands it over, documented. The engine is the other way to buy: Flow turns all five stages for you, month after month.
 
 Marketing engine
 
 Monthly cancel any time
 
-Every station, run for you, every month.
+One full turn of the wheel, every month. In production these systems buy back about 30 team-hours a week.
 
-- Content shipped
+- Positioning kept sharp as the market answers back
 
-- Search visibility working
+- Search and AI-search visibility compounding
 
-- Outbound running
+- Content shipped through the quality gate
 
-- One clear report
+- Outbound running, with a human on every reply
+
+- One clear report that aims the next turn
 
 Get a free audit
 
-Compare the five sprints next to the sprints on the home page.
+See the eleven systems that sit underneath the stages, or the proof that the wheel runs in production.
 
 ---
 
@@ -553,13 +599,15 @@ Source URL: https://www.flowai.co.nz/sprints/positioning.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Positioning sprint · one week
+The flywheel · Stage 01 · Aim · one week
 
 # One week to a position you can execute.
 
 For businesses whose marketing stalls because nobody has written down what the company claims, to whom, and why anyone should believe it. Every downstream system needs this settled first.
 
 Get a free auditSee the six deliverables
+
+Stage 01 of the flywheel · Previous: Stage 05, Learn · Next: Stage 02, Get found
 
 ## Six deliverables. One week.
 
@@ -657,13 +705,15 @@ Source URL: https://www.flowai.co.nz/sprints/ai-search.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-AI-search sprint · one week
+The flywheel · Stage 02 · Get found · one week
 
 # Make your business legible to Google and the AI assistants.
 
 For businesses invisible in ChatGPT, Perplexity and AI Overviews. Today that is almost everyone, so early movers win cheaply.
 
 Get a free auditSee the six deliverables
+
+Stage 02 of the flywheel · Previous: Stage 01, Aim · Next: Stage 03, Earn belief
 
 ## Six deliverables. One week.
 
@@ -761,13 +811,15 @@ Source URL: https://www.flowai.co.nz/sprints/content-engine.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Content engine sprint · one week
+The flywheel · Stage 03 · Earn belief · one week
 
 # A month of on-voice content from one source document.
 
 For owners who know consistency wins but cannot hand-write posts every week, and won't publish generic AI output under their name.
 
 Get a free auditSee the six deliverables
+
+Stage 03 of the flywheel · Previous: Stage 02, Get found · Next: Stage 04, Open doors
 
 ## Six deliverables. One week.
 
@@ -865,13 +917,17 @@ Source URL: https://www.flowai.co.nz/sprints/outbound.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Outbound sprint · one week
+The flywheel · Stage 04 · Open doors · one week
 
 # One outreach lane, live, with a human takeover rule.
 
 For B2B businesses whose next customers will never search for them, and who would rather send fifty honest emails than five thousand spam ones.
 
 Get a free auditSee the six deliverables
+
+HeyReach’s 2026 benchmark across 96,051 campaigns found the sharpest drop comes after acceptance: connections that never become replies. This sprint is built for exactly that drop. The system opens the door, a human answers it. Run this way in production, campaigns hold a reply rate around 30 percent, against the benchmark’s roughly 1-in-5 median. The benchmark data.
+
+Stage 04 of the flywheel · Previous: Stage 03, Earn belief · Next: Stage 05, Learn
 
 ## Six deliverables. One week.
 
@@ -969,13 +1025,15 @@ Source URL: https://www.flowai.co.nz/sprints/analytics.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Analytics sprint · one week
+The flywheel · Stage 05 · Learn · one week
 
 # Know which channel pays, on one page a month.
 
 For businesses spending on marketing without knowing which channel produces customers. Fix the measurement before spending more anywhere.
 
 Get a free auditSee the six deliverables
+
+Stage 05 of the flywheel · Previous: Stage 04, Open doors · Next: Stage 01, Aim
 
 ## Six deliverables. One week.
 
@@ -1275,48 +1333,6 @@ Get a free audit
 
 ---
 
-## Six months running a whole marketing function | Flow AI
-
-Source URL: https://www.flowai.co.nz/work/six-month-marketing-function.html
-Type: Case study (flagship)
-Author: Amber Lan (Flow AI)
-Published: 2026-09-28
-Last updated: 2026-09-28
-
-Case study, flagship
-
-# Six months. One operator. A whole marketing function.
-
-From April to September 2026 the entire marketing function of an enterprise AI company preparing launch ran on one person and the AI systems she built for the job. Sanitised case: the employer's numbers stay theirs. Every system described here runs in production and a full walkthrough is available on request.
-
-## The problem.
-
-A pre-launch company needs a marketing department. It hired one person. Content, brand, design, events, outbound, search visibility and go-to-market strategy, all owned by a single operator. Working harder tops out at one person's hours, so the function had to be engineered: output scales while headcount stays flat.
-
-## The story, in five phases.
-
-Codify: the brand voice and visual identity written down as versioned, machine-checkable skills; a glossary and claim register gate what the company can say in public.
-
-Engines: a monthly content engine drafts a full artefact set across LinkedIn, X, email and web through codified executive voices, with every line passing a voice gate before sign-off. Graphics are HTML artboards rendered to on-brand PNG and PDF by a Playwright pipeline; the same approach renders animation into MP4 video.
-
-Demand: outbound became an agent, enrichment through Apollo feeding sequenced touches through HeyReach and HubSpot across three senders, writing in the company voice. Inbound became answer-engine optimisation: llms.txt, pillar pages and tracked citations.
-
-Operations: a morning kickoff agent triages the workspace and inbox into a daily priority board; ten strategic initiatives track roughly 190 tasks; approvals moved from live pings to written gates.
-
-In public: a conference season carried by the machine, including a platinum summit sponsorship negotiated directly, collateral from the render pipeline, and a live benchmark kiosk built solo for events.
-
-## Key decisions.
-
-Skills over prompts. The gate is the product. Judgment is the job. Deliverables leave systems behind.
-
-## The result.
-
-A codified voice and design system, a monthly content engine, a graphics and video render pipeline, an outbound agent, an answer-engine layer, a sixteen-document marketing foundation and a daily operating board, all in production. Evidence: the clean-room content engine and the AI-search toolkit are public on GitHub, the benchmark kiosk is live, the skill library runs on flowai.co.nz.
-
-Hire the machine, with the operator attached: Flow AI installs this same function inside a business as an extension of the team.
-
----
-
 ## An SEO toolkit built for AI citations | Flow AI
 
 Source URL: https://www.flowai.co.nz/work/geo-seo-toolkit.html
@@ -1423,7 +1439,7 @@ Source URL: https://www.flowai.co.nz/about.html
 Type: Page
 Author: Amber Lan (Flow AI)
 
-About
+About Amber Lan
 
 # Ten years in marketing. Three building the AI that runs it.
 
@@ -1605,7 +1621,7 @@ Get a free audit
 
 ---
 
-## Contact | Get a First Read on Your Marketing | Flow AI
+## Contact | Get a Free Marketing Audit | Flow AI
 
 Source URL: https://www.flowai.co.nz/contact.html
 Type: Page
@@ -1615,7 +1631,7 @@ Contact
 
 # Get your free marketing audit.
 
-Three fields, plus your site if you have one. You get a written audit of your marketing within the week: the gaps ranked and the first system to install named. No card, no call, no sales sequence.
+Three fields, plus your site if you have one. You get a written audit of your marketing within the week: your weakest flywheel stage named, the gaps ranked, and the first sprint to install. No card, no call, no sales sequence.
 
 Your nameEmailYour website optionalMessage
 
