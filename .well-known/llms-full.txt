@@ -1300,7 +1300,7 @@ Sequencing beats volume. The same assets, landed in order against one launch mom
 
 - SystemThe positioning system: who you sell to, what to say, where the budget goes.
 
-- SystemsThe eleven systems, and which to install first.
+- AgentsThe agent team, and which one to install first.
 
 ## Want a system like this pointed at your business?
 
@@ -1750,7 +1750,7 @@ Keep going
 
 - GuideThe 90-day transformation roadmap, system by system.
 
-- SystemsThe eleven systems, and which to install first.
+- AgentsThe agent team, and which one to install first.
 
 - ProofSelected work, the systems in production.
 
@@ -1966,7 +1966,7 @@ Nothing here is gated. Read the numbers before you send anything.
 
 - PlanThe 90-day transformation roadmap, system by system.
 
-- SystemsThe eleven systems, and which one to install first.
+- AgentsThe agent team, and which one to install first.
 
 - Free toolThe AI-readiness benchmark, five questions, two minutes, no signup.
 
