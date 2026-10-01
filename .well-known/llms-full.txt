@@ -245,13 +245,13 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-AI marketing systems· Auckland, worldwide
+Flow AI · AI marketing systems · Auckland, worldwide
 
 # Marketing that compounds.
 
 Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.
 
-Get a free auditSee it running
+Get a free auditSee it runningFig. 01 · The agent teamEleven agents · one engineer
 
 - Get found
 
@@ -303,7 +303,7 @@ Tracking wired properly, so next month's budget goes where it worked.
 
 One short monthly read on what shipped and what comes next.
 
-One engineer reviews every send before it reaches a customer. Hover an agent to see what it does.Install one as a one-week sprint.
+01 · Why
 
 ## You already know AI works. It still is not running your marketing.
 
@@ -321,7 +321,7 @@ Marketing fails on cadence, not ideas. AI agents free up 6 to 7 hours a week for
 
 Machines produce, a human decides. Every send passes a review before it reaches a customer, which is the only way a small team can safely run this much output.
 
-What Flow does
+02 · What Flow does
 
 ## Get found. Get leads. Keep customers.
 
@@ -367,7 +367,7 @@ Inside measurement
 
 - ReportingOne short monthly read on what shipped and what comes next.
 
-Why it pays
+03 · Why it pays
 
 ## What the machine buys back.
 
@@ -398,6 +398,8 @@ more AI-search visibility for pages optimised the way the AI-search sprint works
 Aggarwal et al., KDD 2024
 
 Time figures come from running these systems in production at an enterprise AI company. The six-month case shows the whole machine.
+
+04 · Instead of an agency
 
 ## Instead of a marketing agency.
 
@@ -433,29 +435,7 @@ The work stopsThe systems keep running, documented
 
 Agencies are still the right answer for big paid media and brand campaigns. What each option costs, honestly.
 
-## Read. Install. Run.
-
-Flow reads your business first. You choose where it starts. A human reviews everything before it ships.
-
-01
-
-### Read
-
-Tell Flow what you sell and who buys it. A written audit of your marketing, with the opportunities ranked, comes back inside the first week.
-
-02
-
-### Install
-
-Pick the system with the most to gain. It goes live with the assets, automation and tracking it needs to run.
-
-03
-
-### Run
-
-Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.
-
-Proof
+05 · Proof
 
 ## The work is visible.
 
@@ -481,17 +461,7 @@ Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
 Open source and inspectable, one of 126 skills in the library.
 
-## Free to use.
-
-Try the same models Flow installs. No email gate.
-
-- BenchmarkThe AI-readiness benchmark: five questions, a score, and the stage to fix first.
-
-- PricingThe live pricing model: the profit-maximising price from cost and customer value.
-
-- GuidesLong-form guides, one a week, including AI marketing for small business in NZ.
-
-- Skills126 published skills, open source and installable.
+06 · Questions
 
 ## Questions.
 
@@ -523,41 +493,109 @@ Get a free audit
 
 ---
 
-## The marketing flywheel: five one-week sprints · Flow AI
+## How it works | Flow AI installs a marketing function one agent at a time
 
 Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-The practice · one flywheel, five stages
+How it works · Read, install, run
 
-# Marketing as a flywheel, installed one stage at a time.
+# A marketing function, installed one agent at a time.
 
-Flow runs marketing as one wheel with five stages: aim, get found, earn belief, open doors, learn. Each stage installs as a fixed-scope sprint in a week, and every turn of the wheel makes the next one cheaper.
+Flow reads your business, installs the agent with the most to gain as a fixed-scope sprint in one week, then runs it every month with a marketing engineer reviewing every send.
 
-Get a free auditSee the flywheel
+Get a free auditSee the sprints
 
-Not sure which stage is weakest? The free AI-readiness benchmark takes two minutes and points at it, or Get a free audit and Flow will tell you.
+01 · The three steps
 
-## The story: why a wheel.
+## Read. Install. Run.
 
-Campaigns restart from zero every month. A flywheel keeps what every month earned, and spends it on the next turn.
+Flow reads your business first. You choose where it starts. A human reviews everything before it ships.
 
-### The turn
+01
 
-Positioning aims the wheel. AI search makes you findable where buyers actually look, and the content engine makes what they find believable. Outbound opens doors those first stages warmed. Analytics shows which effort produced revenue and hands that back to the aim, so the next turn starts sharper than the last.
+### Read
 
-### The compounding
+Tell Flow what you sell and who buys it. A written audit of your marketing, with the opportunities ranked, comes back inside the first week.
 
-A citation earned in month two is still answering buyers in month eight. A voice codified once never gets re-briefed. A reply from outbound teaches the claims register something the next campaign uses. Each turn costs less and returns more, and that is the whole design.
+02
 
-Underneath the five stages sit the eleven engineered systems from the home page. A sprint installs the stage that moves first for your business.
+### Install
 
-## Install one stage at a time.
+Pick the agent with the most to gain. It goes live with the assets, automation and tracking it needs to run.
 
-Each sprint is one stage of the wheel: a fixed deliverables checklist, a one-week clock and full handover, every time.
+03
 
-Stage 01 · Aim · one week
+### Run
+
+Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.
+
+02 · The agent team
+
+## Eleven agents. One engineer.
+
+A master agent holds your positioning and briefs ten specialist agents across three outcomes: get found, get leads, keep customers. A marketing engineer reviews every send before it reaches a customer.
+
+Fig. 01 · The agent teamEleven agents · one engineer
+
+- Get found
+
+- Get leads
+
+- Keep customers
+
+- Master agentPositioning
+
+Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.
+
+- Get foundSearch agent
+
+Technical SEO through to answer engine optimisation, so assistants cite you.
+
+- Get foundContent agent
+
+One strong idea becomes a month of content your team approves, not writes.
+
+- Get foundSocial agent
+
+Posts and threads in your voice, on a calendar that holds.
+
+- Get leadsOutbound agent
+
+The right hundred buyers, researched and reached personally.
+
+- Get leadsConversion agent
+
+Offers, landing pages and funnels, tested and tuned monthly.
+
+- Get leadsLaunch agent
+
+Product and campaign launches sequenced across every channel.
+
+- Get leadsPaid agent
+
+Ad creative and audiences, with the numbers behind them.
+
+- Keep customersCommunity agent
+
+Reddit, forums and groups answered honestly and on time.
+
+- Keep customersMeasurement agent
+
+Tracking wired properly, so next month's budget goes where it worked.
+
+- Keep customersReporting agent
+
+One short monthly read on what shipped and what comes next.
+
+03 · Install one at a time
+
+## Install one agent at a time.
+
+Each sprint installs one agent: a fixed deliverables checklist, a one-week clock and full handover, every time.
+
+Sprint 01 · Master agent · one week
 
 ### Positioning sprint
 
@@ -567,7 +605,7 @@ What it buys: every later stage stops relitigating what to say, and the claims s
 
 Claims register, one-page positioning, message architecture, and your first two channels.
 
-Every later stage of the wheel pulls from this.See the fixed scopeStage 02 · Get found · one week
+Every other agent is briefed from this.See the fixed scopeSprint 02 · Search agent · one week
 
 ### AI-search sprint
 
@@ -577,7 +615,7 @@ What it buys: presence in the answers buyers read first; optimised pages have sh
 
 AI-crawler access, llms.txt, structured data, citability fixes, and search submission.
 
-Your claim becomes machine-readable, so Google and AI assistants cite you.See the fixed scopeStage 03 · Earn belief · one week
+Your claim becomes machine-readable, so Google and AI assistants cite you.See the fixed scopeSprint 03 · Content agent · one week
 
 ### Content engine sprint
 
@@ -587,7 +625,7 @@ What it buys back: about 10 hours a week of writing time, measured in production
 
 Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.
 
-Every piece joins a library that keeps selling long after it ships.See the fixed scopeStage 04 · Open doors · one week
+Every piece joins a library that keeps selling long after it ships.See the fixed scopeSprint 04 · Outbound agent · one week
 
 ### Outbound sprint
 
@@ -597,7 +635,7 @@ What it buys back: about 20 hours a week across three team members, measured in 
 
 A signal-based prospect list and one personalised sequence inside safe limits, with instant human handoff the moment a buyer replies.
 
-Reaches buyers who were not looking yet, warmed by what they find when they check you.See the fixed scopeStage 05 · Learn · one week
+Reaches buyers who were not looking yet, warmed by what they find when they check you.See the fixed scopeSprint 05 · Measurement agent · one week
 
 ### Analytics sprint
 
@@ -607,31 +645,31 @@ What it buys: next month’s budget goes where this month’s revenue came from.
 
 Tracking installed and conversion events wired, with a one-page monthly report connected to your real numbers.
 
-Shows which turn produced revenue and feeds it back into the aim.See the fixed scope
+Shows which agent produced revenue and feeds it back into positioning.See the fixed scope
 
-## A sprint installs a stage. The engine turns the wheel.
+04 · The engine
 
-A sprint installs one stage and hands it over, documented. The engine is the other way to buy: Flow turns all five stages for you, month after month.
+## A sprint installs an agent. The engine runs the team.
+
+A sprint installs one agent and hands it over, documented. The engine is the other way to buy: Flow runs the whole team for you, month after month.
 
 Marketing engine
 
-Monthly cancel any time
+MonthlyCancel any time · full handover if you leave
 
-One full turn of the wheel, every month. In production these systems buy back about 30 team-hours a week.
+The whole agent team, running every month. In production these systems buy back about 30 team-hours a week.
 
-- Positioning kept sharp as the market answers back
+- 01Positioning kept sharp as the market answers back
 
-- Search and AI-search visibility compounding
+- 02Search and AI-search visibility compounding
 
-- Content shipped through the quality gate
+- 03Content shipped through the quality gate
 
-- Outbound running, with a human on every reply
+- 04Outbound running, with a human on every reply
 
-- One clear report that aims the next turn
+- 05One clear report that re-aims positioning
 
-Get a free audit
-
-See the eleven systems that sit underneath the stages, or the proof that the wheel runs in production.
+Get a free auditSee the team running
 
 ---
 
@@ -641,7 +679,7 @@ Source URL: https://www.flowai.co.nz/sprints/positioning.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-The flywheel · Stage 01 · Aim · one week
+Sprint 01 · Master agent · one week
 
 # One week to a position you can execute.
 
@@ -649,7 +687,7 @@ For businesses whose marketing stalls because nobody has written down what the c
 
 Get a free auditSee the six deliverables
 
-Stage 01 of the flywheel · Previous: Stage 05, Learn · Next: Stage 02, Get found
+Sprint 01 of five · the agent team · Previous: Sprint 05, Measurement agent · Next: Sprint 02, Search agent
 
 ## Six deliverables. One week.
 
@@ -747,7 +785,7 @@ Source URL: https://www.flowai.co.nz/sprints/ai-search.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-The flywheel · Stage 02 · Get found · one week
+Sprint 02 · Search agent · one week
 
 # Make your business legible to Google and the AI assistants.
 
@@ -755,7 +793,7 @@ For businesses invisible in ChatGPT, Perplexity and AI Overviews. Today that is 
 
 Get a free auditSee the six deliverables
 
-Stage 02 of the flywheel · Previous: Stage 01, Aim · Next: Stage 03, Earn belief
+Sprint 02 of five · the agent team · Previous: Sprint 01, Master agent · Next: Sprint 03, Content agent
 
 ## Six deliverables. One week.
 
@@ -853,7 +891,7 @@ Source URL: https://www.flowai.co.nz/sprints/content-engine.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-The flywheel · Stage 03 · Earn belief · one week
+Sprint 03 · Content agent · one week
 
 # A month of on-voice content from one source document.
 
@@ -861,7 +899,7 @@ For owners who know consistency wins but cannot hand-write posts every week, and
 
 Get a free auditSee the six deliverables
 
-Stage 03 of the flywheel · Previous: Stage 02, Get found · Next: Stage 04, Open doors
+Sprint 03 of five · the agent team · Previous: Sprint 02, Search agent · Next: Sprint 04, Outbound agent
 
 ## Six deliverables. One week.
 
@@ -959,7 +997,7 @@ Source URL: https://www.flowai.co.nz/sprints/outbound.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-The flywheel · Stage 04 · Open doors · one week
+Sprint 04 · Outbound agent · one week
 
 # One outreach lane, live, with a human takeover rule.
 
@@ -969,7 +1007,7 @@ Get a free auditSee the six deliverables
 
 HeyReach’s 2026 benchmark across 96,051 campaigns found the sharpest drop comes after acceptance: connections that never become replies. This sprint is built for exactly that drop. The system opens the door, a human answers it. Run this way in production, campaigns hold a reply rate around 30 percent, against the benchmark’s roughly 1-in-5 median. The benchmark data.
 
-Stage 04 of the flywheel · Previous: Stage 03, Earn belief · Next: Stage 05, Learn
+Sprint 04 of five · the agent team · Previous: Sprint 03, Content agent · Next: Sprint 05, Measurement agent
 
 ## Six deliverables. One week.
 
@@ -1067,7 +1105,7 @@ Source URL: https://www.flowai.co.nz/sprints/analytics.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-The flywheel · Stage 05 · Learn · one week
+Sprint 05 · Measurement agent · one week
 
 # Know which channel pays, on one page a month.
 
@@ -1075,7 +1113,7 @@ For businesses spending on marketing without knowing which channel produces cust
 
 Get a free auditSee the six deliverables
 
-Stage 05 of the flywheel · Previous: Stage 04, Open doors · Next: Stage 01, Aim
+Sprint 05 of five · the agent team · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Master agent
 
 ## Six deliverables. One week.
 
@@ -1481,13 +1519,15 @@ Source URL: https://www.flowai.co.nz/about.html
 Type: Page
 Author: Amber Lan (Flow AI)
 
-About Amber Lan
+About · Amber Lan · AI marketing engineer
 
 # Ten years in marketing. Three building the AI that runs it.
 
 Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. This page is the receipts.
 
 Get a free auditGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published126 skills, open source
+
+01 · Why Flow AI exists
 
 ## I was the marketing team of one.
 
@@ -1505,9 +1545,13 @@ Flow AI is that system, opened up. Every business owner I meet has the same prob
 
 双语营销工程师 · Practitioner. Systems in production. Receipts included.
 
+02 · Now
+
 ## Running marketing solo at an AI startup.
 
 Runs the whole marketing function at an AI startup in Auckland, one person plus an agent stack.
+
+Fig. 01 · The agent stackEleven agents · one engineer
 
 - Get found
 
@@ -1559,8 +1603,6 @@ Tracking wired properly, so next month's budget goes where it worked.
 
 One short monthly read on what shipped and what comes next.
 
-The agent stack as it runs, one engineer reviewing every send. Hover an agent to see what it does.Install one as a one-week sprint.
-
 ### Category and positioning
 
 Message architecture, the claims register, and the go-to-market plan across two quarters and a product launch.
@@ -1582,6 +1624,8 @@ An HTML-to-video rendering pipeline (Playwright + ffmpeg), a live benchmark kios
 ### Event go-to-market end to end
 
 Exhibitor operations, booth systems, and collateral for national tech events, run as production systems rather than one-off scrambles.
+
+03 · Every part of marketing
 
 ## Every part of marketing, done personally.
 
@@ -1611,7 +1655,7 @@ Researched prospect lists, sequences inside safe limits, email and follow-up tha
 
 Ad creative and audiences, tracking wired properly, and national events run as systems rather than scrambles.
 
-Proof
+04 · Proof
 
 ## Shipped systems, linked to source.
 
@@ -1647,6 +1691,8 @@ View repository
 
 Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonContent viewerAuth-gated read-only mirror of the content-engine dashboard for the team.Next.js · Vercel KVLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
 
+05 · Capabilities
+
 ## Strategy through code.
 
 Six capabilities, one person.
@@ -1675,6 +1721,8 @@ Vercel, GitHub, CI, e2e testing. Production, not prototypes.
 
 English and 中文, native Mandarin. Strategy and content in both markets.
 
+06 · How I work
+
 ## How I work.
 
 Four rules, applied to every system on this page.
@@ -1694,6 +1742,8 @@ What broke, the root cause, the fix, and what it cost. Published at the same rat
 ### Leverage over labor.
 
 Anything done twice by hand becomes a system. The agent stack is the team; I stay on strategy and judgment.
+
+07 · Keep going
 
 ## Keep going.
 

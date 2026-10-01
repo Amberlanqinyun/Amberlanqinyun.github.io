@@ -361,42 +361,50 @@
       var ra = (coreActive ? 1 : 0.9 * breathe) * (1 - 0.45 * ring / 6) * (active && !coreActive ? 0.7 : 1);
       for (j = 0; j < n; j++) { var th = j * TAU / n + rot * (1 + 0.3 * (6 - ring) / 6); dot(cx + rr * Math.cos(th), cy + rr * tilt * Math.sin(th), 1.1 + 0.9 * (1 - ring / 6), ra); }
     }
-    /* the briefs: a spoke from the master to every agent, a pulse running out along it */
+    /* the briefs: a pulse running out from the master along every spoke */
     for (i = 0; i < this.nodes.length; i++) {
       nd = this.nodes[i];
-      var isA = nd === activeNode, inG = activeGroup === nd.g, hot = isA || coreActive;
-      var a0 = isA ? 0.9 : coreActive ? 0.45 : 0.14 * (active ? (inG ? 1.3 : 0.5) : 1);
-      var pulse = (t * (hot ? 0.55 : 0.18) + i * 0.13) % 1;
-      for (var sI = 0; sI < 14; sI++) {
-        var f = 0.34 + 0.58 * sI / 13, near = Math.max(0, 1 - Math.abs(f - (0.34 + 0.58 * pulse)) / 0.12);
-        dot(cx + (nd.x - cx) * f, cy + (nd.y - cy) * f, (isA ? 1.6 : 1.1) + (isA ? 1.4 : 0.8) * near, a0 + near * (hot ? 0.6 : 0.2));
+      var isA = nd === activeNode, hot = isA || coreActive;
+      var pulse = (t * (hot ? 0.55 : 0.16) + i * 0.13) % 1, f = 0.34 + 0.6 * pulse;
+      dot(cx + (nd.x - cx) * f, cy + (nd.y - cy) * f, isA ? 2.4 : 1.5, hot ? 0.95 : (active ? 0.2 : 0.5));
+    }
+    /* the outcomes: a hairline arc at 0.6R and the outer ring at R, per
+       group, drawn as lines with a sparse dotted echo so they read as drafted */
+    ctx.strokeStyle = INK; ctx.lineWidth = 0.7;
+    for (i = 0; i < this.groupSpans.length; i++) {
+      var gs = this.groupSpans[i], gActive = activeGroup === gs.key, gap = 6 * D2R;
+      var a1 = gs.start + gap, a2 = gs.start + gs.span - gap;
+      var cfgs = [[0.6, 0.22], [1, 0.3]];
+      for (var c = 0; c < 2; c++) {
+        var cr = R * cfgs[c][0];
+        ctx.globalAlpha = cfgs[c][1] * (active ? (gActive ? 1.8 : 0.45) : 1);
+        ctx.beginPath(); ctx.ellipse(cx, cy, cr, cr * tilt, 0, a1, a2); ctx.stroke();
+      }
+      var en = Math.max(8, Math.round((a2 - a1) * R / 26));
+      for (j = 0; j <= en; j++) {
+        var ta = a1 + (a2 - a1) * j / en, flow = 0.5 + 0.5 * Math.sin(ta * 3 - t * 0.5 * TAU);
+        dot(cx + R * Math.cos(ta), cy + R * tilt * Math.sin(ta), 1.1, (active ? (gActive ? 0.7 : 0.15) : 0.35) * flow);
       }
     }
-    /* the outcomes: an arc at 0.6R and the outer ring at R, per group, brightness flowing round them */
-    for (i = 0; i < this.groupSpans.length; i++) {
-      var gs = this.groupSpans[i], gActive = activeGroup === gs.key, gap = 7 * D2R;
-      var cfgs = [[0.6, 0.42, 5.5, 1.2], [1, 0.3, 6, 1.5]];
-      for (var c = 0; c < 2; c++) {
-        var cr = R * cfgs[c][0], base = cfgs[c][1] * (active ? (gActive ? 1.6 : 0.5) : 1);
-        var a1 = gs.start + gap, a2 = gs.start + gs.span - gap, cn = Math.max(6, Math.round((a2 - a1) * cr / cfgs[c][2]));
-        for (j = 0; j <= cn; j++) {
-          var ta = a1 + (a2 - a1) * j / cn, flow = 0.65 + 0.35 * Math.sin(ta * 2.5 - t * 0.6 * TAU);
-          dot(cx + cr * Math.cos(ta), cy + cr * tilt * Math.sin(ta), cfgs[c][3], base * flow);
-        }
-      }
+    for (i = 0; i < this.nodes.length; i++) {
+      nd = this.nodes[i];
+      var isA2 = nd === activeNode;
+      ctx.globalAlpha = isA2 ? 0.55 : coreActive ? 0.3 : 0.1 * (active ? 0.6 : 1);
+      ctx.beginPath(); ctx.moveTo(cx + (nd.x - cx) * 0.32, cy + (nd.y - cy) * 0.32); ctx.lineTo(cx + (nd.x - cx) * 0.96, cy + (nd.y - cy) * 0.96); ctx.stroke();
     }
     /* the agents */
     for (i = 0; i < this.nodes.length; i++) {
       nd = this.nodes[i]; isA = nd === activeNode;
       var pz = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.1) * TAU);
-      ctx.globalAlpha = (isA ? 0.26 : 0.08 + 0.08 * pz) * (active && !isA ? 0.6 : 1);
-      ctx.beginPath(); ctx.arc(nd.x, nd.y, isA ? 22 : 13 + 6 * pz, 0, TAU); ctx.fill();
-      ctx.globalAlpha = active && !isA && !coreActive ? 0.55 : 0.95;
-      ctx.beginPath(); ctx.arc(nd.x, nd.y, isA ? 6.5 : 4.4 + 1.2 * pz, 0, TAU); ctx.fill();
+      if (isA) { ctx.globalAlpha = 0.18; ctx.beginPath(); ctx.arc(nd.x, nd.y, 18, 0, TAU); ctx.fill(); }
+      ctx.globalAlpha = active && !isA && !coreActive ? 0.45 : 0.95;
+      ctx.beginPath(); ctx.arc(nd.x, nd.y, isA ? 5.5 : 3.6 + 0.6 * pz, 0, TAU); ctx.fill();
+      ctx.globalAlpha = 0.9; ctx.lineWidth = 0.7; ctx.beginPath(); ctx.arc(nd.x, nd.y, (isA ? 5.5 : 3.6 + 0.6 * pz) + 5, 0, TAU); ctx.strokeStyle = INK; ctx.globalAlpha = isA ? 0.5 : 0.18; ctx.stroke();
     }
     /* the review pass: the rim, turning, with the amber signal on it */
-    var rimR = R * 1.2, rimRot = t * 0.02 * TAU, rn = Math.round(TAU * rimR / 8);
-    for (j = 0; j < rn; j++) { var rt = j * TAU / rn + rimRot; dot(cx + rimR * Math.cos(rt), cy + rimR * tilt * Math.sin(rt), 1.1, active ? 0.1 : 0.18); }
+    var rimR = R * 1.2;
+    ctx.globalAlpha = active ? 0.08 : 0.14; ctx.lineWidth = 0.7; ctx.setLineDash([2, 6]); ctx.lineDashOffset = -t * 6;
+    ctx.beginPath(); ctx.ellipse(cx, cy, rimR, rimR * tilt, 0, 0, TAU); ctx.stroke(); ctx.setLineDash([]);
     var head = -Math.PI / 2 + ((t * 0.06) % 1) * TAU;
     ctx.fillStyle = AMBER;
     for (var m = 0; m < 16; m++) {

@@ -532,13 +532,6 @@ main section:not(.hero):not(.contact) .stack.centered > h2 { max-width: 26ch; }
   transition: transform 640ms var(--ease);
 }
 .btn-primary:hover::after { transform: translateX(130%); }
-@media (prefers-reduced-motion: no-preference) {
-  .hero .btn-primary, .contact .btn-primary { animation: btn-breathe 4.6s ease-in-out infinite; }
-  @keyframes btn-breathe {
-    0%, 100% { box-shadow: 0 10px 34px -14px rgba(228, 164, 60, 0.35); }
-    50% { box-shadow: 0 18px 54px -14px rgba(228, 164, 60, 0.72); }
-  }
-}
 
 /* ---- Air (Oct 2026): more room between things, quieter sub-headings -------
    The page breathes a step wider at every level: sections, the stack, the
@@ -568,3 +561,107 @@ body { line-height: 1.65; }
 .systems li { padding: var(--s-5) 0; }
 .row { padding: var(--space-band) 0; }
 .faq summary { padding: var(--s-6) 0; }
+
+/* ---- Editorial (Oct 2026) --------------------------------------------------
+   The page is set on a grid and annotated like a document: a mono index
+   layer, hairline rules, big type at a lighter weight, asymmetric columns.
+   Decoration is structural, never atmospheric. */
+:root {
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --display: clamp(3.25rem, 7.6vw, 7.25rem);
+  --h2: clamp(2.1rem, 3.9vw, 3.5rem);
+}
+h1, h2 { font-weight: 560; letter-spacing: -0.035em; line-height: 0.98; }
+h1 { font-weight: 540; letter-spacing: -0.045em; line-height: 0.94; }
+h2 { text-wrap: pretty; }
+.eyebrow {
+  font-family: var(--mono); font-size: 12px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft);
+}
+.small, .stat-src, .step .small { font-variant-numeric: tabular-nums; }
+.stat-src, .step > .small, .wheel figcaption, .facts b { font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
+section + section::before { display: none; }
+
+/* A section opens with a rule, an index in the left column, the heading
+   and lead in the right. The index is the document's running annotation. */
+.sec {
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+  gap: var(--s-6) var(--s-9); align-items: start;
+  padding-top: var(--s-6); border-top: 1px solid var(--hair-strong);
+  text-align: left;
+}
+.sec > .eyebrow { grid-column: 1; padding-top: 0.55em; }
+.sec__body { grid-column: 2; }
+.sec__body > h2 { max-width: 20ch; }
+.sec__body > h2 + .lead { margin-top: var(--s-7); max-width: 48ch; }
+.sec__body > .lead + .cta-row { margin-top: var(--s-8); justify-content: flex-start; }
+.sec--statement { display: block; border-top: 0; padding-top: 0; text-align: center; }
+.sec--statement > .eyebrow { display: block; margin-bottom: var(--s-7); }
+.sec--statement h2 { max-width: 22ch; margin-inline: auto; font-size: clamp(2.4rem, 4.8vw, 4.5rem); }
+.sec--statement .lead { margin: var(--s-7) auto 0; }
+.sec--statement .cta-row { justify-content: center; }
+@media (max-width: 720px) { .sec { grid-template-columns: 1fr; gap: var(--s-4); } .sec__body { grid-column: 1; } }
+
+/* The hero: headline left on the grid, lead and actions set against it
+   lower right, the object full measure beneath a rule. */
+.hero { padding-block: var(--space-hero) 0; text-align: left; }
+.hero-ed { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s-5); }
+.hero-ed > .eyebrow { grid-column: 1 / -1; margin-bottom: var(--s-8); }
+.hero-ed > h1 { grid-column: 1 / 11; margin: 0; max-width: none; }
+.hero-ed > .hero-aside { grid-column: 7 / 13; margin-top: var(--s-9); }
+.hero-aside .lead { max-width: 44ch; margin: 0; }
+.hero-aside .cta-row { justify-content: flex-start; margin-top: var(--s-7); }
+@media (max-width: 900px) { .hero-ed > h1 { grid-column: 1 / -1; } .hero-ed > .hero-aside { grid-column: 1 / -1; margin-top: var(--s-7); } }
+.arrow-link::after { content: "\2192"; display: inline-block; margin-left: 0.45em; transition: transform 200ms var(--ease); }
+.arrow-link:hover::after { transform: translateX(4px); }
+
+/* Objects sit under a rule, with their own annotation line */
+.object { position: relative; margin-top: var(--space-band); padding-top: var(--s-5); border-top: 1px solid var(--hair-strong); }
+.object__note { display: flex; justify-content: space-between; gap: var(--s-5); margin-bottom: var(--s-4); }
+
+/* Columns on hairlines: the index in mono, the heading quiet, the text muted */
+.grid-3 > .pillar, .grid-3 > .step, .grid-3 > .part, .grid-2 > .part { border-top: 1px solid var(--hair); padding-top: var(--s-5); }
+.step > .small { display: block; margin-bottom: var(--s-6); color: var(--soft); }
+.stat { border-left: 0; border-top: 1px solid var(--hair); padding: var(--s-5) 0 0; }
+.stat-num { font-weight: 500; letter-spacing: -0.04em; font-size: clamp(2.6rem, 5vw, 4.25rem); }
+.stat-label { margin-top: var(--s-4); max-width: 26ch; }
+.stat-src { display: block; margin-top: var(--s-4); color: var(--soft); }
+.proof-card { border: 0; border-top: 1px solid var(--hair); border-radius: 0; padding: var(--s-5) 0 0; }
+.proof-card:hover { border-color: var(--hair-strong); }
+.proof-card h3, .proof-card p, .proof-card .text-link { margin-left: 0; margin-right: 0; }
+.proof-text { padding: var(--s-5) 0 0; }
+.proof-text::before { font-family: var(--mono); letter-spacing: 0.08em; }
+.proof-case { border-top: 1px solid var(--hair); }
+.versus::before { border-radius: 0; background: rgba(250, 248, 243, 0.025); }
+.pill { border-radius: 0; background: transparent; border-bottom: 1px solid var(--hair-strong); padding: 0; min-height: 0; margin-top: var(--s-5); font-weight: 500; }
+.pill:hover { background: transparent; border-color: var(--fg); }
+.install code { border-radius: 0; font-family: var(--mono); }
+.copy-button { border-radius: 0; }
+.faq summary { font-weight: 500; }
+.diagram { border-top: 1px solid var(--hair); padding-top: var(--s-6); }
+
+/* The closer: a statement, then the one button */
+.contact .stack > h2 { font-size: clamp(2.6rem, 5.2vw, 5rem); max-width: 16ch; margin-inline: auto; }
+
+/* The primary button keeps its light on hover (asked for site-wide); the
+   secondary becomes a plain arrowed link rather than a second pill. */
+.btn-primary::after { background: linear-gradient(115deg, transparent 36%, rgba(255, 255, 255, 0.26) 50%, transparent 64%); transition-duration: 520ms; }
+
+/* ---- The offer: one framed panel, not a pricing card ---------------------
+   A hairline frame with room inside it, the price line in display weight,
+   the inclusions as a numbered list on hairlines. */
+.offer {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--s-8) var(--s-10); margin-top: var(--space-band);
+  padding: clamp(var(--s-7), 4vw, var(--s-10)); border: 1px solid var(--hair-strong);
+  text-align: left;
+}
+.offer__price { margin-top: var(--s-6); color: var(--fg); font-size: clamp(2.25rem, 4vw, 3.5rem); font-weight: 540; letter-spacing: -0.04em; line-height: 1; }
+.offer__price span { display: block; margin-top: var(--s-4); font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); }
+.offer__lead { margin-top: var(--s-7); color: var(--muted); font-size: var(--t-body); line-height: 1.6; max-width: 40ch; text-wrap: pretty; }
+.offer__list { margin: 0; padding: 0; list-style: none; }
+.offer__list li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--s-4); padding: var(--s-4) 0; border-top: 1px solid var(--hair); color: var(--fg); font-size: var(--t-body); line-height: 1.5; }
+.offer__list li:last-child { border-bottom: 1px solid var(--hair); }
+.offer__list .eyebrow { padding-top: 0.35em; }
+.offer .cta-row { justify-content: flex-start; margin-top: var(--s-7); }
+@media (max-width: 720px) { .offer { grid-template-columns: 1fr; gap: var(--s-6); padding: var(--s-6) var(--s-5); } }

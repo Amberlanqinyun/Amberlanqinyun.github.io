@@ -7,7 +7,7 @@
   margin-top: var(--space-block);
   border-top: 1px solid rgba(250, 248, 243, 0.13);
   background:
-    radial-gradient(62% 130% at 50% 100%, rgba(228, 164, 60, 0.12), transparent 60%),
+    radial-gradient(62% 130% at 50% 100%, rgba(228, 164, 60, 0.07), transparent 60%),
     #0e0e0d;
   color: rgba(250, 248, 243, 0.56);
   font-size: var(--t-label);
@@ -23,6 +23,22 @@
   padding: var(--space-block) 0 var(--space-tight);
   grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr));
   gap: clamp(var(--s-6), 4vw, var(--s-10));
+}
+
+/* The ghost wordmark: the page signs off at display scale, barely there. */
+.site-footer::before {
+  content: "Flow AI.";
+  display: block;
+  width: min(100% - (var(--gutter) * 2), var(--measure));
+  margin: 0 auto calc(var(--space-tight) * -1);
+  padding-top: var(--space-block);
+  font-size: clamp(4.5rem, 15vw, 13rem);
+  font-weight: 540;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+  color: rgba(250, 248, 243, 0.06);
+  pointer-events: none;
+  user-select: none;
 }
 
 /* brand column */

@@ -89,28 +89,17 @@
 
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  /* Page rules only: the hero and its wheel, the manifesto band, the closer. */
+  /* Page rules only. The system lives in site.css and texture.css. */
   .hero { padding-bottom: var(--space-block); }
-  .hero .stack { max-width: 56rem; }
-  .hero h1 { font-size: clamp(3rem, 7.2vw, 6.6rem); max-width: 15ch; letter-spacing: -0.035em; }
-  .hero .lead { max-width: 46ch; }
-
-  /* The manifesto: one statement at display size, centred, lit as it is read */
-  main #why .stack { max-width: 56rem; margin-inline: auto; text-align: center; }
-  main #why .stack h2 { font-size: clamp(2.5rem, 4.6vw, 4.25rem); max-width: 20ch; margin-inline: auto; }
-  main #why .stack .lead { margin-inline: auto; }
-
-  /* The closer: amber keeps its one job, and the ground lights it */
-  #contact .btn-primary { box-shadow: 0 18px 50px -18px rgba(228, 164, 60, 0.55); }
 </style>
 
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/texture.css?v=5">
+<link rel="stylesheet" href="/assets/texture.css?v=6">
 <script src="/assets/motion.js" defer></script>
-<script src="/assets/dotfield.js?v=5" defer></script>
-<script src="/assets/alive.js?v=5" defer></script>
+<script src="/assets/dotfield.js?v=6" defer></script>
+<script src="/assets/alive.js?v=6" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -186,20 +175,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
   <main id="main">
-    <section class="hero centered lit" aria-labelledby="hero-title">
-      <div class="orb" style="--x: 50%; --y: 74%; --r: 90rem; --a: 0.1" aria-hidden="true"></div>
-      <div class="orb orb--warm" style="--x: 50%; --y: 98%; --r: 80rem; --a: 0.09" aria-hidden="true"></div>
+    <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
-        <div class="stack">
-          <p class="eyebrow tag">AI marketing systems<span class="tag__more">· Auckland, worldwide</span></p>
+        <div class="hero-ed">
+          <p class="eyebrow">Flow AI · AI marketing systems · Auckland, worldwide</p>
           <h1 id="hero-title" data-words>Marketing that compounds.</h1>
-          <p class="lead">Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
-            <a class="btn btn-secondary" href="/work.html">See it running</a>
+          <div class="hero-aside">
+            <p class="lead">Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
+              <a class="text-link arrow-link" href="/work.html">See it running</a>
+            </div>
           </div>
         </div>
-<figure class="system">
+        <figure class="system object">
+          <div class="object__note eyebrow" aria-hidden="true"><span>Fig. 01 · The agent team</span><span>Eleven agents · one engineer</span></div>
           <div class="system__stage" data-dotfield="system"></div>
           <ul class="system__arcs" aria-hidden="true"><li>Get found</li><li>Get leads</li><li>Keep customers</li></ul>
           <ul class="system__agents" aria-label="The Flow AI agent team: a master agent, ten specialist agents, and a marketing engineer reviewing every send">
@@ -215,17 +205,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li data-group="keep"><span class="small">Keep customers</span><b>Measurement agent</b><p>Tracking wired properly, so next month's budget goes where it worked.</p></li>
             <li data-group="keep"><span class="small">Keep customers</span><b>Reporting agent</b><p>One short monthly read on what shipped and what comes next.</p></li>
           </ul>
-          <figcaption class="small">One engineer reviews every send before it reaches a customer. <span class="system__hint">Hover an agent to see what it does.</span> <a class="text-link" href="/sprints/">Install one as a one-week sprint</a>.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="why" class="centered lit" aria-labelledby="why-title">
-      <div class="orb" style="--x: 50%; --y: 40%; --r: 70rem; --a: 0.09" aria-hidden="true"></div>
+    <section id="why" class="centered" aria-labelledby="why-title">
       <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="why-title" class="fill-on-scroll">You already know AI works. It still is not running your marketing.</h2>
-          <p class="lead fill-on-scroll">The ChatGPT tabs are open, yet content still ships late and follow-ups still wait. Tools do not close that gap. Engineered systems do.</p>
+        <div class="sec sec--statement reveal">
+          <p class="eyebrow">01 · Why</p>
+          <div class="sec__body">
+            <h2 id="why-title" class="fill-on-scroll">You already know AI works. It still is not running your marketing.</h2>
+            <p class="lead fill-on-scroll">The ChatGPT tabs are open, yet content still ships late and follow-ups still wait. Tools do not close that gap. Engineered systems do.</p>
+          </div>
         </div>
         <div class="grid grid-3 reveal" style="text-align:left">
           <div class="pillar">
@@ -244,13 +235,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section id="offer" class="sheet" aria-labelledby="offer-title">
-      <div class="orb" style="--x: 50%; --y: 46%; --r: 64rem; --a: 0.09" aria-hidden="true"></div>
+    <section id="offer" aria-labelledby="offer-title">
       <div class="wrap">
-        <div class="stack reveal centered">
-          <p class="eyebrow tag">What Flow does</p>
-          <h2 id="offer-title">Get found. Get leads. Keep customers.</h2>
-          <p class="lead">Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.</p>
+        <div class="sec reveal">
+          <p class="eyebrow">02 · What Flow does</p>
+          <div class="sec__body">
+            <h2 id="offer-title">Get found. Get leads. Keep customers.</h2>
+            <p class="lead">Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.</p>
+          </div>
         </div>
 
         <div class="rows reveal">
@@ -306,42 +298,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section id="value" aria-labelledby="value-title">
       <div class="wrap">
-        <div class="stack reveal centered">
-          <p class="eyebrow tag">Why it pays</p>
-          <h2 id="value-title">What the machine buys back.</h2>
-          <p class="lead">The numbers the systems produce, with their sources attached.</p>
+        <div class="sec reveal">
+          <p class="eyebrow">03 · Why it pays</p>
+          <div class="sec__body">
+            <h2 id="value-title">What the machine buys back.</h2>
+            <p class="lead">The numbers the systems produce, with their sources attached.</p>
+          </div>
         </div>
-        <div class="grid value-grid glass-grid reveal">
-          <div class="stat glass">
+        <div class="grid value-grid reveal">
+          <div class="stat">
             <p class="stat-num"><span data-count="10">10</span> hrs</p>
             <p class="stat-label">back every week from content creation, with the engine drafting in the background between approvals.</p>
             <span class="stat-src">Measured in production</span>
           </div>
-          <div class="stat glass">
+          <div class="stat">
             <p class="stat-num"><span data-count="20">20</span> hrs</p>
             <p class="stat-label">saved every week across three team members on outbound, from list building to follow-up.</p>
             <span class="stat-src">Measured in production</span>
           </div>
-          <div class="stat glass">
+          <div class="stat">
             <p class="stat-num">&lt; 1 salary</p>
             <p class="stat-label">runs several channels on a weekly cadence: an in-house hire costs AUD 8,700 to 10,800 a month all in.</p>
             <span class="stat-src"><a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand.html">Sourced in the cost guide</a></span>
           </div>
-          <div class="stat glass">
+          <div class="stat">
             <p class="stat-num">up to <span data-count="40">40</span>%</p>
             <p class="stat-label">more AI-search visibility for pages optimised the way the AI-search sprint works.</p>
             <span class="stat-src">Aggarwal et al., KDD 2024</span>
           </div>
         </div>
-        <p class="small reveal centered" style="margin-top:2.25rem">Time figures come from running these systems in production at an enterprise AI company. <a class="text-link" href="/work/six-month-marketing-function.html">The six-month case</a> shows the whole machine.</p>
+        <p class="small reveal" style="margin-top:2.25rem">Time figures come from running these systems in production at an enterprise AI company. <a class="text-link" href="/work/six-month-marketing-function.html">The six-month case</a> shows the whole machine.</p>
       </div>
     </section>
 
     <section id="instead" aria-labelledby="instead-title">
       <div class="wrap">
-        <div class="stack reveal centered">
-          <h2 id="instead-title">Instead of a marketing agency.</h2>
-          <p class="lead">Agencies solve marketing with billed people. Flow solves it with engineered systems, plus one marketing engineer who reviews everything that ships.</p>
+        <div class="sec reveal">
+          <p class="eyebrow">04 · Instead of an agency</p>
+          <div class="sec__body">
+            <h2 id="instead-title">Instead of a marketing agency.</h2>
+            <p class="lead">Agencies solve marketing with billed people. Flow solves it with engineered systems, plus one marketing engineer who reviews everything that ships.</p>
+          </div>
         </div>
         <div class="versus reveal" role="table" aria-label="A marketing agency compared with Flow AI">
           <p class="versus-head versus-them-head">A marketing agency</p>
@@ -365,58 +362,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="versus-them">The work stops</div>
           <div class="versus-us">The systems keep running, documented</div>
         </div>
-        <p class="small reveal centered" style="margin-top:2.25rem">Agencies are still the right answer for big paid media and brand campaigns. <a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand.html">What each option costs, honestly</a>.</p>
+        <p class="small reveal" style="margin-top:2.25rem">Agencies are still the right answer for big paid media and brand campaigns. <a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand.html">What each option costs, honestly</a>.</p>
       </div>
     </section>
 
-    <section id="process" class="centered" aria-labelledby="process-title">
+    <section id="proof" class="centered" aria-labelledby="proof-title">
       <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="process-title">Read. Install. Run.</h2>
-          <p class="lead">Flow reads your business first. You choose where it starts. A human reviews everything before it ships.</p>
-        </div>
-
-        <figure class="diagram reveal">
-          <img src="/assets/diagram-process.svg" width="1600" height="900"
-               alt="Three steps on a single baseline. Read: you say what you sell and who buys it, and a ranked written audit comes back in week one. Install: you pick the system with the most to gain and it goes live with its assets, automation and tracking. Run: Flow runs it monthly, a human reviews the output, and one short report says what shipped."
-               loading="lazy" decoding="async">
-        </figure>
-
-        <div class="grid grid-3 reveal" style="text-align:left">
-          <div class="step">
-            <span class="small">01</span>
-            <h3>Read</h3>
-            <p>Tell Flow what you sell and who buys it. A written audit of your marketing, with the opportunities ranked, comes back inside the first week.</p>
-          </div>
-          <div class="step">
-            <span class="small">02</span>
-            <h3>Install</h3>
-            <p>Pick the system with the most to gain. It goes live with the assets, automation and tracking it needs to run.</p>
-          </div>
-          <div class="step">
-            <span class="small">03</span>
-            <h3>Run</h3>
-            <p>Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.</p>
+        <div class="sec reveal">
+          <p class="eyebrow">05 · Proof</p>
+          <div class="sec__body">
+            <h2 id="proof-title">The work is visible.</h2>
+            <p class="lead">Strategy is only credible when you can inspect the systems beneath it.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="proof" class="centered lit" aria-labelledby="proof-title">
-      <div class="orb" style="--x: 84%; --y: 30%; --a: 0.09" aria-hidden="true"></div>
-      <div class="wrap">
-        <div class="stack reveal">
-          <p class="eyebrow tag">Proof</p>
-          <h2 id="proof-title">The work is visible.</h2>
-          <p class="lead">Strategy is only credible when you can inspect the systems beneath it.</p>
-        </div>
-        <div class="grid grid-2 glass-grid reveal" style="text-align:left">
-          <a class="proof-card proof-text glass" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">
+        <div class="grid grid-2 reveal" style="text-align:left">
+          <a class="proof-card proof-text" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">
             <h3>geo-seo-claude</h3>
             <p>Citability scoring, AI-crawler analysis and structured-data workflows. The toolkit Flow runs on client sites.</p>
             <span class="text-link">Open on GitHub</span>
           </a>
-          <a class="proof-card proof-text glass" href="/work/content-engine.html">
+          <a class="proof-card proof-text" href="/work/content-engine.html">
             <h3>Content engine</h3>
             <p>One source becomes a month of voice-audited, channel-ready content.</p>
             <span class="text-link">Read the case</span>
@@ -437,29 +402,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-
-
-    <section id="tools" class="centered" aria-labelledby="tools-title">
-      <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="tools-title">Free to use.</h2>
-          <p class="lead">Try the same models Flow installs. No email gate.</p>
-        </div>
-        <div class="narrow reveal" style="text-align:left; margin-top: clamp(3rem, 6vw, 4.5rem)">
-          <ul class="systems">
-            <li><b>Benchmark</b><span><a class="text-link" href="/tools/benchmark.html">The AI-readiness benchmark</a>: five questions, a score, and the stage to fix first.</span></li>
-            <li><b>Pricing</b><span><a class="text-link" href="/tools/pricing.html">The live pricing model</a>: the profit-maximising price from cost and customer value.</span></li>
-            <li><b>Guides</b><span><a class="text-link" href="/blog/">Long-form guides</a>, one a week, including <a class="text-link" href="/blog/ai-marketing-for-small-business-nz.html">AI marketing for small business in NZ</a>.</span></li>
-            <li><b>Skills</b><span><a class="text-link" href="/skills/">126 published skills</a>, open source and installable.</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <section id="faq" class="centered" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="faq-title">Questions.</h2>
+        <div class="sec reveal">
+          <p class="eyebrow">06 · Questions</p>
+          <div class="sec__body">
+            <h2 id="faq-title">Questions.</h2>
+          </div>
         </div>
         <div class="faq reveal">
           <details>
@@ -486,10 +435,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="contact centered" id="contact" aria-labelledby="contact-title" data-dotfield="closer">
-      <div class="orb" style="--x: 50%; --y: 58%; --r: 60rem; --a: 0.08" aria-hidden="true"></div>
+    <section class="contact centered" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
-        <div class="stack reveal" data-dotfield-clear>
+        <div class="stack reveal">
           <h2 id="contact-title">Start with a free audit.</h2>
           <p class="lead">Tell Flow what you sell and where growth is stuck. A written audit comes back within the week, no card, no call.</p>
           <div class="cta-row">
@@ -570,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="site-footer__label">What Flow does</p>
       <ul>
         <li><a href="/sprints/">The eleven systems</a></li>
-        <li><a href="/#process">How it works</a></li>
+        <li><a href="/sprints/#process">How it works</a></li>
         <li><a href="/contact.html">Get a free audit</a></li>
       </ul>
     </div>
