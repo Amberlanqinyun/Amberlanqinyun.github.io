@@ -89,50 +89,44 @@
 
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  /* Page rules only: the living flywheel, the scroll-fill manifesto, the counters,
-     and the split hero. */
-  @media (min-width: 880px) {
-    .hero-split { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--s-9); align-items: center; text-align: left; }
-    .hero-split .stack { margin: 0; max-width: none; }
-    .hero-split h1 { margin-inline: 0; max-width: 12ch; }
-    .hero-split .lead { margin-inline: 0; }
-    .hero-split .cta-row { justify-content: flex-start; }
-    .hero-split .hero-art { margin: 0; width: 100%; }
-  }
-  .clients .hero-proof { margin-top: var(--s-4); }
-  .machine { width: min(100%, 40rem); margin-inline: auto; }
-  .machine svg { width: 100%; height: auto; display: block; }
-  @media (prefers-reduced-motion: no-preference) {
-    .machine .ring { animation: ringspin 80s linear infinite; }
-    @keyframes ringspin { to { stroke-dashoffset: -1194; } }
-    .machine .node { animation: nodepulse 6s var(--ease) infinite; transform-box: fill-box; transform-origin: center; }
-    .machine .node:nth-of-type(2) { animation-delay: 1.2s; }
-    .machine .node:nth-of-type(3) { animation-delay: 2.4s; }
-    .machine .node:nth-of-type(4) { animation-delay: 3.6s; }
-    .machine .node:nth-of-type(5) { animation-delay: 4.8s; }
-    @keyframes nodepulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.75; } }
-    .machine .comet { offset-path: circle(190px at 380px 280px); animation: orbit 14s linear infinite; }
-    @keyframes orbit { from { offset-distance: 0%; } to { offset-distance: 100%; } }
-  }
+  /* Page rules only: the hero and its wheel, the manifesto band, the closer. */
+  .hero { padding-bottom: var(--space-block); }
+  .hero .stack { max-width: 56rem; }
+  .hero h1 { font-size: clamp(3rem, 7.2vw, 6.6rem); max-width: 15ch; letter-spacing: -0.035em; }
+  .hero .lead { max-width: 46ch; }
+
+  /* The wheel: the flywheel as the hero object, drawn in dots by dotfield.js.
+     The labels sit in the figure around it, placed by the script on the rim. */
+  .wheel { position: relative; width: min(100%, 70rem); margin: var(--space-band) auto 0; }
+  .wheel__stage { position: relative; width: 100%; aspect-ratio: 2 / 1; max-height: 36rem; }
+  .wheel__labels { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+  .wheel__labels li { position: absolute; white-space: nowrap; }
+  .wheel__labels li.is-top { transform: translate(-50%, -100%) translateY(-22px); text-align: center; }
+  .wheel__labels li.is-bottom { transform: translate(-50%, 0) translateY(24px); text-align: center; }
+  .wheel__labels li.is-right { transform: translate(0, -50%) translateX(26px); text-align: left; }
+  .wheel__labels li.is-left { transform: translate(-100%, -50%) translateX(-26px); text-align: right; }
+  .wheel__labels .small { display: block; margin-bottom: 2px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .wheel__labels b { color: var(--fg); font-size: var(--t-label); font-weight: 500; }
+  .wheel figcaption { max-width: 60ch; margin: var(--s-5) auto 0; color: var(--soft); font-size: var(--t-eyebrow); letter-spacing: 0.06em; text-align: center; }
+  @media (max-width: 720px) { .wheel__labels { display: none; } .wheel__stage { aspect-ratio: 1.35 / 1; } }
+  @media (max-width: 520px) { .tag__more { display: none; } .hero .orb--warm { --a: 0.06; } }
+
+  /* The manifesto: one statement at display size, centred, lit as it is read */
+  main #why .stack { max-width: 56rem; margin-inline: auto; text-align: center; }
+  main #why .stack h2 { font-size: clamp(2.5rem, 4.6vw, 4.25rem); max-width: 20ch; margin-inline: auto; }
+  main #why .stack .lead { margin-inline: auto; }
+
+  /* The closer: amber keeps its one job, and the ground lights it */
+  #contact .btn-primary { box-shadow: 0 18px 50px -18px rgba(228, 164, 60, 0.55); }
 </style>
 
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/texture.css?v=3">
-<style>
-  /* The closer: amber keeps its one job, and the ground lights it */
-  #contact .btn-primary { box-shadow: 0 18px 50px -18px rgba(228, 164, 60, 0.55); }
-  /* The proof line under the hero runs as a slow ticker */
-  .clients [data-ticker] { margin-top: var(--s-4); }
-  /* The manifesto: one statement at display size, centred, lit as it is read */
-  main #why .stack { max-width: 56rem; margin-inline: auto; text-align: center; }
-  main #why .stack h2 { font-size: clamp(2.5rem, 4.6vw, 4.25rem); max-width: 20ch; margin-inline: auto; }
-  main #why .stack .lead { margin-inline: auto; }
-</style>
+<link rel="stylesheet" href="/assets/texture.css?v=4">
 <script src="/assets/motion.js" defer></script>
-<script src="/assets/dotfield.js?v=3" defer></script>
-<script src="/assets/alive.js?v=3" defer></script>
+<script src="/assets/dotfield.js?v=4" defer></script>
+<script src="/assets/alive.js?v=4" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -195,7 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="/" aria-label="Flow AI home">
-      <span class="site-header__brand-mark" aria-hidden="true">F</span>
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
       <span class="site-header__brand-text">Flow AI.</span>
     </a>
     <nav class="site-header__nav" aria-label="Primary navigation">
@@ -210,49 +204,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
   <main id="main">
-    <section class="hero centered" aria-labelledby="hero-title" data-dotfield="hero-wide">
-      <div class="orb" style="--x: 76%; --y: 40%; --r: 60rem; --a: 0.11" aria-hidden="true"></div>
-      <div class="orb" style="--x: 8%; --y: 90%; --r: 40rem; --a: 0.06" aria-hidden="true"></div>
-      <div class="orb orb--warm" style="--x: 50%; --y: 104%; --r: 80rem; --a: 0.11" aria-hidden="true"></div>
-      <div class="wrap hero-split">
-        <div class="stack" data-dotfield-clear>
+    <section class="hero centered lit" aria-labelledby="hero-title">
+      <div class="orb" style="--x: 50%; --y: 74%; --r: 90rem; --a: 0.1" aria-hidden="true"></div>
+      <div class="orb orb--warm" style="--x: 50%; --y: 98%; --r: 80rem; --a: 0.09" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="stack">
+          <p class="eyebrow tag">AI marketing systems<span class="tag__more"> · Auckland, worldwide</span></p>
           <h1 id="hero-title" data-words>Marketing that compounds.</h1>
           <p class="lead">Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
-            <a class="text-link" href="/work.html">See it running</a>
+            <a class="btn btn-secondary" href="/work.html">See it running</a>
           </div>
         </div>
-        <figure class="hero-art">
-          <img src="assets/amber-lan-editorial-hero-v2.webp" data-parallax="12"
-               srcset="assets/amber-lan-editorial-hero-v2-768.webp 768w,
-                       assets/amber-lan-editorial-hero-v2-1152.webp 1152w,
-                       assets/amber-lan-editorial-hero-v2.webp 1448w"
-               sizes="(max-width: 880px) calc(100vw - 48px), 832px"
-               width="1448" height="1086" loading="lazy" decoding="async"
-               alt="Editorial halftone portrait of Amber Lan in the Flow AI ink, cream, and amber palette.">
-          <figcaption>Amber Lan, AI marketing engineer. Auckland, worldwide.</figcaption>
+        <figure class="wheel">
+          <div class="wheel__stage" data-dotfield="wheel"></div>
+          <ul class="wheel__labels" aria-label="The five stages of the Flow AI flywheel">
+            <li><span class="small">01 · Aim</span><b>Positioning</b></li>
+            <li><span class="small">02 · Get found</span><b>AI search</b></li>
+            <li><span class="small">03 · Earn belief</span><b>Content engine</b></li>
+            <li><span class="small">04 · Open doors</span><b>Outbound</b></li>
+            <li><span class="small">05 · Learn</span><b>Analytics</b></li>
+          </ul>
+          <figcaption class="small">One wheel, five stages: aim, get found, earn belief, open doors, learn. Every turn compounds. <a class="text-link" href="/sprints/#flywheel">Install one stage as a one-week sprint</a>.</figcaption>
         </figure>
       </div>
     </section>
-
-    <aside class="clients" aria-label="Recent client work">
-      <div class="wrap">
-        <p>
-          <span>Recent work for</span>
-          <a href="https://gota.co.nz" target="_blank" rel="noopener">Gota<span>.co.nz</span></a>
-          <a href="https://lullaby.co.nz" target="_blank" rel="noopener">Lullaby<span>.co.nz</span></a>
-          <a href="https://resaido.com" target="_blank" rel="noopener">Resaido<span>.com</span></a>
-        </p>
-        <div data-ticker>
-          <ul class="hero-proof">
-            <li>Ten years in marketing, three building the systems</li>
-            <li>No agency retainer, no new hire</li>
-            <li>A human reviews every send</li>
-          </ul>
-        </div>
-      </div>
-    </aside>
 
     <section id="why" class="centered lit" aria-labelledby="why-title">
       <div class="orb" style="--x: 50%; --y: 40%; --r: 70rem; --a: 0.09" aria-hidden="true"></div>
@@ -286,47 +263,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="offer-title">Get found. Get leads. Keep customers.</h2>
           <p class="lead">Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.</p>
         </div>
-
-        <figure class="diagram reveal machine" role="img" aria-label="The Flow AI flywheel in motion: five stages in a clockwise loop. Aim with positioning, get found with AI search, earn belief with the content engine, open doors with outbound, learn with analytics, feeding back into aim.">
-          <svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle class="ring" cx="380" cy="280" r="190" fill="none" stroke="#FAF8F3" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="5 7"/>
-            <g fill="#FAF8F3">
-              <circle class="node" cx="380" cy="90" r="6"/>
-              <circle class="node" cx="560.7" cy="221.3" r="6"/>
-              <circle class="node" cx="491.7" cy="433.7" r="6"/>
-              <circle class="node" cx="268.3" cy="433.7" r="6"/>
-              <circle class="node" cx="199.3" cy="221.3" r="6"/>
-            </g>
-            <circle class="comet" r="4" fill="#e4a43c"/>
-            <g font-family="inherit" fill="#FAF8F3">
-              <g text-anchor="middle">
-                <text x="380" y="46" font-size="12" letter-spacing="2" opacity="0.55">01 · AIM</text>
-                <text x="380" y="68" font-size="17">Positioning</text>
-              </g>
-              <g text-anchor="start">
-                <text x="586" y="210" font-size="12" letter-spacing="2" opacity="0.55">02 · GET FOUND</text>
-                <text x="586" y="232" font-size="17">AI search</text>
-              </g>
-              <g text-anchor="start">
-                <text x="512" y="466" font-size="12" letter-spacing="2" opacity="0.55">03 · EARN BELIEF</text>
-                <text x="512" y="488" font-size="17">Content engine</text>
-              </g>
-              <g text-anchor="end">
-                <text x="248" y="466" font-size="12" letter-spacing="2" opacity="0.55">04 · OPEN DOORS</text>
-                <text x="248" y="488" font-size="17">Outbound</text>
-              </g>
-              <g text-anchor="end">
-                <text x="174" y="210" font-size="12" letter-spacing="2" opacity="0.55">05 · LEARN</text>
-                <text x="174" y="232" font-size="17">Analytics</text>
-              </g>
-              <g text-anchor="middle">
-                <text x="380" y="272" font-size="19">One wheel.</text>
-                <text x="380" y="298" font-size="14" opacity="0.6">Every turn compounds.</text>
-              </g>
-            </g>
-          </svg>
-          <figcaption class="small">The eleven systems below turn one flywheel: aim, get found, earn belief, open doors, learn. <a class="text-link" href="/sprints/#flywheel">Install one stage as a one-week sprint</a>.</figcaption>
-        </figure>
 
         <div class="rows reveal">
           <div class="row">
@@ -635,7 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="site-footer__inner">
     <div class="site-footer__brand-col">
       <a class="site-footer__brand" href="/" aria-label="Flow AI home">
-        <span class="site-footer__mark" aria-hidden="true">F</span>
+        <svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
         <span>Flow AI.</span>
       </a>
       <p class="site-footer__blurb">AI marketing transformation, engineered end to end. Strategy, systems and the agents that run them.</p>

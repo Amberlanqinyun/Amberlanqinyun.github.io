@@ -245,21 +245,25 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
+AI marketing systems · Auckland, worldwide
+
 # Marketing that compounds.
 
 Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.
 
 Get a free auditSee it running
 
-Amber Lan, AI marketing engineer. Auckland, worldwide.
+- 01 · AimPositioning
 
-Recent work forGota.co.nzLullaby.co.nzResaido.com
+- 02 · Get foundAI search
 
-- Ten years in marketing, three building the systems
+- 03 · Earn beliefContent engine
 
-- No agency retainer, no new hire
+- 04 · Open doorsOutbound
 
-- A human reviews every send
+- 05 · LearnAnalytics
+
+One wheel, five stages: aim, get found, earn belief, open doors, learn. Every turn compounds. Install one stage as a one-week sprint.
 
 ## You already know AI works. It still is not running your marketing.
 
@@ -282,8 +286,6 @@ What Flow does
 ## Get found. Get leads. Keep customers.
 
 Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.
-
-The eleven systems below turn one flywheel: aim, get found, earn belief, open doors, learn. Install one stage as a one-week sprint.
 
 ### Get found
 

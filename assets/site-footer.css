@@ -39,27 +39,10 @@
 }
 
 .site-footer__mark {
-  position: relative;
-  display: grid;
+  display: block;
   width: 28px;
   height: 28px;
   flex: 0 0 auto;
-  place-items: center;
-  border: 1px solid rgba(250, 248, 243, 0.24);
-  border-radius: 8px;
-  background: #171715;
-  font-size: 15px;
-}
-
-.site-footer__mark::after {
-  content: "";
-  position: absolute;
-  right: 3px;
-  bottom: 4px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #e4a43c;
 }
 
 .site-footer__blurb {

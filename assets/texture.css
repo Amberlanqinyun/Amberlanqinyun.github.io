@@ -206,16 +206,10 @@
   .js .hero .facts { animation-delay: 760ms; }
   .js .hero .hero-art { opacity: 0; scale: 0.985; animation: texture-settle 1100ms var(--ease) 380ms forwards; }
   .js .hero .dotfield { opacity: 0; animation: texture-fadein 1600ms ease 520ms forwards; }
+  .js .hero .wheel__labels { opacity: 0; animation: texture-arrive 900ms var(--ease) 1200ms forwards; }
   @keyframes texture-arrive { to { opacity: 1; transform: none; } }
   @keyframes texture-settle { to { opacity: 1; scale: 1; } }
   @keyframes texture-fadein { to { opacity: 1; } }
-
-  /* The one amber button breathes, and a light passes over it on hover */
-  .hero .btn-primary, .contact .btn-primary { animation: texture-breathe 4.6s ease-in-out infinite; }
-  @keyframes texture-breathe {
-    0%, 100% { box-shadow: 0 10px 34px -14px rgba(228, 164, 60, 0.35); }
-    50% { box-shadow: 0 18px 54px -14px rgba(228, 164, 60, 0.72); }
-  }
 
   /* The lights drift as the page scrolls, so the ground has depth in motion */
   @supports (animation-timeline: view()) {
@@ -226,16 +220,6 @@
     @keyframes texture-orb-drift { from { translate: 0 14%; } to { translate: 0 -14%; } }
   }
 }
-
-/* Shine on the primary button, any motion setting: it answers the cursor */
-.btn-primary { position: relative; overflow: hidden; }
-.btn-primary::after {
-  content: ""; position: absolute; inset: -2px; pointer-events: none;
-  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.38) 50%, transparent 68%);
-  transform: translateX(-130%);
-  transition: transform 640ms var(--ease);
-}
-.btn-primary:hover::after { transform: translateX(130%); }
 
 /* Glass answers the cursor: the light inside the panel follows it */
 .glass::after {

@@ -519,3 +519,23 @@ main section:not(.hero):not(.contact) .stack.centered > h2 { max-width: 26ch; }
 
 /* Headline numbers sit on the blueprint: a hairline rule per stat. */
 .stat { border-left: 1px solid var(--hair); padding-left: var(--s-5); }
+
+/* ---- The primary button answers the hand ---------------------------------
+   A light passes over it on hover, on every page and in the header too
+   (site-header.css carries the same rule for its own button). In a hero
+   or a closer it also breathes. */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: ""; position: absolute; inset: -2px; pointer-events: none;
+  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.38) 50%, transparent 68%);
+  transform: translateX(-130%);
+  transition: transform 640ms var(--ease);
+}
+.btn-primary:hover::after { transform: translateX(130%); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero .btn-primary, .contact .btn-primary { animation: btn-breathe 4.6s ease-in-out infinite; }
+  @keyframes btn-breathe {
+    0%, 100% { box-shadow: 0 10px 34px -14px rgba(228, 164, 60, 0.35); }
+    50% { box-shadow: 0 18px 54px -14px rgba(228, 164, 60, 0.72); }
+  }
+}

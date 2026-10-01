@@ -256,7 +256,121 @@
     ctx.globalAlpha = 1;
   };
 
-  var fields = hosts.map(function (host) { return new Field(host); });
+  /* ---------- the wheel: the flywheel as a dimensional object ----------
+     Rings of dots on a tilted disc, turning slowly (the inner rings a
+     touch faster), with a brightness ripple travelling outward: every turn
+     feeds the next. Five fixed nodes on the rim carry the stage labels in
+     the figure around it, and the amber signal rides the rim between them. */
+  function Wheel(host) {
+    this.host = host;
+    var fig = host.parentElement;
+    this.labels = fig ? Array.prototype.slice.call(fig.querySelectorAll('.wheel__labels > li')) : [];
+    this.canvas = document.createElement('canvas');
+    this.canvas.className = 'dotfield';
+    this.canvas.setAttribute('aria-hidden', 'true');
+    host.insertBefore(this.canvas, host.firstChild);
+    this.ctx = this.canvas.getContext('2d');
+    this.t = 0; this.lx = null; this.ly = null;
+    this.resize();
+  }
+
+  Wheel.prototype.resize = function () {
+    var rect = this.host.getBoundingClientRect();
+    this.w = Math.max(1, Math.round(rect.width));
+    this.h = Math.max(1, Math.round(rect.height));
+    this.dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    this.canvas.width = Math.round(this.w * this.dpr);
+    this.canvas.height = Math.round(this.h * this.dpr);
+    this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    this.tilt = 0.42;
+    this.R = Math.min(this.w * 0.44, (this.h * 0.46) / this.tilt);
+    this.cx = this.w / 2;
+    this.cy = this.h * 0.52;
+    var small = this.w < 720, K = small ? 9 : 14, spacing = small ? 10 : 8;
+    this.rings = [];
+    for (var k = 0; k < K; k++) {
+      var r = this.R * (0.2 + 0.8 * k / (K - 1));
+      this.rings.push({ r: r, n: Math.max(20, Math.round(TAU * r / spacing)), f: k / (K - 1) });
+    }
+    this.halo = [];
+    for (var i = 0; i < (small ? 60 : 140); i++) {
+      this.halo.push({ a: Math.random() * TAU, r: this.R * (1.06 + 0.4 * Math.pow(Math.random(), 1.6)),
+                       s: 0.6 + Math.random() * 1.2, o: 0.08 + Math.random() * 0.2 });
+    }
+    this.placeLabels();
+    this.draw();
+  };
+
+  Wheel.prototype.node = function (i) {
+    var th = -Math.PI / 2 + i * TAU / 5;
+    return { x: this.cx + this.R * Math.cos(th), y: this.cy + this.R * this.tilt * Math.sin(th), th: th };
+  };
+
+  Wheel.prototype.placeLabels = function () {
+    var self = this;
+    this.labels.forEach(function (li, i) {
+      var p = self.node(i), s = Math.sin(p.th), c = Math.cos(p.th);
+      li.style.left = p.x.toFixed(1) + 'px';
+      li.style.top = p.y.toFixed(1) + 'px';
+      li.className = s < -0.7 ? 'is-top' : s > 0.5 ? 'is-bottom' : c > 0 ? 'is-right' : 'is-left';
+    });
+  };
+
+  Wheel.prototype.draw = function () {
+    var ctx = this.ctx, w = this.w, h = this.h, R = this.R, tilt = this.tilt, cx = this.cx, cy = this.cy, t = this.t;
+    ctx.clearRect(0, 0, w, h);
+    var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R);
+    g.addColorStop(0, 'rgba(250, 248, 243, 0.11)');
+    g.addColorStop(0.45, 'rgba(250, 248, 243, 0.035)');
+    g.addColorStop(1, 'rgba(250, 248, 243, 0)');
+    ctx.globalAlpha = 1; ctx.fillStyle = g;
+    ctx.beginPath(); ctx.ellipse(cx, cy, R * 1.1, R * 1.1 * tilt, 0, 0, TAU); ctx.fill();
+    ctx.fillStyle = INK;
+    var lit = this.lx !== null, LR = 220, lx = this.lx, ly = this.ly;
+    var rings = this.rings;
+    for (var k = 0; k < rings.length; k++) {
+      var ring = rings[k], r = ring.r, n = ring.n, f = ring.f;
+      var rot = t * 0.045 * TAU * (1.3 - 0.6 * f);
+      var ripple = 0.5 + 0.5 * Math.sin((t * 0.22 - f * 1.4) * TAU);
+      var ringA = 0.5 + 0.5 * ripple;
+      for (var j = 0; j < n; j++) {
+        var th = j * TAU / n + rot, c = Math.cos(th), s = Math.sin(th);
+        var x = cx + r * c, y = cy + r * tilt * s, depth = (s + 1) / 2;
+        var a = (0.14 + 0.86 * Math.pow(depth, 1.6)) * ringA * (0.7 + 0.3 * f);
+        var rr = (0.7 + 1.6 * depth) * (0.75 + 0.35 * f);
+        if (lit) {
+          var ex = x - lx, ey = y - ly, dd = ex * ex + ey * ey;
+          if (dd < LR * LR) { var kk = 1 - Math.sqrt(dd) / LR; kk *= kk; a += (1 - a) * kk * 0.9; rr *= 1 + 0.9 * kk; }
+        }
+        if (a < 0.02) continue;
+        ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(x, y, rr, 0, TAU); ctx.fill();
+      }
+    }
+    for (var q = 0; q < this.halo.length; q++) {
+      var hd = this.halo[q], ha = hd.a + t * 0.012 * TAU, hs = Math.sin(ha);
+      ctx.globalAlpha = hd.o * (0.4 + 0.6 * (hs + 1) / 2);
+      ctx.beginPath(); ctx.arc(cx + hd.r * Math.cos(ha), cy + hd.r * tilt * hs, hd.s, 0, TAU); ctx.fill();
+    }
+    for (var i = 0; i < 5; i++) {
+      var p = this.node(i), pulse = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.2) * TAU);
+      ctx.globalAlpha = 0.08 + 0.1 * pulse; ctx.beginPath(); ctx.arc(p.x, p.y, 15 + 7 * pulse, 0, TAU); ctx.fill();
+      ctx.globalAlpha = 0.95; ctx.beginPath(); ctx.arc(p.x, p.y, 4.6 + 1.4 * pulse, 0, TAU); ctx.fill();
+    }
+    var head = -Math.PI / 2 + ((t * 0.07) % 1) * TAU;
+    ctx.fillStyle = AMBER;
+    for (var m = 0; m < 14; m++) {
+      var ta = head - m * 0.011 * TAU, sd = (Math.sin(ta) + 1) / 2, fade = 1 - m / 14;
+      var sxp = cx + R * Math.cos(ta), syp = cy + R * tilt * Math.sin(ta);
+      if (m === 0) { ctx.globalAlpha = 0.35; ctx.beginPath(); ctx.arc(sxp, syp, 13, 0, TAU); ctx.fill(); }
+      ctx.globalAlpha = fade * (0.55 + 0.45 * sd);
+      ctx.beginPath(); ctx.arc(sxp, syp, (m === 0 ? 3.8 : 2.4) * fade + 0.5, 0, TAU); ctx.fill();
+    }
+    ctx.fillStyle = INK; ctx.globalAlpha = 1;
+  };
+
+  var fields = hosts.map(function (host) {
+    return host.getAttribute('data-dotfield') === 'wheel' ? new Wheel(host) : new Field(host);
+  });
   window.flowDotField = { fields: fields, presets: PRESETS };
 
   /* Keep the surface and its type zone honest through reflows: fonts
