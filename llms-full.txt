@@ -245,13 +245,13 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-Flow AI · AI marketing systems · Auckland, worldwide
+AI marketing systems · Auckland, worldwide
 
 # Marketing that compounds.
 
 Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.
 
-Get a free auditSee it runningFig. 01 · The agent teamEleven agents · one engineer
+Get a free auditSee it running
 
 - Get found
 
@@ -259,9 +259,9 @@ Get a free auditSee it runningFig. 01 · The agent teamEleven agents · one engi
 
 - Keep customers
 
-- Master agentPositioning
+- Marketing HQPositioning
 
-Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.
+Holds who you sell to, what to say and where the budget goes, and briefs every agent from it.
 
 - Get foundSearch agent
 
@@ -303,7 +303,7 @@ Tracking wired properly, so next month's budget goes where it worked.
 
 One short monthly read on what shipped and what comes next.
 
-01 · Why
+Why
 
 ## You already know AI works. It still is not running your marketing.
 
@@ -321,7 +321,7 @@ Marketing fails on cadence, not ideas. AI agents free up 6 to 7 hours a week for
 
 Machines produce, a human decides. Every send passes a review before it reaches a customer, which is the only way a small team can safely run this much output.
 
-02 · What Flow does
+What Flow does
 
 ## Get found. Get leads. Keep customers.
 
@@ -367,7 +367,7 @@ Inside measurement
 
 - ReportingOne short monthly read on what shipped and what comes next.
 
-03 · Why it pays
+Why it pays
 
 ## What the machine buys back.
 
@@ -399,7 +399,7 @@ Aggarwal et al., KDD 2024
 
 Time figures come from running these systems in production at an enterprise AI company. The six-month case shows the whole machine.
 
-04 · Instead of an agency
+Instead of an agency
 
 ## Instead of a marketing agency.
 
@@ -435,7 +435,7 @@ The work stopsThe systems keep running, documented
 
 Agencies are still the right answer for big paid media and brand campaigns. What each option costs, honestly.
 
-05 · Proof
+Proof
 
 ## The work is visible.
 
@@ -461,7 +461,7 @@ Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
 Open source and inspectable, one of 126 skills in the library.
 
-06 · Questions
+Questions
 
 ## Questions.
 
@@ -507,7 +507,7 @@ Flow reads your business, installs the agent with the most to gain as a fixed-sc
 
 Get a free auditSee the sprints
 
-01 · The three steps
+The three steps
 
 ## Read. Install. Run.
 
@@ -531,13 +531,11 @@ Pick the agent with the most to gain. It goes live with the assets, automation a
 
 Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.
 
-02 · The agent team
+The agent team
 
-## Eleven agents. One engineer.
+## Ten agents, one engineer.
 
-A master agent holds your positioning and briefs ten specialist agents across three outcomes: get found, get leads, keep customers. A marketing engineer reviews every send before it reaches a customer.
-
-Fig. 01 · The agent teamEleven agents · one engineer
+Marketing HQ holds your positioning and briefs ten specialist agents across three outcomes: get found, get leads, keep customers. A marketing engineer reviews every send before it reaches a customer.
 
 - Get found
 
@@ -545,9 +543,9 @@ Fig. 01 · The agent teamEleven agents · one engineer
 
 - Keep customers
 
-- Master agentPositioning
+- Marketing HQPositioning
 
-Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.
+Holds who you sell to, what to say and where the budget goes, and briefs every agent from it.
 
 - Get foundSearch agent
 
@@ -589,13 +587,13 @@ Tracking wired properly, so next month's budget goes where it worked.
 
 One short monthly read on what shipped and what comes next.
 
-03 · Install one at a time
+Install one at a time
 
 ## Install one agent at a time.
 
 Each sprint installs one agent: a fixed deliverables checklist, a one-week clock and full handover, every time.
 
-Sprint 01 · Master agent · one week
+Sprint 01 · Marketing HQ · one week
 
 ### Positioning sprint
 
@@ -647,7 +645,7 @@ Tracking installed and conversion events wired, with a one-page monthly report c
 
 Shows which agent produced revenue and feeds it back into positioning.See the fixed scope
 
-04 · The engine
+The engine
 
 ## A sprint installs an agent. The engine runs the team.
 
@@ -679,7 +677,7 @@ Source URL: https://www.flowai.co.nz/sprints/positioning.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Sprint 01 · Master agent · one week
+Sprint 01 · Marketing HQ · one week
 
 # One week to a position you can execute.
 
@@ -793,7 +791,7 @@ For businesses invisible in ChatGPT, Perplexity and AI Overviews. Today that is 
 
 Get a free auditSee the six deliverables
 
-Sprint 02 of five · the agent team · Previous: Sprint 01, Master agent · Next: Sprint 03, Content agent
+Sprint 02 of five · the agent team · Previous: Sprint 01, Marketing HQ · Next: Sprint 03, Content agent
 
 ## Six deliverables. One week.
 
@@ -1113,7 +1111,7 @@ For businesses spending on marketing without knowing which channel produces cust
 
 Get a free auditSee the six deliverables
 
-Sprint 05 of five · the agent team · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Master agent
+Sprint 05 of five · the agent team · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Marketing HQ
 
 ## Six deliverables. One week.
 
@@ -1519,7 +1517,7 @@ Source URL: https://www.flowai.co.nz/about.html
 Type: Page
 Author: Amber Lan (Flow AI)
 
-About · Amber Lan · AI marketing engineer
+Amber Lan · AI marketing engineer
 
 # Ten years in marketing. Three building the AI that runs it.
 
@@ -1527,7 +1525,7 @@ Amber Lan has worked every part of marketing, then spent three years building th
 
 Get a free auditGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published126 skills, open source
 
-01 · Why Flow AI exists
+Why Flow AI exists
 
 ## I was the marketing team of one.
 
@@ -1545,13 +1543,11 @@ Flow AI is that system, opened up. Every business owner I meet has the same prob
 
 双语营销工程师 · Practitioner. Systems in production. Receipts included.
 
-02 · Now
+Now
 
 ## Running marketing solo at an AI startup.
 
 Runs the whole marketing function at an AI startup in Auckland, one person plus an agent stack.
-
-Fig. 01 · The agent stackEleven agents · one engineer
 
 - Get found
 
@@ -1559,9 +1555,9 @@ Fig. 01 · The agent stackEleven agents · one engineer
 
 - Keep customers
 
-- Master agentPositioning
+- Marketing HQPositioning
 
-Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.
+Holds who you sell to, what to say and where the budget goes, and briefs every agent from it.
 
 - Get foundSearch agent
 
@@ -1625,7 +1621,7 @@ An HTML-to-video rendering pipeline (Playwright + ffmpeg), a live benchmark kios
 
 Exhibitor operations, booth systems, and collateral for national tech events, run as production systems rather than one-off scrambles.
 
-03 · Every part of marketing
+Every part of marketing
 
 ## Every part of marketing, done personally.
 
@@ -1655,7 +1651,7 @@ Researched prospect lists, sequences inside safe limits, email and follow-up tha
 
 Ad creative and audiences, tracking wired properly, and national events run as systems rather than scrambles.
 
-04 · Proof
+Proof
 
 ## Shipped systems, linked to source.
 
@@ -1691,7 +1687,7 @@ View repository
 
 Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonContent viewerAuth-gated read-only mirror of the content-engine dashboard for the team.Next.js · Vercel KVLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
 
-05 · Capabilities
+Capabilities
 
 ## Strategy through code.
 
@@ -1721,7 +1717,7 @@ Vercel, GitHub, CI, e2e testing. Production, not prototypes.
 
 English and 中文, native Mandarin. Strategy and content in both markets.
 
-06 · How I work
+How I work
 
 ## How I work.
 
@@ -1743,7 +1739,7 @@ What broke, the root cause, the fix, and what it cost. Published at the same rat
 
 Anything done twice by hand becomes a system. The agent stack is the team; I stay on strategy and judgment.
 
-07 · Keep going
+Keep going
 
 ## Keep going.
 

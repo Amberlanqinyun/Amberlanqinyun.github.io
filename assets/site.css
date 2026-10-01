@@ -562,64 +562,45 @@ body { line-height: 1.65; }
 .row { padding: var(--space-band) 0; }
 .faq summary { padding: var(--s-6) 0; }
 
-/* ---- Editorial (Oct 2026) --------------------------------------------------
-   The page is set on a grid and annotated like a document: a mono index
-   layer, hairline rules, big type at a lighter weight, asymmetric columns.
-   Decoration is structural, never atmospheric. */
+/* ---- Calm (Oct 2026) ---------------------------------------------------
+   One axis. The hero is centred; every section below it is a left-aligned
+   stack whose heading, lead and content share one left edge; the closer is
+   centred again. Big type at a lighter weight, a quiet mono label above
+   each heading, hairlines for structure, and air at every level. */
 :root {
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  --display: clamp(3.25rem, 7.6vw, 7.25rem);
+  --display: clamp(3.25rem, 7.4vw, 7rem);
   --h2: clamp(2.1rem, 3.9vw, 3.5rem);
+  --section: clamp(9rem, 18vw, 16rem);
+  --space-block: clamp(5rem, 10vw, 8rem);
 }
 h1, h2 { font-weight: 560; letter-spacing: -0.035em; line-height: 0.98; }
 h1 { font-weight: 540; letter-spacing: -0.045em; line-height: 0.94; }
-h2 { text-wrap: pretty; }
+h2 { text-wrap: pretty; max-width: 20ch; }
 .eyebrow {
   font-family: var(--mono); font-size: 12px; font-weight: 400;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft);
 }
 .small, .stat-src, .step .small { font-variant-numeric: tabular-nums; }
-.stat-src, .step > .small, .wheel figcaption, .facts b { font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
-section + section::before { display: none; }
+.stat-src, .step > .small, .facts b { font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; }
 
-/* A section opens with a rule, an index in the left column, the heading
-   and lead in the right. The index is the document's running annotation. */
-.sec {
-  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
-  gap: var(--s-6) var(--s-9); align-items: start;
-  padding-top: var(--s-6); border-top: 1px solid var(--hair-strong);
-  text-align: left;
-}
-.sec > .eyebrow { grid-column: 1; padding-top: 0.55em; }
-.sec__body { grid-column: 2; }
-.sec__body > h2 { max-width: 20ch; }
-.sec__body > h2 + .lead { margin-top: var(--s-7); max-width: 48ch; }
-.sec__body > .lead + .cta-row { margin-top: var(--s-8); justify-content: flex-start; }
-.sec--statement { display: block; border-top: 0; padding-top: 0; text-align: center; }
-.sec--statement > .eyebrow { display: block; margin-bottom: var(--s-7); }
-.sec--statement h2 { max-width: 22ch; margin-inline: auto; font-size: clamp(2.4rem, 4.8vw, 4.5rem); }
-.sec--statement .lead { margin: var(--s-7) auto 0; }
-.sec--statement .cta-row { justify-content: center; }
-@media (max-width: 720px) { .sec { grid-template-columns: 1fr; gap: var(--s-4); } .sec__body { grid-column: 1; } }
+/* The stack: four steps, each a size wider than before */
+.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: var(--s-7); }
+.stack > h1 + .lead { margin-top: var(--s-9); }
+.stack > h2 + .lead { margin-top: var(--s-7); }
+.stack > .lead + .cta-row, .stack > h2 + .cta-row { margin-top: var(--s-9); }
+.grid, .rows, .diagram, .faq, .versus, .install, .proof-case { margin-top: var(--space-block); }
 
-/* The hero: headline left on the grid, lead and actions set against it
-   lower right, the object full measure beneath a rule. */
-.hero { padding-block: var(--space-hero) 0; text-align: left; }
-.hero-ed { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s-5); }
-.hero-ed > .eyebrow { grid-column: 1 / -1; margin-bottom: var(--s-8); }
-.hero-ed > h1 { grid-column: 1 / 11; margin: 0; max-width: none; }
-.hero-ed > .hero-aside { grid-column: 7 / 13; margin-top: var(--s-9); }
-.hero-aside .lead { max-width: 44ch; margin: 0; }
-.hero-aside .cta-row { justify-content: flex-start; margin-top: var(--s-7); }
-@media (max-width: 900px) { .hero-ed > h1 { grid-column: 1 / -1; } .hero-ed > .hero-aside { grid-column: 1 / -1; margin-top: var(--s-7); } }
+/* The hero, centred, with its object beneath */
+.hero { padding-block: var(--space-hero) 0; }
+.hero .stack { max-width: 58rem; margin-inline: auto; }
+.hero h1 { max-width: 14ch; margin-inline: auto; }
+.hero .lead { margin-inline: auto; max-width: 46ch; }
+.object { margin-top: var(--space-block); }
 .arrow-link::after { content: "\2192"; display: inline-block; margin-left: 0.45em; transition: transform 200ms var(--ease); }
 .arrow-link:hover::after { transform: translateX(4px); }
 
-/* Objects sit under a rule, with their own annotation line */
-.object { position: relative; margin-top: var(--space-band); padding-top: var(--s-5); border-top: 1px solid var(--hair-strong); }
-.object__note { display: flex; justify-content: space-between; gap: var(--s-5); margin-bottom: var(--s-4); }
-
-/* Columns on hairlines: the index in mono, the heading quiet, the text muted */
+/* Columns on hairlines */
 .grid-3 > .pillar, .grid-3 > .step, .grid-3 > .part, .grid-2 > .part { border-top: 1px solid var(--hair); padding-top: var(--s-5); }
 .step > .small { display: block; margin-bottom: var(--s-6); color: var(--soft); }
 .stat { border-left: 0; border-top: 1px solid var(--hair); padding: var(--s-5) 0 0; }
@@ -643,8 +624,7 @@ section + section::before { display: none; }
 /* The closer: a statement, then the one button */
 .contact .stack > h2 { font-size: clamp(2.6rem, 5.2vw, 5rem); max-width: 16ch; margin-inline: auto; }
 
-/* The primary button keeps its light on hover (asked for site-wide); the
-   secondary becomes a plain arrowed link rather than a second pill. */
+/* The primary button keeps its light on hover (asked for site-wide) */
 .btn-primary::after { background: linear-gradient(115deg, transparent 36%, rgba(255, 255, 255, 0.26) 50%, transparent 64%); transition-duration: 520ms; }
 
 /* ---- The offer: one framed panel, not a pricing card ---------------------

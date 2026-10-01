@@ -25,22 +25,6 @@
   gap: clamp(var(--s-6), 4vw, var(--s-10));
 }
 
-/* The ghost wordmark: the page signs off at display scale, barely there. */
-.site-footer::before {
-  content: "Flow AI.";
-  display: block;
-  width: min(100% - (var(--gutter) * 2), var(--measure));
-  margin: 0 auto calc(var(--space-tight) * -1);
-  padding-top: var(--space-block);
-  font-size: clamp(4.5rem, 15vw, 13rem);
-  font-weight: 540;
-  letter-spacing: -0.05em;
-  line-height: 0.85;
-  color: rgba(250, 248, 243, 0.06);
-  pointer-events: none;
-  user-select: none;
-}
-
 /* brand column */
 
 .site-footer__brand {

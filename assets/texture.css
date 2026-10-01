@@ -188,26 +188,20 @@
   padding: 3px 10px; background: var(--bg);
   color: var(--soft); font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
 }
-.system__agents { counter-reset: agent; }
+
 .system__agents li {
   position: absolute; max-width: 16rem; padding: 7px 11px; margin: -7px -11px;
   border: 1px solid transparent; border-radius: 0; pointer-events: auto; cursor: pointer; outline: none;
   transition: background-color 200ms ease, border-color 200ms ease;
 }
-.system__agents li:not(.is-core) b::before {
-  counter-increment: agent; content: counter(agent, decimal-leading-zero) "\2007";
-  font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 0.06em; color: var(--soft);
-  vertical-align: 0.1em;
-}
-.system__agents li.is-left b::before { content: none; }
-.system__agents li.is-left b::after {
-  counter-increment: agent; content: "\2007" counter(agent, decimal-leading-zero);
-  font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 0.06em; color: var(--soft);
-  vertical-align: 0.1em;
-}
 .system__agents li .small { display: none; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
-.system__agents li b { display: block; color: var(--fg); font-size: var(--t-label); font-weight: 500; white-space: nowrap; }
+.system__agents li b { display: inline-flex; align-items: center; gap: 0.5em; color: var(--fg); font-size: var(--t-label); font-weight: 500; white-space: nowrap; }
 .system__agents li p { display: none; margin: var(--s-2) 0 0; color: var(--muted); font-size: var(--t-small); line-height: 1.45; white-space: normal; text-wrap: pretty; }
+.system__agents li.is-left b { flex-direction: row-reverse; }
+.system__agents li.is-core b { justify-content: center; }
+.agent-ico { width: 15px; height: 15px; flex: none; color: var(--soft); transition: color 200ms ease; }
+.system__agents li.is-active .agent-ico, .system__agents li:hover .agent-ico { color: var(--fg); }
+.system__agents li.is-core .agent-ico { width: 18px; height: 18px; color: var(--accent); }
 .system__agents li.is-active, .system__agents li:focus-visible {
   z-index: 2; background: var(--bg); border-color: var(--hair-strong);
 }
@@ -231,8 +225,7 @@
   .system__agents li, .system__agents li.is-top, .system__agents li.is-bottom, .system__agents li.is-right, .system__agents li.is-left {
     position: static; transform: none; max-width: none; margin: 0; padding: var(--s-4) 0; border: 0; border-top: 1px solid var(--hair); text-align: left;
   }
-  .system__agents li.is-left b::before { counter-increment: agent; content: counter(agent, decimal-leading-zero) "\2007"; }
-  .system__agents li.is-left b::after { content: none; counter-increment: none; }
+  .system__agents li.is-left b { flex-direction: row; }
   .system__agents li .small, .system__agents li p { display: block; }
   .system__agents li.is-core { position: absolute; transform: translate(-50%, -50%); max-width: 12rem; padding: 12px 16px; }
   .system__agents li.is-core p { display: none; }
