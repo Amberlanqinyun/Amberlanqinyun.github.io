@@ -40,6 +40,16 @@
       rNear: 2.8, rFar: 0.45, aNear: 0.9, aFar: 0.1, crest: 0.8, speed: 0.04,
       top: [0, 0.12], bottom: [0.9, 1], pad: 32, fall: 120
     },
+    /* The split hero on the home page: short and wide, type left, portrait
+       right. The surface is a ground under both, seen from a little higher,
+       its bright edge running along the foot of the section. */
+    'hero-wide': {
+      cols: 170, rows: 54, amp: 0.24, f0: 1.3, f1: 0.9,
+      yaw: -10, pitch: 32, cam: 2.4, fov: 0.9, rotate: -4,
+      cx: 0.5, cy: 0.74, dx: 0.02, dy: 0, span: 9.5, depth: 3.6,
+      rNear: 2.7, rFar: 0.45, aNear: 0.9, aFar: 0.08, crest: 0.8, speed: 0.04,
+      top: [0.06, 0.32], bottom: [0.92, 1], pad: 28, fall: 110
+    },
     /* The closer: a floor of dots under the one amber button, rising to a
        horizon just behind it and dying out before the footer. */
     closer: {
@@ -92,6 +102,8 @@
     host.insertBefore(this.canvas, host.firstChild);
     this.ctx = this.canvas.getContext('2d');
     this.t = 0;
+    this.ddx = 0; this.ddy = 0;   /* eased drift toward the pointer */
+    this.lx = null; this.ly = null; /* pointer, in host pixels */
     this.resize();
   }
 
@@ -128,7 +140,13 @@
     var cy_ = Math.cos(p.yaw * D2R), sy_ = Math.sin(p.yaw * D2R);
     var cp = Math.cos(p.pitch * D2R), sp = Math.sin(p.pitch * D2R);
     var cr = Math.cos(p.rotate * D2R), sr = Math.sin(p.rotate * D2R);
-    var ox = w * (p.cx + p.dx), oy = h * (p.cy + p.dy);
+    var lit = this.lx !== null;
+    var tdx = lit ? (this.lx / w - 0.5) * 0.035 : 0;
+    var tdy = lit ? (this.ly / h - 0.5) * 0.02 : 0;
+    this.ddx += (tdx - this.ddx) * 0.05;
+    this.ddy += (tdy - this.ddy) * 0.05;
+    var ox = w * (p.cx + p.dx + this.ddx), oy = h * (p.cy + p.dy + this.ddy);
+    var LR = 260, lx = this.lx, ly = this.ly;
     var zc = this.zc, yy = this.yy, sx = this.sx, sy = this.sy;
     var zmin = Infinity, zmax = -Infinity, ymin = Infinity, ymax = -Infinity;
     var i = 0, r, c;
@@ -169,6 +187,16 @@
       var crest = (yy[i] - ymin) / yr;
       var a = p.aFar + (p.aNear - p.aFar) * Math.pow(near, 1.3) * (0.45 + p.crest * 0.55 * crest);
       a *= this.jitter[i];
+      var rr = p.rFar + (p.rNear - p.rFar) * Math.pow(near, 1.6);
+      if (lit) {
+        /* a light under the cursor: dots nearby brighten and swell */
+        var ex = x - lx, ey = y - ly, dd = ex * ex + ey * ey;
+        if (dd < LR * LR) {
+          var k = 1 - Math.sqrt(dd) / LR; k *= k;
+          a += (1 - a) * k * 0.9;
+          rr *= 1 + 0.9 * k;
+        }
+      }
       var fy = y / h;
       a *= smooth(fy, p.top[0], p.top[1]) * (1 - smooth(fy, p.bottom[0], p.bottom[1]));
       if (zone) {
@@ -177,7 +205,7 @@
         a *= smooth(Math.sqrt(ddx * ddx + ddy * ddy), 0, fall);
       }
       alpha[i] = a;
-      rad[i] = p.rFar + (p.rNear - p.rFar) * Math.pow(near, 1.6);
+      rad[i] = rr;
     }
 
     ctx.clearRect(0, 0, w, h);
@@ -221,6 +249,21 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(queueResize);
 
   if (reduced) return;
+
+  /* The pointer, handed to whichever field it is over */
+  function setPointer(x, y) {
+    fields.forEach(function (fl) {
+      var r = fl.host.getBoundingClientRect();
+      var inside = x !== null && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+      fl.lx = inside ? x - r.left : null;
+      fl.ly = inside ? y - r.top : null;
+    });
+  }
+  if (window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('pointermove', function (e) { setPointer(e.clientX, e.clientY); }, { passive: true });
+    document.addEventListener('pointerleave', function () { setPointer(null, null); });
+    window.addEventListener('blur', function () { setPointer(null, null); });
+  }
 
   var last = 0;
   function tick(now) {

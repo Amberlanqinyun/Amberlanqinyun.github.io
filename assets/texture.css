@@ -86,7 +86,7 @@
   backdrop-filter: blur(10px);
   transition: border-color 220ms ease, transform 240ms var(--ease);
 }
-.glass::before {
+.glass::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -97,9 +97,9 @@
   opacity: 0.75;
   transition: opacity 240ms ease;
 }
-.glass > * { position: relative; z-index: 1; }
+.glass > *, .glass::before { position: relative; z-index: 1; }
 .glass:hover { border-color: rgba(250, 248, 243, 0.22); }
-.glass:hover::before { opacity: 1; }
+.glass:hover::after { opacity: 1; }
 .glass-grid { gap: var(--s-4); }
 
 /* ---- Pill tag: the label with a live dot, in place of a bare eyebrow ---- */
@@ -135,21 +135,94 @@
 }
 .tag-sm::before { width: 5px; height: 5px; }
 
-/* ---- Scroll-fill: type brightens as it scrolls through the viewport.
-   The manifesto effect from the home page, as a utility. Gated to browsers
-   with scroll-driven animations and to visitors who allow motion; everyone
-   else reads the settled colour. */
+/* ---- Scroll-fill: type lights up in reading order.
+   Each block brightens from its first line down to its last as it scrolls
+   up into the reading zone, so a heading lights before its lead and a
+   paragraph before the one beneath it. Nobody reads a paragraph left to
+   right in one sweep; they read it top to bottom, and the light follows.
+   Gated to browsers with scroll-driven animations and to visitors who
+   allow motion; everyone else reads the settled colour. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .fill-on-scroll, .fill-prose > p:not(.small) {
-      background: linear-gradient(to right, var(--fill-to, var(--fg)) 50%, var(--fill-from, rgba(250, 248, 243, 0.28)) 50%) 100% 0 / 200% 100% no-repeat;
+      background: linear-gradient(to bottom, var(--fill-to, var(--fg)) 46%, var(--fill-from, rgba(250, 248, 243, 0.28)) 54%) 0 100% / 100% 200% no-repeat;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       animation: texture-scrollfill linear both;
       animation-timeline: view();
-      animation-range: entry 40% cover 55%;
+      animation-range: entry 30% cover 45%;
     }
     @keyframes texture-scrollfill { to { background-position: 0 0; } }
   }
+}
+
+/* ---- Life: entrance, light and touch ------------------------------------
+   The ground above is what the page sits on. This is what moves.
+   Everything here is gated to visitors who allow motion. Entrance states
+   apply only once alive.js has flagged the document (html.js), so a
+   blocked script shows the page at rest, never hidden. */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* The hero arrives. Words rise out of a clipped line in reading order,
+     the lead and the buttons follow, the portrait settles into place. */
+  .js [data-words] .w {
+    display: inline-block; overflow: hidden; vertical-align: top;
+    padding-bottom: 0.12em; margin-bottom: -0.12em;
+  }
+  .js [data-words] .w > span {
+    display: inline-block; transform: translateY(112%);
+    animation: texture-rise 880ms var(--ease) forwards;
+    animation-delay: calc(var(--i, 0) * 70ms + 90ms);
+  }
+  /* until alive.js has split the words, hold the heading back; if the
+     script never arrives, show it anyway after a beat */
+  .js [data-words]:not([data-words="ready"]) { opacity: 0; animation: texture-fadein 300ms ease 2.4s forwards; }
+  @keyframes texture-rise { to { transform: translateY(0); } }
+
+  .js .hero .eyebrow, .js .hero .lead, .js .hero .cta-row, .js .hero .facts, .js .hero figcaption {
+    opacity: 0; transform: translateY(14px);
+    animation: texture-arrive 800ms var(--ease) forwards;
+  }
+  .js .hero .eyebrow { animation-delay: 40ms; }
+  .js .hero .lead { animation-delay: 480ms; }
+  .js .hero .cta-row { animation-delay: 620ms; }
+  .js .hero figcaption { animation-delay: 900ms; }
+  .js .hero .facts { animation-delay: 760ms; }
+  .js .hero .hero-art { opacity: 0; scale: 0.985; animation: texture-settle 1100ms var(--ease) 380ms forwards; }
+  .js .hero .dotfield { opacity: 0; animation: texture-fadein 1600ms ease 520ms forwards; }
+  @keyframes texture-arrive { to { opacity: 1; transform: none; } }
+  @keyframes texture-settle { to { opacity: 1; scale: 1; } }
+  @keyframes texture-fadein { to { opacity: 1; } }
+
+  /* The one amber button breathes, and a light passes over it on hover */
+  .hero .btn-primary, .contact .btn-primary { animation: texture-breathe 4.6s ease-in-out infinite; }
+  @keyframes texture-breathe {
+    0%, 100% { box-shadow: 0 10px 34px -14px rgba(228, 164, 60, 0.35); }
+    50% { box-shadow: 0 18px 54px -14px rgba(228, 164, 60, 0.72); }
+  }
+
+  /* The lights drift as the page scrolls, so the ground has depth in motion */
+  @supports (animation-timeline: view()) {
+    .lit > .orb, .sheet > .orb, [data-dotfield] > .orb {
+      animation: texture-orb-drift linear both;
+      animation-timeline: view();
+    }
+    @keyframes texture-orb-drift { from { translate: 0 14%; } to { translate: 0 -14%; } }
+  }
+}
+
+/* Shine on the primary button, any motion setting: it answers the cursor */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: ""; position: absolute; inset: -2px; pointer-events: none;
+  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.38) 50%, transparent 68%);
+  transform: translateX(-130%);
+  transition: transform 640ms var(--ease);
+}
+.btn-primary:hover::after { transform: translateX(130%); }
+
+/* Glass answers the cursor: the light inside the panel follows it */
+.glass::after {
+  background: radial-gradient(280px circle at var(--mx, 18%) var(--my, 0%), rgba(250, 248, 243, 0.11), transparent 70%);
 }
