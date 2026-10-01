@@ -256,120 +256,160 @@
     ctx.globalAlpha = 1;
   };
 
-  /* ---------- the wheel: the flywheel as a dimensional object ----------
-     Rings of dots on a tilted disc, turning slowly (the inner rings a
-     touch faster), with a brightness ripple travelling outward: every turn
-     feeds the next. Five fixed nodes on the rim carry the stage labels in
-     the figure around it, and the amber signal rides the rim between them. */
-  function Wheel(host) {
+  /* ---------- the system: the agent team as one object ----------
+     A master agent at the centre (a disc of rings, turning slowly), the
+     three outcomes as dotted arcs around it, the specialist agents as
+     nodes on the outer ring, each briefed down a spoke from the centre,
+     and the review pass circulating the rim in amber. The labels live in
+     the figure as a list; the script places them on the geometry, and
+     whichever one is hovered or focused lights its spoke and its arc. */
+  function System(host) {
     this.host = host;
-    var fig = host.parentElement;
-    this.labels = fig ? Array.prototype.slice.call(fig.querySelectorAll('.wheel__labels > li')) : [];
+    var fig = host.parentElement, self = this;
+    var items = fig ? Array.prototype.slice.call(fig.querySelectorAll('.system__agents > li')) : [];
+    this.core = null; this.agents = [];
+    items.forEach(function (li) { if (li.classList.contains('is-core')) self.core = li; else self.agents.push(li); });
+    this.arcs = fig ? Array.prototype.slice.call(fig.querySelectorAll('.system__arcs > li')) : [];
+    this.active = null;
     this.canvas = document.createElement('canvas');
     this.canvas.className = 'dotfield';
     this.canvas.setAttribute('aria-hidden', 'true');
     host.insertBefore(this.canvas, host.firstChild);
     this.ctx = this.canvas.getContext('2d');
     this.t = 0; this.lx = null; this.ly = null;
+    function activate(li) {
+      if (self.active === li) return;
+      if (self.active) self.active.classList.remove('is-active');
+      self.active = li;
+      if (li) li.classList.add('is-active');
+      if (reduced) self.draw();
+    }
+    items.forEach(function (li) {
+      li.setAttribute('tabindex', '0');
+      li.addEventListener('pointerenter', function () { activate(li); });
+      li.addEventListener('pointerleave', function () { if (self.active === li) activate(null); });
+      li.addEventListener('focus', function () { activate(li); });
+      li.addEventListener('blur', function () { if (self.active === li) activate(null); });
+      li.addEventListener('click', function () { activate(self.active === li ? null : li); });
+    });
     this.resize();
   }
 
-  Wheel.prototype.resize = function () {
-    var rect = this.host.getBoundingClientRect();
+  var SPANS = { found: [-144, 108], leads: [-36, 144], keep: [108, 108] };
+
+  System.prototype.resize = function () {
+    var rect = this.host.getBoundingClientRect(), self = this;
     this.w = Math.max(1, Math.round(rect.width));
     this.h = Math.max(1, Math.round(rect.height));
     this.dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     this.canvas.width = Math.round(this.w * this.dpr);
     this.canvas.height = Math.round(this.h * this.dpr);
     this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    this.tilt = 0.42;
-    this.R = Math.min(this.w * 0.44, (this.h * 0.46) / this.tilt);
-    this.cx = this.w / 2;
-    this.cy = this.h * 0.52;
-    var small = this.w < 720, K = small ? 9 : 14, spacing = small ? 10 : 8;
-    this.rings = [];
-    for (var k = 0; k < K; k++) {
-      var r = this.R * (0.2 + 0.8 * k / (K - 1));
-      this.rings.push({ r: r, n: Math.max(20, Math.round(TAU * r / spacing)), f: k / (K - 1) });
-    }
-    this.halo = [];
-    for (var i = 0; i < (small ? 60 : 140); i++) {
-      this.halo.push({ a: Math.random() * TAU, r: this.R * (1.06 + 0.4 * Math.pow(Math.random(), 1.6)),
-                       s: 0.6 + Math.random() * 1.2, o: 0.08 + Math.random() * 0.2 });
-    }
-    this.placeLabels();
+    this.tilt = 0.9;
+    this.R = Math.min(this.w * 0.28, this.h * 0.42 / this.tilt);
+    this.cx = this.w / 2; this.cy = this.h / 2;
+    var byGroup = {}, order = [];
+    this.agents.forEach(function (li) {
+      var g = li.getAttribute('data-group') || 'found';
+      if (!byGroup[g]) { byGroup[g] = []; order.push(g); }
+      byGroup[g].push(li);
+    });
+    this.nodes = []; this.groupSpans = [];
+    order.forEach(function (g) {
+      var sp = SPANS[g] || [0, 120], list = byGroup[g];
+      self.groupSpans.push({ key: g, start: sp[0] * D2R, span: sp[1] * D2R });
+      list.forEach(function (li, i) {
+        var th = (sp[0] + (i + 0.5) * sp[1] / list.length) * D2R;
+        var x = self.cx + self.R * Math.cos(th), y = self.cy + self.R * self.tilt * Math.sin(th);
+        self.nodes.push({ li: li, th: th, x: x, y: y, g: g });
+        li.style.left = x.toFixed(1) + 'px'; li.style.top = y.toFixed(1) + 'px';
+        var s = Math.sin(th), c = Math.cos(th);
+        li.classList.remove('is-top', 'is-right', 'is-bottom', 'is-left');
+        li.classList.add(s < -0.72 ? 'is-top' : s > 0.72 ? 'is-bottom' : c > 0 ? 'is-right' : 'is-left');
+      });
+    });
+    if (this.core) { this.core.style.left = this.cx + 'px'; this.core.style.top = this.cy + 'px'; }
+    this.arcs.forEach(function (li, i) {
+      var gs = self.groupSpans[i]; if (!gs) return;
+      var mid = gs.start + gs.span / 2, rr = self.R * 0.6;
+      li.style.left = (self.cx + rr * Math.cos(mid)).toFixed(1) + 'px';
+      li.style.top = (self.cy + rr * self.tilt * Math.sin(mid)).toFixed(1) + 'px';
+    });
     this.draw();
   };
 
-  Wheel.prototype.node = function (i) {
-    var th = -Math.PI / 2 + i * TAU / 5;
-    return { x: this.cx + this.R * Math.cos(th), y: this.cy + this.R * this.tilt * Math.sin(th), th: th };
-  };
-
-  Wheel.prototype.placeLabels = function () {
-    var self = this;
-    this.labels.forEach(function (li, i) {
-      var p = self.node(i), s = Math.sin(p.th), c = Math.cos(p.th);
-      li.style.left = p.x.toFixed(1) + 'px';
-      li.style.top = p.y.toFixed(1) + 'px';
-      li.className = s < -0.7 ? 'is-top' : s > 0.5 ? 'is-bottom' : c > 0 ? 'is-right' : 'is-left';
-    });
-  };
-
-  Wheel.prototype.draw = function () {
+  System.prototype.draw = function () {
     var ctx = this.ctx, w = this.w, h = this.h, R = this.R, tilt = this.tilt, cx = this.cx, cy = this.cy, t = this.t;
+    var active = this.active, coreActive = !!active && active === this.core, activeNode = null, activeGroup = null, i, j, nd;
+    if (active && !coreActive) for (i = 0; i < this.nodes.length; i++) if (this.nodes[i].li === active) { activeNode = this.nodes[i]; activeGroup = activeNode.g; }
     ctx.clearRect(0, 0, w, h);
-    var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R);
-    g.addColorStop(0, 'rgba(250, 248, 243, 0.11)');
-    g.addColorStop(0.45, 'rgba(250, 248, 243, 0.035)');
-    g.addColorStop(1, 'rgba(250, 248, 243, 0)');
+    var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.9);
+    g.addColorStop(0, 'rgba(250, 248, 243, 0.1)'); g.addColorStop(1, 'rgba(250, 248, 243, 0)');
     ctx.globalAlpha = 1; ctx.fillStyle = g;
-    ctx.beginPath(); ctx.ellipse(cx, cy, R * 1.1, R * 1.1 * tilt, 0, 0, TAU); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(cx, cy, R * 1.2, R * 1.2 * tilt, 0, 0, TAU); ctx.fill();
     ctx.fillStyle = INK;
-    var lit = this.lx !== null, LR = 220, lx = this.lx, ly = this.ly;
-    var rings = this.rings;
-    for (var k = 0; k < rings.length; k++) {
-      var ring = rings[k], r = ring.r, n = ring.n, f = ring.f;
-      var rot = t * 0.045 * TAU * (1.3 - 0.6 * f);
-      var ripple = 0.5 + 0.5 * Math.sin((t * 0.22 - f * 1.4) * TAU);
-      var ringA = 0.5 + 0.5 * ripple;
-      for (var j = 0; j < n; j++) {
-        var th = j * TAU / n + rot, c = Math.cos(th), s = Math.sin(th);
-        var x = cx + r * c, y = cy + r * tilt * s, depth = (s + 1) / 2;
-        var a = (0.14 + 0.86 * Math.pow(depth, 1.6)) * ringA * (0.7 + 0.3 * f);
-        var rr = (0.7 + 1.6 * depth) * (0.75 + 0.35 * f);
-        if (lit) {
-          var ex = x - lx, ey = y - ly, dd = ex * ex + ey * ey;
-          if (dd < LR * LR) { var kk = 1 - Math.sqrt(dd) / LR; kk *= kk; a += (1 - a) * kk * 0.9; rr *= 1 + 0.9 * kk; }
-        }
-        if (a < 0.02) continue;
-        ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(x, y, rr, 0, TAU); ctx.fill();
+    var lit = this.lx !== null, LR = 150, lx = this.lx, ly = this.ly;
+    function dot(x, y, r, a) {
+      if (a < 0.02) return;
+      if (lit) { var ex = x - lx, ey = y - ly, dd = ex * ex + ey * ey; if (dd < LR * LR) { var k = 1 - Math.sqrt(dd) / LR; k *= k; a += (1 - a) * k * 0.7; r *= 1 + 0.6 * k; } }
+      ctx.globalAlpha = a > 1 ? 1 : a; ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.fill();
+    }
+    /* the master: a disc of rings, turning, breathing */
+    var coreR = R * 0.3, rot = t * 0.03 * TAU, breathe = 0.85 + 0.15 * Math.sin(t * 0.5 * TAU);
+    for (var ring = 0; ring < 7; ring++) {
+      var rr = coreR * (0.18 + 0.82 * ring / 6), n = Math.max(8, Math.round(TAU * rr / 7));
+      var ra = (coreActive ? 1 : 0.9 * breathe) * (1 - 0.45 * ring / 6) * (active && !coreActive ? 0.7 : 1);
+      for (j = 0; j < n; j++) { var th = j * TAU / n + rot * (1 + 0.3 * (6 - ring) / 6); dot(cx + rr * Math.cos(th), cy + rr * tilt * Math.sin(th), 1.1 + 0.9 * (1 - ring / 6), ra); }
+    }
+    /* the briefs: a spoke from the master to every agent, a pulse running out along it */
+    for (i = 0; i < this.nodes.length; i++) {
+      nd = this.nodes[i];
+      var isA = nd === activeNode, inG = activeGroup === nd.g, hot = isA || coreActive;
+      var a0 = isA ? 0.9 : coreActive ? 0.45 : 0.14 * (active ? (inG ? 1.3 : 0.5) : 1);
+      var pulse = (t * (hot ? 0.55 : 0.18) + i * 0.13) % 1;
+      for (var sI = 0; sI < 14; sI++) {
+        var f = 0.34 + 0.58 * sI / 13, near = Math.max(0, 1 - Math.abs(f - (0.34 + 0.58 * pulse)) / 0.12);
+        dot(cx + (nd.x - cx) * f, cy + (nd.y - cy) * f, (isA ? 1.6 : 1.1) + (isA ? 1.4 : 0.8) * near, a0 + near * (hot ? 0.6 : 0.2));
       }
     }
-    for (var q = 0; q < this.halo.length; q++) {
-      var hd = this.halo[q], ha = hd.a + t * 0.012 * TAU, hs = Math.sin(ha);
-      ctx.globalAlpha = hd.o * (0.4 + 0.6 * (hs + 1) / 2);
-      ctx.beginPath(); ctx.arc(cx + hd.r * Math.cos(ha), cy + hd.r * tilt * hs, hd.s, 0, TAU); ctx.fill();
+    /* the outcomes: an arc at 0.6R and the outer ring at R, per group, brightness flowing round them */
+    for (i = 0; i < this.groupSpans.length; i++) {
+      var gs = this.groupSpans[i], gActive = activeGroup === gs.key, gap = 7 * D2R;
+      var cfgs = [[0.6, 0.42, 5.5, 1.2], [1, 0.3, 6, 1.5]];
+      for (var c = 0; c < 2; c++) {
+        var cr = R * cfgs[c][0], base = cfgs[c][1] * (active ? (gActive ? 1.6 : 0.5) : 1);
+        var a1 = gs.start + gap, a2 = gs.start + gs.span - gap, cn = Math.max(6, Math.round((a2 - a1) * cr / cfgs[c][2]));
+        for (j = 0; j <= cn; j++) {
+          var ta = a1 + (a2 - a1) * j / cn, flow = 0.65 + 0.35 * Math.sin(ta * 2.5 - t * 0.6 * TAU);
+          dot(cx + cr * Math.cos(ta), cy + cr * tilt * Math.sin(ta), cfgs[c][3], base * flow);
+        }
+      }
     }
-    for (var i = 0; i < 5; i++) {
-      var p = this.node(i), pulse = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.2) * TAU);
-      ctx.globalAlpha = 0.08 + 0.1 * pulse; ctx.beginPath(); ctx.arc(p.x, p.y, 15 + 7 * pulse, 0, TAU); ctx.fill();
-      ctx.globalAlpha = 0.95; ctx.beginPath(); ctx.arc(p.x, p.y, 4.6 + 1.4 * pulse, 0, TAU); ctx.fill();
+    /* the agents */
+    for (i = 0; i < this.nodes.length; i++) {
+      nd = this.nodes[i]; isA = nd === activeNode;
+      var pz = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.1) * TAU);
+      ctx.globalAlpha = (isA ? 0.26 : 0.08 + 0.08 * pz) * (active && !isA ? 0.6 : 1);
+      ctx.beginPath(); ctx.arc(nd.x, nd.y, isA ? 22 : 13 + 6 * pz, 0, TAU); ctx.fill();
+      ctx.globalAlpha = active && !isA && !coreActive ? 0.55 : 0.95;
+      ctx.beginPath(); ctx.arc(nd.x, nd.y, isA ? 6.5 : 4.4 + 1.2 * pz, 0, TAU); ctx.fill();
     }
-    var head = -Math.PI / 2 + ((t * 0.07) % 1) * TAU;
+    /* the review pass: the rim, turning, with the amber signal on it */
+    var rimR = R * 1.2, rimRot = t * 0.02 * TAU, rn = Math.round(TAU * rimR / 8);
+    for (j = 0; j < rn; j++) { var rt = j * TAU / rn + rimRot; dot(cx + rimR * Math.cos(rt), cy + rimR * tilt * Math.sin(rt), 1.1, active ? 0.1 : 0.18); }
+    var head = -Math.PI / 2 + ((t * 0.06) % 1) * TAU;
     ctx.fillStyle = AMBER;
-    for (var m = 0; m < 14; m++) {
-      var ta = head - m * 0.011 * TAU, sd = (Math.sin(ta) + 1) / 2, fade = 1 - m / 14;
-      var sxp = cx + R * Math.cos(ta), syp = cy + R * tilt * Math.sin(ta);
-      if (m === 0) { ctx.globalAlpha = 0.35; ctx.beginPath(); ctx.arc(sxp, syp, 13, 0, TAU); ctx.fill(); }
-      ctx.globalAlpha = fade * (0.55 + 0.45 * sd);
-      ctx.beginPath(); ctx.arc(sxp, syp, (m === 0 ? 3.8 : 2.4) * fade + 0.5, 0, TAU); ctx.fill();
+    for (var m = 0; m < 16; m++) {
+      var ha = head - m * 0.009 * TAU, fade = 1 - m / 16;
+      var hx = cx + rimR * Math.cos(ha), hy = cy + rimR * tilt * Math.sin(ha);
+      if (m === 0) { ctx.globalAlpha = 0.3; ctx.beginPath(); ctx.arc(hx, hy, 12, 0, TAU); ctx.fill(); }
+      ctx.globalAlpha = fade; ctx.beginPath(); ctx.arc(hx, hy, (m === 0 ? 3.6 : 2.2) * fade + 0.5, 0, TAU); ctx.fill();
     }
     ctx.fillStyle = INK; ctx.globalAlpha = 1;
   };
 
   var fields = hosts.map(function (host) {
-    return host.getAttribute('data-dotfield') === 'wheel' ? new Wheel(host) : new Field(host);
+    return host.getAttribute('data-dotfield') === 'system' ? new System(host) : new Field(host);
   });
   window.flowDotField = { fields: fields, presets: PRESETS };
 

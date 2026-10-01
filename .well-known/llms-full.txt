@@ -245,7 +245,7 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan (Flow AI)
 
-AI marketing systems · Auckland, worldwide
+AI marketing systems· Auckland, worldwide
 
 # Marketing that compounds.
 
@@ -253,17 +253,57 @@ Flow AI installs the systems that run your content, search, outbound and reporti
 
 Get a free auditSee it running
 
-- 01 · AimPositioning
+- Get found
 
-- 02 · Get foundAI search
+- Get leads
 
-- 03 · Earn beliefContent engine
+- Keep customers
 
-- 04 · Open doorsOutbound
+- Master agentPositioning
 
-- 05 · LearnAnalytics
+Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.
 
-One wheel, five stages: aim, get found, earn belief, open doors, learn. Every turn compounds. Install one stage as a one-week sprint.
+- Get foundSearch agent
+
+Technical SEO through to answer engine optimisation, so assistants cite you.
+
+- Get foundContent agent
+
+One strong idea becomes a month of content your team approves, not writes.
+
+- Get foundSocial agent
+
+Posts and threads in your voice, on a calendar that holds.
+
+- Get leadsOutbound agent
+
+The right hundred buyers, researched and reached personally.
+
+- Get leadsConversion agent
+
+Offers, landing pages and funnels, tested and tuned monthly.
+
+- Get leadsLaunch agent
+
+Product and campaign launches sequenced across every channel.
+
+- Get leadsPaid agent
+
+Ad creative and audiences, with the numbers behind them.
+
+- Keep customersCommunity agent
+
+Reddit, forums and groups answered honestly and on time.
+
+- Keep customersMeasurement agent
+
+Tracking wired properly, so next month's budget goes where it worked.
+
+- Keep customersReporting agent
+
+One short monthly read on what shipped and what comes next.
+
+One engineer reviews every send before it reaches a customer. Hover an agent to see what it does.Install one as a one-week sprint.
 
 ## You already know AI works. It still is not running your marketing.
 
@@ -1468,6 +1508,58 @@ Flow AI is that system, opened up. Every business owner I meet has the same prob
 ## Running marketing solo at an AI startup.
 
 Runs the whole marketing function at an AI startup in Auckland, one person plus an agent stack.
+
+- Get found
+
+- Get leads
+
+- Keep customers
+
+- Master agentPositioning
+
+Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.
+
+- Get foundSearch agent
+
+Technical SEO through to answer engine optimisation, so assistants cite you.
+
+- Get foundContent agent
+
+One strong idea becomes a month of content your team approves, not writes.
+
+- Get foundSocial agent
+
+Posts and threads in your voice, on a calendar that holds.
+
+- Get leadsOutbound agent
+
+The right hundred buyers, researched and reached personally.
+
+- Get leadsConversion agent
+
+Offers, landing pages and funnels, tested and tuned monthly.
+
+- Get leadsLaunch agent
+
+Product and campaign launches sequenced across every channel.
+
+- Get leadsPaid agent
+
+Ad creative and audiences, with the numbers behind them.
+
+- Keep customersCommunity agent
+
+Reddit, forums and groups answered honestly and on time.
+
+- Keep customersMeasurement agent
+
+Tracking wired properly, so next month's budget goes where it worked.
+
+- Keep customersReporting agent
+
+One short monthly read on what shipped and what comes next.
+
+The agent stack as it runs, one engineer reviewing every send. Hover an agent to see what it does.Install one as a one-week sprint.
 
 ### Category and positioning
 

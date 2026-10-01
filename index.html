@@ -95,22 +95,6 @@
   .hero h1 { font-size: clamp(3rem, 7.2vw, 6.6rem); max-width: 15ch; letter-spacing: -0.035em; }
   .hero .lead { max-width: 46ch; }
 
-  /* The wheel: the flywheel as the hero object, drawn in dots by dotfield.js.
-     The labels sit in the figure around it, placed by the script on the rim. */
-  .wheel { position: relative; width: min(100%, 70rem); margin: var(--space-band) auto 0; }
-  .wheel__stage { position: relative; width: 100%; aspect-ratio: 2 / 1; max-height: 36rem; }
-  .wheel__labels { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
-  .wheel__labels li { position: absolute; white-space: nowrap; }
-  .wheel__labels li.is-top { transform: translate(-50%, -100%) translateY(-22px); text-align: center; }
-  .wheel__labels li.is-bottom { transform: translate(-50%, 0) translateY(24px); text-align: center; }
-  .wheel__labels li.is-right { transform: translate(0, -50%) translateX(26px); text-align: left; }
-  .wheel__labels li.is-left { transform: translate(-100%, -50%) translateX(-26px); text-align: right; }
-  .wheel__labels .small { display: block; margin-bottom: 2px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
-  .wheel__labels b { color: var(--fg); font-size: var(--t-label); font-weight: 500; }
-  .wheel figcaption { max-width: 60ch; margin: var(--s-5) auto 0; color: var(--soft); font-size: var(--t-eyebrow); letter-spacing: 0.06em; text-align: center; }
-  @media (max-width: 720px) { .wheel__labels { display: none; } .wheel__stage { aspect-ratio: 1.35 / 1; } }
-  @media (max-width: 520px) { .tag__more { display: none; } .hero .orb--warm { --a: 0.06; } }
-
   /* The manifesto: one statement at display size, centred, lit as it is read */
   main #why .stack { max-width: 56rem; margin-inline: auto; text-align: center; }
   main #why .stack h2 { font-size: clamp(2.5rem, 4.6vw, 4.25rem); max-width: 20ch; margin-inline: auto; }
@@ -123,10 +107,10 @@
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/texture.css?v=4">
+<link rel="stylesheet" href="/assets/texture.css?v=5">
 <script src="/assets/motion.js" defer></script>
-<script src="/assets/dotfield.js?v=4" defer></script>
-<script src="/assets/alive.js?v=4" defer></script>
+<script src="/assets/dotfield.js?v=5" defer></script>
+<script src="/assets/alive.js?v=5" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -193,9 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="site-header__brand-text">Flow AI.</span>
     </a>
     <nav class="site-header__nav" aria-label="Primary navigation">
-      <a href="/sprints/">What we do</a>
-      <a href="/#process">How it works</a>
-      <a href="/work.html">Proof</a>
+      <a href="/sprints/">How it works</a>
       <a href="/blog/">Guides</a>
       <a href="/about.html">About</a>
       <a class="site-header__cta" href="/contact.html">Get a free audit</a>
@@ -209,7 +191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="orb orb--warm" style="--x: 50%; --y: 98%; --r: 80rem; --a: 0.09" aria-hidden="true"></div>
       <div class="wrap">
         <div class="stack">
-          <p class="eyebrow tag">AI marketing systems<span class="tag__more"> · Auckland, worldwide</span></p>
+          <p class="eyebrow tag">AI marketing systems<span class="tag__more">· Auckland, worldwide</span></p>
           <h1 id="hero-title" data-words>Marketing that compounds.</h1>
           <p class="lead">Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.</p>
           <div class="cta-row">
@@ -217,16 +199,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="btn btn-secondary" href="/work.html">See it running</a>
           </div>
         </div>
-        <figure class="wheel">
-          <div class="wheel__stage" data-dotfield="wheel"></div>
-          <ul class="wheel__labels" aria-label="The five stages of the Flow AI flywheel">
-            <li><span class="small">01 · Aim</span><b>Positioning</b></li>
-            <li><span class="small">02 · Get found</span><b>AI search</b></li>
-            <li><span class="small">03 · Earn belief</span><b>Content engine</b></li>
-            <li><span class="small">04 · Open doors</span><b>Outbound</b></li>
-            <li><span class="small">05 · Learn</span><b>Analytics</b></li>
+<figure class="system">
+          <div class="system__stage" data-dotfield="system"></div>
+          <ul class="system__arcs" aria-hidden="true"><li>Get found</li><li>Get leads</li><li>Keep customers</li></ul>
+          <ul class="system__agents" aria-label="The Flow AI agent team: a master agent, ten specialist agents, and a marketing engineer reviewing every send">
+            <li class="is-core"><b>Master agent</b><span class="small">Positioning</span><p>Holds who you sell to, what to say and where the budget goes, and briefs every other agent from it.</p></li>
+            <li data-group="found"><span class="small">Get found</span><b>Search agent</b><p>Technical SEO through to answer engine optimisation, so assistants cite you.</p></li>
+            <li data-group="found"><span class="small">Get found</span><b>Content agent</b><p>One strong idea becomes a month of content your team approves, not writes.</p></li>
+            <li data-group="found"><span class="small">Get found</span><b>Social agent</b><p>Posts and threads in your voice, on a calendar that holds.</p></li>
+            <li data-group="leads"><span class="small">Get leads</span><b>Outbound agent</b><p>The right hundred buyers, researched and reached personally.</p></li>
+            <li data-group="leads"><span class="small">Get leads</span><b>Conversion agent</b><p>Offers, landing pages and funnels, tested and tuned monthly.</p></li>
+            <li data-group="leads"><span class="small">Get leads</span><b>Launch agent</b><p>Product and campaign launches sequenced across every channel.</p></li>
+            <li data-group="leads"><span class="small">Get leads</span><b>Paid agent</b><p>Ad creative and audiences, with the numbers behind them.</p></li>
+            <li data-group="keep"><span class="small">Keep customers</span><b>Community agent</b><p>Reddit, forums and groups answered honestly and on time.</p></li>
+            <li data-group="keep"><span class="small">Keep customers</span><b>Measurement agent</b><p>Tracking wired properly, so next month's budget goes where it worked.</p></li>
+            <li data-group="keep"><span class="small">Keep customers</span><b>Reporting agent</b><p>One short monthly read on what shipped and what comes next.</p></li>
           </ul>
-          <figcaption class="small">One wheel, five stages: aim, get found, earn belief, open doors, learn. Every turn compounds. <a class="text-link" href="/sprints/#flywheel">Install one stage as a one-week sprint</a>.</figcaption>
+          <figcaption class="small">One engineer reviews every send before it reaches a customer. <span class="system__hint">Hover an agent to see what it does.</span> <a class="text-link" href="/sprints/">Install one as a one-week sprint</a>.</figcaption>
         </figure>
       </div>
     </section>
