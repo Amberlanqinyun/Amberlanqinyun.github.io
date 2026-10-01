@@ -30,6 +30,7 @@ PAGES = [
     ("work/content-engine.html", "Case study"),
     ("work/geo-seo-toolkit.html", "Case study"),
     ("about.html", "Page"),
+    ("manifesto.html", "Page"),
     ("contact.html", "Page"),
 ]
 
