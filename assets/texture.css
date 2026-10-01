@@ -49,9 +49,20 @@
   pointer-events: none;
   background: radial-gradient(
     circle,
-    rgba(250, 248, 243, var(--a, 0.07)) 0%,
-    rgba(250, 248, 243, calc(var(--a, 0.07) * 0.35)) 38%,
+    rgba(250, 248, 243, var(--a, 0.09)) 0%,
+    rgba(250, 248, 243, calc(var(--a, 0.09) * 0.35)) 38%,
     rgba(250, 248, 243, 0) 70%
+  );
+}
+/* The warm variant: a horizon of amber under the hero, the one place the
+   accent is allowed to be light rather than a button. The footer set the
+   precedent with its rising glow. */
+.orb--warm {
+  background: radial-gradient(
+    circle,
+    rgba(228, 164, 60, var(--a, 0.1)) 0%,
+    rgba(228, 164, 60, calc(var(--a, 0.1) * 0.4)) 36%,
+    rgba(228, 164, 60, 0) 70%
   );
 }
 
@@ -144,7 +155,7 @@
    allow motion; everyone else reads the settled colour. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .fill-on-scroll, .fill-prose > p:not(.small) {
+    .fill-on-scroll:not([data-words="ready"]), .fill-prose > p:not(.small) {
       background: linear-gradient(to bottom, var(--fill-to, var(--fg)) 46%, var(--fill-from, rgba(250, 248, 243, 0.28)) 54%) 0 100% / 100% 200% no-repeat;
       -webkit-background-clip: text;
       background-clip: text;
@@ -164,8 +175,11 @@
    blocked script shows the page at rest, never hidden. */
 
 @media (prefers-reduced-motion: no-preference) {
-  /* The hero arrives. Words rise out of a clipped line in reading order,
-     the lead and the buttons follow, the portrait settles into place. */
+  /* Headlines arrive line by line, top to bottom: every word on a line
+     shares one index, so a line rises as a unit and the next follows.
+     The hero does it on load; section headings do it as they scroll in
+     (held paused while their reveal block is still hidden). The lead and
+     the buttons follow, the portrait settles into place. */
   .js [data-words] .w {
     display: inline-block; overflow: hidden; vertical-align: top;
     padding-bottom: 0.12em; margin-bottom: -0.12em;
@@ -173,8 +187,9 @@
   .js [data-words] .w > span {
     display: inline-block; transform: translateY(112%);
     animation: texture-rise 880ms var(--ease) forwards;
-    animation-delay: calc(var(--i, 0) * 70ms + 90ms);
+    animation-delay: calc(var(--i, 0) * 130ms + 60ms);
   }
+  .js .is-hidden [data-words] .w > span { animation-play-state: paused; }
   /* until alive.js has split the words, hold the heading back; if the
      script never arrives, show it anyway after a beat */
   .js [data-words]:not([data-words="ready"]) { opacity: 0; animation: texture-fadein 300ms ease 2.4s forwards; }
@@ -225,4 +240,50 @@
 /* Glass answers the cursor: the light inside the panel follows it */
 .glass::after {
   background: radial-gradient(280px circle at var(--mx, 18%) var(--my, 0%), rgba(250, 248, 243, 0.11), transparent 70%);
+}
+
+/* ---- Ticker: a slow, continuous line of proof under the hero ------------
+   alive.js builds the loop from one list, so the text exists once for
+   readers and crawlers; the copies are hidden from assistive tech. */
+.ticker {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.ticker__inner { display: flex; width: max-content; }
+.ticker__group { display: flex; flex: none; }
+.ticker .hero-proof {
+  flex: none; flex-wrap: nowrap; justify-content: flex-start;
+  margin: 0; padding-inline: calc(var(--s-6) / 2);
+}
+.ticker .hero-proof li { white-space: nowrap; }
+.ticker .hero-proof li:first-child::before {
+  content: ""; position: absolute; left: calc(var(--s-6) / -2); top: 50%;
+  width: 3px; height: 3px; border-radius: 50%; background: var(--hair-strong); transform: translateY(-50%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ticker__inner { animation: texture-ticker var(--ticker-duration, 48s) linear infinite; }
+  .ticker:hover .ticker__inner { animation-play-state: paused; }
+  @keyframes texture-ticker { to { transform: translateX(-50%); } }
+}
+
+/* ---- Scroll-fill on a split headline ------------------------------------
+   A heading that has been split into words for the entrance carries its
+   text inside inline-block spans, which a text-clip on the heading cannot
+   see. So the fill moves onto each word: every word on a line sits at the
+   same height and so lights at the same moment, the next line follows, and
+   the rise and the fill run together on the same span. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .js .fill-on-scroll[data-words="ready"] .w > span {
+      background: linear-gradient(to bottom, var(--fill-to, var(--fg)) 46%, var(--fill-from, rgba(250, 248, 243, 0.28)) 54%) 0 100% / 100% 200% no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: texture-rise 880ms var(--ease) forwards, texture-scrollfill linear both;
+      animation-delay: calc(var(--i, 0) * 130ms + 60ms), 0s;
+      animation-timeline: auto, view();
+      animation-range: normal, entry 30% cover 45%;
+    }
+  }
 }

@@ -26,6 +26,7 @@
   var TAU = Math.PI * 2;
   var D2R = Math.PI / 180;
   var INK = 'rgb(250, 248, 243)';
+  var AMBER = 'rgb(228, 164, 60)';
 
   /* One surface per placement. Angles in degrees, positions as fractions of
      the host, dot radii in CSS pixels, alphas 0..1. */
@@ -37,18 +38,20 @@
       cols: 160, rows: 64, amp: 0.26, f0: 1.3, f1: 0.9,
       yaw: -14, pitch: 34, cam: 2.3, fov: 0.95, rotate: -9,
       cx: 0.5, cy: 0.4, dx: 0.04, dy: 0, span: 8, depth: 5.6,
-      rNear: 2.8, rFar: 0.45, aNear: 0.9, aFar: 0.1, crest: 0.8, speed: 0.04,
-      top: [0, 0.12], bottom: [0.9, 1], pad: 32, fall: 120
+      rNear: 3.0, rFar: 0.5, aNear: 1, aFar: 0.12, crest: 0.8, speed: 0.04,
+      top: [0, 0.12], bottom: [0.9, 1], pad: 32, fall: 120,
+      signal: { row: 0.62, speed: 0.045 }
     },
     /* The split hero on the home page: short and wide, type left, portrait
        right. The surface is a ground under both, seen from a little higher,
        its bright edge running along the foot of the section. */
     'hero-wide': {
-      cols: 170, rows: 54, amp: 0.24, f0: 1.3, f1: 0.9,
+      cols: 190, rows: 60, amp: 0.26, f0: 1.3, f1: 0.9,
       yaw: -10, pitch: 32, cam: 2.4, fov: 0.9, rotate: -4,
-      cx: 0.5, cy: 0.74, dx: 0.02, dy: 0, span: 9.5, depth: 3.6,
-      rNear: 2.7, rFar: 0.45, aNear: 0.9, aFar: 0.08, crest: 0.8, speed: 0.04,
-      top: [0.06, 0.32], bottom: [0.92, 1], pad: 28, fall: 110
+      cx: 0.5, cy: 0.72, dx: 0.02, dy: 0, span: 9.5, depth: 3.8,
+      rNear: 3.0, rFar: 0.5, aNear: 1, aFar: 0.12, crest: 0.8, speed: 0.04,
+      top: [0.04, 0.3], bottom: [0.92, 1], pad: 28, fall: 110,
+      signal: { row: 0.58, speed: 0.04 }
     },
     /* The closer: a floor of dots under the one amber button, rising to a
        horizon just behind it and dying out before the footer. */
@@ -56,8 +59,9 @@
       cols: 150, rows: 48, amp: 0.22, f0: 1.3, f1: 0.9,
       yaw: -8, pitch: 26, cam: 2.4, fov: 0.9, rotate: 0,
       cx: 0.5, cy: 1.02, dx: 0, dy: 0, span: 9.5, depth: 2.6,
-      rNear: 2.7, rFar: 0.4, aNear: 0.85, aFar: 0.04, crest: 0.8, speed: 0.035,
-      top: [0.5, 0.74], bottom: [0.96, 1], pad: 24, fall: 90
+      rNear: 2.8, rFar: 0.45, aNear: 0.9, aFar: 0.06, crest: 0.8, speed: 0.035,
+      top: [0.5, 0.74], bottom: [0.96, 1], pad: 24, fall: 90,
+      signal: { row: 0.5, speed: 0.05 }
     }
   };
 
@@ -179,10 +183,11 @@
     var zone = this.zone, pad = p.pad, fall = p.fall;
     var alpha = this.alpha || (this.alpha = new Float32Array(n));
     var rad = this.rad || (this.rad = new Float32Array(n));
+    var mask = this.mask || (this.mask = new Float32Array(n));
 
     for (i = 0; i < n; i++) {
       var x = sx[i], y = sy[i];
-      if (x < -6 || y < -6 || x > w + 6 || y > h + 6) { alpha[i] = 0; continue; }
+      if (x < -6 || y < -6 || x > w + 6 || y > h + 6) { alpha[i] = 0; mask[i] = 0; continue; }
       var near = (zmax - zc[i]) / zr;
       var crest = (yy[i] - ymin) / yr;
       var a = p.aFar + (p.aNear - p.aFar) * Math.pow(near, 1.3) * (0.45 + p.crest * 0.55 * crest);
@@ -198,13 +203,14 @@
         }
       }
       var fy = y / h;
-      a *= smooth(fy, p.top[0], p.top[1]) * (1 - smooth(fy, p.bottom[0], p.bottom[1]));
+      var m = smooth(fy, p.top[0], p.top[1]) * (1 - smooth(fy, p.bottom[0], p.bottom[1]));
       if (zone) {
         var ddx = Math.max(0, (zone.l - pad) - x, x - (zone.r + pad));
         var ddy = Math.max(0, (zone.t - pad) - y, y - (zone.b + pad));
-        a *= smooth(Math.sqrt(ddx * ddx + ddy * ddy), 0, fall);
+        m *= smooth(Math.sqrt(ddx * ddx + ddy * ddy), 0, fall);
       }
-      alpha[i] = a;
+      alpha[i] = a * m;
+      mask[i] = m;
       rad[i] = rr;
     }
 
@@ -219,6 +225,33 @@
       if (alpha[i] < 0.02) continue;
       ctx.globalAlpha = alpha[i];
       ctx.beginPath(); ctx.arc(sx[i], sy[i], rad[i], 0, TAU); ctx.fill();
+    }
+
+    /* The live signal: one amber point riding a crest of the surface with
+       a short tail, the site's "amber is the live signal" idea made literal.
+       It respects the same mask as the dots, so it never crosses the type. */
+    if (p.signal) {
+      var row = Math.min(rows - 1, Math.round(rows * p.signal.row));
+      var prog = ((this.t * p.signal.speed) % 1 + 1) % 1;
+      var head = prog * (cols - 1);
+      ctx.fillStyle = AMBER;
+      for (var k = 0; k < 9; k++) {
+        var cpos = head - k * 1.3;
+        if (cpos < 0) break;
+        var ci = Math.floor(cpos), fr = cpos - ci;
+        var i0 = row * cols + ci, i1 = Math.min(i0 + 1, row * cols + cols - 1);
+        var mk = Math.min(mask[i0], mask[i1]);
+        if (mk < 0.04) continue;
+        var ax = sx[i0] + (sx[i1] - sx[i0]) * fr, ay = sy[i0] + (sy[i1] - sy[i0]) * fr;
+        var fade = 1 - k / 9;
+        if (k === 0) {
+          ctx.globalAlpha = mk * 0.35;
+          ctx.beginPath(); ctx.arc(ax, ay, 11, 0, TAU); ctx.fill();
+        }
+        ctx.globalAlpha = mk * fade;
+        ctx.beginPath(); ctx.arc(ax, ay, (k === 0 ? 3.4 : 2.2) * fade + 0.6, 0, TAU); ctx.fill();
+      }
+      ctx.fillStyle = INK;
     }
     ctx.globalAlpha = 1;
   };

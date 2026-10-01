@@ -119,14 +119,20 @@
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/texture.css">
+<link rel="stylesheet" href="/assets/texture.css?v=3">
 <style>
   /* The closer: amber keeps its one job, and the ground lights it */
   #contact .btn-primary { box-shadow: 0 18px 50px -18px rgba(228, 164, 60, 0.55); }
+  /* The proof line under the hero runs as a slow ticker */
+  .clients [data-ticker] { margin-top: var(--s-4); }
+  /* The manifesto: one statement at display size, centred, lit as it is read */
+  main #why .stack { max-width: 56rem; margin-inline: auto; text-align: center; }
+  main #why .stack h2 { font-size: clamp(2.5rem, 4.6vw, 4.25rem); max-width: 20ch; margin-inline: auto; }
+  main #why .stack .lead { margin-inline: auto; }
 </style>
 <script src="/assets/motion.js" defer></script>
-<script src="/assets/dotfield.js" defer></script>
-<script src="/assets/alive.js" defer></script>
+<script src="/assets/dotfield.js?v=3" defer></script>
+<script src="/assets/alive.js?v=3" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -205,8 +211,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main id="main">
     <section class="hero centered" aria-labelledby="hero-title" data-dotfield="hero-wide">
-      <div class="orb" style="--x: 76%; --y: 40%; --r: 60rem; --a: 0.07" aria-hidden="true"></div>
-      <div class="orb" style="--x: 8%; --y: 90%; --r: 40rem; --a: 0.04" aria-hidden="true"></div>
+      <div class="orb" style="--x: 76%; --y: 40%; --r: 60rem; --a: 0.11" aria-hidden="true"></div>
+      <div class="orb" style="--x: 8%; --y: 90%; --r: 40rem; --a: 0.06" aria-hidden="true"></div>
+      <div class="orb orb--warm" style="--x: 50%; --y: 104%; --r: 80rem; --a: 0.11" aria-hidden="true"></div>
       <div class="wrap hero-split">
         <div class="stack" data-dotfield-clear>
           <h1 id="hero-title" data-words>Marketing that compounds.</h1>
@@ -237,16 +244,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://lullaby.co.nz" target="_blank" rel="noopener">Lullaby<span>.co.nz</span></a>
           <a href="https://resaido.com" target="_blank" rel="noopener">Resaido<span>.com</span></a>
         </p>
-        <ul class="hero-proof">
-          <li>Ten years in marketing, three building the systems</li>
-          <li>No agency retainer, no new hire</li>
-          <li>A human reviews every send</li>
-        </ul>
+        <div data-ticker>
+          <ul class="hero-proof">
+            <li>Ten years in marketing, three building the systems</li>
+            <li>No agency retainer, no new hire</li>
+            <li>A human reviews every send</li>
+          </ul>
+        </div>
       </div>
     </aside>
 
     <section id="why" class="centered lit" aria-labelledby="why-title">
-      <div class="orb" style="--x: 16%; --y: 28%; --a: 0.06" aria-hidden="true"></div>
+      <div class="orb" style="--x: 50%; --y: 40%; --r: 70rem; --a: 0.09" aria-hidden="true"></div>
       <div class="wrap">
         <div class="stack reveal">
           <h2 id="why-title" class="fill-on-scroll">You already know AI works. It still is not running your marketing.</h2>
@@ -270,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section id="offer" class="sheet" aria-labelledby="offer-title">
-      <div class="orb" style="--x: 50%; --y: 46%; --r: 64rem; --a: 0.06" aria-hidden="true"></div>
+      <div class="orb" style="--x: 50%; --y: 46%; --r: 64rem; --a: 0.09" aria-hidden="true"></div>
       <div class="wrap">
         <div class="stack reveal centered">
           <p class="eyebrow tag">What Flow does</p>
@@ -469,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section id="proof" class="centered lit" aria-labelledby="proof-title">
-      <div class="orb" style="--x: 84%; --y: 30%; --a: 0.06" aria-hidden="true"></div>
+      <div class="orb" style="--x: 84%; --y: 30%; --a: 0.09" aria-hidden="true"></div>
       <div class="wrap">
         <div class="stack reveal">
           <p class="eyebrow tag">Proof</p>
@@ -553,7 +562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section class="contact centered" id="contact" aria-labelledby="contact-title" data-dotfield="closer">
-      <div class="orb" style="--x: 50%; --y: 58%; --r: 60rem; --a: 0.055" aria-hidden="true"></div>
+      <div class="orb" style="--x: 50%; --y: 58%; --r: 60rem; --a: 0.08" aria-hidden="true"></div>
       <div class="wrap">
         <div class="stack reveal" data-dotfield-clear>
           <h2 id="contact-title">Start with a free audit.</h2>

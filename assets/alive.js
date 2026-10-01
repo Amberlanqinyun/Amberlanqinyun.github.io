@@ -1,11 +1,14 @@
 /* Flow AI life layer.
 
-   Three small jobs, all decorative, all fail-safe:
-   1. Split a [data-words] heading into words so the entrance in
-      texture.css can raise them one at a time. Text content is unchanged.
-   2. Hand the cursor position to glass panels, so the light inside each
+   Four small jobs, all decorative, all fail-safe:
+   1. Split headlines into words, then group the words by line, so the
+      entrance in texture.css can raise each line as a unit, top to bottom.
+      The hero h1 carries data-words; every h2 in main is taken too. Text
+      content is unchanged, and a heading with inline markup is left alone.
+   2. Build the ticker loop from a single list ([data-ticker]).
+   3. Hand the cursor position to glass panels, so the light inside each
       one follows the pointer.
-   3. Ease [data-parallax] elements a few pixels against the pointer, so
+   4. Ease [data-parallax] elements a few pixels against the pointer, so
       the hero has depth.
 
    The inline flag in <head> (html.js) is what lets the entrance states
@@ -15,9 +18,13 @@
   'use strict';
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slice = function (list) { return Array.prototype.slice.call(list); };
 
-  Array.prototype.slice.call(document.querySelectorAll('[data-words]')).forEach(function (el) {
+  /* ---------- headlines, line by line ---------- */
+
+  function splitLines(el) {
     if (el.getAttribute('data-words') === 'ready') return;
+    if (el.children.length) { el.setAttribute('data-words', 'ready'); return; }
     var words = el.textContent.trim().split(/\s+/);
     el.textContent = '';
     words.forEach(function (word, i) {
@@ -25,15 +32,63 @@
       outer.className = 'w';
       var inner = document.createElement('span');
       inner.textContent = word;
-      inner.style.setProperty('--i', String(i));
       outer.appendChild(inner);
       el.appendChild(outer);
       if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
     });
+    var line = -1, lastTop = null;
+    slice(el.querySelectorAll('.w')).forEach(function (w) {
+      var top = w.offsetTop;
+      if (top !== lastTop) { line += 1; lastTop = top; }
+      w.firstChild.style.setProperty('--i', String(line));
+    });
     el.setAttribute('data-words', 'ready');
+  }
+
+  function prepareHeadlines() {
+    var targets = slice(document.querySelectorAll('[data-words], main h2'));
+    targets.forEach(function (el) {
+      if (!el.hasAttribute('data-words')) el.setAttribute('data-words', '');
+      splitLines(el);
+    });
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(prepareHeadlines, prepareHeadlines);
+  } else {
+    prepareHeadlines();
+  }
+
+  /* ---------- ticker ---------- */
+
+  slice(document.querySelectorAll('[data-ticker]')).forEach(function (host) {
+    var list = host.firstElementChild;
+    if (!list || !list.children.length) return;
+    var first = list.children[0].getBoundingClientRect();
+    var last = list.children[list.children.length - 1].getBoundingClientRect();
+    var width = Math.max(1, last.right - first.left + 48);
+    var copies = Math.max(2, Math.ceil(window.innerWidth * 1.1 / width));
+    var inner = document.createElement('div');
+    inner.className = 'ticker__inner';
+    function group(withOriginal) {
+      var g = document.createElement('div');
+      g.className = 'ticker__group';
+      for (var i = 0; i < copies; i++) {
+        var node = (withOriginal && i === 0) ? list : list.cloneNode(true);
+        if (node !== list) node.setAttribute('aria-hidden', 'true');
+        g.appendChild(node);
+      }
+      return g;
+    }
+    inner.appendChild(group(true));
+    inner.appendChild(group(false));
+    host.appendChild(inner);
+    host.classList.add('ticker');
+    host.style.setProperty('--ticker-duration', Math.round(copies * width / 38) + 's');
   });
 
   if (reduced || !window.matchMedia('(pointer: fine)').matches) return;
+
+  /* ---------- glass spotlight ---------- */
 
   document.addEventListener('pointermove', function (e) {
     var card = e.target && e.target.closest ? e.target.closest('.glass') : null;
@@ -43,7 +98,9 @@
     card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
   }, { passive: true });
 
-  var items = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  /* ---------- parallax ---------- */
+
+  var items = slice(document.querySelectorAll('[data-parallax]'));
   if (!items.length) return;
   var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
   function step() {
