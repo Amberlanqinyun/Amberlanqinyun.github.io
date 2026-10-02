@@ -236,6 +236,17 @@
 .system__agents li.is-core b { font-size: var(--lead); font-weight: 560; letter-spacing: -0.02em; }
 .system__agents li.is-core .small { display: block; margin-top: 4px; color: var(--soft); font-family: var(--mono); letter-spacing: 0.12em; }
 .system__agents li.is-core { border-radius: calc(var(--radius) + 8px); }
+/* Agent numbers and section counts, in the annotation layer */
+.agent-num { font-family: var(--mono); font-size: 10px; font-style: normal; font-weight: 400; letter-spacing: 0.08em; color: var(--soft); opacity: 0.75; }
+.system__arcs li[data-count]::after { content: " \00b7  " attr(data-count); color: var(--soft); opacity: 0.7; }
+/* The build: while the figure assembles, each label waits for its node */
+.js .hero .system.is-staged .system__agents, .js .hero .system.is-staged .system__arcs, .js .hero .system.is-staged .dotfield { animation: none; opacity: 1; }
+.system.is-staged .system__agents li, .system.is-staged .system__arcs li {
+  transition: opacity 640ms cubic-bezier(0.22, 1, 0.36, 1), translate 760ms cubic-bezier(0.22, 1, 0.36, 1), filter 640ms ease;
+}
+@media (min-width: 721px) {
+  .system.is-staged .system__agents li:not(.is-in), .system.is-staged .system__arcs li:not(.is-in) { opacity: 0; translate: 0 6px; filter: blur(3px); }
+}
 .system__agents li.is-core::before { background: rgba(14, 14, 13, 0.94); transform: scale(0.94); }
 .system__agents li.is-core.is-active::before { transform: scale(1); }
 .system__agents li.is-core.is-active .agent-ico { transform: rotate(90deg); }
@@ -244,7 +255,7 @@
   .system__arcs, .system__hint { display: none; }
   .system__agents { position: static; display: grid; gap: var(--s-3); margin-top: var(--s-6); text-align: left; }
   .system__agents li, .system__agents li.is-top, .system__agents li.is-bottom, .system__agents li.is-right, .system__agents li.is-left {
-    position: static; transform: none; max-width: none; margin: 0; padding: var(--s-4) 0; border: 0; border-top: 1px solid var(--hair); text-align: left;
+    position: static; transform: none; max-width: none; margin: 0; padding: var(--s-4) 0; border: 0; border-top: 1px solid var(--hair); border-radius: 0; text-align: left;
   }
   .system__agents li.is-left b { flex-direction: row; }
   .system__agents li .small, .system__agents li p { display: block; }

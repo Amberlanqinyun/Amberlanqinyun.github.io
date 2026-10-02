@@ -270,7 +270,14 @@
     this.core = null; this.agents = [];
     items.forEach(function (li) { if (li.classList.contains('is-core')) self.core = li; else self.agents.push(li); });
     this.arcs = fig ? Array.prototype.slice.call(fig.querySelectorAll('.system__arcs > li')) : [];
-    this.active = null;
+    this.active = null; this.fps60 = true;
+    if (fig && !reduced) fig.classList.add('is-staged');
+    /* number the agents in reading order, in the annotation layer */
+    this.agents.forEach(function (li, n) {
+      var b = li.querySelector('b'); if (!b || b.querySelector('.agent-num')) return;
+      var num = document.createElement('i'); num.className = 'agent-num'; num.setAttribute('aria-hidden', 'true');
+      num.textContent = (n < 9 ? '0' : '') + (n + 1); b.appendChild(num);
+    });
     this.canvas = document.createElement('canvas');
     this.canvas.className = 'dotfield';
     this.canvas.setAttribute('aria-hidden', 'true');
@@ -307,7 +314,7 @@
     var rect = this.host.getBoundingClientRect(), self = this;
     this.w = Math.max(1, Math.round(rect.width));
     this.h = Math.max(1, Math.round(rect.height));
-    this.dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.canvas.width = Math.round(this.w * this.dpr);
     this.canvas.height = Math.round(this.h * this.dpr);
     this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
@@ -324,10 +331,12 @@
     order.forEach(function (g) {
       var sp = SPANS[g] || [0, 120], list = byGroup[g];
       self.groupSpans.push({ key: g, start: sp[0] * D2R, span: sp[1] * D2R });
+      var gi = self.groupSpans.length - 1;
+      if (self.arcs[gi]) self.arcs[gi].setAttribute('data-count', list.length);
       list.forEach(function (li, i) {
         var th = (sp[0] + (i + 0.5) * sp[1] / list.length) * D2R;
         var x = self.cx + self.R * Math.cos(th), y = self.cy + self.R * self.tilt * Math.sin(th);
-        self.nodes.push({ li: li, th: th, x: x, y: y, g: g });
+        self.nodes.push({ li: li, th: th, x: x, y: y, g: g, gi: gi, k: i });
         li.style.left = x.toFixed(1) + 'px'; li.style.top = y.toFixed(1) + 'px';
         var s = Math.sin(th), c = Math.cos(th);
         li.classList.remove('is-top', 'is-right', 'is-bottom', 'is-left');
@@ -344,42 +353,62 @@
     this.draw();
   };
 
+  /* Easing for the build and the packets */
+  function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function easeOut(x) { x = clamp01(x); return 1 - (1 - x) * (1 - x) * (1 - x); }
+  function easeInOut(x) { x = clamp01(x); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+  var LAP = 0.06, TRIP = 1.8, STAMP = 0.8;
+
   System.prototype.draw = function () {
     var ctx = this.ctx, w = this.w, h = this.h, R = this.R, tilt = this.tilt, cx = this.cx, cy = this.cy, t = this.t;
     var active = this.active, coreActive = !!active && active === this.core, activeNode = null, activeGroup = null, i, j, nd;
     if (active && !coreActive) for (i = 0; i < this.nodes.length; i++) if (this.nodes[i].li === active) { activeNode = this.nodes[i]; activeGroup = activeNode.g; }
+    /* the build: the figure assembles in the order the system works. The
+       master settles, its briefs draw out, the sections are ruled, each
+       outcome's agents arrive in turn, and last the review rim closes. */
+    if (this.bornT == null && !reduced) { var hr = this.host.getBoundingClientRect(); if (hr.top + hr.height * 0.35 < window.innerHeight) this.bornT = t; }
+    var bt = reduced ? 99 : this.bornT == null ? -1 : t - this.bornT - 0.2;
+    function k(start, dur) { return easeOut((bt - start) / dur); }
     ctx.clearRect(0, 0, w, h);
     var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.9);
     g.addColorStop(0, 'rgba(250, 248, 243, 0.1)'); g.addColorStop(1, 'rgba(250, 248, 243, 0)');
-    ctx.globalAlpha = 1; ctx.fillStyle = g;
+    ctx.globalAlpha = k(0, 1.4); ctx.fillStyle = g;
     ctx.beginPath(); ctx.ellipse(cx, cy, R * 1.2, R * 1.2 * tilt, 0, 0, TAU); ctx.fill();
     ctx.fillStyle = INK;
     var lit = this.lx !== null, LR = 150, lx = this.lx, ly = this.ly;
     function dot(x, y, r, a) {
       if (a < 0.02) return;
-      if (lit) { var ex = x - lx, ey = y - ly, dd = ex * ex + ey * ey; if (dd < LR * LR) { var k = 1 - Math.sqrt(dd) / LR; k *= k; a += (1 - a) * k * 0.7; r *= 1 + 0.6 * k; } }
+      if (lit) { var ex = x - lx, ey = y - ly, dd = ex * ex + ey * ey; if (dd < LR * LR) { var kk = 1 - Math.sqrt(dd) / LR; kk *= kk; a += (1 - a) * kk * 0.7; r *= 1 + 0.6 * kk; } }
       ctx.globalAlpha = a > 1 ? 1 : a; ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.fill();
     }
+    function ring(x, y, r, a, color) {
+      if (a < 0.02) return;
+      ctx.strokeStyle = color; ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.stroke(); ctx.strokeStyle = INK;
+    }
+    if (this.core && bt >= 0.3) this.core.classList.add('is-in');
     /* the master: a disc of rings, turning, breathing */
     var coreR = R * 0.3, rot = t * 0.03 * TAU, breathe = 0.85 + 0.15 * Math.sin(t * 0.5 * TAU);
-    for (var ring = 0; ring < 7; ring++) {
-      var rr = coreR * (0.18 + 0.82 * ring / 6), n = Math.max(8, Math.round(TAU * rr / 7));
-      var ra = (coreActive ? 1 : 0.9 * breathe) * (1 - 0.45 * ring / 6) * (active && !coreActive ? 0.7 : 1);
-      for (j = 0; j < n; j++) { var th = j * TAU / n + rot * (1 + 0.3 * (6 - ring) / 6); dot(cx + rr * Math.cos(th), cy + rr * tilt * Math.sin(th), 1.1 + 0.9 * (1 - ring / 6), ra); }
+    for (var rg = 0; rg < 7; rg++) {
+      var kr = k(0.04 * (6 - rg), 0.9);
+      var rr = coreR * (0.18 + 0.82 * rg / 6) * (0.75 + 0.25 * kr), n = Math.max(8, Math.round(TAU * rr / 7));
+      var ra = kr * (coreActive ? 1 : 0.9 * breathe) * (1 - 0.45 * rg / 6) * (active && !coreActive ? 0.7 : 1);
+      for (j = 0; j < n; j++) { var th = j * TAU / n + rot * (1 + 0.3 * (6 - rg) / 6); dot(cx + rr * Math.cos(th), cy + rr * tilt * Math.sin(th), 1.1 + 0.9 * (1 - rg / 6), ra); }
     }
-    /* the briefs: a pulse running out from the master along every spoke */
+    /* a live brief on the hovered spoke (or every spoke when the master is hovered) */
     for (i = 0; i < this.nodes.length; i++) {
       nd = this.nodes[i];
-      var isA = nd === activeNode, hot = isA || coreActive;
-      var pulse = (t * (hot ? 0.55 : 0.16) + i * 0.13) % 1, f = 0.34 + 0.6 * pulse;
-      dot(cx + (nd.x - cx) * f, cy + (nd.y - cy) * f, isA ? 2.4 : 1.5, hot ? 0.95 : (active ? 0.2 : 0.5));
+      if (!(nd === activeNode || coreActive)) continue;
+      var pulse = (t * 0.55 + i * 0.13) % 1, f = 0.34 + 0.6 * pulse;
+      dot(cx + (nd.x - cx) * f, cy + (nd.y - cy) * f, nd === activeNode ? 2.4 : 1.5, 0.95 * k(2.6, 0.5));
     }
     /* the outcomes: a hairline arc at 0.6R and the outer ring at R, per
        group, drawn as lines with a sparse dotted echo so they read as drafted */
     ctx.strokeStyle = INK; ctx.lineWidth = 0.7;
     for (i = 0; i < this.groupSpans.length; i++) {
       var gs = this.groupSpans[i], gActive = activeGroup === gs.key, gap = 6 * D2R;
-      var a1 = gs.start + gap, a2 = gs.start + gs.span - gap;
+      var ka = k(1.0 + i * 0.18, 0.9);
+      var a1 = gs.start + gap, a2 = a1 + (gs.span - 2 * gap) * ka;
+      if (ka <= 0) continue;
       var cfgs = [[0.6, 0.22], [1, 0.42]];
       for (var c = 0; c < 2; c++) {
         var cr = R * cfgs[c][0];
@@ -391,46 +420,93 @@
         var ta = a1 + (a2 - a1) * j / en, flow = 0.5 + 0.5 * Math.sin(ta * 3 - t * 0.5 * TAU);
         dot(cx + R * Math.cos(ta), cy + R * tilt * Math.sin(ta), 1.1, (active ? (gActive ? 0.7 : 0.15) : 0.35) * flow);
       }
+      if (this.arcs[i] && bt >= 1.3 + i * 0.18) this.arcs[i].classList.add('is-in');
     }
     /* the sections: a solid rule at each boundary between outcomes, from
        the master's edge out past the rim, with a short tick where it lands */
     ctx.lineWidth = 1;
     for (i = 0; i < this.groupSpans.length; i++) {
       var bs = this.groupSpans[i], ba = bs.start, prev = this.groupSpans[(i + this.groupSpans.length - 1) % this.groupSpans.length];
-      var edge = activeGroup === bs.key || activeGroup === prev.key;
-      var bc = Math.cos(ba), bsn = Math.sin(ba), r0 = R * 0.36, r1 = R * 1.12;
+      var edge = activeGroup === bs.key || activeGroup === prev.key, kd = k(0.85 + i * 0.1, 0.8);
+      if (kd <= 0) continue;
+      var bc = Math.cos(ba), bsn = Math.sin(ba), r0 = R * 0.36, r1 = r0 + (R * 1.12 - r0) * kd;
       ctx.globalAlpha = active ? (edge ? 0.7 : 0.22) : 0.45;
       ctx.beginPath(); ctx.moveTo(cx + r0 * bc, cy + r0 * tilt * bsn); ctx.lineTo(cx + r1 * bc, cy + r1 * tilt * bsn); ctx.stroke();
-      var tx = -bsn, ty = bc * tilt, tl = Math.sqrt(tx * tx + ty * ty), tk = 5 / tl, ex = cx + r1 * bc, ey = cy + r1 * tilt * bsn;
+      var tx = -bsn, ty = bc * tilt, tl = Math.sqrt(tx * tx + ty * ty), tk = 5 * kd * kd / tl, ex = cx + r1 * bc, ey = cy + r1 * tilt * bsn;
       ctx.beginPath(); ctx.moveTo(ex - tx * tk, ey - ty * tk); ctx.lineTo(ex + tx * tk, ey + ty * tk); ctx.stroke();
     }
+    /* the spokes, drawn out from the master in order */
     ctx.lineWidth = 0.7;
     for (i = 0; i < this.nodes.length; i++) {
       nd = this.nodes[i];
-      var isA2 = nd === activeNode;
+      var isA2 = nd === activeNode, ks = k(0.5 + i * 0.05, 0.7);
+      if (ks <= 0) continue;
       ctx.globalAlpha = isA2 ? 0.55 : coreActive ? 0.3 : 0.1 * (active ? 0.6 : 1);
-      ctx.beginPath(); ctx.moveTo(cx + (nd.x - cx) * 0.32, cy + (nd.y - cy) * 0.32); ctx.lineTo(cx + (nd.x - cx) * 0.96, cy + (nd.y - cy) * 0.96); ctx.stroke();
+      var s1 = 0.32 + 0.64 * ks;
+      ctx.beginPath(); ctx.moveTo(cx + (nd.x - cx) * 0.32, cy + (nd.y - cy) * 0.32); ctx.lineTo(cx + (nd.x - cx) * s1, cy + (nd.y - cy) * s1); ctx.stroke();
     }
-    /* the agents */
+    /* the agents, arriving outcome by outcome, each with a short leader
+       line out toward its label */
+    var isA;
     for (i = 0; i < this.nodes.length; i++) {
       nd = this.nodes[i]; isA = nd === activeNode;
-      var pz = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.1) * TAU);
+      var ap = 1.2 + nd.gi * 0.24 + nd.k * 0.08, kn = k(ap, 0.5);
+      if (bt >= ap + 0.08) nd.li.classList.add('is-in');
+      if (kn <= 0) continue;
+      var pz = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.1) * TAU), nr = (isA ? 5.5 : 3.6 + 0.6 * pz) * kn;
+      if (kn < 1) ring(nd.x, nd.y, 5 + 14 * kn, 0.4 * (1 - kn), INK);
       if (isA) { ctx.globalAlpha = 0.18; ctx.beginPath(); ctx.arc(nd.x, nd.y, 18, 0, TAU); ctx.fill(); }
-      ctx.globalAlpha = active && !isA && !coreActive ? 0.45 : 0.95;
-      ctx.beginPath(); ctx.arc(nd.x, nd.y, isA ? 5.5 : 3.6 + 0.6 * pz, 0, TAU); ctx.fill();
-      ctx.globalAlpha = 0.9; ctx.lineWidth = 0.7; ctx.beginPath(); ctx.arc(nd.x, nd.y, (isA ? 5.5 : 3.6 + 0.6 * pz) + 5, 0, TAU); ctx.strokeStyle = INK; ctx.globalAlpha = isA ? 0.5 : 0.18; ctx.stroke();
+      ctx.globalAlpha = (active && !isA && !coreActive ? 0.45 : 0.95) * kn;
+      ctx.beginPath(); ctx.arc(nd.x, nd.y, nr, 0, TAU); ctx.fill();
+      ring(nd.x, nd.y, nr + 5, (isA ? 0.5 : 0.18) * kn, INK);
+      var ux = (nd.x - cx) / R, uy = (nd.y - cy) / (R * tilt), ul = Math.sqrt(ux * ux + uy * uy) || 1;
+      ux /= ul; uy /= ul;
+      ctx.globalAlpha = (isA ? 0.5 : 0.22) * kn;
+      ctx.beginPath(); ctx.moveTo(nd.x + ux * (nr + 9), nd.y + uy * (nr + 9)); ctx.lineTo(nd.x + ux * (nr + 17), nd.y + uy * (nr + 17)); ctx.stroke();
+    }
+    /* the work: a brief leaves the master, the agent works it, and the
+       result goes out to the rim timed to meet the review pass, which
+       stamps it in amber as it goes by. Every agent, every lap. */
+    var head = -Math.PI / 2 + ((t * LAP) % 1) * TAU, kp = k(2.8, 0.6), rimR = R * 1.2;
+    if (kp > 0) {
+      for (i = 0; i < this.nodes.length; i++) {
+        nd = this.nodes[i];
+        var dim = (active && nd !== activeNode && !coreActive ? 0.3 : 1) * kp;
+        var phase = (((nd.th + Math.PI / 2) / TAU - t * LAP) % 1 + 1) % 1, rem = phase / LAP, since = (1 - phase) / LAP;
+        var vx = nd.x - cx, vy = nd.y - cy, q, m;
+        if (rem < TRIP) {
+          var p = 1 - rem / TRIP;
+          if (p < 0.5) {
+            q = easeInOut(p / 0.5);
+            for (m = 0; m < 4; m++) { var qm = Math.max(0, q - m * 0.035), fm = 0.32 + 0.68 * qm; dot(cx + vx * fm, cy + vy * fm, 1.9 - m * 0.35, 0.95 * dim * (1 - m / 4)); }
+          } else if (p < 0.62) {
+            var sw = (p - 0.5) / 0.12;
+            ring(nd.x, nd.y, 6 + 9 * easeOut(sw), 0.45 * (1 - sw) * dim, INK);
+          } else {
+            q = easeInOut((p - 0.62) / 0.38);
+            for (m = 0; m < 4; m++) { var qo = Math.max(0, q - m * 0.08), fo = 1 + 0.2 * qo; dot(cx + vx * fo, cy + vy * fo, 1.9 - m * 0.35, 0.95 * dim * (1 - m / 4)); }
+          }
+        }
+        if (since < STAMP) {
+          var ss = since / STAMP, sx = cx + vx * 1.2, sy = cy + vy * 1.2;
+          ctx.lineWidth = 1;
+          ring(sx, sy, 3 + 15 * easeOut(ss), 0.6 * (1 - ss) * dim, AMBER);
+          ctx.lineWidth = 0.7;
+          ctx.fillStyle = AMBER; dot(sx, sy, 2.2, 0.9 * (1 - ss) * dim); ctx.fillStyle = INK;
+        }
+      }
     }
     /* the review pass: the rim, turning, with the amber signal on it */
-    var rimR = R * 1.2;
-    ctx.globalAlpha = active ? 0.08 : 0.14; ctx.lineWidth = 0.7; ctx.setLineDash([2, 6]); ctx.lineDashOffset = -t * 6;
-    ctx.beginPath(); ctx.ellipse(cx, cy, rimR, rimR * tilt, 0, 0, TAU); ctx.stroke(); ctx.setLineDash([]);
-    var head = -Math.PI / 2 + ((t * 0.06) % 1) * TAU;
+    var kr2 = k(1.9, 0.9);
+    ctx.globalAlpha = (active ? 0.08 : 0.14) * kr2; ctx.lineWidth = 0.7; ctx.setLineDash([2, 6]); ctx.lineDashOffset = -t * 6;
+    ctx.beginPath(); ctx.ellipse(cx, cy, rimR, rimR * tilt, 0, -Math.PI / 2, -Math.PI / 2 + TAU * kr2); ctx.stroke(); ctx.setLineDash([]);
+    var kh = k(2.3, 0.7);
     ctx.fillStyle = AMBER;
-    for (var m = 0; m < 16; m++) {
-      var ha = head - m * 0.009 * TAU, fade = 1 - m / 16;
+    for (var mm = 0; mm < 16; mm++) {
+      var ha = head - mm * 0.009 * TAU, fade = 1 - mm / 16;
       var hx = cx + rimR * Math.cos(ha), hy = cy + rimR * tilt * Math.sin(ha);
-      if (m === 0) { ctx.globalAlpha = 0.3; ctx.beginPath(); ctx.arc(hx, hy, 12, 0, TAU); ctx.fill(); }
-      ctx.globalAlpha = fade; ctx.beginPath(); ctx.arc(hx, hy, (m === 0 ? 3.6 : 2.2) * fade + 0.5, 0, TAU); ctx.fill();
+      if (mm === 0) { ctx.globalAlpha = 0.3 * kh; ctx.beginPath(); ctx.arc(hx, hy, 12, 0, TAU); ctx.fill(); }
+      ctx.globalAlpha = fade * kh; ctx.beginPath(); ctx.arc(hx, hy, (mm === 0 ? 3.6 : 2.2) * fade + 0.5, 0, TAU); ctx.fill();
     }
     ctx.fillStyle = INK; ctx.globalAlpha = 1;
   };
@@ -479,13 +555,15 @@
     window.addEventListener('blur', function () { setPointer(null, null); });
   }
 
-  var last = 0;
+  /* The surfaces draw at 30fps; the system draws every frame so its
+     fine motion stays smooth. */
   function tick(now) {
     window.requestAnimationFrame(tick);
-    if (document.hidden || now - last < 33) return;
-    var dt = Math.min(now - last, 100) / 1000;
-    last = now;
+    if (document.hidden) return;
     fields.forEach(function (fl) {
+      if (fl.last && now - fl.last < (fl.fps60 ? 0 : 33)) return;
+      var dt = fl.last ? Math.min(now - fl.last, 100) / 1000 : 0.016;
+      fl.last = now;
       var r = fl.host.getBoundingClientRect();
       if (r.bottom < 0 || r.top > window.innerHeight) return;
       fl.t += dt;
