@@ -289,6 +289,9 @@
       if (self.active) self.active.classList.remove('is-active');
       self.active = li;
       if (li) li.classList.add('is-active');
+      if (fig) { fig.classList.toggle('has-active', !!li); fig.classList.toggle('core-active', !!li && li === self.core); }
+      var grp = li && li.getAttribute('data-group');
+      self.arcs.forEach(function (a, n) { a.classList.toggle('is-quiet', !!grp && !!self.groupSpans[n] && self.groupSpans[n].key !== grp); });
       if (reduced) self.draw();
     }
     items.forEach(function (li) {
@@ -342,6 +345,10 @@
         li.classList.remove('is-top', 'is-right', 'is-bottom', 'is-left');
         li.classList.add(s < -0.72 ? 'is-top' : s > 0.72 ? 'is-bottom' : c > 0 ? 'is-right' : 'is-left');
       });
+    });
+    /* how far each card unfolds: its description's height plus a margin */
+    (this.core ? [this.core] : []).concat(this.agents).forEach(function (li) {
+      var p = li.querySelector('p'); if (p) li.style.setProperty('--drop', (p.offsetHeight + 12) + 'px');
     });
     if (this.core) { this.core.style.left = this.cx + 'px'; this.core.style.top = this.cy + 'px'; }
     this.arcs.forEach(function (li, i) {
@@ -412,7 +419,7 @@
       var cfgs = [[0.6, 0.22], [1, 0.42]];
       for (var c = 0; c < 2; c++) {
         var cr = R * cfgs[c][0];
-        ctx.globalAlpha = cfgs[c][1] * (active ? (gActive ? 1.8 : 0.45) : 1);
+        ctx.globalAlpha = cfgs[c][1] * (active ? (gActive ? 1.8 : 0.3) : 1);
         ctx.beginPath(); ctx.ellipse(cx, cy, cr, cr * tilt, 0, a1, a2); ctx.stroke();
       }
       var en = Math.max(8, Math.round((a2 - a1) * R / 26));
@@ -430,7 +437,7 @@
       var edge = activeGroup === bs.key || activeGroup === prev.key, kd = k(0.85 + i * 0.1, 0.8);
       if (kd <= 0) continue;
       var bc = Math.cos(ba), bsn = Math.sin(ba), r0 = R * 0.36, r1 = r0 + (R * 1.12 - r0) * kd;
-      ctx.globalAlpha = active ? (edge ? 0.7 : 0.22) : 0.45;
+      ctx.globalAlpha = active ? (edge ? 0.7 : 0.14) : 0.45;
       ctx.beginPath(); ctx.moveTo(cx + r0 * bc, cy + r0 * tilt * bsn); ctx.lineTo(cx + r1 * bc, cy + r1 * tilt * bsn); ctx.stroke();
       var tx = -bsn, ty = bc * tilt, tl = Math.sqrt(tx * tx + ty * ty), tk = 5 * kd * kd / tl, ex = cx + r1 * bc, ey = cy + r1 * tilt * bsn;
       ctx.beginPath(); ctx.moveTo(ex - tx * tk, ey - ty * tk); ctx.lineTo(ex + tx * tk, ey + ty * tk); ctx.stroke();
@@ -456,7 +463,7 @@
       var pz = 0.5 + 0.5 * Math.sin((t * 0.16 - i * 0.1) * TAU), nr = (isA ? 5.5 : 3.6 + 0.6 * pz) * kn;
       if (kn < 1) ring(nd.x, nd.y, 5 + 14 * kn, 0.4 * (1 - kn), INK);
       if (isA) { ctx.globalAlpha = 0.18; ctx.beginPath(); ctx.arc(nd.x, nd.y, 18, 0, TAU); ctx.fill(); }
-      ctx.globalAlpha = (active && !isA && !coreActive ? 0.45 : 0.95) * kn;
+      ctx.globalAlpha = (active && !isA && !coreActive ? 0.25 : 0.95) * kn;
       ctx.beginPath(); ctx.arc(nd.x, nd.y, nr, 0, TAU); ctx.fill();
       ring(nd.x, nd.y, nr + 5, (isA ? 0.5 : 0.18) * kn, INK);
       var ux = (nd.x - cx) / R, uy = (nd.y - cy) / (R * tilt), ul = Math.sqrt(ux * ux + uy * uy) || 1;
@@ -471,7 +478,7 @@
     if (kp > 0) {
       for (i = 0; i < this.nodes.length; i++) {
         nd = this.nodes[i];
-        var dim = (active && nd !== activeNode && !coreActive ? 0.3 : 1) * kp;
+        var dim = (active && nd !== activeNode && !coreActive ? 0.12 : 1) * kp;
         var phase = (((nd.th + Math.PI / 2) / TAU - t * LAP) % 1 + 1) % 1, rem = phase / LAP, since = (1 - phase) / LAP;
         var vx = nd.x - cx, vy = nd.y - cy, q, m;
         if (rem < TRIP) {
