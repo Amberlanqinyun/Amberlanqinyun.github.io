@@ -380,7 +380,7 @@
     for (i = 0; i < this.groupSpans.length; i++) {
       var gs = this.groupSpans[i], gActive = activeGroup === gs.key, gap = 6 * D2R;
       var a1 = gs.start + gap, a2 = gs.start + gs.span - gap;
-      var cfgs = [[0.6, 0.22], [1, 0.3]];
+      var cfgs = [[0.6, 0.22], [1, 0.42]];
       for (var c = 0; c < 2; c++) {
         var cr = R * cfgs[c][0];
         ctx.globalAlpha = cfgs[c][1] * (active ? (gActive ? 1.8 : 0.45) : 1);
@@ -392,6 +392,19 @@
         dot(cx + R * Math.cos(ta), cy + R * tilt * Math.sin(ta), 1.1, (active ? (gActive ? 0.7 : 0.15) : 0.35) * flow);
       }
     }
+    /* the sections: a solid rule at each boundary between outcomes, from
+       the master's edge out past the rim, with a short tick where it lands */
+    ctx.lineWidth = 1;
+    for (i = 0; i < this.groupSpans.length; i++) {
+      var bs = this.groupSpans[i], ba = bs.start, prev = this.groupSpans[(i + this.groupSpans.length - 1) % this.groupSpans.length];
+      var edge = activeGroup === bs.key || activeGroup === prev.key;
+      var bc = Math.cos(ba), bsn = Math.sin(ba), r0 = R * 0.36, r1 = R * 1.12;
+      ctx.globalAlpha = active ? (edge ? 0.7 : 0.22) : 0.45;
+      ctx.beginPath(); ctx.moveTo(cx + r0 * bc, cy + r0 * tilt * bsn); ctx.lineTo(cx + r1 * bc, cy + r1 * tilt * bsn); ctx.stroke();
+      var tx = -bsn, ty = bc * tilt, tl = Math.sqrt(tx * tx + ty * ty), tk = 5 / tl, ex = cx + r1 * bc, ey = cy + r1 * tilt * bsn;
+      ctx.beginPath(); ctx.moveTo(ex - tx * tk, ey - ty * tk); ctx.lineTo(ex + tx * tk, ey + ty * tk); ctx.stroke();
+    }
+    ctx.lineWidth = 0.7;
     for (i = 0; i < this.nodes.length; i++) {
       nd = this.nodes[i];
       var isA2 = nd === activeNode;
