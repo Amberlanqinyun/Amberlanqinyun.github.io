@@ -268,3 +268,48 @@
   .short-answer { padding: var(--s-4); }
   .faq__item p { padding-right: 0; }
 }
+
+/* ---------------------------------------------------------------- responsive pass (Oct 2026) */
+/* Headlines hold a sane ceiling on wide screens and a readable floor on phones. */
+.blog-hero h1 { font-size: clamp(2.5rem, 6vw, 4.75rem); max-width: 18ch; text-wrap: balance; }
+/* The art is decoration: a wide band on the article, so the reading starts sooner. */
+.article-figure { aspect-ratio: 21 / 9; }
+/* The collapsed contents box shows it opens. */
+.toc__box summary { align-items: center; }
+@media (max-width: 860px) {
+  .toc__label::after { content: "+"; margin-left: var(--s-3); font-size: 1rem; line-height: 1; transition: transform 200ms var(--ease); }
+  .toc__box[open] .toc__label::after { transform: rotate(45deg); }
+  .toc__left { margin-left: auto; }
+}
+
+@media (max-width: 720px) {
+  .blog-hero, .article-hero { padding-top: calc(var(--space-hero) * 0.62); }
+  .blog-hero { padding-bottom: var(--s-7); }
+  .blog-hero h1 { font-size: clamp(2.25rem, 10vw, 2.75rem); }
+  .blog-hero .lead { font-size: 1.0625rem; }
+
+  /* Topics: one swipeable row instead of a stack of pills. */
+  .topic-links {
+    flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x proximity;
+    margin: var(--s-6) calc(var(--gutter) * -1) 0; padding: 0 var(--gutter) var(--s-2);
+    scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .topic-links::-webkit-scrollbar { display: none; }
+  .topic-links li { flex: 0 0 auto; scroll-snap-align: start; }
+
+  /* Articles read left-aligned on a phone. */
+  .article-hero.centered { text-align: left; }
+  .article-hero .stack { margin-inline: 0; }
+  .article-hero h1 { font-size: clamp(1.9rem, 8.4vw, 2.4rem); max-width: none; margin-inline: 0; }
+  .article-hero .lead { margin-inline: 0; font-size: 1.0625rem; }
+  .byline { justify-content: flex-start; }
+
+  .blog-list { padding-top: var(--s-8); }
+  .post-card--lead .post-card__title { font-size: 1.6rem; }
+  .filter-bar { gap: var(--s-3) var(--s-4); margin-bottom: var(--s-6); }
+  .view-switch { margin-left: auto; }
+  .prose { font-size: 16.5px; }
+  .prose h2 { margin-top: var(--s-9); font-size: 1.5rem; gap: var(--s-3); }
+  .faq > h2 { font-size: 1.5rem; }
+  .related__title { margin-bottom: var(--s-6); }
+}
