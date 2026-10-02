@@ -10,8 +10,8 @@ import math
 import random
 
 INK = "#171715"
-CREAM = "#faf8f3"
-AMBER = "#e4a43c"
+CREAM = "#5f5e5a"   # cream at ~35% over Warm Ink: present, never louder than the title
+AMBER = "#6e5428"   # amber at ~40% over Warm Ink
 W, H = 960, 540
 SW = 7  # stroke width in canvas units (the card shows the canvas at ~0.4x)
 
@@ -288,7 +288,7 @@ def figure_svg(slug, topic):
     r = random.Random(int(hashlib.sha1(slug.encode()).hexdigest()[:8], 16))
     shape = ASSIGN.get(slug) or ALL[int(hashlib.sha1(slug.encode()).hexdigest(), 16) % len(ALL)]
     c = Canvas()
-    s = {zigzag: 520, wave: 560, arch_row: 560, squiggle: 380, confetti: 420, dash_column: 380}.get(shape, 400 if shape in WIDE else 340)
+    s = 0.8 * {zigzag: 520, wave: 560, arch_row: 560, squiggle: 380, confetti: 420, dash_column: 380}.get(shape, 400 if shape in WIDE else 340)
     shape(c, W / 2, H / 2, s, r)
     defs = f"<defs>{''.join(c.defs)}</defs>" if c.defs else ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-hidden="true">'
