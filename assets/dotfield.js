@@ -288,9 +288,15 @@
       li.setAttribute('tabindex', '0');
       li.addEventListener('pointerenter', function () { activate(li); });
       li.addEventListener('pointerleave', function () { if (self.active === li) activate(null); });
-      li.addEventListener('focus', function () { activate(li); });
-      li.addEventListener('blur', function () { if (self.active === li) activate(null); });
-      li.addEventListener('click', function () { activate(self.active === li ? null : li); });
+      li.addEventListener('focusin', function () { activate(li); });
+      li.addEventListener('focusout', function (e) {
+        if (li.contains(e.relatedTarget)) return;
+        if (self.active === li) activate(null);
+      });
+      li.addEventListener('click', function (e) {
+        if (e.target.closest && e.target.closest('a')) return;
+        activate(self.active === li ? null : li);
+      });
     });
     this.resize();
   }

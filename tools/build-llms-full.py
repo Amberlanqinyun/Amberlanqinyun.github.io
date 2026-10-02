@@ -31,6 +31,14 @@ PAGES = [
     ("work/geo-seo-toolkit.html", "Case study"),
     ("about.html", "Page"),
     ("manifesto.html", "Page"),
+    ("templates/index.html", "Page"),
+    ("templates/brand-dna.html", "Template"),
+    ("templates/geo-audit.html", "Template"),
+    ("templates/ai-crawler-check.html", "Template"),
+    ("templates/ai-citability.html", "Template"),
+    ("templates/content-evidence-audit.html", "Template"),
+    ("templates/reddit-opportunities.html", "Template"),
+    ("privacy.html", "Page"),
     ("contact.html", "Page"),
 ]
 

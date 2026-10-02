@@ -1,0 +1,100 @@
+/* Flow AI agent templates: the gallery, the template page, the run form.
+   Built on site.css tokens; hairlines for structure, mono for labels. */
+
+/* ---- Gallery cards ---------------------------------------------------- */
+.tpl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: var(--space-block); text-align: left; }
+.tpl-card {
+  position: relative; display: flex; flex-direction: column; gap: var(--s-4);
+  padding: var(--s-7) var(--s-6); border: 1px solid var(--hair);
+  scroll-margin-top: 96px;
+  transition: border-color 220ms ease, background-color 220ms ease;
+}
+.tpl-grid > .tpl-card + .tpl-card { margin-left: -1px; }
+.tpl-grid > .tpl-card:nth-child(n+4) { margin-top: -1px; }
+.tpl-grid > .tpl-card:nth-child(3n+1) { margin-left: 0; }
+.tpl-card:hover { z-index: 1; border-color: var(--hair-strong); background: rgba(250, 248, 243, 0.02); }
+.tpl-card h3 { margin-top: var(--s-2); font-size: clamp(1.35rem, 1.8vw, 1.6rem); font-weight: 520; letter-spacing: -0.02em; line-height: 1.15; color: var(--fg); }
+.tpl-card p { color: var(--muted); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
+.tpl-card .eyebrow { font-size: 12px; line-height: 1.4; color: var(--soft); }
+.tpl-card .tpl-meta { margin-top: auto; padding-top: var(--s-5); color: var(--soft); }
+.tpl-card .text-link { align-self: flex-start; }
+.tpl-agent { display: inline-flex; align-items: center; gap: 0.6em; }
+.tpl-agent .agent-ico { width: 15px; height: 15px; color: var(--fg); }
+.tpl-agent.is-hq .agent-ico { color: var(--accent); }
+@media (max-width: 900px) {
+  .tpl-grid { grid-template-columns: 1fr; }
+  .tpl-grid > .tpl-card + .tpl-card { margin-left: 0; margin-top: -1px; }
+}
+
+/* ---- The template hero -------------------------------------------------- */
+.tpl-crumb a { color: var(--soft); border-bottom: 1px solid var(--hair); }
+.tpl-crumb a:hover { color: var(--fg); }
+.hero .tpl-agent { justify-content: center; }
+
+/* ---- The run panel: two paths side by side ------------------------------ */
+.run {
+  display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  margin-top: var(--space-block); border: 1px solid var(--hair-strong); text-align: left;
+}
+.run__path { padding: clamp(var(--s-6), 4vw, var(--s-9)); }
+.run__path + .run__path { border-left: 1px solid var(--hair); }
+.run__path { min-width: 0; }
+.run__path h2 { margin-top: var(--s-4); font-size: clamp(1.6rem, 2.4vw, 2.1rem); max-width: none; }
+.run__path > p { margin-top: var(--s-4); color: var(--muted); max-width: 44ch; text-wrap: pretty; }
+.run form { display: grid; gap: var(--s-5); margin-top: var(--s-7); }
+.run .field { display: grid; gap: var(--s-2); }
+.run .field label { color: var(--fg); font-size: var(--t-label); font-weight: 600; }
+.run .field input {
+  width: 100%; padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--hair-strong); border-radius: var(--radius);
+  background: var(--surface); color: var(--fg); color-scheme: dark;
+  font-family: var(--font); font-size: 16px; line-height: 1.5;
+  transition: border-color 180ms ease;
+}
+.run .field input:focus { border-color: var(--fg); outline: none; }
+.run .field input::placeholder { color: var(--soft); }
+.run .field [aria-invalid="true"] { border-color: var(--accent); }
+.run .btn[disabled] { opacity: 0.6; cursor: progress; transform: none; }
+.run .form-note { color: var(--soft); font-size: var(--t-small); line-height: 1.5; }
+.run .form-note a { color: var(--muted); border-bottom: 1px solid var(--hair-strong); }
+.run .form-status { display: none; padding: var(--s-4) var(--s-5); border: 1px solid var(--hair-strong); border-radius: var(--radius); color: var(--fg); font-size: var(--t-body); }
+.run .form-status.is-visible { display: block; }
+.run .form-status.is-error { border-color: var(--accent); }
+.run .form-status a { color: var(--fg); border-bottom: 1px solid var(--hair-strong); }
+.run .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.run .install { justify-content: flex-start; margin-top: var(--s-7); }
+.run .install code {
+  display: block; flex: 1 1 100%; min-width: 0; width: 100%; min-height: 0;
+  padding: var(--s-3) var(--s-4); font-size: 13px; line-height: 1.6;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.run .install .small { text-align: left; }
+@media (max-width: 900px) {
+  .run { grid-template-columns: minmax(0, 1fr); }
+  .run__path + .run__path { border-left: 0; border-top: 1px solid var(--hair); }
+  .run .btn { width: 100%; }
+}
+
+/* ---- Steps and in/out lists ------------------------------------------- */
+.tpl-steps { margin: var(--space-band) 0 0; padding: 0; list-style: none; width: min(100%, 52rem); text-align: left; }
+.tpl-steps li { display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); gap: var(--s-4); padding: var(--s-5) 0; border-top: 1px solid var(--hair); }
+.tpl-steps li:last-child { border-bottom: 1px solid var(--hair); }
+.tpl-steps .eyebrow { padding-top: 0.3em; }
+.tpl-steps b { display: block; color: var(--fg); font-weight: 500; }
+.tpl-steps span { display: block; margin-top: var(--s-1); color: var(--muted); line-height: 1.55; text-wrap: pretty; }
+.tpl-steps li.is-review b { color: var(--fg); }
+.tpl-steps li.is-review .eyebrow { color: var(--accent); }
+.tpl-io { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-9); margin-top: var(--space-band); text-align: left; }
+.tpl-io h3 { font-size: clamp(1.2rem, 1.5vw, 1.4rem); font-weight: 500; color: rgba(250, 248, 243, 0.9); }
+.tpl-io ul { margin: var(--s-5) 0 0; padding: 0; list-style: none; }
+.tpl-io li { padding: var(--s-3) 0; border-top: 1px solid var(--hair); color: var(--muted); line-height: 1.5; }
+.tpl-io li:last-child { border-bottom: 1px solid var(--hair); }
+@media (max-width: 720px) { .tpl-io { grid-template-columns: 1fr; gap: var(--s-7); } }
+
+/* ---- A real sample result ---------------------------------------------- */
+.tpl-sample { margin-top: var(--space-band); text-align: left; }
+.tpl-sample table td:nth-child(4) { color: var(--fg); }
+.tpl-sample .small { margin-top: var(--s-4); }
+
+/* ---- Related templates -------------------------------------------------- */
+.tpl-related { margin-top: var(--space-band); }
