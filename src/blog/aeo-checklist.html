@@ -1,0 +1,129 @@
+<!--meta
+{
+  "slug": "aeo-checklist",
+  "title": "The AEO checklist for small business (2026).",
+  "seoTitle": "AEO Checklist 2026: 20 Steps for Small Business | Flow AI",
+  "description": "A 20-step AEO checklist a small business can finish in a week: AI crawler access, business facts, answer pages, reviews, schema and measurement.",
+  "schemaDescription": "A numbered answer engine optimisation checklist for small businesses in New Zealand and Australia, grouped into six areas: access for AI crawlers, facts about the business, pages that answer, proof and mentions, structured data, and measurement, with an honest note on llms.txt.",
+  "standfirst": "Twenty tasks, grouped into six areas, ordered so each one builds on the last. <b>Most owners can work through the list in a week without a developer.</b>",
+  "shortAnswer": "An AEO checklist for a small business covers six areas: open your site to AI crawlers, publish consistent facts about the business, write pages that answer customer questions directly, earn reviews and mentions elsewhere, add accurate structured data, and track what AI engines say about you. Most owners can work through it in a week.",
+  "topic": "ai-search",
+  "pillar": false,
+  "format": "Guide",
+  "published": "2026-10-02",
+  "modified": "2026-10-02",
+  "keywords": ["aeo checklist", "aeo checklist 2026", "answer engine optimisation checklist", "aeo audit checklist", "aeo best practices", "geo seo checklist", "ai search optimisation checklist", "aeo self assessment checklist", "seo checklist for small business"],
+  "related": ["what-is-answer-engine-optimisation", "how-to-get-mentioned-by-chatgpt", "aeo-vs-seo-vs-geo"],
+  "faq": [
+    {
+      "q": "Do I need to do all 20 items to see results?",
+      "a": "No. The first four, covering crawler access and indexing in Google and Bing, matter most, because an engine that cannot read your site cannot quote it. After that, the Google Business Profile, a fact sheet and answer-first openings on your top five pages give the biggest return for the time. The rest compound over months, so spread them out rather than skipping them."
+    },
+    {
+      "q": "How is an AEO checklist different from an SEO checklist?",
+      "a": "About two thirds of the tasks are the same, because AI engines search indexes built by search engines. The AEO-only tasks are allowing AI search crawlers such as OAI-SearchBot and PerplexityBot, getting indexed in Bing for ChatGPT and Copilot, writing passages that make sense when quoted alone, and logging what AI engines say about you each month. An SEO checklist rarely covers those."
+    },
+    {
+      "q": "Should I block GPTBot and other AI training crawlers?",
+      "a": "That is a separate decision from AEO. Training crawlers such as GPTBot and Google-Extended collect content to train models, while search crawlers such as OAI-SearchBot fetch pages to answer questions live. Many businesses allow the search crawlers and make their own choice on training. Blocking a training crawler does not stop the matching search crawler, as long as robots.txt names them separately."
+    },
+    {
+      "q": "Does schema markup help with AI search?",
+      "a": "Google says no special schema is needed to appear in AI Overviews or AI Mode. Schema still earns rich results in Google and states your business facts in a form any machine can read without guessing, so it is worth adding for your organisation, location and products. Keep it accurate and matched to what the page says, because wrong schema does more harm than none."
+    },
+    {
+      "q": "How often should I repeat the AEO checklist?",
+      "a": "Run the access checks every quarter and after any website rebuild, host change or new security plugin, because those are the moments crawlers get blocked by accident. Repeat the prompt log monthly. Review the fact sheet whenever prices, hours or services change, and refresh your most important pages at least twice a year so the dates and figures stay current."
+    },
+    {
+      "q": "Is there a free tool to check AI crawler access?",
+      "a": "Yes. Flow AI's free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free."
+    }
+  ]
+}
+-->
+<h2>How to use this checklist</h2>
+<p>Work through the six groups in order, one or two a day, and tick each item off when it is done. The order matters: AI engines cannot quote a site they cannot read, and they trust facts that match across the web. The first two groups take about a day between them, and the rest fill the week.</p>
+<p>The checklist is written for a 5 to 50 person business with a website, a Google Business Profile or the intention of one, and nobody on staff who writes code. Where a task needs a developer, it says so. If the terms are new, start with <a class="go" href="/blog/what-is-answer-engine-optimisation.html">what answer engine optimisation is</a>, and if you are unsure how AEO relates to the SEO you already do, read <a class="go" href="/blog/aeo-vs-seo-vs-geo.html">AEO vs SEO vs GEO</a>.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Day</th><th>Group</th><th>Items</th><th>Rough time</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>Access for AI crawlers</td><td>1 to 4</td><td>2 to 3 hours</td></tr>
+<tr><td>Tuesday</td><td>Facts about the business</td><td>5 to 8</td><td>3 to 4 hours</td></tr>
+<tr><td>Wednesday and Thursday</td><td>Pages that answer</td><td>9 to 13</td><td>A day and a half</td></tr>
+<tr><td>Friday morning</td><td>Proof and mentions</td><td>14 to 16</td><td>2 hours to set up, then monthly</td></tr>
+<tr><td>Friday afternoon</td><td>Structured data and measurement</td><td>17 to 20</td><td>3 hours</td></tr>
+</tbody>
+</table></div>
+<p>The times are estimates for a site of ten to thirty pages. A larger site takes longer on the page work, and nothing else changes.</p>
+
+<h2>Access for AI crawlers (items 1 to 4)</h2>
+<p>Access comes first because every later item depends on it. An AI engine answers from pages it has fetched, either through its own crawler or through a search index such as Google's or Bing's. If robots.txt, a firewall or JavaScript rendering stops those crawlers, nothing else on this list can help.</p>
+<h3>1. Allow the AI search crawlers in robots.txt</h3>
+<p>Open yourdomain.co.nz/robots.txt and look for rules that block OAI-SearchBot and ChatGPT-User (ChatGPT), PerplexityBot (Perplexity), Claude-SearchBot and Claude-User (Claude), Googlebot and Bingbot. A line such as "User-agent: * Disallow: /" blocks all of them. Training crawlers (GPTBot, ClaudeBot, Google-Extended) are a separate choice, and blocking them does not stop the search crawlers when each is named on its own line. Flow AI's free <a class="go" href="/templates/ai-crawler-check.html">AI crawler access check</a> tests fourteen <a class="go" href="/glossary/#ai-crawler">AI crawlers</a> at once.</p>
+<h3>2. Check your host and security settings</h3>
+<p>Some hosts, CDNs and security plugins offer settings that block AI bots, and on some plans these are switched on by default. Look in your Cloudflare, Wix, Squarespace or WordPress security settings for anything labelled AI bots, AI crawlers or bot fight mode. Also ask your web person whether any page sends a "noindex" meta tag or an X-Robots-Tag header by mistake.</p>
+<h3>3. Make sure your text is in the HTML</h3>
+<p>Many AI crawlers do not run JavaScript, so text that appears only after scripts load may never be seen. A quick test: open a page, choose View Page Source in your browser, and search for a sentence from the page. If it is missing from the source, ask your developer about server-side rendering for your main pages.</p>
+<h3>4. Get indexed in Google and Bing</h3>
+<p>Verify your site in Google Search Console and Bing Webmaster Tools, submit your sitemap to both, and check that your main pages show as indexed. Bing Webmaster Tools can import a verified site straight from Search Console in a few clicks. Bing matters more than its share suggests: <a class="go" href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI's help page on ChatGPT search says it sends queries to partner search providers and names Microsoft (Bing) among them</a>, even though <a class="go" href="https://gs.statcounter.com/search-engine-market-share/all/new-zealand" target="_blank" rel="noopener">Statcounter puts Bing at 7.71% of New Zealand search in September 2026</a>.</p>
+
+<h2>Facts about the business (items 5 to 8)</h2>
+<p>AI engines describe a business by assembling facts from its site, its listings and other people's pages. When those facts agree, the engine can state them with confidence. When the address, services or hours differ between sites, it may describe you wrongly or leave you out. This group makes every source say the same thing.</p>
+<h3>5. Write a one-page fact sheet</h3>
+<p>List the facts an AI would need to recommend you: legal and trading name, what you do in one sentence, services, service area by suburb or city, hours, typical price ranges, licences and memberships, year founded, and the owner's name. Put the same facts on your About page in plain sentences. This document becomes the source of truth for items 6 to 8 and 17.</p>
+<h3>6. Match your name, address and phone everywhere</h3>
+<p>Search your business name and check every listing against the fact sheet: same spelling, same address format, same phone number. The glossary calls this <a class="go" href="/glossary/#nap-consistency">NAP consistency</a>. Fix old addresses from past premises first, since those cause the most confusion.</p>
+<h3>7. Complete Google Business Profile and Bing Places</h3>
+<p>Fill every field in your <a class="go" href="/glossary/#google-business-profile">Google Business Profile</a>: categories, services with descriptions, hours, holiday hours, photos and the business description. Then claim Bing Places for Business, which can import from Google. ChatGPT treats "near me" prompts as local searches, and these listings are what local searches read.</p>
+<h3>8. Claim the directories your customers use</h3>
+<p>In New Zealand that usually means Yellow, Finda and NZ Business Directory, plus trade sites such as NoCowboys and Builderscrack where they fit. In Australia, Yellow Pages, True Local and hipages. Add your industry association's member directory. Five accurate listings beat twenty half-finished ones. The local groundwork is covered in more depth in <a class="go" href="/blog/seo-for-small-business-nz.html">SEO for small business in New Zealand</a>.</p>
+
+<h2>Pages that answer (items 9 to 13)</h2>
+<p>AI engines quote passages, so pages need sentences that answer a question on their own. This group turns your most important pages into answers: a direct opening, headings phrased as customer questions, facts with sources, and pages for the questions buyers ask before they call. It is the longest group and the one that keeps paying back.</p>
+<h3>9. Open each important page with a direct answer</h3>
+<p>Start your home page, service pages and pricing page with a 40 to 60 word paragraph that answers the page's main question completely. "We install heat pumps across Hamilton and Waikato, usually within a week of quoting..." gives an engine a sentence it can lift. Put the welcome message and the history lower down.</p>
+<h3>10. Phrase headings as the questions customers ask</h3>
+<p>Collect real questions from your inbox, phone calls, quote requests and Google's "People also ask" boxes. Turn the most common into H2 headings ("How long does a bathroom renovation take?") and answer each in the first sentence below it. Customers' own words are the best keywords you have.</p>
+<h3>11. Add numbers, quotes and sources</h3>
+<p>The research behind GEO tested this directly. <a class="go" href="https://arxiv.org/html/2311.09735v3" target="_blank" rel="noopener">Aggarwal and colleagues' KDD 2024 paper found adding quotations, adding statistics and citing sources each improved visibility in AI answers by 30 to 40%, while keyword stuffing offered little to no improvement</a>. On your pages, that means real price ranges, timeframes, a quote from a named person, and links to the standards or regulations you work to.</p>
+<h3>12. Publish the pages buyers ask AI about</h3>
+<p>Write a page for each question buyers ask before they choose: what it costs and what changes the price, how you compare with the alternatives, who the service suits and who it does not, and one page per service per area. These are buying questions, and <a class="go" href="https://www.semrush.com/blog/semrush-ai-overviews-study/" target="_blank" rel="noopener">Semrush's study of more than 10 million US keywords found commercial, transactional and navigational queries made up 42.8% of AI Overview triggers by October 2025</a>.</p>
+<h3>13. Date your pages and keep them current</h3>
+<p>Show a "last updated" date on guides and pricing pages, and refresh the figures when they change. Set a calendar reminder to review your top five pages every six months. Out-of-date prices on your own site can end up repeated in AI answers.</p>
+
+<h2>Proof and mentions (items 14 to 16)</h2>
+<p>AI engines weigh what other people say about a business alongside what it says about itself. Reviews, local press, association listings and videos give an engine independent evidence. This group sets up the habits that build that evidence month by month, since none of it can be finished in a single day.</p>
+<h3>14. Ask for reviews every month and reply to them</h3>
+<p>Recency matters to customers and to the engines that read reviews. <a class="go" href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener">BrightLocal's Local Consumer Review Survey 2026, of 1,002 US adults, found 74% look for reviews written in the last three months, and 31% will only use a business rated 4.5 stars or higher</a>. Send a review link with every finished job and reply to every review, good or bad. BrightLocal sells local SEO software and the sample is American, but the habit holds anywhere.</p>
+<h3>15. Earn mentions on other sites</h3>
+<p>Aim for one new mention a month: a local news story, a supplier's case study, a podcast, a "best of" roundup, an industry association feature. <a class="go" href="https://ahrefs.com/blog/ai-overview-brand-correlation/" target="_blank" rel="noopener">An Ahrefs study of 75,000 brands found branded web mentions had the strongest correlation with AI Overview visibility (0.664), well ahead of backlinks (0.218)</a>. Ahrefs sells SEO tools and this is a correlation, but it is the clearest signal available. The guide on <a class="go" href="/blog/how-to-get-mentioned-by-chatgpt.html">how to get your business mentioned by ChatGPT</a> goes deeper on this item.</p>
+<h3>16. Put two or three short videos on YouTube</h3>
+<p>Film answers to your most common questions on a phone, two to four minutes each, with your business name and area in the title and description. <a class="go" href="https://ahrefs.com/blog/ai-overview-citations-top-10/" target="_blank" rel="noopener">Ahrefs' March 2026 analysis of 4 million AI Overview URLs found YouTube was the most cited domain, at 5.6% of all citations</a>. A short video also gives customers a reason to trust you before they call.</p>
+
+<h2>Structured data (items 17 and 18)</h2>
+<p>Structured data restates your business facts in a format machines read without guessing. Google says it is not required to appear in AI Overviews, and it is fair to take that at face value. It still earns rich results in Google search and removes doubt about names, addresses and services, so it is worth an afternoon.</p>
+<h3>17. Add LocalBusiness or Organization schema</h3>
+<p>Add one block of <a class="go" href="/glossary/#schema-markup">schema markup</a> to your home page with the facts from item 5: name, address, phone, hours, area served, and "sameAs" links to your Google Business Profile, Facebook, LinkedIn and directory listings. Most website builders and SEO plugins have a form for this. Test it with Google's Rich Results Test and the Schema.org validator. <a class="go" href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google's guidance on AI features is clear that no special schema is needed for AI Overviews or AI Mode</a>, so treat this as tidy housekeeping.</p>
+<h3>18. Mark up FAQs, products and articles only where they match the page</h3>
+<p>Add FAQPage markup to pages with a real question and answer section, Product markup to product pages, and Article markup to guides. Google now shows FAQ rich results for only a small set of authoritative sites, so add FAQ markup to make the questions and answers explicit, and expect no visual change in results. Markup that describes content the page does not show breaks Google's guidelines.</p>
+
+<h2>Measurement (items 19 and 20)</h2>
+<p>Measure AEO with simple habits while the tools mature. No dashboard yet reports AI visibility as reliably as Search Console reports Google rankings, so a monthly prompt log and a few analytics settings give the clearest picture. Judge the trend over three months, because AI answers vary from one run to the next.</p>
+<h3>19. Run a monthly prompt log</h3>
+<p>Write 15 to 20 questions a customer would ask, such as "best physio for running injuries in Christchurch" or "how much does a kitchen renovation cost in Auckland". Run them each month in ChatGPT, Perplexity, Gemini and Google, and log whether you are named, who else is, and which pages are cited. Use a fresh chat each time so earlier conversations do not colour the answer.</p>
+<h3>20. Track AI referrals and ask customers</h3>
+<p>In Google Analytics 4, build a report for referrals from chatgpt.com, perplexity.ai, gemini.google.com and copilot.microsoft.com. Add "an AI assistant like ChatGPT" to the "how did you hear about us?" question on forms and in phone scripts. <a class="go" href="https://www.brightlocal.com/research/lcrs-ai-trust/" target="_blank" rel="noopener">BrightLocal's 2026 research found 88% of people who use AI for local recommendations check the sources it cites</a>, so many AI-influenced customers will arrive through your listings, and only asking reveals them.</p>
+
+<h2>Is llms.txt worth adding?</h2>
+<p>An llms.txt file is an optional extra, and it belongs after the twenty items above. It is a plain text file at the root of your site that lists your most useful pages for AI systems. It takes ten minutes to write, but no major AI provider has said it uses llms.txt to choose what to cite.</p>
+<p>The usage data is thin. <a class="go" href="https://ahrefs.com/blog/llmstxt-study/" target="_blank" rel="noopener">Ahrefs' June 2026 study of 137,210 domains found 28% publish a valid llms.txt file, yet 97% of those files received zero requests in a month</a>, and AI retrieval bots made only 1.1% of the requests that did arrive. Ahrefs' sample skews to sites with analytics installed, so it is not a random sample of the web. Flow AI publishes one because it costs nothing to maintain. Add one if you like, and expect nothing from it yet. The <a class="go" href="/glossary/#llms-txt">glossary entry for llms.txt</a> explains the format.</p>
+
+<h2>Where Flow AI fits</h2>
+<p>Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The free audit works through this checklist on your site and names the first system to install, which for many businesses is the <a class="go" href="/sprints/ai-search.html">AI search sprint</a>.</p>
+<p>Prefer to do it yourself? The <a class="go" href="/templates/">free agent templates</a> include the AI crawler access check, an AI citability scorer and a full GEO audit, and the open-source GEO skills are in the <a class="go" href="/skills/#geo">skill library</a>.</p>
+
+<h2>The short version</h2>
+<p>Open your site to AI crawlers and get indexed in Google and Bing. Make your business facts match everywhere. Rewrite your main pages so each opens with a direct answer and backs its claims with numbers and sources. Then build reviews and mentions every month, add accurate schema, and log what the engines say.</p>
+<p>The first two groups take a day and protect everything else. The rest compound, and every item helps in ordinary Google search too. For the full background, read the <a class="go" href="/blog/what-is-answer-engine-optimisation.html">guide to answer engine optimisation</a>.</p>
+<p>To have the checklist run on your site and the first fix named, <a class="go" href="/contact.html">request a free audit</a>.</p>

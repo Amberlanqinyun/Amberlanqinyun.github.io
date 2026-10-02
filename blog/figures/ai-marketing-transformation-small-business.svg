@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" color="#faf8f3" stroke-width="1.5" stroke-linecap="round" role="img" aria-hidden="true">
+  <line x1="76.8" y1="464.4" x2="883.2" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.25"/>
+  <line x1="115.2" y1="414.8" x2="115.2" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <line x1="236.8" y1="389.3" x2="236.8" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <line x1="358.4" y1="297.3" x2="358.4" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <line x1="480.0" y1="307.3" x2="480.0" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <line x1="601.6" y1="269.9" x2="601.6" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <line x1="723.2" y1="194.9" x2="723.2" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <line x1="844.8" y1="131.4" x2="844.8" y2="464.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+  <polyline points="115.2,414.8 236.8,389.3 358.4,297.3 480.0,307.3 601.6,269.9 723.2,194.9 844.8,131.4" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.75"/>
+  <circle cx="115.2" cy="414.8" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+  <circle cx="115.2" cy="414.8" r="5.5" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="236.8" cy="389.3" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+  <circle cx="236.8" cy="389.3" r="5.5" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="358.4" cy="297.3" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+  <circle cx="358.4" cy="297.3" r="5.5" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="480.0" cy="307.3" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+  <circle cx="480.0" cy="307.3" r="5.5" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="601.6" cy="269.9" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+  <circle cx="601.6" cy="269.9" r="5.5" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="723.2" cy="194.9" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+  <circle cx="723.2" cy="194.9" r="5.5" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="844.8" cy="131.4" r="8.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.85"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" color="#faf8f3" stroke-width="1.5" stroke-linecap="round" role="img" aria-hidden="true">
+  <circle cx="320.0" cy="347.5" r="53.1" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.62" stroke-dasharray="2 6"/>
+  <circle cx="320.0" cy="347.5" r="124.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.37"/>
+  <circle cx="320.0" cy="347.5" r="164.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.2866666666666666" stroke-dasharray="2 6"/>
+  <circle cx="320.0" cy="347.5" r="221.3" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.245"/>
+  <circle cx="320.0" cy="347.5" r="305.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.22" stroke-dasharray="2 6"/>
+  <circle cx="320.0" cy="347.5" r="313.7" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.2033333333333333"/>
+  <circle cx="523.5" cy="101.5" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="526.9" cy="272.6" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="398.9" cy="299.2" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="478.8" cy="41.8" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="448.2" cy="43.7" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="527.1" cy="77.5" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="418.4" cy="366.7" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="712.1" cy="464.9" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="431.5" cy="207.2" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="642.5" cy="211.9" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="410.5" cy="314.3" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="712.2" cy="185.3" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="563.9" cy="337.5" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="637.2" cy="342.4" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="709.8" cy="415.8" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="652.9" cy="341.5" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="426.9" cy="176.9" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="384.5" cy="254.9" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <circle cx="616.3" cy="316.8" r="3.6" fill="currentColor" stroke="none" fill-opacity="0.5"/>
+  <line x1="320.0" y1="347.5" x2="608.1" y2="139.6" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.8"/>
+  <circle cx="608.1" cy="139.6" r="10.0" stroke="currentColor" fill="none" vector-effect="non-scaling-stroke" stroke-opacity="0.9"/>
+  <circle cx="608.1" cy="139.6" r="6.0" fill="currentColor" stroke="none" fill-opacity="1"/>
+  <circle cx="320.0" cy="347.5" r="7.0" fill="currentColor" stroke="none" fill-opacity="1"/>
+</svg>

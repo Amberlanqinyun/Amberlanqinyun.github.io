@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,53 +10,31 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
   <!-- End Google Tag Manager -->
-<title>Guides on AI marketing transformation | Flow AI</title>
-<meta name="description" content="Guides and working notes on how AI actually runs a marketing function: AI search visibility, content systems, outbound automation and what marketing costs.">
+<title>AI Marketing Guides for Small Business (NZ and Australia) | Flow AI</title>
+<meta name="description" content="Guides on AI marketing, AI search, AEO and marketing costs for small businesses in New Zealand and Australia, written by the engineer who builds the systems.">
+<meta name="author" content="Amber Lan">
 <meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://www.flowai.co.nz/blog/">
 <link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Blog · Flow AI · Amber Lan">
-<meta property="og:description" content="Guides and working notes from an AI marketing engineer: AI search visibility, content systems, outbound automation, and marketing costs in NZ.">
+<meta property="og:title" content="AI Marketing Guides for Small Business (NZ and Australia) | Flow AI">
+<meta property="og:description" content="Guides on AI marketing, AI search, AEO and marketing costs for small businesses in New Zealand and Australia, written by the engineer who builds the systems.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Flow AI">
+<meta property="og:locale" content="en_NZ">
 <meta property="og:url" content="https://www.flowai.co.nz/blog/">
 <meta property="og:image" content="https://www.flowai.co.nz/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
-<script src="/assets/share.js" defer></script>
-<style>
-  /* Blog index. Everything else comes from /assets/site.css. */
-  @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;}}
-  .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
-
-  /* Share controls read as text links, never as boxes */
-  .share-button{appearance:none;display:inline-flex;align-items:center;min-height:40px;padding:0 0 2px;border:0;border-bottom:1px solid var(--hair-strong);background:transparent;color:var(--fg);font:inherit;font-size:14px;font-weight:600;line-height:1.2;cursor:pointer;transition:border-color 180ms ease;}
-  .share-button:hover{border-color:var(--fg);}
-  .share-button[data-state]{color:var(--muted);}
-
-  /* Post grid: image, title, one line, link, hairline, author and date */
-  .posts{padding-top:0;}
-  .posts .grid{margin-top:0;}
-  .post{display:flex;min-width:0;flex-direction:column;}
-  .post-art{display:block;overflow:hidden;border-radius:var(--radius);background:var(--surface);}
-  .post-art img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;filter:grayscale(1);transition:transform 600ms var(--ease);}
-  .post:hover .post-art img{transform:scale(1.02);}
-  .post .small{margin-top:1.5rem;font-weight:500;}
-  .post h2{margin-top:0.6rem;font-size:clamp(1.35rem,1.8vw,1.6rem);font-weight:700;letter-spacing:-0.04em;line-height:1.15;text-wrap:pretty;}
-  .post h2 a:hover{color:var(--muted);}
-  .post p{margin-top:0.75rem;color:var(--muted);font-size:1rem;line-height:1.55;text-wrap:pretty;}
-  .post .text-link{align-self:flex-start;margin-top:1.1rem;font-size:15px;}
-  .post-meta{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:0.5rem 1rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--hair);}
-  .post-meta .small{margin:0;font-weight:400;}
-  .post-meta .small span+span::before{content:"\00b7";margin-inline:0.5em;color:var(--soft);}
-  .post-meta .share-button{font-size:13px;}
-</style>
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css">
 <script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,31 +43,236 @@
       "@type": "Blog",
       "@id": "https://www.flowai.co.nz/blog/#blog",
       "url": "https://www.flowai.co.nz/blog/",
-      "name": "Flow AI guides and working notes",
-      "description": "What Amber Lan learns running marketing systems in production, written for New Zealand small business owners and founders.",
+      "name": "Flow AI Guides",
+      "description": "Guides on AI marketing, AI search and marketing costs for small businesses in New Zealand and Australia, by Amber Lan.",
       "inLanguage": "en-NZ",
-      "author": { "@id": "https://www.flowai.co.nz/#amber" },
-      "publisher": { "@id": "https://www.flowai.co.nz/#flowai" },
-      "isPartOf": { "@id": "https://www.flowai.co.nz/#website" },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#flowai"
+      },
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
       "blogPost": [
         {
-          "@type": "BlogPosting",
-          "@id": "https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html",
-          "headline": "AI Marketing for Small Business in NZ: The Complete Guide (2026)",
-          "description": "What AI marketing actually covers, what it costs against an agency or a hire, the mistakes to skip, and a starting checklist that compounds.",
+          "@id": "https://www.flowai.co.nz/blog/what-is-answer-engine-optimisation.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/what-is-an-ai-cmo.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/seo-for-small-business-nz.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/outbound-sales-automation.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/marketing-agency-cost-nz.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/marketing-agency-alternatives-nz.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/how-to-get-mentioned-by-chatgpt.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/fractional-marketing-manager-nz.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/fractional-cmo-vs-ai-cmo.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/do-you-need-an-ai-marketing-agency-nz.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/content-marketing-small-business-nz.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-strategy-small-business.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-examples.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-automation-small-business.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/agency-vs-freelancer-vs-in-house.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/aeo-vs-seo-vs-geo.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/aeo-checklist.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/what-is-an-ai-marketing-agent.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-transformation-small-business.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-statistics-australia-new-zealand.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand.html#article"
+        },
+        {
+          "@id": "https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html#article"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.flowai.co.nz/blog/what-is-answer-engine-optimisation.html",
+          "name": "What is answer engine optimisation (AEO)? A guide for small business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.flowai.co.nz/blog/what-is-an-ai-cmo.html",
+          "name": "What is an AI CMO? A plain definition for small business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.flowai.co.nz/blog/seo-for-small-business-nz.html",
+          "name": "SEO for small business in New Zealand: a practical guide."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.flowai.co.nz/blog/outbound-sales-automation.html",
+          "name": "Outbound sales automation for small business: a practical guide for NZ and Australia."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.flowai.co.nz/blog/marketing-agency-cost-nz.html",
+          "name": "How much does a marketing agency cost in NZ?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.flowai.co.nz/blog/marketing-agency-alternatives-nz.html",
+          "name": "Marketing agency alternatives for NZ small business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.flowai.co.nz/blog/how-to-get-mentioned-by-chatgpt.html",
+          "name": "How to get your business mentioned by ChatGPT."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.flowai.co.nz/blog/fractional-marketing-manager-nz.html",
+          "name": "What is a fractional marketing manager, and does your NZ business need one?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.flowai.co.nz/blog/fractional-cmo-vs-ai-cmo.html",
+          "name": "Fractional CMO vs AI CMO: which does a small business in Australia or New Zealand need?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.flowai.co.nz/blog/do-you-need-an-ai-marketing-agency-nz.html",
+          "name": "Do you need an AI marketing agency in NZ?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.flowai.co.nz/blog/content-marketing-small-business-nz.html",
+          "name": "Content marketing for small business in NZ: what to publish and how often."
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.flowai.co.nz/blog/ai-marketing-strategy-small-business.html",
+          "name": "How to build an AI marketing strategy for a small business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://www.flowai.co.nz/blog/ai-marketing-examples.html",
+          "name": "AI marketing examples for small business: ten, one per marketing job."
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://www.flowai.co.nz/blog/ai-marketing-automation-small-business.html",
+          "name": "AI marketing automation for small business: what to set up first."
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://www.flowai.co.nz/blog/agency-vs-freelancer-vs-in-house.html",
+          "name": "Marketing agency vs freelancer vs in-house hire: which suits your NZ business?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://www.flowai.co.nz/blog/aeo-vs-seo-vs-geo.html",
+          "name": "AEO vs SEO vs GEO: what is the difference?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://www.flowai.co.nz/blog/aeo-checklist.html",
+          "name": "The AEO checklist for small business (2026)."
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://www.flowai.co.nz/blog/what-is-an-ai-marketing-agent.html",
+          "name": "What is an AI marketing agent? A definition for small business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://www.flowai.co.nz/blog/ai-marketing-transformation-small-business.html",
+          "name": "AI marketing transformation for small business: the 90-day roadmap"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://www.flowai.co.nz/blog/ai-marketing-statistics-australia-new-zealand.html",
+          "name": "AI marketing statistics for Australia and New Zealand, 2026"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand.html",
+          "name": "How much does AI marketing cost in Australia and New Zealand? (2026)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
           "url": "https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html",
-          "datePublished": "2026-08-20",
-          "dateModified": "2026-08-20",
-          "author": { "@id": "https://www.flowai.co.nz/#amber" },
-          "publisher": { "@id": "https://www.flowai.co.nz/#flowai" }
+          "name": "AI marketing for small business in NZ: the complete guide."
         }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Flow AI", "item": "https://www.flowai.co.nz/" },
-        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.flowai.co.nz/blog/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://www.flowai.co.nz/blog/"
+        }
       ]
     }
   ]
@@ -101,7 +284,6 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <a class="skip-link" href="#posts">Skip to the guides</a>
 <div class="grain" aria-hidden="true"></div>
 <header class="site-header">
@@ -120,87 +302,233 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main>
-  <section class="hero centered" aria-labelledby="blog-title">
+  <section class="hero blog-hero centered" aria-labelledby="blog-title">
     <div class="wrap">
       <div class="stack">
-        <p class="eyebrow">One piece a week</p>
-        <h1 id="blog-title">Guides and working notes.</h1>
-        <p class="lead">How AI actually runs a marketing function, written for the people accountable for one.</p>
-        <div class="cta-row">
-          <button class="share-button" type="button" data-share data-share-title="Flow AI Blog" data-share-text="Practical guides on AI marketing for small business in Australia and New Zealand." data-share-url="/blog/" aria-label="Share the Flow AI blog" aria-live="polite">Share the blog</button>
-        </div>
+        <p class="eyebrow">Guides</p>
+        <h1 id="blog-title">Guides for running marketing on AI.</h1>
+        <p class="lead">For owners and marketing leads in New Zealand and Australia. Written by the engineer who builds the systems and runs them every week.</p>
       </div>
+      <ul class="topic-links" aria-label="Topics">
+<li><a href="/blog/?topic=ai-search" data-topic-link="ai-search"><span class="topic-links__name">AI search</span><span class="topic-links__count">5</span></a></li>
+<li><a href="/blog/?topic=costs" data-topic-link="costs"><span class="topic-links__name">Costs and choices</span><span class="topic-links__count">7</span></a></li>
+<li><a href="/blog/?topic=agent" data-topic-link="agent"><span class="topic-links__name">The AI marketing agent</span><span class="topic-links__count">3</span></a></li>
+<li><a href="/blog/?topic=transformation" data-topic-link="transformation"><span class="topic-links__name">Transformation</span><span class="topic-links__count">6</span></a></li>
+<li><a href="/blog/?topic=reference" data-topic-link="reference"><span class="topic-links__name">Reference</span><span class="topic-links__count">1</span></a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="posts" class="posts" aria-label="All guides">
+  <section id="posts" class="blog-list" aria-label="All guides">
     <div class="wrap">
-      <div class="grid grid-3">
-        <article class="post">
-          <span class="small">Data</span>
-          <h2><a href="/blog/ai-marketing-statistics-australia-new-zealand.html">AI marketing statistics for Australia and New Zealand, 2026.</a></h2>
-          <p>Sixty-two figures on small business AI adoption, marketing use, AI search and hours saved, every one linked to its primary source.</p>
-          <a class="text-link" href="/blog/ai-marketing-statistics-australia-new-zealand.html">See the data</a>
-          <div class="post-meta">
-            <p class="small"><span>Amber Lan</span><span>10 September 2026</span></p>
-            <button class="share-button" type="button" data-share data-share-title="AI marketing statistics for Australia and New Zealand, 2026" data-share-text="62 sourced statistics on AI adoption and AI marketing in Australia and New Zealand." data-share-url="/blog/ai-marketing-statistics-australia-new-zealand.html" aria-label="Share the AI marketing statistics" aria-live="polite">Share</button>
-          </div>
-        </article>
-        <article class="post">
-          <span class="small">Guide</span>
-          <h2><a href="/blog/ai-marketing-transformation-small-business.html">AI marketing transformation for small business: the 90-day roadmap.</a></h2>
-          <p>What to change in positioning, search, content, social, outbound and measurement in each 30-day block, and what stays human.</p>
-          <a class="text-link" href="/blog/ai-marketing-transformation-small-business.html">Read the guide</a>
-          <div class="post-meta">
-            <p class="small"><span>Amber Lan</span><span>10 September 2026</span></p>
-            <button class="share-button" type="button" data-share data-share-title="AI marketing transformation for small business: the 90-day roadmap" data-share-text="A phased 90-day roadmap for transforming a small business marketing department with AI." data-share-url="/blog/ai-marketing-transformation-small-business.html" aria-label="Share the AI marketing transformation roadmap" aria-live="polite">Share</button>
-          </div>
-        </article>
-        <article class="post">
-          <span class="small">Guide</span>
-          <h2><a href="/blog/what-is-an-ai-marketing-agent.html">What is an AI marketing agent? A definition for small business.</a></h2>
-          <p>What the category actually means for a 5 to 50 staff business, the ten marketing jobs it covers, and how it differs from marketing automation, ChatGPT and an agency.</p>
-          <a class="text-link" href="/blog/what-is-an-ai-marketing-agent.html">Read the guide</a>
-          <div class="post-meta">
-            <p class="small"><span>Amber Lan</span><span>10 September 2026</span></p>
-            <button class="share-button" type="button" data-share data-share-title="What is an AI marketing agent?" data-share-text="A definition for small business, plus how it differs from automation, ChatGPT and an agency." data-share-url="/blog/what-is-an-ai-marketing-agent.html" aria-label="Share the AI marketing agent definition" aria-live="polite">Share</button>
-          </div>
-        </article>
-        <article class="post">
-          <span class="small">Guide</span>
-          <h2><a href="/blog/ai-marketing-cost-australia-new-zealand.html">How much does AI marketing cost in Australia and New Zealand?</a></h2>
-          <p>Real 2026 ranges in AUD and NZD for doing it yourself, a freelancer, an AI agent, an agency retainer and an in-house hire, with sources.</p>
-          <a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand.html">Read the guide</a>
-          <div class="post-meta">
-            <p class="small"><span>Amber Lan</span><span>10 September 2026</span></p>
-            <button class="share-button" type="button" data-share data-share-title="How much does AI marketing cost in Australia and New Zealand?" data-share-text="Real 2026 price ranges for AI marketing, agencies, freelancers and in-house hires in AUD and NZD." data-share-url="/blog/ai-marketing-cost-australia-new-zealand.html" aria-label="Share the AI marketing cost guide" aria-live="polite">Share</button>
-          </div>
-        </article>
-        <article class="post">
-          <a class="post-art" href="/blog/ai-marketing-for-small-business-nz.html" tabindex="-1" aria-hidden="true">
-            <img src="/assets/flow-system-hero.webp" width="1448" height="1086" loading="lazy" alt="">
-          </a>
-          <span class="small">Guide</span>
-          <h2><a href="/blog/ai-marketing-for-small-business-nz.html">AI marketing for small business in NZ: the complete guide.</a></h2>
-          <p>What AI marketing covers, what it costs against an agency or a hire, the mistakes to skip, and a starting checklist that compounds.</p>
-          <a class="text-link" href="/blog/ai-marketing-for-small-business-nz.html">Read the guide</a>
-          <div class="post-meta">
-            <p class="small"><span>Amber Lan</span><span>20 August 2026</span></p>
-            <button class="share-button" type="button" data-share data-share-title="AI Marketing for Small Business in NZ: The Complete Guide" data-share-text="AI search visibility, content engines, outbound automation, costs, and where to start." data-share-url="/blog/ai-marketing-for-small-business-nz.html" aria-label="Share AI marketing for small business in NZ" aria-live="polite">Share</button>
-          </div>
-        </article>
+      <div class="lead-post">
+<article class="post-card post-card--lead" data-topic="ai-search" data-date="2026-10-02" data-title="what is answer engine optimisation (aeo)? a guide for small business." data-minutes="14">
+  <a class="post-card__figure" href="/blog/what-is-answer-engine-optimisation.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-answer-engine-optimisation.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI search</span><span>14 min read</span></p>
+    <h2 class="post-card__title"><a href="/blog/what-is-answer-engine-optimisation.html">What is answer engine optimisation (AEO)? A guide for small business.</a></h2>
+    <p class="post-card__desc">Answer engine optimisation (AEO) explained for small business: how ChatGPT and AI Overviews choose sources, what the research shows, and what to do first.</p>
+  </div>
+</article>
       </div>
+      <div class="filter-bar" role="group" aria-label="Filter guides">
+        <label class="filter"><span>Topic</span>
+          <select data-filter="topic"><option value="">All topics</option>
+<option value="ai-search">AI search</option>
+<option value="costs">Costs and choices</option>
+<option value="agent">The AI marketing agent</option>
+<option value="transformation">Transformation</option>
+<option value="reference">Reference</option>
+          </select></label>
+        <label class="filter"><span>Sort</span>
+          <select data-filter="sort"><option value="new">Newest</option><option value="az">A to Z</option><option value="short">Shortest read</option></select></label>
+        <div class="view-switch" role="group" aria-label="View">
+          <button type="button" data-view="grid" aria-pressed="true" aria-label="Grid view"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5" height="5" rx="1"/><rect x="9.5" y="1.5" width="5" height="5" rx="1"/><rect x="1.5" y="9.5" width="5" height="5" rx="1"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/></svg></button>
+          <button type="button" data-view="list" aria-pressed="false" aria-label="List view"><svg viewBox="0 0 16 16" aria-hidden="true"><line x1="1.5" y1="3.5" x2="14.5" y2="3.5"/><line x1="1.5" y1="8" x2="14.5" y2="8"/><line x1="1.5" y1="12.5" x2="14.5" y2="12.5"/></svg></button>
+        </div>
+        <p class="filter-count small" data-count aria-live="polite">21 guides</p>
+      </div>
+      <div class="post-grid" data-posts data-view-target>
+<article class="post-card" data-topic="agent" data-date="2026-10-02" data-title="what is an ai cmo? a plain definition for small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/what-is-an-ai-cmo.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-cmo.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-an-ai-cmo.html">What is an AI CMO? A plain definition for small business.</a></h3>
+    <p class="post-card__desc">An AI CMO is software that plans a business&#x27;s marketing: it reads the market, sets priorities and reviews results. What it does, its limits, how to judge one.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="ai-search" data-date="2026-10-02" data-title="seo for small business in new zealand: a practical guide." data-minutes="12">
+  <a class="post-card__figure" href="/blog/seo-for-small-business-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/seo-for-small-business-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI search</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/seo-for-small-business-nz.html">SEO for small business in New Zealand: a practical guide.</a></h3>
+    <p class="post-card__desc">Practical SEO for NZ small businesses: Google Business Profile, reviews, service and location pages, technical basics, DIY vs hiring and a first-month plan.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="transformation" data-date="2026-10-02" data-title="outbound sales automation for small business: a practical guide for nz and australia." data-minutes="12">
+  <a class="post-card__figure" href="/blog/outbound-sales-automation.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/outbound-sales-automation.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Transformation</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/outbound-sales-automation.html">Outbound sales automation for small business: a practical guide for NZ and Australia.</a></h3>
+    <p class="post-card__desc">Outbound sales automation for small B2B firms in NZ and Australia: list building, research, sequences, deliverability, spam law and what to measure.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-10-02" data-title="how much does a marketing agency cost in nz?" data-minutes="12">
+  <a class="post-card__figure" href="/blog/marketing-agency-cost-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/marketing-agency-cost-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/marketing-agency-cost-nz.html">How much does a marketing agency cost in NZ?</a></h3>
+    <p class="post-card__desc">NZ marketing agencies charge NZD 95 to 200 an hour or NZD 500 to 10,000+ a month. Ranges by service, hidden costs, what to ask and how to compare quotes.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-10-02" data-title="marketing agency alternatives for nz small business." data-minutes="11">
+  <a class="post-card__figure" href="/blog/marketing-agency-alternatives-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/marketing-agency-alternatives-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>11 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/marketing-agency-alternatives-nz.html">Marketing agency alternatives for NZ small business.</a></h3>
+    <p class="post-card__desc">Seven ways NZ small businesses get marketing done without a full agency retainer, with 2026 NZD prices, what each includes, who it suits and what to check.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="ai-search" data-date="2026-10-02" data-title="how to get your business mentioned by chatgpt." data-minutes="12">
+  <a class="post-card__figure" href="/blog/how-to-get-mentioned-by-chatgpt.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/how-to-get-mentioned-by-chatgpt.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI search</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/how-to-get-mentioned-by-chatgpt.html">How to get your business mentioned by ChatGPT.</a></h3>
+    <p class="post-card__desc">There is no form to submit your business to ChatGPT. Six practical steps for NZ businesses to get named by ChatGPT, Perplexity, Google AI Mode and Copilot.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-10-02" data-title="what is a fractional marketing manager, and does your nz business need one?" data-minutes="12">
+  <a class="post-card__figure" href="/blog/fractional-marketing-manager-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/fractional-marketing-manager-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/fractional-marketing-manager-nz.html">What is a fractional marketing manager, and does your NZ business need one?</a></h3>
+    <p class="post-card__desc">A fractional marketing manager is a senior marketer you share by the day. What they do, what one costs in NZ in 2026, and when another option fits better.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-10-02" data-title="fractional cmo vs ai cmo: which does a small business in australia or new zealand need?" data-minutes="12">
+  <a class="post-card__figure" href="/blog/fractional-cmo-vs-ai-cmo.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/fractional-cmo-vs-ai-cmo.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/fractional-cmo-vs-ai-cmo.html">Fractional CMO vs AI CMO: which does a small business in Australia or New Zealand need?</a></h3>
+    <p class="post-card__desc">Fractional CMOs cost NZD 4,000 to 10,000 or AUD 6,000 to 18,000 a month. What that buys, what an AI CMO buys instead, and when to combine the two.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-10-02" data-title="do you need an ai marketing agency in nz?" data-minutes="11">
+  <a class="post-card__figure" href="/blog/do-you-need-an-ai-marketing-agency-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/do-you-need-an-ai-marketing-agency-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>11 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/do-you-need-an-ai-marketing-agency-nz.html">Do you need an AI marketing agency in NZ?</a></h3>
+    <p class="post-card__desc">What an AI marketing agency in NZ usually does, what it costs, how to spot real AI systems, and how it compares with a freelancer, a hire or an agent.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="transformation" data-date="2026-10-02" data-title="content marketing for small business in nz: what to publish and how often." data-minutes="12">
+  <a class="post-card__figure" href="/blog/content-marketing-small-business-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/content-marketing-small-business-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Transformation</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/content-marketing-small-business-nz.html">Content marketing for small business in NZ: what to publish and how often.</a></h3>
+    <p class="post-card__desc">Content marketing for NZ small businesses: what to publish, how often, how to answer customer questions, turn one piece into many and measure it weekly.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="transformation" data-date="2026-10-02" data-title="how to build an ai marketing strategy for a small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/ai-marketing-strategy-small-business.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-strategy-small-business.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Transformation</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-strategy-small-business.html">How to build an AI marketing strategy for a small business.</a></h3>
+    <p class="post-card__desc">How to build an AI marketing strategy for a small business: start from positioning, pick the first jobs for AI, set review rules, and measure two numbers.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="transformation" data-date="2026-10-02" data-title="ai marketing examples for small business: ten, one per marketing job." data-minutes="13">
+  <a class="post-card__figure" href="/blog/ai-marketing-examples.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-examples.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Transformation</span><span>13 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-examples.html">AI marketing examples for small business: ten, one per marketing job.</a></h3>
+    <p class="post-card__desc">Ten worked AI marketing examples for small business, one per marketing job: what the AI system does, where a person approves, and what number to measure.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-02" data-title="ai marketing automation for small business: what to set up first." data-minutes="12">
+  <a class="post-card__figure" href="/blog/ai-marketing-automation-small-business.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-automation-small-business.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-automation-small-business.html">AI marketing automation for small business: what to set up first.</a></h3>
+    <p class="post-card__desc">What marketing automation does, what AI adds, the six automations a small business should run first, and the NZ and Australian rules on consent and privacy.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-10-02" data-title="marketing agency vs freelancer vs in-house hire: which suits your nz business?" data-minutes="10">
+  <a class="post-card__figure" href="/blog/agency-vs-freelancer-vs-in-house.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/agency-vs-freelancer-vs-in-house.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>10 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/agency-vs-freelancer-vs-in-house.html">Marketing agency vs freelancer vs in-house hire: which suits your NZ business?</a></h3>
+    <p class="post-card__desc">Agency, freelancer or in-house marketer? NZ 2026 costs for each, an all-in salary calculation with KiwiSaver at 3.5%, and a way to choose by your situation.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="ai-search" data-date="2026-10-02" data-title="aeo vs seo vs geo: what is the difference?" data-minutes="11">
+  <a class="post-card__figure" href="/blog/aeo-vs-seo-vs-geo.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/aeo-vs-seo-vs-geo.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI search</span><span>11 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/aeo-vs-seo-vs-geo.html">AEO vs SEO vs GEO: what is the difference?</a></h3>
+    <p class="post-card__desc">SEO ranks your pages, AEO gets you named in AI answers, GEO is the research term for the same goal. A plain comparison and where a small business starts.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="ai-search" data-date="2026-10-02" data-title="the aeo checklist for small business (2026)." data-minutes="13">
+  <a class="post-card__figure" href="/blog/aeo-checklist.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/aeo-checklist.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI search</span><span>13 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/aeo-checklist.html">The AEO checklist for small business (2026).</a></h3>
+    <p class="post-card__desc">A 20-step AEO checklist a small business can finish in a week: AI crawler access, business facts, answer pages, reviews, schema and measurement.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="what is an ai marketing agent? a definition for small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/what-is-an-ai-marketing-agent.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-an-ai-marketing-agent.html">What is an AI marketing agent? A definition for small business.</a></h3>
+    <p class="post-card__desc">An AI marketing agent plans, produces and ships marketing under human review. A definition for small business, plus how it differs from automation and ChatGPT.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="transformation" data-date="2026-09-10" data-title="ai marketing transformation for small business: the 90-day roadmap" data-minutes="14">
+  <a class="post-card__figure" href="/blog/ai-marketing-transformation-small-business.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-transformation-small-business.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Transformation</span><span>14 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-transformation-small-business.html">AI marketing transformation for small business: the 90-day roadmap</a></h3>
+    <p class="post-card__desc">A 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand: what to change in positioning, search, content and outbound.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="reference" data-date="2026-09-10" data-title="ai marketing statistics for australia and new zealand, 2026" data-minutes="11">
+  <a class="post-card__figure" href="/blog/ai-marketing-statistics-australia-new-zealand.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-statistics-australia-new-zealand.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Reference</span><span>11 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-statistics-australia-new-zealand.html">AI marketing statistics for Australia and New Zealand, 2026</a></h3>
+    <p class="post-card__desc">AI marketing statistics for Australia and New Zealand, 2026: small business AI adoption, marketing use, AI search and hours saved, every figure sourced.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="costs" data-date="2026-09-10" data-title="how much does ai marketing cost in australia and new zealand? (2026)" data-minutes="17">
+  <a class="post-card__figure" href="/blog/ai-marketing-cost-australia-new-zealand.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-cost-australia-new-zealand.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Costs and choices</span><span>17 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-cost-australia-new-zealand.html">How much does AI marketing cost in Australia and New Zealand? (2026)</a></h3>
+    <p class="post-card__desc">What AI marketing costs in Australia and New Zealand in 2026: tools, freelancers, AI agents, agency retainers and in-house hires, compared in AUD and NZD.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="transformation" data-date="2026-08-20" data-title="ai marketing for small business in nz: the complete guide." data-minutes="9">
+  <a class="post-card__figure" href="/blog/ai-marketing-for-small-business-nz.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-for-small-business-nz.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>Transformation</span><span>9 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-for-small-business-nz.html">AI marketing for small business in NZ: the complete guide.</a></h3>
+    <p class="post-card__desc">How NZ small businesses use AI for marketing without an agency or a hire: AI search visibility, content engines, outbound automation, costs and where to start.</p>
+  </div>
+</article>
+      </div>
+      <p class="filter-empty small" data-empty hidden>No guides in this topic yet. <a class="text-link" href="/blog/">See all guides</a></p>
+      <p class="blog-glossary small">Looking for a definition? The <a class="text-link" href="/glossary/">AI marketing glossary</a> has 29 terms, each with a plain answer.</p>
     </div>
   </section>
 
   <section class="contact centered" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="stack">
-        <h2 id="contact-title">Want this run instead of read?</h2>
-        <p class="lead">Tell Flow what you sell and where the pipeline stalls. A written audit of your marketing comes back within the week.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
-        </div>
+        <h2 id="contact-title">Want this run for your business?</h2>
+        <p class="lead">The free audit returns a written plan naming the first marketing system to install, within the week.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Get a free audit</a></div>
       </div>
     </div>
   </section>
