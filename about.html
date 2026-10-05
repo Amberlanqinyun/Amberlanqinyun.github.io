@@ -29,22 +29,134 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": "https://www.flowai.co.nz/about.html",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://www.flowai.co.nz/#amber",
-    "name": "Amber Lan",
-    "jobTitle": "AI Marketing Engineer",
-    "description": "Amber Lan, AI marketing engineer in Auckland. Over ten years across every part of marketing, three years building AI agent systems, and the marketing function of an AI company run solo on that stack.",
-    "email": "mailto:amber.lan.growth.digital@gmail.com",
-    "url": "https://www.flowai.co.nz/",
-    "worksFor": { "@type": "Organization", "name": "Flow AI", "@id": "https://www.flowai.co.nz/#flowai" },
-    "image": "https://www.flowai.co.nz/images/amber-lan.png",
-    "sameAs": ["https://github.com/Amberlanqinyun", "https://www.linkedin.com/in/amberlan/"],
-    "knowsLanguage": ["en", "zh"],
-    "knowsAbout": ["AI Marketing", "Answer Engine Optimization", "Generative Engine Optimization", "SEO", "Marketing Automation", "AI Agents", "Go-to-Market Strategy", "Python", "TypeScript"]
-  }
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.flowai.co.nz/about.html",
+      "url": "https://www.flowai.co.nz/about.html",
+      "name": "About Amber Lan",
+      "dateModified": "2026-10-05",
+      "inLanguage": "en-NZ",
+      "mainEntity": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/#website"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.flowai.co.nz/#amber",
+      "name": "Amber Lan",
+      "jobTitle": "AI Marketing Engineer",
+      "description": "Amber Lan is an AI marketing engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it.",
+      "url": "https://www.flowai.co.nz/about.html",
+      "mainEntityOfPage": "https://www.flowai.co.nz/about.html",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.flowai.co.nz/images/amber-lan.png",
+        "caption": "Amber Lan, AI marketing engineer"
+      },
+      "email": "mailto:amber.lan.growth.digital@gmail.com",
+      "worksFor": {
+        "@id": "https://www.flowai.co.nz/#flowai"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Auckland, New Zealand",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Auckland",
+          "addressCountry": "NZ"
+        }
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "AI Marketing Engineer",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        "skills": "AI agents, answer engine optimisation, marketing automation, go-to-market strategy, Python, TypeScript"
+      },
+      "sameAs": [
+        "https://github.com/Amberlanqinyun",
+        "https://www.linkedin.com/in/amberlan/"
+      ],
+      "knowsLanguage": [
+        "en",
+        "zh"
+      ],
+      "knowsAbout": [
+        "AI Marketing",
+        "AI Agents",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization",
+        "Search Engine Optimization",
+        "Marketing Automation",
+        "Go-to-Market Strategy",
+        "Content Systems",
+        "Analytics",
+        "Python",
+        "TypeScript"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/about.html#in-short",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Amber Lan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Amber Lan is an AI marketing engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of an AI startup on an agent stack she built herself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Amber Lan build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Agent systems for marketing: a content engine with a codified brand voice and a quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. She has published 126 skills, open source, on GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Amber Lan based?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auckland, New Zealand. She works with businesses worldwide, in English and Mandarin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you work with Amber Lan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through Flow AI. It starts with a free written audit of your marketing, then one-week sprints that each install one agent, or a monthly engine that runs the whole agent team."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Amber Lan",
+          "item": "https://www.flowai.co.nz/about.html"
+        }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="/assets/site.css">
@@ -52,6 +164,7 @@
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/texture.css?v=11">
+<link rel="stylesheet" href="/assets/visual.css?v=1">
 <style>
   /* About page. Everything else comes from /assets/site.css and /assets/texture.css. */
   section { scroll-margin-top: 72px; }
@@ -114,6 +227,7 @@
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
+<script src="/assets/visual.js?v=1" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -149,8 +263,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="lead">Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. <b>This page is the receipts.</b></p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
-          <a class="text-link arrow-link" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a>
-          <a class="text-link arrow-link" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="text-link arrow-link" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a>
+          <a class="text-link arrow-link" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me">LinkedIn</a>
         </div>
       </div>
       <figure class="hero-art">
@@ -161,6 +275,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><b>Base</b><span>Auckland, New Zealand · working worldwide</span></div>
         <div><b>Languages</b><span>English · 中文 (native)</span></div>
         <div><b>Published</b><span>126 skills, open source</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="in-short" class="centered" aria-labelledby="in-short-title">
+    <div class="wrap">
+      <div class="stack reveal">
+        <p class="eyebrow">In short</p>
+        <h2 id="in-short-title">Amber Lan, in short.</h2>
+      </div>
+      <div class="brief reveal">
+        <div class="career fig" role="img" aria-label="Career: ten years in marketing, the last three building AI agent systems.">
+          <span class="vlabel">Ten years, one line</span>
+          <div class="career__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="ai"></i><i class="ai"></i><i class="ai"></i></div>
+          <p class="career__legend"><span><b>Marketing</b>every part of it</span><span><b>Building the AI</b>agents that run it</span></p>
+        </div>
+        <dl class="qa"><div><dt>Who is Amber Lan?</dt><dd>Amber Lan is an AI marketing engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of an AI startup on an agent stack she built herself.</dd></div><div><dt>What does Amber Lan build?</dt><dd>Agent systems for marketing: a content engine with a codified brand voice and a quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. She has published 126 skills, open source, on GitHub.</dd></div><div><dt>Where is Amber Lan based?</dt><dd>Auckland, New Zealand. She works with businesses worldwide, in English and Mandarin.</dd></div><div><dt>How do you work with Amber Lan?</dt><dd>Through Flow AI. It starts with a free written audit of your marketing, then one-week sprints that each install one agent, or a monthly engine that runs the whole agent team.</dd></div></dl>
       </div>
     </div>
   </section>
@@ -451,8 +582,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="site-footer__bar">
     <span>&copy; 2026 Flow AI &middot; Amber Lan &middot; Auckland, New Zealand</span>
     <span class="site-footer__social">
-      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a>
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me">LinkedIn</a>
       <a href="mailto:amber.lan.growth.digital@gmail.com">Email</a>
       <a href="/privacy.html">Privacy</a>
     </span>

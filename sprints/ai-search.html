@@ -90,7 +90,9 @@
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/visual.css?v=1">
 <script src="/assets/motion.js" defer></script>
+<script src="/assets/visual.js?v=1" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -162,28 +164,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
+    <section id="buys" class="centered" aria-labelledby="buys-title">
+      <div class="wrap">
+        <div class="buys-band reveal">
+          <div>
+            <p class="eyebrow">What it buys</p>
+            <h2 id="buys-title">Presence in the answers buyers read first.</h2>
+          </div>
+          <div class="fig"><span class="fig__big">+40<small>%</small></span><span class="fig__sub">AI-search visibility, at best</span><div class="fig__art"><div class="bars" role="img" aria-label="Optimised pages showed up to 40 percent more AI-search visibility than standard pages."><div class="bar"><span>Standard page</span><span class="bar__track"><span class="bar__fill" style="--w:71%"></span></span><span class="bar__val">100</span></div><div class="bar is-us"><span>Optimised page</span><span class="bar__track"><span class="bar__fill" style="--w:100%"></span></span><span class="bar__val">140</span></div></div></div><p class="fig__cap">Aggarwal et al., KDD 2024.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section id="deliverables" class="centered" aria-labelledby="deliverables-title">
       <div class="wrap">
         <div class="stack">
           <h2 id="deliverables-title">Six deliverables. One week.</h2>
-          <p class="lead">Fixed scope, so everything ships inside the week.</p>
+          <p class="lead">Fixed scope. Everything ships inside the week.</p>
         </div>
-        <div class="plan-solo">
-          <article class="plan">
-            <p class="plan-name">AI-search sprint</p>
-            <p class="plan-price">One week <small>fixed scope</small></p>
-            <p>Documented, portable, handover included.</p>
-            <ul>
-              <li>AI-crawler access: robots.txt opened to the nine crawlers that matter</li>
-              <li>llms.txt written and served, at root and /.well-known/</li>
-              <li>Structured data: Organization, offers, FAQ, and page schema installed</li>
-              <li>Citability pass on your five most important pages</li>
-              <li>Sitemap, canonical, and feed hygiene</li>
-              <li>Search submission: IndexNow plus a Search Console walkthrough</li>
-            </ul>
-            <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
-          </article>
-        </div>
+        <ul class="dgrid reveal" aria-label="The six AI-search sprint deliverables"><li><span class="vlabel">01<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg></span><b>AI-crawler access</b><p>robots.txt opened to the nine crawlers that matter.</p></li><li><span class="vlabel">02<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg></span><b>llms.txt</b><p>Written and served at root and /.well-known/.</p></li><li><span class="vlabel">03<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg></span><b>Structured data</b><p>Organization, offers, FAQ and page schema.</p></li><li><span class="vlabel">04<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg></span><b>Citability pass</b><p>On your five most important pages.</p></li><li><span class="vlabel">05<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg></span><b>Sitemap hygiene</b><p>Sitemap, canonical and feed, cleaned.</p></li><li><span class="vlabel">06<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg></span><b>Search submission</b><p>IndexNow plus a Search Console walkthrough.</p></li></ul>
+        <div class="dgrid-cta"><a class="btn btn-primary" href="/contact.html">Get a free audit</a><span class="small">One week · fixed scope · documented handover</span></div>
       </div>
     </section>
 
@@ -193,23 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="week-title">How the week runs.</h2>
           <p class="lead">Three checkpoints in one week.</p>
         </div>
-        <div class="grid grid-3" style="text-align:left">
-          <div class="step">
-            <span class="small">Day one</span>
-            <h3>Audit</h3>
-            <p>A crawl and citability audit, exactly as an answer engine sees you.</p>
-          </div>
-          <div class="step">
-            <span class="small">Mid-week</span>
-            <h3>Ship</h3>
-            <p>Crawler access, schema, llms.txt and page fixes go live.</p>
-          </div>
-          <div class="step">
-            <span class="small">End of week</span>
-            <h3>Hand over</h3>
-            <p>Before-and-after audit report, submissions done, maintenance checklist handed over.</p>
-          </div>
-        </div>
+        <div class="week week--full"><div class="week__days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div class="week__rail" aria-hidden="true"><span class="week__dot"></span><span class="week__dot"></span><span class="week__dot"></span></div><ol class="week__steps" aria-label="Three checkpoints in the week"><li><b>Audit</b><p>A crawl and citability audit, exactly as an answer engine sees you.</p></li><li><b>Ship</b><p>Crawler access, schema, llms.txt and page fixes go live.</p></li><li><b>Hand over</b><p>Before-and-after report, submissions done, checklist handed over.</p></li></ol></div>
         <p class="steps-note small">Feeds the Content Engine sprint: the cluster plan tells the engine exactly what to publish next.</p>
       </div>
     </section>

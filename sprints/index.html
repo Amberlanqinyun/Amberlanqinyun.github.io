@@ -105,9 +105,11 @@
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/texture.css?v=11">
+<link rel="stylesheet" href="/assets/visual.css?v=1">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
+<script src="/assets/visual.js?v=1" defer></script>
 </head>
 <body data-motion="auto">
 <!-- Google Tag Manager (noscript) -->
@@ -158,22 +160,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                alt="Three steps on a single baseline. Read: you say what you sell and who buys it, and a ranked written audit comes back in week one. Install: you pick the system with the most to gain and it goes live with its assets, automation and tracking. Run: Flow runs it monthly, a human reviews the output, and one short report says what shipped."
                loading="lazy" decoding="async">
         </figure>
-        <div class="grid grid-3 reveal" style="text-align:left">
-          <div class="step">
-            <span class="small">01</span>
-            <h3>Read</h3>
-            <p>Tell Flow what you sell and who buys it. A written audit of your marketing, with the opportunities ranked, comes back inside the first week.</p>
-          </div>
-          <div class="step">
-            <span class="small">02</span>
-            <h3>Install</h3>
-            <p>Pick the agent with the most to gain. It goes live with the assets, automation and tracking it needs to run.</p>
-          </div>
-          <div class="step">
-            <span class="small">03</span>
-            <h3>Run</h3>
-            <p>Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.</p>
-          </div>
+        <div class="steps-cap reveal">
+          <p><b>01 · Read</b>A written audit, opportunities ranked, inside week one.</p>
+          <p><b>02 · Install</b>The agent with the most to gain goes live.</p>
+          <p><b>03 · Run</b>Every month, reviewed by a human, one short report.</p>
         </div>
       </div>
     </section>
@@ -213,72 +203,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="stack reveal">
           <p class="eyebrow">Install one at a time</p>
           <h2 id="sprints-title">Install one agent at a time.</h2>
-            <p class="lead">Each sprint installs one agent: a fixed deliverables checklist, a one-week clock and full handover, every time.</p>
+            <p class="lead">One agent per sprint. Six fixed deliverables, one week, full handover. Pick a tab.</p>
         </div>
-        <div class="rows reveal">
-<div class="row">
-            <div class="row-label">
-              <span class="small eyebrow">Sprint 01 · Marketing HQ · one week</span>
-              <h3>Positioning sprint</h3>
-              <p>Start here if nobody has written down what you claim, to whom, and why anyone should believe it.</p>
+        <div class="sx reveal" data-sx>
+          <div class="sx__tabs" role="tablist" aria-label="The five sprints"><button class="sx__tab" role="tab" id="sx-tab-positioning" aria-controls="sx-positioning" data-slug="positioning"><span class="vlabel">Sprint 01</span><b><svg class="agent-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="1.8" fill="currentColor" stroke="none"/><circle cx="8" cy="2.6" r="1.1" fill="currentColor" stroke="none"/><circle cx="13.4" cy="8" r="1.1" fill="currentColor" stroke="none"/><circle cx="8" cy="13.4" r="1.1" fill="currentColor" stroke="none"/><circle cx="2.6" cy="8" r="1.1" fill="currentColor" stroke="none"/></svg>Positioning</b></button><button class="sx__tab" role="tab" id="sx-tab-ai-search" aria-controls="sx-ai-search" data-slug="ai-search"><span class="vlabel">Sprint 02</span><b><svg class="agent-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4.2"/><path d="M10.2 10.2 14 14"/></svg>AI search</b></button><button class="sx__tab" role="tab" id="sx-tab-content-engine" aria-controls="sx-content-engine" data-slug="content-engine"><span class="vlabel">Sprint 03</span><b><svg class="agent-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5h10M3 8h10M3 11.5h6"/></svg>Content</b></button><button class="sx__tab" role="tab" id="sx-tab-outbound" aria-controls="sx-outbound" data-slug="outbound"><span class="vlabel">Sprint 04</span><b><svg class="agent-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13 13 3M7 3h6v6"/></svg>Outbound</b></button><button class="sx__tab" role="tab" id="sx-tab-analytics" aria-controls="sx-analytics" data-slug="analytics"><span class="vlabel">Sprint 05</span><b><svg class="agent-ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13.5V8M8 13.5V3.5M12 13.5V9.5"/></svg>Analytics</b></button></div>
+          <div class="sx__panel" role="tabpanel" id="sx-positioning" aria-labelledby="sx-tab-positioning">
+            <div class="sx__lead">
+              <span class="vlabel">Sprint 01 · Marketing HQ · one week</span>
+              <h3>One week to a position you can execute.</h3>
+              <p class="sx__start"><b>Start here if</b> nobody has written down what you claim, to whom, and why anyone should believe it.</p>
+              <div class="fig"><span class="fig__big">1<small>brief</small></span><span class="fig__sub">briefs all ten agents</span><div class="fig__art"><svg class="svgfig" viewBox="0 0 240 164" role="img" aria-label="One positioning brief at the centre, with lines out to ten agents that are briefed from it."><path class="ln draw" pathLength="1" style="transition-delay:0.00s" d="M34 82 L185.0 8.4"/><path class="ln draw" pathLength="1" style="transition-delay:0.05s" d="M34 82 L191.6 23.9"/><path class="ln draw" pathLength="1" style="transition-delay:0.10s" d="M34 82 L196.7 40.1"/><path class="ln draw" pathLength="1" style="transition-delay:0.15s" d="M34 82 L200.1 56.7"/><path class="ln draw" pathLength="1" style="transition-delay:0.20s" d="M34 82 L201.8 73.5"/><path class="ln draw" pathLength="1" style="transition-delay:0.25s" d="M34 82 L201.8 90.5"/><path class="ln draw" pathLength="1" style="transition-delay:0.30s" d="M34 82 L200.1 107.3"/><path class="ln draw" pathLength="1" style="transition-delay:0.35s" d="M34 82 L196.7 123.9"/><path class="ln draw" pathLength="1" style="transition-delay:0.40s" d="M34 82 L191.6 140.1"/><path class="ln draw" pathLength="1" style="transition-delay:0.45s" d="M34 82 L185.0 155.6"/><circle class="nd" cx="185.0" cy="8.4" r="3"/><circle class="nd" cx="191.6" cy="23.9" r="3"/><circle class="nd" cx="196.7" cy="40.1" r="3"/><circle class="nd" cx="200.1" cy="56.7" r="3"/><circle class="nd" cx="201.8" cy="73.5" r="3"/><circle class="nd" cx="201.8" cy="90.5" r="3"/><circle class="nd" cx="200.1" cy="107.3" r="3"/><circle class="nd" cx="196.7" cy="123.9" r="3"/><circle class="nd" cx="191.6" cy="140.1" r="3"/><circle class="nd" cx="185.0" cy="155.6" r="3"/><circle class="ring pulse" cx="34" cy="82" r="13"/><circle class="nd-a" cx="34" cy="82" r="6"/><text x="22" y="114">HQ</text><text x="214" y="86" class="t-fg">10</text></svg></div><p class="fig__cap">Every other agent is briefed from this.</p></div>
             </div>
-            <div class="row-detail">
-              <p class="buys">What it buys: <b>every other agent stops relitigating what to say</b>, and the claims survive handover.</p>
-              <p>Claims register, one-page positioning, message architecture, and your first two channels.</p>
-              <span class="handoff">Every other agent is briefed from this.</span>
-              <a class="text-link" href="/sprints/positioning.html">See the fixed scope</a>
-            </div>
-          </div>
-<div class="row">
-            <div class="row-label">
-              <span class="small eyebrow">Sprint 02 · Search agent · one week</span>
-              <h3>AI-search sprint</h3>
-              <p>Start here if buyers ask Google and ChatGPT about what you sell and you never come up.</p>
-            </div>
-            <div class="row-detail">
-              <p class="buys">What it buys: <b>presence in the answers buyers read first</b>; optimised pages have shown up to 40% more AI-search visibility (Aggarwal et al., KDD 2024).</p>
-              <p>AI-crawler access, llms.txt, structured data, citability fixes, and search submission.</p>
-              <span class="handoff">Your claim becomes machine-readable, so Google and AI assistants cite you.</span>
-              <a class="text-link" href="/sprints/ai-search.html">See the fixed scope</a>
+            <div class="sx__body">
+              <div>
+                <span class="vlabel">Six deliverables, fixed scope</span>
+                <ul class="chips"><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Claims register</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>One-page positioning</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Message architecture</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Competitor claim map</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Homepage hero rewrite</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>90-day channel plan</li></ul>
+              </div>
+              <div>
+                <span class="vlabel">The week</span>
+                <div class="week"><div class="week__days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div class="week__rail" aria-hidden="true"><span class="week__dot"></span><span class="week__dot"></span><span class="week__dot"></span></div><ol class="week__steps" aria-label="The Positioning sprint week"><li><b>Read</b><p>A 30-minute call. I read your site, materials and market first.</p></li><li><b>Draft</b><p>Claims register and positioning page arrive. You mark up, I revise.</p></li><li><b>Hand over</b><p>Final documents, hero copy and the channel plan, in writing.</p></li></ol></div>
+              </div>
+              <div class="sx__foot">
+                <span class="sx__feeds"><svg viewBox="0 0 28 10" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h25M22 1.5 26 5l-4 3.5"/></svg>Feeds <b>Sprint 02, AI search</b></span>
+                <a class="text-link arrow-link" href="/sprints/positioning.html">See the fixed scope</a>
+              </div>
             </div>
           </div>
-<div class="row">
-            <div class="row-label">
-              <span class="small eyebrow">Sprint 03 · Content agent · one week</span>
-              <h3>Content engine sprint</h3>
-              <p>Start here if content only ships when someone finds a spare afternoon.</p>
+          <div class="sx__panel" role="tabpanel" id="sx-ai-search" aria-labelledby="sx-tab-ai-search">
+            <div class="sx__lead">
+              <span class="vlabel">Sprint 02 · Search agent · one week</span>
+              <h3>Make your business legible to Google and the AI assistants.</h3>
+              <p class="sx__start"><b>Start here if</b> buyers ask Google and ChatGPT about what you sell and you never come up.</p>
+              <div class="fig"><span class="fig__big">+40<small>%</small></span><span class="fig__sub">AI-search visibility, at best</span><div class="fig__art"><div class="bars" role="img" aria-label="Optimised pages showed up to 40 percent more AI-search visibility than standard pages."><div class="bar"><span>Standard page</span><span class="bar__track"><span class="bar__fill" style="--w:71%"></span></span><span class="bar__val">100</span></div><div class="bar is-us"><span>Optimised page</span><span class="bar__track"><span class="bar__fill" style="--w:100%"></span></span><span class="bar__val">140</span></div></div></div><p class="fig__cap">Aggarwal et al., KDD 2024.</p></div>
             </div>
-            <div class="row-detail">
-              <p class="buys">What it buys back: <b>about 10 hours a week of writing time</b>, measured in production, with the engine drafting between approvals.</p>
-              <p>Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.</p>
-              <span class="handoff">Every piece joins a library that keeps selling long after it ships.</span>
-              <a class="text-link" href="/sprints/content-engine.html">See the fixed scope</a>
-            </div>
-          </div>
-<div class="row">
-            <div class="row-label">
-              <span class="small eyebrow">Sprint 04 · Outbound agent · one week</span>
-              <h3>Outbound sprint</h3>
-              <p>Start here if the pipeline runs on referrals and you cannot say where the next customer comes from.</p>
-            </div>
-            <div class="row-detail">
-              <p class="buys">What it buys back: <b>about 20 hours a week across three team members</b>, measured in production, with reply rates around 30% against the industry’s 1-in-5 median.</p>
-              <p>A signal-based prospect list and one personalised sequence inside safe limits, with instant human handoff the moment a buyer replies.</p>
-              <span class="handoff">Reaches buyers who were not looking yet, warmed by what they find when they check you.</span>
-              <a class="text-link" href="/sprints/outbound.html">See the fixed scope</a>
+            <div class="sx__body">
+              <div>
+                <span class="vlabel">Six deliverables, fixed scope</span>
+                <ul class="chips"><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>AI-crawler access</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>llms.txt, served</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Structured data</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Citability pass</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Sitemap hygiene</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Search submission</li></ul>
+              </div>
+              <div>
+                <span class="vlabel">The week</span>
+                <div class="week"><div class="week__days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div class="week__rail" aria-hidden="true"><span class="week__dot"></span><span class="week__dot"></span><span class="week__dot"></span></div><ol class="week__steps" aria-label="The AI-search sprint week"><li><b>Audit</b><p>A crawl and citability audit, exactly as an answer engine sees you.</p></li><li><b>Ship</b><p>Crawler access, schema, llms.txt and page fixes go live.</p></li><li><b>Hand over</b><p>Before-and-after report, submissions done, checklist handed over.</p></li></ol></div>
+              </div>
+              <div class="sx__foot">
+                <span class="sx__feeds"><svg viewBox="0 0 28 10" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h25M22 1.5 26 5l-4 3.5"/></svg>Feeds <b>Sprint 03, Content</b></span>
+                <a class="text-link arrow-link" href="/sprints/ai-search.html">See the fixed scope</a>
+              </div>
             </div>
           </div>
-<div class="row">
-            <div class="row-label">
-              <span class="small eyebrow">Sprint 05 · Measurement agent · one week</span>
-              <h3>Analytics sprint</h3>
-              <p>Start here if you cannot say which marketing effort produced last month's revenue.</p>
+          <div class="sx__panel" role="tabpanel" id="sx-content-engine" aria-labelledby="sx-tab-content-engine">
+            <div class="sx__lead">
+              <span class="vlabel">Sprint 03 · Content agent · one week</span>
+              <h3>A month of on-voice content from one source document.</h3>
+              <p class="sx__start"><b>Start here if</b> content only ships when someone finds a spare afternoon.</p>
+              <div class="fig"><span class="fig__big">10<small>hrs / wk</small></span><span class="fig__sub">of writing time back</span><div class="fig__art"><div class="hours" style="--cols:8" role="img" aria-label="Ten of forty weekly working hours back."><i class="on" style="transition-delay:0.00s"></i><i class="on" style="transition-delay:0.04s"></i><i class="on" style="transition-delay:0.08s"></i><i class="on" style="transition-delay:0.12s"></i><i class="on" style="transition-delay:0.16s"></i><i class="on" style="transition-delay:0.20s"></i><i class="on" style="transition-delay:0.24s"></i><i class="on" style="transition-delay:0.28s"></i><i class="on" style="transition-delay:0.32s"></i><i class="on" style="transition-delay:0.36s"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><p class="fig__cap">Measured in production. Each square is one working hour.</p></div>
             </div>
-            <div class="row-detail">
-              <p class="buys">What it buys: <b>next month’s budget goes where this month’s revenue came from</b>.</p>
-              <p>Tracking installed and conversion events wired, with a one-page monthly report connected to your real numbers.</p>
-              <span class="handoff">Shows which agent produced revenue and feeds it back into positioning.</span>
-              <a class="text-link" href="/sprints/analytics.html">See the fixed scope</a>
+            <div class="sx__body">
+              <div>
+                <span class="vlabel">Six deliverables, fixed scope</span>
+                <ul class="chips"><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Voice codified</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Engine configured</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>First month drafted</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Publishing calendar</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Source-capture habit</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Operator handbook</li></ul>
+              </div>
+              <div>
+                <span class="vlabel">The week</span>
+                <div class="week"><div class="week__days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div class="week__rail" aria-hidden="true"><span class="week__dot"></span><span class="week__dot"></span><span class="week__dot"></span></div><ol class="week__steps" aria-label="The Content engine sprint week"><li><b>Listen</b><p>A voice interview plus writing you love and hate.</p></li><li><b>Run</b><p>The engine runs on your first source document. You judge.</p></li><li><b>Hand over</b><p>A month of approved content scheduled, handbook handed over.</p></li></ol></div>
+              </div>
+              <div class="sx__foot">
+                <span class="sx__feeds"><svg viewBox="0 0 28 10" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h25M22 1.5 26 5l-4 3.5"/></svg>Feeds <b>Sprint 04, Outbound</b></span>
+                <a class="text-link arrow-link" href="/sprints/content-engine.html">See the fixed scope</a>
+              </div>
+            </div>
+          </div>
+          <div class="sx__panel" role="tabpanel" id="sx-outbound" aria-labelledby="sx-tab-outbound">
+            <div class="sx__lead">
+              <span class="vlabel">Sprint 04 · Outbound agent · one week</span>
+              <h3>One outreach lane, live, with a human takeover rule.</h3>
+              <p class="sx__start"><b>Start here if</b> the pipeline runs on referrals and you cannot say where the next customer comes from.</p>
+              <div class="fig"><span class="fig__big">~30<small>%</small></span><span class="fig__sub">reply rate, in production</span><div class="fig__art"><div class="bars" role="img" aria-label="Reply rate around 30 percent in production against a benchmark median of about one in five."><div class="bar"><span>Industry median</span><span class="bar__track"><span class="bar__fill" style="--w:50%"></span></span><span class="bar__val">~20%</span></div><div class="bar is-us"><span>Flow, in production</span><span class="bar__track"><span class="bar__fill" style="--w:75%"></span></span><span class="bar__val">~30%</span></div></div></div><p class="fig__cap">Median from <a class="text-link" href="https://www.heyreach.io/blog/linkedin-outreach-benchmark-report-2026" target="_blank" rel="noopener">HeyReach 2026, 96,051 campaigns</a>.</p></div>
+            </div>
+            <div class="sx__body">
+              <div>
+                <span class="vlabel">Six deliverables, fixed scope</span>
+                <ul class="chips"><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>ICP + signal list</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>One sequence</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Safe sending limits</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Human takeover</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>CRM pipeline</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>First sends live</li></ul>
+              </div>
+              <div>
+                <span class="vlabel">The week</span>
+                <div class="week"><div class="week__days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div class="week__rail" aria-hidden="true"><span class="week__dot"></span><span class="week__dot"></span><span class="week__dot"></span></div><ol class="week__steps" aria-label="The Outbound sprint week"><li><b>Define</b><p>ICP session: who buys, and what signal reveals them.</p></li><li><b>Build</b><p>List built, sequence drafted, limits set. You approve every word.</p></li><li><b>Go live</b><p>The lane is live, replies reach you, the checklist is yours.</p></li></ol></div>
+              </div>
+              <div class="sx__foot">
+                <span class="sx__feeds"><svg viewBox="0 0 28 10" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h25M22 1.5 26 5l-4 3.5"/></svg>Feeds <b>Sprint 05, Analytics</b></span>
+                <a class="text-link arrow-link" href="/sprints/outbound.html">See the fixed scope</a>
+              </div>
+            </div>
+          </div>
+          <div class="sx__panel" role="tabpanel" id="sx-analytics" aria-labelledby="sx-tab-analytics">
+            <div class="sx__lead">
+              <span class="vlabel">Sprint 05 · Measurement agent · one week</span>
+              <h3>Know which channel pays, on one page a month.</h3>
+              <p class="sx__start"><b>Start here if</b> you cannot say which marketing effort produced last month’s revenue.</p>
+              <div class="fig"><span class="fig__big">1<small>page</small></span><span class="fig__sub">a month, from live data</span><div class="fig__art"><svg class="svgfig" viewBox="0 0 240 164" role="img" aria-label="A loop: track, attribute, report, re-aim, then round again every month."><circle class="ln draw" pathLength="1" cx="120" cy="80" r="58"/><circle class="nd" cx="120" cy="22" r="3.5"/><text x="120" y="12" text-anchor="middle">Track</text><circle class="nd" cx="178" cy="80" r="3.5"/><text x="188" y="84" text-anchor="start">Attribute</text><circle class="nd" cx="120" cy="138" r="3.5"/><text x="120" y="156" text-anchor="middle">Report</text><circle class="nd" cx="62" cy="80" r="3.5"/><text x="52" y="84" text-anchor="end">Re-aim</text><g class="orbit"><circle class="nd-a" cx="120" cy="22" r="5"/></g></svg></div><p class="fig__cap">Shows which agent produced revenue and feeds it back into positioning.</p></div>
+            </div>
+            <div class="sx__body">
+              <div>
+                <span class="vlabel">Six deliverables, fixed scope</span>
+                <ul class="chips"><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Privacy-first analytics</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Conversion events</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Channel attribution</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Monthly report</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>AI-readiness debrief</li><li><svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.4 5.6 10.2 11.5 3.8"/></svg>Campaign checklist</li></ul>
+              </div>
+              <div>
+                <span class="vlabel">The week</span>
+                <div class="week"><div class="week__days" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div class="week__rail" aria-hidden="true"><span class="week__dot"></span><span class="week__dot"></span><span class="week__dot"></span></div><ol class="week__steps" aria-label="The Analytics sprint week"><li><b>Audit</b><p>What fires, what lies, what is missing entirely.</p></li><li><b>Install</b><p>Tracking and events tested against real traffic.</p></li><li><b>Report</b><p>Your first one-page report from live data, together.</p></li></ol></div>
+              </div>
+              <div class="sx__foot">
+                <span class="sx__feeds"><svg viewBox="0 0 28 10" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h25M22 1.5 26 5l-4 3.5"/></svg>Feeds <b>Sprint 01, Positioning</b></span>
+                <a class="text-link arrow-link" href="/sprints/analytics.html">See the fixed scope</a>
+              </div>
             </div>
           </div>
         </div>

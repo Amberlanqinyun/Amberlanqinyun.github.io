@@ -46,6 +46,7 @@
 <link rel="stylesheet" href="/assets/site-footer.css">
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/texture.css?v=11">
+<link rel="stylesheet" href="/assets/visual.css?v=1">
 <style>
   /* The manifesto. A reading page: statements, then the argument under each. */
   section { scroll-margin-top: 72px; }
@@ -62,6 +63,7 @@
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
+<script src="/assets/visual.js?v=1" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -109,11 +111,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 id="pattern-title" class="fill-on-scroll">Every function hit the wall. Then it built a layer.</h2>
         <p class="lead fill-on-scroll">The story repeats wherever skilled people drown in the work around the work.</p>
       </div>
-      <div class="prose reveal fill-prose">
-        <p>Finance used to lose a week a month to the close. The spreadsheets multiplied, the people stayed late, and the analysis everyone was hired for waited. Then the systems arrived, an engineering layer under the function, and finance became a team that models the business instead of reconciling it.</p>
-        <p>Sales lived the same arc. Pipeline sat in heads and inboxes until revenue operations gave it a system of record, a cadence, and tooling that made every rep's week lighter.</p>
-        <p>Marketing hit that wall years ago. It answered with more hires and more subscriptions. The tabs multiplied, the layer never came, and the people in the function carried the difference.</p>
-      </div>
+      <div class="layers reveal" role="list" aria-label="Each function, the wall it hit, and the layer it built"><div class="layers__row"><span class="layers__fn">Finance</span><span class="layers__was">A week a month lost to the close.</span><span class="layers__arrow" aria-hidden="true"></span><span class="layers__layer">Finance systems</span><span class="layers__arrow" aria-hidden="true"></span><span class="layers__now">A team that models the business.</span></div><div class="layers__row"><span class="layers__fn">Sales</span><span class="layers__was">Pipeline in heads and inboxes.</span><span class="layers__arrow" aria-hidden="true"></span><span class="layers__layer">Revenue operations</span><span class="layers__arrow" aria-hidden="true"></span><span class="layers__now">Every rep&#39;s week, lighter.</span></div><div class="layers__row is-us"><span class="layers__fn">Marketing</span><span class="layers__was">More hires. More subscriptions. More tabs.</span><span class="layers__arrow" aria-hidden="true"></span><span class="layers__layer">Marketing HQ</span><span class="layers__arrow" aria-hidden="true"></span><span class="layers__now">Ten agents, one engineer.</span></div></div>
+      <p class="layers__cap reveal">Marketing answered the wall with more hires and more subscriptions. The layer never came, and the people in the function carried the difference.</p>
     </div>
   </section>
 
@@ -171,9 +170,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 id="division-title" class="fill-on-scroll">The system does the production. You keep the judgment.</h2>
         <p class="lead fill-on-scroll">Drawing the line between the two is the real work of marketing engineering.</p>
       </div>
-      <div class="prose reveal fill-prose">
-        <p>A system should hold the research, the first draft, the schedule, the tracking, and the follow-up that would otherwise wait four days. Done by hand, that work builds no advantage. Done twice by hand, it should become a system.</p>
-        <p>A human should hold the taste, the claim worth making, the call on what ships, and the conversation with a buyer. Those are the parts a machine manufactures badly, and the parts a marketer was hired for.</p>
+      <div class="split reveal">
+        <div class="split__col">
+          <span class="vlabel">The system holds</span>
+          <h3>Production</h3>
+          <ul><li>The research</li><li>The first draft</li><li>The schedule</li><li>The tracking</li><li>The follow-up that would wait four days</li></ul>
+          <p>Done twice by hand, it should become a system.</p>
+        </div>
+        <div class="split__line" aria-hidden="true"><span>The line</span></div>
+        <div class="split__col is-you">
+          <span class="vlabel">You hold</span>
+          <h3>Judgment</h3>
+          <ul><li>The taste</li><li>The claim worth making</li><li>The call on what ships</li><li>The conversation with a buyer</li></ul>
+          <p>The parts a machine manufactures badly, and the parts a marketer was hired for.</p>
+        </div>
+      </div>
+      <div class="prose reveal fill-prose" style="margin-top:var(--space-band)">
         <p>Flow AI was built by running exactly this split for three years, as the whole marketing function of an AI company, by one person. The system did the production. She did the judgment. In production, the agents buy back about 30 team-hours a week.</p>
       </div>
     </div>
