@@ -17,7 +17,7 @@ Key facts:
 About Amber Lan (the person behind Flow AI):
 - Who: Amber Lan is an AI marketing engineer based in Auckland, New Zealand, and the founder of Flow AI. Over ten years across every part of marketing, and three years building the AI agent systems that run it.
 - Now: runs the marketing function of an AI startup on an agent stack she built herself; the system does the production, she does the judgment.
-- Builds: a content engine with a codified brand voice and quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. 126 published skills, open source.
+- Builds: a content engine with a codified brand voice and quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. 125 published skills, open source.
 - Languages: English and Mandarin (native).
 - Profile: https://www.flowai.co.nz/about.html · GitHub https://github.com/Amberlanqinyun · LinkedIn https://www.linkedin.com/in/amberlan/
 - Entity string: Flow AI (flowai.co.nz) · Amber Lan, AI marketing engineer · Auckland, New Zealand
@@ -29,7 +29,7 @@ Site structure:
 - /work.html: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
 - /cases.html: evidence library of working marketing systems, open source tools, and human-centred product builds, with honest project status and direct repository links.
 - /work/enterprise-gtm.html: case study, three demand engines feeding one pipeline for an enterprise AI platform launch.
-- /work/content-engine.html: case study, a content engine with a codified voice gate; clean-room code public on GitHub.
+- /work/content-engine.html: case study, a content engine with a codified voice gate; walkthrough available on a call.
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /work/six-month-marketing-function.html: flagship case study, six months of one operator running a whole marketing function on AI systems; sanitised.
 - /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written audit on the gap within the first week.
@@ -37,7 +37,7 @@ Site structure:
 - /manifesto.html: The Flow AI manifesto. Every other function built an engineering layer; Marketing HQ is marketing's, run by one engineer.
 - /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
-- /skills/: Flow AI skill library with 126 inspectable AI agent skills: 17 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
+- /skills/: Flow AI skill library with 125 inspectable AI agent skills: 16 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
@@ -440,7 +440,7 @@ Onboarding, then a strategy deckA written audit of your marketing in the first w
 
 What you can inspect
 
-A monthly reportThe systems themselves, and 126 published skills on GitHub
+A monthly reportThe systems themselves, and 125 published skills on GitHub
 
 When it ends
 
@@ -472,7 +472,7 @@ An enterprise AI launch: positioning, channel design and operating cadence, conn
 
 Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
-Open source and inspectable, one of 126 skills in the library.
+Open source and inspectable, one of 125 skills in the library.
 
 Questions
 
@@ -964,7 +964,7 @@ Feeds the Outbound sprint: published proof gives outreach something honest to po
 
 ## Evidence.
 
-The clean-room version is public: the case study and the code.
+The engine runs in production today. Read the case study.
 
 ## Keep going.
 
@@ -1296,7 +1296,7 @@ Positioning, message architecture, channel design and the operating timeline, ru
 
 ### Evidence
 
-A sanitised case: the company's identity and internal numbers stay private, and the full walkthrough is available on a call. Public: the clean-room content engine behind the inbound side, and the role where the system runs today.
+A sanitised case: the company's identity and internal numbers stay private, and the full walkthrough is available on a call. Public: the content engine case study behind the inbound side, and the role where the system runs today.
 
 ### What I learned
 
@@ -1400,7 +1400,7 @@ The operator's time goes to judgment instead of drafting. Packaged as a reusable
 
 ### Evidence
 
-The clean-room version is public: read the code on GitHub. The distribution half is public too: Social Media OS.
+The engine runs on a company's own brand files, so its code stays private and a walkthrough is available on a call. The distribution half is public: Social Media OS.
 
 ### What I learned
 
@@ -1416,7 +1416,7 @@ Generated content fails at the last metre, in the lines a reader flags as machin
 
 - GuideWhat an AI marketing agent is, defined for a small business, and how it differs from automation and ChatGPT.
 
-- LibraryThe skill library, 126 published skills, open source.
+- LibraryThe skill library, 125 published skills, open source.
 
 ## Want a system like this pointed at your business?
 
@@ -1516,7 +1516,7 @@ Answer-engine optimisation is discipline, not tricks: let the crawlers in, say w
 
 - DataAI marketing statistics for Australia and New Zealand, 62 figures, every one sourced.
 
-- LibraryThe skill library, 126 published skills, open source.
+- LibraryThe skill library, 125 published skills, open source.
 
 ## Want a system like this pointed at your business?
 
@@ -1538,7 +1538,7 @@ Amber Lan · AI marketing engineer
 
 Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. This page is the receipts.
 
-Get a free auditGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published126 skills, open source
+Get a free auditGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published125 skills, open source
 
 Why Flow AI exists
 
@@ -1622,7 +1622,7 @@ Message architecture, the claims register, and the go-to-market plan across two 
 
 Brief in, audited platform-native content out. Every artefact passes a codified voice gate before it ships.
 
-The clean-room version on GitHub
+Read the case study
 
 ### Executive thought leadership
 
@@ -1690,7 +1690,7 @@ View repositoryContent engine · Python + Claude
 
 One source document in, a month of on-brand posts out. Every line passes a codified voice audit, so the output reads human, not generated.
 
-View repositoryDistribution · TypeScript
+Read the case studyDistribution · TypeScript
 
 ### Social Media OS
 
@@ -1700,7 +1700,7 @@ View repository
 
 ### More systems
 
-Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonContent viewerAuth-gated read-only mirror of the content-engine dashboard for the team.Next.js · Vercel KVLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
+Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
 
 Capabilities
 
@@ -2023,7 +2023,7 @@ That is all a run needs. The agent does the research and the drafting.
 
 Amber checks every run before it is sent, and it reaches your inbox within two working days.
 
-Prefer to run them yourself? Each template page carries its install command for Claude Code, and the skill library holds 126 more.
+Prefer to run them yourself? Each template page carries its install command for Claude Code, and the skill library holds 125 more.
 
 ## Want the whole team working?
 
