@@ -221,3 +221,67 @@ h3, .sx__lead h3, .flagship h3, .outcome__head h3, .split__col h3, .qa dt, .faq 
 .fig__big, .stat-num, .plan-price, .offer__price { font-weight: 600; letter-spacing: -0.035em; }
 .paper__top b { font-weight: 600; letter-spacing: -0.01em; }
 .eyebrow, .vlabel { font-weight: 500; }
+
+/* ---------- Sprints, proposal layout (2026-10-06) ----------
+   One promise, one piece of work, a plain list and a short schedule.
+   The deliverable preview is a tonal document that sits in the page. */
+
+.sx__tab { gap: 0.4rem; }
+.sx__num { font-size: 0.8125rem; color: var(--soft); font-variant-numeric: tabular-nums; }
+.sx__tab[aria-selected="true"] .sx__num { color: var(--accent); }
+.sx__tab b { font-size: 1.0625rem; font-weight: 500; }
+
+.sx__panel { display: block; padding: clamp(3rem, 6vw, 4.5rem) 0 0; }
+.sx__top { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2.5rem, 6vw, 5.5rem); align-items: start; }
+.sx__lead h3 { margin-top: var(--s-4); font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.12; }
+.sx__lead .sx__start { margin-top: var(--s-5); font-size: 1.0625rem; max-width: 38ch; }
+.sx__outcome { margin-top: var(--s-6); padding-top: var(--s-5); border-top: 1px solid var(--hair); color: var(--muted); line-height: 1.6; max-width: 40ch; }
+.sx__outcome b { color: var(--fg); font-weight: 600; }
+.sx__outcome a { color: var(--muted); }
+.sx__links { margin-top: var(--s-6); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-3) var(--s-6); }
+.sx__links span { color: var(--soft); font-size: var(--t-small); }
+
+.sx__doc { margin: 0; padding: clamp(1.5rem, 3vw, 2.25rem); border: 1px solid var(--hair); border-radius: 16px; background: linear-gradient(180deg, rgba(250, 248, 243, 0.035), rgba(250, 248, 243, 0.012)); }
+.sx__doc figcaption { margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--hair); color: var(--soft); font-size: 0.8125rem; }
+
+.sx__cols { margin-top: clamp(3rem, 6vw, 4.5rem); padding-top: var(--s-6); border-top: 1px solid var(--hair); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5.5rem); }
+.sx__h { margin: 0 0 var(--s-3); font-size: 0.875rem; font-weight: 500; letter-spacing: 0; color: var(--soft); }
+.sx__list, .sx__days { list-style: none; padding: 0; margin: 0; }
+.sx__list { columns: 2; column-gap: var(--s-6); }
+.sx__list li { display: flex; gap: 0.85rem; padding: 0.8rem 0; border-top: 1px solid var(--hair); color: var(--fg); break-inside: avoid; }
+.sx__list li span, .sx__days li > span { color: var(--soft); font-size: 0.8125rem; font-variant-numeric: tabular-nums; padding-top: 0.15rem; }
+.sx__days li { display: grid; grid-template-columns: 3rem 1fr; gap: 0.85rem; padding: 0.8rem 0; border-top: 1px solid var(--hair); }
+.sx__days p { color: var(--muted); line-height: 1.55; }
+.sx__days b { color: var(--fg); font-weight: 500; }
+
+/* Paper artefacts become tonal documents on the dark page (all pages). */
+.paper {
+  --paper: transparent; --pink: rgba(250, 248, 243, 0.86); --pmute: var(--soft); --phair: var(--hair); --pfill: rgba(250, 248, 243, 0.08);
+  width: 100%; max-width: 30rem; padding: 0; background: transparent; color: var(--pink);
+  box-shadow: none; transform: none !important; border-radius: 0; font-size: 0.8125rem;
+}
+.paper__top b { color: var(--fg); font-weight: 600; }
+.paper .hl { background: rgba(228, 164, 60, 0.45); }
+.paper__note { background: rgba(228, 164, 60, 0.07); color: var(--muted); }
+.paper__note b { color: var(--accent); }
+.report__rows i { background: rgba(250, 248, 243, 0.14); }
+.report__rows li.is-top i { background: rgba(228, 164, 60, 0.75); }
+.ask { background: rgba(250, 248, 243, 0.05); color: var(--muted); }
+.cite { background: rgba(228, 164, 60, 0.1); color: var(--accent); }
+.sources span.is-you { border-color: rgba(228, 164, 60, 0.5); color: var(--accent); background: rgba(228, 164, 60, 0.06); }
+.cal i { background: rgba(250, 248, 243, 0.025); }
+.cal i.ok { border-color: rgba(228, 164, 60, 0.45); }
+.cal i.ok::after { background: rgba(228, 164, 60, 0.8); }
+.msg { background: rgba(250, 248, 243, 0.04); }
+.msg.in { background: rgba(228, 164, 60, 0.08); }
+.msg.in .sk { background: rgba(228, 164, 60, 0.3); }
+.handoff-tag { color: var(--accent); }
+.handoff-tag::before { background: var(--accent); }
+
+@media (max-width: 900px) {
+  .sx__top, .sx__cols { grid-template-columns: 1fr; }
+  .sx__doc { order: 2; }
+}
+@media (max-width: 600px) {
+  .sx__list { columns: 1; }
+}
