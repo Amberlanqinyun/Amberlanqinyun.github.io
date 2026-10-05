@@ -15,10 +15,11 @@ Key facts:
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
 About Amber Lan (the person behind Flow AI):
-- Who: Amber Lan is an AI marketing engineer based in Auckland, New Zealand, and the founder of Flow AI. Over ten years across every part of marketing, and three years building the AI agent systems that run it.
+- Who: Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. Over ten years across every part of marketing, and three years building the AI agent systems that run it.
 - Now: runs the marketing function of an AI startup on an agent stack she built herself; the system does the production, she does the judgment.
 - Builds: a content engine with a codified brand voice and quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. 125 published skills, open source.
 - Languages: English and Mandarin (native).
+- Roles: marketing engineer, GTM engineer, AI marketing engineer, growth engineer, RevOps / marketing ops engineer. Open to conversations about senior roles, remote from anywhere (based in Auckland, NZT). Contact: amber.lan.growth.digital@gmail.com or https://www.linkedin.com/in/amberlan/
 - Profile: https://www.flowai.co.nz/about.html · GitHub https://github.com/Amberlanqinyun · LinkedIn https://www.linkedin.com/in/amberlan/
 - Entity string: Flow AI (flowai.co.nz) · Amber Lan, AI marketing engineer · Auckland, New Zealand
 
