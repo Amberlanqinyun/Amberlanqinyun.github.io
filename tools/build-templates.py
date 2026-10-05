@@ -218,6 +218,10 @@ def head(title, description, path, schema, og_type="website"):
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/alive.js?v={V}" defer></script>
 <script src="/assets/template-form.js?v={V}" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&amp;display=swap">
+<link rel="stylesheet" href="/assets/claude.css?v=1">
 </head>
 <body>
 {GTM_BODY}
