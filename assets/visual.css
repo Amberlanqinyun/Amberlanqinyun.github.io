@@ -260,3 +260,8 @@
 }
 .stat .fig__art > * { width: 100%; }
 .stat .hours-row { grid-template-columns: 3.5rem 1fr; }
+
+/* Tablet: give the agent-team labels room inside the viewport. */
+@media (min-width: 721px) and (max-width: 1100px) {
+  .wrap .system { width: calc(100% - clamp(9rem, 26vw, 18rem)); }
+}
