@@ -14,6 +14,7 @@ import html, json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 INDEX = (ROOT / "index.html").read_text()
+SYSTEM = (ROOT / "sprints" / "index.html").read_text()  # the agent team diagram lives here
 SITE = "https://www.flowai.co.nz"
 UPDATED = "2026-10-02"
 V = "9"  # asset version query; bump with texture/dotfield/alive changes
@@ -35,9 +36,9 @@ REVEAL = chunk("  <script>\n    (function () {\n      var reduceMotion", "    }(
 def icon(label):
     """The agent's line icon, exactly as it appears in the agent team diagram."""
     if label == "Marketing HQ":
-        li = re.search(r'<li class="is-core">(.*?)</li>', INDEX, re.S).group(1)
+        li = re.search(r'<li class="is-core">(.*?)</li>', SYSTEM, re.S).group(1)
     else:
-        li = re.search(r'<li data-group="[a-z]+">(?:(?!</li>).)*?' + re.escape(label) + r'.*?</li>', INDEX, re.S).group(0)
+        li = re.search(r'<li data-group="[a-z]+">(?:(?!</li>).)*?' + re.escape(label) + r'.*?</li>', SYSTEM, re.S).group(0)
     return re.search(r'<svg class="agent-ico".*?</svg>', li, re.S).group(0)
 
 
@@ -210,17 +211,15 @@ def head(title, description, path, schema, og_type="website"):
 </script>
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/site-header.css">
-<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/texture.css?v={V}">
 <link rel="stylesheet" href="/assets/templates.css?v={V}">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/alive.js?v={V}" defer></script>
 <script src="/assets/template-form.js?v={V}" defer></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap">
-<link rel="stylesheet" href="/assets/claude.css?v=1">
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=2">
 </head>
 <body>
 {GTM_BODY}

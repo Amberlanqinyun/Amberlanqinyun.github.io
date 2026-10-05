@@ -164,16 +164,14 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 {times}<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/site-header.css">
-<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/blog.css">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/share.js" defer></script>
 <script src="/assets/blog.js" defer></script>
-{extra_head}<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap">
-<link rel="stylesheet" href="/assets/claude.css?v=1">
+{extra_head}<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=2">
 </head>
 <body data-motion="auto">
 {partial('gtm-body').rstrip()}
