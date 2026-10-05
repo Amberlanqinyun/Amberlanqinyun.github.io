@@ -166,7 +166,7 @@
 .hours-row { display: grid; grid-template-columns: 4.5rem 1fr; align-items: center; gap: 0.75rem; }
 .hours-row .vlabel { font-size: 10px; }
 .hours--wide { --cols: 40; gap: 2px; max-width: none; }
-.hours--wide i { border-radius: 1.5px; aspect-ratio: 0.55; }
+.hours--wide i { border-radius: 1.5px; aspect-ratio: auto; height: 12px; }
 
 /* SVG figures: fan (one brief to ten agents) and loop (measure, re-aim). */
 .svgfig { width: 100%; max-width: 300px; height: auto; display: block; overflow: visible; }
@@ -258,3 +258,5 @@
   .svgfig .pulse, .svgfig .orbit { animation: none; }
   .bar__fill, .hours i, .week__rail::after, .svgfig .draw { transition: none; }
 }
+.stat .fig__art > * { width: 100%; }
+.stat .hours-row { grid-template-columns: 3.5rem 1fr; }
