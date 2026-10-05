@@ -168,6 +168,8 @@
 <style>
   /* About page. Everything else comes from /assets/site.css and /assets/texture.css. */
   section { scroll-margin-top: 72px; }
+  /* Same type as the home page: emphasis is weight 500, never bold */
+  main p b, main .lead b, .row b { font-weight: 500; color: var(--fg); }
 
   /* Four facts under the portrait, still inside the hero: a spec strip on hairlines */
   .facts {
@@ -176,18 +178,17 @@
     padding-bottom: var(--space-band); text-align: left;
   }
   .facts > div { border-top: 1px solid var(--hair); padding-top: var(--s-4); }
-  .facts b { display: block; margin-bottom: 0.35rem; color: var(--fg); font-size: 14px; font-weight: 600; }
+  .facts b { display: block; margin-bottom: 0.35rem; color: var(--fg); font-size: 14px; font-weight: 500; }
   .facts span { display: block; max-width: 22ch; color: var(--soft); font-size: 14px; line-height: 1.5; text-wrap: pretty; }
 
   /* Short paragraphs in the body column, under the heading. They light up as they are read. */
   .prose { width: min(100%, 42rem); margin: var(--space-band) 0 0; text-align: left; --fill-to: rgba(250, 248, 243, 0.82); --fill-from: rgba(250, 248, 243, 0.3); }
   /* A four-line headline sits a size below the home page's two-line one */
-  .hero h1 { font-size: clamp(2.75rem, 5.6vw, 5.5rem); max-width: 18ch; }
+  .hero h1 { max-width: 18ch; }
   .prose p + p { margin-top: 1rem; }
   .prose .small { margin-top: 1.75rem; }
 
   /* Glass panels carry a tighter title than the open grids do */
-  .glass h3 { font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.15; }
   .part > .tag { margin-bottom: var(--s-4); }
 
   /* Open grids sit on the blueprint: a hairline per part */
