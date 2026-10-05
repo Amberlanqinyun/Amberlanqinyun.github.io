@@ -5,8 +5,35 @@
   <link href="https://www.flowai.co.nz/feed.xml" rel="self"/>
   <link href="https://www.flowai.co.nz/"/>
   <id>https://www.flowai.co.nz/</id>
-  <updated>2026-10-02T00:00:00+13:00</updated>
+  <updated>2026-10-05T00:00:00+13:00</updated>
   <author><name>Amber Lan</name></author>
+  <entry>
+    <title>AI for marketers: what to hand to AI, and what to keep.</title>
+    <link href="https://www.flowai.co.nz/blog/ai-for-marketers.html"/>
+    <id>https://www.flowai.co.nz/blog/ai-for-marketers.html</id>
+    <published>2026-10-05T00:00:00+13:00</published>
+    <updated>2026-10-05T00:00:00+13:00</updated>
+    <summary>AI for marketers, in practice: hand AI the research, drafts, repurposing and follow-up, keep positioning and the call on what ships. Includes a 30-day plan.</summary>
+    <category term="Transformation"/>
+  </entry>
+  <entry>
+    <title>AI agents for marketing: which to build first, and how.</title>
+    <link href="https://www.flowai.co.nz/blog/ai-agents-for-marketing.html"/>
+    <id>https://www.flowai.co.nz/blog/ai-agents-for-marketing.html</id>
+    <published>2026-10-05T00:00:00+13:00</published>
+    <updated>2026-10-05T00:00:00+13:00</updated>
+    <summary>Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement.</summary>
+    <category term="The AI marketing agent"/>
+  </entry>
+  <entry>
+    <title>AI agency, AI automation agency or AI consultant: which does an NZ business need?</title>
+    <link href="https://www.flowai.co.nz/blog/ai-agency-vs-ai-consultant-nz.html"/>
+    <id>https://www.flowai.co.nz/blog/ai-agency-vs-ai-consultant-nz.html</id>
+    <published>2026-10-05T00:00:00+13:00</published>
+    <updated>2026-10-05T00:00:00+13:00</updated>
+    <summary>AI marketing agency, AI automation agency or AI consultant? What each delivers in NZ, how they price, what you own at the end, and how to vet any provider.</summary>
+    <category term="Costs and choices"/>
+  </entry>
   <entry>
     <title>What is answer engine optimisation (AEO)? A guide for small business.</title>
     <link href="https://www.flowai.co.nz/blog/what-is-answer-engine-optimisation.html"/>
