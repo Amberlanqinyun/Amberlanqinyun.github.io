@@ -276,6 +276,10 @@ ASSIGN = {
     "outbound-sales-automation": squiggle,                   # the follow-up thread
     # reference
     "ai-marketing-statistics-australia-new-zealand": dot_grid,
+    # keyword guides, October 2026
+    "ai-for-marketers": half_disc,                           # half handed over, half kept
+    "ai-agents-for-marketing": dot_ring,                     # a team around one brief
+    "ai-agency-vs-ai-consultant-nz": pluses,                 # ways to buy the work
 }
 ALL = [rings, dash_ring, disc_dots, dash_column, donut_dots, striped_disc_square, hstripes, diamonds, pluses,
        half_disc, stripes_square, cross_wave, rainbow, nested_triangles, wave, chevrons, dot_triangle, confetti,

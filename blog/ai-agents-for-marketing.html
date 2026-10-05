@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>AI Agents for Marketing: Which to Build First | Flow AI</title>
+<meta name="description" content="Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement.">
+<meta name="author" content="Amber Lan">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.flowai.co.nz/blog/ai-agents-for-marketing.html">
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="AI Agents for Marketing: Which to Build First | Flow AI">
+<meta property="og:description" content="Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:url" content="https://www.flowai.co.nz/blog/ai-agents-for-marketing.html">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-10-05T00:00:00+13:00">
+<meta property="article:modified_time" content="2026-10-05T00:00:00+13:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.flowai.co.nz/blog/ai-agents-for-marketing.html#article",
+      "headline": "AI agents for marketing: which to build first, and how.",
+      "description": "A practical guide to AI agents for marketing in businesses of 5 to 50 staff in New Zealand and Australia: ten marketing agents by job with their inputs and review steps, a recommended build order, how to build one agent, build versus buy versus no-code versus installed skills, the main risks and how to contain them, and how to judge claims about the best agents.",
+      "datePublished": "2026-10-05",
+      "dateModified": "2026-10-05",
+      "inLanguage": "en-NZ",
+      "articleSection": "The AI marketing agent",
+      "wordCount": 2737,
+      "timeRequired": "PT12M",
+      "image": "https://www.flowai.co.nz/blog/figures/ai-agents-for-marketing.svg",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#flowai"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/blog/#blog"
+      },
+      "mainEntityOfPage": "https://www.flowai.co.nz/blog/ai-agents-for-marketing.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".short-answer__text",
+          ".article-hero h1"
+        ]
+      },
+      "keywords": "ai agents for marketing, best ai agents for marketing, marketing ai agents, ai agents for marketing teams, how to build ai agents for marketing, how to use ai agents for marketing, marketing ai agent use cases, marketing ai agent workflow, top rated marketing ai agents for small businesses, ai agents for marketing automation, marketing ai agents examples"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/blog/ai-agents-for-marketing.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best AI agent for marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best agent is the one aimed at the gap that costs your business most, briefed from your own positioning, with a human reviewing its output. For most small businesses that is a search agent or an outbound agent. A product list cannot answer the question, because the same agent that suits a B2B consultancy is the wrong first build for a café."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many AI agents does a small marketing team need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with one, plus the positioning brief that feeds it. Add the next agent only when the first runs every week with less than an hour of review. Launch and paid agents usually switch on for specific campaigns, while search and reporting run every week."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I build an AI marketing agent without coding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for agents that follow a fixed sequence. No-code workflow tools such as n8n or Zapier can connect a form, a model and your email or CRM, and installed skills give an AI assistant a written procedure to follow. Code becomes worthwhile when the agent needs custom data access or its own audit log."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are AI agents for marketing safe to use with customer data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are safe when access is narrow and recorded. Give each agent only the fields its job needs, keep customer lists in systems the business controls, and log every action. In New Zealand, check the Privacy Act's new indirect-collection rule before enriching lead lists. Australia's OAIC advises against putting personal information into publicly available AI tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build one marketing agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A scoped agent with a written brief, connected tools, guardrails and a review step can go live in about a week of focused work. The longer part is the first month of running it, when the review notes turn into better instructions. Expect the agent to need noticeably less correction by its fourth or fifth weekly cycle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an AI marketing agent and marketing automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marketing automation runs the steps a person designed, such as sending a welcome email after a sign-up. An AI marketing agent decides what the work should be, drafts it and then uses automation to deliver it. Most useful agents sit on top of automation the business already has, which is why the two are usually built together."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://www.flowai.co.nz/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The AI marketing agent",
+          "item": "https://www.flowai.co.nz/blog/?topic=agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AI agents for marketing: which to build first, and how.",
+          "item": "https://www.flowai.co.nz/blog/ai-agents-for-marketing.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&amp;display=swap">
+<link rel="stylesheet" href="/assets/claude.css?v=1">
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#article">Skip to the guide</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="Flow AI home">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/sprints/">How it works</a>
+      <a href="/blog/" aria-current="page">Guides</a>
+      <a href="/about.html">About</a>
+      <a class="site-header__cta" href="/contact.html">Get a free audit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero article-hero centered" aria-labelledby="article-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow"><a href="/blog/">Guides</a><span aria-hidden="true"> / </span><a href="/blog/?topic=agent">The AI marketing agent</a></p>
+        <h1 id="article-title">AI agents for marketing: which to build first, and how.</h1>
+        <p class="lead">The definition of an AI marketing agent is settled elsewhere. <b>This guide is the practical half: the ten agents a small marketing function runs, the order to build them in, and what each needs before it touches a customer.</b></p>
+        <p class="byline small"><span><a href="/about.html">Amber Lan</a>, AI marketing engineer</span><span aria-hidden="true">·</span><span>Updated <time datetime="2026-10-05">5 October 2026</time></span><span aria-hidden="true">·</span><span>12 min read</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body" id="article" aria-label="Guide">
+    <div class="wrap article-grid">
+      <nav class="toc" aria-label="Contents">
+        <details class="toc__box" open>
+          <summary class="toc__label">Contents <span class="toc__left" data-minutes-left></span></summary>
+          <div class="toc__progress" aria-hidden="true"><span data-progress></span></div>
+          <ol class="toc__list">
+<li><a href="#what-are-ai-agents-for-marketing" data-toc="what-are-ai-agents-for-marketing"><span class="toc-num">01</span><span>What are AI agents for marketing?</span></a></li>
+<li><a href="#the-ten-marketing-agents-by-job" data-toc="the-ten-marketing-agents-by-job"><span class="toc-num">02</span><span>The ten marketing agents, by job</span></a></li>
+<li><a href="#which-ai-agent-should-you-build-first" data-toc="which-ai-agent-should-you-build-first"><span class="toc-num">03</span><span>Which AI agent should you build first?</span></a></li>
+<li><a href="#how-to-build-an-ai-agent-for-marketing" data-toc="how-to-build-an-ai-agent-for-marketing"><span class="toc-num">04</span><span>How to build an AI agent for marketing</span></a></li>
+<li><a href="#build-buy-no-code-or-installed-skills-which-route-fits" data-toc="build-buy-no-code-or-installed-skills-which-route-fits"><span class="toc-num">05</span><span>Build, buy, no-code or installed skills: which route fits?</span></a></li>
+<li><a href="#what-a-marketing-ai-agent-workflow-looks-like-in-a-week" data-toc="what-a-marketing-ai-agent-workflow-looks-like-in-a-week"><span class="toc-num">06</span><span>What a marketing AI agent workflow looks like in a week</span></a></li>
+<li><a href="#what-can-go-wrong-with-marketing-agents-and-how-to-contain-i" data-toc="what-can-go-wrong-with-marketing-agents-and-how-to-contain-i"><span class="toc-num">07</span><span>What can go wrong with marketing agents, and how to contain it</span></a></li>
+<li><a href="#how-to-judge-claims-about-the-best-ai-agents-for-marketing" data-toc="how-to-judge-claims-about-the-best-ai-agents-for-marketing"><span class="toc-num">08</span><span>How to judge claims about the best AI agents for marketing</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">09</span><span>Where Flow AI fits</span></a></li>
+<li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">10</span><span>The short version</span></a></li>
+<li><a href="#faq" data-toc="faq"><span class="toc-num">11</span><span>Questions owners ask</span></a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <div class="article-main">
+        <figure class="article-figure"><img src="/blog/figures/ai-agents-for-marketing.svg" width="960" height="540" alt=""></figure>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">The short answer</p>
+          <p class="short-answer__text">Build a positioning brief first, because every marketing agent is briefed from it. Then build the agent for the gap that costs you most, usually search or outbound for a 5 to 50 person business. Install one agent at a time, give it narrow data access, put a human review before anything reaches a customer, and measure enquiries.</p>
+        </aside>
+        <article class="prose">
+<h2 id="what-are-ai-agents-for-marketing"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">What are AI agents for marketing?</span></h2>
+<p>AI agents for marketing are pieces of software that each own one marketing job, such as search or outbound, and run it on a schedule: they read the business, produce the work and hand it to a person to review before it ships. A small business runs them as a team, all briefed from the same positioning.</p>
+<p>The <a class="go" href="/blog/what-is-an-ai-marketing-agent.html">definition of an AI marketing agent</a> covers what makes software an agent. This guide covers which agents to build, in what order, and how.</p>
+<p>Few businesses have got this far. <a class="go" href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce's tenth State of Marketing report, surveying 4,450 marketers late 2025 including 890 at small and medium businesses, found only 13% using agentic AI</a><sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup>, while 80% of the SMB marketers expected AI agents to improve their marketing return. Among smaller organisations the picture is flat: <a class="go" href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey's State of AI 2026, surveying 1,719 people in mid 2026, found the share of smaller organisations scaling AI agents unchanged at 22%</a><sup class="fn"><a href="#source-2" aria-label="Source 2">2</a></sup>, against 40% at companies with revenue above US$1 billion. The gap is knowing where to start.</p>
+
+<h2 id="the-ten-marketing-agents-by-job"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">The ten marketing agents, by job</span></h2>
+<p>A complete marketing function runs on ten agents: search, content, social, outbound, conversion, launch, paid, community, measurement and reporting. Each one needs specific inputs, has one review step a human owns, and earns its place at a different stage of the business. The table below is the reference; the next section turns it into an order.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Agent</th><th>What it does</th><th>Inputs it needs</th><th>Human review step</th><th>Build it when</th></tr></thead>
+  <tbody>
+    <tr><td><b>Search</b></td><td>Fixes crawler access, schema and page structure so Google and AI assistants find you</td><td>Site access, Search Console, the questions customers ask</td><td>Approve page changes before they go live</td><td>Buyers search for what you sell and you rarely appear</td></tr>
+    <tr><td><b>Content</b></td><td>Turns one source idea into articles and pages in your voice</td><td>Positioning brief, voice samples, topic list from search</td><td>Edit and approve every piece before publishing</td><td>The search agent has named the topics and nobody has time to write them</td></tr>
+    <tr><td><b>Social</b></td><td>Cuts approved content into platform-native posts on a calendar</td><td>Approved content, brand rules, posting accounts</td><td>Approve the week's queue in one sitting</td><td>Content is shipping and social is posted only when someone remembers</td></tr>
+    <tr><td><b>Outbound</b></td><td>Builds a target list and drafts personal first messages</td><td>Ideal customer profile, buying signals, CRM, sending inbox</td><td>Approve first messages; a person takes every reply</td><td>You sell B2B and the pipeline runs only on referrals</td></tr>
+    <tr><td><b>Conversion</b></td><td>Tests offers, landing pages and forms</td><td>Analytics with conversion events, page access, offer details</td><td>Approve each test and any change to price or promise</td><td>Traffic arrives but enquiries do not</td></tr>
+    <tr><td><b>Launch</b></td><td>Sequences a launch across every channel</td><td>Launch date, the claim, proof, channel list</td><td>Sign off the launch claim and the go-live date</td><td>A dated launch is within the next 60 days</td></tr>
+    <tr><td><b>Paid</b></td><td>Drafts ads and audiences, proposes budget moves</td><td>Ad accounts, working tracking, a spending ceiling</td><td>Approve every budget change and every new ad</td><td>Tracking works and organic channels already run</td></tr>
+    <tr><td><b>Community</b></td><td>Finds threads where customers ask questions and drafts answers</td><td>Community watch list, product facts</td><td>Approve each reply before it posts</td><td>Your customers ask for recommendations in public threads</td></tr>
+    <tr><td><b>Measurement</b></td><td>Wires analytics and conversion events</td><td>Analytics and site access, a definition of an enquiry</td><td>Confirm events fire against real test enquiries</td><td>Before paid, and before the second month of any other agent</td></tr>
+    <tr><td><b>Reporting</b></td><td>Writes one short monthly read on what shipped and what to stop</td><td>Measurement data, each agent's activity log</td><td>Read it and decide the next month's priority</td><td>From the first month any agent runs</td></tr>
+  </tbody>
+</table></div>
+<p>Every agent's inputs include something only the business can supply, which is why a generic tool produces generic work. Every review step is one named decision, small enough to make weekly: the <a class="go" href="/glossary/#human-in-the-loop">human in the loop</a> has a clear question to answer.</p>
+
+<h2 id="which-ai-agent-should-you-build-first"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">Which AI agent should you build first?</span></h2>
+<p>Build the positioning brief first, then the agent for the gap that costs the most. The brief is a one-page record of who you sell to, what you claim and what proves it, and every agent reads it before producing anything. Without it, ten agents produce ten slightly different businesses, and review time balloons correcting the drift.</p>
+<p>After the brief, the right first agent depends on where the business is losing the most money today. Three questions usually settle it:</p>
+<ol>
+  <li><b>Do buyers search for what you sell?</b> If yes, and you rarely appear in Google or in AI answers, the search agent comes first. It also produces the topic list the content agent needs later. The <a class="go" href="/glossary/#answer-engine-optimisation-aeo">answer engine optimisation</a> work sits here.</li>
+  <li><b>Do you sell to a list of businesses you could name?</b> If yes, and the pipeline depends on referrals, the outbound agent is the faster return. The <a class="go" href="/blog/outbound-sales-automation.html">guide to outbound sales automation</a> covers the mechanics.</li>
+  <li><b>Is traffic arriving without turning into enquiries?</b> Then the conversion agent beats anything that adds more traffic.</li>
+</ol>
+<p>From there, a default order suits most businesses of 5 to 50 staff. Measurement goes in before the second month of anything, so the first agent can be judged. Content follows search, which names the topics, and social follows content, which it repurposes. Paid comes after measurement, because spend against broken tracking teaches nothing. Launch and community switch on when there is a reason. Reporting starts in month one as a single page.</p>
+
+<h2 id="how-to-build-an-ai-agent-for-marketing"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">How to build an AI agent for marketing</span></h2>
+<p>Building a marketing agent takes five parts in sequence: a written brief, scoped access to tools and data, guardrails, a review gate and a measure of success. Each part is a short document or setting, and skipping any one is where most agent projects stall. The steps below apply whether the agent is coded, no-code or an installed skill.</p>
+<ol>
+  <li><b>Write the brief.</b> One page: the agent's single job, the voice rules, examples of good and bad output, and what it hands back. A brief longer than a page describes two agents.</li>
+  <li><b>Give it scoped tools and data access.</b> List every system the agent touches and give the narrowest permission that works: read-only analytics, draft-only email, a CRM view limited to the fields the job needs. <a class="go" href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce found only 27% of SMB marketers completely satisfied with their ability to unify customer data</a><sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup>, so expect to tidy the data before the agent can use it.</li>
+  <li><b>Set the guardrails.</b> Write them as rules the agent cannot override. Daily sending limits per inbox. A human takeover the moment a prospect replies, with automation paused for that contact. Voice rules and banned claims. A spending ceiling for anything paid. A list of topics it never writes about.</li>
+  <li><b>Put in a review gate.</b> Decide exactly which outputs a person approves, who that person is, and how long they have. Approve everything at first, and loosen the gate only for output that has passed unchanged for several weeks.</li>
+  <li><b>Measure one number.</b> Pick the number the agent exists to move, such as booked meetings from outbound. Track <a class="go" href="/glossary/#cost-per-enquiry">cost per enquiry</a> where money is involved, and review it monthly alongside the time review took.</li>
+</ol>
+<p>An illustration: a content agent for an Auckland accounting firm reads the positioning brief and the search agent's topic list, has draft-only access to the blog, is barred from anything that reads as personal tax advice, and a partner approves each article on Tuesday. Its number is enquiries that start on an article page.</p>
+
+<h2 id="build-buy-no-code-or-installed-skills-which-route-fits"><span class="sec-num" aria-hidden="true">05</span><span class="sec-title">Build, buy, no-code or installed skills: which route fits?</span></h2>
+<p>There are four ways to get a marketing agent running: buy a product, build on a no-code workflow tool, install written skills into an AI assistant, or code it. The right route depends on how specific the job is and who will maintain it. Many businesses mix routes, buying one agent and building another.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Route</th><th>What it is</th><th>Suits</th><th>Watch for</th></tr></thead>
+  <tbody>
+    <tr><td><b>Buy a product</b></td><td>A vendor's agent for one job, set up through its own interface</td><td>Common jobs where your process matches the vendor's</td><td>What you keep if you cancel, and whether it plans anything</td></tr>
+    <tr><td><b>No-code workflow</b></td><td>Tools such as n8n or Zapier chaining a trigger, a model and your apps</td><td>Fixed sequences: form to draft to approval to send</td><td>Workflows break silently when an app changes; someone must own them</td></tr>
+    <tr><td><b>Installed skills</b></td><td>Written procedures an AI assistant loads and follows, kept as files you own</td><td>Judgement-heavy work like briefs and articles</td><td>Needs a person to start each run unless paired with a scheduler</td></tr>
+    <tr><td><b>Custom code</b></td><td>An agent written against model and app APIs, with its own logging</td><td>Unusual data, high volume, or strict audit needs</td><td>Maintenance cost, and the skills to keep it running</td></tr>
+  </tbody>
+</table></div>
+<p>A useful rule for a small team: buy where the job is generic, use installed skills where judgement matters, connect them with no-code, and code only what is left. The <a class="go" href="/blog/ai-marketing-automation-small-business.html">guide to AI marketing automation</a> covers the delivery layer most agents sit on.</p>
+
+<h2 id="what-a-marketing-ai-agent-workflow-looks-like-in-a-week"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">What a marketing AI agent workflow looks like in a week</span></h2>
+<p>A marketing agent workflow runs on a weekly loop: the agent reads what changed, produces the week's work, a person reviews it in one sitting, approved work ships, and the results feed the next cycle. Once the brief is right, the owner's part should settle at under an hour a week per agent.</p>
+<ul>
+  <li><b>Monday:</b> the agent reads last week's numbers and review notes, then drafts the plan.</li>
+  <li><b>Tuesday to Wednesday:</b> it produces the work, such as two articles or a batch of first messages.</li>
+  <li><b>Thursday:</b> a named person reviews it in one sitting and approves or rejects with a reason.</li>
+  <li><b>Friday:</b> approved work ships, and rejection reasons go into the brief.</li>
+</ul>
+<p><a class="go" href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce reports that AI agents free marketers 6 to 7 hours a week for creative and strategic work</a><sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup> (surveyed late 2025). Those hours appear only if review stays a fixed weekly slot.</p>
+
+<h2 id="what-can-go-wrong-with-marketing-agents-and-how-to-contain-i"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">What can go wrong with marketing agents, and how to contain it</span></h2>
+<p>The main risks are unreviewed output reaching customers, messages that break consent law, personal data handled loosely, and agents that cost more than they return. Each has a containment that is cheap to set up before launch and expensive to add after a problem, and most sit at the point where work meets a customer.</p>
+<p>People trust AI output more than they check it. <a class="go" href="https://assets.kpmg.com/content/dam/kpmgsites/xx/pdf/2025/05/trust-attitudes-and-use-of-ai-new-zealand-snapshot.pdf.coredownload.inline.pdf" target="_blank" rel="noopener">KPMG and the University of Melbourne found 51% of New Zealand employees had relied on AI output at work without evaluating its accuracy</a><sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup> (surveyed over summer 2024-25). A review gate with a named owner is the containment.</p>
+<ul>
+  <li><b>Consent and unsubscribe.</b> <a class="go" href="https://www.consumerprotection.govt.nz/general-help/consumer-laws/online-safety-laws-and-rules" target="_blank" rel="noopener">New Zealand's Consumer Protection guidance on the Unsolicited Electronic Messages Act requires consent, accurate business contact details and a free unsubscribe that works within five business days, with fines up to $500,000</a><sup class="fn"><a href="#source-4" aria-label="Source 4">4</a></sup>. Outbound and email agents need those rules built in, and unsubscribes synced to every tool.</li>
+  <li><b>Enriched lead lists.</b> <a class="go" href="https://www.privacy.org.nz/tuhono-connect/statements-media-releases/privacy-amendment-act-passes/" target="_blank" rel="noopener">The Privacy Commissioner confirms that from 1 May 2026 the new IPP3A requires reasonable steps to tell people when their information was collected indirectly</a><sup class="fn"><a href="#source-5" aria-label="Source 5">5</a></sup>. Check it before an outbound agent buys contact data.</li>
+  <li><b>Personal data in public tools.</b> In Australia, <a class="go" href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" target="_blank" rel="noopener">the OAIC's October 2024 guidance recommends organisations do not enter personal information into publicly available generative AI tools</a><sup class="fn"><a href="#source-6" aria-label="Source 6">6</a></sup>. Keep customer data in systems you control and pass agents only what the job needs.</li>
+  <li><b>Claims the business cannot back.</b> Guarantees, prices and credentials stay on the banned list unless they appear word for word in the positioning brief.</li>
+  <li><b>Cost without return.</b> <a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027 due to escalating costs, unclear business value or inadequate risk controls</a><sup class="fn"><a href="#source-7" aria-label="Source 7">7</a></sup>. One agent, one number, reviewed monthly, is the cheapest defence.</li>
+</ul>
+
+<h2 id="how-to-judge-claims-about-the-best-ai-agents-for-marketing"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">How to judge claims about the best AI agents for marketing</span></h2>
+<p>Judge any "best AI agents for marketing" list by whether it was tested on businesses your size, names the human review step and shows real output from a live business. Many lists rank products by feature count, and some by paid placement. The questions below work on any vendor page or ranking, and a good one answers them plainly.</p>
+<p>The caution is earned. In the same June 2025 release, <a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner estimates only about 130 of the thousands of agentic AI vendors are real</a><sup class="fn"><a href="#source-7" aria-label="Source 7">7</a></sup>, in a passage on what it calls agent washing.</p>
+<ul>
+  <li><b>Who wrote the ranking?</b> A vendor's list that includes its own product is marketing. Look for the method and any affiliate disclosure.</li>
+  <li><b>Was it tested at your size?</b> Enterprise rankings assume a data team a 20 person firm does not have.</li>
+  <li><b>Does it plan its own work?</b> If a person starts every task, it is a tool with an agent label.</li>
+  <li><b>Where does the human sit?</b> The approval points should be named and adjustable.</li>
+  <li><b>What does it read first?</b> An agent that never reads your site and analytics writes for an average business.</li>
+  <li><b>What do you keep if you leave?</b> Pages, content, workflows and logs should stay on your accounts.</li>
+  <li><b>Can you see real output?</b> Ask for a page, a sequence or a report from a live business. Demos do not count.</li>
+  <li><b>What does it report?</b> Enquiries and cost per enquiry. Follower counts and "content produced" are activity.</li>
+</ul>
+<p>For the planning role that sits above the agents, the <a class="go" href="/blog/what-is-an-ai-cmo.html">guide to the AI CMO</a> applies the same questions to products that claim to run the whole function.</p>
+
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">Where Flow AI fits</span></h2>
+<p>Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the ten agents in this guide from one positioning brief, installs them one at a time as week-long <a class="go" href="/sprints/">sprints</a>, and a marketing engineer reviews every send before it reaches a customer.</p>
+<p>The free audit reads the business and names the first agent to build and why. If you would rather build your own, the <a class="go" href="/templates/">free agent templates</a> are a starting point for the brief, the guardrails and the review step.</p>
+
+<h2 id="the-short-version"><span class="sec-num" aria-hidden="true">10</span><span class="sec-title">The short version</span></h2>
+<p>AI agents for marketing work best as a small team built in order. Write the positioning brief, then build the agent for the most expensive gap, usually search or outbound. Give each agent a one-page brief, narrow access, written guardrails, a named reviewer and one number to move.</p>
+<p>Add the next agent when the last one runs weekly with under an hour of review. Measure before you spend, and ask every "best agent" list to show real output.</p>
+<p>To find out which agent your business should build first, <a class="go" href="/contact.html">request a free audit</a>.</p>
+        </article>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span class="sec-num" aria-hidden="true">11</span><span class="sec-title">Questions owners ask</span></h2>
+  <div class="faq__list">
+<details class="faq__item" open><summary><h3>What is the best AI agent for marketing?</h3></summary><p>The best agent is the one aimed at the gap that costs your business most, briefed from your own positioning, with a human reviewing its output. For most small businesses that is a search agent or an outbound agent. A product list cannot answer the question, because the same agent that suits a B2B consultancy is the wrong first build for a café.</p></details>
+<details class="faq__item"><summary><h3>How many AI agents does a small marketing team need?</h3></summary><p>Start with one, plus the positioning brief that feeds it. Add the next agent only when the first runs every week with less than an hour of review. Launch and paid agents usually switch on for specific campaigns, while search and reporting run every week.</p></details>
+<details class="faq__item"><summary><h3>Can I build an AI marketing agent without coding?</h3></summary><p>Yes, for agents that follow a fixed sequence. No-code workflow tools such as n8n or Zapier can connect a form, a model and your email or CRM, and installed skills give an AI assistant a written procedure to follow. Code becomes worthwhile when the agent needs custom data access or its own audit log.</p></details>
+<details class="faq__item"><summary><h3>Are AI agents for marketing safe to use with customer data?</h3></summary><p>They are safe when access is narrow and recorded. Give each agent only the fields its job needs, keep customer lists in systems the business controls, and log every action. In New Zealand, check the Privacy Act&#x27;s new indirect-collection rule before enriching lead lists. Australia&#x27;s OAIC advises against putting personal information into publicly available AI tools.</p></details>
+<details class="faq__item"><summary><h3>How long does it take to build one marketing agent?</h3></summary><p>A scoped agent with a written brief, connected tools, guardrails and a review step can go live in about a week of focused work. The longer part is the first month of running it, when the review notes turn into better instructions. Expect the agent to need noticeably less correction by its fourth or fifth weekly cycle.</p></details>
+<details class="faq__item"><summary><h3>What is the difference between an AI marketing agent and marketing automation?</h3></summary><p>Marketing automation runs the steps a person designed, such as sending a welcome email after a sign-up. An AI marketing agent decides what the work should be, drafts it and then uses automation to deliver it. Most useful agents sit on top of automation the business already has, which is why the two are usually built together.</p></details>
+  </div>
+</section>
+        <aside class="author-box" aria-label="About the author">
+          <p class="author-box__label">Written by</p>
+          <p class="author-box__name"><a href="/about.html">Amber Lan</a></p>
+          <p>AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end.</p>
+        </aside>
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title" class="sources__title">Sources</h2>
+  <p class="sources__note">Every figure links to its primary source. Checked 5 October 2026.</p>
+  <ol class="sources__list">
+<li id="source-1"><a href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce&#x27;s tenth State of Marketing report, surveying 4,450 marketers late 2025 including 890 at small and medium businesses, found only 13% using agentic AI</a> <span class="src-host">salesforce.com</span></li>
+<li id="source-2"><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey&#x27;s State of AI 2026, surveying 1,719 people in mid 2026, found the share of smaller organisations scaling AI agents unchanged at 22%</a> <span class="src-host">mckinsey.com</span></li>
+<li id="source-3"><a href="https://assets.kpmg.com/content/dam/kpmgsites/xx/pdf/2025/05/trust-attitudes-and-use-of-ai-new-zealand-snapshot.pdf.coredownload.inline.pdf" target="_blank" rel="noopener">KPMG and the University of Melbourne found 51% of New Zealand employees had relied on AI output at work without evaluating its accuracy</a> <span class="src-host">assets.kpmg.com</span></li>
+<li id="source-4"><a href="https://www.consumerprotection.govt.nz/general-help/consumer-laws/online-safety-laws-and-rules" target="_blank" rel="noopener">New Zealand&#x27;s Consumer Protection guidance on the Unsolicited Electronic Messages Act requires consent, accurate business contact details and a free unsubscribe that works within five business days, with fines up to $500,000</a> <span class="src-host">consumerprotection.govt.nz</span></li>
+<li id="source-5"><a href="https://www.privacy.org.nz/tuhono-connect/statements-media-releases/privacy-amendment-act-passes/" target="_blank" rel="noopener">The Privacy Commissioner confirms that from 1 May 2026 the new IPP3A requires reasonable steps to tell people when their information was collected indirectly</a> <span class="src-host">privacy.org.nz</span></li>
+<li id="source-6"><a href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" target="_blank" rel="noopener">the OAIC&#x27;s October 2024 guidance recommends organisations do not enter personal information into publicly available generative AI tools</a> <span class="src-host">oaic.gov.au</span></li>
+<li id="source-7"><a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027 due to escalating costs, unclear business value or inadequate risk controls</a> <span class="src-host">gartner.com</span></li>
+  </ol>
+</section>
+      </div>
+
+      <aside class="rail" aria-label="About this guide">
+        <dl class="rail__facts">
+          <div><dt>Topic</dt><dd><a href="/blog/?topic=agent">The AI marketing agent</a></dd></div>
+          <div><dt>Format</dt><dd>Guide</dd></div>
+          <div><dt>Updated</dt><dd>5 October 2026</dd></div>
+          <div><dt>Reading time</dt><dd>12 minutes</dd></div>
+        </dl>
+        <button class="share-button" type="button" data-share data-share-title="AI agents for marketing: which to build first, and how." data-share-text="Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement." data-share-url="/blog/ai-agents-for-marketing.html" aria-label="Share this guide" aria-live="polite">Share guide</button>
+        <div class="explore">
+          <p class="explore__label">Explore with AI</p>
+          <p class="explore__note">Open this guide in an assistant and ask it what applies to your business.</p>
+          <ul class="explore__list">
+<li><a href="https://chatgpt.com/?q=Read%20https%3A//www.flowai.co.nz/blog/ai-agents-for-marketing.html%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Flow%20AI%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">ChatGPT<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://claude.ai/new?q=Read%20https%3A//www.flowai.co.nz/blog/ai-agents-for-marketing.html%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Flow%20AI%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">Claude<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://www.perplexity.ai/search?q=Read%20https%3A//www.flowai.co.nz/blog/ai-agents-for-marketing.html%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Flow%20AI%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">Perplexity<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact centered" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="contact-title">Want to know which marketing job to fix first?</h2>
+        <p class="lead">Tell Flow AI what the business does and where marketing stalls. The free audit returns a written plan naming the first system to install, within the week.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related__title">Keep reading</h2>
+      <div class="post-grid">
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="what is an ai marketing agent? a definition for small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/what-is-an-ai-marketing-agent.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-an-ai-marketing-agent.html">What is an AI marketing agent? A definition for small business.</a></h3>
+    <p class="post-card__desc">An AI marketing agent plans, produces and ships marketing under human review. A definition for small business, plus how it differs from automation and ChatGPT.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-02" data-title="ai marketing automation for small business: what to set up first." data-minutes="12">
+  <a class="post-card__figure" href="/blog/ai-marketing-automation-small-business.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-automation-small-business.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-marketing-automation-small-business.html">AI marketing automation for small business: what to set up first.</a></h3>
+    <p class="post-card__desc">What marketing automation does, what AI adds, the six automations a small business should run first, and the NZ and Australian rules on consent and privacy.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-02" data-title="what is an ai cmo? a plain definition for small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/what-is-an-ai-cmo.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-cmo.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-an-ai-cmo.html">What is an AI CMO? A plain definition for small business.</a></h3>
+    <p class="post-card__desc">An AI CMO is software that plans a business&#x27;s marketing: it reads the market, sets priorities and reviews results. What it does, its limits, how to judge one.</p>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand-col">
+      <a class="site-footer__brand" href="/" aria-label="Flow AI home">
+        <svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+        <span>Flow AI.</span>
+      </a>
+      <p class="site-footer__blurb">AI marketing transformation, engineered end to end. Strategy, systems and the agents that run them.</p>
+      <a class="site-footer__mail" href="/contact.html">Get a free audit</a>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">What Flow does</p>
+      <ul>
+        <li><a href="/sprints/#system">The agent team</a></li>
+        <li><a href="/sprints/#process">How it works</a></li>
+        <li><a href="/contact.html">Get a free audit</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Proof</p>
+      <ul>
+        <li><a href="/work.html">Selected work</a></li>
+        <li><a href="/cases.html">Case library</a></li>
+        <li><a href="/blog/">Guides</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Free to use</p>
+      <ul>
+        <li><a href="/templates/">Agent templates</a></li>
+        <li><a href="/tools/benchmark.html">AI-readiness benchmark</a></li>
+        <li><a href="/tools/pricing.html">Pricing model</a></li>
+        <li><a href="/skills/">Skill library</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Flow AI</p>
+      <ul>
+        <li><a href="/about.html">About Amber</a></li>
+        <li><a href="/manifesto.html">Manifesto</a></li>
+        <li><a href="/contact.html#faq">FAQ</a></li>
+        <li><a href="/feed.xml">Atom feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bar">
+    <span>&copy; 2026 Flow AI &middot; Amber Lan &middot; Auckland, New Zealand</span>
+    <span class="site-footer__social">
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com">Email</a>
+      <a href="/privacy.html">Privacy</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

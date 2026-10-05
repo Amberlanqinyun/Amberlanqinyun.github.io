@@ -1,0 +1,146 @@
+<!--meta
+{
+  "slug": "ai-agents-for-marketing",
+  "title": "AI agents for marketing: which to build first, and how.",
+  "seoTitle": "AI Agents for Marketing: Which to Build First | Flow AI",
+  "description": "Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement.",
+  "schemaDescription": "A practical guide to AI agents for marketing in businesses of 5 to 50 staff in New Zealand and Australia: ten marketing agents by job with their inputs and review steps, a recommended build order, how to build one agent, build versus buy versus no-code versus installed skills, the main risks and how to contain them, and how to judge claims about the best agents.",
+  "standfirst": "The definition of an AI marketing agent is settled elsewhere. <b>This guide is the practical half: the ten agents a small marketing function runs, the order to build them in, and what each needs before it touches a customer.</b>",
+  "shortAnswer": "Build a positioning brief first, because every marketing agent is briefed from it. Then build the agent for the gap that costs you most, usually search or outbound for a 5 to 50 person business. Install one agent at a time, give it narrow data access, put a human review before anything reaches a customer, and measure enquiries.",
+  "topic": "agent",
+  "pillar": false,
+  "format": "Guide",
+  "published": "2026-10-05",
+  "modified": "2026-10-05",
+  "keywords": ["ai agents for marketing", "best ai agents for marketing", "marketing ai agents", "ai agents for marketing teams", "how to build ai agents for marketing", "how to use ai agents for marketing", "marketing ai agent use cases", "marketing ai agent workflow", "top rated marketing ai agents for small businesses", "ai agents for marketing automation", "marketing ai agents examples"],
+  "related": ["what-is-an-ai-marketing-agent", "ai-marketing-automation-small-business", "what-is-an-ai-cmo", "outbound-sales-automation"],
+  "faq": [
+    {
+      "q": "What is the best AI agent for marketing?",
+      "a": "The best agent is the one aimed at the gap that costs your business most, briefed from your own positioning, with a human reviewing its output. For most small businesses that is a search agent or an outbound agent. A product list cannot answer the question, because the same agent that suits a B2B consultancy is the wrong first build for a café."
+    },
+    {
+      "q": "How many AI agents does a small marketing team need?",
+      "a": "Start with one, plus the positioning brief that feeds it. Add the next agent only when the first runs every week with less than an hour of review. Launch and paid agents usually switch on for specific campaigns, while search and reporting run every week."
+    },
+    {
+      "q": "Can I build an AI marketing agent without coding?",
+      "a": "Yes, for agents that follow a fixed sequence. No-code workflow tools such as n8n or Zapier can connect a form, a model and your email or CRM, and installed skills give an AI assistant a written procedure to follow. Code becomes worthwhile when the agent needs custom data access or its own audit log."
+    },
+    {
+      "q": "Are AI agents for marketing safe to use with customer data?",
+      "a": "They are safe when access is narrow and recorded. Give each agent only the fields its job needs, keep customer lists in systems the business controls, and log every action. In New Zealand, check the Privacy Act's new indirect-collection rule before enriching lead lists. Australia's OAIC advises against putting personal information into publicly available AI tools."
+    },
+    {
+      "q": "How long does it take to build one marketing agent?",
+      "a": "A scoped agent with a written brief, connected tools, guardrails and a review step can go live in about a week of focused work. The longer part is the first month of running it, when the review notes turn into better instructions. Expect the agent to need noticeably less correction by its fourth or fifth weekly cycle."
+    },
+    {
+      "q": "What is the difference between an AI marketing agent and marketing automation?",
+      "a": "Marketing automation runs the steps a person designed, such as sending a welcome email after a sign-up. An AI marketing agent decides what the work should be, drafts it and then uses automation to deliver it. Most useful agents sit on top of automation the business already has, which is why the two are usually built together."
+    }
+  ]
+}
+-->
+<h2>What are AI agents for marketing?</h2>
+<p>AI agents for marketing are pieces of software that each own one marketing job, such as search or outbound, and run it on a schedule: they read the business, produce the work and hand it to a person to review before it ships. A small business runs them as a team, all briefed from the same positioning.</p>
+<p>The <a class="go" href="/blog/what-is-an-ai-marketing-agent.html">definition of an AI marketing agent</a> covers what makes software an agent. This guide covers which agents to build, in what order, and how.</p>
+<p>Few businesses have got this far. <a class="go" href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce's tenth State of Marketing report, surveying 4,450 marketers late 2025 including 890 at small and medium businesses, found only 13% using agentic AI</a>, while 80% of the SMB marketers expected AI agents to improve their marketing return. Among smaller organisations the picture is flat: <a class="go" href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey's State of AI 2026, surveying 1,719 people in mid 2026, found the share of smaller organisations scaling AI agents unchanged at 22%</a>, against 40% at companies with revenue above US$1 billion. The gap is knowing where to start.</p>
+
+<h2>The ten marketing agents, by job</h2>
+<p>A complete marketing function runs on ten agents: search, content, social, outbound, conversion, launch, paid, community, measurement and reporting. Each one needs specific inputs, has one review step a human owns, and earns its place at a different stage of the business. The table below is the reference; the next section turns it into an order.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Agent</th><th>What it does</th><th>Inputs it needs</th><th>Human review step</th><th>Build it when</th></tr></thead>
+  <tbody>
+    <tr><td><b>Search</b></td><td>Fixes crawler access, schema and page structure so Google and AI assistants find you</td><td>Site access, Search Console, the questions customers ask</td><td>Approve page changes before they go live</td><td>Buyers search for what you sell and you rarely appear</td></tr>
+    <tr><td><b>Content</b></td><td>Turns one source idea into articles and pages in your voice</td><td>Positioning brief, voice samples, topic list from search</td><td>Edit and approve every piece before publishing</td><td>The search agent has named the topics and nobody has time to write them</td></tr>
+    <tr><td><b>Social</b></td><td>Cuts approved content into platform-native posts on a calendar</td><td>Approved content, brand rules, posting accounts</td><td>Approve the week's queue in one sitting</td><td>Content is shipping and social is posted only when someone remembers</td></tr>
+    <tr><td><b>Outbound</b></td><td>Builds a target list and drafts personal first messages</td><td>Ideal customer profile, buying signals, CRM, sending inbox</td><td>Approve first messages; a person takes every reply</td><td>You sell B2B and the pipeline runs only on referrals</td></tr>
+    <tr><td><b>Conversion</b></td><td>Tests offers, landing pages and forms</td><td>Analytics with conversion events, page access, offer details</td><td>Approve each test and any change to price or promise</td><td>Traffic arrives but enquiries do not</td></tr>
+    <tr><td><b>Launch</b></td><td>Sequences a launch across every channel</td><td>Launch date, the claim, proof, channel list</td><td>Sign off the launch claim and the go-live date</td><td>A dated launch is within the next 60 days</td></tr>
+    <tr><td><b>Paid</b></td><td>Drafts ads and audiences, proposes budget moves</td><td>Ad accounts, working tracking, a spending ceiling</td><td>Approve every budget change and every new ad</td><td>Tracking works and organic channels already run</td></tr>
+    <tr><td><b>Community</b></td><td>Finds threads where customers ask questions and drafts answers</td><td>Community watch list, product facts</td><td>Approve each reply before it posts</td><td>Your customers ask for recommendations in public threads</td></tr>
+    <tr><td><b>Measurement</b></td><td>Wires analytics and conversion events</td><td>Analytics and site access, a definition of an enquiry</td><td>Confirm events fire against real test enquiries</td><td>Before paid, and before the second month of any other agent</td></tr>
+    <tr><td><b>Reporting</b></td><td>Writes one short monthly read on what shipped and what to stop</td><td>Measurement data, each agent's activity log</td><td>Read it and decide the next month's priority</td><td>From the first month any agent runs</td></tr>
+  </tbody>
+</table></div>
+<p>Every agent's inputs include something only the business can supply, which is why a generic tool produces generic work. Every review step is one named decision, small enough to make weekly: the <a class="go" href="/glossary/#human-in-the-loop">human in the loop</a> has a clear question to answer.</p>
+
+<h2>Which AI agent should you build first?</h2>
+<p>Build the positioning brief first, then the agent for the gap that costs the most. The brief is a one-page record of who you sell to, what you claim and what proves it, and every agent reads it before producing anything. Without it, ten agents produce ten slightly different businesses, and review time balloons correcting the drift.</p>
+<p>After the brief, the right first agent depends on where the business is losing the most money today. Three questions usually settle it:</p>
+<ol>
+  <li><b>Do buyers search for what you sell?</b> If yes, and you rarely appear in Google or in AI answers, the search agent comes first. It also produces the topic list the content agent needs later. The <a class="go" href="/glossary/#answer-engine-optimisation-aeo">answer engine optimisation</a> work sits here.</li>
+  <li><b>Do you sell to a list of businesses you could name?</b> If yes, and the pipeline depends on referrals, the outbound agent is the faster return. The <a class="go" href="/blog/outbound-sales-automation.html">guide to outbound sales automation</a> covers the mechanics.</li>
+  <li><b>Is traffic arriving without turning into enquiries?</b> Then the conversion agent beats anything that adds more traffic.</li>
+</ol>
+<p>From there, a default order suits most businesses of 5 to 50 staff. Measurement goes in before the second month of anything, so the first agent can be judged. Content follows search, which names the topics, and social follows content, which it repurposes. Paid comes after measurement, because spend against broken tracking teaches nothing. Launch and community switch on when there is a reason. Reporting starts in month one as a single page.</p>
+
+<h2>How to build an AI agent for marketing</h2>
+<p>Building a marketing agent takes five parts in sequence: a written brief, scoped access to tools and data, guardrails, a review gate and a measure of success. Each part is a short document or setting, and skipping any one is where most agent projects stall. The steps below apply whether the agent is coded, no-code or an installed skill.</p>
+<ol>
+  <li><b>Write the brief.</b> One page: the agent's single job, the voice rules, examples of good and bad output, and what it hands back. A brief longer than a page describes two agents.</li>
+  <li><b>Give it scoped tools and data access.</b> List every system the agent touches and give the narrowest permission that works: read-only analytics, draft-only email, a CRM view limited to the fields the job needs. <a class="go" href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce found only 27% of SMB marketers completely satisfied with their ability to unify customer data</a>, so expect to tidy the data before the agent can use it.</li>
+  <li><b>Set the guardrails.</b> Write them as rules the agent cannot override. Daily sending limits per inbox. A human takeover the moment a prospect replies, with automation paused for that contact. Voice rules and banned claims. A spending ceiling for anything paid. A list of topics it never writes about.</li>
+  <li><b>Put in a review gate.</b> Decide exactly which outputs a person approves, who that person is, and how long they have. Approve everything at first, and loosen the gate only for output that has passed unchanged for several weeks.</li>
+  <li><b>Measure one number.</b> Pick the number the agent exists to move, such as booked meetings from outbound. Track <a class="go" href="/glossary/#cost-per-enquiry">cost per enquiry</a> where money is involved, and review it monthly alongside the time review took.</li>
+</ol>
+<p>An illustration: a content agent for an Auckland accounting firm reads the positioning brief and the search agent's topic list, has draft-only access to the blog, is barred from anything that reads as personal tax advice, and a partner approves each article on Tuesday. Its number is enquiries that start on an article page.</p>
+
+<h2>Build, buy, no-code or installed skills: which route fits?</h2>
+<p>There are four ways to get a marketing agent running: buy a product, build on a no-code workflow tool, install written skills into an AI assistant, or code it. The right route depends on how specific the job is and who will maintain it. Many businesses mix routes, buying one agent and building another.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Route</th><th>What it is</th><th>Suits</th><th>Watch for</th></tr></thead>
+  <tbody>
+    <tr><td><b>Buy a product</b></td><td>A vendor's agent for one job, set up through its own interface</td><td>Common jobs where your process matches the vendor's</td><td>What you keep if you cancel, and whether it plans anything</td></tr>
+    <tr><td><b>No-code workflow</b></td><td>Tools such as n8n or Zapier chaining a trigger, a model and your apps</td><td>Fixed sequences: form to draft to approval to send</td><td>Workflows break silently when an app changes; someone must own them</td></tr>
+    <tr><td><b>Installed skills</b></td><td>Written procedures an AI assistant loads and follows, kept as files you own</td><td>Judgement-heavy work like briefs and articles</td><td>Needs a person to start each run unless paired with a scheduler</td></tr>
+    <tr><td><b>Custom code</b></td><td>An agent written against model and app APIs, with its own logging</td><td>Unusual data, high volume, or strict audit needs</td><td>Maintenance cost, and the skills to keep it running</td></tr>
+  </tbody>
+</table></div>
+<p>A useful rule for a small team: buy where the job is generic, use installed skills where judgement matters, connect them with no-code, and code only what is left. The <a class="go" href="/blog/ai-marketing-automation-small-business.html">guide to AI marketing automation</a> covers the delivery layer most agents sit on.</p>
+
+<h2>What a marketing AI agent workflow looks like in a week</h2>
+<p>A marketing agent workflow runs on a weekly loop: the agent reads what changed, produces the week's work, a person reviews it in one sitting, approved work ships, and the results feed the next cycle. Once the brief is right, the owner's part should settle at under an hour a week per agent.</p>
+<ul>
+  <li><b>Monday:</b> the agent reads last week's numbers and review notes, then drafts the plan.</li>
+  <li><b>Tuesday to Wednesday:</b> it produces the work, such as two articles or a batch of first messages.</li>
+  <li><b>Thursday:</b> a named person reviews it in one sitting and approves or rejects with a reason.</li>
+  <li><b>Friday:</b> approved work ships, and rejection reasons go into the brief.</li>
+</ul>
+<p><a class="go" href="https://www.salesforce.com/blog/small-business/smb-takeaways-from-the-state-of-marketing/" target="_blank" rel="noopener">Salesforce reports that AI agents free marketers 6 to 7 hours a week for creative and strategic work</a> (surveyed late 2025). Those hours appear only if review stays a fixed weekly slot.</p>
+
+<h2>What can go wrong with marketing agents, and how to contain it</h2>
+<p>The main risks are unreviewed output reaching customers, messages that break consent law, personal data handled loosely, and agents that cost more than they return. Each has a containment that is cheap to set up before launch and expensive to add after a problem, and most sit at the point where work meets a customer.</p>
+<p>People trust AI output more than they check it. <a class="go" href="https://assets.kpmg.com/content/dam/kpmgsites/xx/pdf/2025/05/trust-attitudes-and-use-of-ai-new-zealand-snapshot.pdf.coredownload.inline.pdf" target="_blank" rel="noopener">KPMG and the University of Melbourne found 51% of New Zealand employees had relied on AI output at work without evaluating its accuracy</a> (surveyed over summer 2024-25). A review gate with a named owner is the containment.</p>
+<ul>
+  <li><b>Consent and unsubscribe.</b> <a class="go" href="https://www.consumerprotection.govt.nz/general-help/consumer-laws/online-safety-laws-and-rules" target="_blank" rel="noopener">New Zealand's Consumer Protection guidance on the Unsolicited Electronic Messages Act requires consent, accurate business contact details and a free unsubscribe that works within five business days, with fines up to $500,000</a>. Outbound and email agents need those rules built in, and unsubscribes synced to every tool.</li>
+  <li><b>Enriched lead lists.</b> <a class="go" href="https://www.privacy.org.nz/tuhono-connect/statements-media-releases/privacy-amendment-act-passes/" target="_blank" rel="noopener">The Privacy Commissioner confirms that from 1 May 2026 the new IPP3A requires reasonable steps to tell people when their information was collected indirectly</a>. Check it before an outbound agent buys contact data.</li>
+  <li><b>Personal data in public tools.</b> In Australia, <a class="go" href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" target="_blank" rel="noopener">the OAIC's October 2024 guidance recommends organisations do not enter personal information into publicly available generative AI tools</a>. Keep customer data in systems you control and pass agents only what the job needs.</li>
+  <li><b>Claims the business cannot back.</b> Guarantees, prices and credentials stay on the banned list unless they appear word for word in the positioning brief.</li>
+  <li><b>Cost without return.</b> <a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027 due to escalating costs, unclear business value or inadequate risk controls</a>. One agent, one number, reviewed monthly, is the cheapest defence.</li>
+</ul>
+
+<h2>How to judge claims about the best AI agents for marketing</h2>
+<p>Judge any "best AI agents for marketing" list by whether it was tested on businesses your size, names the human review step and shows real output from a live business. Many lists rank products by feature count, and some by paid placement. The questions below work on any vendor page or ranking, and a good one answers them plainly.</p>
+<p>The caution is earned. In the same June 2025 release, <a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner estimates only about 130 of the thousands of agentic AI vendors are real</a>, in a passage on what it calls agent washing.</p>
+<ul>
+  <li><b>Who wrote the ranking?</b> A vendor's list that includes its own product is marketing. Look for the method and any affiliate disclosure.</li>
+  <li><b>Was it tested at your size?</b> Enterprise rankings assume a data team a 20 person firm does not have.</li>
+  <li><b>Does it plan its own work?</b> If a person starts every task, it is a tool with an agent label.</li>
+  <li><b>Where does the human sit?</b> The approval points should be named and adjustable.</li>
+  <li><b>What does it read first?</b> An agent that never reads your site and analytics writes for an average business.</li>
+  <li><b>What do you keep if you leave?</b> Pages, content, workflows and logs should stay on your accounts.</li>
+  <li><b>Can you see real output?</b> Ask for a page, a sequence or a report from a live business. Demos do not count.</li>
+  <li><b>What does it report?</b> Enquiries and cost per enquiry. Follower counts and "content produced" are activity.</li>
+</ul>
+<p>For the planning role that sits above the agents, the <a class="go" href="/blog/what-is-an-ai-cmo.html">guide to the AI CMO</a> applies the same questions to products that claim to run the whole function.</p>
+
+<h2>Where Flow AI fits</h2>
+<p>Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the ten agents in this guide from one positioning brief, installs them one at a time as week-long <a class="go" href="/sprints/">sprints</a>, and a marketing engineer reviews every send before it reaches a customer.</p>
+<p>The free audit reads the business and names the first agent to build and why. If you would rather build your own, the <a class="go" href="/templates/">free agent templates</a> are a starting point for the brief, the guardrails and the review step.</p>
+
+<h2>The short version</h2>
+<p>AI agents for marketing work best as a small team built in order. Write the positioning brief, then build the agent for the most expensive gap, usually search or outbound. Give each agent a one-page brief, narrow access, written guardrails, a named reviewer and one number to move.</p>
+<p>Add the next agent when the last one runs weekly with under an hour of review. Measure before you spend, and ask every "best agent" list to show real output.</p>
+<p>To find out which agent your business should build first, <a class="go" href="/contact.html">request a free audit</a>.</p>
