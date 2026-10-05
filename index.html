@@ -64,23 +64,56 @@
         "@id": "https://www.flowai.co.nz/#amber",
         "name": "Amber Lan",
         "jobTitle": "AI Marketing Engineer",
+        "description": "Amber Lan is an AI marketing engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it.",
         "url": "https://www.flowai.co.nz/about.html",
-        "image": "https://www.flowai.co.nz/images/amber-lan.png",
+        "mainEntityOfPage": "https://www.flowai.co.nz/about.html",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.flowai.co.nz/images/amber-lan.png",
+          "caption": "Amber Lan, AI marketing engineer"
+        },
         "email": "mailto:amber.lan.growth.digital@gmail.com",
-        "worksFor": { "@id": "https://www.flowai.co.nz/#flowai" },
+        "worksFor": {
+          "@id": "https://www.flowai.co.nz/#flowai"
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Auckland, New Zealand",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Auckland",
+            "addressCountry": "NZ"
+          }
+        },
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "AI Marketing Engineer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "New Zealand"
+          },
+          "skills": "AI agents, answer engine optimisation, marketing automation, go-to-market strategy, Python, TypeScript"
+        },
         "sameAs": [
           "https://github.com/Amberlanqinyun",
           "https://www.linkedin.com/in/amberlan/"
         ],
+        "knowsLanguage": [
+          "en",
+          "zh"
+        ],
         "knowsAbout": [
           "AI Marketing",
-          "Growth Engineering",
-          "Go-to-Market Strategy",
-          "Search Engine Optimization",
+          "AI Agents",
           "Answer Engine Optimization",
+          "Generative Engine Optimization",
+          "Search Engine Optimization",
           "Marketing Automation",
+          "Go-to-Market Strategy",
           "Content Systems",
-          "Analytics"
+          "Analytics",
+          "Python",
+          "TypeScript"
         ]
       }
     ]
