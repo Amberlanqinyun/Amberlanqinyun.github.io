@@ -84,3 +84,20 @@
 .demo__thread { overflow-y: auto; scrollbar-width: none; }
 .demo__thread::-webkit-scrollbar { display: none; }
 .demo__thread { min-height: 0; } .demo__main { min-height: 0; }
+
+/* Light and shade: the live step glows, finished steps fade back */
+.demo__step { color: var(--fg); background: linear-gradient(90deg, rgba(250,248,243,.55) 0%, #faf8f3 40%, #f2c27a 50%, #faf8f3 60%, rgba(250,248,243,.55) 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: demo-in .3s var(--ease) both, demo-shine 1.6s linear infinite; }
+@keyframes demo-shine { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+.demo__log li { opacity: .42; transition: opacity .4s ease; }
+.demo__log li:last-child { opacity: .7; }
+.demo__msg--agent.is-done .demo__log li { opacity: .32; }
+.demo__msg--agent.is-done .demo__log { margin-bottom: .2rem; }
+.demo__msg--agent.is-done .demo__reply { color: var(--fg); }
+.demo__card .demo__row { opacity: .55; transition: opacity .3s ease; }
+.demo__card .demo__row:nth-of-type(2) { opacity: 1; }
+.demo__card .demo__row:nth-of-type(2) .demo__path { color: var(--fg); }
+.demo__card:hover .demo__row { opacity: .55; }
+.demo__card .demo__row:hover { opacity: 1; }
+.demo__msg--you:not(:last-child) { opacity: .8; }
+@media (prefers-reduced-motion: reduce) { .demo__step { animation: none; -webkit-text-fill-color: var(--fg); background: none; } }
+.demo__row, .demo__log li, .demo__msg { animation-fill-mode: backwards; }

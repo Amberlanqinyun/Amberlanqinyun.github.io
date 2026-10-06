@@ -14,7 +14,7 @@ import html, json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 INDEX = (ROOT / "index.html").read_text()
-SYSTEM = (ROOT / "sprints" / "index.html").read_text()  # the agent team diagram lives here
+SYSTEM = (ROOT / "sprints" / "index.html").read_text()  # the Flow Engine diagram lives here
 SITE = "https://www.flowai.co.nz"
 UPDATED = "2026-10-02"
 V = "10"  # asset version query; bump with texture/dotfield/alive changes
@@ -34,7 +34,7 @@ REVEAL = chunk("  <script>\n    (function () {\n      var reduceMotion", "    }(
 
 
 def icon(label):
-    """The agent's line icon, exactly as it appears in the agent team diagram."""
+    """The agent's line icon, exactly as it appears in the Flow Engine diagram."""
     if label == "Flow Intelligence":
         li = re.search(r'<li class="is-core">(.*?)</li>', SYSTEM, re.S).group(1)
     else:
@@ -49,7 +49,7 @@ AGENTS = {
     "community": ("Community agent", "/contact.html", "Ask about running the community agent every month"),
 }
 
-REVIEW = ("A marketing engineer reviews it", "Amber checks the result before it reaches you. That rule holds on every Flow AI run.")
+REVIEW = ("A marketing engineer reviews it", "Amber checks every result before it reaches you, on every Flow AI run.")
 
 SAMPLE_CRAWLERS = [
     ("GPTBot", "OpenAI", "1", "Allowed", "Named in robots.txt"),
@@ -71,7 +71,7 @@ SAMPLE_CRAWLERS = [
 TEMPLATES = [
     dict(
         slug="brand-dna", agent="hq", name="Brand DNA researcher",
-        lead="Give it a site address and it writes the brief every other agent works from. It covers positioning, audience, competitors, voice and the content gaps worth closing.",
+        lead="Give it your site address. It writes the brief every other agent works from: positioning, audience, competitors, voice and the content gaps worth closing.",
         card="Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.",
         field=("Your site", "company.co.nz", "Which site should it research?"),
         install="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill research-brand",
@@ -87,7 +87,7 @@ TEMPLATES = [
     ),
     dict(
         slug="geo-audit", agent="search", name="Full GEO audit",
-        lead="A complete check of how visible your site is to ChatGPT, Claude, Perplexity and Google's AI answers. It is scored out of 100 and turned into a ranked 30-day plan.",
+        lead="See how visible your site is to ChatGPT, Claude, Perplexity and Google's AI answers. You get a score out of 100 and a ranked 30-day plan.",
         card="Scores your site's AI-search visibility out of 100 and ranks the fixes into a 30-day plan.",
         field=("Your site", "company.co.nz", "Which site should it audit?"),
         install="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-audit",
@@ -104,7 +104,7 @@ TEMPLATES = [
     ),
     dict(
         slug="ai-crawler-check", agent="search", name="AI crawler access check",
-        lead="Finds out which AI systems can read your site. It checks fourteen AI crawlers against your robots.txt, page tags and server headers. If any are blocked, you get the exact fix.",
+        lead="See which AI systems can read your site. It tests fourteen AI crawlers against your robots.txt, page tags and server headers. Any block comes with the exact fix.",
         card="Checks whether fourteen AI crawlers, from ChatGPT to Perplexity, can read your site.",
         field=("Your site", "company.co.nz", "Which site should it check?"),
         install="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-crawlers",
@@ -126,7 +126,7 @@ TEMPLATES = [
     ),
     dict(
         slug="ai-citability", agent="search", name="AI citability scorer", cta="Score my page",
-        lead="Scores one page, block by block, on how likely AI assistants are to quote it. Then it rewrites the weakest passages so they can be cited.",
+        lead="Scores one page, block by block, on how likely AI assistants are to quote it. Then it rewrites the weakest passages so AI can cite them.",
         card="Scores one page, block by block, on how likely AI assistants are to quote it.",
         field=("Page to score", "company.co.nz/services", "Which page should it score?"),
         install="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-citability",
@@ -143,7 +143,7 @@ TEMPLATES = [
     ),
     dict(
         slug="content-evidence-audit", agent="content", name="Content evidence auditor", cta="Check my page",
-        lead="Checks every link, statistic, source and company claim in a draft or published page before it goes out. Each problem comes with the exact fix.",
+        lead="Publish with confidence. It checks every link, statistic, source and company claim in a draft or live page, with the exact fix for each problem.",
         card="Checks every link, statistic and claim in a draft or page before it goes live.",
         field=("Page or draft link", "company.co.nz/blog/post", "Which page or draft should it check?"),
         install="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill audit-content",
@@ -160,7 +160,7 @@ TEMPLATES = [
     ),
     dict(
         slug="reddit-opportunities", agent="community", name="Reddit opportunity researcher",
-        lead="Finds the Reddit threads where your business can help and the communities worth joining, ranked by what to act on first. It also captures the exact words buyers use.",
+        lead="Find the Reddit threads where your business can help and the communities worth joining, ranked by what to act on first. You also get the exact words buyers use.",
         card="Finds the Reddit threads where your business can help, ranked by what to act on first.",
         field=("Your site", "company.co.nz", "Which business should it research?"),
         install="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill reddit-opportunity-research",
@@ -279,7 +279,7 @@ def gallery():
       <div class="stack">
         <p class="eyebrow">Agent templates · free</p>
         <h1 id="templates-title" data-words>Put an agent to work on your site.</h1>
-        <p class="lead">Pick a template and Flow AI runs it on your site. Amber reviews the result, and it reaches you within two working days. Every template is also open source, so you can install it yourself.</p>
+        <p class="lead">Pick a template and Flow AI runs it on your site. Amber reviews the result, and it reaches you within two working days. Each one is open source too, so you can install it yourself.</p>
       </div>
       <div class="tpl-grid reveal">
 {chr(10).join(cards)}
@@ -291,14 +291,14 @@ def gallery():
     <div class="wrap">
       <div class="stack reveal">
         <p class="eyebrow">How a run works</p>
-        <h2 id="how-title">Your email, one agent, a reviewed result.</h2>
-        <p class="lead">Each template is one agent from the Flow AI team with one fixed job. Tell it where to look, and the result comes back checked by a person.</p>
+        <h2 id="how-title">One agent, then a person's review.</h2>
+        <p class="lead">Each template is one Flow AI agent with one fixed job. Tell it where to look. A person checks the result before you see it.</p>
       </div>
       <div class="grid grid-3 reveal" style="text-align:left">
         <div class="step">
           <span class="small">01</span>
           <h3>Pick a template</h3>
-          <p>Each one names what it needs and exactly what comes back, so you know what you are asking for.</p>
+          <p>Each one names what it needs and exactly what comes back.</p>
         </div>
         <div class="step">
           <span class="small">02</span>
@@ -318,7 +318,7 @@ def gallery():
   <section id="contact" class="contact centered" aria-labelledby="end-title">
     <div class="wrap">
       <div class="stack reveal">
-        <h2 id="end-title">Want the whole team working?</h2>
+        <h2 id="end-title">Put the whole Flow Engine to work.</h2>
         <p class="lead">A free audit names the first agent to install on your business and what it would change.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
@@ -491,8 +491,8 @@ def template_page(t):
   <section id="contact" class="contact centered" aria-labelledby="end-title">
     <div class="wrap">
       <div class="stack reveal">
-        <h2 id="end-title">Want the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Flow Intelligence')} running every month?</h2>
-        <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over. After that, the engine runs it every month.</p>
+        <h2 id="end-title">Keep the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Flow Intelligence')} running every month.</h2>
+        <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
           <a class="text-link arrow-link" href="{sprint_href}">{esc(sprint_text)}</a>
