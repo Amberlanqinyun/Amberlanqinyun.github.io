@@ -219,7 +219,7 @@ def head(title, description, path, schema, og_type="website"):
 <script src="/assets/alive.js?v={V}" defer></script>
 <script src="/assets/template-form.js?v={V}" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/claude.css?v=9">
+<link rel="stylesheet" href="/assets/claude.css?v=10">
 </head>
 <body>
 {GTM_BODY}
@@ -510,47 +510,90 @@ def template_page(t):
 
 def privacy():
     schema = {"@context": "https://schema.org", "@type": "WebPage", "@id": f"{SITE}/privacy.html",
-              "name": "Privacy at Flow AI", "dateModified": UPDATED,
+              "name": "Privacy policy", "dateModified": "2026-10-06",
               "publisher": {"@type": "Organization", "@id": f"{SITE}/#flowai", "name": "Flow AI"}}
-    rows = [
-        ("Who", "Flow AI is run by Amber Lan in Auckland, New Zealand. Questions about your information go to <a class=\"text-link\" href=\"mailto:amber.lan.growth.digital@gmail.com\">amber.lan.growth.digital@gmail.com</a>."),
-        ("What is collected", "Only what you type into a form on this site: your email, and the name, website, page address or message you choose to add."),
-        ("Why", "To reply to you, run the template you asked for, and send you the result. Your email is never added to a mailing list unless you ask to join one."),
-        ("How it travels", "Forms are delivered to Amber's inbox by <a class=\"text-link\" href=\"https://formsubmit.co\" target=\"_blank\" rel=\"noopener\">FormSubmit</a>, and stored in Gmail. If a form cannot send, your own email app sends it instead."),
-        ("Measurement", "The site loads Google Tag Manager to understand which pages are used. It can set cookies for that purpose. The site's own code never passes what you type into a form to it."),
-        ("Sharing", "Your information is never sold or shared with anyone for their marketing."),
-        ("Keeping it", "Kept only as long as needed to help you and to keep a record of the work. Ask, and it is deleted."),
-        ("Your rights", "Under the New Zealand Privacy Act 2020 you can ask to see or correct the information held about you, by email at any time. If you are unhappy with the answer, you can contact the <a class=\"text-link\" href=\"https://www.privacy.org.nz\" target=\"_blank\" rel=\"noopener\">Office of the Privacy Commissioner</a>."),
+    mail = '<a class="text-link" href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a>'
+    def ext(href, label):
+        return f'<a class="text-link" href="{href}" target="_blank" rel="noopener">{label}</a>'
+    glance = [
+        ("What we collect", "Only what you type into a form, plus standard visit data."),
+        ("What we never do", "Sell your information or add you to a list you did not ask for."),
+        ("Where it lives", "In Amber's Gmail inbox, and with the services listed below."),
+        ("Your control", "Ask to see, correct or delete it, any time, by email."),
     ]
-    items = "\n".join(f"          <li><b>{a}</b><span>{b}</span></li>" for a, b in rows)
+    data_rows = [
+        ("Contact and audit form", "Name, email, website, your message", "To reply and write your audit", "FormSubmit, then Gmail"),
+        ("Template request form", "Email, the site or page to check", "To run the template and send the result", "FormSubmit, then Gmail"),
+        ("Emails you send", "Whatever you include", "To reply and keep a record of the work", "Gmail"),
+        ("Visit data", "Pages viewed, device and browser type, approximate location, referrer", "To see which pages help, and improve them", "Google, through Google Tag Manager"),
+        ("Server logs", "IP address and request details", "To deliver and secure the site", "GitHub Pages"),
+        ("Free tools", "What you enter in the decision map, pricing model and benchmark", "To save your progress", "Your own browser only"),
+    ]
+    sections = [
+        ("who", "Who we are", f"<p>Flow AI is run by Amber Lan, an AI marketing engineer based in Auckland, New Zealand. Amber is responsible for the information collected on flowai.co.nz. For anything about your information, email {mail}.</p>"),
+        ("collect", "What we collect and why", "<p>We collect only what helps us reply to you, do the work you ask for, and run the site. The table above lists each source.</p><p>We do not ask for payment details, government identifiers or sensitive information on this site. Please leave it out of messages, too.</p>"),
+        ("cookies", "Cookies and measurement", "<p>The site loads Google Tag Manager, which can run Google measurement tags such as Google Analytics. These can set cookies to count visits and see which pages are used. We also record simple on-page actions, such as which sprint tab is opened or a toolkit being downloaded.</p><p>We never pass what you type into a form to measurement tools. To opt out, you can block cookies in your browser or use " + ext("https://tools.google.com/dlpage/gaoptout", "Google's opt-out add-on") + ".</p>"),
+        ("tools", "The free tools", "<p>The decision map, pricing model and AI-readiness benchmark run in your browser. What you enter is saved in your browser's local storage so you can come back to it. It is never sent to us. Clearing your browser data removes it.</p>"),
+        ("share", "Who we share it with", "<p>We use a small number of services to run the site. Each processes information only to provide its service:</p><ul class=\"pp-list\"><li><b>GitHub Pages</b> hosts the site. " + ext("https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement", "GitHub's privacy statement") + "</li><li><b>FormSubmit</b> delivers form entries by email. " + ext("https://formsubmit.co/privacy.pdf", "FormSubmit's privacy policy") + "</li><li><b>Google</b> provides Gmail and the measurement tags. " + ext("https://policies.google.com/privacy", "Google's privacy policy") + "</li></ul><p>We never sell your information or share it with anyone for their own marketing. We would only disclose it if the law required us to.</p>"),
+        ("overseas", "Information sent overseas", "<p>These services are based outside New Zealand, mainly in the United States. That means your information may be stored or processed there. We choose established providers with published security and privacy practices, as the New Zealand Privacy Act 2020 expects.</p>"),
+        ("keep", "How long we keep it", "<p>We keep form entries and emails for as long as we need them to help you and keep a record of the work. If you ask, we delete them, unless we must keep a record for tax or legal reasons.</p>"),
+        ("security", "Keeping it secure", "<p>The site is served over HTTPS. The inbox is protected with two-step sign-in, and access is limited to Amber. If a privacy breach ever risked serious harm to you, we would tell you and the Office of the Privacy Commissioner, as the law requires.</p>"),
+        ("rights", "Your rights", f"<p>Under the New Zealand Privacy Act 2020 you can ask to see the information we hold about you and ask us to correct it. You can also ask us to delete it, or to stop contacting you. Email {mail} and we will reply within 20 working days, usually much sooner.</p><p>If you are unhappy with our answer, you can complain to the " + ext("https://www.privacy.org.nz", "Office of the Privacy Commissioner") + ". Visitors from Australia, the UK or the EU can make the same requests, and we will honour them.</p>"),
+        ("children", "Children", "<p>This site is for businesses and is not aimed at children. We do not knowingly collect information from anyone under 16.</p>"),
+        ("changes", "Changes to this policy", "<p>We will update this page when what we collect or how we use it changes. The date at the top shows the latest version.</p>"),
+    ]
+    g = "\n".join(f'          <div class="pp-card"><b>{a}</b><p>{b}</p></div>' for a, b in glance)
+    rows = "\n".join(f"              <tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td></tr>" for a, b, c, d in data_rows)
+    toc = "\n".join(f'            <li><a href="#{i}">{h}</a></li>' for i, h, _ in sections)
+    secs = "\n".join(f'          <section class="pp-sec" id="{i}" aria-labelledby="{i}-h"><h2 id="{i}-h">{h}</h2>{b}</section>' for i, h, b in sections)
     body = f"""<main id="main">
-  <section class="hero centered" aria-labelledby="privacy-title">
+  <section class="hero pp-hero" aria-labelledby="privacy-title">
     <div class="wrap">
-      <div class="stack">
-        <p class="eyebrow">Privacy · updated 2 October 2026</p>
-        <h1 id="privacy-title" data-words>Your information, in plain words.</h1>
-        <p class="lead">What this site collects, why, where it goes, and how to see or remove it.</p>
+      <div class="stack" style="text-align:left">
+        <p class="eyebrow">Privacy policy · Updated 6 October 2026</p>
+        <h1 id="privacy-title">Your information, handled with care.</h1>
+        <p class="lead" style="margin-left:0">What flowai.co.nz collects, why, who helps us run the site, and how to see, correct or delete your information.</p>
+      </div>
+      <div class="pp-glance">
+{g}
       </div>
     </div>
   </section>
 
-  <section id="detail" class="centered" aria-labelledby="detail-title">
+  <section class="pp-data" aria-labelledby="data-title">
     <div class="wrap">
-      <div class="stack reveal">
-        <h2 id="detail-title" class="visually-hidden">The detail</h2>
+      <h2 id="data-title" class="pp-h">The information, at a glance</h2>
+      <div class="tablewrap pp-table">
+        <table>
+          <thead><tr><th>Source</th><th>What</th><th>Why</th><th>Where it goes</th></tr></thead>
+          <tbody>
+{rows}
+          </tbody>
+        </table>
       </div>
-      <div class="narrow reveal" style="text-align:left; margin-left:0">
-        <ul class="systems">
-{items}
-        </ul>
+    </div>
+  </section>
+
+  <section class="pp-body" aria-label="Privacy policy detail">
+    <div class="wrap">
+      <div class="pp-layout">
+        <nav class="pp-toc" aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+{toc}
+          </ol>
+        </nav>
+        <div class="pp-main">
+{secs}
+          <p class="pp-contact">Questions about privacy? Email {mail}.</p>
+        </div>
       </div>
     </div>
   </section>
 </main>
 """
-    page = head("Privacy | Flow AI", "What flowai.co.nz collects, why, where it goes, and how to see, correct or remove it under the New Zealand Privacy Act 2020.", "/privacy.html", schema) + body + foot()
-    (ROOT / "privacy.html").write_text(page.replace('<h2 id="detail-title" class="visually-hidden">The detail</h2>', '<h2 id="detail-title">The detail.</h2>'))
-
+    page = head("Privacy policy | Flow AI", "How flowai.co.nz collects, uses and protects your information, who helps run the site, and how to see, correct or delete it under the NZ Privacy Act 2020.", "/privacy.html", schema) + body + foot()
+    (ROOT / "privacy.html").write_text(page)
 
 if __name__ == "__main__":
     gallery()

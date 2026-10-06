@@ -486,3 +486,55 @@ html, body { overflow-x: clip; }
 .controls { overflow: hidden; }
 .system__agents li { border-radius: 10px; }
 .versus-head, .versus-label { font-family: var(--font); text-transform: none; letter-spacing: 0.005em; font-size: 0.875rem; }
+
+/* ---------- One button size across the site (2026-10-06) ----------
+   Desktop and laptop: 40px tall, 14px label. Phones: 44px for touch. */
+.btn, .site-header__nav .site-header__cta, .dm-btn {
+  min-height: 40px; height: auto; padding: 0 1.05rem; font-size: 14px; font-weight: 500;
+  border-radius: 10px; width: auto; line-height: 1;
+}
+.site-header__nav .site-header__cta { display: inline-flex; align-items: center; padding-block: 0; }
+.cta-row { gap: var(--s-3) var(--s-5); }
+@media (max-width: 640px) {
+  .btn, .dm-btn { min-height: 44px; width: auto; }
+  .site-header__nav .site-header__cta { min-height: 40px; }
+}
+
+/* ---------- Privacy policy ---------- */
+.pp-glance { margin-top: var(--s-9); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-4); text-align: left; }
+.pp-card { padding: var(--s-5); border: 1px solid var(--hair); border-radius: 14px; background: var(--surface-soft); }
+.pp-card b { color: var(--fg); font-weight: 500; }
+.pp-card p { margin-top: .4rem; color: var(--soft); font-size: var(--t-small); line-height: 1.5; }
+.pp-data { padding-block: clamp(3rem, 6vw, 4.5rem) 0; text-align: left; }
+.pp-h { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.pp-table { margin-top: var(--s-6); border: 1px solid var(--hair); border-radius: 14px; overflow-x: auto; }
+.pp-table table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .9rem; }
+.pp-table th { text-align: left; font-weight: 500; color: var(--soft); padding: .9rem 1rem; border-bottom: 1px solid var(--hair); }
+.pp-table td { padding: .9rem 1rem; color: var(--muted); border-top: 1px solid var(--hair); vertical-align: top; line-height: 1.5; }
+.pp-table tr:first-child td { border-top: 0; }
+.pp-table td:first-child { color: var(--fg); font-weight: 500; }
+.pp-body { padding-block: clamp(4rem, 8vw, 6rem); text-align: left; }
+.pp-layout { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
+.pp-toc { position: sticky; top: 6.5rem; }
+.pp-toc p { color: var(--soft); font-size: var(--t-small); }
+.pp-toc ol { list-style: none; padding: 0; margin: .75rem 0 0; display: grid; gap: .1rem; }
+.pp-toc a { display: block; padding: .3rem 0; color: var(--muted); font-size: .9rem; }
+.pp-toc a:hover { color: var(--fg); }
+.pp-main { max-width: 44rem; }
+.pp-sec { padding-block: var(--s-6); border-top: 1px solid var(--hair); scroll-margin-top: 6rem; }
+.pp-sec:first-child { border-top: 0; padding-top: 0; }
+.pp-sec h2 { font-size: 1.35rem; letter-spacing: -.015em; }
+.pp-sec p { margin-top: var(--s-3); color: var(--muted); line-height: 1.65; }
+.pp-list { margin: var(--s-3) 0 0; padding-left: 1.1rem; color: var(--muted); display: grid; gap: .5rem; line-height: 1.55; }
+.pp-list b { color: var(--fg); font-weight: 500; }
+.pp-contact { margin-top: var(--s-6); padding: var(--s-5); border: 1px solid var(--hair); border-radius: 14px; color: var(--muted); }
+@media (max-width: 900px) {
+  .pp-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pp-layout { grid-template-columns: 1fr; }
+  .pp-toc { position: static; }
+  .pp-toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) { .pp-glance { grid-template-columns: 1fr; } .pp-toc ol { grid-template-columns: 1fr; } }
+.pp-hero .stack { margin-left: 0; max-width: none; text-align: left; }
+.pp-hero h1 { margin-left: 0; max-width: 16ch; }
+.pp-hero .lead { margin-left: 0; max-width: 40rem; }
