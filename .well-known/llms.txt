@@ -78,6 +78,7 @@ Site structure:
 <!-- blog:end -->
 - /tools/benchmark.html: free 2-minute AI-readiness benchmark for businesses. No email required.
 - /tools/pricing.html: free interactive pricing model (Lerner rule, economic value to the customer).
+- /tools/decision-map.html: free marketing decision map toolkit. List your marketing decisions, score value, risk and frequency, see which ones AI can make, which it drafts for approval and which stay human, then write one-page decision rules. Runs in the browser; nothing is sent.
 - /flowai-brand-guidelines.html: the Flow AI brand system.
 
 ## What is an AI marketing engineer?
