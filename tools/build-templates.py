@@ -35,7 +35,7 @@ REVEAL = chunk("  <script>\n    (function () {\n      var reduceMotion", "    }(
 
 def icon(label):
     """The agent's line icon, exactly as it appears in the agent team diagram."""
-    if label == "Marketing HQ":
+    if label == "Marketing Intelligence":
         li = re.search(r'<li class="is-core">(.*?)</li>', SYSTEM, re.S).group(1)
     else:
         li = re.search(r'<li data-group="[a-z]+">(?:(?!</li>).)*?' + re.escape(label) + r'.*?</li>', SYSTEM, re.S).group(0)
@@ -43,7 +43,7 @@ def icon(label):
 
 
 AGENTS = {
-    "hq": ("Marketing HQ", "/sprints/positioning.html", "Install Marketing HQ as a one-week positioning sprint"),
+    "hq": ("Marketing Intelligence", "/sprints/positioning.html", "Install Marketing Intelligence as a one-week positioning sprint"),
     "search": ("Search agent", "/sprints/ai-search.html", "Install the search agent as a one-week AI-search sprint"),
     "content": ("Content agent", "/sprints/content-engine.html", "Install the content agent as a one-week content engine sprint"),
     "community": ("Community agent", "/contact.html", "Ask about running the community agent every month"),
@@ -219,7 +219,7 @@ def head(title, description, path, schema, og_type="website"):
 <script src="/assets/alive.js?v={V}" defer></script>
 <script src="/assets/template-form.js?v={V}" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/claude.css?v=13">
+<link rel="stylesheet" href="/assets/claude.css?v=14">
 </head>
 <body>
 {GTM_BODY}
@@ -491,7 +491,7 @@ def template_page(t):
   <section id="contact" class="contact centered" aria-labelledby="end-title">
     <div class="wrap">
       <div class="stack reveal">
-        <h2 id="end-title">Want the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Marketing HQ')} running every month?</h2>
+        <h2 id="end-title">Want the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Marketing Intelligence')} running every month?</h2>
         <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over. After that, the engine runs it every month.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact.html">Get a free audit</a>

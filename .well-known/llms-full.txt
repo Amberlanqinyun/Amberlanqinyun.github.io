@@ -35,7 +35,7 @@ Site structure:
 - /work/six-month-marketing-function.html: flagship case study, six months of one operator running a whole marketing function on AI systems; sanitised.
 - /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written audit on the gap within the first week.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
-- /manifesto.html: The Flow AI manifesto. Every other function built an engineering layer; Marketing HQ is marketing's, run by one engineer.
+- /manifesto.html: The Flow AI manifesto. Every other function built an engineering layer; Marketing Intelligence is marketing's, run by one engineer.
 - /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 125 inspectable AI agent skills: 16 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
@@ -272,7 +272,7 @@ Get a free auditSee it running
 
 - Keep customers
 
-- Marketing HQPositioning
+- Marketing IntelligencePositioning
 
 Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
 
@@ -320,7 +320,7 @@ Manifesto
 
 ## Marketing finally has its engineering layer.
 
-Every other function built one. Marketing kept hiring. Marketing HQ holds your positioning, briefs ten agents across three outcomes, and a marketing engineer reviews every send.
+Every other function built one. Marketing kept hiring. Marketing Intelligence holds your positioning, briefs ten agents across three outcomes, and a marketing engineer reviews every send.
 
 Read the manifesto
 
@@ -550,7 +550,7 @@ The agent team
 
 ## Ten agents, one engineer.
 
-Marketing HQ holds your positioning and briefs ten specialist agents across three outcomes: get found, get leads, keep customers. A marketing engineer reviews every send before it reaches a customer.
+Marketing Intelligence holds your positioning and briefs ten specialist agents across three outcomes: get found, get leads, keep customers. A marketing engineer reviews every send before it reaches a customer.
 
 Try an agent on your site, free
 
@@ -560,7 +560,7 @@ Try an agent on your site, free
 
 - Keep customers
 
-- Marketing HQPositioning
+- Marketing IntelligencePositioning
 
 Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
 
@@ -610,7 +610,7 @@ Install one at a time
 
 Each sprint installs one agent: a fixed deliverables checklist, a one-week clock and full handover, every time.
 
-Sprint 01 · Marketing HQ · one week
+Sprint 01 · Marketing Intelligence · one week
 
 ### Positioning sprint
 
@@ -694,7 +694,7 @@ Source URL: https://www.flowai.co.nz/sprints/positioning.html
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
-Sprint 01 · Marketing HQ · one week
+Sprint 01 · Marketing Intelligence · one week
 
 # One week to a position you can execute.
 
@@ -808,7 +808,7 @@ For businesses invisible in ChatGPT, Perplexity and AI Overviews. Today that is 
 
 Get a free auditSee the six deliverables
 
-Sprint 02 of five · the agent team · Previous: Sprint 01, Marketing HQ · Next: Sprint 03, Content agent
+Sprint 02 of five · the agent team · Previous: Sprint 01, Marketing Intelligence · Next: Sprint 03, Content agent
 
 ## Six deliverables. One week.
 
@@ -1128,7 +1128,7 @@ For businesses spending on marketing without knowing which channel produces cust
 
 Get a free auditSee the six deliverables
 
-Sprint 05 of five · the agent team · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Marketing HQ
+Sprint 05 of five · the agent team · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Marketing Intelligence
 
 ## Six deliverables. One week.
 
@@ -1572,7 +1572,7 @@ Runs the whole marketing function at an AI startup in Auckland, one person plus 
 
 - Keep customers
 
-- Marketing HQPositioning
+- Marketing IntelligencePositioning
 
 Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
 
@@ -1790,7 +1790,7 @@ The Flow AI manifesto
 
 # Marketing finally has its engineering layer.
 
-Every other function built one. Marketing kept hiring. Marketing HQ is the layer: your positioning in one place, ten agents briefed from it, and one engineer who reviews every send.
+Every other function built one. Marketing kept hiring. Marketing Intelligence is the layer: your positioning in one place, ten agents briefed from it, and one engineer who reviews every send.
 
 Get a free auditSee how it works
 
@@ -1820,7 +1820,7 @@ Capacity is the gap. Talent was never the problem.
 
 The layer
 
-## Marketing HQ is the layer.
+## Marketing Intelligence is the layer.
 
 One place holds your positioning. Ten agents are briefed from it, across three outcomes. A marketing engineer reviews every send before it reaches a customer.
 
@@ -1830,7 +1830,7 @@ One place holds your positioning. Ten agents are briefed from it, across three o
 
 - Keep customers
 
-- Marketing HQPositioning
+- Marketing IntelligencePositioning
 
 Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
 
@@ -1941,7 +1941,7 @@ Agent templates · free
 
 Pick a template and Flow AI runs it on your site. Amber reviews the result before it reaches you, within two working days. Every template is open source too, so you can install it yourself.
 
-Marketing HQ
+Marketing Intelligence
 
 ### Brand DNA researcher
 
@@ -2042,7 +2042,7 @@ Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
 
-Agent templates · Marketing HQ
+Agent templates · Marketing Intelligence
 
 # Brand DNA researcher
 
@@ -2118,11 +2118,11 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the Marketing HQ running every month?
+## Want the Marketing Intelligence running every month?
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
 
-Get a free auditInstall Marketing HQ as a one-week positioning sprint
+Get a free auditInstall Marketing Intelligence as a one-week positioning sprint
 
 ---
 
@@ -2205,7 +2205,7 @@ More templates
 
 - Search agentAI citability scorer. Scores one page, block by block, on how likely AI assistants are to quote it.
 
-- Marketing HQBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
+- Marketing IntelligenceBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
 
 - AllEvery agent template, and the skill library behind them.
 
@@ -2420,7 +2420,7 @@ More templates
 
 - Search agentAI citability scorer. Scores one page, block by block, on how likely AI assistants are to quote it.
 
-- Marketing HQBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
+- Marketing IntelligenceBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
 
 - AllEvery agent template, and the skill library behind them.
 
@@ -2509,7 +2509,7 @@ More templates
 
 - Search agentAI crawler access check. Checks whether fourteen AI crawlers, from ChatGPT to Perplexity, can read your site.
 
-- Marketing HQBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
+- Marketing IntelligenceBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
 
 - AllEvery agent template, and the skill library behind them.
 
@@ -2596,7 +2596,7 @@ More templates
 
 ## Keep going.
 
-- Marketing HQBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
+- Marketing IntelligenceBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
 
 - Search agentFull GEO audit. Scores your site's AI-search visibility out of 100 and ranks the fixes into a 30-day plan.
 
@@ -2689,7 +2689,7 @@ More templates
 
 ## Keep going.
 
-- Marketing HQBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
+- Marketing IntelligenceBrand DNA researcher. Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.
 
 - Search agentFull GEO audit. Scores your site's AI-search visibility out of 100 and ranks the fixes into a 30-day plan.
 
