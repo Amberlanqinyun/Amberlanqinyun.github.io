@@ -538,3 +538,51 @@ html, body { overflow-x: clip; }
 .pp-hero .stack { margin-left: 0; max-width: none; text-align: left; }
 .pp-hero h1 { margin-left: 0; max-width: 16ch; }
 .pp-hero .lead { margin-left: 0; max-width: 40rem; }
+
+/* ---------- The agent team: HQ, three segments, review (2026-10-06) ----------
+   Read top to bottom: the brief, the three outcomes, the agents, the check. */
+.team { margin: var(--space-block) 0 0; text-align: left; }
+.team__hq-list { list-style: none; padding: 0; margin: 0; }
+.team__hq { display: flex; gap: var(--s-5); align-items: flex-start; padding: var(--s-6) var(--s-7); border: 1px solid rgba(228,164,60,.45); border-radius: 18px; background: linear-gradient(180deg, rgba(228,164,60,.08), rgba(228,164,60,.02)); }
+.team__hq-ico { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 12px; background: rgba(228,164,60,.14); color: var(--accent); }
+.team__hq-ico .agent-ico { width: 20px; height: 20px; color: var(--accent); }
+.team__hq b { display: inline-block; color: var(--fg); font-size: 1.25rem; font-weight: 500; letter-spacing: -.015em; }
+.team__hq .small { margin-left: .6rem; color: var(--accent); font-size: .8125rem; }
+.team__hq p { margin-top: .35rem; color: var(--muted); max-width: 52rem; line-height: 1.55; }
+.team__hq p .text-link { margin-left: .35rem; font-size: var(--t-small); }
+
+.team__lines { display: block; width: 100%; height: 44px; }
+.team__lines path { fill: none; stroke: rgba(228,164,60,.45); stroke-width: 1.25; vector-effect: non-scaling-stroke; }
+
+.team__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); }
+.team__col { display: flex; flex-direction: column; border: 1px solid var(--hair); border-radius: 18px; background: var(--surface-soft); overflow: hidden; transition: opacity .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease); }
+.team__cols:hover .team__col { opacity: .45; }
+.team__cols .team__col:hover, .team__cols .team__col:focus-within { opacity: 1; border-color: var(--hair-strong); }
+.team__head { padding: var(--s-6) var(--s-6) var(--s-5); border-bottom: 1px solid var(--hair); }
+.team__n { color: var(--accent); font-size: .8125rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.team__head h3 { margin-top: var(--s-2); font-size: clamp(1.4rem, 2vw, 1.65rem); letter-spacing: -.02em; }
+.team__head p { margin-top: var(--s-2); color: var(--muted); font-size: .9375rem; line-height: 1.5; min-height: 2.9em; }
+.team__count { display: inline-block; margin-top: var(--s-4); color: var(--soft); font-size: .8125rem; }
+.team__agents { list-style: none; padding: var(--s-2) 0; margin: 0; }
+.team__agents li { padding: var(--s-4) var(--s-6); }
+.team__agents li + li { border-top: 1px solid var(--hair); }
+.team__agents b { display: flex; align-items: center; gap: .65rem; color: var(--fg); font-weight: 500; font-size: 1rem; }
+.team__agents .agent-ico { width: 16px; height: 16px; flex: none; color: var(--soft); }
+.team__agents li:hover .agent-ico { color: var(--accent); }
+.team__agents p { margin-top: .3rem; padding-left: calc(16px + .65rem); color: var(--soft); font-size: .875rem; line-height: 1.5; }
+.team__agents p .text-link { display: inline; font-size: .8125rem; margin-left: .25rem; }
+
+.team__review { margin-top: var(--s-4); display: flex; align-items: center; gap: var(--s-4); padding: var(--s-5) var(--s-7); border: 1px dashed var(--hair-strong); border-radius: 18px; }
+.team__review p { color: var(--muted); }
+.team__review b { color: var(--fg); font-weight: 500; }
+.team__dot { width: 9px; height: 9px; flex: none; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(228,164,60,.15); }
+
+@media (max-width: 900px) {
+  .team__lines { display: none; }
+  .team__cols { grid-template-columns: 1fr; margin-top: var(--s-4); }
+  .team__cols:hover .team__col { opacity: 1; }
+  .team__head p { min-height: 0; }
+  .team__hq, .team__review { padding: var(--s-5); }
+  .team__hq .small { display: block; margin: .2rem 0 0; }
+}
+.team .text-link { white-space: nowrap; }
