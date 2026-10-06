@@ -71,7 +71,7 @@ SAMPLE_CRAWLERS = [
 TEMPLATES = [
     dict(
         slug="brand-dna", agent="hq", name="Brand DNA researcher",
-        lead="Give it a site address and it writes the brief every other agent works from: positioning, audience, competitors, voice, and the content gaps worth closing.",
+        lead="Give it a site address and it writes the brief every other agent works from. It covers positioning, audience, competitors, voice and the content gaps worth closing.",
         card="Turns a site address into an evidence-backed brand brief, with the content gaps worth closing.",
         field=("Your site", "company.co.nz", "Which site should it research?"),
         install="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill research-brand",
@@ -80,20 +80,20 @@ TEMPLATES = [
             ("Read the website", "Homepage, about, pricing, product, blog and customer pages: what you do in your own words, the tagline, features, pricing and proof."),
             ("Search the web", "Third-party descriptions, reviews, comparisons and company records. How others describe a business is often clearer than its own copy."),
             ("Name the competitors", "Three to five direct competitors, each with where it overlaps and where it differs."),
-            ("Write the brief", "One self-contained Brand DNA file. Anything not public is marked as not found, and every source is listed with the date it was read."),
+            ("Write the brief", "One self-contained Brand DNA file. Anything not public is marked as not found. Every source is listed with the date it was read."),
         ],
         needs=["Your site address", "Optionally, one line on what the business does"],
         returns=["What the business does, in plain words", "Target customer, pricing and key features", "Three to five competitors and your differentiators", "Brand voice and social proof", "Content gaps, with why each one matters", "Every source, dated"],
     ),
     dict(
         slug="geo-audit", agent="search", name="Full GEO audit",
-        lead="A complete check of how visible your site is to ChatGPT, Claude, Perplexity and Google's AI answers, scored out of 100 and turned into a ranked 30-day plan.",
+        lead="A complete check of how visible your site is to ChatGPT, Claude, Perplexity and Google's AI answers. It is scored out of 100 and turned into a ranked 30-day plan.",
         card="Scores your site's AI-search visibility out of 100 and ranks the fixes into a 30-day plan.",
         field=("Your site", "company.co.nz", "Which site should it audit?"),
         install="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-audit",
         repo="https://github.com/Amberlanqinyun/geo-seo-claude",
         steps=[
-            ("Map the site", "The homepage is read, the business type identified, and up to 50 pages sampled from the sitemap, within the rules of your robots.txt."),
+            ("Map the site", "The agent reads the homepage and identifies the business type. It samples up to 50 sitemap pages, within the rules of your robots.txt."),
             ("Run six checks in parallel", "AI citability, brand authority, experience and expertise in the content, technical access, structured data, and presence on the platforms AI systems cite."),
             ("Score it", "The six results combine into one GEO score out of 100, weighted toward citability and authority."),
             ("Rank the fixes", "Every issue is sorted into critical, high, medium or low, with the quick wins pulled out first."),
@@ -104,7 +104,7 @@ TEMPLATES = [
     ),
     dict(
         slug="ai-crawler-check", agent="search", name="AI crawler access check",
-        lead="Finds out which AI systems can read your site. Fourteen AI crawlers are checked against your robots.txt, page tags and server headers, with the exact fix if any are blocked.",
+        lead="Finds out which AI systems can read your site. It checks fourteen AI crawlers against your robots.txt, page tags and server headers. If any are blocked, you get the exact fix.",
         card="Checks whether fourteen AI crawlers, from ChatGPT to Perplexity, can read your site.",
         field=("Your site", "company.co.nz", "Which site should it check?"),
         install="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-crawlers",
@@ -120,13 +120,13 @@ TEMPLATES = [
         returns=["An access table for all fourteen crawlers", "An AI visibility score out of 100", "Any critical blocks, named", "A ready-to-paste robots.txt recommendation"],
         sample=dict(
             title="flowai.co.nz, checked 2 October 2026",
-            note="All fourteen crawlers can read the site. Nine are named in robots.txt and five are allowed by the default rule. No page tags or headers block them, and llms.txt and the sitemap are both in place.",
+            note="All fourteen crawlers can read the site. Nine are named in robots.txt and five are allowed by the default rule. No page tags or headers block them. The sitemap and llms.txt are both in place.",
             rows=SAMPLE_CRAWLERS,
         ),
     ),
     dict(
         slug="ai-citability", agent="search", name="AI citability scorer", cta="Score my page",
-        lead="Scores one page on how likely AI assistants are to quote it, block by block, and rewrites the weakest passages so they can be cited.",
+        lead="Scores one page, block by block, on how likely AI assistants are to quote it. Then it rewrites the weakest passages so they can be cited.",
         card="Scores one page, block by block, on how likely AI assistants are to quote it.",
         field=("Page to score", "company.co.nz/services", "Which page should it score?"),
         install="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-citability",
@@ -143,16 +143,16 @@ TEMPLATES = [
     ),
     dict(
         slug="content-evidence-audit", agent="content", name="Content evidence auditor", cta="Check my page",
-        lead="Checks every link, statistic, source and company claim in a draft or a published page before it goes out, and names the exact fix for each problem.",
+        lead="Checks every link, statistic, source and company claim in a draft or published page before it goes out. Each problem comes with the exact fix.",
         card="Checks every link, statistic and claim in a draft or page before it goes live.",
         field=("Page or draft link", "company.co.nz/blog/post", "Which page or draft should it check?"),
         install="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill audit-content",
         repo="https://github.com/Amberlanqinyun/Amberlanqinyun.github.io/tree/main/skills/audit-content",
         steps=[
-            ("Load the context", "The draft, plus your Brand DNA if one exists, which becomes the source of truth for claims about your business."),
+            ("Load the context", "The draft, plus your Brand DNA if one exists. The Brand DNA becomes the source of truth for claims about your business."),
             ("Pull out every claim", "Links, statistics, named sources, research citations and claims about your own product."),
             ("Open every link", "Each one is fetched and read to confirm it supports the exact claim attached to it. Every link, with no sampling."),
-            ("Trace every number", "Statistics are traced to their original source, and the patterns of invented figures are flagged."),
+            ("Trace every number", "Statistics are traced to their original source. Patterns typical of invented figures are flagged."),
             ("Check your own claims", "Metrics and features are checked against your Brand DNA, and dates and numbers against each other."),
         ],
         needs=["A public page link, or a shared draft link", "Your Brand DNA, if you have one"],
@@ -160,15 +160,15 @@ TEMPLATES = [
     ),
     dict(
         slug="reddit-opportunities", agent="community", name="Reddit opportunity researcher",
-        lead="Finds the Reddit threads where your business can genuinely help, the communities worth joining, and the exact words buyers use, ranked by what to act on first.",
-        card="Finds the Reddit threads where your business can genuinely help, ranked by what to act on first.",
+        lead="Finds the Reddit threads where your business can help and the communities worth joining, ranked by what to act on first. It also captures the exact words buyers use.",
+        card="Finds the Reddit threads where your business can help, ranked by what to act on first.",
         field=("Your site", "company.co.nz", "Which business should it research?"),
         install="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill reddit-opportunity-research",
         repo="https://github.com/Amberlanqinyun/Amberlanqinyun.github.io/tree/main/skills/reddit-opportunity-research",
         install_note="Run the Brand DNA researcher first: this template reads its brand_dna.md.",
         steps=[
             ("Start from your Brand DNA", "The Brand DNA researcher runs first, so the search starts from your real audience, pains and competitors."),
-            ("Search in buyers' words", "Twenty to forty Reddit searches across problems, solutions and competitors, in the language users actually use."),
+            ("Search in buyers' words", "Twenty to forty Reddit searches across problems, solutions and competitors, in the words buyers use."),
             ("Read the threads", "Each promising thread is captured: the pain, the phrasing, the competitors mentioned, and whether you could add value."),
             ("Score each one", "Pain intensity, fit for a helpful reply, content fit, community activity, and how often it comes back."),
             ("Turn it into demand", "The searches and AI prompts buyers are likely making, and the content worth creating for them."),
@@ -279,7 +279,7 @@ def gallery():
       <div class="stack">
         <p class="eyebrow">Agent templates · free</p>
         <h1 id="templates-title" data-words>Put an agent to work on your site.</h1>
-        <p class="lead">Pick a template and Flow AI runs it on your site. Amber reviews the result before it reaches you, within two working days. Every template is open source too, so you can install it yourself.</p>
+        <p class="lead">Pick a template and Flow AI runs it on your site. Amber reviews the result, and it reaches you within two working days. Every template is also open source, so you can install it yourself.</p>
       </div>
       <div class="tpl-grid reveal">
 {chr(10).join(cards)}
@@ -492,7 +492,7 @@ def template_page(t):
     <div class="wrap">
       <div class="stack reveal">
         <h2 id="end-title">Want the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Marketing HQ')} running every month?</h2>
-        <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.</p>
+        <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over. After that, the engine runs it every month.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
           <a class="text-link arrow-link" href="{sprint_href}">{esc(sprint_text)}</a>
