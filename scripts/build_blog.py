@@ -171,7 +171,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <script src="/assets/share.js" defer></script>
 <script src="/assets/blog.js" defer></script>
 {extra_head}<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/claude.css?v=7">
+<link rel="stylesheet" href="/assets/claude.css?v=8">
 </head>
 <body data-motion="auto">
 {partial('gtm-body').rstrip()}

@@ -280,6 +280,7 @@ ASSIGN = {
     "ai-for-marketers": half_disc,                           # half handed over, half kept
     "ai-agents-for-marketing": dot_ring,                     # a team around one brief
     "ai-agency-vs-ai-consultant-nz": pluses,                 # ways to buy the work
+    "what-is-a-marketing-engineer": nested_triangles,        # a builder inside a marketer
 }
 ALL = [rings, dash_ring, disc_dots, dash_column, donut_dots, striped_disc_square, hstripes, diamonds, pluses,
        half_disc, stripes_square, cross_wave, rainbow, nested_triangles, wave, chevrons, dot_triangle, confetti,

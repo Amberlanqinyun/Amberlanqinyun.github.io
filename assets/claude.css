@@ -424,3 +424,52 @@ html, body { overflow-x: clip; }
 @media (max-width: 640px) {
   .source-link, .stat-src .text-link, main .text-link:only-child { display: inline-flex; align-items: center; min-height: 40px; }
 }
+
+/* ---------- About v3: profile hero, start paths, experience, story ---------- */
+.hero-profile { text-align: left; padding-bottom: clamp(3rem, 6vw, 4.5rem); }
+.profile { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+.profile__text h1 { margin-top: var(--s-5); max-width: 12ch; }
+.profile__text .lead { margin-top: var(--s-6); max-width: 34rem; }
+.profile__text .cta-row { margin-top: var(--s-7); justify-content: flex-start; }
+.profile__links { margin-top: var(--s-6); display: flex; gap: var(--s-6); font-size: var(--t-small); }
+.profile__links a { color: var(--muted); border-bottom: 1px solid var(--hair-strong); padding-bottom: 2px; }
+.profile__links a:hover { color: var(--fg); border-color: var(--fg); }
+.profile__photo { margin: 0; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 5; background: #e9e3d6; }
+.profile__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 30%; display: block; }
+.profile__facts { margin: clamp(3rem, 6vw, 4.5rem) 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--hair); }
+.profile__facts > div { padding: var(--s-5) var(--s-5) 0 0; }
+.profile__facts > div + div { padding-left: var(--s-5); border-left: 1px solid var(--hair); }
+.profile__facts dt { color: var(--fg); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 500; letter-spacing: -0.03em; }
+.profile__facts dd { margin: .35rem 0 0; color: var(--soft); font-size: var(--t-small); line-height: 1.45; }
+
+.start { padding-block: 0 clamp(4rem, 8vw, 6rem); }
+.paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); text-align: left; }
+.path { display: flex; flex-direction: column; gap: var(--s-3); padding: var(--s-6); border: 1px solid var(--hair); border-radius: 16px; background: rgba(250,248,243,.02); color: var(--fg); text-decoration: none; transition: border-color .2s, background-color .2s; }
+.path:hover { border-color: rgba(228,164,60,.5); background: rgba(228,164,60,.04); }
+.path__who { color: var(--soft); font-size: var(--t-small); }
+.path b { font-weight: 500; font-size: 1.125rem; line-height: 1.35; letter-spacing: -.01em; }
+.path__go { margin-top: auto; padding-top: var(--s-4); color: var(--accent); font-size: var(--t-small); font-weight: 500; }
+.path__go::after { content: " \2192"; }
+
+.exp { margin-top: var(--space-block); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2.5rem, 6vw, 5rem); text-align: left; align-items: start; }
+.exp .caps { margin-top: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--s-6); }
+
+.story { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2.5rem, 6vw, 5rem); text-align: left; align-items: start; }
+.story h2 { margin-top: var(--s-5); max-width: 12ch; }
+.story__quote { margin: 0; padding-left: var(--s-5); border-left: 2px solid var(--accent); color: var(--fg); font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.25; letter-spacing: -.02em; font-weight: 500; }
+.story__p { margin-top: var(--s-5); color: var(--muted); line-height: 1.65; max-width: 40rem; }
+.story__more { margin-top: var(--s-6); border-top: 1px solid var(--hair); padding-top: var(--s-4); }
+.story__more summary { cursor: pointer; color: var(--fg); font-weight: 500; list-style: none; }
+.story__more summary::after { content: " +"; color: var(--soft); }
+.story__more[open] summary::after { content: " \2212"; }
+.story__more p { margin-top: var(--s-4); color: var(--muted); line-height: 1.65; max-width: 40rem; }
+
+@media (max-width: 900px) {
+  .profile, .exp, .story { grid-template-columns: 1fr; }
+  .profile__photo { aspect-ratio: 4 / 3; max-height: 26rem; }
+  .profile__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile__facts > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .paths { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) { .exp .caps { grid-template-columns: 1fr; } .profile__text h1 { max-width: none; } }
+.hero-profile .lead, .hero-profile .eyebrow, .hero-profile h1 { margin-left: 0; margin-right: 0; text-align: left; }
