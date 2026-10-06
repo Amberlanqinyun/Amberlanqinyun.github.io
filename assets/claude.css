@@ -473,3 +473,16 @@ html, body { overflow-x: clip; }
 }
 @media (max-width: 520px) { .exp .caps { grid-template-columns: 1fr; } .profile__text h1 { max-width: none; } }
 .hero-profile .lead, .hero-profile .eyebrow, .hero-profile h1 { margin-left: 0; margin-right: 0; text-align: left; }
+
+/* ---------- Rounded corners everywhere (2026-10-06) ---------- */
+.versus::before { border-radius: 18px; }
+.glass-grid { gap: var(--s-4); }
+.glass-grid > .glass + .glass { margin: 0; }
+.glass { border-radius: 16px; background: var(--surface-soft); }
+.tpl-grid { gap: var(--s-4); }
+.tpl-grid > .tpl-card + .tpl-card { margin: 0; }
+.tpl-card { border-radius: 16px; }
+.install code, .copy-button, .controls, input, textarea, select { border-radius: 10px; }
+.controls { overflow: hidden; }
+.system__agents li { border-radius: 10px; }
+.versus-head, .versus-label { font-family: var(--font); text-transform: none; letter-spacing: 0.005em; font-size: 0.875rem; }
