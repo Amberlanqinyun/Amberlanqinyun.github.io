@@ -66,3 +66,21 @@
   .demo__msg--you { max-width: 90%; }
 }
 @media (prefers-reduced-motion: reduce) { .demo__msg, .demo__row { animation: none; } .demo__status.is-working::before { animation: none; } }
+
+/* Thinking: the three Flow dots, then a quiet log of what was done */
+.demo__think { margin-top: .55rem; display: flex; align-items: center; gap: .7rem; color: var(--muted); font-size: .875rem; }
+.demo__dots { display: inline-flex; align-items: flex-end; gap: 4px; height: 14px; }
+.demo__dots i { display: block; border-radius: 50%; background: #faf8f3; animation: demo-dot 1.1s ease-in-out infinite; }
+.demo__dots i:nth-child(1) { width: 5px; height: 5px; opacity: .45; }
+.demo__dots i:nth-child(2) { width: 7px; height: 7px; opacity: .75; animation-delay: .15s; }
+.demo__dots i:nth-child(3) { width: 9px; height: 9px; background: #e4a43c; animation-delay: .3s; }
+@keyframes demo-dot { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-4px); } }
+.demo__step { animation: demo-in .3s var(--ease) both; }
+.demo__log { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .2rem; color: var(--soft); font-size: .8125rem; }
+.demo__log li { display: flex; align-items: center; gap: .5rem; animation: demo-in .3s var(--ease) both; }
+.demo__log li::before { content: ""; width: 10px; height: 6px; margin-top: -3px; border: solid #6f9e74; border-width: 0 0 1.5px 1.5px; transform: rotate(-45deg); }
+.demo__msg--agent .demo__reply { margin-top: .7rem; }
+@media (prefers-reduced-motion: reduce) { .demo__dots i { animation: none; } }
+.demo__thread { overflow-y: auto; scrollbar-width: none; }
+.demo__thread::-webkit-scrollbar { display: none; }
+.demo__thread { min-height: 0; } .demo__main { min-height: 0; }
