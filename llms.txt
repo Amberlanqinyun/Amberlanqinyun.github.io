@@ -7,7 +7,7 @@ Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), F
 Key facts:
 - Service: AI-run marketing for NZ SMBs: SEO and answer engine optimization, content engine, outbound automation, analytics and reporting.
 - Audience: New Zealand small and medium businesses, and early-stage teams without a marketing hire. Australia served remotely.
-- Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Marketing engine retainer $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
+- Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Flow Engine, run monthly: $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland and across New Zealand. Flow AI is the engineered alternative: AI agents for marketing, reviewed by one marketing engineer, delivered as AI marketing transformation one agent at a time.
 - Referral: a referral fee for every signed client referred, paid after their first invoice clears.
 - Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, and agentic AI tooling (Claude).

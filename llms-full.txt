@@ -7,7 +7,7 @@ Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), F
 Key facts:
 - Service: AI-run marketing for NZ SMBs: SEO and answer engine optimization, content engine, outbound automation, analytics and reporting.
 - Audience: New Zealand small and medium businesses, and early-stage teams without a marketing hire. Australia served remotely.
-- Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Marketing engine retainer $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
+- Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Flow Engine, run monthly: $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland and across New Zealand. Flow AI is the engineered alternative: AI agents for marketing, reviewed by one marketing engineer, delivered as AI marketing transformation one agent at a time.
 - Referral: a referral fee for every signed client referred, paid after their first invoice clears.
 - Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, and agentic AI tooling (Claude).
@@ -42,12 +42,41 @@ Site structure:
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
-- /blog/: guides and working notes, published weekly.
-- /blog/ai-marketing-statistics-australia-new-zealand.html: 62 sourced statistics on AI adoption and AI marketing in Australia and New Zealand, free to quote with attribution.
-- /blog/ai-marketing-transformation-small-business.html: a 90-day AI marketing transformation roadmap for small businesses in Australia and New Zealand, phase by phase and system by system.
-- /blog/what-is-an-ai-marketing-agent.html: defines the AI marketing agent for small business, the ten marketing jobs it covers, and how it differs from marketing automation, general AI tools and an agency.
-- /blog/ai-marketing-cost-australia-new-zealand.html: what AI marketing costs in Australia and New Zealand in 2026, with sourced ranges for tools, freelancers, AI agents, agencies and in-house hires.
-- /blog/ai-marketing-for-small-business-nz.html: the complete guide to AI marketing for NZ small businesses - what it covers, costs versus an agency or hire, and a starting checklist.
+<!-- blog:start -->
+- /blog/: guides for owners and marketing leads in New Zealand and Australia, grouped by topic. Filter with /blog/?topic=<topic>.
+- /glossary/: plain definitions of AI marketing and AI search terms, free to quote with attribution.
+- Topic: AI search (/blog/?topic=ai-search). Getting found by Google and quoted by ChatGPT, Perplexity and AI Overviews.
+  - /blog/what-is-answer-engine-optimisation.html [pillar]: Answer engine optimisation (AEO) is the work of making your business easy for AI answer engines such as ChatGPT, Perplexity, Gemini and Google's AI Overviews to find, understand and name in their answers. It builds on normal SEO: crawlable pages, clear facts, direct answers to real questions, and mentions of your business on other trusted sites.
+  - /blog/aeo-checklist.html: An AEO checklist for a small business covers six areas: open your site to AI crawlers, publish consistent facts about the business, write pages that answer customer questions directly, earn reviews and mentions elsewhere, add accurate structured data, and track what AI engines say about you. Most owners can work through it in a week.
+  - /blog/aeo-vs-seo-vs-geo.html: SEO gets your pages ranked in search results. AEO gets your business quoted or recommended inside the answers AI tools write. GEO is the research term for the same goal in generative AI engines such as ChatGPT and Perplexity. In practice AEO and GEO overlap almost completely, and both rest on good SEO.
+  - /blog/how-to-get-mentioned-by-chatgpt.html: There is no form to submit your business to ChatGPT. ChatGPT, Perplexity, Google AI Mode and Copilot build answers from the open web and their search partners, so you get mentioned by being easy to find and confirm: crawlable pages that answer buyer questions, consistent business details, recent reviews, and mentions on sites the assistants already trust.
+  - /blog/seo-for-small-business-nz.html: SEO for a New Zealand small business starts with Google, which handles about nine in ten NZ searches. Complete and maintain your Google Business Profile, collect recent reviews every week, give each service and each area you cover its own page, and fix the technical basics in Search Console. Most owners can do the first month themselves.
+- Topic: Costs and choices (/blog/?topic=costs). What marketing help costs in New Zealand and Australia, and how to choose.
+  - /blog/ai-marketing-cost-australia-new-zealand.html [pillar]: In 2026, AI marketing for a small business costs USD 20 to 99 a month per tool if you do the work yourself, NZD 60 to 150 an hour from a freelancer, NZD 1,500 to 10,000 a month from an agency, or NZD 90,000 to 130,000 a year for an in-house hire. AI marketing agents sit between the tool and the agency.
+  - /blog/agency-vs-freelancer-vs-in-house.html: A freelancer is usually cheapest for New Zealand small businesses at NZD 50 to 150 an hour. An agency retainer costs NZD 1,500 to 10,000 a month for more than one channel, and an in-house marketer costs about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Ongoing workload decides which fits.
+  - /blog/ai-agency-vs-ai-consultant-nz.html: Choose an AI marketing agency when you want marketing produced and run for you, an AI automation agency when a specific process wastes hours every week, and an AI consultant when you need a plan before you buy anything. If you have staff with time, an in-house person plus an outside engineer can cost less than all three.
+  - /blog/do-you-need-an-ai-marketing-agency-nz.html: You need an AI marketing agency when marketing must run every week across more than one channel and nobody inside the business has the hours to run it. Check that the agency runs real AI systems you can see and keep. If you have the time or only one channel, a freelancer or AI tools may serve you better.
+  - /blog/fractional-cmo-vs-ai-cmo.html: A fractional CMO is a senior marketer working part time, costing about NZD 4,000 to 10,000 a month in New Zealand and AUD 6,000 to 18,000 in Australia. An AI CMO is software that plans and often produces the work for far less. Choose the person for judgment and accountability, the software for weekly execution, or combine them.
+  - /blog/fractional-marketing-manager-nz.html: A fractional marketing manager is an experienced marketer who works for your business part time, usually one or two days a week, owning the plan and the results without a full-time salary. Robert Walters' 2026 guide puts Auckland contract marketing managers at NZD 70 to 105 an hour, roughly NZD 2,450 to 3,700 a month for one day a week.
+  - /blog/marketing-agency-alternatives-nz.html: The main alternatives to a marketing agency in New Zealand are doing it yourself with AI tools, a freelancer at NZD 50 to 150 an hour, a fractional marketing manager from about NZD 1,200 a month, a specialist package, an AI-led service, or an in-house hire on NZD 55,000 to 150,000 a year.
+  - /blog/marketing-agency-cost-nz.html: Most New Zealand marketing agencies charge NZD 95 to 200 an hour. Monthly retainers run about NZD 500 to 1,500 for one channel, NZD 1,500 to 4,000 for several, and NZD 4,000 to 10,000 or more for full service, plus GST and ad spend. From NZD 1,000 a month, an agency has room to do one channel properly.
+- Topic: The AI marketing agent (/blog/?topic=agent). What an AI marketing agent is, what it does, and where the human sits.
+  - /blog/what-is-an-ai-marketing-agent.html [pillar]: An AI marketing agent is software that reads your business, decides what marketing to do next, produces the work across several channels and ships it under a human's review. A tool waits to be prompted one task at a time. An agent holds a goal, chooses its next task and reports what changed.
+  - /blog/ai-agents-for-marketing.html: Build a positioning brief first, because every marketing agent is briefed from it. Then build the agent for the gap that costs you most, usually search or outbound for a 5 to 50 person business. Install one agent at a time, give it narrow data access, put a human review before anything reaches a customer, and measure enquiries.
+  - /blog/ai-marketing-automation-small-business.html: AI marketing automation is software that runs marketing steps on triggers, such as a welcome email after a sign-up, with AI writing, sorting and personalising the content inside each step. A small business should start with six: a welcome sequence, enquiry follow-up, quote follow-up, review requests, abandoned bookings or carts, and re-engagement.
+  - /blog/what-is-a-marketing-engineer.html: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content, outbound and reporting, and who keeps the judgement over what ships. Job listings with the title grew fast in 2025, but the role is still small. A real one can show you a running system.
+  - /blog/what-is-an-ai-cmo.html: An AI CMO is software that does the planning half of a chief marketing officer's job. It reads the business and its market, sets priorities, writes the marketing plan, briefs the work and reviews the results each cycle. A human still owns positioning, pricing, claims, spend and anything that reaches a customer.
+- Topic: Transformation (/blog/?topic=transformation). Moving a small business marketing function onto AI systems, job by job.
+  - /blog/ai-marketing-transformation-small-business.html [pillar]: AI marketing transformation for a small business is the move from marketing done in spare hours to marketing run by systems, one job at a time. A practical 90-day path fixes positioning and measurement first, then search and content, then social and outbound, with a human approving everything that reaches a customer.
+  - /blog/ai-for-marketers.html: Hand AI the production work of marketing: research, first drafts, repurposing, scheduling, tracking and follow-up. Keep the judgment: positioning, the claim worth making, taste, the call on what ships and conversations with buyers. Put a named person and a short review step between every AI draft and the customer, and measure hours saved alongside enquiries.
+  - /blog/ai-marketing-examples.html: Ten practical AI marketing examples for a small business, one per marketing job: a positioning file, AI search answer pages, a weekly guide, one social channel, researched outbound, quote follow-up, a launch kit, review replies, a weekly ad check and a one-screen report. In each, AI drafts the work and a named person approves it.
+  - /blog/ai-marketing-for-small-business-nz.html: AI marketing for a New Zealand small business covers four systems: SEO so Google finds you, answer engine optimisation so ChatGPT and AI search quote you, a content engine that publishes every week, and outbound follow-up that never forgets. Most businesses start with one system, prove it, then add the next.
+  - /blog/ai-marketing-strategy-small-business.html: Build an AI marketing strategy in five steps: write your positioning and the questions customers ask, hand one or two marketing jobs to AI first, set rules for what a person approves, choose two numbers to measure, and run it for 90 days. Keep it to one page and review it monthly.
+  - /blog/content-marketing-small-business-nz.html: Content marketing for a New Zealand small business means publishing useful answers to the questions your customers already ask, on a schedule you can keep. Write one solid piece a fortnight, cut it into social posts, an email and FAQ entries, and check enquiries monthly. Two to four hours a week is enough to start.
+  - /blog/outbound-sales-automation.html: Outbound sales automation for a small business means using software and AI to build a target list, research each account, draft short personal emails and send follow-ups on a schedule, while a person approves every first message and handles every reply. In New Zealand and Australia it must also meet spam law on consent, identification and unsubscribing.
+- Topic: Reference (/blog/?topic=reference). Statistics and definitions, free to quote with attribution.
+  - /blog/ai-marketing-statistics-australia-new-zealand.html [pillar]: Around half of small and medium businesses in Australia and New Zealand now use AI in some form, but far fewer use it to run marketing work end to end. This page collects 62 figures on adoption, marketing use, AI search and time saved, each linked to its primary source and free to quote with attribution.
+<!-- blog:end -->
 - /tools/benchmark.html: free 2-minute AI-readiness benchmark for businesses. No email required.
 - /tools/pricing.html: free interactive pricing model (Lerner rule, economic value to the customer).
 - /tools/decision-map.html: free marketing decision map toolkit. List your marketing decisions, score value, risk and frequency, see which ones AI can make, which it drafts for approval and which stay human, then write one-page decision rules. Runs in the browser; nothing is sent.
@@ -70,7 +99,237 @@ Everything below is the complete, current text of flowai.co.nz, provided so AI a
 
 ---
 
-## Flow AI | AI marketing transformation, engineered end to end
+## AI Marketing for Small Business in NZ: Complete Guide
+
+Source URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html
+Type: Guide
+Author: Amber Lan (Flow AI)
+Published: 2026-08-20
+Last updated: 2026-08-20
+
+Guides / Transformation
+
+# AI marketing for small business in NZ: the complete guide.
+
+AI marketing means using AI systems to run the repetitive parts of marketing, so a business without a marketing hire can still show up consistently: found on Google, cited by AI assistants, publishing every week, and following up with every lead. This guide covers what that includes, what it costs, and where to start.
+
+Amber Lan, AI marketing engineer·Updated 20 August 2026·9 min read
+
+The short answer
+
+AI marketing for a New Zealand small business covers four systems: SEO so Google finds you, answer engine optimisation so ChatGPT and AI search quote you, a content engine that publishes every week, and outbound follow-up that never forgets. Most businesses start with one system, prove it, then add the next.
+
+## 01Why AI changes the marketing math for NZ small businesses
+
+The old math was brutal. A small business could not justify a full-time marketer, so the owner did the marketing personally, in the gaps between actual work. Content went out when there was time, which meant rarely. SEO was something the website person mentioned once. Leads got followed up when someone remembered. The result was a business that was good at its job and invisible to everyone who had not already heard of it.
+
+AI changes which parts of that need a human. Adoption reflects it: in the U.S. Chamber of Commerce's 2025 Empowering Small Business report1, the share of small businesses using generative AI jumped from 40% to 58% in a single year. The pattern in New Zealand looks the same from where I sit: the owners I talk to already use ChatGPT for one-off tasks. The gap is between using AI occasionally and having it run a system.
+
+Here is the distinction that matters, and the one most AI marketing content glosses over. AI removes repetitive work. It does not remove judgment. Drafting fifty product descriptions is repetitive work. Deciding what your business should claim, and to whom, is judgment. A system that automates the first and leaves you the second makes one person as productive as a small team. A system that pretends to automate both produces the generic sludge you already recognise in your inbox.
+
+## 02The four things AI marketing actually covers
+
+Strip away the vendor noise and AI marketing for a small business is four systems. Each one can stand alone. Together they cover the whole funnel.
+
+### 1. SEO: being found on Google
+
+Still the foundation. Most NZ buying journeys start with a search, and the basics have not changed: a technically healthy site, pages that answer what people actually type, and business information that is consistent everywhere it appears. What AI changes is the cost of the work. Auditing, fixing metadata, writing location and service pages, and maintaining structured data used to be billable hours; now they are largely system output that a human reviews.
+
+Concretely, for a NZ service business that means: every service you offer gets its own page written the way customers search ("gutter cleaning north shore" rather than "our services"), your Google Business Profile stays complete and current, and the technical layer that most owners never see, from page titles to schema markup, is generated and checked by the system instead of waiting for a web developer's next free week.
+
+### 2. AEO and GEO: being cited by ChatGPT and AI search
+
+The new layer, and the one almost no NZ small business has touched. When someone asks ChatGPT, Perplexity, or Google's AI Overviews to recommend a business that does what you do, the assistant answers with names. Getting into that answer is called answer engine optimization, and it is engineering rather than magic: let the AI crawlers in, describe your business in structured data, publish content that can be quoted in isolation, and keep your facts consistent across the web. I run an open-source toolkit for exactly this, and this website is its live demonstration.
+
+The reason to move on this now is simple: the space is nearly empty. Very few NZ businesses have made themselves legible to AI assistants, which means the ones that do are competing against absence. In every other marketing channel you fight incumbents with budgets. In this one, for the moment, you mostly fight nobody.
+
+### 3. A content engine: publishing without a content team
+
+Consistency beats brilliance in small-business content, and consistency is exactly what a solo operator cannot sustain by hand. A content engine fixes the math: one source document goes in, and a month of platform-shaped posts comes out, each checked against codified brand-voice rules before anything ships. The owner's job collapses from writing everything to approving what a system drafted. I have written up how the one I run in production works, including why the quality gate matters more than the generation.
+
+What goes in as the source matters more than owners expect. A recorded voice memo about a job that went sideways, a customer question you answered by email, a before-and-after from last week: these are the raw material of content people actually read, because they contain things only you know. The engine's job is to shape them per platform; your job is to keep noticing them.
+
+### 4. Outbound automation: follow-up that never forgets
+
+Most small businesses do not lose deals to competitors. They lose them to silence: the quote that never got a follow-up, the enquiry that sat over a busy weekend. Outbound automation covers prospect research, personalised first contact inside safe sending limits, and follow-up sequences that stop the moment a human replies. The hard rule that keeps it trustworthy: automation opens doors, a person walks through them.
+
+For a small B2B business this typically means a short, honest first email to a well-researched list, a polite follow-up or two, and instant handover to you the moment anyone answers. No fake personalisation, no pressure sequences. The win is coverage: every lead and lapsed customer hears from you, which is more than most competitors manage.
+
+## 03What a week looks like when the systems run
+
+Theory aside, here is roughly how a week runs once the four systems are live, based on how I operate the same stack in production.
+
+Monday, about an hour. Review the content packet the engine drafted from last week's source material. Approve most of it, rewrite the two pieces where the judgment call matters, schedule the lot. Skim the weekend's enquiries and check the follow-up system caught them all.
+
+Midweek, in the gaps. Answer the replies outbound generated, because a human always takes over the moment a buyer engages. Capture one piece of raw material for next week's content: a customer question, a job story, a number worth sharing.
+
+Friday, half an hour. Read the one-page report: what shipped, what moved, which channel produced this week's conversations. Decide one adjustment for next week. That is the whole management overhead.
+
+The point of the walkthrough is the shape of the owner's time. Almost none of it is production. Nearly all of it is judgment, which is the part only you can do, and the part that was always the actual value of marketing.
+
+## 04How to choose your first system
+
+If you only build one thing this quarter, pick it by where your next customer actually comes from.
+
+- Local service business (trades, clinics, home services): start with SEO plus AI-search visibility. Your buyers search with intent and location; being the answer wins the job before anyone else quotes.
+
+- B2B with a defined buyer (consultancies, software, wholesale): start with outbound. A small, well-researched list with reliable follow-up beats months of content while your pipeline is empty.
+
+- Expertise business (advisors, agencies, specialists): start with the content engine. Your buying decision is a trust decision, and consistent published judgment is how strangers learn to trust you.
+
+- Already getting traffic that does not convert: start with analytics and follow-up before spending anything on more visibility. Fix the leak before paying for more water.
+
+## 05What this costs against an agency, a freelancer, or a hire
+
+The honest answer is that every option can work, and each has a structural trade-off. Prices for agencies and freelancers vary widely in NZ, so get current quotes rather than trusting anyone's summary of the market, including mine. What I can compare is the structure of what you pay for.
+
+Option
+
+What you pay for
+
+Structural trade-off
+
+Agency
+
+A team's hours across your account, usually on a monthly retainer with a minimum term.
+
+Breadth of skills, but your budget buys hours, and small retainers get junior hours. The work usually stops when the invoice does.
+
+Freelancer
+
+One specialist's time, per project or per hour.
+
+Strong in their lane, but marketing needs several lanes, and coordinating freelancers becomes your job.
+
+In-house hire
+
+A salary, plus tools, plus management time.
+
+Full attention on your business, at the highest fixed cost, and one person still cannot cover strategy, content, SEO, and outbound by hand.
+
+Fractional marketer
+
+Senior judgment, a day or two a week.
+
+Excellent strategy, but execution still needs hands or budget on top.
+
+AI systems + one engineer
+
+Systems that do the production, one accountable person doing the judgment. Flow AI's version is public: NZ$997 one-time for one system, or NZ$1,000/month for the full engine.
+
+Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub2.
+
+## 06A practical starting checklist
+
+You do not need all four systems on day one. This is the order that compounds.
+
+### Week 1: find out where you stand
+
+- Ask ChatGPT and Google to recommend a business that does what you do, in your town. Note who comes up. That is your real competition for the new front page.
+
+- Run a basic health check on your own site: does it load fast, does every page have a clear title and description, does it say plainly what you do and where?
+
+- If you want a structured version of this step, my free AI-readiness benchmark takes two minutes and needs no email.
+
+### Weeks 2 to 4: fix the basics
+
+- Make your business information identical everywhere: site, Google Business Profile, directories, social bios.
+
+- Let the AI crawlers in via robots.txt and add structured data that says who you are, what you sell, and where you serve.
+
+- Publish honest answers to the questions buyers actually ask, one page per real question.
+
+### Month 2 and on: build the cadence
+
+- Stand up a content rhythm you can sustain forever, even if that is one good piece a week. A system helps precisely here.
+
+- Wire up follow-up: every enquiry gets a response path that does not depend on your memory.
+
+- Measure. One page of numbers a month tells you which channel pays. Without it you are guessing.
+
+## 07Common mistakes NZ small businesses make with AI marketing
+
+Buying tools without a system. A ChatGPT subscription is not a marketing function. Tools produce output; a system decides what to produce, checks the quality, and ships it on schedule. The tool spend is wasted without the surrounding discipline.
+
+Ignoring AI search entirely. Optimising only for Google in 2026 is optimising for part of the front page. The assistants answer with names either way; the only question is whether yours is one of them.
+
+Publishing unreviewed AI output. Readers recognise generated text faster every month, and nothing burns trust quicker. Every line should pass a human or a codified quality gate before it carries your name.
+
+Doing everything at once. Four systems launched simultaneously by one busy owner means four systems abandoned by June. Sequence them. The checklist above is the order I use with clients.
+
+## 08Questions owners ask
+
+### What is AI marketing for a small business?
+
+AI marketing means using AI systems to run the repetitive parts of marketing: drafting content, keeping SEO and AI-search visibility healthy, researching and contacting prospects, and reporting. The owner keeps the judgment calls; the systems do the production. Done well, one person can run what used to need a team.
+
+### How much does AI marketing cost for a small NZ business?
+
+It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI publishes its pricing as a reference point: a NZ$997 one-time starter sprint, or NZ$1,000 per month for the full marketing engine, cancel anytime.
+
+### Do I still need SEO if I am doing AEO?
+
+Yes. Answer engine optimization builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
+
+### Can one person really run all of this?
+
+Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
+
+Written by
+
+Amber Lan
+
+AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them on GitHub. Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end.
+
+## Sources
+
+Every figure links to its primary source. Checked 20 August 2026.
+
+- U.S. Chamber of Commerce's 2025 Empowering Small Business reportuschamber.com
+
+- public on GitHubgithub.com
+
+TopicTransformationFormatGuideUpdated20 August 2026Reading time9 minutesShare guide
+
+Explore with AI
+
+Open this guide in an assistant and ask it what applies to your business.
+
+- ChatGPT↗
+
+- Claude↗
+
+- Perplexity↗
+
+## Want to know which marketing job to fix first?
+
+Tell Flow AI what the business does and where marketing stalls. The free audit returns a written plan naming the first system to install, within the week.
+
+Get a free audit
+
+## Keep reading
+
+Transformation12 min read
+
+### AI for marketers: what to hand to AI, and what to keep.
+
+AI for marketers, in practice: hand AI the research, drafts, repurposing and follow-up, keep positioning and the call on what ships. Includes a 30-day plan.
+
+Transformation12 min read
+
+### Outbound sales automation for small business: a practical guide for NZ and Australia.
+
+Outbound sales automation for small B2B firms in NZ and Australia: list building, research, sequences, deliverability, spam law and what to measure.
+
+Transformation12 min read
+
+### Content marketing for small business in NZ: what to publish and how often.
+
+Content marketing for NZ small businesses: what to publish, how often, how to answer customer questions, turn one piece into many and measure it weekly.
+
+---
+
+## Flow AI | Your Marketing, Run by AI Agents | Auckland, NZ
 
 Source URL: https://www.flowai.co.nz/
 Type: Page
@@ -78,165 +337,141 @@ Author: Amber Lan (Flow AI)
 
 AI marketing systems · Auckland, worldwide
 
-# Marketing that compounds.
+# Your marketing, run by AI agents.
 
-Flow AI installs the systems that run your content, search, outbound and reporting, reviewed by a marketing engineer.
+Flow AI sets up agents for your search, content, outbound and reporting. A marketing engineer checks everything before it goes out.
 
-Get a free auditSee it running
+Get a free auditSee how it works
 
-- Get found
+FFernwick Plumbing
 
-- Get leads
+Flow Intelligence
 
-- Keep customers
+Agents10
 
-- Flow IntelligencePositioning
+Approvals3
 
-Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
+Reports
 
-- Get foundSearch agent
+Recents
 
-Technical SEO through to answer engine optimisation, so assistants cite you. Free template
+AI search fixesOctober contentOutbound laneSeptember reportAI search fixesWaiting for your review
 
-- Get foundContent agent
+Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.
 
-One strong idea becomes a month of content your team approves, not writes. Free template
+Ask Flow Intelligence for something↑
 
-- Get foundSocial agent
-
-Posts and threads in your voice, on a calendar that holds.
-
-- Get leadsOutbound agent
-
-The right hundred buyers, researched and reached personally.
-
-- Get leadsConversion agent
-
-Offers, landing pages and funnels, tested and tuned monthly.
-
-- Get leadsLaunch agent
-
-Product and campaign launches sequenced across every channel.
-
-- Get leadsPaid agent
-
-Ad creative and audiences, with the numbers behind them.
-
-- Keep customersCommunity agent
-
-Reddit, forums and groups answered honestly and on time. Free template
-
-- Keep customersMeasurement agent
-
-Tracking wired properly, so next month's budget goes where it worked.
-
-- Keep customersReporting agent
-
-One short monthly read on what shipped and what comes next.
+An illustrative demo with a fictional business. Pick a run under Recents.
 
 Manifesto
 
 ## Marketing finally has its engineering layer.
 
-Every other function built one. Marketing kept hiring. Flow Intelligence holds your positioning, briefs ten agents across three outcomes, and a marketing engineer reviews every send.
+Every other function built one. Marketing kept hiring. Now Flow Intelligence holds your positioning and briefs ten agents from it.
 
 Read the manifesto
 
-### A prompt is not a process
+### A process outlasts a prompt
 
-A good answer once is not a system. Flow writes the strategy into the agents, so the same standard holds on the fiftieth run as the first.
+One good answer can be luck. Flow AI writes your strategy into the agents, so the fiftieth run matches the first.
 
-### The work is weekly, not clever
+### A week with room in it
 
-Marketing fails on cadence, not ideas. AI agents free up 6 to 7 hours a week for small business marketers, according to Salesforce research on 4,450 marketers.
+AI agents give small business marketers 6 to 7 hours back each week. That comes from Salesforce research on 4,450 marketers.
 
-### Judgment stays yours
+### Judgement stays yours
 
-Machines produce, a human decides. Every send passes a review before it reaches a customer, which is the only way a small team can safely run this much output.
+Agents produce and a person decides. Every send is reviewed before a customer sees it, so a small team can run this much safely.
 
 What Flow does
 
-## Get found. Get leads. Keep customers.
+## From first search to repeat customer.
 
-Three outcomes, eleven engineered systems underneath them. Start where the gap is widest.
+Eleven systems sit under three outcomes. Start where your gap is widest.
 
 ### Get found
 
-Be the answer when someone searches for what you sell, on Google and inside ChatGPT, Claude and AI Overviews.
+4 systems
 
-Inside search and AI search
+Be the answer on Google and inside ChatGPT, Claude and AI Overviews.
 
-- PositioningWho you sell to, what to say, and where the budget goes.
+- PositioningWho you sell to and what to say, with the budget pointed at both.
 
 - Search and AI searchTechnical SEO through to answer engine optimisation, so assistants cite you.
 
-- ContentOne strong idea becomes a month of content your team approves, not writes.
+- ContentOne strong idea becomes a month of content your team only has to approve.
 
 - SocialPosts and threads in your voice, on a calendar that holds.
 
+Inside search and AI search
+
 ### Get leads
 
-Turn attention into enquiries, with a human on every send that reaches a customer.
+4 systems
 
-Inside outbound
+Turn attention into enquiries, with a person checking every message.
 
 - OutboundThe right hundred buyers, researched and reached personally.
 
-- Growth and conversionOffers, landing pages and funnels, tested and tuned monthly.
+- Growth and conversionOffers and landing pages, tested and tuned every month.
 
 - LaunchProduct and campaign launches sequenced across every channel.
 
 - PaidAd creative and audiences, with the numbers behind them.
 
+Inside outbound
+
 ### Keep customers
 
-Stay in front of the people who already know you, and know which effort produced which conversation.
+3 systems
 
-Inside measurement
+Stay close to customers, and see which effort started each conversation.
 
-- CommunityReddit, forums and groups answered honestly and on time.
+- CommunityHonest answers on Reddit and in forums, posted while the question is fresh.
 
 - MeasurementTracking wired properly, so next month's budget goes where it worked.
 
 - ReportingOne short monthly read on what shipped and what comes next.
 
+Inside measurement
+
 Why it pays
 
-## What the machine buys back.
+## Hours back, with receipts.
 
-The numbers the systems produce, with their sources attached.
+Every number here comes with its source attached.
 
 10 hrs
 
-back every week from content creation, with the engine drafting in the background between approvals.
+back every week from content creation.
 
-Measured in production
+Measured in productionPerson 1Person 2Person 3
 
 20 hrs
 
-saved every week across three team members on outbound, from list building to follow-up.
+a week saved on outbound, across three people.
 
-Measured in production
+Measured in productionOne in-house hire, a month
 
 < 1 salary
 
-runs several channels on a weekly cadence: an in-house hire costs AUD 8,700 to 10,800 a month all in.
+runs several channels. One in-house hire costs AUD 8,700 to 10,800 a month.
 
-Sourced in the cost guide
+Sourced in the cost guideStandard pageOptimised page
 
 up to 40%
 
-more AI-search visibility for pages optimised the way the AI-search sprint works.
+more AI-search visibility for optimised pages.
 
 Aggarwal et al., KDD 2024
 
-Time figures come from running these systems in production at an enterprise AI company. The six-month case shows the whole machine.
+Time figures come from these systems in production at an enterprise AI company. The six-month case shows the whole machine.
 
 Instead of an agency
 
-## Instead of a marketing agency.
+## Talk to the person doing the work.
 
-Agencies solve marketing with billed people. Flow solves it with engineered systems, plus one marketing engineer who reviews everything that ships.
+Agencies bill monthly for people. Flow AI runs engineered systems, reviewed by the engineer who built them.
 
 A marketing agency
 
@@ -252,7 +487,7 @@ An account managerThe person doing the work
 
 Scope
 
-The channels in your retainerEleven marketing systems, engineered to your business
+The channels in your retainerEleven marketing systems, built around your business
 
 Speed to first output
 
@@ -266,67 +501,79 @@ When it ends
 
 The work stopsThe systems keep running, documented
 
-Agencies are still the right answer for big paid media and brand campaigns. What each option costs, honestly.
+Agencies still win on big paid media and brand campaigns. What each option costs, honestly.
 
 Proof
 
-## The work is visible.
+## See the work for yourself.
 
-Strategy is only credible when you can inspect the systems beneath it.
+Open the systems before you trust the strategy.
 
 ### geo-seo-claude
 
-Citability scoring, AI-crawler analysis and structured-data workflows. The toolkit Flow runs on client sites.
+The toolkit Flow AI runs on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.
 
 Open on GitHub
 
 ### Content engine
 
-One source becomes a month of voice-audited, channel-ready content.
+One source becomes a month of on-voice content for every channel.
 
 Read the case
 
 ### Three demand engines. One pipeline.
 
-An enterprise AI launch: positioning, channel design and operating cadence, connected to one pipeline. Sanitised case.
+An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.
 
 Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
-Open source and inspectable, one of 125 skills in the library.
+Open source and open to inspect, one of 125 skills in the library.
 
 Questions
 
-## Questions.
+## Good questions.
 
 ### What is Flow AI?
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It was built by a marketing engineer with ten years in marketing and three building the agents, and it runs marketing for businesses that would otherwise hire an agency or a marketer.
+Flow AI is an AI marketing transformation practice. It builds the agents that run a marketing function, starting from strategy. Its founder has ten years in marketing and three building agents. Businesses use it instead of an agency or a hire.
 
 ### How is Flow AI different from a marketing agency?
 
-An agency solves marketing with people: an account manager, a strategist, a writer and a media buyer, billed monthly. Flow AI solves it with engineered systems and one marketing engineer who reviews the work. You talk to the person doing it, the scope is fixed in advance, and everything built is documented and inspectable.
+An agency bills you monthly for people: an account manager, a strategist, a writer and a media buyer. Flow AI runs engineered systems, reviewed by one marketing engineer you talk to directly. Scope is fixed in advance, and everything built is documented and open to inspect.
 
 ### What is the free audit?
 
-A free audit is a written assessment of your marketing, delivered within the week, with the gaps ranked and the first system to install named. It is free, needs no card and no call, and it is how every engagement with Flow AI starts.
+The free audit is a written assessment of your marketing, delivered within the week. It ranks the gaps and names the first system to install. No card, no call. Every engagement with Flow AI starts here.
 
 ### Who reviews the work before it goes out?
 
-A marketing engineer reviews every send before it reaches a customer. Agents produce the work; a human decides what ships. That review is the only way a small team can safely run this much marketing output.
+A marketing engineer reviews every send before it reaches a customer. Agents produce the work, and a person decides what ships. It is the only safe way for a small team to run this much marketing.
 
 ### Where does Flow AI work?
 
-Flow AI is based in Auckland, New Zealand and works worldwide. Its published research covers Australia and New Zealand in depth, including sourced pricing and adoption statistics, and the systems themselves run for any English-speaking market.
+Flow AI is based in Auckland, New Zealand, and works worldwide. Its published research covers Australia and New Zealand, with sourced pricing and adoption statistics. The systems run in any English-speaking market.
+
+### Is Flow AI an AI marketing agency?
+
+Flow AI covers what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and one marketing engineer reviews every send. Comparing AI marketing agencies in Auckland or across New Zealand? Start with the free audit.
+
+### What is AI marketing transformation?
+
+AI marketing transformation rebuilds a marketing function around AI agents. Agents take the recurring production: research, first drafts, scheduling, tracking and follow-up. People keep the judgement. Flow AI installs one agent per one-week sprint, and the whole Flow Engine then runs monthly.
+
+### Does Flow AI help marketers use AI?
+
+Yes. Marketing leads use Flow AI to put AI agents to work in their own team. The agents take production, and the marketer keeps strategy and review. Every system is documented at handover, and the open-source skill library shows how each agent works.
 
 ## Start with a free audit.
 
-Tell Flow what you sell and where growth is stuck. A written audit comes back within the week, no card, no call.
+Tell us what you sell and where growth is stuck. Your written audit arrives within the week. No card, no call.
 
 Get a free audit
 
 ---
 
-## How it works | Flow AI installs a marketing function one agent at a time
+## AI Marketing Services: One-Week Sprints | Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
@@ -334,9 +581,9 @@ Author: Amber Lan (Flow AI)
 
 How it works · Read, install, run
 
-# A marketing function, installed one agent at a time.
+# Your marketing team, installed one agent at a time.
 
-Flow reads your business, installs the agent with the most to gain as a fixed-scope sprint in one week, then runs it every month with a marketing engineer reviewing every send.
+Flow reads your business, then installs the agent with the most to gain in one week. After that it runs monthly, and a marketing engineer checks every send.
 
 Get a free auditSee the sprints
 
@@ -344,157 +591,319 @@ The three steps
 
 ## Read. Install. Run.
 
-Flow reads your business first. You choose where it starts. A human reviews everything before it ships.
+Flow learns your business first. You pick where it starts, and a person reviews everything before it ships.
 
-01
+01 · ReadA ranked, written audit inside week one.
 
-### Read
+02 · InstallThe agent with the most to gain goes live.
 
-Tell Flow what you sell and who buys it. A written audit of your marketing, with the opportunities ranked, comes back inside the first week.
+03 · RunRuns monthly, human-reviewed, with one short report.
 
-02
-
-### Install
-
-Pick the agent with the most to gain. It goes live with the assets, automation and tracking it needs to run.
-
-03
-
-### Run
-
-Flow runs it every month. A marketing engineer reviews the output, and you get one short report on what shipped and what comes next.
-
-The agent team
+The Flow Engine
 
 ## Ten agents, one engineer.
 
-Flow Intelligence holds your positioning and briefs ten specialist agents across three outcomes: get found, get leads, keep customers. A marketing engineer reviews every send before it reaches a customer.
+Flow Intelligence holds your positioning and briefs ten specialist agents from it. A marketing engineer reviews every send before a customer sees it.
 
 Try an agent on your site, free
 
-- Get found
+- ForWe claimProofFlow IntelligencePositioning
 
-- Get leads
+Holds your positioning and budget in one place, and briefs every agent from it. Free template
 
-- Keep customers
-
-- Flow IntelligencePositioning
-
-Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
-
-- Get foundSearch agent
+- best plumber in Auckland?yoursite.co.nzdirectorySearch agentCited in AI answers
 
 Technical SEO through to answer engine optimisation, so assistants cite you. Free template
 
-- Get foundContent agent
+- Content agentA month of drafts, approved
 
-One strong idea becomes a month of content your team approves, not writes. Free template
+One strong idea becomes a month of content, ready for your team to approve. Free template
 
-- Get foundSocial agent
+- Thu 9:00Social agentPosts that go out on time
 
 Posts and threads in your voice, on a calendar that holds.
 
-- Get leadsOutbound agent
+- Handed to youOutbound agentReplies from the right buyers
 
 The right hundred buyers, researched and reached personally.
 
-- Get leadsConversion agent
+- Book a call+ form testedConversion agentMore visitors become enquiries
 
 Offers, landing pages and funnels, tested and tuned monthly.
 
-- Get leadsLaunch agent
+- EmailSocialSiteLiveLaunch agentLaunches that land on every channel
 
 Product and campaign launches sequenced across every channel.
 
-- Get leadsPaid agent
+- SponsoredLearn morePaid agentAds with the numbers behind them
 
 Ad creative and audiences, with the numbers behind them.
 
-- Keep customersCommunity agent
+- YouCommunity agentHelpful answers where buyers ask
 
-Reddit, forums and groups answered honestly and on time. Free template
+Honest, timely answers in Reddit threads and forums. Free template
 
-- Keep customersMeasurement agent
+- form_submitcall_clickbookingMeasurement agentEvery enquiry tracked to a source
 
 Tracking wired properly, so next month's budget goes where it worked.
 
-- Keep customersReporting agent
+- OctoberReporting agentOne page: what worked, what next
 
 One short monthly read on what shipped and what comes next.
 
-Install one at a time
+A marketing engineer reviews every send before it reaches a customer.
 
-## Install one agent at a time.
+The five sprints
 
-Each sprint installs one agent: a fixed deliverables checklist, a one-week clock and full handover, every time.
+## Start with one agent.
 
-Sprint 01 · Flow Intelligence · one week
+One week per agent, with six fixed deliverables and a documented handover.
 
-### Positioning sprint
+01Positioning02AI search03Content04Outbound05AnalyticsSprint 01 · Flow Intelligence · one week
 
-Start here if nobody has written down what you claim, to whom, and why anyone should believe it.
+### A clear position in one week.
 
-What it buys: every other agent stops relitigating what to say, and the claims survive handover.
+Start here if your positioning still lives in people’s heads.
 
-Claims register, one-page positioning, message architecture, and your first two channels.
+One page every agent briefs from, so your story holds on every channel.
 
-Every other agent is briefed from this.See the fixed scopeSprint 02 · Search agent · one week
+See the fixed scopeThen: Sprint 02, AI search
 
-### AI-search sprint
+PositioningOne pageCategoryForWe claimProof
 
-Start here if buyers ask Google and ChatGPT about what you sell and you never come up.
+Every agent reads this before it writes a word.
 
-What it buys: presence in the answers buyers read first; optimised pages have shown up to 40% more AI-search visibility (Aggarwal et al., KDD 2024).
+Positioning sheet, illustrative layout
 
-AI-crawler access, llms.txt, structured data, citability fixes, and search submission.
+#### What you get
 
-Your claim becomes machine-readable, so Google and AI assistants cite you.See the fixed scopeSprint 03 · Content agent · one week
+- 01Claims register
 
-### Content engine sprint
+- 02One-page positioning
+
+- 03Message architecture
+
+- 04Competitor claim map
+
+- 05Homepage hero rewrite
+
+- 0690-day channel plan
+
+#### How the week runs
+
+- Mon
+
+Read. I study your site, materials and market, then we talk for 30 minutes.
+
+- Wed
+
+Draft. Claims register and positioning page arrive. You mark up, I revise.
+
+- Fri
+
+Hand over. Final documents, hero copy and channel plan, all in writing.
+
+Sprint 02 · Search agent · one week
+
+### Be found on Google and in AI answers.
+
+Start here if buyers ask Google and ChatGPT about what you sell, and you’re missing from the answer.
+
+Up to 40% more AI-search visibility for pages optimised this way (Aggarwal et al., KDD 2024).
+
+See the fixed scopeThen: Sprint 03, Content
+
+AI answerIllustrativeWho should I talk to about this, near me?Your business, citedyoursite.co.nzdirectoryreview site
+
+An AI answer citing you, illustrative
+
+#### What you get
+
+- 01AI-crawler access
+
+- 02llms.txt, served
+
+- 03Structured data
+
+- 04Citability pass
+
+- 05Sitemap hygiene
+
+- 06Search submission
+
+#### How the week runs
+
+- Mon
+
+Audit. A crawl and citability audit that reads your site as an answer engine does.
+
+- Wed
+
+Ship. Crawler access, schema, llms.txt and page fixes go live.
+
+- Fri
+
+Hand over. A before-and-after report, submissions filed, the checklist in your hands.
+
+Sprint 03 · Content agent · one week
+
+### A month of content in your voice, from one source document.
 
 Start here if content only ships when someone finds a spare afternoon.
 
-What it buys back: about 10 hours a week of writing time, measured in production, with the engine drafting between approvals.
+About 10 hours a week of writing time back, measured in production.
 
-Your brand voice codified as rules, a content engine configured, and your first month of content drafted through the quality gate.
+See the fixed scopeThen: Sprint 04, Outbound
 
-Every piece joins a library that keeps selling long after it ships.See the fixed scopeSprint 04 · Outbound agent · one week
+Next monthDraftedMonTueWedThuFri
 
-### Outbound sprint
+You approve. The engine drafts in between.
 
-Start here if the pipeline runs on referrals and you cannot say where the next customer comes from.
+The content calendar, illustrative
 
-What it buys back: about 20 hours a week across three team members, measured in production, with reply rates around 30% against the industry’s 1-in-5 median.
+#### What you get
 
-A signal-based prospect list and one personalised sequence inside safe limits, with instant human handoff the moment a buyer replies.
+- 01Voice codified
 
-Reaches buyers who were not looking yet, warmed by what they find when they check you.See the fixed scopeSprint 05 · Measurement agent · one week
+- 02Engine configured
 
-### Analytics sprint
+- 03First month drafted
 
-Start here if you cannot say which marketing effort produced last month's revenue.
+- 04Publishing calendar
 
-What it buys: next month’s budget goes where this month’s revenue came from.
+- 05Source-capture habit
 
-Tracking installed and conversion events wired, with a one-page monthly report connected to your real numbers.
+- 06Operator handbook
 
-Shows which agent produced revenue and feeds it back into positioning.See the fixed scope
+#### How the week runs
 
-The engine
+- Mon
 
-## A sprint installs an agent. The engine runs the team.
+Listen. A voice interview plus writing you love and hate.
 
-A sprint installs one agent and hands it over, documented. The engine is the other way to buy: Flow runs the whole team for you, month after month.
+- Wed
 
-Marketing engine
+Run. The engine runs on your first source document. You judge.
+
+- Fri
+
+Hand over. A month of approved content scheduled, and the handbook is yours.
+
+Sprint 04 · Outbound agent · one week
+
+### One outreach lane, live, with a person on every reply.
+
+Start here if your pipeline runs on referrals and the next customer is a guess.
+
+Around 30% reply rate in production, against a benchmark median near one in five (HeyReach 2026).
+
+See the fixed scopeThen: Sprint 05, Analytics
+
+One laneIllustrativeDay 1 · first touchDay 4 · follow-upReply
+
+Handed to you. Automation paused.
+
+One outreach lane, illustrative
+
+#### What you get
+
+- 01ICP + signal list
+
+- 02One sequence
+
+- 03Safe sending limits
+
+- 04Human takeover
+
+- 05CRM pipeline
+
+- 06First sends live
+
+#### How the week runs
+
+- Mon
+
+Define. ICP session: who buys, and what signal reveals them.
+
+- Wed
+
+Build. List built, sequence drafted, limits set. You approve every word.
+
+- Fri
+
+Go live. The lane goes live and replies land with you. The checklist is yours.
+
+Sprint 05 · Measurement agent · one week
+
+### Know which channel pays, on one page a month.
+
+Start here if last month’s revenue arrived and nobody can say which effort earned it.
+
+One page a month showing which channel paid, from your live numbers.
+
+See the fixed scopeThen: Sprint 01, Positioning
+
+Monthly reportOne page
+
+#### Where enquiries came from
+
+- Search
+
+- Outbound
+
+- Content
+
+- Referral
+
+#### What shipped
+
+Next month: move budget toward the channel that paid.
+
+The monthly report, illustrative layout
+
+#### What you get
+
+- 01Privacy-first analytics
+
+- 02Conversion events
+
+- 03Channel attribution
+
+- 04Monthly report
+
+- 05AI-readiness debrief
+
+- 06Campaign checklist
+
+#### How the week runs
+
+- Mon
+
+Audit. What fires correctly, and what lies or is missing.
+
+- Wed
+
+Install. Tracking and events tested against real traffic.
+
+- Fri
+
+Report. We read your first one-page report together, from live data.
+
+Run monthly
+
+## A sprint installs one agent. Monthly, Flow runs the whole engine.
+
+Buy a sprint and keep the agent, fully documented. Or let Flow run the whole Flow Engine every month.
+
+Flow Engine, monthly
 
 MonthlyCancel any time · full handover if you leave
 
-The whole agent team, running every month. In production these systems buy back about 30 team-hours a week.
+Your whole Flow Engine, running every month. In production these systems give back about 30 team-hours a week.
 
 - 01Positioning kept sharp as the market answers back
 
-- 02Search and AI-search visibility compounding
+- 02Search and AI-search visibility that compounds
 
 - 03Content shipped through the quality gate
 
@@ -502,7 +911,7 @@ The whole agent team, running every month. In production these systems buy back 
 
 - 05One clear report that re-aims positioning
 
-Get a free auditSee the team running
+Get a free auditSee the engine running
 
 ---
 
@@ -514,65 +923,77 @@ Author: Amber Lan (Flow AI)
 
 Sprint 01 · Flow Intelligence · one week
 
-# One week to a position you can execute.
+# A clear position in one week.
 
-For businesses whose marketing stalls because nobody has written down what the company claims, to whom, and why anyone should believe it. Every downstream system needs this settled first.
+For businesses whose marketing keeps stalling. Settle what you claim and why buyers believe it, and every agent after this speaks with one voice.
 
 Get a free auditSee the six deliverables
 
-Sprint 01 of five · the agent team · Previous: Sprint 05, Measurement agent · Next: Sprint 02, Search agent
+Sprint 01 of five · the Flow Engine · Previous: Sprint 05, Measurement agent · Next: Sprint 02, Search agent
+
+What it buys
+
+## Every agent starts from the same page.
+
+1pageevery agent is briefed from itPositioningOne pageCategoryForWe claimProof
+
+Every agent reads this before it writes a word.
+
+Illustrative layout. Yours holds your real claims.
 
 ## Six deliverables. One week.
 
-Fixed scope, so everything ships inside the week.
+Fixed scope. Everything ships inside the week.
 
-Positioning sprint
+- 01Claims register
 
-One week fixed scope
+Every public claim, with its evidence and status.
 
-Documented, portable, handover included.
+- 02One-page positioning
 
-- Claims register: every public claim with its evidence and status
+Category, ICP and the core message.
 
-- One-page positioning: category, ICP, and the core message
+- 03Message architecture
 
-- Message architecture mapped to each buying role
+Mapped to each buying role.
 
-- Competitor claim map: what rivals say, where the gap is
+- 04Competitor claim map
 
-- Homepage hero copy rewritten against the new position
+What rivals say, and the space they leave open.
 
-- A 90-day recommendation for your first two channels
+- 05Homepage hero
 
-Get a free audit
+Rewritten against the new position.
+
+- 06First two channels
+
+A 90-day recommendation.
+
+Get a free auditOne week · fixed scope · documented handover
 
 ## How the week runs.
 
 Three checkpoints in one week.
 
-Day one
+MonTueWedThuFri
 
-### Read
+- Read
 
-A 30-minute call. I read your site, materials and market first.
+I study your site, materials and market, then we talk for 30 minutes.
 
-Mid-week
-
-### Draft
+- Draft
 
 Claims register and positioning page arrive. You mark up, I revise.
 
-End of week
+- Hand over
 
-### Hand over
+Final documents, hero copy and channel plan, all in writing.
 
-Final documents, hero copy and the channel recommendation, in writing.
-
-Feeds the AI-search and Content Engine sprints: once the claim is settled, every page and post knows what to say.
+Feeds the AI-search and Content Engine sprints. With the claim settled, every page and post knows what to say.
 
 ## Evidence.
 
-This is the method behind the enterprise go-to-market case study, applied at your scale.
+The method behind the enterprise go-to-market case study, sized for your business.
 
 ## Keep going.
 
@@ -582,7 +1003,7 @@ This is the method behind the enterprise go-to-market case study, applied at you
 
 - SystemThe outbound system: the right hundred buyers, researched and reached personally.
 
-- SystemThe measurement system: see which effort produced which conversation.
+- SystemThe measurement system: see which effort started which conversation.
 
 - GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
 
@@ -592,19 +1013,19 @@ This is the method behind the enterprise go-to-market case study, applied at you
 
 ### What happens in the first week of the positioning sprint?
 
-The free audit comes first: a written assessment of your positioning and message with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: your positioning and message assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
-No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+No. The system runs monthly with a human review, and the handover shows exactly how. Prefer Flow to run it? Running the Flow Engine monthly covers that.
 
 ### How is this different from buying the same work from an agency?
 
-You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+You work directly with the marketing engineer who builds it, on a scope and week fixed upfront. Everything is documented and portable, so it stays yours, outside any retainer.
 
 ## Book the positioning sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
+Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
 Get a free auditCompare the five sprints
 
@@ -620,65 +1041,75 @@ Author: Amber Lan (Flow AI)
 
 Sprint 02 · Search agent · one week
 
-# Make your business legible to Google and the AI assistants.
+# Be found on Google and in AI answers.
 
-For businesses invisible in ChatGPT, Perplexity and AI Overviews. Today that is almost everyone, so early movers win cheaply.
+For businesses missing from ChatGPT, Perplexity and AI Overviews. Most are today, so the first to show up wins cheaply.
 
 Get a free auditSee the six deliverables
 
-Sprint 02 of five · the agent team · Previous: Sprint 01, Flow Intelligence · Next: Sprint 03, Content agent
+Sprint 02 of five · the Flow Engine · Previous: Sprint 01, Flow Intelligence · Next: Sprint 03, Content agent
+
+What it buys
+
+## Your name in the answers buyers read first.
+
++40%AI-search visibility, at bestAI answerIllustrativeWho should I talk to about this, near me?Your business, citedyoursite.co.nzdirectoryreview site
+
+Aggarwal et al., KDD 2024. Illustrative answer.
 
 ## Six deliverables. One week.
 
-Fixed scope, so everything ships inside the week.
+Fixed scope. Everything ships inside the week.
 
-AI-search sprint
+- 01AI-crawler access
 
-One week fixed scope
+robots.txt opened to the nine crawlers that matter.
 
-Documented, portable, handover included.
+- 02llms.txt
 
-- AI-crawler access: robots.txt opened to the nine crawlers that matter
+Written and served at root and /.well-known/.
 
-- llms.txt written and served, at root and /.well-known/
+- 03Structured data
 
-- Structured data: Organization, offers, FAQ, and page schema installed
+Organization, offers, FAQ and page schema.
 
-- Citability pass on your five most important pages
+- 04Citability pass
 
-- Sitemap, canonical, and feed hygiene
+On your five most important pages.
 
-- Search submission: IndexNow plus a Search Console walkthrough
+- 05Sitemap hygiene
 
-Get a free audit
+Sitemap, canonical and feed, cleaned.
+
+- 06Search submission
+
+IndexNow plus a Search Console walkthrough.
+
+Get a free auditOne week · fixed scope · documented handover
 
 ## How the week runs.
 
 Three checkpoints in one week.
 
-Day one
+MonTueWedThuFri
 
-### Audit
+- Audit
 
-A crawl and citability audit, exactly as an answer engine sees you.
+A crawl and citability audit that reads your site as an answer engine does.
 
-Mid-week
-
-### Ship
+- Ship
 
 Crawler access, schema, llms.txt and page fixes go live.
 
-End of week
+- Hand over
 
-### Hand over
-
-Before-and-after audit report, submissions done, maintenance checklist handed over.
+A before-and-after report, submissions filed, the checklist in your hands.
 
 Feeds the Content Engine sprint: the cluster plan tells the engine exactly what to publish next.
 
 ## Evidence.
 
-Open source and running on this site. Read the case study, then inspect the live output.
+Open source, and running on this site right now. Read the case study, then inspect the live output.
 
 ## Keep going.
 
@@ -686,9 +1117,9 @@ Open source and running on this site. Read the case study, then inspect the live
 
 - SystemThe outbound system: the right hundred buyers, researched and reached personally.
 
-- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+- SystemThe positioning system: a settled answer to who you sell to and what to say.
 
-- SystemThe measurement system: see which effort produced which conversation.
+- SystemThe measurement system: see which effort started which conversation.
 
 - GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
 
@@ -698,19 +1129,19 @@ Open source and running on this site. Read the case study, then inspect the live
 
 ### What happens in the first week of the AI-search sprint?
 
-The free audit comes first: a written assessment of your search and AI-search visibility with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: your search and AI-search visibility assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
-No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+No. The system runs monthly with a human review, and the handover shows exactly how. Prefer Flow to run it? Running the Flow Engine monthly covers that.
 
 ### How is this different from buying the same work from an agency?
 
-You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+You work directly with the marketing engineer who builds it, on a scope and week fixed upfront. Everything is documented and portable, so it stays yours, outside any retainer.
 
 ## Book the AI-search sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
+Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
 Get a free auditCompare the five sprints
 
@@ -726,59 +1157,71 @@ Author: Amber Lan (Flow AI)
 
 Sprint 03 · Content agent · one week
 
-# A month of on-voice content from one source document.
+# A month of content in your voice, from one source document.
 
-For owners who know consistency wins but cannot hand-write posts every week, and won't publish generic AI output under their name.
+For owners who know consistency wins. Show up every week in your own voice, without hand-writing every post.
 
 Get a free auditSee the six deliverables
 
-Sprint 03 of five · the agent team · Previous: Sprint 02, Search agent · Next: Sprint 04, Outbound agent
+Sprint 03 of five · the Flow Engine · Previous: Sprint 02, Search agent · Next: Sprint 04, Outbound agent
+
+What it buys
+
+## About 10 hours a week, back in your diary.
+
+10hrs / wkof writing time backNext monthDraftedMonTueWedThuFri
+
+You approve. The engine drafts in between.
+
+Measured in production. Illustrative calendar.
 
 ## Six deliverables. One week.
 
-Fixed scope, so everything ships inside the week.
+Fixed scope. Everything ships inside the week.
 
-Content engine sprint
+- 01Voice codified
 
-One week fixed scope
+Tone, banned patterns and rules a machine can check.
 
-Documented, portable, handover included.
+- 02Engine configured
 
-- Voice codified: your tone, banned patterns, and rules a machine can check
+Source document in, platform-shaped drafts out.
 
-- Engine configured: source document in, platform-shaped drafts out
+- 03First month drafted
 
-- First month of content drafted and passed through the voice gate
+Passed through the voice gate.
 
-- Publishing calendar with a cadence you can sustain
+- 04Publishing calendar
 
-- Source-capture habit: how to feed the engine in minutes a week
+A cadence you can sustain.
 
-- Operator handbook so the system survives without me
+- 05Source-capture habit
 
-Get a free audit
+Feed the engine in minutes a week.
+
+- 06Operator handbook
+
+So the system runs without me.
+
+Get a free auditOne week · fixed scope · documented handover
 
 ## How the week runs.
 
 Three checkpoints in one week.
 
-Day one
+MonTueWedThuFri
 
-### Listen
+- Listen
 
-A voice interview plus writing you love and hate. The rules come from you.
+A voice interview plus writing you love and hate.
 
-Mid-week
+- Run
 
-### Run
+The engine runs on your first source document. You judge.
 
-The engine runs on your first source document. You judge, the gate learns.
+- Hand over
 
-End of week
-
-### Hand over
-
-A month of approved content scheduled, calendar and handbook handed over.
+A month of approved content scheduled, and the handbook is yours.
 
 Feeds the Outbound sprint: published proof gives outreach something honest to point at.
 
@@ -792,9 +1235,9 @@ The engine runs in production today. Read the case study.
 
 - SystemThe outbound system: the right hundred buyers, researched and reached personally.
 
-- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+- SystemThe positioning system: a settled answer to who you sell to and what to say.
 
-- SystemThe measurement system: see which effort produced which conversation.
+- SystemThe measurement system: see which effort started which conversation.
 
 - GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
 
@@ -804,19 +1247,19 @@ The engine runs in production today. Read the case study.
 
 ### What happens in the first week of the content engine sprint?
 
-The free audit comes first: a written assessment of your content operation with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: your content operation assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
-No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+No. The system runs monthly with a human review, and the handover shows exactly how. Prefer Flow to run it? Running the Flow Engine monthly covers that.
 
 ### How is this different from buying the same work from an agency?
 
-You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+You work directly with the marketing engineer who builds it, on a scope and week fixed upfront. Everything is documented and portable, so it stays yours, outside any retainer.
 
 ## Book the content engine sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
+Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
 Get a free auditCompare the five sprints
 
@@ -832,67 +1275,77 @@ Author: Amber Lan (Flow AI)
 
 Sprint 04 · Outbound agent · one week
 
-# One outreach lane, live, with a human takeover rule.
+# One outreach lane, live, with a person on every reply.
 
-For B2B businesses whose next customers will never search for them, and who would rather send fifty honest emails than five thousand spam ones.
+For B2B businesses whose next customers aren’t searching yet. Fifty honest emails, sent well, beat five thousand sent blind.
 
 Get a free auditSee the six deliverables
 
-HeyReach’s 2026 benchmark across 96,051 campaigns found the sharpest drop comes after acceptance: connections that never become replies. This sprint is built for exactly that drop. The system opens the door, a human answers it. Run this way in production, campaigns hold a reply rate around 30 percent, against the benchmark’s roughly 1-in-5 median. The benchmark data.
+Sprint 04 of five · the Flow Engine · Previous: Sprint 03, Content agent · Next: Sprint 05, Measurement agent
 
-Sprint 04 of five · the agent team · Previous: Sprint 03, Content agent · Next: Sprint 05, Measurement agent
+What it buys
+
+## Replies from buyers before they start looking.
+
+~30%reply rate, in productionOne laneIllustrativeDay 1 · first touchDay 4 · follow-upReply
+
+Handed to you. Automation paused.
+
+Against a median near 1 in 5 (HeyReach 2026). Illustrative thread.
 
 ## Six deliverables. One week.
 
-Fixed scope, so everything ships inside the week.
+Fixed scope. Everything ships inside the week.
 
-Outbound sprint
+- 01ICP and prospect list
 
-One week fixed scope
+Signal-based, built and verified.
 
-Documented, portable, handover included.
+- 02One sequence
 
-- ICP definition and a signal-based prospect list, built and verified
+First touch plus follow-ups, in your voice.
 
-- One sequence: first touch plus follow-ups, written in your voice
+- 03Safe sending limits
 
-- Safe-limits setup: warm-up, volume caps, and deliverability basics
+Warm-up, volume caps, deliverability basics.
 
-- Human-takeover workflow: replies route to you instantly, automation stands down
+- 04Human takeover
 
-- Pipeline definition in your CRM: one shared meaning of "qualified"
+Replies route to you and automation stands down.
 
-- First sends live before the week ends
+- 05CRM pipeline
 
-Get a free audit
+One shared meaning of “qualified”.
+
+- 06First sends live
+
+Before the week ends.
+
+Get a free auditOne week · fixed scope · documented handover
 
 ## How the week runs.
 
 Three checkpoints in one week.
 
-Day one
+MonTueWedThuFri
 
-### Define
+- Define
 
-ICP session: who buys, what signal reveals them, what you can honestly offer.
+ICP session: who buys, and what signal reveals them.
 
-Mid-week
+- Build
 
-### Build
+List built, sequence drafted, limits set. You approve every word.
 
-List built, sequence drafted in your voice, limits set. You approve every word.
+- Go live
 
-End of week
-
-### Go live
-
-The lane is live, replies reach you, the operating checklist is yours.
+The lane goes live and replies land with you. The checklist is yours.
 
 Feeds Analytics: every lane lands in one measured pipeline.
 
 ## Evidence.
 
-The design pattern is documented in the outbound system on the work page.
+See the design pattern in the outbound system on the work page.
 
 ## Keep going.
 
@@ -900,9 +1353,9 @@ The design pattern is documented in the outbound system on the work page.
 
 - SystemThe content system: one strong idea becomes a month of content your team approves.
 
-- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+- SystemThe positioning system: a settled answer to who you sell to and what to say.
 
-- SystemThe measurement system: see which effort produced which conversation.
+- SystemThe measurement system: see which effort started which conversation.
 
 - GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
 
@@ -912,19 +1365,19 @@ The design pattern is documented in the outbound system on the work page.
 
 ### What happens in the first week of the outbound sprint?
 
-The free audit comes first: a written assessment of your outbound pipeline with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: your outbound pipeline assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
-No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+No. The system runs monthly with a human review, and the handover shows exactly how. Prefer Flow to run it? Running the Flow Engine monthly covers that.
 
 ### How is this different from buying the same work from an agency?
 
-You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+You work directly with the marketing engineer who builds it, on a scope and week fixed upfront. Everything is documented and portable, so it stays yours, outside any retainer.
 
 ## Book the outbound sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
+Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
 Get a free auditCompare the five sprints
 
@@ -942,63 +1395,87 @@ Sprint 05 · Measurement agent · one week
 
 # Know which channel pays, on one page a month.
 
-For businesses spending on marketing without knowing which channel produces customers. Fix the measurement before spending more anywhere.
+For businesses ready to spend with confidence. Know which channel brings customers, then put the next dollar there.
 
 Get a free auditSee the six deliverables
 
-Sprint 05 of five · the agent team · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Flow Intelligence
+Sprint 05 of five · the Flow Engine · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Flow Intelligence
+
+What it buys
+
+## Next month’s budget goes where this month’s revenue came from.
+
+1pagea month, from live dataMonthly reportOne page
+
+#### Where enquiries came from
+
+- Search
+
+- Outbound
+
+- Content
+
+- Referral
+
+#### What shipped
+
+Next month: move budget toward the channel that paid.
+
+Illustrative layout. Yours is built from your live numbers.
 
 ## Six deliverables. One week.
 
-Fixed scope, so everything ships inside the week.
+Fixed scope. Everything ships inside the week.
 
-Analytics sprint
+- 01Analytics installed
 
-One week fixed scope
+Privacy-respecting, and verified.
 
-Documented, portable, handover included.
+- 02Conversion events
 
-- Privacy-respecting analytics installed and verified
+The actions that matter, defined and firing.
 
-- Conversion events defined and firing: the actions that actually matter
+- 03Channel attribution
 
-- Channel attribution baseline: where visitors and enquiries really come from
+Where visitors and enquiries really come from.
 
-- One-page monthly report template, wired to your live data
+- 04Monthly report
 
-- AI-readiness benchmark debrief applied to your numbers
+One page, wired to your live data.
 
-- A measurement checklist for every future campaign
+- 05AI-readiness debrief
 
-Get a free audit
+The benchmark, applied to your numbers.
+
+- 06Campaign checklist
+
+Every future campaign, measured from day one.
+
+Get a free auditOne week · fixed scope · documented handover
 
 ## How the week runs.
 
 Three checkpoints in one week.
 
-Day one
+MonTueWedThuFri
 
-### Audit
+- Audit
 
-Measurement audit: what fires, what lies, what is missing entirely.
+What fires correctly, and what lies or is missing.
 
-Mid-week
+- Install
 
-### Install
+Tracking and events tested against real traffic.
 
-Tracking and events installed and tested against real traffic.
+- Report
 
-End of week
+We read your first one-page report together, from live data.
 
-### Report
-
-Your first one-page report from live data, walked through together.
-
-Feeds Strategy: the numbers revise the claim, and the line runs again.
+Feeds Positioning: the numbers sharpen the claim, and the cycle begins again.
 
 ## Evidence.
 
-Try the free AI-readiness benchmark for a taste of the diagnostic style.
+Try the free AI-readiness benchmark to see the diagnostic style first-hand.
 
 ## Keep going.
 
@@ -1008,7 +1485,7 @@ Try the free AI-readiness benchmark for a taste of the diagnostic style.
 
 - SystemThe outbound system: the right hundred buyers, researched and reached personally.
 
-- SystemThe positioning system: who you sell to, what to say, where the budget goes.
+- SystemThe positioning system: a settled answer to who you sell to and what to say.
 
 - GuideWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
 
@@ -1018,19 +1495,19 @@ Try the free AI-readiness benchmark for a taste of the diagnostic style.
 
 ### What happens in the first week of the analytics sprint?
 
-The free audit comes first: a written assessment of your tracking and reporting with the gaps ranked. Then the fixed-scope build ships inside the week, with every deliverable listed on this page and a documented handover at the end.
+The free audit comes first: your tracking and reporting assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
-No. The system is built to run on a monthly cadence with a human review, and the handover documents exactly how. If you would rather have it run for you, the monthly engine covers that.
+No. The system runs monthly with a human review, and the handover shows exactly how. Prefer Flow to run it? Running the Flow Engine monthly covers that.
 
 ### How is this different from buying the same work from an agency?
 
-You talk to the marketing engineer who does the work, the scope and the week are fixed before anything starts, and what gets built is documented and portable rather than held inside a retainer.
+You work directly with the marketing engineer who builds it, on a scope and week fixed upfront. Everything is documented and portable, so it stays yours, outside any retainer.
 
 ## Book the analytics sprint.
 
-Fixed scope, one week. If the fit is wrong, Flow says so and points you at the system you actually need.
+Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
 Get a free auditCompare the five sprints
 
@@ -1132,7 +1609,7 @@ Sequencing beats volume. The same assets, landed in order against one launch mom
 
 - SystemThe positioning system: who you sell to, what to say, where the budget goes.
 
-- AgentsThe agent team, and which one to install first.
+- AgentsThe Flow Engine, and which one to install first.
 
 ## Want a system like this pointed at your business?
 
@@ -1346,157 +1823,72 @@ Get a free audit
 
 ---
 
-## About Amber Lan | 10 years marketing, 3 building the AI
+## Amber Lan, AI Marketing Engineer and GTM Engineer (Remote)
 
 Source URL: https://www.flowai.co.nz/about.html
 Type: Page
 Author: Amber Lan (Flow AI)
+Last updated: 2026-10-06
 
-Amber Lan · AI marketing engineer
+About · Auckland, working worldwide
 
-# Ten years in marketing. Three building the AI that runs it.
+# Amber Lan, AI marketing engineer.
 
-Amber Lan has worked every part of marketing, then spent three years building the agents that do it. Flow AI is that system, opened up to other businesses. This page is the receipts.
+I build and run the AI systems behind go-to-market: search, content, outbound and reporting. I review everything they send.
 
-Get a free auditGitHubLinkedInExperience10+ years marketing · 3+ years AI engineeringBaseAuckland, New Zealand · working worldwideLanguagesEnglish · 中文 (native)Published125 skills, open source
+Work with meHiring? Let's talk
 
-Why Flow AI exists
+LinkedInGitHubEmail
 
-## I was the marketing team of one.
-
-Flow AI exists because I needed it first.
-
-Ten years in marketing, across every part of it. Positioning and category work. Search, back when that meant Google and now that it means ChatGPT too. Content calendars, brand voice, social, email, outbound, paid, events, analytics. Not one specialism: the whole function, in agencies and in house, for businesses from local operators to enterprise software.
-
-Which means I know exactly what a marketer's week looks like. You are one person against a list that assumes five. The strategy sits in a document nobody opens because there is no time to execute it. The content calendar slips, then slips again. Leads arrive and nobody follows up for four days. You are not bad at your job. There is simply more work than hours, and every quarter the list gets longer.
-
-Three years ago I started building my way out of it. Not prompts and not a tool subscription: real systems. Agents with the strategy written into them, content engines that hold a codified brand voice, outbound lanes that research before they send, search tooling that gets a business cited by AI assistants and not just ranked on Google.
-
-Then I ran a whole marketing function on it. One marketer, no team, the full remit at an AI company: strategy, launches, content, thought leadership for three executives, events, and the reporting. The system did the production. I did the judgment. That is the only reason one person could hold it.
-
-Flow AI is that system, opened up. Every business owner I meet has the same problem I had, with less time and no marketing background. So the agents that ran my function now run theirs.
-
-双语营销工程师 · Practitioner. Systems in production. Receipts included.
+125open-source marketing skills, published10+ yearsacross every part of marketing1 functionrun end to end on agents, soloEN · 中文native in both languagesRunning a businessGet a free written audit of your marketingStart the auditRecruitingRoles I fit and how to reach meSee availabilityHiring managerInspect the systems I have shippedSee the work
 
 Now
 
-## Running marketing solo at an AI startup.
+## A whole marketing function, run solo.
 
-Runs the whole marketing function at an AI startup in Auckland, one person plus an agent stack.
-
-- Get found
-
-- Get leads
-
-- Keep customers
-
-- Flow IntelligencePositioning
-
-Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
-
-- Get foundSearch agent
-
-Technical SEO through to answer engine optimisation, so assistants cite you. Free template
-
-- Get foundContent agent
-
-One strong idea becomes a month of content your team approves, not writes. Free template
-
-- Get foundSocial agent
-
-Posts and threads in your voice, on a calendar that holds.
-
-- Get leadsOutbound agent
-
-The right hundred buyers, researched and reached personally.
-
-- Get leadsConversion agent
-
-Offers, landing pages and funnels, tested and tuned monthly.
-
-- Get leadsLaunch agent
-
-Product and campaign launches sequenced across every channel.
-
-- Get leadsPaid agent
-
-Ad creative and audiences, with the numbers behind them.
-
-- Keep customersCommunity agent
-
-Reddit, forums and groups answered honestly and on time. Free template
-
-- Keep customersMeasurement agent
-
-Tracking wired properly, so next month's budget goes where it worked.
-
-- Keep customersReporting agent
-
-One short monthly read on what shipped and what comes next.
+I run all of marketing at an AI startup in Auckland. One person, with an agent stack as the team.
 
 ### Category and positioning
 
-Message architecture, the claims register, and the go-to-market plan across two quarters and a product launch.
+The message architecture and claims register behind the GTM plan.
 
-### An agent-run content engine
+2 quarters + 1 launch
 
-Brief in, audited platform-native content out. Every artefact passes a codified voice gate before it ships.
+### Agent-run content engine →
 
-Read the case study
+Brief in, platform-native content out.
+
+Voice gate on every piece
 
 ### Executive thought leadership
 
-Three leadership voices on LinkedIn, quarterly calendars, every statistic verified against a source before publication.
+Leadership voices on LinkedIn, on a quarterly calendar.
+
+3 voices · every stat sourced
 
 ### Marketing infrastructure as software
 
-An HTML-to-video rendering pipeline (Playwright + ffmpeg), a live benchmark kiosk app, and interactive GTM plans and dashboards the leadership team actually uses.
+Video rendering, a benchmark kiosk app, live GTM dashboards.
 
-### Event go-to-market end to end
+Playwright + ffmpeg
 
-Exhibitor operations, booth systems, and collateral for national tech events, run as production systems rather than one-off scrambles.
+### Event go-to-market
 
-Every part of marketing
+Exhibitor operations, from booth systems to collateral.
 
-## Every part of marketing, done personally.
-
-Not a specialist who outsources the rest. This is why Flow can run eleven marketing systems and know when each one is wrong.
-
-### Strategy and positioning
-
-Category work, message architecture, claims registers, launch plans across quarters.
-
-### Search and AI search
-
-Technical SEO through to answer engine optimisation, with the toolkit published open source.
-
-### Content and brand voice
-
-Calendars, long form, executive ghostwriting, and voice codified strictly enough that a machine can hold it.
-
-### Social and community
-
-Platform-native distribution, founder voices, and the unglamorous work of replying on time.
-
-### Outbound and lifecycle
-
-Researched prospect lists, sequences inside safe limits, email and follow-up that a human still signs off.
-
-### Paid, analytics and events
-
-Ad creative and audiences, tracking wired properly, and national events run as systems rather than scrambles.
+National tech events
 
 Proof
 
 ## Shipped systems, linked to source.
 
-Four featured, six more. Every one opens on GitHub.
+Four featured, five more. Open any one at its source or case study.
 
 SEO / AEO tooling · Python
 
 ### geo-seo-claude
 
-A GEO/AEO-first SEO toolkit for Claude Code: citability scoring, AI-crawler analysis, schema markup, PDF reports. Built so a brand gets cited by ChatGPT, Claude and Perplexity, not just ranked on Google.
+A GEO/AEO-first SEO toolkit for Claude Code: citability scoring, AI-crawler analysis, schema markup, PDF reports. Your brand gets cited by ChatGPT, Claude and Perplexity, and ranked on Google.
 
 View repositoryContent system · React + TS
 
@@ -1508,7 +1900,7 @@ View repositoryContent engine · Python + Claude
 
 ### Content engine
 
-One source document in, a month of on-brand posts out. Every line passes a codified voice audit, so the output reads human, not generated.
+One source document in, a month of on-brand posts out. Every line passes a codified voice audit, so it reads like a person wrote it.
 
 Read the case studyDistribution · TypeScript
 
@@ -1520,47 +1912,137 @@ View repository
 
 ### More systems
 
-Reddit user discoverySurface and qualify potential users from Reddit with AI. Intent signal, not spray-and-pray.AI · PythonLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
+Reddit user discoveryAI finds and qualifies potential users on Reddit from their intent signals.AI · PythonLatticeworkA Charlie Munger mental-models iOS app: daily wisdom, recall drills, a decision journal.Swift · SwiftUIMind TravelerPick a country, get a curated four-week cultural programme. Shipped with a full PRD and a custom content skill.Next.jsflowai studioPlanner and journal templates for the reMarkable tablet, with a design system and e2e tests.React · PlaywrightUnhook · one day at a timeCalm-by-design wellbeing apps connecting people to NZ crisis and wellbeing support.React · TS
 
-Capabilities
+For recruiters and hiring teams
+
+## Hiring a marketing engineer or GTM engineer?
+
+I build go-to-market systems and run them in production: outbound, pipeline, AI search, content and reporting. I'd welcome a conversation about senior roles, remote from anywhere.
+
+Email me about a roleLinkedInRoles
+
+- Marketing Engineer
+
+- GTM Engineer
+
+- AI Marketing Engineer
+
+- Growth Engineer
+
+- RevOps / Marketing Ops Engineer
+
+WhereAuckland, New Zealand (NZT). Remote with teams in any timezone, with overlap for APAC, US West Coast and UK mornings or evenings.ShippedAn outbound agent (Apollo enrichment into sequenced touches through HeyReach and HubSpot, three senders, human takeover on reply). An answer engine optimisation toolkit, open source. A content engine with a voice gate. 125 published skills. The six-month case.StackClaude agents and skills, MCP, Python, TypeScript, React and Next.js, HubSpot, Apollo, HeyReach, Google Tag Manager, Playwright, Vercel, GitHub CI.BackgroundTen years across every part of marketing, three building AI agent systems. English and Mandarin (native).
+
+Experience and skills
 
 ## Strategy through code.
 
-Six capabilities, one person.
+10+years in marketing3years building AI agents2016201820202023Now
+
+Marketing, every part of it
+
+- Positioning
+
+- Search
+
+- Content
+
+- Social
+
+- Email
+
+- Outbound
+
+- Paid
+
+- Events
+
+- Analytics
+
+Building the AI that runs it
+
+- Content engine
+
+- AI search toolkit
+
+- Outbound agent
+
+- 125 skills
 
 ### Strategy
 
-Go-to-market, category positioning, message architecture, launch planning.
+- Go-to-market
+
+- Category positioning
+
+- Message architecture
+
+- Launch planning
 
 ### Demand
 
-SEO and AEO/GEO, content engines, inbound diagnostics, outbound automation.
+- SEO
+
+- AEO / GEO
+
+- Content engines
+
+- Inbound diagnostics
+
+- Outbound automation
 
 ### AI systems
 
-Claude agents and skills, brand-voice codification, LLM pipelines, MCP integrations.
+- Claude agents and skills
+
+- Voice codification
+
+- LLM pipelines
+
+- MCP integrations
 
 ### Engineering
 
-Python, TypeScript, Swift, React/Next.js, Playwright + ffmpeg rendering.
+- Python
+
+- TypeScript
+
+- Swift
+
+- React / Next.js
+
+- Playwright + ffmpeg
 
 ### Ship
 
-Vercel, GitHub, CI, e2e testing. Production, not prototypes.
+- Vercel
+
+- GitHub
+
+- CI
+
+- End-to-end tests
+
+- Production, not prototypes
 
 ### Bilingual
 
-English and 中文, native Mandarin. Strategy and content in both markets.
+- English
+
+- 中文 (native)
+
+- Strategy and content in both markets
 
 How I work
 
-## How I work.
+## Four rules I keep.
 
-Four rules, applied to every system on this page.
+They shape every system on this page.
 
 ### Report, don't prescribe.
 
-"I tested it, here's what happened" beats "you should." Observations from a real system, not advice from a podium.
+"I tested it, here's what happened" beats "you should." A real system teaches more than a podium.
 
 ### Receipts persuade.
 
@@ -1570,19 +2052,65 @@ Numbers and screenshots, a before and an after. No receipt, no ship.
 
 What broke, the root cause, the fix, and what it cost. Published at the same rate as the wins.
 
-### Leverage over labor.
+### Leverage over labour.
 
-Anything done twice by hand becomes a system. The agent stack is the team; I stay on strategy and judgment.
+Anything done twice by hand becomes a system. The agent stack is the team, and I stay on strategy and judgement.
+
+Why Flow AI exists
+
+## I was the marketing team of one.
+
+The system did the production. I did the judgement.
+
+I ran a whole marketing function at an AI company on agents I built. Strategy, launches, content, thought leadership for three executives, events and reporting. One person could hold it because the system carried the production.
+
+Flow AI opens that system to businesses with the same problem and less time.
+
+### Read the full story
+
+Ten years in marketing, across every part of it. Positioning and category work. Search, first on Google and now on ChatGPT too. Content calendars, brand voice, social, email, outbound, paid, events, analytics. In agencies and in house, for local operators through to enterprise software.
+
+So I know a marketer's week. One person against a list written for five. The strategy sits in a document nobody has time to open. The content calendar slips, then slips again. Leads wait four days for a follow-up. The work outgrows the hours, and every quarter the list gets longer.
+
+Three years ago I started building my way out. Agents with the strategy written into them. Content engines that hold a codified brand voice. Outbound lanes that research before they send. Search tooling that gets a business cited by AI assistants and ranked on Google.
+
+Then I ran a whole marketing function on it at an AI company. One marketer, the full remit. Strategy, launches, content, thought leadership for three executives, events and reporting. The system did the production. I did the judgement. That is how one person held it.
+
+Flow AI is that system, opened up. Every business owner I meet has the problem I had, with less time and no marketing background. Now the agents that ran my function run theirs.
+
+Questions
+
+## Amber Lan, in short.
+
+### Who is Amber Lan?
+
+Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of an AI startup on an agent stack she built herself.
+
+### What does Amber Lan build?
+
+Agent systems for marketing: a content engine with a codified brand voice and a quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. She has published 125 skills, open source, on GitHub.
+
+### Where is Amber Lan based?
+
+Auckland, New Zealand. She works with businesses worldwide, in English and Mandarin.
+
+### How do you work with Amber Lan?
+
+Through Flow AI. It starts with a free written audit of your marketing, then one-week sprints that each install one agent, or the whole Flow Engine, run monthly.
+
+### Is Amber Lan open to marketing engineer or GTM engineer roles?
+
+Yes, she is open to conversations about senior marketing engineer, GTM engineer and growth engineer roles, remote from anywhere. She works from Auckland on New Zealand time and has shipped outbound, RevOps pipeline, AI search and content systems in production. Email amber.lan.growth.digital@gmail.com or message her on LinkedIn.
 
 Keep going
 
-## Keep going.
+## Read on.
 
 - GuideWhat an AI marketing agent is, defined for a small business, and how it differs from automation and ChatGPT.
 
 - GuideThe 90-day transformation roadmap, system by system.
 
-- AgentsThe agent team, and which one to install first.
+- AgentsThe Flow Engine, and which one to install first.
 
 - ProofSelected work, the systems in production.
 
@@ -1590,7 +2118,7 @@ Keep going
 
 ## One person with an agent stack, instead of an agency.
 
-You talk to the person who does the work. No account manager, no junior doing the writing, no retainer for hours nobody can show you. Tell Flow what you sell and where growth is stuck, and a written audit comes back within the week.
+You talk to the person doing the work, with no account manager or junior in between. You pay for work you can see. Tell Flow what you sell and where growth is stuck. Your written audit comes back within the week.
 
 Get a free audit
 
@@ -1608,139 +2136,191 @@ The Flow AI manifesto
 
 # Marketing finally has its engineering layer.
 
-Every other function built one. Marketing kept hiring. Flow Intelligence is the layer: your positioning in one place, ten agents briefed from it, and one engineer who reviews every send.
+Every other function built one. Marketing kept hiring. Flow Intelligence is its layer: ten agents briefed from your positioning, one engineer reviewing every send.
 
 Get a free auditSee how it works
 
 The pattern
 
-## Every function hit the wall. Then it built a layer.
+## Every function hits a wall, then builds a layer.
 
-The story repeats wherever skilled people drown in the work around the work.
+It happens wherever skilled people drown in the work around the work.
 
-Finance used to lose a week a month to the close. The spreadsheets multiplied, the people stayed late, and the analysis everyone was hired for waited. Then the systems arrived, an engineering layer under the function, and finance became a team that models the business instead of reconciling it.
+FinanceA week a month lost to the close.Finance systemsA team that models the business.SalesPipeline in heads and inboxes.Revenue operationsEvery rep's week, lighter.MarketingMore hires. More subscriptions.Flow IntelligenceTen agents, one engineer.
 
-Sales lived the same arc. Pipeline sat in heads and inboxes until revenue operations gave it a system of record, a cadence, and tooling that made every rep's week lighter.
-
-Marketing hit that wall years ago. It answered with more hires and more subscriptions. The tabs multiplied, the layer never came, and the people in the function carried the difference.
+Marketing kept adding hires and subscriptions. Its people carried the load a layer should have taken.
 
 The week
 
 ## Most of a marketer's week is work about work.
 
-Pulling the report. Reformatting the deck. Chasing the approval. Rewriting the brief that was already written once.
+Pulling the report. Reformatting the deck. Chasing the approval. Rewriting a brief that already exists.
 
-The strategy sits in a document nobody opens, because there is no time to execute it. The content calendar slips, then slips again. A lead arrives on Tuesday and hears back on Friday. The monthly report is rebuilt by hand from four tools that do not talk to each other.
+The strategy sits unread. The calendar slips twice. A Tuesday lead hears back on Friday. The report gets rebuilt by hand from four tools.
 
-Everyone in the function knows which part of the week matters: the positioning call, the piece only they could write, the conversation with a buyer who is nearly there. That part gets whatever is left, and what is left is small.
+Every marketer knows which hours matter: the positioning call, the buyer who is nearly ready. They get whatever is left.
 
-Capacity is the gap. Talent was never the problem.
+The talent is already in the room. What it needs is capacity.
 
 The layer
 
 ## Flow Intelligence is the layer.
 
-One place holds your positioning. Ten agents are briefed from it, across three outcomes. A marketing engineer reviews every send before it reaches a customer.
+One place holds your positioning, and ten agents take their briefs from it. A marketing engineer reviews every send.
 
-- Get found
+- ForWe claimProofFlow IntelligencePositioning
 
-- Get leads
+Holds who you sell to and what to say, sets the budget to match, and briefs every agent from it. Free template
 
-- Keep customers
-
-- Flow IntelligencePositioning
-
-Holds who you sell to, what to say and where the budget goes, and briefs every agent from it. Free template
-
-- Get foundSearch agent
+- best plumber in Auckland?yoursite.co.nzdirectorySearch agentCited in AI answers
 
 Technical SEO through to answer engine optimisation, so assistants cite you. Free template
 
-- Get foundContent agent
+- Content agentA month of drafts, approved
 
-One strong idea becomes a month of content your team approves, not writes. Free template
+One strong idea becomes a month of content, ready for your team to approve. Free template
 
-- Get foundSocial agent
+- Thu 9:00Social agentPosts that go out on time
 
 Posts and threads in your voice, on a calendar that holds.
 
-- Get leadsOutbound agent
+- Handed to youOutbound agentReplies from the right buyers
 
 The right hundred buyers, researched and reached personally.
 
-- Get leadsConversion agent
+- Book a call+ form testedConversion agentMore visitors become enquiries
 
-Offers, landing pages and funnels, tested and tuned monthly.
+Offers and landing pages, tested and tuned every month.
 
-- Get leadsLaunch agent
+- EmailSocialSiteLiveLaunch agentLaunches that land everywhere
 
 Product and campaign launches sequenced across every channel.
 
-- Get leadsPaid agent
+- SponsoredLearn morePaid agentAds with the numbers behind them
 
 Ad creative and audiences, with the numbers behind them.
 
-- Keep customersCommunity agent
+- YouCommunity agentHelpful answers where buyers ask
 
-Reddit, forums and groups answered honestly and on time. Free template
+Honest answers on Reddit and in forums, posted while the question is fresh. Free template
 
-- Keep customersMeasurement agent
+- form_submitcall_clickbookingMeasurement agentEvery enquiry tracked to a source
 
 Tracking wired properly, so next month's budget goes where it worked.
 
-- Keep customersReporting agent
+- OctoberReporting agentOne page: what worked, what next
 
 One short monthly read on what shipped and what comes next.
 
-HQ holds who you sell to, what you claim, and where the budget goes. Nothing else in the system invents a message. Every agent reads its brief from HQ, so the fiftieth piece of content holds the same line as the first, and a shift in positioning reaches every channel the same week.
+A marketing engineer reviews every send before it reaches a customer.
 
-Underneath HQ sit ten specialist agents, grouped by the outcome they serve. Get found: search, content, social. Get leads: outbound, conversion, launch, paid. Keep customers: community, measurement, reporting. Each installs as a fixed-scope sprint in a week, documented, and handed over.
+Your message is written in one place: Flow Intelligence. Every agent briefs from it, so the fiftieth piece holds the line of the first. Change your positioning, and every channel hears it that week.
 
-Around the whole team runs the review pass. Agents produce. A marketing engineer decides what ships. That one rule is what makes it safe for a small business to run this much marketing output.
+The Flow Engine: ten agents, grouped by outcome. Get found: search, content, social. Get leads: outbound, conversion, launch, paid. Keep customers: community, measurement, reporting. Each installs in a fixed-scope, one-week sprint and comes to you documented.
+
+Agents produce. A marketing engineer decides what ships. That one rule keeps this much marketing safe.
 
 The division of labour
 
-## The system does the production. You keep the judgment.
+## The system produces. You keep the judgement.
 
-Drawing the line between the two is the real work of marketing engineering.
+Drawing that line well is the real craft of marketing engineering.
 
-A system should hold the research, the first draft, the schedule, the tracking, and the follow-up that would otherwise wait four days. Done by hand, that work builds no advantage. Done twice by hand, it should become a system.
+The system holds
 
-A human should hold the taste, the claim worth making, the call on what ships, and the conversation with a buyer. Those are the parts a machine manufactures badly, and the parts a marketer was hired for.
+### Production
 
-Flow AI was built by running exactly this split for three years, as the whole marketing function of an AI company, by one person. The system did the production. She did the judgment. In production, the agents buy back about 30 team-hours a week.
+- The research
+
+- The first draft
+
+- The schedule
+
+- The tracking
+
+- The follow-up that would wait four days
+
+Anything done twice by hand belongs in a system.
+
+The lineYou hold
+
+### Judgement
+
+- The taste
+
+- The claim worth making
+
+- The call on what ships
+
+- The conversation with a buyer
+
+The work a marketer was hired for, and a machine does badly.
+
+Flow AI grew from three years running this split, solo, as an AI company's whole marketing team. In production, the agents buy back about 30 team-hours a week.
 
 What becomes possible
 
 ## Work that had no manual version.
 
-Once the recurring work runs on a system, the function can do things nobody had the hours to attempt.
+Once the recurring work runs on a system, you can try what nobody had hours for.
 
-- Positioning that movesWhen the market answers back, HQ updates and every agent re-reads its brief the same week.
+ForWe claimProof
 
-- Answers before the question is commonThe questions buyers ask AI assistants, found and answered while competitors are still ranking on Google.
+### Positioning that moves
 
-- Launches that use the momentumA release sequenced across every channel and put in front of existing customers while it is still news.
+By handRewritten once a yearOn a systemUpdated the week the market answers back
 
-- A report that re-aimsNext month's budget moves to where this month's revenue came from, every month, with nobody rebuilding a spreadsheet.
+When the market answers back, Flow Intelligence updates and every agent re-reads its brief the same week.
 
-Each of these is a small system that runs every month. Each one makes the next one cheaper to add. That is what compounds.
+best plumber in Auckland?yoursite.co.nzdirectory
+
+### Answers before the question is common
+
+By handRanking on Google onlyOn a systemAnswered where buyers now ask AI
+
+The questions buyers ask AI assistants, found and answered while competitors are still ranking on Google.
+
+EmailSocialSiteLive
+
+### Launches that use the momentum
+
+By handOne email, then quietOn a systemEvery channel, while it is still news
+
+A release sequenced across every channel, in front of existing customers while it is still news.
+
+October
+
+### A report that re-aims
+
+By handA spreadsheet rebuilt by handOn a systemBudget follows last month's revenue
+
+Next month's budget follows this month's revenue. Nobody rebuilds a spreadsheet.
+
+Each runs monthly. Each makes the next one cheaper to add. That is what compounds.
 
 The rules
 
-## Four rules, held on every install.
+## Four rules on every install.
 
-- Receipts persuadeNumbers with their sources attached, or silence. Nothing on this site claims a result it cannot show.
+- 01Receipts persuade
 
-- A human on every sendAgents draft. A marketing engineer reviews every piece before it reaches a customer.
+Numbers with their sources attached, or silence. Nothing on this site claims a result it cannot show.
 
-- You own all of itEvery system is documented and handed over. Leave, and it keeps running.
+- 02A human on every send
 
-- Leverage over labourAnything done twice by hand becomes a system. People stay on strategy and judgment.
+Agents draft. A marketing engineer reviews every piece before it reaches a customer.
 
-## The layer is built. Install it under your business.
+- 03You own all of it
 
-Tell Flow what you sell and where growth is stuck. A written audit comes back within the week, with the first agent to install named.
+Every system is documented and handed over. Leave, and it keeps running.
+
+- 04Leverage over labour
+
+Anything done twice by hand becomes a system. People stay on strategy and judgement.
+
+## The layer is ready for your business.
+
+Tell us what you sell and where growth is stuck. Within the week, a written audit names the first agent to install.
 
 Get a free auditSee how it works
 
@@ -1757,7 +2337,7 @@ Agent templates · free
 
 # Put an agent to work on your site.
 
-Pick a template and Flow AI runs it on your site. Amber reviews the result before it reaches you, within two working days. Every template is open source too, so you can install it yourself.
+Pick a template and Flow AI runs it on your site. Amber reviews the result, and it reaches you within two working days. Each one is open source too, so you can install it yourself.
 
 Flow Intelligence
 
@@ -1813,7 +2393,7 @@ Community agent
 
 ### Reddit opportunity researcher
 
-Finds the Reddit threads where your business can genuinely help, ranked by what to act on first.
+Finds the Reddit threads where your business can help, ranked by what to act on first.
 
 Needs: your site
 
@@ -1821,15 +2401,15 @@ Open the template
 
 How a run works
 
-## Your email, one agent, a reviewed result.
+## One agent, then a person's review.
 
-Each template is one agent from the Flow AI team with one fixed job. Tell it where to look, and the result comes back checked by a person.
+Each template is one Flow AI agent with one fixed job. Tell it where to look. A person checks the result before you see it.
 
 01
 
 ### Pick a template
 
-Each one names what it needs and exactly what comes back, so you know what you are asking for.
+Each one names what it needs and exactly what comes back.
 
 02
 
@@ -1845,7 +2425,7 @@ Amber checks every run before it is sent, and it reaches your inbox within two w
 
 Prefer to run them yourself? Each template page carries its install command for Claude Code, and the skill library holds 125 more.
 
-## Want the whole team working?
+## Put the whole Flow Engine to work.
 
 A free audit names the first agent to install on your business and what it would change.
 
@@ -1864,7 +2444,7 @@ Agent templates · Flow Intelligence
 
 # Brand DNA researcher
 
-Give it a site address and it writes the brief every other agent works from: positioning, audience, competitors, voice, and the content gaps worth closing.
+Give it your site address. It writes the brief every other agent works from: positioning, audience, competitors, voice and the content gaps worth closing.
 
 Free · reviewed by a person
 
@@ -1896,9 +2476,9 @@ How it runs
 
 - 03Name the competitorsThree to five direct competitors, each with where it overlaps and where it differs.
 
-- 04Write the briefOne self-contained Brand DNA file. Anything not public is marked as not found, and every source is listed with the date it was read.
+- 04Write the briefOne self-contained Brand DNA file. Anything not public is marked as not found. Every source is listed with the date it was read.
 
-- 05A marketing engineer reviews itAmber checks the result before it reaches you. That rule holds on every Flow AI run.
+- 05A marketing engineer reviews itAmber checks every result before it reaches you, on every Flow AI run.
 
 In and out
 
@@ -1936,9 +2516,9 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the Flow Intelligence running every month?
+## Keep the Flow Intelligence running every month.
 
-A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
+A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
 Get a free auditInstall Flow Intelligence as a one-week positioning sprint
 
@@ -1955,7 +2535,7 @@ Agent templates · Search agent
 
 # Full GEO audit
 
-A complete check of how visible your site is to ChatGPT, Claude, Perplexity and Google's AI answers, scored out of 100 and turned into a ranked 30-day plan.
+See how visible your site is to ChatGPT, Claude, Perplexity and Google's AI answers. You get a score out of 100 and a ranked 30-day plan.
 
 Free · reviewed by a person
 
@@ -1981,7 +2561,7 @@ How it runs
 
 ## Step by step, then a person checks it.
 
-- 01Map the siteThe homepage is read, the business type identified, and up to 50 pages sampled from the sitemap, within the rules of your robots.txt.
+- 01Map the siteThe agent reads the homepage and identifies the business type. It samples up to 50 sitemap pages, within the rules of your robots.txt.
 
 - 02Run six checks in parallelAI citability, brand authority, experience and expertise in the content, technical access, structured data, and presence on the platforms AI systems cite.
 
@@ -1991,7 +2571,7 @@ How it runs
 
 - 05Plan the monthA 30-day action plan, one theme a week.
 
-- 06A marketing engineer reviews itAmber checks the result before it reaches you. That rule holds on every Flow AI run.
+- 06A marketing engineer reviews itAmber checks every result before it reaches you, on every Flow AI run.
 
 In and out
 
@@ -2027,9 +2607,9 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the search agent running every month?
+## Keep the search agent running every month.
 
-A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
+A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
 Get a free auditInstall the search agent as a one-week AI-search sprint
 
@@ -2046,7 +2626,7 @@ Agent templates · Search agent
 
 # AI crawler access check
 
-Finds out which AI systems can read your site. Fourteen AI crawlers are checked against your robots.txt, page tags and server headers, with the exact fix if any are blocked.
+See which AI systems can read your site. It tests fourteen AI crawlers against your robots.txt, page tags and server headers. Any block comes with the exact fix.
 
 Free · reviewed by a person
 
@@ -2082,7 +2662,7 @@ How it runs
 
 - 05Check renderingWhether your content needs JavaScript to appear, which many AI crawlers do not run.
 
-- 06A marketing engineer reviews itAmber checks the result before it reaches you. That rule holds on every Flow AI run.
+- 06A marketing engineer reviews itAmber checks every result before it reaches you, on every Flow AI run.
 
 In and out
 
@@ -2106,7 +2686,7 @@ A real run
 
 ## flowai.co.nz, checked 2 October 2026
 
-All fourteen crawlers can read the site. Nine are named in robots.txt and five are allowed by the default rule. No page tags or headers block them, and llms.txt and the sitemap are both in place.
+All fourteen crawlers can read the site. Nine are named in robots.txt and five are allowed by the default rule. No page tags or headers block them. The sitemap and llms.txt are both in place.
 
 Crawler
 
@@ -2242,9 +2822,9 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the search agent running every month?
+## Keep the search agent running every month.
 
-A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
+A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
 Get a free auditInstall the search agent as a one-week AI-search sprint
 
@@ -2261,7 +2841,7 @@ Agent templates · Search agent
 
 # AI citability scorer
 
-Scores one page on how likely AI assistants are to quote it, block by block, and rewrites the weakest passages so they can be cited.
+Scores one page, block by block, on how likely AI assistants are to quote it. Then it rewrites the weakest passages so AI can cite them.
 
 Free · reviewed by a person
 
@@ -2297,7 +2877,7 @@ How it runs
 
 - 05Rewrite the weakestSpecific rewrites for the lowest-scoring blocks, written answer-first.
 
-- 06A marketing engineer reviews itAmber checks the result before it reaches you. That rule holds on every Flow AI run.
+- 06A marketing engineer reviews itAmber checks every result before it reaches you, on every Flow AI run.
 
 In and out
 
@@ -2331,9 +2911,9 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the search agent running every month?
+## Keep the search agent running every month.
 
-A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
+A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
 Get a free auditInstall the search agent as a one-week AI-search sprint
 
@@ -2350,7 +2930,7 @@ Agent templates · Content agent
 
 # Content evidence auditor
 
-Checks every link, statistic, source and company claim in a draft or a published page before it goes out, and names the exact fix for each problem.
+Publish with confidence. It checks every link, statistic, source and company claim in a draft or live page, with the exact fix for each problem.
 
 Free · reviewed by a person
 
@@ -2376,17 +2956,17 @@ How it runs
 
 ## Step by step, then a person checks it.
 
-- 01Load the contextThe draft, plus your Brand DNA if one exists, which becomes the source of truth for claims about your business.
+- 01Load the contextThe draft, plus your Brand DNA if one exists. The Brand DNA becomes the source of truth for claims about your business.
 
 - 02Pull out every claimLinks, statistics, named sources, research citations and claims about your own product.
 
 - 03Open every linkEach one is fetched and read to confirm it supports the exact claim attached to it. Every link, with no sampling.
 
-- 04Trace every numberStatistics are traced to their original source, and the patterns of invented figures are flagged.
+- 04Trace every numberStatistics are traced to their original source. Patterns typical of invented figures are flagged.
 
 - 05Check your own claimsMetrics and features are checked against your Brand DNA, and dates and numbers against each other.
 
-- 06A marketing engineer reviews itAmber checks the result before it reaches you. That rule holds on every Flow AI run.
+- 06A marketing engineer reviews itAmber checks every result before it reaches you, on every Flow AI run.
 
 In and out
 
@@ -2422,9 +3002,9 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the content agent running every month?
+## Keep the content agent running every month.
 
-A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
+A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
 Get a free auditInstall the content agent as a one-week content engine sprint
 
@@ -2441,7 +3021,7 @@ Agent templates · Community agent
 
 # Reddit opportunity researcher
 
-Finds the Reddit threads where your business can genuinely help, the communities worth joining, and the exact words buyers use, ranked by what to act on first.
+Find the Reddit threads where your business can help and the communities worth joining, ranked by what to act on first. You also get the exact words buyers use.
 
 Free · reviewed by a person
 
@@ -2469,7 +3049,7 @@ How it runs
 
 - 01Start from your Brand DNAThe Brand DNA researcher runs first, so the search starts from your real audience, pains and competitors.
 
-- 02Search in buyers' wordsTwenty to forty Reddit searches across problems, solutions and competitors, in the language users actually use.
+- 02Search in buyers' wordsTwenty to forty Reddit searches across problems, solutions and competitors, in the words buyers use.
 
 - 03Read the threadsEach promising thread is captured: the pain, the phrasing, the competitors mentioned, and whether you could add value.
 
@@ -2477,7 +3057,7 @@ How it runs
 
 - 05Turn it into demandThe searches and AI prompts buyers are likely making, and the content worth creating for them.
 
-- 06A marketing engineer reviews itAmber checks the result before it reaches you. That rule holds on every Flow AI run.
+- 06A marketing engineer reviews itAmber checks every result before it reaches you, on every Flow AI run.
 
 In and out
 
@@ -2515,48 +3095,164 @@ More templates
 
 - AllEvery agent template, and the skill library behind them.
 
-## Want the community agent running every month?
+## Keep the community agent running every month.
 
-A template is one run. A sprint installs the agent on your business in a week, documented and handed over, and the engine runs it every month after that.
+A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
 Get a free auditAsk about running the community agent every month
 
 ---
 
-## Privacy | Flow AI
+## Privacy policy | Flow AI
 
 Source URL: https://www.flowai.co.nz/privacy.html
 Type: Page
 Author: Amber Lan (Flow AI)
-Last updated: 2026-10-02
+Last updated: 2026-10-06
 
-Privacy · updated 2 October 2026
+Privacy policy · Updated 6 October 2026
 
-# Your information, in plain words.
+# Your information, handled with care.
 
-What this site collects, why, where it goes, and how to see or remove it.
+What flowai.co.nz collects, why, who helps us run the site, and how to see, correct or delete your information.
 
-## The detail.
+What we collect
 
-- WhoFlow AI is run by Amber Lan in Auckland, New Zealand. Questions about your information go to amber.lan.growth.digital@gmail.com.
+Only what you type into a form, plus standard visit data.
 
-- What is collectedOnly what you type into a form on this site: your email, and the name, website, page address or message you choose to add.
+What we never do
 
-- WhyTo reply to you, run the template you asked for, and send you the result. Your email is never added to a mailing list unless you ask to join one.
+Sell your information or add you to a list you did not ask for.
 
-- How it travelsForms are delivered to Amber's inbox by FormSubmit, and stored in Gmail. If a form cannot send, your own email app sends it instead.
+Where it lives
 
-- MeasurementThe site loads Google Tag Manager to understand which pages are used. It can set cookies for that purpose. The site's own code never passes what you type into a form to it.
+In Amber's Gmail inbox, and with the services listed below.
 
-- SharingYour information is never sold or shared with anyone for their marketing.
+Your control
 
-- Keeping itKept only as long as needed to help you and to keep a record of the work. Ask, and it is deleted.
+Ask to see, correct or delete it, any time, by email.
 
-- Your rightsUnder the New Zealand Privacy Act 2020 you can ask to see or correct the information held about you, by email at any time. If you are unhappy with the answer, you can contact the Office of the Privacy Commissioner.
+## The information, at a glance
+
+Source
+
+What
+
+Why
+
+Where it goes
+
+Contact and audit form
+
+Name, email, website, your message
+
+To reply and write your audit
+
+FormSubmit, then Gmail
+
+Template request form
+
+Email, the site or page to check
+
+To run the template and send the result
+
+FormSubmit, then Gmail
+
+Emails you send
+
+Whatever you include
+
+To reply and keep a record of the work
+
+Gmail
+
+Visit data
+
+Pages viewed, device and browser type, approximate location, referrer
+
+To see which pages help, and improve them
+
+Google, through Google Tag Manager
+
+Server logs
+
+IP address and request details
+
+To deliver and secure the site
+
+GitHub Pages
+
+Free tools
+
+What you enter in the decision map, pricing model and benchmark
+
+To save your progress
+
+Your own browser only
+
+## Who we are
+
+Flow AI is run by Amber Lan, an AI marketing engineer based in Auckland, New Zealand. Amber is responsible for the information collected on flowai.co.nz. For anything about your information, email amber.lan.growth.digital@gmail.com.
+
+## What we collect and why
+
+We collect only what helps us reply to you, do the work you ask for, and run the site. The table above lists each source.
+
+We do not ask for payment details, government identifiers or sensitive information on this site. Please leave it out of messages, too.
+
+## Cookies and measurement
+
+The site loads Google Tag Manager, which can run Google measurement tags such as Google Analytics. These can set cookies to count visits and see which pages are used. We also record simple on-page actions, such as which sprint tab is opened or a toolkit being downloaded.
+
+We never pass what you type into a form to measurement tools. To opt out, you can block cookies in your browser or use Google's opt-out add-on.
+
+## The free tools
+
+The decision map, pricing model and AI-readiness benchmark run in your browser. What you enter is saved in your browser's local storage so you can come back to it. It is never sent to us. Clearing your browser data removes it.
+
+## Who we share it with
+
+We use a small number of services to run the site. Each processes information only to provide its service:
+
+- GitHub Pages hosts the site. GitHub's privacy statement
+
+- FormSubmit delivers form entries by email. FormSubmit's privacy policy
+
+- Google provides Gmail and the measurement tags. Google's privacy policy
+
+We never sell your information or share it with anyone for their own marketing. We would only disclose it if the law required us to.
+
+## Information sent overseas
+
+These services are based outside New Zealand, mainly in the United States. That means your information may be stored or processed there. We choose established providers with published security and privacy practices, as the New Zealand Privacy Act 2020 expects.
+
+## How long we keep it
+
+We keep form entries and emails for as long as we need them to help you and keep a record of the work. If you ask, we delete them, unless we must keep a record for tax or legal reasons.
+
+## Keeping it secure
+
+The site is served over HTTPS. The inbox is protected with two-step sign-in, and access is limited to Amber. If a privacy breach ever risked serious harm to you, we would tell you and the Office of the Privacy Commissioner, as the law requires.
+
+## Your rights
+
+Under the New Zealand Privacy Act 2020 you can ask to see the information we hold about you and ask us to correct it. You can also ask us to delete it, or to stop contacting you. Email amber.lan.growth.digital@gmail.com and we will reply within 20 working days, usually much sooner.
+
+If you are unhappy with our answer, you can complain to the Office of the Privacy Commissioner. Visitors from Australia, the UK or the EU can make the same requests, and we will honour them.
+
+## Children
+
+This site is for businesses and is not aimed at children. We do not knowingly collect information from anyone under 16.
+
+## Changes to this policy
+
+We will update this page when what we collect or how we use it changes. The date at the top shows the latest version.
+
+Questions about privacy? Email amber.lan.growth.digital@gmail.com.
 
 ---
 
-## Contact | Get a Free Marketing Audit | Flow AI
+## Get a Free AI Marketing Audit | Flow AI, Auckland NZ
 
 Source URL: https://www.flowai.co.nz/contact.html
 Type: Page
@@ -2566,23 +3262,17 @@ Contact
 
 # Get your free marketing audit.
 
-Three fields, plus your site if you have one. You get a written audit of your marketing within the week: the gaps ranked, and the first agent to install named. No card, no call, no sales sequence.
+Three fields, plus your site if you have one. Within the week, you get a written audit of your marketing. It ranks the gaps and names the first agent to install. No card, and no sales calls or sequences.
 
-Your nameEmailYour website optionalMessage
-
-A few lines is enough. Press ⌘Enter to send.
-
-Send
-
-A marketing engineer reads every message. You hear back within two working days, with the first questions or the audit itself. Privacy.
+Your nameEmailYour website optionalMessageSend
 
 ## What happens next.
 
-Three steps. Flow does the work, a marketing engineer reviews it.
+Here is what follows when you press Send.
 
 01
 
-### Your business gets read
+### We read your business
 
 A marketing engineer reads what you sent and checks your site.
 
@@ -2594,13 +3284,13 @@ The gap to close first, and why.
 
 03
 
-### You hear what fits
+### You get a straight answer
 
 If a system fits, you hear which one. If nothing fits, you hear that too.
 
 ## Still deciding?
 
-Nothing here is gated. Read the numbers before you send anything.
+Take your time. Everything here is free to read, numbers included.
 
 - CostsWhat AI marketing costs, with sourced ranges for tools, freelancers, agents, agencies and hires.
 
@@ -2608,35 +3298,35 @@ Nothing here is gated. Read the numbers before you send anything.
 
 - PlanThe 90-day transformation roadmap, system by system.
 
-- AgentsThe agent team, and which one to install first.
+- AgentsThe Flow Engine, and which one to install first.
 
-- Free toolThe AI-readiness benchmark, five questions, two minutes, no signup.
+- Free toolThe AI-readiness benchmark: five questions in two minutes, with no signup.
 
-## Questions.
+## Good questions.
 
 ### What is an AI marketing engineer?
 
-An AI marketing engineer connects go-to-market strategy to the systems that execute it. The role combines positioning, search visibility, content operations, outbound automation, and measurement.
+An AI marketing engineer connects go-to-market strategy to the systems that run it. The work spans positioning, search visibility, content operations, outbound automation and measurement.
 
 ### How is Flow AI different from a marketing agency?
 
-You work directly with the practitioner who writes the strategy and builds the systems. There are no account-manager handoffs, and the work is designed to keep operating after launch.
+You work directly with the person who writes the strategy and builds the systems, with no account manager in between. The systems are built to keep running after launch.
 
 ### How quickly can the first system go live?
 
-The written audit arrives within the first week, and the first agreed system is designed to go live in week one.
+The written audit arrives within the first week. The first agreed system is designed to go live in week one.
 
 ### Who is Flow AI for?
 
-Early-stage teams and small businesses in Australia and New Zealand that need senior marketing thinking and hands-on execution without hiring a full internal function.
+Flow AI is for early-stage teams and small businesses in Australia and New Zealand. They get senior marketing thinking and hands-on execution without hiring a full internal function.
 
 ### What does AI marketing cost in Australia and New Zealand?
 
-Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the free audit, so you see the number against your own situation rather than a rate card.
+Flow AI prices by system. Each starts with a fixed-scope one-week install, then a monthly run you can cancel any time. Current figures come with the free audit, so you see the price against your own situation.
 
 ### What is AI-search optimisation?
 
-AI-search optimisation, also called answer engine optimisation (AEO) or generative engine optimisation (GEO), is the practice of structuring a website so AI assistants such as ChatGPT, Claude, and Perplexity cite it when answering buyers' questions. Research presented at KDD 2024 by Aggarwal et al. found generative engine optimisation lifted visibility by up to 40 percent, with the largest gains going to pages that rank fifth rather than first.
+AI-search optimisation helps AI assistants such as ChatGPT, Claude and Perplexity cite your site in answers. It is also called answer engine optimisation (AEO) or generative engine optimisation (GEO). Research presented at KDD 2024 by Aggarwal et al. found GEO lifted visibility by up to 40 percent. The largest gains went to pages ranking fifth rather than first.
 
 # Guides (full text)
 
@@ -6997,4 +7687,5 @@ Q: Do I still need SEO if I am doing AEO?
 A: Yes. Answer engine optimization builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 Q: Can one person really run all of this?
 A: Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
+
 <!-- blog-full:end -->

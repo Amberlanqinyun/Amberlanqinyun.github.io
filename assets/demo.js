@@ -101,6 +101,7 @@
       clearInterval(tick);
       log.appendChild(el("li", "", r.steps[r.steps.length - 1]));
       think.remove();
+      agent.classList.add("is-done");
       t.textContent = "Thought for " + Math.max(1, Math.round((Date.now() - start) / 1000)) + "s";
       who.querySelector("b").textContent = "Flow Intelligence · " + r.agent;
       statusEl.textContent = r.status; statusEl.classList.remove("is-working");
