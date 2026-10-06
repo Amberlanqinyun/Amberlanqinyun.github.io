@@ -168,7 +168,7 @@
       }
   </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/claude.css?v=12">
+<link rel="stylesheet" href="/assets/claude.css?v=13">
 </head>
 
 <body>
@@ -400,6 +400,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return null;
       }
 
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      /* On success the form steps aside for a clear confirmation. */
+      function showThanks(d) {
+        var first = d.name.split(/\s+/)[0];
+        var panel = document.createElement('div');
+        panel.className = 'form-thanks';
+        panel.setAttribute('role', 'status');
+        panel.setAttribute('tabindex', '-1');
+        panel.innerHTML =
+          '<span class="form-thanks__mark" aria-hidden="true"></span>' +
+          '<h2>Thanks, ' + esc(first) + '. Your message is in.</h2>' +
+          '<p>We will reply to <b>' + esc(d.email) + '</b> within two working days.</p>' +
+          '<ol class="form-thanks__next">' +
+          '<li><b>First</b><span>We read your message and look at your site.</span></li>' +
+          '<li><b>Within two working days</b><span>You get a reply with a few questions, or the audit itself.</span></li>' +
+          '</ol>' +
+          '<p class="form-thanks__alt">Something to add? Email <a href="mailto:' + TO + '">' + TO + '</a>.</p>';
+        form.hidden = true;
+        form.parentNode.insertBefore(panel, form.nextSibling);
+        panel.focus({ preventScroll: true });
+        panel.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        if (window.dataLayer) window.dataLayer.push({ event: 'contact_submit' });
+      }
+
       function send(d) {
         button.disabled = true;
         button.textContent = 'Sending';
@@ -420,9 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           return response.json();
         }).then(function (result) {
           if (!result || String(result.success) !== 'true') throw new Error(result && result.message || 'rejected');
-          form.reset();
-          button.textContent = 'Sent';
-          show('ok', '<b>Your free audit is underway.</b> A marketing engineer reads every message and replies within two working days, with the first questions or the audit itself.');
+          showThanks(d);
         }).catch(function () {
           button.disabled = false;
           button.textContent = buttonLabel;
