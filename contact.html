@@ -225,7 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="field">
               <label for="message">Message</label>
               <textarea id="message" name="message" required placeholder="What you sell, who buys it, and where growth is getting stuck. A few lines is plenty."></textarea>
-              <p class="field-hint" id="message-hint">A few lines is enough. Press <kbd>&#8984;</kbd> <kbd>Enter</kbd> to send.</p>
+              
             </div>
 
             <div class="hp" aria-hidden="true">
@@ -420,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }).then(function (response) {
           return response.json();
         }).then(function (result) {
-          if (!result || result.success !== true) throw new Error('rejected');
+          if (!result || String(result.success) !== 'true') throw new Error(result && result.message || 'rejected');
           form.reset();
           button.textContent = 'Sent';
           show('ok', '<b>Your free audit is underway.</b> A marketing engineer reads every message and replies within two working days, with the first questions or the audit itself.');

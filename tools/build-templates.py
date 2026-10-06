@@ -17,7 +17,7 @@ INDEX = (ROOT / "index.html").read_text()
 SYSTEM = (ROOT / "sprints" / "index.html").read_text()  # the agent team diagram lives here
 SITE = "https://www.flowai.co.nz"
 UPDATED = "2026-10-02"
-V = "9"  # asset version query; bump with texture/dotfield/alive changes
+V = "10"  # asset version query; bump with texture/dotfield/alive changes
 
 
 def chunk(start, end, text=INDEX):

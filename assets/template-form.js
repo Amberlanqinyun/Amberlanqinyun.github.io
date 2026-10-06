@@ -120,7 +120,7 @@
       }).then(function (response) {
         return response.json();
       }).then(function (result) {
-        if (!result || result.success !== true) throw new Error('rejected');
+        if (!result || String(result.success) !== 'true') throw new Error(result && result.message || 'rejected');
         track('template_request_submit', { template_id: id });
         form.reset();
         button.textContent = 'Request sent';
