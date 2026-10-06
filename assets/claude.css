@@ -376,3 +376,51 @@ b, strong { font-weight: 560; }
 .tile__title-link span { color: var(--accent); transition: margin 160ms ease; }
 .tile__title-link:hover span { margin-left: 4px; }
 @media (max-width: 520px) { .tile, .tile + .tile { padding-left: 0; padding-right: 0; } }
+
+/* ---------- Responsive pass (2026-10-06) ---------- */
+
+/* Nothing on the site reads smaller than 12px. */
+.stat-src, .step > .small, .tag-sm, .src-host, .hours-row .vlabel, .msg small,
+.handoff-tag, .sources span, .cal > span, .cite, .demo__meta, .demo__timer, .demo__status,
+.svgfig text, .week__days span, .career__years span { font-size: 12px; }
+.tag-sm { letter-spacing: 0.02em; text-transform: none; font-family: var(--font); }
+
+/* Questions sit on the page's left edge, like every other section. */
+.faq { max-width: 52rem; margin-left: 0; margin-right: auto; text-align: left; }
+.centered .faq { margin-left: 0; }
+.faq summary { padding-block: 1.1rem; }
+
+/* No sideways drift at any width. */
+html, body { overflow-x: clip; }
+
+@media (max-width: 640px) {
+  /* Header: brand name stays visible; links meet the 44px touch target. */
+  .site-header__nav a { padding-block: 0.85rem; font-size: 14px; }
+  .site-header__nav { gap: var(--s-5); }
+  /* Footer and inline arrow links get a comfortable tap area. */
+  .site-footer__links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .site-footer__links { row-gap: 0; }
+  .site-footer__legal a, .site-footer__cta { display: inline-flex; align-items: center; min-height: 44px; }
+  .arrow-link, .text-link.arrow-link, .cta-row .text-link { display: inline-flex; align-items: center; min-height: 44px; }
+  .btn { min-height: 48px; }
+  .glossary__letters a, .az a { min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; }
+}
+@media (max-width: 400px) {
+  .site-header__brand-text { display: inline; }
+  .site-header__nav { gap: var(--s-4); }
+}
+@media (max-width: 340px) { .site-header__brand-text { display: none; } }
+.stat .bar, .paper__top span, .system__agents li.is-core .small, .paper h4 { font-size: 12px; }
+@media (max-width: 640px) {
+  .glossary__jump a { min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; }
+  .glossary__jump { gap: 0; }
+  .skill-card a, .case-back, a.back-link { display: inline-flex; align-items: center; min-height: 44px; }
+  .dm-table tr { grid-template-columns: 1fr; }
+  .dm-table td[data-k] { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .dm-table td[data-k]::before { margin: 0; }
+  .dm-seg button { width: 2.5rem; height: 2.5rem; }
+  .row .text-link, .rows .text-link, .tile__title-link { display: inline-flex; align-items: center; min-height: 40px; }
+}
+@media (max-width: 640px) {
+  .source-link, .stat-src .text-link, main .text-link:only-child { display: inline-flex; align-items: center; min-height: 40px; }
+}
