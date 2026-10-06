@@ -219,7 +219,7 @@ def head(title, description, path, schema, og_type="website"):
 <script src="/assets/alive.js?v={V}" defer></script>
 <script src="/assets/template-form.js?v={V}" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/claude.css?v=10">
+<link rel="stylesheet" href="/assets/claude.css?v=11">
 </head>
 <body>
 {GTM_BODY}
