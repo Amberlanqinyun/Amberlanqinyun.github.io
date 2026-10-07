@@ -5,14 +5,41 @@
   <link href="https://www.flowai.co.nz/feed.xml" rel="self"/>
   <link href="https://www.flowai.co.nz/"/>
   <id>https://www.flowai.co.nz/</id>
-  <updated>2026-10-06T00:00:00+13:00</updated>
+  <updated>2026-10-08T00:00:00+13:00</updated>
   <author><name>Amber Lan</name></author>
+  <entry>
+    <title>How do you run a whole marketing function on Claude Code?</title>
+    <link href="https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html"/>
+    <id>https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html</id>
+    <published>2026-10-08T00:00:00+13:00</published>
+    <updated>2026-10-08T00:00:00+13:00</updated>
+    <summary>Working notes from a solo AI marketing engineer: how a whole marketing function runs on Claude Code, with lane files, skills, MCP connectors and review.</summary>
+    <category term="The AI marketing agent"/>
+  </entry>
+  <entry>
+    <title>Marketing engineer and AI marketing jobs in New Zealand and Australia: what the 2026 data shows.</title>
+    <link href="https://www.flowai.co.nz/blog/marketing-engineer-jobs-nz-australia-2026.html"/>
+    <id>https://www.flowai.co.nz/blog/marketing-engineer-jobs-nz-australia-2026.html</id>
+    <published>2026-10-08T00:00:00+13:00</published>
+    <updated>2026-10-08T00:00:00+13:00</updated>
+    <summary>Marketing engineer, GTM engineer and AI marketing jobs in NZ and Australia, 2026: SEEK demand data, NZD pay bands and the skills employers name, all sourced.</summary>
+    <category term="Reference"/>
+  </entry>
+  <entry>
+    <title>How does New Zealand&#x27;s AI Advisory Pilot fund AI for small businesses?</title>
+    <link href="https://www.flowai.co.nz/blog/ai-advisory-pilot-nz.html"/>
+    <id>https://www.flowai.co.nz/blog/ai-advisory-pilot-nz.html</id>
+    <published>2026-10-08T00:00:00+13:00</published>
+    <updated>2026-10-08T00:00:00+13:00</updated>
+    <summary>New Zealand&#x27;s AI Advisory Pilot co-funds up to $15,000 of AI roadmap and implementation help. Eligibility, exclusions, the deadline and the training fund.</summary>
+    <category term="Costs and choices"/>
+  </entry>
   <entry>
     <title>What is a marketing engineer? What the role does and how to tell a real one.</title>
     <link href="https://www.flowai.co.nz/blog/what-is-a-marketing-engineer.html"/>
     <id>https://www.flowai.co.nz/blog/what-is-a-marketing-engineer.html</id>
     <published>2026-10-06T00:00:00+13:00</published>
-    <updated>2026-10-06T00:00:00+13:00</updated>
+    <updated>2026-10-08T00:00:00+13:00</updated>
     <summary>A marketing engineer builds and runs the AI systems behind marketing. What the role does, the skills, how it compares to GTM engineer, and how to hire one.</summary>
     <category term="The AI marketing agent"/>
   </entry>

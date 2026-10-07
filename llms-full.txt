@@ -3329,10 +3329,555 @@ AI-search optimisation helps AI assistants such as ChatGPT, Claude and Perplexit
 # Guides (full text)
 
 <!-- blog-full:start -->
+## How do you run a whole marketing function on Claude Code?
+URL: https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html
+Author: Amber Lan, Flow AI
+Updated: 2026-10-08
+
+Short answer: You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.
+
+What does it mean to run marketing on Claude Code?
+
+Running marketing on Claude Code is the practice of keeping a marketing function in a folder of written instructions and reusable skills, connected to the tools where the work lives, which an AI agent works through every day. One person reviews the output and decides what ships. The agent carries the production, and the person keeps the judgement.
+
+Anthropic's Claude Code overview describes it as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools. It was built for software. For marketing, the codebase is the marketing function: the positioning documents, voice rules, calendars, drafts and the checks that run on them.
+
+I run all of marketing at the AI startup where I work, alone, on this kind of setup. I have spent ten years across most parts of marketing and the last three building agent systems for it. If the idea of an AI marketing agent is new to you, read that definition first. These notes cover how I organise the work and where I still decide, failures included. The job title for this kind of work is marketing engineer.
+
+How is the setup organised?
+
+The setup has four layers. Each lane of work has its own instruction file that reads like a job description. A skills library holds every repeated procedure, versioned in git. Connectors link the agent to the tools marketing already uses. Scheduled tasks start the recurring work, and subagents take research off the main thread.
+
+One instruction file per lane
+
+Claude Code reads files called CLAUDE.md as standing instructions. Anthropic's memory documentation says CLAUDE.md files above the working directory load at launch, while files in subdirectories load when Claude works on files there. That behaviour suits a marketing department well. The top folder holds the rules every lane shares, such as the voice rules and who signs off what. Each lane folder (content, social, search, outbound, events, reporting) holds its own CLAUDE.md, written as a job description: what the lane owns, which inputs it reads, what finished work looks like, and what needs my approval.
+
+Writing them as job descriptions changed the output more than any prompt trick. A good brief for a person is also a good brief for an agent. The same documentation warns that contradictory instructions can lead Claude to pick one arbitrarily, so I read the lane files against each other every few weeks and delete what has gone stale.
+
+A skills library in git
+
+A skill is a folder with a SKILL.md file inside it. Anthropic's skills documentation says Claude uses a skill when it is relevant, or you can call one directly by name, and that project skills can be committed so a team gets them too. The description at the top of the file tells Claude when the skill applies.
+
+Anything I do twice by hand becomes a skill. My content engine is packaged as one: one source document in, a month of platform-native drafts out, every line checked against the voice rules. Graphics are HTML artboards rendered to PNG and PDF with Playwright, and the same pipeline turns animation into MP4 with ffmpeg. For search, I maintain geo-seo-claude, an open-source answer engine optimisation toolkit for Claude Code, on my GitHub, which scores pages for citability and checks AI crawler access. Style guidance pasted into a prompt fades within a few sessions. A versioned skill with explicit rules holds its standard for months, and it survives a handover.
+
+Connectors to the tools marketing lives in
+
+Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol, and it uses Notion as a setup example. My agent connects to Notion, where plans and the team wiki live, to the social scheduler, to the CRM and prospecting tool, and to email. Most connections start read-only. Where an agent can write, it writes drafts.
+
+Scheduled tasks and subagents
+
+Anthropic's scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose, for jobs such as morning briefings drawn from your calendar and inbox. My morning kickoff does that: it sorts the workspace and the inbox into a daily priority board before I open anything. Local tasks only fire while the app is open and the computer is awake, so anything that must run overnight belongs in a cloud routine. For scripts, Anthropic's documentation on running Claude Code programmatically covers the non-interactive mode, started with claude -p.
+
+Anthropic's subagents documentation says each subagent runs in its own context window with a custom system prompt, specific tool access and independent permissions. I use them for research and first drafts: several research questions run in parallel, each comes back as a report, and only the reports reach the main thread.
+
+How does a draft get from agent to published?
+
+Agents produce and a person decides. Every draft passes automated checks before I see it, from the voice rules to a source check on every number and claim. Prose then gets a humaniser pass. After that I read it. Nothing sends or publishes without my approval, and outbound hands every reply to a person.
+
+The order matters, because each check catches something the next one cannot:
+
+  Voice audit. Each line is checked against the written voice rules: banned words, punctuation habits, sentence rhythm, the brand's own rules. Drafts that fail are rewritten against the specific lines that failed, which works far better than regenerating from scratch.
+
+  Claim check. A glossary and a claim register define what the company can say in public. A draft that claims something outside the register goes back.
+
+  Evidence audit. A skill checks every link and every statistic, with its attribution, before anything goes live. A number with no primary source loses the number.
+
+  Humaniser pass. I run the open-source Humanizer skill by Siqi Chen over prose. It strips the habits readers now recognise as machine-written.
+
+  My read. I read the final version in full, and I am the one who presses publish.
+
+Outbound follows the same principle. The outbound agent researches accounts and drafts touches in a soft, invitational voice, and any reply hands the thread to a human. That takeover rule is the human in the loop in its plainest form.
+
+Claude Code's permission settings can enforce the rule as well. Anthropic's permissions documentation says rules are evaluated deny first, then ask, then allow, and a matching ask rule prompts even when an allow rule also matches. In my setup the rule lives in the workflow: drafts land in a review queue, and nothing reaches a customer, a channel or a send button until I have approved it in writing. Approvals also moved out of live messages and into written review points, so work keeps moving when I am in a meeting or at an event.
+
+Which work do the agents do, and which do I keep?
+
+The agents do the production: research, first drafts, rendering, checks and the recurring reports. I keep positioning, the claims the company makes, taste, the final read on anything public, and every relationship with a real person. The split below is how it runs today, lane by lane, and it moves as the checks improve.
+
+  LaneWhat the agents doWhat I keep
+
+  
+    Positioning and claimsCollect competitor pages and flag claims that lack proofThe positioning and every new claim
+
+    ContentPlan a month from one source document, draft platform-native posts, run the voice auditChoosing the source and the final read
+
+    DesignBuild cards and carousels as HTML and render them to image, PDF or videoThe layout call and the rejections
+
+    AI searchAudit crawler access and structured data, then generate the fixesWhich buyer questions we want to answer, and what we say in the answer
+
+    OutboundEnrich and research accounts, draft first touchesWho we contact and every reply
+
+    Executive voicesDraft LinkedIn posts in each leader's codified voice, with sourced statisticsThe leader's opinion and their sign-off
+
+    EventsProduce collateral through the render pipeline, prepare checklistsNegotiation with organisers, the conversations at the stand
+
+    Reporting and operationsBuild the morning priority board and the weekly summaryDeciding what to stop
+
+  
+
+The right-hand column is the job. My week moved from writing to deciding, and deciding is the part that never needed automating. If you are a marketer working out where your own line falls, the guide to AI for marketers covers the same split from the other side.
+
+What broke, and what did I change?
+
+Most failures came from my side of the desk. I built faster than I shipped. Drafts queued behind my own approval. I rebuilt systems that needed a frozen spec. Voices drifted over weeks, and some statistics would not trace back to a primary source. Each failure changed the setup, and the fixes are now part of the system.
+
+Building more than shipping
+
+Claude Code makes building cheap, and building is more fun than publishing. For a stretch I had more systems than published work. The fix was a rule I now hold myself to: a system counts once it has shipped something real, and a new build waits until the current lane has run a full cycle.
+
+Drafts piling up behind the publish step
+
+Once the agents drafted faster than I could judge, the bottleneck was me. Approved work sat behind unread work. Approved pieces now go into a reserve that can wait for a slot, and I review new drafts in batches at set times instead of as they arrive.
+
+Rebuilding instead of freezing a spec
+
+Every good idea tempted me into a new version of something that worked. My design system went through several rebuilds this way. Now each system has a written spec with a version number. Ideas go onto a list for the next version, and the current version stays frozen long enough to ship with.
+
+Voice drift
+
+Over long sessions, phrasing slides back toward model defaults, and separate executive voices start to blur into one. Codified rules checked line by line brought it back, helped by examples of good and bad lines inside each voice skill. I also learned that instruction files guide the model without binding it. Anthropic's memory documentation says Claude treats CLAUDE.md as context, and points to a PreToolUse hook to block an action regardless of what Claude decides. Anthropic's hooks guide describes hooks as shell commands that run at set points, giving deterministic control. Rules that must hold every time now live in checks that run on their own: this site's build, for example, refuses any file that contains an em dash.
+
+Statistics that could not be traced
+
+Models return plausible numbers, and the web repeats them until they look settled. Several figures I wanted to use could not be found at the publisher's own page. The rule now: every number names its source in the sentence, links to the primary source and gives the year. If I cannot verify it, the sentence goes out without a number.
+
+How do you start if you are one marketer?
+
+Start with the writing, then add machinery one lane at a time. Write the brief every agent will read, then turn the job you repeat most into one lane with its own instruction file and skill. Add a connector and a schedule only after that lane runs cleanly by hand.
+
+  Write the brief. Positioning, audience, voice rules, banned claims and a few examples of good work, in one file. Every agent reads it first.
+
+  Pick one lane. Choose the job that costs you the most hours each week. Give it a folder and a CLAUDE.md written as a job description.
+
+  Turn the second repeat into a skill. The first time you do a task, do it with the agent. The second time, write the procedure into a SKILL.md and commit it to git.
+
+  Add one check before anything ships. A voice audit or a source check is enough to begin. You still read everything.
+
+  Connect one tool, read-only. Let the agent read the planning workspace or the CRM before it writes to anything.
+
+  Schedule it once it runs cleanly. A recurring brief is the easiest first schedule.
+
+  Freeze the spec and run a month. Ship with the lane before you build the next one.
+
+For the order in which to add lanes, the guide to AI agents for marketing suggests starting with the gap that costs most, usually search or outbound. Search now includes answer engine optimisation, so assistants such as ChatGPT can describe the business correctly.
+
+Where Flow AI fits
+
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. The Flow AI skill library lists 125 skills you can inspect before running them: 16 I built, and the rest credited to their authors.
+
+Teams can contract a build, which starts with a written scope. If you are hiring for a marketing engineer or AI deployment role, I am open to conversations about senior roles, remote from anywhere.
+
+The short version
+
+A whole marketing function can run on Claude Code when every lane has a written job description, every repeated procedure is a versioned skill, the agent connects to the tools where the work lives, and the recurring jobs run on a schedule. The agents produce, and a person decides what ships and owns every relationship.
+
+Most of what broke for me sat on the human side, in how fast I built and how slowly I approved. Written rules and checks that cannot be skipped fixed more than any model change. If you are building something like this, or hiring someone to, talk to Amber.
+
+Q: Do you need to code to run marketing on Claude Code?
+A: You need less code than people expect and more comfort with files than most marketers have. Most of the setup is plain text: instruction files and skill files written in ordinary English. Code matters once you want rendering pipelines or build checks. Claude Code writes much of that code with you, but you still need to read it well enough to know when it is wrong.
+Q: What does Claude Code do that a chat assistant does not?
+A: A chat assistant answers inside a conversation and forgets your working files when the chat ends. Claude Code works in a folder on your machine: it reads instruction files at the start of each session, edits files, runs commands, loads skills when a task matches them, and connects to other tools through MCP. For marketing, that means the brief and the drafts live in one place the agent can act on.
+Q: How do you stop AI content sounding like AI?
+A: Write the voice down as rules a machine can check, then check every line against them before a person reads it. My rules ban specific words and sentence patterns, and drafts that fail are rewritten against the lines that failed. A humaniser pass follows. The last step is a human read, because some tells only show up when you hear the sentence in your head.
+Q: Is it safe to connect agents to company tools?
+A: It can be, with narrow access and approval rules. Anthropic's MCP documentation tells users to verify they trust each server before connecting it and warns that servers fetching external content carry prompt injection risk. Start with read access, keep anything that sends or publishes behind a permission prompt, use accounts the company owns, and treat text the agent reads from the web or an inbox as data, never as instructions.
+Q: Can a marketing team share one skills library?
+A: Yes. Claude Code loads project skills from a folder inside the repository, and Anthropic's documentation suggests committing that folder so teammates get the same skills. A shared library in git gives a team one version of the voice rules and procedures, with a history of every change. Agree who can change a skill, and review edits the way you would review copy.
+Q: How long does it take to set up?
+A: A first useful lane takes days, and the full function takes months. My setup grew one lane at a time: a written brief, then one repeated job turned into a skill, then a connector, then a schedule. The slow part is the writing, because each lane needs a clear description of what good output looks like before any agent can produce it.
+
+## Marketing engineer and AI marketing jobs in New Zealand and Australia: what the 2026 data shows.
+URL: https://www.flowai.co.nz/blog/marketing-engineer-jobs-nz-australia-2026.html
+Author: Amber Lan, Flow AI
+Updated: 2026-10-08
+
+Short answer: Demand for AI skills in New Zealand marketing is climbing: SEEK found AI skills in 4.0% of all NZ job ads in August 2026 and in 9.8% of Marketing & Communications ads. In July, NZ's 3.7% compared with Australia's 2.1%. The marketing engineer title itself has yet to reach local ads; the work is advertised under neighbouring titles.
+
+The key numbers on marketing engineer and AI marketing jobs in 2026
+
+For anyone hiring or job hunting in New Zealand, the headline is simple. Employers increasingly ask for AI skills in marketing roles, while the marketing engineer title itself has yet to appear in local job ads. Each number below was opened and checked at its source on 8 October 2026, and each names who measured it.
+
+  SEEK's August 2026 NZ Employment Report found AI skills in 4.0% of New Zealand job ads, with mentions up 93.3% year on year.
+
+  In the same report, AI skills appeared in 9.8% of Marketing & Communications ads, the second-highest classification after ICT at 17.6%.
+
+  SEEK's July 2026 NZ report put AI mentions at 3.7% of New Zealand ads against 2.1% in Australia.
+
+  New Zealand job ads were 9.7% higher year on year in August 2026. SEEK's July 2026 Australian report had Australian job ads 6.0% lower year on year.
+
+  The Wall Street Journal reported in September 2026, citing Live Data Technologies, that 173 people started jobs titled marketing engineer in the 12 months to August 2026, up from 98 a year earlier.
+
+  Bloomberry, a job-data vendor, counted a 205% year-on-year increase in new GTM engineering jobs (January to September 2025 against 2024).
+
+How much demand is there for AI marketing skills in New Zealand?
+
+Demand is rising quickly from a small base. SEEK's August 2026 report found AI skills in 4.0% of all New Zealand job ads, up 93.3% on a year earlier, and Marketing & Communications ranks second of all job classifications for AI mentions. Overall New Zealand job ads were 9.7% higher than in August 2025.
+
+The share climbed through 2026. SEEK's April 2026 NZ report found AI keywords in 2.9% of job ads, with total ads up 13.1% year on year. By August the share was 4.0%.
+
+  SEEK NZ reportShare of all NZ job ads mentioning AIMarketing & CommunicationsNZ job ads, year on year
+
+  
+    April 20262.9%AI mentions up 5.5% on the month (no share published)+13.1%
+
+    July 20263.7% (Australia 2.1%)9.2% of ads mention AINo national figure published
+
+    August 20264.0%9.8% of ads mention AI, second of all classifications+9.7%
+
+  
+
+By classification in August, ICT leads at 17.6% of ads mentioning AI. Marketing & Communications is next at 9.8%, just ahead of Consulting & Strategy at 9.3%. Roughly one marketing ad in ten on SEEK NZ now asks for AI skills, and agentic AI is among the most-mentioned skill types.
+
+Skills lag use. Hays New Zealand reported in September 2026 that 60% of technology professionals regularly use AI tools, only 22% have had formal training or support, and 82% of organisations report capability gaps. Marketing teams hiring for AI skills compete for that small trained pool.
+
+How does Australia compare?
+
+Australia's job market is softer and slower to ask for AI. SEEK's July 2026 Australian report showed job ads 6.0% lower than a year earlier, with AI skills in 2.1% of ads, while New Zealand stood at 3.7% that month. Marketing & Communications still ranks second for AI mentions in Australia, at 7.3%.
+
+Australian AI-skill mentions are still growing, up 60.4% year on year in SEEK's July report, against New Zealand's 93.3% in August (different months, so treat the comparison as indicative). In both countries marketing is the second most AI-hungry classification.
+
+Advertised pay for neighbouring marketing roles is similar in local currency; the pay table below sets the two markets side by side.
+
+What are these jobs called in New Zealand and Australian job ads?
+
+Locally, the work is advertised under older or broader titles. A SEEK NZ search on 8 October 2026 found no live ad titled marketing engineer, GTM engineer or growth engineer in its leading results. The closest matches were marketing technology and lifecycle roles that ask for AI and automation skills.
+
+SEEK matches search words loosely, so "marketing engineer" returned 443 ads and "GTM engineer" 182, mostly marketing managers and software engineers. The nearest title was a GTM Lead in Mount Eden, classified under Sales. Ads describing the work look like these:
+
+  Air New Zealand's Marketing Data and Technology Specialist ad (Auckland, listed October 2026) asks for experience applying AI and automation, plus SQL or Python, and names Braze, Hightouch, Snowflake and Optimizely as example platforms.
+
+  Air New Zealand's Customer Lifecycle Marketing Specialist ad (October 2026) asks the hire to apply conversation design to AI- and LLM-powered customer experiences.
+
+  In Australia, Lorikeet's GTM Engineer ad (Sydney, posted 14 April 2026, now closed) sat in the marketing team and asked for building with Claude Code or Cursor, along with Clay, Apollo and HubSpot. It did not show pay.
+
+In this market, the skills inside an ad are a better search key than its title.
+
+How is the marketing engineer role family changing worldwide?
+
+Overseas, the work is settling into two lanes: people who deploy AI inside marketing teams, and GTM engineers who build pipeline systems. Around them, AI search work is becoming a specialism of its own, and narrower titles such as content engineer and lifecycle engineer are being folded into the broader roles.
+
+  RoleWhat the work involvesDemand signalTypical stack
+
+  
+    AI deployment in marketing (marketing engineer)Finding AI use cases across a marketing team, building agents and automations, coaching marketers to build their ownFigma's Marketing Engineer, AI Deployment ad lists a US$127,000 to US$296,000 base. Plaid's AI Marketing Technologist Lead ad lists US$170,400 to US$223,200. Stripe's Forward Deployed AI Accelerator, Marketing ad lists a US$132,000 to US$198,000 baseGumloop, n8n, Workato or Zapier; GitHub; Claude Code or Codex; SQL; Salesforce or Marketo
+
+    GTM engineer, system builderWriting the code behind enrichment, outbound and CRM data flowsBloomberry (vendor) found SQL and Python each named in 38% of 1,000 GTM engineering postingsPython, SQL, APIs, Clay, HubSpot or Salesforce
+
+    GTM engineer, tool operatorRunning prospecting and sequencing workflows in no-code toolsOnfire, a GTM software vendor, found 91% of companies with a GTM engineer have only one, and estimates a coding premium of about US$40,000 to US$45,000Clay, Apollo, HubSpot, Zapier
+
+    AI search (AEO)Fixing how a brand is described and cited in ChatGPT, Perplexity and Google's AI answersNo verified posting count. The Wall Street Journal (September 2026) listed chatbot-answer fixes as marketing engineer workStructured data, crawler access, content, AI visibility tracking
+
+    Being absorbed: content engineer, lifecycle engineerContent and lifecycle work, now listed inside broader rolesLorikeet's GTM engineer ad included lifecycle marketing and agent-run content productionBraze, HubSpot, language models
+
+  
+
+The broader GTM market is shrinking while the AI end grows. Kyle Poyar's State of GTM Hiring H1 2026 (Growth Unhinged, May 2026, Sumble data on US B2B companies) found GTM job posts down 15% year on year, while AI-native companies grew GTM hiring by nearly 50%. The same report found growth marketing was the only marketing role with more postings than a year earlier, and GTM engineering headcount had doubled.
+
+The title counts are still small. Onfire estimated roughly 1,200 people on LinkedIn held the GTM engineer title in May 2026; for marketing engineer, the Journal's 173 starters is the most specific count. The Keyword, a marketing news site, concluded the evidence "points toward a genuine role that is still early". The fuller definition of the role is in the guide to what a marketing engineer is.
+
+What do marketing engineer and AI marketing roles pay in New Zealand?
+
+Nobody yet publishes a New Zealand salary for the marketing engineer or GTM engineer title. The nearest verified guides are SEEK's advertised salary bands for neighbouring roles, which put a head of marketing at NZ$160,000 to NZ$170,000, and recruiter estimates near NZ$195,000 for senior AI roles. Each row below says what kind of number it is.
+
+  RoleNew Zealand (NZD)Australia (AUD)Type of figureSource
+
+  
+    Marketing manager105,000 to 125,000 (median 115,000)105,000 to 125,000AdvertisedSEEK NZ marketing manager salary, October 2026
+
+    Digital marketing manager110,000 to 130,000 (median 117,500)110,000 to 130,000AdvertisedSEEK NZ digital marketing manager salary, October 2026
+
+    Growth manager115,000 to 135,000 (median 125,000)95,000 to 115,000AdvertisedSEEK NZ growth manager salary, October 2026
+
+    Head of marketing160,000 to 170,000 (median 165,000)160,000 to 180,000AdvertisedSEEK NZ head of marketing salary, October 2026 (linked above)
+
+    Data analyst85,000 to 105,000 (median 94,380)95,000 to 115,000AdvertisedSEEK NZ data analyst salary, October 2026
+
+    Data engineer110,000 to 125,000 (median 120,000)120,000 to 140,000AdvertisedSEEK NZ data engineer salary, October 2026
+
+    Senior AI roles (data and AI manager, AI solutions architect, agent architect)About 195,000 to 196,000Not givenRecruiter estimateTalent International, March 2026, which labels emerging AI role salaries indicative estimates
+
+    Average technology pay rise3.8%Not givenSurveyHays Salary Guide FY26/27, via Hays NZ, September 2026
+
+    Marketing engineer or GTM engineerNo published figureNo published figureNone foundSee methodology
+
+  
+
+SEEK's bands are "full-time salary ranges disclosed by employers on SEEK job ads", with Australian figures from the matching au.seek.com pages. Some include superannuation.
+
+Expect New Zealand employers to benchmark a marketing engineer against the growth manager and head of marketing bands, and against data engineer pay for the build half. For contrast, Bloomberry put the median posted US GTM engineer salary at US$127,500.
+
+Which skills do employers name in these ads?
+
+Four skill groups recur across the ads and datasets checked for this page: SQL and data work, a CRM such as Salesforce or HubSpot, workflow tools such as Zapier, n8n or Clay, and hands-on building with language models such as Claude. Most ads also ask the hire to coach colleagues, because few marketers have formal AI training.
+
+  SQL and data. Bloomberry found SQL in 38% of GTM engineering postings. Plaid asks for SQL and Tableau, Figma lists SQL on Snowflake or BigQuery as a plus, and Air New Zealand names SQL or Python.
+
+  CRM. In Bloomberry's sample, HubSpot appeared in 52% of postings and Salesforce in 45%. Plaid's ad covers Salesforce integrations, and Stripe's names Marketo and Salesforce.
+
+  Workflow tools. Bloomberry ranked Clay as the most common tool, with Zapier at 39% and n8n at 28%. Figma asks for Gumloop, n8n, Workato or Zapier.
+
+  Language models. Onfire found 95% of the GTM engineer postings it reviewed asked for AI or LLM expertise. Stripe names Claude Code and Codex; Lorikeet named Claude Code and Cursor.
+
+  Teaching others. Stripe's hire is embedded with 25 to 45 marketers; Figma's coaches marketers toward self-sufficiency.
+
+The two Air New Zealand ads lean on customer data platforms such as Braze and Hightouch, where the overseas GTM ads lean on prospecting tools such as Clay and Apollo. The guide to AI for marketers sets out a starting path, and AI agents for marketing covers the systems these ads describe.
+
+What does this mean for job seekers and hiring managers?
+
+Job seekers in New Zealand should search by skill keywords and bring a running system as evidence, since local ads rarely use the new titles. Hiring managers should describe the systems the person will build and benchmark pay against neighbouring roles, because the title alone will attract few local applicants. Both sides gain from naming tools plainly.
+
+For job seekers
+
+  Search SEEK and LinkedIn for tool names (SQL, HubSpot, Braze, Clay, Claude) as well as titles. The relevant ads sit under marketing technology and lifecycle titles.
+
+  Show one working system with its weekly output. Stripe's ad measures success by workflows permanently changed, and Figma's asks the hire to track adoption of the agents they build.
+
+  Expect the interview to test judgement: Air New Zealand's data ad asks for critical evaluation of AI outputs.
+
+For hiring managers
+
+  Write the first 90 days into the ad: the systems the hire will build.
+
+  Publish a pay range; these roles have no local benchmark yet.
+
+  Budget for the hire to train others. With only 22% of technology professionals reporting formal AI training or support, per Hays, the person you hire will likely become the team's teacher.
+
+Methodology and caveats
+
+Every figure on this page was opened at its source on 8 October 2026. SEEK figures are job-ad data, and the salary bands are advertised ranges. Hays and Talent International are recruiters, and Bloomberry, Onfire and Profound sell products to this market. Several widely repeated numbers could not be confirmed at source and were left out.
+
+  Vendors. Bloomberry sells job-postings data and Onfire sells GTM software; Profound, which popularised the marketing engineer title, runs a job board for it. Their figures are labelled as vendor data.
+
+  Geography. Growth Unhinged's data covers US B2B companies, and Bloomberry does not state its countries. Neither has a New Zealand breakdown.
+
+  The exact title. No New Zealand source counts marketing engineer or GTM engineer jobs. The SEEK title check covered leading results on one day, so an ad could have been missed. An Auckland GTM engineer ad seen in aggregator snippets (August 2026) could not be opened, so it is not counted.
+
+  The Wall Street Journal figures (173 starters, 29% growth in LinkedIn listings in 2025) are taken from the Journal's 30 September 2026 report, which cites Live Data Technologies and LinkedIn. They match the marketing engineer guide.
+
+  Dropped. A Robert Half survey of New Zealand hiring managers on AI pay was reachable only through secondhand coverage; PwC's NZ AI Jobs Barometer refused automated access; a widely quoted count of 3,000+ GTM engineer listings on LinkedIn had no reachable primary source.
+
+For wider AI adoption figures in both countries, see the AI marketing statistics for Australia and New Zealand. Definitions of agentic AI and answer engine optimisation are in the glossary.
+
+Where Flow AI fits
+
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is an AI marketing engineer in Auckland who builds those systems and keeps the judgement over what they send. The skill library is public, so you can inspect the work first.
+
+Hiring managers and recruiters with a senior marketing engineer or GTM engineer role can talk to Amber about the role. Teams that want a system built, scoped in writing first, can talk to Amber.
+
+Q: Are there marketing engineer jobs in New Zealand?
+A: Under that exact title, very few. A SEEK NZ search on 8 October 2026 found no live ad titled marketing engineer in its leading results. The work itself is advertised: Air New Zealand, for example, listed a Marketing Data and Technology Specialist in October 2026 asking for AI, automation, SQL and customer data platforms. Search by skills such as SQL, HubSpot or Claude to find these roles.
+Q: What does a GTM engineer earn in Australia?
+A: No Australian salary survey publishes a figure for the GTM engineer title yet, and the Sydney GTM engineer ad checked for this page did not show pay. The nearest SEEK Australia bands in October 2026 were AUD 95,000 to 115,000 for a growth manager and AUD 120,000 to 140,000 for a data engineer. Bloomberry, a vendor, put the median GTM engineer salary among postings that showed pay at US$127,500.
+Q: Which AI skills do New Zealand marketing employers ask for?
+A: SEEK's August 2026 report listed agentic AI among the most-mentioned AI skill types in NZ job ads. Individual marketing ads checked for this page asked for applied AI and automation, AI-powered customer experiences, SQL or Python, and platforms such as Braze, Hightouch and Snowflake. Employers also value people who can evaluate AI output critically and train colleagues, because formal AI training remains rare.
+Q: Is there more demand for GTM engineers or marketing engineers?
+A: On the available counts, GTM engineer is the larger title. Bloomberry, a vendor, analysed 1,000 GTM engineering postings and found new GTM engineering jobs up 205% year on year. The Wall Street Journal reported that only 173 people started jobs titled marketing engineer in the 12 months to August 2026. Both are small, mostly American, and neither count covers New Zealand.
+Q: Do AI skills raise pay in New Zealand marketing?
+A: There is no verified New Zealand figure for an AI pay premium in marketing roles. Hays reported average technology pay rises of 3.8% in its FY26/27 Salary Guide, and Talent International gives indicative estimates of around NZ$195,000 to NZ$196,000 for senior AI roles such as agent architect. Both describe technology roles, so treat them as signals for the build half of a marketing engineer's job.
+Q: Can I quote the figures on this page?
+A: Yes. The figures are free to quote with attribution to Amber Lan, Flow AI (flowai.co.nz), October 2026. Please also link the original source named next to each number, since SEEK, Hays and the other publishers own their data. Each figure was opened at its source on 8 October 2026, and the methodology section lists what could not be confirmed.
+
+## How does New Zealand's AI Advisory Pilot fund AI for small businesses?
+URL: https://www.flowai.co.nz/blog/ai-advisory-pilot-nz.html
+Author: Amber Lan, Flow AI
+Updated: 2026-10-08
+
+Short answer: New Zealand's AI Advisory Pilot is a government grant, delivered through the Regional Business Partner Network, that pays up to 50% of eligible costs for expert AI help: up to $2,500 towards an AI roadmap and up to $12,500 towards implementation. Businesses need an NZBN and fewer than 50 full-time employees. It is open until 30 June 2027.
+
+What is the AI Advisory Pilot?
+
+The AI Advisory Pilot is a New Zealand Government grant, delivered through the Regional Business Partner Network (RBPN), that co-funds expert help for small businesses to plan where AI can add value and then put it into practice. It runs in two stages, an AI roadmap and then implementation, and your business pays at least half of the cost.
+
+The business.govt.nz Funding Explorer page for the AI Advisory Pilot (last reviewed 22 September 2026) describes two stages:
+
+  AI roadmap (planning). Assess your business needs, identify opportunities to use AI and develop a plan for implementation.
+
+  Implementation. Put AI into your business processes and support your team to use it.
+
+The pilot launched in January 2026. Human Resources Director reported on 19 May 2026 that Small Business and Manufacturing Minister Cameron Brewer had expanded the pilot from 50 businesses to 150 and widened eligibility. For where AI fits in a small firm's marketing, start with the guide to AI marketing for NZ small business.
+
+How much does the AI Advisory Pilot pay?
+
+The pilot pays up to 50% of eligible costs, with a ceiling of $2,500 towards an AI roadmap and $12,500 towards implementation support, so $15,000 at most across both stages. Your business pays at least the other 50%. Funding is limited and allocated competitively, so meeting the criteria does not guarantee you a place.
+
+Worked through: a roadmap costing $5,000 could attract up to $2,500, and an implementation project costing $25,000 could attract up to $12,500. Above those amounts the grant stops at the cap and the business pays the rest. The official page does not say whether the caps include GST, so ask your growth advisor. To compare with unsubsidised prices, see the guide to AI marketing costs in Australia and New Zealand.
+
+Who is eligible for the AI Advisory Pilot?
+
+An eligible business has a New Zealand Business Number (NZBN), fewer than 50 full-time equivalent employees, and an established operation that is ready to explore practical uses of AI. Māori trusts and incorporations are included. The goal must be productivity and efficiency inside your own business, which describes most 5 to 49 person firms that are curious about AI.
+
+The criteria on business.govt.nz, checked 8 October 2026:
+
+  Business type. A New Zealand business with an NZBN, including Māori trusts and incorporations.
+
+  Size. Small to medium, with fewer than 50 full-time equivalent (FTE) employees.
+
+  Stage. Established and ready to explore practical uses of AI.
+
+  Goal. Improving productivity and efficiency using AI.
+
+The size test counts FTE, so a business with more than 50 people on the books, some part-time, may still fall under the line. The page does not define "established" in years of trading; your growth advisor makes that call.
+
+What the AI Advisory Pilot will not pay for
+
+The pilot excludes AI products or services built to sell, general software or product development, training unrelated to implementing AI, work completed before funding is approved, and costs outside the agreed project scope. The last two catch owners most often: start early, or let the scope drift, and that spend is yours alone.
+
+  Products for sale. An AI feature inside a product your customers buy is out of scope. The pilot covers AI in how your business runs.
+
+  General development. A new app or website with an AI label on it is still software development.
+
+  Early work. Hold off on signing a contract or paying a deposit until approval is confirmed.
+
+  Scope creep. Anything added after the scope is agreed falls outside it. Raise changes with your growth advisor first.
+
+How do you apply for the AI Advisory Pilot, and when does it close?
+
+You apply by registering your business with the Regional Business Partner Network and speaking with a growth advisor, who will confirm whether the pilot suits what you want to do. Business.govt.nz estimates four to 12 hours of effort. As at 8 October 2026, the official page says the pilot is open until 30 June 2027.
+
+  Register with the RBPN using the link on the official AI Advisory Pilot page on business.govt.nz.
+
+  Talk to a growth advisor about the jobs you want AI to take on.
+
+  If the pilot fits, complete the application and agree the project scope.
+
+  Wait for funding approval before any work starts.
+
+The closing date has moved, which is why older articles disagree. First planned as a six-month run, the pilot was extended in May 2026 to 31 January 2027. On 22 September 2026, Inside Government reported the Minister's announcement that the pilot would run until 30 June 2027 with a further 120 places, and that around 150 businesses had joined since January. The business.govt.nz page now shows 30 June 2027 as the official date.
+
+Because places are limited and allocated competitively, the practical deadline may arrive first. Confirm the current date and remaining capacity with your growth advisor.
+
+What is the Management Capability Development Fund?
+
+The Management Capability Development Fund is a separate RBPN subsidy for management training. It pays up to 50% of one-to-one training and up to 75% of group training, capped at $5,000 per business each year, so the business pays at least 50% or 25% respectively. Marketing is an eligible subject, and AI appears as a group digital-tools subject.
+
+The business.govt.nz page for the Management Capability Development Fund (last edited 3 August 2026) sets the cap at $5,000 per business each year and lists marketing, strategy and digital technology and tools among its training areas. The size rule matches the pilot: established New Zealand businesses with fewer than 50 FTE, including Māori trusts and incorporations managing Māori assets. Funding is available while it lasts, and only for approved training from registered service providers.
+
+The detail sits on the RBPN eligible service subjects page (last reviewed 21 July 2025), which lists AI under group digital tools training. For marketing and AI, two points matter:
+
+  Marketing is eligible in both formats. Group (one-to-some) training covers marketing fundamentals. One-to-one training covers marketing strategies, including "digital marketing strategy and social media planning".
+
+  AI appears under group training. Artificial intelligence sits in the one-to-some digital tools subject, next to CRM and booking systems. The one-to-one list does not name AI.
+
+Exclusions on the same page that matter for marketing and AI work:
+
+  Consultancy that does the work for the owner. The fund pays for training and coaching owners to do it themselves.
+
+  Diagnostic and assessment services, including digital systems audits.
+
+  Website design, development and build, and implementation consulting.
+
+  Software-specific technical and product training, such as Microsoft Office, Xero or MYOB courses.
+
+  Services already subsidised through other government funding.
+
+The RBPN's becoming a service provider page confirms the business contributes at least 50% for one-on-one training and at least 25% for group training. Providers need a New Zealand base, an NZBN, Professional Indemnity insurance of $1 million or more and a track record of training small businesses. The network wants organisations that teach and upskill others, so hands-on implementation firms sit outside this pool.
+
+Xero's research published in May 2026 found 47% of New Zealand small and medium businesses said practical training and workshops would help them feel more confident using AI. Xero does not give a sample size on the page.
+
+AI Advisory Pilot vs Management Capability Development Fund: how do they compare?
+
+The AI Advisory Pilot pays for expert help to plan and implement AI inside your business. The Management Capability Development Fund pays for training that builds your own management skills, including group AI courses and one-to-one digital marketing strategy. The first funds a project done with you; the second funds what you and your managers learn.
+
+  AI Advisory PilotManagement Capability Development Fund
+
+  
+    What it pays forExpert help to plan AI use (roadmap) and put it into practice (implementation)Approved management training from registered service providers
+
+    GrantUp to 50% of eligible costsUp to 50% of one-to-one training, up to 75% of group training
+
+    CapUp to $2,500 for a roadmap, up to $12,500 for implementationUp to $5,000 per business each year
+
+    Your shareAt least 50%At least 50% one-to-one, at least 25% group
+
+    AllocationCompetitive, limited fundingWhile funding remains available
+
+    AvailabilityOpen until 30 June 2027Open, no end date listed
+
+    Size and typeFewer than 50 FTE, NZBN required, establishedFewer than 50 FTE, established
+
+    AIThe purpose of the pilot: adopting AI in your own businessListed as a group (one-to-some) digital tools subject
+
+    TrainingOnly training related to implementing AIGroup marketing fundamentals; one-to-one marketing strategy, including digital marketing strategy and social media planning
+
+    Key exclusionsAI products for sale, general software or product development, unrelated training, work before approval, out-of-scope costsConsultants doing the work, diagnostic audits, website build, software-specific training, services already funded by government
+
+    How to applyRegister with the RBPN and speak with a growth advisorRegister with the RBPN and work with an RBPN advisor
+
+    Effort (official estimate)Four to 12 hoursFour to 12 hours
+
+  
+
+All figures are from business.govt.nz, checked 8 October 2026.
+
+How to prepare before you talk to a growth advisor
+
+Arrive with your NZBN, your FTE count and two or three specific jobs you want AI to take on, each with the hours it takes now. A growth advisor can judge fit much faster from concrete tasks than from a general interest in AI, and the hours give you a baseline to measure the project against later.
+
+  Your NZBN and legal business name.
+
+  Your FTE number, worked out from hours.
+
+  Two or three tasks where AI might help, such as answering enquiries or monthly reporting, with the weekly hours each takes.
+
+  The tools you already pay for, since most AI work connects to your CRM, accounts or website.
+
+  An owner inside the business who will review AI output after the provider leaves: your human in the loop.
+
+  Your budget for your share, at least half of each stage, plus anything outside scope.
+
+  Any work already under way. Work completed before approval is not funded.
+
+If marketing is where you expect AI to help, the guide to building an AI marketing strategy for a small business sharpens the roadmap stage, and the guide to AI marketing transformation shows what implementation looks like.
+
+What to ask a provider before you sign
+
+Ask every provider to confirm which programme they are approved for, the AI Advisory Pilot or the RBPN service provider pool, and to show you a roadmap or implementation they have delivered. Then ask who owns the systems, accounts and prompts once the project ends, and how scope changes are handled.
+
+  Are you an approved provider for the AI Advisory Pilot, or a registered RBPN service provider for the Management Capability Development Fund? Which one applies to this quote?
+
+  Can I see an example roadmap with client details removed?
+
+  Will the tools and automations run on accounts my business owns?
+
+  Who on my team will you train to run it, and how long does support last after handover?
+
+  How will we measure whether it worked, starting from the hours I gave you?
+
+  Are you independent of the software you recommend, or do you resell it or earn commission on it?
+
+Some providers have announced their status publicly. The Icehouse announced on 22 January 2026 that it had been selected as an approved service provider for the RBPN AI Advisory Pilot, working with Harnex on the technical side. Ask your growth advisor for the current list. The guide to AI agencies and AI consultants in NZ covers how advisers and builders differ.
+
+Where Flow AI fits
+
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Flow AI is not an approved provider for the AI Advisory Pilot and is not a registered RBPN service provider, so work with Flow AI cannot be funded through either programme.
+
+Amber Lan is an AI marketing engineer in Auckland who builds marketing systems on a business's own accounts. Flow AI can give a second read of a roadmap another provider wrote, or take on a contract build outside both funds. The skill library is public.
+
+The short version
+
+The AI Advisory Pilot co-funds up to half the cost of an AI roadmap (up to $2,500) and implementation (up to $12,500) for businesses with an NZBN and fewer than 50 FTE. Places are limited and competitive. Apply through an RBPN growth advisor before the official close of 30 June 2027, and confirm that date with them.
+
+The Management Capability Development Fund is the training route: up to 50% of one-to-one and up to 75% of group training, capped at $5,000 a year, with AI available as a group subject. Prepare your tasks and hours before the first conversation, and ask every provider which programme they are approved for.
+
+For a second view on an AI plan, or a contract build outside these programmes, talk to Amber.
+
+Q: Can I use the AI Advisory Pilot and the Management Capability Development Fund together?
+A: Possibly, for different things. The pilot funds expert help to plan and implement AI, while the Management Capability Development Fund subsidises management training. The RBPN's eligible subjects page excludes services already subsidised through other government funding, so the same service cannot be paid for twice. Whether you can use both in parallel depends on your situation, so ask your growth advisor before you commit to either.
+Q: When does the AI Advisory Pilot close?
+A: As at 8 October 2026, business.govt.nz lists the AI Advisory Pilot as open until 30 June 2027. Earlier coverage gave 31 January 2027, which was the end date before the Minister's September 2026 extension. Funding is limited and allocated competitively, so places can run out before the official date. Confirm the current deadline and remaining capacity with an RBPN growth advisor.
+Q: How much does my business have to pay under the AI Advisory Pilot?
+A: At least 50% of the eligible cost. The grant covers up to half, capped at $2,500 for the AI roadmap and $12,500 for implementation, so a business receiving the full $15,000 has spent at least $30,000 in eligible costs. Work outside the agreed scope, or completed before approval, is paid entirely by the business. Ask your growth advisor how GST is treated.
+Q: Is my business too big or too small for the AI Advisory Pilot?
+A: The upper limit is fewer than 50 full-time equivalent employees. The business also needs a New Zealand Business Number and must be established and ready to explore practical uses of AI. The official page lists no minimum size, but it does not define established, so a very new business should check with a growth advisor. Measure the limit in FTE, which can sit below headcount when staff work part-time.
+Q: Does the Management Capability Development Fund pay for AI training?
+A: Yes, as group training. The RBPN eligible subjects page lists artificial intelligence under digital tools for one-to-some (group) training, where the fund can cover up to 75% of the cost. AI is absent from the one-to-one list, which does include digital marketing strategy and social media planning. Software-specific product training, such as a course on one accounting package, is excluded.
+Q: Can the AI Advisory Pilot fund a new website or app with AI built in?
+A: Usually it cannot. The pilot excludes general software or product development, and AI products or services built to sell to customers. It is designed to help a business adopt AI in its own processes and support its team to use it. A website or app project with AI features is likely to fall outside scope, though a growth advisor can confirm where a specific idea sits.
+
 ## What is a marketing engineer? What the role does and how to tell a real one.
 URL: https://www.flowai.co.nz/blog/what-is-a-marketing-engineer.html
 Author: Amber Lan, Flow AI
-Updated: 2026-10-06
+Updated: 2026-10-08
 
 Short answer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content, outbound and reporting, and who keeps the judgement over what ships. Job listings with the title grew fast in 2025, but the role is still small. A real one can show you a running system.
 
@@ -3424,6 +3969,14 @@ On the marketing side:
   Compliance sense: consent rules for email and messages, and privacy rules for lead data.
 
 Many arrive from marketing and learn the build side. The guide to AI for marketers covers that path.
+
+Where is the marketing engineer role heading in 2026?
+
+The fastest-moving version of the role is AI deployment inside a marketing team: one builder who ships agents that the team's marketers use every week, keeps the prompts and skills behind them in version control, and is measured on adoption. The title varies by company, but the job descriptions now read very alike.
+
+Figma's listing for a Marketing Engineer, AI Deployment asks the hire to own a GitHub-managed library of prompts, skills, context files and agents, and measures success by agents live in recurring use, hours saved and revenue driven. It lists a base range of USD 127,000 to 296,000 and treats SQL across a warehouse such as Snowflake or BigQuery as a plus. Plaid's AI Marketing Technologist Lead combines building agents for marketing workflows with training the team to work alongside them, at USD 170,400 to 223,200.
+
+Two things follow for anyone hiring or applying. The portfolio matters more than the title, because a versioned skills library and agents in daily use are easy to inspect. And the change work counts: getting marketers to rely on a system is part of the job description now, alongside building it. For how this looks in New Zealand and Australia, where the exact title barely appears in job ads yet, see the 2026 data on marketing engineer and AI marketing jobs in NZ and Australia.
 
 Is marketing engineer a real role or a rebrand?
 

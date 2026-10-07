@@ -1,0 +1,136 @@
+<!--meta
+{
+  "slug": "running-marketing-on-claude-code",
+  "title": "How do you run a whole marketing function on Claude Code?",
+  "seoTitle": "How to Run a Marketing Function on Claude Code | Flow AI",
+  "description": "Working notes from a solo AI marketing engineer: how a whole marketing function runs on Claude Code, with lane files, skills, MCP connectors and review.",
+  "schemaDescription": "Working notes by Amber Lan, an Auckland AI marketing engineer who runs the whole marketing function of an AI startup alone on Claude Code: how the setup is organised into lane instruction files, a versioned skills library, MCP connectors and scheduled tasks, how the review step works, which work the agents do and which stays human, what broke, and how a solo marketer can start.",
+  "standfirst": "I run the whole marketing function of an AI startup by myself, on Claude Code and agents I built. <b>These are my working notes on how the setup is organised and where a person still decides, including the parts that broke.</b>",
+  "shortAnswer": "You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.",
+  "topic": "agent",
+  "pillar": false,
+  "format": "Working notes",
+  "published": "2026-10-08",
+  "modified": "2026-10-08",
+  "keywords": ["claude code for marketing", "run marketing on claude code", "claude code marketing", "claude code skills for marketing", "claude.md for marketing", "mcp for marketing", "one person marketing team ai", "solo marketer ai agents", "marketing team of one", "ai marketing engineer", "marketing engineer"],
+  "definedTerm": {"name": "Running marketing on Claude Code", "alternateName": ["Claude Code for marketing"], "description": "Running marketing on Claude Code is the practice of keeping a marketing function in a folder of written instructions and reusable skills, connected to the tools where the work lives, which an AI agent works through every day while one person reviews the output and decides what ships."},
+  "related": ["what-is-a-marketing-engineer", "what-is-an-ai-marketing-agent", "ai-agents-for-marketing", "ai-for-marketers"],
+  "faq": [
+    {
+      "q": "Do you need to code to run marketing on Claude Code?",
+      "a": "You need less code than people expect and more comfort with files than most marketers have. Most of the setup is plain text: instruction files and skill files written in ordinary English. Code matters once you want rendering pipelines or build checks. Claude Code writes much of that code with you, but you still need to read it well enough to know when it is wrong."
+    },
+    {
+      "q": "What does Claude Code do that a chat assistant does not?",
+      "a": "A chat assistant answers inside a conversation and forgets your working files when the chat ends. Claude Code works in a folder on your machine: it reads instruction files at the start of each session, edits files, runs commands, loads skills when a task matches them, and connects to other tools through MCP. For marketing, that means the brief and the drafts live in one place the agent can act on."
+    },
+    {
+      "q": "How do you stop AI content sounding like AI?",
+      "a": "Write the voice down as rules a machine can check, then check every line against them before a person reads it. My rules ban specific words and sentence patterns, and drafts that fail are rewritten against the lines that failed. A humaniser pass follows. The last step is a human read, because some tells only show up when you hear the sentence in your head."
+    },
+    {
+      "q": "Is it safe to connect agents to company tools?",
+      "a": "It can be, with narrow access and approval rules. Anthropic's MCP documentation tells users to verify they trust each server before connecting it and warns that servers fetching external content carry prompt injection risk. Start with read access, keep anything that sends or publishes behind a permission prompt, use accounts the company owns, and treat text the agent reads from the web or an inbox as data, never as instructions."
+    },
+    {
+      "q": "Can a marketing team share one skills library?",
+      "a": "Yes. Claude Code loads project skills from a folder inside the repository, and Anthropic's documentation suggests committing that folder so teammates get the same skills. A shared library in git gives a team one version of the voice rules and procedures, with a history of every change. Agree who can change a skill, and review edits the way you would review copy."
+    },
+    {
+      "q": "How long does it take to set up?",
+      "a": "A first useful lane takes days, and the full function takes months. My setup grew one lane at a time: a written brief, then one repeated job turned into a skill, then a connector, then a schedule. The slow part is the writing, because each lane needs a clear description of what good output looks like before any agent can produce it."
+    }
+  ]
+}
+-->
+<h2>What does it mean to run marketing on Claude Code?</h2>
+<p>Running marketing on Claude Code is the practice of keeping a marketing function in a folder of written instructions and reusable skills, connected to the tools where the work lives, which an AI agent works through every day. One person reviews the output and decides what ships. The agent carries the production, and the person keeps the judgement.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic's Claude Code overview describes it as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools</a>. It was built for software. For marketing, the codebase is the marketing function: the positioning documents, voice rules, calendars, drafts and the checks that run on them.</p>
+<p>I run all of marketing at the AI startup where I work, alone, on this kind of setup. I have spent ten years across most parts of marketing and the last three building agent systems for it. If the idea of an <a class="go" href="/blog/what-is-an-ai-marketing-agent.html">AI marketing agent</a> is new to you, read that definition first. These notes cover how I organise the work and where I still decide, failures included. The job title for this kind of work is <a class="go" href="/blog/what-is-a-marketing-engineer.html">marketing engineer</a>.</p>
+
+<h2>How is the setup organised?</h2>
+<p>The setup has four layers. Each lane of work has its own instruction file that reads like a job description. A skills library holds every repeated procedure, versioned in git. Connectors link the agent to the tools marketing already uses. Scheduled tasks start the recurring work, and subagents take research off the main thread.</p>
+
+<h3>One instruction file per lane</h3>
+<p>Claude Code reads files called CLAUDE.md as standing instructions. <a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic's memory documentation says CLAUDE.md files above the working directory load at launch, while files in subdirectories load when Claude works on files there</a>. That behaviour suits a marketing department well. The top folder holds the rules every lane shares, such as the voice rules and who signs off what. Each lane folder (content, social, search, outbound, events, reporting) holds its own CLAUDE.md, written as a job description: what the lane owns, which inputs it reads, what finished work looks like, and what needs my approval.</p>
+<p>Writing them as job descriptions changed the output more than any prompt trick. A good brief for a person is also a good brief for an agent. The same documentation warns that contradictory instructions can lead Claude to pick one arbitrarily, so I read the lane files against each other every few weeks and delete what has gone stale.</p>
+
+<h3>A skills library in git</h3>
+<p>A skill is a folder with a SKILL.md file inside it. <a class="go" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic's skills documentation says Claude uses a skill when it is relevant, or you can call one directly by name, and that project skills can be committed so a team gets them too</a>. The description at the top of the file tells Claude when the skill applies.</p>
+<p>Anything I do twice by hand becomes a skill. My <a class="go" href="/glossary/#content-engine">content engine</a> is packaged as one: one source document in, a month of platform-native drafts out, every line checked against the voice rules. Graphics are HTML artboards rendered to PNG and PDF with Playwright, and the same pipeline turns animation into MP4 with ffmpeg. For search, I maintain <a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude, an open-source answer engine optimisation toolkit for Claude Code, on my GitHub</a>, which scores pages for citability and checks AI crawler access. Style guidance pasted into a prompt fades within a few sessions. A versioned skill with explicit rules holds its standard for months, and it survives a handover.</p>
+
+<h3>Connectors to the tools marketing lives in</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol</a>, and it uses Notion as a setup example. My agent connects to Notion, where plans and the team wiki live, to the social scheduler, to the CRM and prospecting tool, and to email. Most connections start read-only. Where an agent can write, it writes drafts.</p>
+
+<h3>Scheduled tasks and subagents</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic's scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose, for jobs such as morning briefings drawn from your calendar and inbox</a>. My morning kickoff does that: it sorts the workspace and the inbox into a daily priority board before I open anything. Local tasks only fire while the app is open and the computer is awake, so anything that must run overnight belongs in a cloud routine. For scripts, <a class="go" href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic's documentation on running Claude Code programmatically covers the non-interactive mode, started with claude -p</a>.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic's subagents documentation says each subagent runs in its own context window with a custom system prompt, specific tool access and independent permissions</a>. I use them for research and first drafts: several research questions run in parallel, each comes back as a report, and only the reports reach the main thread.</p>
+
+<h2>How does a draft get from agent to published?</h2>
+<p>Agents produce and a person decides. Every draft passes automated checks before I see it, from the voice rules to a source check on every number and claim. Prose then gets a humaniser pass. After that I read it. Nothing sends or publishes without my approval, and outbound hands every reply to a person.</p>
+<p>The order matters, because each check catches something the next one cannot:</p>
+<ol>
+  <li><b>Voice audit.</b> Each line is checked against the written voice rules: banned words, punctuation habits, sentence rhythm, the brand's own rules. Drafts that fail are rewritten against the specific lines that failed, which works far better than regenerating from scratch.</li>
+  <li><b>Claim check.</b> A glossary and a claim register define what the company can say in public. A draft that claims something outside the register goes back.</li>
+  <li><b>Evidence audit.</b> A skill checks every link and every statistic, with its attribution, before anything goes live. A number with no primary source loses the number.</li>
+  <li><b>Humaniser pass.</b> I run the open-source Humanizer skill by Siqi Chen over prose. It strips the habits readers now recognise as machine-written.</li>
+  <li><b>My read.</b> I read the final version in full, and I am the one who presses publish.</li>
+</ol>
+<p>Outbound follows the same principle. The outbound agent researches accounts and drafts touches in a soft, invitational voice, and any reply hands the thread to a human. That takeover rule is the <a class="go" href="/glossary/#human-in-the-loop">human in the loop</a> in its plainest form.</p>
+<p>Claude Code's permission settings can enforce the rule as well. <a class="go" href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic's permissions documentation says rules are evaluated deny first, then ask, then allow, and a matching ask rule prompts even when an allow rule also matches</a>. In my setup the rule lives in the workflow: drafts land in a review queue, and nothing reaches a customer, a channel or a send button until I have approved it in writing. Approvals also moved out of live messages and into written review points, so work keeps moving when I am in a meeting or at an event.</p>
+
+<h2>Which work do the agents do, and which do I keep?</h2>
+<p>The agents do the production: research, first drafts, rendering, checks and the recurring reports. I keep positioning, the claims the company makes, taste, the final read on anything public, and every relationship with a real person. The split below is how it runs today, lane by lane, and it moves as the checks improve.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Lane</th><th>What the agents do</th><th>What I keep</th></tr></thead>
+  <tbody>
+    <tr><td><b>Positioning and claims</b></td><td>Collect competitor pages and flag claims that lack proof</td><td>The positioning and every new claim</td></tr>
+    <tr><td><b>Content</b></td><td>Plan a month from one source document, draft platform-native posts, run the voice audit</td><td>Choosing the source and the final read</td></tr>
+    <tr><td><b>Design</b></td><td>Build cards and carousels as HTML and render them to image, PDF or video</td><td>The layout call and the rejections</td></tr>
+    <tr><td><b>AI search</b></td><td>Audit crawler access and structured data, then generate the fixes</td><td>Which buyer questions we want to answer, and what we say in the answer</td></tr>
+    <tr><td><b>Outbound</b></td><td>Enrich and research accounts, draft first touches</td><td>Who we contact and every reply</td></tr>
+    <tr><td><b>Executive voices</b></td><td>Draft LinkedIn posts in each leader's codified voice, with sourced statistics</td><td>The leader's opinion and their sign-off</td></tr>
+    <tr><td><b>Events</b></td><td>Produce collateral through the render pipeline, prepare checklists</td><td>Negotiation with organisers, the conversations at the stand</td></tr>
+    <tr><td><b>Reporting and operations</b></td><td>Build the morning priority board and the weekly summary</td><td>Deciding what to stop</td></tr>
+  </tbody>
+</table></div>
+<p>The right-hand column is the job. My week moved from writing to deciding, and deciding is the part that never needed automating. If you are a marketer working out where your own line falls, the <a class="go" href="/blog/ai-for-marketers.html">guide to AI for marketers</a> covers the same split from the other side.</p>
+
+<h2>What broke, and what did I change?</h2>
+<p>Most failures came from my side of the desk. I built faster than I shipped. Drafts queued behind my own approval. I rebuilt systems that needed a frozen spec. Voices drifted over weeks, and some statistics would not trace back to a primary source. Each failure changed the setup, and the fixes are now part of the system.</p>
+
+<h3>Building more than shipping</h3>
+<p>Claude Code makes building cheap, and building is more fun than publishing. For a stretch I had more systems than published work. The fix was a rule I now hold myself to: a system counts once it has shipped something real, and a new build waits until the current lane has run a full cycle.</p>
+
+<h3>Drafts piling up behind the publish step</h3>
+<p>Once the agents drafted faster than I could judge, the bottleneck was me. Approved work sat behind unread work. Approved pieces now go into a reserve that can wait for a slot, and I review new drafts in batches at set times instead of as they arrive.</p>
+
+<h3>Rebuilding instead of freezing a spec</h3>
+<p>Every good idea tempted me into a new version of something that worked. My design system went through several rebuilds this way. Now each system has a written spec with a version number. Ideas go onto a list for the next version, and the current version stays frozen long enough to ship with.</p>
+
+<h3>Voice drift</h3>
+<p>Over long sessions, phrasing slides back toward model defaults, and separate executive voices start to blur into one. Codified rules checked line by line brought it back, helped by examples of good and bad lines inside each voice skill. I also learned that instruction files guide the model without binding it. <a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic's memory documentation says Claude treats CLAUDE.md as context, and points to a PreToolUse hook to block an action regardless of what Claude decides</a>. <a class="go" href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener">Anthropic's hooks guide describes hooks as shell commands that run at set points, giving deterministic control</a>. Rules that must hold every time now live in checks that run on their own: this site's build, for example, refuses any file that contains an em dash.</p>
+
+<h3>Statistics that could not be traced</h3>
+<p>Models return plausible numbers, and the web repeats them until they look settled. Several figures I wanted to use could not be found at the publisher's own page. The rule now: every number names its source in the sentence, links to the primary source and gives the year. If I cannot verify it, the sentence goes out without a number.</p>
+
+<h2>How do you start if you are one marketer?</h2>
+<p>Start with the writing, then add machinery one lane at a time. Write the brief every agent will read, then turn the job you repeat most into one lane with its own instruction file and skill. Add a connector and a schedule only after that lane runs cleanly by hand.</p>
+<ol>
+  <li><b>Write the brief.</b> Positioning, audience, voice rules, banned claims and a few examples of good work, in one file. Every agent reads it first.</li>
+  <li><b>Pick one lane.</b> Choose the job that costs you the most hours each week. Give it a folder and a CLAUDE.md written as a job description.</li>
+  <li><b>Turn the second repeat into a skill.</b> The first time you do a task, do it with the agent. The second time, write the procedure into a SKILL.md and commit it to git.</li>
+  <li><b>Add one check before anything ships.</b> A voice audit or a source check is enough to begin. You still read everything.</li>
+  <li><b>Connect one tool, read-only.</b> Let the agent read the planning workspace or the CRM before it writes to anything.</li>
+  <li><b>Schedule it once it runs cleanly.</b> A recurring brief is the easiest first schedule.</li>
+  <li><b>Freeze the spec and run a month.</b> Ship with the lane before you build the next one.</li>
+</ol>
+<p>For the order in which to add lanes, the guide to <a class="go" href="/blog/ai-agents-for-marketing.html">AI agents for marketing</a> suggests starting with the gap that costs most, usually search or outbound. Search now includes <a class="go" href="/glossary/#answer-engine-optimisation-aeo">answer engine optimisation</a>, so assistants such as ChatGPT can describe the business correctly.</p>
+
+<h2>Where Flow AI fits</h2>
+<p>Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. The <a class="go" href="/skills/">Flow AI skill library</a> lists 125 skills you can inspect before running them: 16 I built, and the rest credited to their authors.</p>
+<p>Teams can contract a build, which starts with a written scope. If you are hiring for a marketing engineer or AI deployment role, I am open to <a class="go" href="/about.html#hire">conversations about senior roles, remote from anywhere</a>.</p>
+
+<h2>The short version</h2>
+<p>A whole marketing function can run on Claude Code when every lane has a written job description, every repeated procedure is a versioned skill, the agent connects to the tools where the work lives, and the recurring jobs run on a schedule. The agents produce, and a person decides what ships and owns every relationship.</p>
+<p>Most of what broke for me sat on the human side, in how fast I built and how slowly I approved. Written rules and checks that cannot be skipped fixed more than any model change. If you are building something like this, or hiring someone to, <a class="go" href="/contact.html">talk to Amber</a>.</p>
