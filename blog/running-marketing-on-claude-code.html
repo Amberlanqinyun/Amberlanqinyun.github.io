@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>How to Run a Marketing Function on Claude Code | Flow AI</title>
+<meta name="description" content="Working notes from a solo AI marketing engineer: how a whole marketing function runs on Claude Code, with lane files, skills, MCP connectors and review.">
+<meta name="author" content="Amber Lan">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html">
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="How to Run a Marketing Function on Claude Code | Flow AI">
+<meta property="og:description" content="Working notes from a solo AI marketing engineer: how a whole marketing function runs on Claude Code, with lane files, skills, MCP connectors and review.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:url" content="https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-10-08T00:00:00+13:00">
+<meta property="article:modified_time" content="2026-10-08T00:00:00+13:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html#article",
+      "headline": "How do you run a whole marketing function on Claude Code?",
+      "description": "Working notes by Amber Lan, an Auckland AI marketing engineer who runs the whole marketing function of an AI startup alone on Claude Code: how the setup is organised into lane instruction files, a versioned skills library, MCP connectors and scheduled tasks, how the review step works, which work the agents do and which stays human, what broke, and how a solo marketer can start.",
+      "datePublished": "2026-10-08",
+      "dateModified": "2026-10-08",
+      "inLanguage": "en-NZ",
+      "articleSection": "The AI marketing agent",
+      "wordCount": 2740,
+      "timeRequired": "PT12M",
+      "image": "https://www.flowai.co.nz/blog/figures/running-marketing-on-claude-code.svg",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#flowai"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/blog/#blog"
+      },
+      "mainEntityOfPage": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".short-answer__text",
+          ".article-hero h1"
+        ]
+      },
+      "keywords": "claude code for marketing, run marketing on claude code, claude code marketing, claude code skills for marketing, claude.md for marketing, mcp for marketing, one person marketing team ai, solo marketer ai agents, marketing team of one, ai marketing engineer, marketing engineer",
+      "about": {
+        "@id": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html#definedterm"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html#definedterm",
+      "name": "Running marketing on Claude Code",
+      "description": "Running marketing on Claude Code is the practice of keeping a marketing function in a folder of written instructions and reusable skills, connected to the tools where the work lives, which an AI agent works through every day while one person reviews the output and decides what ships.",
+      "url": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html",
+      "inDefinedTermSet": {
+        "@id": "https://www.flowai.co.nz/glossary/#terms"
+      },
+      "alternateName": [
+        "Claude Code for marketing"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you need to code to run marketing on Claude Code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need less code than people expect and more comfort with files than most marketers have. Most of the setup is plain text: instruction files and skill files written in ordinary English. Code matters once you want rendering pipelines or build checks. Claude Code writes much of that code with you, but you still need to read it well enough to know when it is wrong."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Claude Code do that a chat assistant does not?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A chat assistant answers inside a conversation and forgets your working files when the chat ends. Claude Code works in a folder on your machine: it reads instruction files at the start of each session, edits files, runs commands, loads skills when a task matches them, and connects to other tools through MCP. For marketing, that means the brief and the drafts live in one place the agent can act on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you stop AI content sounding like AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Write the voice down as rules a machine can check, then check every line against them before a person reads it. My rules ban specific words and sentence patterns, and drafts that fail are rewritten against the lines that failed. A humaniser pass follows. The last step is a human read, because some tells only show up when you hear the sentence in your head."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to connect agents to company tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can be, with narrow access and approval rules. Anthropic's MCP documentation tells users to verify they trust each server before connecting it and warns that servers fetching external content carry prompt injection risk. Start with read access, keep anything that sends or publishes behind a permission prompt, use accounts the company owns, and treat text the agent reads from the web or an inbox as data, never as instructions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a marketing team share one skills library?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Claude Code loads project skills from a folder inside the repository, and Anthropic's documentation suggests committing that folder so teammates get the same skills. A shared library in git gives a team one version of the voice rules and procedures, with a history of every change. Agree who can change a skill, and review edits the way you would review copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to set up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A first useful lane takes days, and the full function takes months. My setup grew one lane at a time: a written brief, then one repeated job turned into a skill, then a connector, then a schedule. The slow part is the writing, because each lane needs a clear description of what good output looks like before any agent can produce it."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://www.flowai.co.nz/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The AI marketing agent",
+          "item": "https://www.flowai.co.nz/blog/?topic=agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How do you run a whole marketing function on Claude Code?",
+          "item": "https://www.flowai.co.nz/blog/running-marketing-on-claude-code.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#article">Skip to the guide</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="Flow AI home">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/sprints/">How it works</a>
+      <a href="/blog/" aria-current="page">Guides</a>
+      <a href="/about.html">About</a>
+      <a class="site-header__cta" href="/contact.html">Work with me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero article-hero centered" aria-labelledby="article-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow"><a href="/blog/">Guides</a><span aria-hidden="true"> / </span><a href="/blog/?topic=agent">The AI marketing agent</a></p>
+        <h1 id="article-title">How do you run a whole marketing function on Claude Code?</h1>
+        <p class="lead">I run the whole marketing function of an AI startup by myself, on Claude Code and agents I built. <b>These are my working notes on how the setup is organised and where a person still decides, including the parts that broke.</b></p>
+        <p class="byline small"><span><a href="/about.html">Amber Lan</a>, AI marketing engineer</span><span aria-hidden="true">·</span><span>Updated <time datetime="2026-10-08">8 October 2026</time></span><span aria-hidden="true">·</span><span>12 min read</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body" id="article" aria-label="Guide">
+    <div class="wrap article-grid">
+      <nav class="toc" aria-label="Contents">
+        <details class="toc__box" open>
+          <summary class="toc__label">Contents <span class="toc__left" data-minutes-left></span></summary>
+          <div class="toc__progress" aria-hidden="true"><span data-progress></span></div>
+          <ol class="toc__list">
+<li><a href="#what-does-it-mean-to-run-marketing-on-claude-code" data-toc="what-does-it-mean-to-run-marketing-on-claude-code"><span class="toc-num">01</span><span>What does it mean to run marketing on Claude Code?</span></a></li>
+<li><a href="#how-is-the-setup-organised" data-toc="how-is-the-setup-organised"><span class="toc-num">02</span><span>How is the setup organised?</span></a></li>
+<li><a href="#how-does-a-draft-get-from-agent-to-published" data-toc="how-does-a-draft-get-from-agent-to-published"><span class="toc-num">03</span><span>How does a draft get from agent to published?</span></a></li>
+<li><a href="#which-work-do-the-agents-do-and-which-do-i-keep" data-toc="which-work-do-the-agents-do-and-which-do-i-keep"><span class="toc-num">04</span><span>Which work do the agents do, and which do I keep?</span></a></li>
+<li><a href="#what-broke-and-what-did-i-change" data-toc="what-broke-and-what-did-i-change"><span class="toc-num">05</span><span>What broke, and what did I change?</span></a></li>
+<li><a href="#how-do-you-start-if-you-are-one-marketer" data-toc="how-do-you-start-if-you-are-one-marketer"><span class="toc-num">06</span><span>How do you start if you are one marketer?</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">07</span><span>Where Flow AI fits</span></a></li>
+<li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">08</span><span>The short version</span></a></li>
+<li><a href="#faq" data-toc="faq"><span class="toc-num">09</span><span>Questions owners ask</span></a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <div class="article-main">
+        <figure class="article-figure"><img src="/blog/figures/running-marketing-on-claude-code.svg" width="960" height="540" alt=""></figure>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">The short answer</p>
+          <p class="short-answer__text">You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.</p>
+        </aside>
+        <article class="prose">
+<h2 id="what-does-it-mean-to-run-marketing-on-claude-code"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">What does it mean to run marketing on Claude Code?</span></h2>
+<p>Running marketing on Claude Code is the practice of keeping a marketing function in a folder of written instructions and reusable skills, connected to the tools where the work lives, which an AI agent works through every day. One person reviews the output and decides what ships. The agent carries the production, and the person keeps the judgement.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic's Claude Code overview describes it as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools</a><sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup>. It was built for software. For marketing, the codebase is the marketing function: the positioning documents, voice rules, calendars, drafts and the checks that run on them.</p>
+<p>I run all of marketing at the AI startup where I work, alone, on this kind of setup. I have spent ten years across most parts of marketing and the last three building agent systems for it. If the idea of an <a class="go" href="/blog/what-is-an-ai-marketing-agent.html">AI marketing agent</a> is new to you, read that definition first. These notes cover how I organise the work and where I still decide, failures included. The job title for this kind of work is <a class="go" href="/blog/what-is-a-marketing-engineer.html">marketing engineer</a>.</p>
+
+<h2 id="how-is-the-setup-organised"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">How is the setup organised?</span></h2>
+<p>The setup has four layers. Each lane of work has its own instruction file that reads like a job description. A skills library holds every repeated procedure, versioned in git. Connectors link the agent to the tools marketing already uses. Scheduled tasks start the recurring work, and subagents take research off the main thread.</p>
+
+<h3>One instruction file per lane</h3>
+<p>Claude Code reads files called CLAUDE.md as standing instructions. <a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic's memory documentation says CLAUDE.md files above the working directory load at launch, while files in subdirectories load when Claude works on files there</a><sup class="fn"><a href="#source-2" aria-label="Source 2">2</a></sup>. That behaviour suits a marketing department well. The top folder holds the rules every lane shares, such as the voice rules and who signs off what. Each lane folder (content, social, search, outbound, events, reporting) holds its own CLAUDE.md, written as a job description: what the lane owns, which inputs it reads, what finished work looks like, and what needs my approval.</p>
+<p>Writing them as job descriptions changed the output more than any prompt trick. A good brief for a person is also a good brief for an agent. The same documentation warns that contradictory instructions can lead Claude to pick one arbitrarily, so I read the lane files against each other every few weeks and delete what has gone stale.</p>
+
+<h3>A skills library in git</h3>
+<p>A skill is a folder with a SKILL.md file inside it. <a class="go" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic's skills documentation says Claude uses a skill when it is relevant, or you can call one directly by name, and that project skills can be committed so a team gets them too</a><sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup>. The description at the top of the file tells Claude when the skill applies.</p>
+<p>Anything I do twice by hand becomes a skill. My <a class="go" href="/glossary/#content-engine">content engine</a> is packaged as one: one source document in, a month of platform-native drafts out, every line checked against the voice rules. Graphics are HTML artboards rendered to PNG and PDF with Playwright, and the same pipeline turns animation into MP4 with ffmpeg. For search, I maintain <a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude, an open-source answer engine optimisation toolkit for Claude Code, on my GitHub</a><sup class="fn"><a href="#source-4" aria-label="Source 4">4</a></sup>, which scores pages for citability and checks AI crawler access. Style guidance pasted into a prompt fades within a few sessions. A versioned skill with explicit rules holds its standard for months, and it survives a handover.</p>
+
+<h3>Connectors to the tools marketing lives in</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol</a><sup class="fn"><a href="#source-5" aria-label="Source 5">5</a></sup>, and it uses Notion as a setup example. My agent connects to Notion, where plans and the team wiki live, to the social scheduler, to the CRM and prospecting tool, and to email. Most connections start read-only. Where an agent can write, it writes drafts.</p>
+
+<h3>Scheduled tasks and subagents</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic's scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose, for jobs such as morning briefings drawn from your calendar and inbox</a><sup class="fn"><a href="#source-6" aria-label="Source 6">6</a></sup>. My morning kickoff does that: it sorts the workspace and the inbox into a daily priority board before I open anything. Local tasks only fire while the app is open and the computer is awake, so anything that must run overnight belongs in a cloud routine. For scripts, <a class="go" href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic's documentation on running Claude Code programmatically covers the non-interactive mode, started with claude -p</a><sup class="fn"><a href="#source-7" aria-label="Source 7">7</a></sup>.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic's subagents documentation says each subagent runs in its own context window with a custom system prompt, specific tool access and independent permissions</a><sup class="fn"><a href="#source-8" aria-label="Source 8">8</a></sup>. I use them for research and first drafts: several research questions run in parallel, each comes back as a report, and only the reports reach the main thread.</p>
+
+<h2 id="how-does-a-draft-get-from-agent-to-published"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">How does a draft get from agent to published?</span></h2>
+<p>Agents produce and a person decides. Every draft passes automated checks before I see it, from the voice rules to a source check on every number and claim. Prose then gets a humaniser pass. After that I read it. Nothing sends or publishes without my approval, and outbound hands every reply to a person.</p>
+<p>The order matters, because each check catches something the next one cannot:</p>
+<ol>
+  <li><b>Voice audit.</b> Each line is checked against the written voice rules: banned words, punctuation habits, sentence rhythm, the brand's own rules. Drafts that fail are rewritten against the specific lines that failed, which works far better than regenerating from scratch.</li>
+  <li><b>Claim check.</b> A glossary and a claim register define what the company can say in public. A draft that claims something outside the register goes back.</li>
+  <li><b>Evidence audit.</b> A skill checks every link and every statistic, with its attribution, before anything goes live. A number with no primary source loses the number.</li>
+  <li><b>Humaniser pass.</b> I run the open-source Humanizer skill by Siqi Chen over prose. It strips the habits readers now recognise as machine-written.</li>
+  <li><b>My read.</b> I read the final version in full, and I am the one who presses publish.</li>
+</ol>
+<p>Outbound follows the same principle. The outbound agent researches accounts and drafts touches in a soft, invitational voice, and any reply hands the thread to a human. That takeover rule is the <a class="go" href="/glossary/#human-in-the-loop">human in the loop</a> in its plainest form.</p>
+<p>Claude Code's permission settings can enforce the rule as well. <a class="go" href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic's permissions documentation says rules are evaluated deny first, then ask, then allow, and a matching ask rule prompts even when an allow rule also matches</a><sup class="fn"><a href="#source-9" aria-label="Source 9">9</a></sup>. In my setup the rule lives in the workflow: drafts land in a review queue, and nothing reaches a customer, a channel or a send button until I have approved it in writing. Approvals also moved out of live messages and into written review points, so work keeps moving when I am in a meeting or at an event.</p>
+
+<h2 id="which-work-do-the-agents-do-and-which-do-i-keep"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">Which work do the agents do, and which do I keep?</span></h2>
+<p>The agents do the production: research, first drafts, rendering, checks and the recurring reports. I keep positioning, the claims the company makes, taste, the final read on anything public, and every relationship with a real person. The split below is how it runs today, lane by lane, and it moves as the checks improve.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Lane</th><th>What the agents do</th><th>What I keep</th></tr></thead>
+  <tbody>
+    <tr><td><b>Positioning and claims</b></td><td>Collect competitor pages and flag claims that lack proof</td><td>The positioning and every new claim</td></tr>
+    <tr><td><b>Content</b></td><td>Plan a month from one source document, draft platform-native posts, run the voice audit</td><td>Choosing the source and the final read</td></tr>
+    <tr><td><b>Design</b></td><td>Build cards and carousels as HTML and render them to image, PDF or video</td><td>The layout call and the rejections</td></tr>
+    <tr><td><b>AI search</b></td><td>Audit crawler access and structured data, then generate the fixes</td><td>Which buyer questions we want to answer, and what we say in the answer</td></tr>
+    <tr><td><b>Outbound</b></td><td>Enrich and research accounts, draft first touches</td><td>Who we contact and every reply</td></tr>
+    <tr><td><b>Executive voices</b></td><td>Draft LinkedIn posts in each leader's codified voice, with sourced statistics</td><td>The leader's opinion and their sign-off</td></tr>
+    <tr><td><b>Events</b></td><td>Produce collateral through the render pipeline, prepare checklists</td><td>Negotiation with organisers, the conversations at the stand</td></tr>
+    <tr><td><b>Reporting and operations</b></td><td>Build the morning priority board and the weekly summary</td><td>Deciding what to stop</td></tr>
+  </tbody>
+</table></div>
+<p>The right-hand column is the job. My week moved from writing to deciding, and deciding is the part that never needed automating. If you are a marketer working out where your own line falls, the <a class="go" href="/blog/ai-for-marketers.html">guide to AI for marketers</a> covers the same split from the other side.</p>
+
+<h2 id="what-broke-and-what-did-i-change"><span class="sec-num" aria-hidden="true">05</span><span class="sec-title">What broke, and what did I change?</span></h2>
+<p>Most failures came from my side of the desk. I built faster than I shipped. Drafts queued behind my own approval. I rebuilt systems that needed a frozen spec. Voices drifted over weeks, and some statistics would not trace back to a primary source. Each failure changed the setup, and the fixes are now part of the system.</p>
+
+<h3>Building more than shipping</h3>
+<p>Claude Code makes building cheap, and building is more fun than publishing. For a stretch I had more systems than published work. The fix was a rule I now hold myself to: a system counts once it has shipped something real, and a new build waits until the current lane has run a full cycle.</p>
+
+<h3>Drafts piling up behind the publish step</h3>
+<p>Once the agents drafted faster than I could judge, the bottleneck was me. Approved work sat behind unread work. Approved pieces now go into a reserve that can wait for a slot, and I review new drafts in batches at set times instead of as they arrive.</p>
+
+<h3>Rebuilding instead of freezing a spec</h3>
+<p>Every good idea tempted me into a new version of something that worked. My design system went through several rebuilds this way. Now each system has a written spec with a version number. Ideas go onto a list for the next version, and the current version stays frozen long enough to ship with.</p>
+
+<h3>Voice drift</h3>
+<p>Over long sessions, phrasing slides back toward model defaults, and separate executive voices start to blur into one. Codified rules checked line by line brought it back, helped by examples of good and bad lines inside each voice skill. I also learned that instruction files guide the model without binding it. <a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic's memory documentation says Claude treats CLAUDE.md as context, and points to a PreToolUse hook to block an action regardless of what Claude decides</a><sup class="fn"><a href="#source-2" aria-label="Source 2">2</a></sup>. <a class="go" href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener">Anthropic's hooks guide describes hooks as shell commands that run at set points, giving deterministic control</a><sup class="fn"><a href="#source-10" aria-label="Source 10">10</a></sup>. Rules that must hold every time now live in checks that run on their own: this site's build, for example, refuses any file that contains an em dash.</p>
+
+<h3>Statistics that could not be traced</h3>
+<p>Models return plausible numbers, and the web repeats them until they look settled. Several figures I wanted to use could not be found at the publisher's own page. The rule now: every number names its source in the sentence, links to the primary source and gives the year. If I cannot verify it, the sentence goes out without a number.</p>
+
+<h2 id="how-do-you-start-if-you-are-one-marketer"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">How do you start if you are one marketer?</span></h2>
+<p>Start with the writing, then add machinery one lane at a time. Write the brief every agent will read, then turn the job you repeat most into one lane with its own instruction file and skill. Add a connector and a schedule only after that lane runs cleanly by hand.</p>
+<ol>
+  <li><b>Write the brief.</b> Positioning, audience, voice rules, banned claims and a few examples of good work, in one file. Every agent reads it first.</li>
+  <li><b>Pick one lane.</b> Choose the job that costs you the most hours each week. Give it a folder and a CLAUDE.md written as a job description.</li>
+  <li><b>Turn the second repeat into a skill.</b> The first time you do a task, do it with the agent. The second time, write the procedure into a SKILL.md and commit it to git.</li>
+  <li><b>Add one check before anything ships.</b> A voice audit or a source check is enough to begin. You still read everything.</li>
+  <li><b>Connect one tool, read-only.</b> Let the agent read the planning workspace or the CRM before it writes to anything.</li>
+  <li><b>Schedule it once it runs cleanly.</b> A recurring brief is the easiest first schedule.</li>
+  <li><b>Freeze the spec and run a month.</b> Ship with the lane before you build the next one.</li>
+</ol>
+<p>For the order in which to add lanes, the guide to <a class="go" href="/blog/ai-agents-for-marketing.html">AI agents for marketing</a> suggests starting with the gap that costs most, usually search or outbound. Search now includes <a class="go" href="/glossary/#answer-engine-optimisation-aeo">answer engine optimisation</a>, so assistants such as ChatGPT can describe the business correctly.</p>
+
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">Where Flow AI fits</span></h2>
+<p>Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. The <a class="go" href="/skills/">Flow AI skill library</a> lists 125 skills you can inspect before running them: 16 I built, and the rest credited to their authors.</p>
+<p>Teams can contract a build, which starts with a written scope. If you are hiring for a marketing engineer or AI deployment role, I am open to <a class="go" href="/about.html#hire">conversations about senior roles, remote from anywhere</a>.</p>
+
+<h2 id="the-short-version"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">The short version</span></h2>
+<p>A whole marketing function can run on Claude Code when every lane has a written job description, every repeated procedure is a versioned skill, the agent connects to the tools where the work lives, and the recurring jobs run on a schedule. The agents produce, and a person decides what ships and owns every relationship.</p>
+<p>Most of what broke for me sat on the human side, in how fast I built and how slowly I approved. Written rules and checks that cannot be skipped fixed more than any model change. If you are building something like this, or hiring someone to, <a class="go" href="/contact.html">talk to Amber</a>.</p>
+        </article>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">Questions owners ask</span></h2>
+  <div class="faq__list">
+<details class="faq__item" open><summary><h3>Do you need to code to run marketing on Claude Code?</h3></summary><p>You need less code than people expect and more comfort with files than most marketers have. Most of the setup is plain text: instruction files and skill files written in ordinary English. Code matters once you want rendering pipelines or build checks. Claude Code writes much of that code with you, but you still need to read it well enough to know when it is wrong.</p></details>
+<details class="faq__item"><summary><h3>What does Claude Code do that a chat assistant does not?</h3></summary><p>A chat assistant answers inside a conversation and forgets your working files when the chat ends. Claude Code works in a folder on your machine: it reads instruction files at the start of each session, edits files, runs commands, loads skills when a task matches them, and connects to other tools through MCP. For marketing, that means the brief and the drafts live in one place the agent can act on.</p></details>
+<details class="faq__item"><summary><h3>How do you stop AI content sounding like AI?</h3></summary><p>Write the voice down as rules a machine can check, then check every line against them before a person reads it. My rules ban specific words and sentence patterns, and drafts that fail are rewritten against the lines that failed. A humaniser pass follows. The last step is a human read, because some tells only show up when you hear the sentence in your head.</p></details>
+<details class="faq__item"><summary><h3>Is it safe to connect agents to company tools?</h3></summary><p>It can be, with narrow access and approval rules. Anthropic&#x27;s MCP documentation tells users to verify they trust each server before connecting it and warns that servers fetching external content carry prompt injection risk. Start with read access, keep anything that sends or publishes behind a permission prompt, use accounts the company owns, and treat text the agent reads from the web or an inbox as data, never as instructions.</p></details>
+<details class="faq__item"><summary><h3>Can a marketing team share one skills library?</h3></summary><p>Yes. Claude Code loads project skills from a folder inside the repository, and Anthropic&#x27;s documentation suggests committing that folder so teammates get the same skills. A shared library in git gives a team one version of the voice rules and procedures, with a history of every change. Agree who can change a skill, and review edits the way you would review copy.</p></details>
+<details class="faq__item"><summary><h3>How long does it take to set up?</h3></summary><p>A first useful lane takes days, and the full function takes months. My setup grew one lane at a time: a written brief, then one repeated job turned into a skill, then a connector, then a schedule. The slow part is the writing, because each lane needs a clear description of what good output looks like before any agent can produce it.</p></details>
+  </div>
+</section>
+        <aside class="author-box" aria-label="About the author">
+          <p class="author-box__label">Written by</p>
+          <p class="author-box__name"><a href="/about.html">Amber Lan</a></p>
+          <p>AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end.</p>
+        </aside>
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title" class="sources__title">Sources</h2>
+  <p class="sources__note">Every figure links to its primary source. Checked 8 October 2026.</p>
+  <ol class="sources__list">
+<li id="source-1"><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic&#x27;s Claude Code overview describes it as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-2"><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic&#x27;s memory documentation says CLAUDE.md files above the working directory load at launch, while files in subdirectories load when Claude works on files there</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-3"><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic&#x27;s skills documentation says Claude uses a skill when it is relevant, or you can call one directly by name, and that project skills can be committed so a team gets them too</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-4"><a href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude, an open-source answer engine optimisation toolkit for Claude Code, on my GitHub</a> <span class="src-host">github.com</span></li>
+<li id="source-5"><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic&#x27;s MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-6"><a href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic&#x27;s scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose, for jobs such as morning briefings drawn from your calendar and inbox</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-7"><a href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic&#x27;s documentation on running Claude Code programmatically covers the non-interactive mode, started with claude -p</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-8"><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic&#x27;s subagents documentation says each subagent runs in its own context window with a custom system prompt, specific tool access and independent permissions</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-9"><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic&#x27;s permissions documentation says rules are evaluated deny first, then ask, then allow, and a matching ask rule prompts even when an allow rule also matches</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-10"><a href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener">Anthropic&#x27;s hooks guide describes hooks as shell commands that run at set points, giving deterministic control</a> <span class="src-host">code.claude.com</span></li>
+  </ol>
+</section>
+      </div>
+
+      <aside class="rail" aria-label="About this guide">
+        <dl class="rail__facts">
+          <div><dt>Topic</dt><dd><a href="/blog/?topic=agent">The AI marketing agent</a></dd></div>
+          <div><dt>Format</dt><dd>Working notes</dd></div>
+          <div><dt>Updated</dt><dd>8 October 2026</dd></div>
+          <div><dt>Reading time</dt><dd>12 minutes</dd></div>
+        </dl>
+        <button class="share-button" type="button" data-share data-share-title="How do you run a whole marketing function on Claude Code?" data-share-text="Working notes from a solo AI marketing engineer: how a whole marketing function runs on Claude Code, with lane files, skills, MCP connectors and review." data-share-url="/blog/running-marketing-on-claude-code.html" aria-label="Share this guide" aria-live="polite">Share guide</button>
+        <div class="explore">
+          <p class="explore__label">Explore with AI</p>
+          <p class="explore__note">Open this guide in an assistant and ask it what applies to your business.</p>
+          <ul class="explore__list">
+<li><a href="https://chatgpt.com/?q=Read%20https%3A//www.flowai.co.nz/blog/running-marketing-on-claude-code.html%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Flow%20AI%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">ChatGPT<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://claude.ai/new?q=Read%20https%3A//www.flowai.co.nz/blog/running-marketing-on-claude-code.html%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Flow%20AI%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">Claude<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://www.perplexity.ai/search?q=Read%20https%3A//www.flowai.co.nz/blog/running-marketing-on-claude-code.html%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Flow%20AI%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">Perplexity<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact centered" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="contact-title">Want to know which marketing job to fix first?</h2>
+        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact.html">Work with me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related__title">Keep reading</h2>
+      <div class="post-grid">
+<article class="post-card" data-topic="agent" data-date="2026-10-06" data-title="what is a marketing engineer? what the role does and how to tell a real one." data-minutes="14">
+  <a class="post-card__figure" href="/blog/what-is-a-marketing-engineer.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-a-marketing-engineer.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>14 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-a-marketing-engineer.html">What is a marketing engineer? What the role does and how to tell a real one.</a></h3>
+    <p class="post-card__desc">A marketing engineer builds and runs the AI systems behind marketing. What the role does, the skills, how it compares to GTM engineer, and how to hire one.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="what is an ai marketing agent? a definition for small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/what-is-an-ai-marketing-agent.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-an-ai-marketing-agent.html">What is an AI marketing agent? A definition for small business.</a></h3>
+    <p class="post-card__desc">An AI marketing agent plans, produces and ships marketing under human review. A definition for small business, plus how it differs from automation and ChatGPT.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-05" data-title="ai agents for marketing: which to build first, and how." data-minutes="12">
+  <a class="post-card__figure" href="/blog/ai-agents-for-marketing.html" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-agents-for-marketing.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-agents-for-marketing.html">AI agents for marketing: which to build first, and how.</a></h3>
+    <p class="post-card__desc">Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement.</p>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/about.html">Amber Lan</a></p>
+        <p class="site-footer__role">AI marketing engineer, Auckland</p>
+        <p class="site-footer__note">I build Flow AI's systems and review everything they send.</p>
+        <a class="site-footer__cta" href="/contact.html">Work with me</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/sprints/">How it works</a>
+      <a href="/work.html">Work</a>
+      <a href="/blog/">Guides</a>
+      <a href="/templates/">Free templates</a>
+      <a href="/about.html">About</a>
+      <a href="/manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/" aria-label="Flow AI home"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026, Auckland, New Zealand</span><a href="/privacy.html">Privacy</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="Email Amber Lan" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
