@@ -1,15 +1,13 @@
 # Flow AI (flowai.co.nz) · Amber Lan · AI marketing engineer · Auckland, New Zealand
 
-> Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Founded and run by Amber Lan, AI marketing engineer, from Auckland, New Zealand, working worldwide.
+> Flow AI is Amber Lan's practice and open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. She takes selected contract builds with teams and is open to senior roles.
 
 Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
 Key facts:
-- Service: AI-run marketing for NZ SMBs: SEO and answer engine optimization, content engine, outbound automation, analytics and reporting.
-- Audience: New Zealand small and medium businesses, and early-stage teams without a marketing hire. Australia served remotely.
-- Pricing (NZD): Starter sprint $997 one-time (one system, live within days). Flow Engine, run monthly: $1,000/month, cancel anytime, 30-day money-back guarantee on the first month. Founding-client rate locks for as long as the client stays.
-- Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland and across New Zealand. Flow AI is the engineered alternative: AI agents for marketing, reviewed by one marketing engineer, delivered as AI marketing transformation one agent at a time.
-- Referral: a referral fee for every signed client referred, paid after their first invoice clears.
+- Work with Amber: contract builds for teams that want an AI marketing system built with them, covering AI search and answer engine optimisation, a content engine, outbound and measurement. Each build starts with a written scope and is priced per project. The team keeps running the system after a documented handover.
+- Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
+- Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland and across New Zealand. The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
 - Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, and agentic AI tooling (Claude).
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
@@ -26,14 +24,14 @@ About Amber Lan (the person behind Flow AI):
 Full text of every page, for direct AI consumption and accurate citation: https://www.flowai.co.nz/llms-full.txt
 
 Site structure:
-- / (landing): the offer, founding terms, pricing, free tools, FAQ. Book a discovery call.
+- / (landing): what Flow AI builds, an illustrative demo, the systems, free tools and FAQ. Two routes: work with Amber on a build, or talk about a role.
 - /work.html: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
 - /cases.html: evidence library of working marketing systems, open source tools, and human-centred product builds, with honest project status and direct repository links.
 - /work/enterprise-gtm.html: case study, three demand engines feeding one pipeline for an enterprise AI platform launch.
 - /work/content-engine.html: case study, a content engine with a codified voice gate; walkthrough available on a call.
 - /work/geo-seo-toolkit.html: case study, the GEO/AEO toolkit that optimises for AI citations; running on this site.
 - /work/six-month-marketing-function.html: flagship case study, six months of one operator running a whole marketing function on AI systems; sanitised.
-- /contact.html: contact form for Flow AI. Describe what you sell and where growth is stuck; Amber Lan replies personally with a written audit on the gap within the first week.
+- /contact.html: contact form. Choose a contract build, a full-time role or something else; Amber Lan replies personally within two working days.
 - /about.html: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /manifesto.html: The Flow AI manifesto. Every other function built an engineering layer; Flow Intelligence is marketing's, run by one engineer.
 - /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
@@ -88,7 +86,7 @@ An AI marketing engineer does two jobs that are usually split: they write the go
 
 ## What does AI marketing cost in New Zealand?
 
-Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the free audit.
+Flow AI prices by system: a fixed-scope one-week install, then a monthly run that can be cancelled at any time. Current figures come with the written scope.
 
 
 ---
@@ -215,7 +213,7 @@ Excellent strategy, but execution still needs hands or budget on top.
 
 AI systems + one engineer
 
-Systems that do the production, one accountable person doing the judgment. Flow AI's version is public: NZ$997 one-time for one system, or NZ$1,000/month for the full engine.
+Systems that do the production, one accountable person doing the judgment. Flow AI's version is a contract build, scoped per project.
 
 Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub2.
 
@@ -265,7 +263,7 @@ AI marketing means using AI systems to run the repetitive parts of marketing: dr
 
 ### How much does AI marketing cost for a small NZ business?
 
-It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI publishes its pricing as a reference point: a NZ$997 one-time starter sprint, or NZ$1,000 per month for the full marketing engine, cancel anytime.
+It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI scopes and prices each build per project.
 
 ### Do I still need SEO if I am doing AEO?
 
@@ -303,9 +301,9 @@ Open this guide in an assistant and ask it what applies to your business.
 
 ## Want to know which marketing job to fix first?
 
-Tell Flow AI what the business does and where marketing stalls. The free audit returns a written plan naming the first system to install, within the week.
+Building this inside a team, or hiring someone who can? Tell Amber what you are working on.
 
-Get a free audit
+Work with me
 
 ## Keep reading
 
@@ -337,11 +335,11 @@ Author: Amber Lan (Flow AI)
 
 AI marketing systems · Auckland, worldwide
 
-# Your marketing, run by AI agents.
+# I build the AI agents that run marketing.
 
-Flow AI sets up agents for your search, content, outbound and reporting. A marketing engineer checks everything before it goes out.
+I run a whole marketing function on these agents, and this site opens the system up. Contract me to build it with your team, or talk to me about a role.
 
-Get a free auditSee how it works
+Work with meSee how it works
 
 FFernwick Plumbing
 
@@ -491,7 +489,7 @@ The channels in your retainerEleven marketing systems, built around your busines
 
 Speed to first output
 
-Onboarding, then a strategy deckA written audit of your marketing in the first week
+Onboarding, then a strategy deckA written scope before any build starts
 
 What you can inspect
 
@@ -535,15 +533,15 @@ Questions
 
 ### What is Flow AI?
 
-Flow AI is an AI marketing transformation practice. It builds the agents that run a marketing function, starting from strategy. Its founder has ten years in marketing and three building agents. Businesses use it instead of an agency or a hire.
+Flow AI is an AI marketing transformation practice. It builds the agents that run a marketing function, starting from strategy. Its founder has ten years in marketing and three building agents. Teams contract it to build their own system, and the work is open to inspect.
 
 ### How is Flow AI different from a marketing agency?
 
 An agency bills you monthly for people: an account manager, a strategist, a writer and a media buyer. Flow AI runs engineered systems, reviewed by one marketing engineer you talk to directly. Scope is fixed in advance, and everything built is documented and open to inspect.
 
-### What is the free audit?
+### How does a contract build start?
 
-The free audit is a written assessment of your marketing, delivered within the week. It ranks the gaps and names the first system to install. No card, no call. Every engagement with Flow AI starts here.
+Every contract build starts with a written scope: the gap to close first, the system that closes it, and what your team keeps running after handover.
 
 ### Who reviews the work before it goes out?
 
@@ -555,7 +553,7 @@ Flow AI is based in Auckland, New Zealand, and works worldwide. Its published re
 
 ### Is Flow AI an AI marketing agency?
 
-Flow AI covers what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and one marketing engineer reviews every send. Comparing AI marketing agencies in Auckland or across New Zealand? Start with the free audit.
+Flow AI covers what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and one marketing engineer reviews every send. It works as a contract build with your team, and everything built is documented and handed over.
 
 ### What is AI marketing transformation?
 
@@ -565,11 +563,11 @@ AI marketing transformation rebuilds a marketing function around AI agents. Agen
 
 Yes. Marketing leads use Flow AI to put AI agents to work in their own team. The agents take production, and the marketer keeps strategy and review. Every system is documented at handover, and the open-source skill library shows how each agent works.
 
-## Start with a free audit.
+## Start with a written scope.
 
-Tell us what you sell and where growth is stuck. Your written audit arrives within the week. No card, no call.
+Tell me what you are building, or the role you are hiring for. I reply personally within two working days.
 
-Get a free audit
+Work with me
 
 ---
 
@@ -585,7 +583,7 @@ How it works · Read, install, run
 
 Flow reads your business, then installs the agent with the most to gain in one week. After that it runs monthly, and a marketing engineer checks every send.
 
-Get a free auditSee the sprints
+Work with meSee the sprints
 
 The three steps
 
@@ -911,7 +909,7 @@ Your whole Flow Engine, running every month. In production these systems give ba
 
 - 05One clear report that re-aims positioning
 
-Get a free auditSee the engine running
+Work with meSee the engine running
 
 ---
 
@@ -927,7 +925,7 @@ Sprint 01 · Flow Intelligence · one week
 
 For businesses whose marketing keeps stalling. Settle what you claim and why buyers believe it, and every agent after this speaks with one voice.
 
-Get a free auditSee the six deliverables
+Work with meSee the six deliverables
 
 Sprint 01 of five · the Flow Engine · Previous: Sprint 05, Measurement agent · Next: Sprint 02, Search agent
 
@@ -969,7 +967,7 @@ Rewritten against the new position.
 
 A 90-day recommendation.
 
-Get a free auditOne week · fixed scope · documented handover
+Work with meOne week · fixed scope · documented handover
 
 ## How the week runs.
 
@@ -1013,7 +1011,7 @@ The method behind the enterprise go-to-market case study, sized for your busines
 
 ### What happens in the first week of the positioning sprint?
 
-The free audit comes first: your positioning and message assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
+The written scope comes first: your positioning and message assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -1027,7 +1025,7 @@ You work directly with the marketing engineer who builds it, on a scope and week
 
 Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
-Get a free auditCompare the five sprints
+Work with meCompare the five sprints
 
 A short form. I reply personally.
 
@@ -1045,7 +1043,7 @@ Sprint 02 · Search agent · one week
 
 For businesses missing from ChatGPT, Perplexity and AI Overviews. Most are today, so the first to show up wins cheaply.
 
-Get a free auditSee the six deliverables
+Work with meSee the six deliverables
 
 Sprint 02 of five · the Flow Engine · Previous: Sprint 01, Flow Intelligence · Next: Sprint 03, Content agent
 
@@ -1085,7 +1083,7 @@ Sitemap, canonical and feed, cleaned.
 
 IndexNow plus a Search Console walkthrough.
 
-Get a free auditOne week · fixed scope · documented handover
+Work with meOne week · fixed scope · documented handover
 
 ## How the week runs.
 
@@ -1129,7 +1127,7 @@ Open source, and running on this site right now. Read the case study, then inspe
 
 ### What happens in the first week of the AI-search sprint?
 
-The free audit comes first: your search and AI-search visibility assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
+The written scope comes first: your search and AI-search visibility assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -1143,7 +1141,7 @@ You work directly with the marketing engineer who builds it, on a scope and week
 
 Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
-Get a free auditCompare the five sprints
+Work with meCompare the five sprints
 
 A short form. I reply personally.
 
@@ -1161,7 +1159,7 @@ Sprint 03 · Content agent · one week
 
 For owners who know consistency wins. Show up every week in your own voice, without hand-writing every post.
 
-Get a free auditSee the six deliverables
+Work with meSee the six deliverables
 
 Sprint 03 of five · the Flow Engine · Previous: Sprint 02, Search agent · Next: Sprint 04, Outbound agent
 
@@ -1203,7 +1201,7 @@ Feed the engine in minutes a week.
 
 So the system runs without me.
 
-Get a free auditOne week · fixed scope · documented handover
+Work with meOne week · fixed scope · documented handover
 
 ## How the week runs.
 
@@ -1247,7 +1245,7 @@ The engine runs in production today. Read the case study.
 
 ### What happens in the first week of the content engine sprint?
 
-The free audit comes first: your content operation assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
+The written scope comes first: your content operation assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -1261,7 +1259,7 @@ You work directly with the marketing engineer who builds it, on a scope and week
 
 Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
-Get a free auditCompare the five sprints
+Work with meCompare the five sprints
 
 A short form. I reply personally.
 
@@ -1279,7 +1277,7 @@ Sprint 04 · Outbound agent · one week
 
 For B2B businesses whose next customers aren’t searching yet. Fifty honest emails, sent well, beat five thousand sent blind.
 
-Get a free auditSee the six deliverables
+Work with meSee the six deliverables
 
 Sprint 04 of five · the Flow Engine · Previous: Sprint 03, Content agent · Next: Sprint 05, Measurement agent
 
@@ -1321,7 +1319,7 @@ One shared meaning of “qualified”.
 
 Before the week ends.
 
-Get a free auditOne week · fixed scope · documented handover
+Work with meOne week · fixed scope · documented handover
 
 ## How the week runs.
 
@@ -1365,7 +1363,7 @@ See the design pattern in the outbound system on the work page.
 
 ### What happens in the first week of the outbound sprint?
 
-The free audit comes first: your outbound pipeline assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
+The written scope comes first: your outbound pipeline assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -1379,7 +1377,7 @@ You work directly with the marketing engineer who builds it, on a scope and week
 
 Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
-Get a free auditCompare the five sprints
+Work with meCompare the five sprints
 
 A short form. I reply personally.
 
@@ -1397,7 +1395,7 @@ Sprint 05 · Measurement agent · one week
 
 For businesses ready to spend with confidence. Know which channel brings customers, then put the next dollar there.
 
-Get a free auditSee the six deliverables
+Work with meSee the six deliverables
 
 Sprint 05 of five · the Flow Engine · Previous: Sprint 04, Outbound agent · Next: Sprint 01, Flow Intelligence
 
@@ -1451,7 +1449,7 @@ The benchmark, applied to your numbers.
 
 Every future campaign, measured from day one.
 
-Get a free auditOne week · fixed scope · documented handover
+Work with meOne week · fixed scope · documented handover
 
 ## How the week runs.
 
@@ -1495,7 +1493,7 @@ Try the free AI-readiness benchmark to see the diagnostic style first-hand.
 
 ### What happens in the first week of the analytics sprint?
 
-The free audit comes first: your tracking and reporting assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
+The written scope comes first: your tracking and reporting assessed in writing, gaps ranked. The build then ships every deliverable here inside the week, closed by a documented handover.
 
 ### Do I need to hire anyone to run this afterwards?
 
@@ -1509,7 +1507,7 @@ You work directly with the marketing engineer who builds it, on a scope and week
 
 Fixed scope, one week. If another system fits better, Flow will say so and point you there.
 
-Get a free auditCompare the five sprints
+Work with meCompare the five sprints
 
 A short form. I reply personally.
 
@@ -1613,9 +1611,9 @@ Sequencing beats volume. The same assets, landed in order against one launch mom
 
 ## Want a system like this pointed at your business?
 
-Tell me what you do and where the pipeline stalls. You get a written audit within the first week.
+Building this inside a team, or hiring for it? Tell me what you are working on.
 
-Get a free audit
+Work with me
 
 ---
 
@@ -1717,9 +1715,9 @@ Generated content fails at the last metre, in the lines a reader flags as machin
 
 ## Want a system like this pointed at your business?
 
-Tell me what you do and where the pipeline stalls. You get a written audit within the first week.
+Building this inside a team, or hiring for it? Tell me what you are working on.
 
-Get a free audit
+Work with me
 
 ---
 
@@ -1817,9 +1815,9 @@ Answer-engine optimisation is discipline, not tricks: let the crawlers in, say w
 
 ## Want a system like this pointed at your business?
 
-Tell me what you do and where the pipeline stalls. You get a written audit within the first week.
+Building this inside a team, or hiring for it? Tell me what you are working on.
 
-Get a free audit
+Work with me
 
 ---
 
@@ -1840,7 +1838,7 @@ Work with meHiring? Let's talk
 
 LinkedInGitHubEmail
 
-125open-source marketing skills, published10+ yearsacross every part of marketing1 functionrun end to end on agents, soloEN · 中文native in both languagesRunning a businessGet a free written audit of your marketingStart the auditRecruitingRoles I fit and how to reach meSee availabilityHiring managerInspect the systems I have shippedSee the work
+125open-source marketing skills, published10+ yearsacross every part of marketing1 functionrun end to end on agents, soloEN · 中文native in both languagesNeed a buildContract me to build the system with your teamDiscuss a buildRecruitingRoles I fit and how to reach meSee availabilityHiring managerInspect the systems I have shippedSee the work
 
 Now
 
@@ -2096,7 +2094,7 @@ Auckland, New Zealand. She works with businesses worldwide, in English and Manda
 
 ### How do you work with Amber Lan?
 
-Through Flow AI. It starts with a free written audit of your marketing, then one-week sprints that each install one agent, or the whole Flow Engine, run monthly.
+Two ways. Teams contract a build through Flow AI: a written scope, then a fixed-scope build their team keeps running. Companies hiring for a senior marketing engineer or GTM engineer role can reach out directly.
 
 ### Is Amber Lan open to marketing engineer or GTM engineer roles?
 
@@ -2118,9 +2116,9 @@ Keep going
 
 ## One person with an agent stack, instead of an agency.
 
-You talk to the person doing the work, with no account manager or junior in between. You pay for work you can see. Tell Flow what you sell and where growth is stuck. Your written audit comes back within the week.
+You talk to the person doing the work, with no account manager or junior in between. You pay for work you can see. Tell me what you are building, or the role you are hiring for.
 
-Get a free audit
+Work with me
 
 ---
 
@@ -2138,7 +2136,7 @@ The Flow AI manifesto
 
 Every other function built one. Marketing kept hiring. Flow Intelligence is its layer: ten agents briefed from your positioning, one engineer reviewing every send.
 
-Get a free auditSee how it works
+Work with meSee how it works
 
 The pattern
 
@@ -2320,9 +2318,9 @@ Anything done twice by hand becomes a system. People stay on strategy and judgem
 
 ## The layer is ready for your business.
 
-Tell us what you sell and where growth is stuck. Within the week, a written audit names the first agent to install.
+Building this inside a team, or hiring for it? Tell me what you are working on.
 
-Get a free auditSee how it works
+Work with meSee how it works
 
 ---
 
@@ -2427,9 +2425,9 @@ Prefer to run them yourself? Each template page carries its install command for 
 
 ## Put the whole Flow Engine to work.
 
-A free audit names the first agent to install on your business and what it would change.
+A written scope names the first agent to install on your business and what it would change.
 
-Get a free auditSee how it works
+Work with meSee how it works
 
 ---
 
@@ -2520,7 +2518,7 @@ More templates
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
-Get a free auditInstall Flow Intelligence as a one-week positioning sprint
+Work with meInstall Flow Intelligence as a one-week positioning sprint
 
 ---
 
@@ -2611,7 +2609,7 @@ More templates
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
-Get a free auditInstall the search agent as a one-week AI-search sprint
+Work with meInstall the search agent as a one-week AI-search sprint
 
 ---
 
@@ -2826,7 +2824,7 @@ More templates
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
-Get a free auditInstall the search agent as a one-week AI-search sprint
+Work with meInstall the search agent as a one-week AI-search sprint
 
 ---
 
@@ -2915,7 +2913,7 @@ More templates
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
-Get a free auditInstall the search agent as a one-week AI-search sprint
+Work with meInstall the search agent as a one-week AI-search sprint
 
 ---
 
@@ -3006,7 +3004,7 @@ More templates
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
-Get a free auditInstall the content agent as a one-week content engine sprint
+Work with meInstall the content agent as a one-week content engine sprint
 
 ---
 
@@ -3099,7 +3097,7 @@ More templates
 
 A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.
 
-Get a free auditAsk about running the community agent every month
+Work with meAsk about running the community agent every month
 
 ---
 
@@ -3260,9 +3258,9 @@ Author: Amber Lan (Flow AI)
 
 Contact
 
-# Get your free marketing audit.
+# Build it with your team, or hire for it.
 
-Three fields, plus your site if you have one. Within the week, you get a written audit of your marketing. It ranks the gaps and names the first agent to install. No card, and no sales calls or sequences.
+Tell me what you are working on. I read every message myself and reply within two working days.
 
 Your nameEmailYour website optionalMessageSend
 
@@ -3272,13 +3270,13 @@ Here is what follows when you press Send.
 
 01
 
-### We read your business
+### I read your message
 
 A marketing engineer reads what you sent and checks your site.
 
 02
 
-### You get a written audit
+### You get a written reply
 
 The gap to close first, and why.
 
@@ -3314,15 +3312,15 @@ You work directly with the person who writes the strategy and builds the systems
 
 ### How quickly can the first system go live?
 
-The written audit arrives within the first week. The first agreed system is designed to go live in week one.
+The written scope comes back within a few days of the first conversation, and a typical build goes live in its first week.
 
 ### Who is Flow AI for?
 
-Flow AI is for early-stage teams and small businesses in Australia and New Zealand. They get senior marketing thinking and hands-on execution without hiring a full internal function.
+Flow AI is for teams that want an AI marketing system built with them, from early-stage startups to in-house marketing teams. For companies hiring, the same work is Amber Lan's portfolio.
 
 ### What does AI marketing cost in Australia and New Zealand?
 
-Flow AI prices by system. Each starts with a fixed-scope one-week install, then a monthly run you can cancel any time. Current figures come with the free audit, so you see the price against your own situation.
+Flow AI scopes and prices each build per project. A typical build is a fixed-scope week, and your team keeps running the system after handover.
 
 ### What is AI-search optimisation?
 
@@ -3491,7 +3489,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is an AI marketing engineer in Auckland who builds those systems and reviews everything they send. The skill library is public, so you can inspect the work before you talk to anyone.
 
-For businesses, the free audit names the first system to install. For recruiters and hiring teams with a marketing engineer or GTM engineer role, Amber is open to conversations about senior roles, remote from anywhere.
+For teams, the written scope names the first system to install. For recruiters and hiring teams with a marketing engineer or GTM engineer role, Amber is open to conversations about senior roles, remote from anywhere.
 
 The short version
 
@@ -3499,7 +3497,7 @@ A marketing engineer builds and runs the AI systems that produce a company's mar
 
 Judge the person by what is running. Ask for a system you can inspect and the number it moves each week, then ask who reviews every send. For a small business, buying the systems first and hiring later is usually the better order.
 
-To find out which system your marketing needs first, request a free audit.
+To find out which system your marketing needs first, talk to Amber.
 
 Q: What does a marketing engineer do?
 A: A marketing engineer builds the systems that produce marketing work and then runs them every week. Typical systems include a content engine briefed from the company's positioning, an outbound agent with a human takeover rule, AI search fixes so assistants describe the business correctly, and a reporting agent. The engineer reviews what the systems produce and decides what reaches customers.
@@ -3651,7 +3649,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan builds and runs these systems herself and runs a whole marketing function on them, with a person reviewing everything before it ships.
 
-The starting point is a free audit, a written plan that names the first system to install and why. The free agent templates are there if you would rather start on your own.
+The starting point is a written scope, a written plan that names the first system to install and why. The free agent templates are there if you would rather start on your own.
 
 The short version
 
@@ -3659,7 +3657,7 @@ AI is now good at the production half of marketing: research, drafts, repurposin
 
 Start with the AI already inside your tools and one chat assistant, measure hours and errors for a month, and only move a job to an agent once it repeats reliably and has a clear review step. The time you get back is worth most when it goes into positioning and buyer conversations.
 
-To find out which marketing job to hand over first, request a free audit.
+To find out which marketing job to hand over first, talk to Amber.
 
 Q: What is the best AI for marketers?
 A: The best AI for a marketer is the one that fits the job and already sits where the work happens. For drafting and research, a general chat assistant such as ChatGPT, Claude or Gemini covers most needs. For email, social and CRM work, the AI features inside tools you already pay for are usually enough. Agents earn their cost only when a job repeats every week and has a clear review step.
@@ -3827,7 +3825,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the ten agents in this guide from one positioning brief, installs them one at a time as week-long sprints, and a marketing engineer reviews every send before it reaches a customer.
 
-The free audit reads the business and names the first agent to build and why. If you would rather build your own, the free agent templates are a starting point for the brief, the guardrails and the review step.
+The scope reads the business and names the first agent to build and why. If you would rather build your own, the free agent templates are a starting point for the brief, the guardrails and the review step.
 
 The short version
 
@@ -3835,7 +3833,7 @@ AI agents for marketing work best as a small team built in order. Write the posi
 
 Add the next agent when the last one runs weekly with under an hour of review. Measure before you spend, and ask every "best agent" list to show real output.
 
-To find out which agent your business should build first, request a free audit.
+To find out which agent your business should build first, talk to Amber.
 
 Q: What is the best AI agent for marketing?
 A: The best agent is the one aimed at the gap that costs your business most, briefed from your own positioning, with a human reviewing its output. For most small businesses that is a search agent or an outbound agent. A product list cannot answer the question, because the same agent that suits a B2B consultancy is the wrong first build for a café.
@@ -3983,7 +3981,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is the engineered version of the fourth column: AI agents plus one marketing engineer, Amber Lan, who builds the systems on your accounts, documents them and reviews the work before it ships.
 
-The skill library shows the systems openly. It starts with a free audit that names the first system to install. The starter sprint is NZ$997 one-time, and the marketing engine retainer is NZ$1,000 a month, cancel anytime, with a 30-day money-back on the first month. The sprints page lists what each install covers.
+The skill library shows the systems openly. It starts with a written scope that names the first system to install. Each build is scoped and priced per project. The sprints page lists what each install covers.
 
 The short version
 
@@ -3991,7 +3989,7 @@ Pick an AI marketing agency for marketing run for you, an AI automation agency f
 
 Whichever you choose, get the price and scope in writing, keep every account in your name, and ask who reviews the work and where your data goes.
 
-To see which option fits your business, request a free audit.
+To see which option fits your business, talk to Amber.
 
 Q: What does an AI automation agency do?
 A: An AI automation agency connects the software a business already uses and adds AI steps so repetitive work runs on its own. Typical jobs are answering and routing enquiries, qualifying leads, booking appointments, moving data between systems, drafting quotes and sending follow-ups. Most charge a setup fee for the build and a monthly fee for hosting, monitoring and fixes, and the work is usually built on platforms such as Make, Zapier or n8n.
@@ -4145,7 +4143,7 @@ The local groundwork (Google Business Profile, reviews, suburb pages, NZ directo
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Search and AI search is often the first system it installs, through the AI search sprint, and the free audit names whether that is the right first step for your business.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Search and AI search is often the first system it installs, through the AI search sprint, and the written scope names whether that is the right first step for your business.
 
 The tools behind the work are public. The free agent templates include the AI crawler access check and a full GEO audit, and the open-source GEO skills sit in the Flow AI skill library for anyone who wants to install and run them on their own site.
 
@@ -4155,7 +4153,7 @@ Answer engine optimisation is the work of being named when an AI tool answers a 
 
 InternetNZ found 55% of New Zealanders used AI in search engines in the past year. A business that does the groundwork now gives every engine what it needs to recommend it, and the same work pays back in ordinary Google search.
 
-To find out which part of AI search to fix first on your site, request a free audit.
+To find out which part of AI search to fix first on your site, talk to Amber.
 
 Q: Is answer engine optimisation replacing SEO?
 A: AEO sits on top of SEO and depends on it. Google says pages need no special markup to appear in AI Overviews beyond normal SEO best practice, and ChatGPT search draws on partner search indexes including Bing. A site that search engines cannot crawl or index will struggle in AI answers too. Treat AEO as the extra layer: answer-first pages, consistent facts, and mentions on other sites.
@@ -4291,7 +4289,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It builds the planning and the production as installable systems that stay on the business's own domain and accounts, and a human reviews everything before it ships.
 
-The method is public. The skill library holds 125 inspectable skills, and the free audit names the first system to install and why, before any money changes hands.
+The method is public. The skill library holds 125 inspectable skills, and the written scope names the first system to install and why, before any money changes hands.
 
 The short version
 
@@ -4299,7 +4297,7 @@ An AI CMO is software that plans marketing on a schedule: it reads, ranks, plans
 
 The owner keeps the decisions that commit the business: positioning, pricing, claims, spend, customer contact and personal data. Judge any AI CMO by the plan it writes for a business your size and by last month's report.
 
-To find out what your first plan should fix, request a free audit.
+To find out what your first plan should fix, talk to Amber.
 
 Q: Is an AI CMO the same as an AI marketing agent?
 A: They overlap. An AI CMO usually means the planning layer: what to work on, in what order, measured against which numbers. An AI marketing agent covers the whole loop, so it plans, produces the work, ships it under review and reports back. A product sold as an AI CMO that produces nothing is a planner, and a planner still needs someone to do the work it plans.
@@ -4457,7 +4455,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For search, that means the Business Profile routine, review requests, service pages and monthly tracking in this guide, installed on your own site and accounts so they keep running when you are busy.
 
-The free audit names the first system to install. If you would rather do it yourself, every step above works with free tools.
+The written scope names the first system to install. If you would rather do it yourself, every step above works with free tools.
 
 The short version
 
@@ -4465,7 +4463,7 @@ Google handles about nine in ten New Zealand searches, so SEO for a small busine
 
 Then fix the technical basics in Search Console and track enquiries monthly. The same work is what AI search reads, so one effort covers both.
 
-To find out which part of this your business should fix first, request a free audit.
+To find out which part of this your business should fix first, talk to Amber.
 
 Q: Can I do SEO for my small business myself?
 A: Yes. The work that matters most for a local NZ business is free and needs no technical skill: completing your Google Business Profile, asking for reviews, writing one clear page per service and per area, and checking Google Search Console once a month. Budget three to five hours a week for the first month, then about an hour a week to keep it going.
@@ -4639,7 +4637,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For outbound, that means setting up the list, research, drafting and sequencing system on your own accounts, with the consent record and the human review step built in from the first send.
 
-It starts with a free audit, which names the first system worth installing. If outbound is that system, a starter sprint installs it and the retainer keeps it running. The skills behind it are public in the Flow AI skill library, and the start-here guide to AI marketing for NZ small business shows how outbound connects to the rest.
+It starts with a written scope, which names the first system worth installing. If outbound is that system, a contract build sets it up with your team. The skills behind it are public in the Flow AI skill library, and the start-here guide to AI marketing for NZ small business shows how outbound connects to the rest.
 
 The short version
 
@@ -4647,7 +4645,7 @@ Outbound sales automation for a small business is a short list, one true reason 
 
 In New Zealand and Australia, the spam law rules come first. Get those right, along with the deliverability basics, measure replies with a stated method, and a few hours a week can produce a steady flow of good conversations.
 
-To find out whether outbound is the right first system for your business, request a free audit.
+To find out whether outbound is the right first system for your business, talk to Amber.
 
 Q: Is cold email legal in New Zealand?
 A: Commercial email with a New Zealand link, such as one sent to a New Zealand business, needs consent under the Unsolicited Electronic Messages Act 2007. For business-to-business email, deemed consent can apply when the address is conspicuously published, the message is relevant to the person's role, and there is no statement saying they do not want messages. Every email must identify the sender and include a working unsubscribe. Check the Act for your own case.
@@ -4797,7 +4795,7 @@ Survey data backs up asking hard questions early. Setup's 2025 Marketing Relatio
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A free audit names the first system to install, the starter sprint is NZD 997 one-time, and the marketing engine retainer is NZD 1,000 a month, cancel anytime, with a 30-day money-back on the first month.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
 
 On price that sits below a multi-channel retainer, and the trade-off should be clear before you compare. Amber Lan builds and runs the systems herself, so you get one practitioner and AI agents doing the production, with no account team or media-buying department, and ad spend stays separate as it would with any agency. The sprints and the skill library are public, so you can judge what gets installed before you talk to anyone.
 
@@ -4807,7 +4805,7 @@ A New Zealand marketing agency costs NZD 95 to 200 an hour, or a retainer of abo
 
 Compare quotes on cost per enquiry, keep your accounts in your own name, and start with one channel done well. If an agency is more than you need, the guide to marketing agency alternatives in NZ and the agency vs freelancer vs in-house comparison cover the other routes, and the fractional marketing manager guide covers the part-time option.
 
-To have a quote checked against your own numbers, request a free audit.
+To have a quote checked against your own numbers, talk to Amber.
 
 Q: Is a cheap marketing agency worth it?
 A: A cheap agency can be worth it when the scope is narrow and written down, for example a small SEO package covering a set number of pages, or ads management on a modest budget. It goes wrong when a low fee is spread across several channels, because the hours per channel become too small to build anything. Divide the fee by the hourly rate and check the hours make sense for the work promised.
@@ -4903,7 +4901,7 @@ AI-led marketing services
 
 An AI-led marketing service installs software systems and AI agents that do the production work of marketing, with a person reviewing what goes out. Published New Zealand examples cost about NZD 500 to 1,000 a month plus a setup fee. They suit a business where someone can spend an hour or so a week approving work.
 
-The category is new, and scopes vary widely. As of October 2026, Growin, a NZ AI marketing agency, lists a Launch package at NZD 1,500 setup plus NZD 500 a month and a Foundation package at NZD 4,000 one-off, plus GST, scoped around ads and lead intake. Flow AI publishes a NZD 997 starter sprint and a NZD 1,000 a month retainer, described further down.
+The category is new, and scopes vary widely. As of October 2026, Growin, a NZ AI marketing agency, lists a Launch package at NZD 1,500 setup plus NZD 500 a month and a Foundation package at NZD 4,000 one-off, plus GST, scoped around ads and lead intake. Flow AI's contract builds are described further down.
 
 Before you buy any of them, ask four things. Which work does software do and which does a person check? Who approves anything published under your business name? Do you own the accounts, content and data? How do you leave, and what do you keep? A service that shows its working before you pay is easier to judge than one that only describes outcomes. The definition of an AI marketing agent explains what the software side should do.
 
@@ -4927,7 +4925,7 @@ Then compare your shortlist on cost per enquiry: the total monthly cost, includi
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A free audit names the first system to install, the starter sprint is NZD 997 one-time, and the retainer is NZD 1,000 a month with a 30-day money-back on the first month.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
 
 It is one of the AI-led options, and it suits a business with someone who can review work weekly. Amber Lan builds and runs the systems herself, so there is no account team, and ad spend is separate. To see where you stand first, the free AI-readiness benchmark needs no email.
 
@@ -4937,7 +4935,7 @@ The alternatives to a full-service agency in New Zealand are DIY with AI tools, 
 
 Match the option to your hours, your channels and whether someone can review the work, then compare the shortlist on cost per enquiry. An agency is still the right buy for coordinated multi-channel growth with the budget behind it.
 
-For a view on which option fits your business, request a free audit.
+For a view on which option fits your business, talk to Amber.
 
 Q: What is the cheapest alternative to a marketing agency?
 A: Doing it yourself with AI tools is the cheapest in cash, because you pay only for subscriptions. It is rarely the cheapest in total, since your hours have a cost and marketing tends to stop in your busiest months. For a business that cannot spend NZD 1,000 a month on outside help, it is still the right place to start, ideally with one channel and a fixed weekly slot.
@@ -5091,7 +5089,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For AI search, that means the test prompts, listing fixes, page rewrites and monthly tracking above, installed as a system on your own site and accounts. The AI search sprint describes exactly what gets installed.
 
-It starts with a free audit that names the first system to install, which for many local businesses is this one. You can also do every step here yourself: nothing in this guide needs a paid tool.
+It starts with a written scope that names the first system to install, which for many local businesses is this one. You can also do every step here yourself: nothing in this guide needs a paid tool.
 
 The short version
 
@@ -5099,7 +5097,7 @@ ChatGPT has no sign-up form. It and the other assistants search the web and name
 
 Then keep your details identical everywhere, collect recent reviews every week, and re-run your prompts monthly. Most of this is an afternoon of setup and a small weekly habit.
 
-To find out which of these steps your business needs first, request a free audit.
+To find out which of these steps your business needs first, talk to Amber.
 
 Q: Can I pay to get my business mentioned by ChatGPT?
 A: There is no paid listing that puts your business into ChatGPT's answers. ChatGPT search draws on the open web and on partner search providers, so the paths in are the same ones that work for search: pages it can crawl, consistent business details, reviews and mentions on other sites. Anyone selling a guaranteed ChatGPT placement is selling something OpenAI does not offer.
@@ -5231,7 +5229,7 @@ A fractional manager's value comes from directing existing activity. With nothin
 
 Leaner first steps that keep a fractional manager on the table for later:
 
-A free, written audit of what to fix first, so the first spend goes on the biggest gap.
+A written scope of what to fix first, so the first spend goes on the biggest gap.
 
 Fixing the website and Google Business Profile, which every later channel depends on.
 
@@ -5261,7 +5259,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It covers the production and reporting side that a fractional manager directs, with Amber Lan building and reviewing the systems herself. It can sit under a fractional manager or come before one.
 
-It starts with a free audit that names the first system to install. The starter sprint is NZ$997 one-time, and the marketing engine retainer is NZ$1,000 a month with a 30-day money-back on the first month. The sprints page lists what each one installs.
+It starts with a written scope that names the first system to install. Each build is scoped and priced per project. The sprints page lists what each one installs.
 
 The short version
 
@@ -5269,7 +5267,7 @@ A fractional marketing manager is a senior marketer you share by the day. In New
 
 It pays off when there is spend to direct and nobody senior directing it. Before that, a written plan and a small production system usually go further, with the fractional manager added when the work outgrows the owner.
 
-To find out which comes first for your business, request a free audit.
+To find out which comes first for your business, talk to Amber.
 
 Q: Is a fractional CMO the same as a fractional marketing manager?
 A: They overlap, and NZ providers use the titles loosely. A fractional CMO usually works on strategy and budget with the owner or board, and is priced from about NZD 4,000 a month. A fractional marketing manager usually runs the plan week to week, manages suppliers and reports results, and is priced from the contract marketing manager rate. Ask what each person will do in a normal week before comparing titles.
@@ -5282,7 +5280,7 @@ A: Yes, and it is a sensible path. A fractional manager builds the plan and the 
 Q: Does a fractional marketing manager do the marketing work themselves?
 A: Some do part of it, but the time is limited. One day a week covers planning, briefing, checking and reporting, with a little production. The writing, design, ads and social posting usually sit with freelancers, an agency, an in-house coordinator or AI systems that the manager directs. Budget for that production separately from the manager's fee.
 Q: Is a fractional marketing manager worth it for a small business?
-A: It is worth it when the business has a working offer, some marketing spend already going out and nobody senior to own it. In that case the manager stops waste and gives the spend direction. A business still testing its offer, or with very little budget for production, usually gets more from a free audit and a lean setup first.
+A: It is worth it when the business has a working offer, some marketing spend already going out and nobody senior to own it. In that case the manager stops waste and gives the spend direction. A business still testing its offer, or with very little budget for production, usually gets more from a written plan and a lean setup first.
 
 ## Fractional CMO vs AI CMO: which does a small business in Australia or New Zealand need?
 URL: https://www.flowai.co.nz/blog/fractional-cmo-vs-ai-cmo.html
@@ -5337,7 +5335,7 @@ What does an AI CMO cost?
 
 An AI CMO costs a monthly fee plus the owner's review time. No independent survey prices AI CMOs in New Zealand or Australia yet, so the honest guide is published price pages. The few that publish prices charge a setup fee and then hundreds to low thousands a month, well below a fractional CMO.
 
-Published NZD examples are rare. Growin, a New Zealand AI marketing agency, publishes an NZD 1,500 setup and NZD 500 a month package plus GST, scoped to ads and lead intake. Flow AI's starter sprint is NZD 997 one-time, and the marketing engine retainer is NZD 1,000 a month, cancel anytime, with a 30-day money-back on the first month. The wider market is in the AI marketing cost guide for Australia and New Zealand.
+Published NZD examples are rare. Growin, a New Zealand AI marketing agency, publishes an NZD 1,500 setup and NZD 500 a month package plus GST, scoped to ads and lead intake. Flow AI scopes and prices each build per project. The wider market is in the AI marketing cost guide for Australia and New Zealand.
 
 The invoice is only part of the cost. Count four things:
 
@@ -5413,7 +5411,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It sits on the AI side of this comparison, with the planning and the production built as systems on the business's own accounts and a human approving everything that ships.
 
-It can work alongside a fractional CMO where a business has one. The free audit names the first system to install. The starter sprint is NZD 997 one-time, and the retainer is NZD 1,000 a month with a 30-day money-back on the first month. The sprints page lists what each install covers.
+It can work alongside a fractional CMO where a business has one. The written scope names the first system to install. Each build is scoped and priced per project. The sprints page lists what each install covers.
 
 The short version
 
@@ -5421,7 +5419,7 @@ A fractional CMO costs about NZD 4,000 to 10,000 a month in New Zealand and AUD 
 
 Pick the person for big decisions, the software for weekly execution, and both when the business is growing and the plan needs someone senior to own it.
 
-To see which gap your business has, request a free audit.
+To see which gap your business has, talk to Amber.
 
 Q: How much does a fractional CMO cost in New Zealand?
 A: Published 2026 ranges put a New Zealand fractional CMO at NZD 4,000 to 6,000 a month for strategy only and NZD 6,000 to 10,000 or more with hands-on execution, according to King Tide and Kyttn. Maestro quotes NZD 6,000 to 12,000 for businesses with NZD 3 million to 20 million in revenue. Robert Walters puts Auckland CMO contract rates at NZD 160 to 240 an hour. Prices usually exclude GST.
@@ -5569,7 +5567,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is closest to the last row of the comparison table. Amber Lan builds the systems, they run on your own accounts, and she reviews the work before it ships. The skill library shows the systems openly.
 
-It starts with a free audit that names the first system to install. The starter sprint is NZ$997 one-time, and the marketing engine retainer is NZ$1,000 a month with a 30-day money-back on the first month.
+It starts with a written scope that names the first system to install. Each build is scoped and priced per project.
 
 The short version
 
@@ -5577,7 +5575,7 @@ An AI marketing agency is worth paying for when several channels need to run eve
 
 When the work is mostly referrals, one channel or a small budget, a freelancer, AI tools or a written plan will usually go further. Pick the option that matches the work you have this year.
 
-To see which option fits your business, request a free audit.
+To see which option fits your business, talk to Amber.
 
 Q: What does an AI marketing agency do?
 A: An AI marketing agency plans and produces marketing using AI systems it runs on your behalf: drafting content, building pages, running ads, answering enquiries, tracking results and reporting. People set the direction and review the work. In practice the label also covers traditional agencies that use AI tools internally, so ask to see the systems before assuming the delivery model has changed.
@@ -5757,7 +5755,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For content, that means installing the weekly engine above on your own accounts, with the question list, the drafting skills and the review step already set up, and you approving everything before it goes out.
 
-It starts with a free audit, which names the first system worth installing for your business. If content is that system, the starter sprint installs it and the retainer keeps it running. The skills it runs on are public in the Flow AI skill library.
+It starts with a written scope, which names the first system worth installing for your business. If content is that system, a contract build sets it up with your team. The skills it runs on are public in the Flow AI skill library.
 
 The short version
 
@@ -5765,7 +5763,7 @@ Content marketing for a New Zealand small business is a habit you can keep: coll
 
 AI makes the drafting and reformatting fast. What you know about your customers, and the edit you give every draft, are what make the content worth reading and what make it bring in work over time.
 
-To find out which part of your marketing to systemise first, request a free audit.
+To find out which part of your marketing to systemise first, talk to Amber.
 
 Q: How much content does a small business need?
 A: Less than most owners think. One useful long piece a fortnight, cut into four or five social posts and a short email, is a sustainable rhythm for a 5 to 50 person business. Twenty pieces that answer the questions customers really ask will outperform a hundred generic posts. Consistency over six months matters more than volume in any single week.
@@ -5923,7 +5921,7 @@ The AI marketing transformation guide sets out the same 90 days department by de
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The free audit is a written version of steps one and two for your business: the claim, where marketing is losing, and the first system to install.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope is a written version of steps one and two for your business: the claim, where marketing is losing, and the first system to install.
 
 To check readiness on your own first, the free AI-readiness benchmark takes no email, and the free agent templates are open to anyone building the first jobs themselves.
 
@@ -5933,7 +5931,7 @@ An AI marketing strategy for a small business is one page: what you claim, the q
 
 Run it for 90 days before judging it, then rewrite it with what customers actually responded to. The guide to AI marketing for small business in NZ covers the wider picture.
 
-To get the first version of the page written for your business, request a free audit.
+To get the first version of the page written for your business, talk to Amber.
 
 Q: What should a small business AI marketing strategy include?
 A: It should include six things on one page: the positioning claim and its proof, the twenty questions customers ask, the one or two marketing jobs handed to AI first, the review rules and who owns each, two numbers to measure, and a weekly hours budget. Tool choices come last. If the page cannot say who approves outbound email, the strategy is not finished.
@@ -6125,7 +6123,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Each example above is a marketing job Flow AI installs as a system on the business's own accounts, with a person approving before anything ships.
 
-It starts with a free audit, a written plan naming the first system to install and why. The methods are public: the skill library and the free agent templates can be read or run by anyone.
+It starts with a written scope, a written plan naming the first system to install and why. The methods are public: the skill library and the free agent templates can be read or run by anyone.
 
 The short version
 
@@ -6133,7 +6131,7 @@ Useful AI marketing examples for a small business are small and repeatable: one 
 
 Pick the two jobs your business is missing most, run them for a month, and let the Monday report choose the third. For the wider picture, start with the guide to AI marketing for small business in NZ.
 
-To find out which of the ten examples your business should run first, request a free audit.
+To find out which of the ten examples your business should run first, talk to Amber.
 
 Q: What is the best AI marketing example for a small business to start with?
 A: Start with positioning: an AI system drafts a one-page file of what the business claims, who it serves and the proof behind each claim, and the owner approves every line. It produces nothing customers see, yet every other example reads from it. After that, most small businesses add search or content, because both depend on the positioning file and both keep working between busy weeks.
@@ -6273,7 +6271,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For automation, that means the six sequences above built on the business's own accounts, drafted by agents, approved by a person and reviewed against the numbers each month.
 
-The free audit names which automation to install first and which tools the business already owns can run it, so nothing new is bought until it is needed.
+The written scope names which automation to install first and which tools the business already owns can run it, so nothing new is bought until it is needed.
 
 The short version
 
@@ -6281,7 +6279,7 @@ Marketing automation sends the right message when a customer does something. AI 
 
 Record consent, sync unsubscribes, keep personal data out of public AI tools and have a person read every first send. The guide to the AI CMO covers the planning layer that decides what to automate next.
 
-To find out which automation your business should run first, request a free audit.
+To find out which automation your business should run first, talk to Amber.
 
 Q: What should a small business automate first?
 A: Start with the enquiry follow-up: an instant acknowledgement when someone fills in the form, then a reminder to the team and a second message if nobody has replied within a day. It touches the people most likely to buy, it needs no list to have been built first, and any business that takes enquiries can set it up in an afternoon on tools it may already pay for.
@@ -6411,7 +6409,7 @@ A hybrid works when roles are written down. Decide who owns the plan, who owns e
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A free audit names the first system to install, the starter sprint is NZD 997 one-time, and the retainer is NZD 1,000 a month with a 30-day money-back on the first month.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
 
 It works as a fourth option, and on price it sits between a freelancer and a multi-channel agency. Amber Lan builds and runs the systems herself, with AI agents doing production and a person in your business approving what goes out, so it suits a team with someone who can review weekly. The public skill library shows what the systems do.
 
@@ -6421,7 +6419,7 @@ A freelancer is cheapest for one defined job at NZD 50 to 150 an hour. An agency
 
 Choose by workload and by who will manage the work, keep your accounts in your own name, and compare every option on cost per enquiry after three months.
 
-For help choosing between them for your business, request a free audit.
+For help choosing between them for your business, talk to Amber.
 
 Q: How much does a freelance marketer charge in NZ?
 A: New Zealand freelance marketers charge about NZD 50 to 150 an hour, according to 2026 guides from Jelly Digital (NZD 50 to 120) and King Tide Marketing (NZD 60 to 150). Monthly retainers run NZD 500 to 3,000. Senior consultants charge NZD 150 to 250 an hour. Rates rise with specialism, so a paid ads specialist usually costs more than a generalist social media freelancer.
@@ -6557,7 +6555,7 @@ Buying-intent searches are where AI answers increasingly appear. Semrush's study
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It treats SEO, AEO and GEO as one search system, installed through the AI search sprint, and the free audit names which part to fix first on your site.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It treats SEO, AEO and GEO as one search system, installed through the AI search sprint, and the written scope names which part to fix first on your site.
 
 The tools are public. The free agent templates include the AI crawler check and a full GEO audit, and the open-source GEO skills are in the skill library for anyone who prefers to run them in-house.
 
@@ -6567,7 +6565,7 @@ SEO ranks your pages. AEO gets your business named in AI answers. GEO is the res
 
 The extra AI work is small and mostly off Google: Bing indexing, AI crawler access, reviews and mentions, and a monthly check of what the engines say. Do the shared basics first, then add those.
 
-To see which of the three needs attention first on your site, request a free audit.
+To see which of the three needs attention first on your site, talk to Amber.
 
 Q: Do I need to choose between SEO, AEO and GEO?
 A: No choice is needed, because most of the work counts for all three. Indexable pages, clear answers to customer questions, consistent business details and reviews help you rank in Google and get named by ChatGPT. The only real decision is order. For most small businesses, fix the SEO basics first, then add the AEO work that happens off Google, such as Bing indexing and AI crawler access.
@@ -6721,7 +6719,7 @@ The usage data is thin. Ahrefs' June 2026 study of 137,210 domains found 28% pub
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The free audit works through this checklist on your site and names the first system to install, which for many businesses is the AI search sprint.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope works through this checklist on your site and names the first system to install, which for many businesses is the AI search sprint.
 
 Prefer to do it yourself? The free agent templates include the AI crawler access check, an AI citability scorer and a full GEO audit, and the open-source GEO skills are in the skill library.
 
@@ -6731,7 +6729,7 @@ Open your site to AI crawlers and get indexed in Google and Bing. Make your busi
 
 The first two groups take a day and protect everything else. The rest compound, and every item helps in ordinary Google search too. For the full background, read the guide to answer engine optimisation.
 
-To have the checklist run on your site and the first fix named, request a free audit.
+To have the checklist run on your site and the first fix named, talk to Amber.
 
 Q: Do I need to do all 20 items to see results?
 A: No. The first four, covering crawler access and indexing in Google and Bing, matter most, because an engine that cannot read your site cannot quote it. After that, the Google Business Profile, a fact sheet and answer-first openings on your top five pages give the biggest return for the time. The rest compound over months, so spread them out rather than skipping them.
@@ -6905,7 +6903,7 @@ Why the term needs a small business definition
 
     Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It was built by a marketing engineer rather than assembled by a platform team, and it runs the eleven departments above as installable systems that stay on the business's own domain and accounts. A human reviews everything before it ships, which is a design rule rather than a plan setting.
 
-    It starts with a free audit: a written plan on the business, produced before any money changes hands, naming the first department and why. The departments available today are on the sprints page.
+    It starts with a written scope: a written plan on the business, produced before any money changes hands, naming the first department and why. The departments available today are on the sprints page.
 
 The short version
 
@@ -6913,7 +6911,7 @@ The short version
 
     Before an agent, small business marketing happened in the gaps, which is why it stopped every time the business got busy. After one, production runs on a system and the month ends with a report rather than an apology. With only 13% of marketers using agentic AI while 61% of New Zealand businesses already use AI somewhere, moving from tools to a system this year is being early on purpose.
 
-    To see which of the ten marketing jobs to install first, request a free audit.
+    To see which of the ten marketing jobs to install first, talk to Amber.
 
 Q: Is ChatGPT an AI marketing agent?
 A: No. ChatGPT is a general AI tool: it produces work when a person prompts it, and it stops when the person stops. An AI marketing agent holds a goal, decides the next task itself, works across several channels on a schedule, and reports what it did. A general tool is one of the things an agent uses, not a substitute for one.
@@ -7087,9 +7085,9 @@ Why AI marketing transformation stalls before it starts
 
     Where Flow AI fits in the 90-day roadmap
 
-    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the roadmap above as fixed-scope installs of one marketing department at a time, starting with a written free audit naming which department to install first. The owner keeps the four human decisions; Flow does the production and the cadence.
+    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the roadmap above as fixed-scope installs of one marketing department at a time, starting with a written scope naming which department to install first. The owner keeps the four human decisions; Flow does the production and the cadence.
 
-    The free audit is phase one in writing: what the business claims, where marketing is losing, and which of the six departments to fund first. The departments available today are listed on the sprints page, and the methods behind them are published as an open skill library anyone can read or run.
+    The written scope is phase one in writing: what the business claims, where marketing is losing, and which of the six departments to fund first. The departments available today are listed on the sprints page, and the methods behind them are published as an open skill library anyone can read or run.
 
     Flow AI is not the right fit for a business that wants a marketer in the room every day, or one that needs daily bid management on a large media budget. It fits a business of five to fifty staff that has been doing marketing in the gaps and wants it running weekly under review.
 
@@ -7099,7 +7097,7 @@ The short version
 
     Before this, marketing happened in the gaps between customer work, and the AI in it produced volume nobody could tell apart from a competitor's. After it, two or three departments ship every week against a written claim, the owner reviews rather than produces, and the next install is chosen from a report instead of a hunch. That is the gap the data keeps pointing at: 91% of New Zealand organisations use AI and 4% say it has changed how they operate.
 
-    To get phase one in writing for your business, including which department to install first and why, request a free audit.
+    To get phase one in writing for your business, including which department to install first and why, talk to Amber.
 
 Q: Where do I start with AI in marketing?
 A: Start with positioning and measurement, not content. Write down what the business claims, who it sells to and which two numbers count, then pick the one department where the business already loses to competitors, usually search and AI search. Install that first, and keep the first month to one department only.
@@ -7343,7 +7341,7 @@ Last verified 10 September 2026. Every source below was opened and read before t
 
     Before this shift, a small business competed for attention on budget and patience. After it, the deciding factor is whether the marketing runs every week and whether the business is quotable when a customer asks an AI engine instead of a search engine. Both are engineering problems, not spending problems.
 
-    To see which department to install first, and what the numbers on your own channels look like, request a free audit.
+    To see which department to install first, and what the numbers on your own channels look like, talk to Amber.
 
 
 
@@ -7509,9 +7507,9 @@ Why AI marketing pricing is hard to compare
 
     Where Flow AI fits in this comparison
 
-    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It works as a fixed-scope install of one marketing department, such as search and AI search or content, then a monthly run in which Flow produces the work and the owner reviews it. Current figures come with the free audit.
+    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It works as a fixed-scope install of one marketing department, such as search and AI search or content, then a monthly run in which Flow produces the work and the owner reviews it. Current figures come with the written scope.
 
-    The free audit is a written plan on the business, produced before any money changes hands, and it names which department to install first and why. It sits in the agent row of the table above: priced by the department and the month, not by the hour, with the owner keeping the decisions. The five departments available today are listed on the sprints page.
+    The scope is a written plan on the business, produced before any money changes hands, and it names which department to install first and why. It sits in the agent row of the table above: priced by the department and the month, not by the hour, with the owner keeping the decisions. The five departments available today are listed on the sprints page.
 
     Flow AI is not the right choice for a business that wants a person in the room every day, or for one with a large media budget that needs daily bid management. It is the right choice for a business of 5 to 50 staff that has been doing marketing in the gaps and wants it to run weekly under review.
 
@@ -7521,7 +7519,7 @@ The short version
 
     Before this decision, most small businesses were paying for marketing in the most expensive unit available to them, whether that was the owner's evenings or a retainer buying junior hours. After it, the production runs on a system priced by the department, the judgment stays with the owner, and the monthly figure is known before the month starts. With 78% of Australian agencies publishing no prices, having that figure in writing is itself a competitive advantage.
 
-    To get the current install and monthly figures for one department, along with a written plan on the business, request a free audit.
+    To get the current install and monthly figures for one department, along with a written plan on the business, talk to Amber.
 
 Q: What does AI marketing cost in New Zealand?
 A: In New Zealand in 2026, a freelance marketer charges NZD 60 to 150 an hour or NZD 500 to 3,000 a month on retainer, agencies charge NZD 1,000 to 10,000 a month depending on how many channels they run, and a marketing manager costs NZD 90,000 to 130,000 a year in salary plus about 20% in overhead. AI marketing platforms bill in USD, typically USD 20 to 499 a month, and no New Zealand vendor publishes an AI marketing agent price in NZD.
@@ -7628,7 +7626,7 @@ Why AI changes the marketing math for NZ small businesses
 
         Fractional marketerSenior judgment, a day or two a week.Excellent strategy, but execution still needs hands or budget on top.
 
-        AI systems + one engineerSystems that do the production, one accountable person doing the judgment. Flow AI's version is public: NZ$997 one-time for one system, or NZ$1,000/month for the full engine.Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub.
+        AI systems + one engineerSystems that do the production, one accountable person doing the judgment. Flow AI's version is a contract build, scoped per project.Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub.
 
       
     
@@ -7682,10 +7680,9 @@ Why AI changes the marketing math for NZ small businesses
 Q: What is AI marketing for a small business?
 A: AI marketing means using AI systems to run the repetitive parts of marketing: drafting content, keeping SEO and AI-search visibility healthy, researching and contacting prospects, and reporting. The owner keeps the judgment calls; the systems do the production. Done well, one person can run what used to need a team.
 Q: How much does AI marketing cost for a small NZ business?
-A: It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI publishes its pricing as a reference point: a NZ$997 one-time starter sprint, or NZ$1,000 per month for the full marketing engine, cancel anytime.
+A: It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI scopes and prices each build per project.
 Q: Do I still need SEO if I am doing AEO?
 A: Yes. Answer engine optimization builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 Q: Can one person really run all of this?
 A: Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
-
 <!-- blog-full:end -->

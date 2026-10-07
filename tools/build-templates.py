@@ -319,9 +319,9 @@ def gallery():
     <div class="wrap">
       <div class="stack reveal">
         <h2 id="end-title">Put the whole Flow Engine to work.</h2>
-        <p class="lead">A free audit names the first agent to install on your business and what it would change.</p>
+        <p class="lead">A written scope names the first agent to install on your business and what it would change.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
+          <a class="btn btn-primary" href="/contact.html">Work with me</a>
           <a class="text-link arrow-link" href="/sprints/">See how it works</a>
         </div>
       </div>
@@ -494,7 +494,7 @@ def template_page(t):
         <h2 id="end-title">Keep the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Flow Intelligence')} running every month.</h2>
         <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
+          <a class="btn btn-primary" href="/contact.html">Work with me</a>
           <a class="text-link arrow-link" href="{sprint_href}">{esc(sprint_text)}</a>
         </div>
       </div>

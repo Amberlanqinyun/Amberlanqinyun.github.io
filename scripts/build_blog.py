@@ -389,9 +389,9 @@ def article_page(post, posts):
     <div class="wrap">
       <div class="stack">
         <h2 id="contact-title">Want to know which marketing job to fix first?</h2>
-        <p class="lead">Tell Flow AI what the business does and where marketing stalls. The free audit returns a written plan naming the first system to install, within the week.</p>
+        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Get a free audit</a>
+          <a class="btn btn-primary" href="/contact.html">Work with me</a>
         </div>
       </div>
     </div>
@@ -482,9 +482,9 @@ def index_page(posts):
   <section class="contact centered" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="stack">
-        <h2 id="contact-title">Want this run for your business?</h2>
-        <p class="lead">The free audit returns a written plan naming the first marketing system to install, within the week.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Get a free audit</a></div>
+        <h2 id="contact-title">Want this built for your team?</h2>
+        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Work with me</a></div>
       </div>
     </div>
   </section>
@@ -553,8 +553,8 @@ def glossary_page(terms, posts):
     <div class="wrap">
       <div class="stack">
         <h2 id="contact-title">Want the terms turned into a working system?</h2>
-        <p class="lead">The free audit returns a written plan naming the first marketing system to install, within the week.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Get a free audit</a></div>
+        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Work with me</a></div>
       </div>
     </div>
   </section>
