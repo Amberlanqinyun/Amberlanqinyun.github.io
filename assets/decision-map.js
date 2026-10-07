@@ -161,7 +161,7 @@
   });
 
   function asText() {
-    var out = "Marketing decision map\nMade with flowai.co.nz/tools/decision-map.html\n\n";
+    var out = "Marketing decision map\nMade with flowai.co.nz/tools/decision-map\n\n";
     ["you", "draft", "agent"].forEach(function (k) {
       var items = state.picked.filter(function (n) { return lane(state.scores[n]) === k; });
       if (!items.length) return;

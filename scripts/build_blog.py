@@ -195,7 +195,7 @@ def jsonld(obj):
 
 
 def url_of(slug):
-    return f"{SITE}/blog/{slug}.html"
+    return f"{SITE}/blog/{slug}"
 
 
 # ---------------------------------------------------------------- article page
@@ -213,7 +213,7 @@ def explore_links(post):
 
 def card(post, level="h3", lead=False):
     t, _ = TOPICS[post["topic"]]
-    href = f"/blog/{post['slug']}.html"
+    href = f"/blog/{post['slug']}"
     cls = "post-card post-card--lead" if lead else "post-card"
     return f"""<article class="{cls}" data-topic="{post['topic']}" data-date="{post['published']}" data-title="{esc(strip_tags(post['title']).lower())}" data-minutes="{post['minutes']}">
   <a class="post-card__figure" href="{href}" tabindex="-1" aria-hidden="true"><img src="/blog/figures/{post['slug']}.svg" width="960" height="540" alt="" loading="lazy"></a>
@@ -331,7 +331,7 @@ def article_page(post, posts):
         <p class="eyebrow"><a href="/blog/">Guides</a><span aria-hidden="true"> / </span><a href="/blog/?topic={post['topic']}">{tname}</a></p>
         <h1 id="article-title">{post['title']}</h1>
         <p class="lead">{standfirst}</p>
-        <p class="byline small"><span><a href="/about.html">Amber Lan</a>, AI marketing engineer</span><span aria-hidden="true">·</span><span>Updated <time datetime="{post['modified']}">{human_date(post['modified'])}</time></span><span aria-hidden="true">·</span><span>{post['minutes']} min read</span></p>
+        <p class="byline small"><span><a href="/about">Amber Lan</a>, AI marketing engineer</span><span aria-hidden="true">·</span><span>Updated <time datetime="{post['modified']}">{human_date(post['modified'])}</time></span><span aria-hidden="true">·</span><span>{post['minutes']} min read</span></p>
       </div>
     </div>
   </section>
@@ -360,7 +360,7 @@ def article_page(post, posts):
 {faq}
         <aside class="author-box" aria-label="About the author">
           <p class="author-box__label">Written by</p>
-          <p class="author-box__name"><a href="/about.html">Amber Lan</a></p>
+          <p class="author-box__name"><a href="/about">Amber Lan</a></p>
           <p>AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. {ENTITY}</p>
         </aside>
 {sources}
@@ -373,7 +373,7 @@ def article_page(post, posts):
           <div><dt>Updated</dt><dd>{human_date(post['modified'])}</dd></div>
           <div><dt>Reading time</dt><dd>{post['minutes']} minutes</dd></div>
         </dl>
-        <button class="share-button" type="button" data-share data-share-title="{esc(title_plain)}" data-share-text="{share_text}" data-share-url="/blog/{slug}.html" aria-label="Share this guide" aria-live="polite">Share guide</button>
+        <button class="share-button" type="button" data-share data-share-title="{esc(title_plain)}" data-share-text="{share_text}" data-share-url="/blog/{slug}" aria-label="Share this guide" aria-live="polite">Share guide</button>
         <div class="explore">
           <p class="explore__label">Explore with AI</p>
           <p class="explore__note">Open this guide in an assistant and ask it what applies to your business.</p>
@@ -391,7 +391,7 @@ def article_page(post, posts):
         <h2 id="contact-title">Want to know which marketing job to fix first?</h2>
         <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Work with me</a>
+          <a class="btn btn-primary" href="/contact">Work with me</a>
         </div>
       </div>
     </div>
@@ -484,7 +484,7 @@ def index_page(posts):
       <div class="stack">
         <h2 id="contact-title">Want this built for your team?</h2>
         <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Work with me</a></div>
+        <div class="cta-row"><a class="btn btn-primary" href="/contact">Work with me</a></div>
       </div>
     </div>
   </section>
@@ -554,7 +554,7 @@ def glossary_page(terms, posts):
       <div class="stack">
         <h2 id="contact-title">Want the terms turned into a working system?</h2>
         <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Work with me</a></div>
+        <div class="cta-row"><a class="btn btn-primary" href="/contact">Work with me</a></div>
       </div>
     </div>
   </section>
@@ -617,7 +617,7 @@ def llms_blog_section(posts):
         out.append(f"- Topic: {TOPICS[k][0]} (/blog/?topic={k}). {TOPICS[k][1]}")
         for x in sorted(group, key=lambda x: (not x.get("pillar"), x["slug"])):
             tag = " [pillar]" if x.get("pillar") else ""
-            out.append(f"  - /blog/{x['slug']}.html{tag}: {x['shortAnswer']}")
+            out.append(f"  - /blog/{x['slug']}{tag}: {x['shortAnswer']}")
     return "\n".join(out)
 
 

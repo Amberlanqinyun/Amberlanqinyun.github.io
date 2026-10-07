@@ -43,10 +43,10 @@ def icon(label):
 
 
 AGENTS = {
-    "hq": ("Flow Intelligence", "/sprints/positioning.html", "Install Flow Intelligence as a one-week positioning sprint"),
-    "search": ("Search agent", "/sprints/ai-search.html", "Install the search agent as a one-week AI-search sprint"),
-    "content": ("Content agent", "/sprints/content-engine.html", "Install the content agent as a one-week content engine sprint"),
-    "community": ("Community agent", "/contact.html", "Ask about running the community agent every month"),
+    "hq": ("Flow Intelligence", "/sprints/positioning", "Install Flow Intelligence as a one-week positioning sprint"),
+    "search": ("Search agent", "/sprints/ai-search", "Install the search agent as a one-week AI-search sprint"),
+    "content": ("Content agent", "/sprints/content-engine", "Install the content agent as a one-week content engine sprint"),
+    "community": ("Community agent", "/contact", "Ask about running the community agent every month"),
 }
 
 REVIEW = ("A marketing engineer reviews it", "Amber checks every result before it reaches you, on every Flow AI run.")
@@ -249,7 +249,7 @@ def agent_label(key, extra=""):
 def card(t, anchor=None):
     ident = anchor or t["slug"]
     meta = f'Needs: {t["field"][0].lower()}'
-    return f"""          <a class="tpl-card" id="{ident}" href="/templates/{t['slug']}.html">
+    return f"""          <a class="tpl-card" id="{ident}" href="/templates/{t['slug']}">
             <p class="eyebrow">{agent_label(t['agent'])}</p>
             <h3>{esc(t['name'])}</h3>
             <p>{esc(t['card'])}</p>
@@ -270,7 +270,7 @@ def gallery():
         "description": "Free agent templates from Flow AI. Run one on your site, reviewed by a marketing engineer, or install it in Claude Code.",
         "dateModified": UPDATED,
         "mainEntity": {"@type": "ItemList", "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/templates/{t['slug']}.html", "name": t["name"]}
+            {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/templates/{t['slug']}", "name": t["name"]}
             for i, t in enumerate(TEMPLATES)]},
     }
     body = f"""<main id="main">
@@ -321,7 +321,7 @@ def gallery():
         <h2 id="end-title">Put the whole Flow Engine to work.</h2>
         <p class="lead">A written scope names the first agent to install on your business and what it would change.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Work with me</a>
+          <a class="btn btn-primary" href="/contact">Work with me</a>
           <a class="text-link arrow-link" href="/sprints/">See how it works</a>
         </div>
       </div>
@@ -374,13 +374,13 @@ def template_page(t):
     others = [o for o in TEMPLATES if o["slug"] != t["slug"]]
     others.sort(key=lambda o: (o["agent"] != t["agent"]))
     related = "\n".join(
-        f'            <li><b>{esc(AGENTS[o["agent"]][0])}</b><span><a class="text-link" href="/templates/{o["slug"]}.html">{esc(o["name"])}</a>. {esc(o["card"])}</span></li>'
+        f'            <li><b>{esc(AGENTS[o["agent"]][0])}</b><span><a class="text-link" href="/templates/{o["slug"]}">{esc(o["name"])}</a>. {esc(o["card"])}</span></li>'
         for o in others[:3])
 
     schema = {
         "@context": "https://schema.org",
         "@graph": [
-            {"@type": "SoftwareSourceCode", "@id": f"{SITE}/templates/{t['slug']}.html",
+            {"@type": "SoftwareSourceCode", "@id": f"{SITE}/templates/{t['slug']}",
              "name": t["name"], "description": t["lead"], "codeRepository": t["repo"],
              "license": "https://opensource.org/licenses/MIT", "isAccessibleForFree": True,
              "author": {"@type": "Person", "@id": f"{SITE}/#amber", "name": "Amber Lan"},
@@ -388,7 +388,7 @@ def template_page(t):
              "dateModified": UPDATED},
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Agent templates", "item": f"{SITE}/templates/"},
-                {"@type": "ListItem", "position": 2, "name": t["name"], "item": f"{SITE}/templates/{t['slug']}.html"}]},
+                {"@type": "ListItem", "position": 2, "name": t["name"], "item": f"{SITE}/templates/{t['slug']}"}]},
         ],
     }
 
@@ -420,7 +420,7 @@ def template_page(t):
               <input id="tpl-role" name="company-role" type="text" tabindex="-1" autocomplete="off">
             </div>
             <div><button class="btn btn-primary" type="submit">{esc(t.get("cta", "Run it on my site"))}</button></div>
-            <p class="form-note">Your email is used to send this result and reply about it, nothing else. <a href="/privacy.html">Privacy</a>.</p>
+            <p class="form-note">Your email is used to send this result and reply about it, nothing else. <a href="/privacy">Privacy</a>.</p>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -494,7 +494,7 @@ def template_page(t):
         <h2 id="end-title">Keep the {esc(agent_name.lower() if t['agent'] != 'hq' else 'Flow Intelligence')} running every month.</h2>
         <p class="lead">A template is one run. A sprint installs the agent on your business in a week, documented and handed over. Then the Flow Engine runs it every month.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Work with me</a>
+          <a class="btn btn-primary" href="/contact">Work with me</a>
           <a class="text-link arrow-link" href="{sprint_href}">{esc(sprint_text)}</a>
         </div>
       </div>
@@ -504,12 +504,12 @@ def template_page(t):
 """
     title = f"{t['name']} | Free Flow AI agent template"
     desc = f"{t['card']} Run it on your site free, reviewed by a marketing engineer, or install it in Claude Code."
-    page = head(title, desc, f"/templates/{t['slug']}.html", schema, og_type="article") + body + foot()
+    page = head(title, desc, f"/templates/{t['slug']}", schema, og_type="article") + body + foot()
     (ROOT / f"templates/{t['slug']}.html").write_text(page)
 
 
 def privacy():
-    schema = {"@context": "https://schema.org", "@type": "WebPage", "@id": f"{SITE}/privacy.html",
+    schema = {"@context": "https://schema.org", "@type": "WebPage", "@id": f"{SITE}/privacy",
               "name": "Privacy policy", "dateModified": "2026-10-06",
               "publisher": {"@type": "Organization", "@id": f"{SITE}/#flowai", "name": "Flow AI"}}
     mail = '<a class="text-link" href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a>'
@@ -592,7 +592,7 @@ def privacy():
   </section>
 </main>
 """
-    page = head("Privacy policy | Flow AI", "How flowai.co.nz collects, uses and protects your information, who helps run the site, and how to see, correct or delete it under the NZ Privacy Act 2020.", "/privacy.html", schema) + body + foot()
+    page = head("Privacy policy | Flow AI", "How flowai.co.nz collects, uses and protects your information, who helps run the site, and how to see, correct or delete it under the NZ Privacy Act 2020.", "/privacy", schema) + body + foot()
     (ROOT / "privacy.html").write_text(page)
 
 if __name__ == "__main__":
@@ -600,4 +600,4 @@ if __name__ == "__main__":
     for t in TEMPLATES:
         template_page(t)
     privacy()
-    print(f"built /templates/ with {len(TEMPLATES)} templates, and /privacy.html")
+    print(f"built /templates/ with {len(TEMPLATES)} templates, and /privacy")
