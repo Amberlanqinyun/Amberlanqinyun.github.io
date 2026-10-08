@@ -416,7 +416,7 @@
   .cvsheet.is-waiting .role::before { transform: none; }
 }
 @media print {
-  .stackline, .dotportrait, .meter, .receipts-note { display: none !important; }
+  .stackline, .dotportrait, .meter, .receipts-note, .cv-proof { display: none !important; }
 }
 
 .cv .cv-proof { padding-block: 0 clamp(3rem, 5vw, 4.5rem); }
