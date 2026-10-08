@@ -671,3 +671,4 @@
 .quick__list { text-align: left; }
 .trust span { display: inline-block; }
 .status { max-width: 100%; }
+.linklike-cta { border: 0; border-bottom: 1px solid var(--hair-strong); background: none; font: inherit; cursor: pointer; padding: 0 0 0.15rem; }
