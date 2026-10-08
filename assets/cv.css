@@ -415,7 +415,7 @@
 .logos svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
 .logos .mono { display: inline-grid; place-items: center; width: 18px; height: 18px; border: 1px solid currentColor; border-radius: 5px; font-size: 10px; font-weight: 600; }
 .logos .hero-proof li:hover { color: var(--fg); }
-.logos .ticker__inner { animation-duration: calc(var(--ticker-duration, 48s) * 0.42) !important; }
+.logos .ticker__inner { animation-duration: 560s !important; }
 
 /* career: one track of years, a panel for the chosen role */
 .cvsheet { display: none; }
