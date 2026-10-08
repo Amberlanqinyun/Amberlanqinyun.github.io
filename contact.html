@@ -129,7 +129,7 @@
             "name": "How is Flow AI different from a marketing agency?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You work directly with the person who writes the strategy and builds the systems, with no account manager in between. The systems are built to keep running after launch."
+              "text": "You work side by side with the person who writes the strategy and builds the systems, with no account manager in between. Your team keeps the systems running after launch."
             }
           },
           {
@@ -137,7 +137,7 @@
             "name": "How quickly can the first system go live?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The written scope comes back within a few days of the first conversation, and a typical build goes live in its first week."
+              "text": "Flow AI sends the written scope within a few days of your first conversation, and a typical build goes live in its first week."
             }
           },
           {
@@ -266,12 +266,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="step">
             <span class="small">02</span>
-            <h3>You get a written reply</h3>
+            <h3>I reply in writing</h3>
             <p>For a build, a short written scope. For a role, my availability.</p>
           </div>
           <div class="step">
             <span class="small">03</span>
-            <h3>You get a straight answer</h3>
+            <h3>We agree the next step</h3>
             <p>If it is a fit, we set up a call. If it is not, you hear that too.</p>
           </div>
         </div>
@@ -308,11 +308,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </details>
                   <details>
                     <summary>How is Flow AI different from a marketing agency?</summary>
-                    <p>You work directly with the person who writes the strategy and builds the systems, with no account manager in between. The systems are built to keep running after launch.</p>
+                    <p>You work side by side with the person who writes the strategy and builds the systems, with no account manager in between. Your team keeps the systems running after launch.</p>
                   </details>
                   <details>
                     <summary>How quickly can the first system go live?</summary>
-                    <p>The written scope comes back within a few days of the first conversation, and a typical build goes live in its first week.</p>
+                    <p>Flow AI sends the written scope within a few days of your first conversation, and a typical build goes live in its first week.</p>
                   </details>
                   <details>
                     <summary>Who is Flow AI for?</summary>
@@ -404,9 +404,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (!d.name) return { key: 'name', say: 'Could you add your name?' };
         if (!d.email) return { key: 'email', say: 'Could you add your email so I can reply?' };
         if (d.email.indexOf('@') < 1 || d.email.indexOf('.', d.email.indexOf('@')) < 0) {
-          return { key: 'email', say: 'That email looks incomplete. Worth a second look?' };
+          return { key: 'email', say: 'That email looks incomplete. Could you check it?' };
         }
-        if (!d.message) return { key: 'message', say: 'Could you add a line or two about what is going on?' };
+        if (!d.message) return { key: 'message', say: 'Could you add a line or two about what you are working on?' };
         return null;
       }
 
@@ -429,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           '<p>I will reply to <b>' + esc(d.email) + '</b> within two working days.</p>' +
           '<ol class="form-thanks__next">' +
           '<li><b>First</b><span>I read your message and look at your site or the role.</span></li>' +
-          '<li><b>Within two working days</b><span>You get a personal reply, with a few questions or next steps.</span></li>' +
+          '<li><b>Within two working days</b><span>I reply personally, with a few questions or next steps.</span></li>' +
           '</ol>' +
           '<p class="form-thanks__alt">Something to add? Email <a href="mailto:' + TO + '">' + TO + '</a>.</p>';
         form.hidden = true;
@@ -537,7 +537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <p class="site-footer__name"><a href="/about">Amber Lan</a></p>
         <p class="site-footer__role">AI marketing engineer, Auckland</p>
-        <p class="site-footer__note">I build Flow AI's systems and review everything they send.</p>
+        <p class="site-footer__note">I build marketing systems with the teams who run them, and review everything they send.</p>
         <a class="site-footer__cta" href="/contact">Work with me</a>
       </div>
     </div>

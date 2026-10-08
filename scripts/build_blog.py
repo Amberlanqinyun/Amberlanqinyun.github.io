@@ -388,8 +388,8 @@ def article_page(post, posts):
   <section class="contact centered" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="stack">
-        <h2 id="contact-title">Want to know which marketing job to fix first?</h2>
-        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
+        <h2 id="contact-title">Let's find the marketing job to build first.</h2>
+        <p class="lead">Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact">Work with me</a>
         </div>
@@ -445,7 +445,7 @@ def index_page(posts):
       <div class="stack">
         <p class="eyebrow">Guides</p>
         <h1 id="blog-title">Guides for running marketing on AI.</h1>
-        <p class="lead">For owners and marketing leads in New Zealand and Australia. Written by the engineer who builds the systems and runs them every week.</p>
+        <p class="lead">For owners and marketing leads in New Zealand and Australia, from the engineer who builds these systems and runs them every week.</p>
       </div>
       <ul class="topic-links" aria-label="Topics">
 {topic_links}
@@ -474,7 +474,7 @@ def index_page(posts):
       <div class="post-grid" data-posts data-view-target>
 {cards}
       </div>
-      <p class="filter-empty small" data-empty hidden>No guides in this topic yet. <a class="text-link" href="/blog/">See all guides</a></p>
+      <p class="filter-empty small" data-empty hidden>No guides in this topic yet. <a class="text-link" href="/blog/">Browse all guides</a></p>
       <p class="blog-glossary small">Looking for a definition? The <a class="text-link" href="/glossary/">AI marketing glossary</a> has {GLOSSARY_COUNT} terms, each with a plain answer.</p>
     </div>
   </section>
@@ -482,8 +482,8 @@ def index_page(posts):
   <section class="contact centered" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="stack">
-        <h2 id="contact-title">Want this built for your team?</h2>
-        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
+        <h2 id="contact-title">Let's build this with your team.</h2>
+        <p class="lead">Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.</p>
         <div class="cta-row"><a class="btn btn-primary" href="/contact">Work with me</a></div>
       </div>
     </div>
@@ -552,8 +552,8 @@ def glossary_page(terms, posts):
   <section class="contact centered" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="stack">
-        <h2 id="contact-title">Want the terms turned into a working system?</h2>
-        <p class="lead">Building this inside a team, or hiring someone who can? Tell Amber what you are working on.</p>
+        <h2 id="contact-title">Ready to put these terms to work?</h2>
+        <p class="lead">Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.</p>
         <div class="cta-row"><a class="btn btn-primary" href="/contact">Work with me</a></div>
       </div>
     </div>
