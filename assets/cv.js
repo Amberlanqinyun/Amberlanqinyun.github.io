@@ -102,6 +102,18 @@
     open(segs.length - 1, false);
   }
 
+  /* the map: each lane name opens that lane in the switchboard */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lane]'), function (b) {
+    b.addEventListener('click', function () {
+      var more = document.querySelector('.lanes-more');
+      var tab = document.getElementById('t-' + b.getAttribute('data-lane'));
+      if (!more || !tab) return;
+      more.open = true;
+      tab.click();
+      window.setTimeout(function () { more.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' }); }, 40);
+    });
+  });
+
   Array.prototype.forEach.call(document.querySelectorAll('[data-print]'), function (b) {
     b.addEventListener('click', function () {
       if (window.dataLayer) window.dataLayer.push({ event: 'cv_print' });
