@@ -503,7 +503,7 @@ def template_page(t):
 </main>
 """
     title = f"{t['name']} | Free Flow AI agent template"
-    desc = f"{t['card']} Run it on your site free, reviewed by a marketing engineer, or install it in Claude Code."
+    desc = f"{t['card']} Run it with a marketing engineer, or install it in Claude Code."
     page = head(title, desc, f"/templates/{t['slug']}", schema, og_type="article") + body + foot()
     (ROOT / f"templates/{t['slug']}.html").write_text(page)
 

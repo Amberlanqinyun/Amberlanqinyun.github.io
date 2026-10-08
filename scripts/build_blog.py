@@ -286,7 +286,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css?v=2">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/blog.css">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/share.js" defer></script>
 <script src="/assets/blog.js" defer></script>
@@ -450,6 +450,10 @@ def article_page(post, posts):
       <div class="stack">
         <p class="eyebrow"><a href="{P}/blog/">{S('guides')}</a><span aria-hidden="true"> / </span><a href="{P}/blog/?topic={post['topic']}">{tname}</a></p>
         <h1 id="article-title">{post['title']}</h1>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">{S('short')}</p>
+          <p class="short-answer__text">{esc(post['shortAnswer'])}</p>
+        </aside>
         <p class="lead">{standfirst}</p>
         <p class="byline small"><span><a href="{P}/about">Amber Lan</a>{'，' if LANG == 'zh' else ', '}{S('byline_role')}</span><span aria-hidden="true">·</span><span>{S('updated')} <time datetime="{post['modified']}">{human_date(post['modified'])}</time></span><span aria-hidden="true">·</span><span>{post['minutes']} {S('min_read')}</span></p>
       </div>
@@ -470,10 +474,6 @@ def article_page(post, posts):
 
       <div class="article-main">
         <figure class="article-figure"><img src="/blog/figures/{slug}.svg" width="960" height="540" alt=""></figure>
-        <aside class="short-answer" aria-labelledby="short-answer-label">
-          <p class="short-answer__label" id="short-answer-label">{S('short')}</p>
-          <p class="short-answer__text">{esc(post['shortAnswer'])}</p>
-        </aside>
         <article class="prose">
 {post['html_body']}
         </article>
@@ -766,9 +766,12 @@ def update_llms(posts):
 
 
 def update_llms_full(posts):
-    p = ROOT / "llms-full.txt"
-    if not p.exists():
-        return
+    for p in (ROOT / "llms-full.txt", ROOT / ".well-known" / "llms-full.txt"):
+        if p.exists():
+            write_llms_full(p, posts)
+
+
+def write_llms_full(p, posts):
     start, end = "<!-- blog-full:start -->", "<!-- blog-full:end -->"
     chunks = []
     for x in posts:

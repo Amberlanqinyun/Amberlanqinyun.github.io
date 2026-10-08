@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css?v=2">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/blog.css">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/share.js" defer></script>
 <script src="/assets/blog.js" defer></script>
@@ -214,6 +214,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="stack">
         <p class="eyebrow"><a href="/zh/blog/">指南</a><span aria-hidden="true"> / </span><a href="/zh/blog/?topic=agent">AI 营销智能体</a></p>
         <h1 id="article-title">如何用 Claude Code 运转整个营销职能？</h1>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">简短回答</p>
+          <p class="short-answer__text">给每条营销工作线配一份专属指令文件，把每个重复的流程做成有版本管理的技能，通过 MCP 把智能体接入营销日常使用的工具，再把周期性简报设为定时任务。智能体负责调研和起草，所有内容由一个人审核，上线前由这个人批准，判断始终留在人手里。</p>
+        </aside>
         <p class="lead">我一个人负责一家 AI 初创公司的全部营销工作，用的是 Claude Code 和我自己搭建的智能体。<b>这份笔记记录了整套系统的组织方式、哪些环节仍由人来决定，也包括出过问题的部分。</b></p>
         <p class="byline small"><span><a href="/zh/about">Amber Lan</a>，AI 营销工程师</span><span aria-hidden="true">·</span><span>更新于 <time datetime="2026-10-08">2026年10月8日</time></span><span aria-hidden="true">·</span><span>13 分钟阅读</span></p>
       </div>
@@ -242,10 +246,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="article-main">
         <figure class="article-figure"><img src="/blog/figures/running-marketing-on-claude-code.svg" width="960" height="540" alt=""></figure>
-        <aside class="short-answer" aria-labelledby="short-answer-label">
-          <p class="short-answer__label" id="short-answer-label">简短回答</p>
-          <p class="short-answer__text">给每条营销工作线配一份专属指令文件，把每个重复的流程做成有版本管理的技能，通过 MCP 把智能体接入营销日常使用的工具，再把周期性简报设为定时任务。智能体负责调研和起草，所有内容由一个人审核，上线前由这个人批准，判断始终留在人手里。</p>
-        </aside>
         <article class="prose">
 <h2 id="what-does-it-mean-to-run-marketing-on-claude-code"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">用 Claude Code 运转营销是什么意思？</span></h2>
 <p>用 Claude Code 运转营销，是指把一个营销职能沉淀在一个文件夹里：书面指令加可复用的技能，并接入工作所在的各类工具，由 AI 智能体每天按这些内容推进工作。一个人审核产出，决定哪些内容上线。生产交给智能体，判断留给人。</p>
@@ -412,12 +412,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <h2 id="related-title" class="related__title">继续阅读</h2>
       <div class="post-grid">
-<article class="post-card" data-topic="agent" data-date="2026-10-06" data-title="什么是营销工程师？这个岗位做什么，以及如何辨别真正的营销工程师。" data-minutes="15">
+<article class="post-card" data-topic="agent" data-date="2026-10-06" data-title="什么是营销工程师？它和 gtm 工程师有什么不同？" data-minutes="16">
   <a class="post-card__figure" href="/zh/blog/what-is-a-marketing-engineer" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-a-marketing-engineer.svg" width="960" height="540" alt="" loading="lazy"></a>
   <div class="post-card__body">
-    <p class="post-card__meta"><span>AI 营销智能体</span><span>15 分钟阅读</span></p>
-    <h3 class="post-card__title"><a href="/zh/blog/what-is-a-marketing-engineer">什么是营销工程师？这个岗位做什么，以及如何辨别真正的营销工程师。</a></h3>
-    <p class="post-card__desc">营销工程师负责搭建并运行营销背后的 AI 系统。本文讲清这个岗位做什么、需要哪些技能、和 GTM 工程师有何区别，以及如何招到合适的人。</p>
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>16 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/what-is-a-marketing-engineer">什么是营销工程师？它和 GTM 工程师有什么不同？</a></h3>
+    <p class="post-card__desc">营销工程师搭建营销背后的 AI 系统；GTM 工程师搭建为销售输送线索的系统。本文讲清两者的技能、工具、薪酬，以及如何招到合适的人。</p>
   </div>
 </article>
 <article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="什么是 ai 营销智能体？写给小企业的定义。" data-minutes="13">

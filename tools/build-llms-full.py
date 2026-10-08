@@ -178,7 +178,7 @@ def main():
         if len(body) < 200:
             print(f"  skipped (too little text): {rel}")
             continue
-        url = f"{SITE}/" + ("" if rel == "index.html" else rel.replace("index.html", ""))
+        url = f"{SITE}/" + ("" if rel == "index.html" else re.sub(r"\.html$", "", rel.replace("index.html", "")))
         pub, mod = dates_of(source)
         meta = [f"Source URL: {url}", f"Type: {kind}", "Author: Amber Lan (Flow AI)"]
         if pub:
