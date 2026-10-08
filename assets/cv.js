@@ -73,6 +73,35 @@
     select(0, false);
   }
 
+  /* career: a track of years; each segment opens its role. The current role starts open. */
+  var career = document.querySelector('[data-career]');
+  if (career) {
+    var segs = Array.prototype.slice.call(career.querySelectorAll('[role="tab"]'));
+    var rpanels = segs.map(function (s) { return document.getElementById(s.getAttribute('aria-controls')); });
+    var open = function (i, focus) {
+      segs.forEach(function (s, j) {
+        var on = j === i;
+        s.setAttribute('aria-selected', on ? 'true' : 'false');
+        s.tabIndex = on ? 0 : -1;
+        if (rpanels[j]) { rpanels[j].hidden = !on; rpanels[j].classList.toggle('play', on); }
+      });
+      if (focus) segs[i].focus();
+    };
+    segs.forEach(function (s, i) {
+      s.addEventListener('click', function () { open(i, false); });
+      s.addEventListener('mouseenter', function () { if (window.matchMedia('(pointer: fine)').matches) open(i, false); });
+      s.addEventListener('keydown', function (e) {
+        var n = null;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % segs.length;
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + segs.length) % segs.length;
+        if (e.key === 'Home') n = 0;
+        if (e.key === 'End') n = segs.length - 1;
+        if (n !== null) { e.preventDefault(); open(n, true); }
+      });
+    });
+    open(segs.length - 1, false);
+  }
+
   Array.prototype.forEach.call(document.querySelectorAll('[data-print]'), function (b) {
     b.addEventListener('click', function () {
       if (window.dataLayer) window.dataLayer.push({ event: 'cv_print' });
