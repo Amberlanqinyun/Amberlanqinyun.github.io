@@ -15,9 +15,6 @@ Last updated: 2026-08-20
 | `/work/content-engine.html` | Case study: the voice-gated content engine | Article + BreadcrumbList schema. |
 | `/work/geo-seo-toolkit.html` | Case study: the GEO/AEO toolkit, running on this site | Article + BreadcrumbList schema. |
 | `/skills/` | Installable public skill library with filtering, deep links, sharing, and direct source inspection | CollectionPage + ItemList + FAQPage schema. |
-| `/skills/research-brand/SKILL.md` | Public skill: evidence-backed brand research | Source file, MIT licensed. |
-| `/skills/reddit-opportunity-research/SKILL.md` | Public skill: ethical Reddit opportunity research | Source file, MIT licensed. |
-| `/skills/audit-content/SKILL.md` | Public skill: pre-publication claim and link audit | Source file, MIT licensed. |
 | `/blog/` | Guide index, one substantial piece a week | Cluster plan at ~/Desktop/flowai-seo-cluster/. |
 | `/blog/ai-marketing-for-small-business-nz.html` | Pillar guide for the content cluster | Article + FAQPage + BreadcrumbList schema. |
 | `/tools/benchmark.html` | Free AI-readiness benchmark (lead magnet, no email gate) | WebApplication schema. |
@@ -28,6 +25,7 @@ Last updated: 2026-08-20
 - `/cv.html` — redirect stub (meta refresh + canonical) to `/about.html`; noindex. Kept so old links keep working.
 - `/flowai-brand-guidelines.html` — internal brand system document, live but not a customer page.
 - `/404.html` — served automatically by GitHub Pages for missing URLs.
+- `/skills/*/SKILL.md`: raw public skill source files (MIT licensed). Linked from `/skills/`, kept out of the sitemap because they are not HTML pages.
 
 ## Planned
 

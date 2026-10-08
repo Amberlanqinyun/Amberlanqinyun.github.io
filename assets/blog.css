@@ -138,6 +138,8 @@
 }
 .short-answer__label { color: var(--soft); font-size: var(--t-eyebrow); letter-spacing: 0.08em; text-transform: uppercase; }
 .short-answer__text { margin-top: var(--s-3); color: var(--fg); font-size: 1.125rem; line-height: 1.6; text-wrap: pretty; }
+/* Answer first: the short answer sits under the H1, before the standfirst and byline. */
+.article-hero .short-answer { max-width: 44rem; margin: var(--s-7) auto 0; text-align: left; }
 
 .prose { font-size: 17px; line-height: 1.7; color: var(--muted); }
 .prose h2 {
@@ -302,6 +304,7 @@
   .article-hero .stack { margin-inline: 0; }
   .article-hero h1 { font-size: clamp(1.9rem, 8.4vw, 2.4rem); max-width: none; margin-inline: 0; }
   .article-hero .lead { margin-inline: 0; font-size: 1.0625rem; }
+  .article-hero .short-answer { margin-top: var(--s-6); margin-inline: 0; }
   .byline { justify-content: flex-start; }
 
   .blog-list { padding-top: var(--s-8); }
