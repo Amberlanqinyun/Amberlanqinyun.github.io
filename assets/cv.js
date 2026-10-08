@@ -114,6 +114,10 @@
     });
   });
 
+  Array.prototype.forEach.call(document.querySelectorAll('[data-cv]'), function (a) {
+    a.addEventListener('click', function () { if (window.dataLayer) window.dataLayer.push({ event: 'cv_download' }); });
+  });
+
   Array.prototype.forEach.call(document.querySelectorAll('[data-print]'), function (b) {
     b.addEventListener('click', function () {
       if (window.dataLayer) window.dataLayer.push({ event: 'cv_print' });

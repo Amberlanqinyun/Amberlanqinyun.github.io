@@ -593,7 +593,7 @@
 .cv--min section:not(.cv-hero):not(.cv-proof) { padding-block: clamp(4rem, 7vw, 6rem) clamp(1rem, 2vw, 2rem); }
 .cv--min .cv-hero .lead { max-width: 30ch; font-size: clamp(1.2rem, 1.7vw, 1.45rem); line-height: 1.45; color: var(--muted); }
 .cv--min .cv-hero .cta-row { margin-top: var(--s-6); }
-.cv--min .cv-hero .btn-secondary { font: inherit; cursor: pointer; background: none; }
+
 .min-head { text-align: left; }
 .min-head h2 { margin-top: var(--s-4); max-width: 20ch; }
 
