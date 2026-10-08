@@ -1,0 +1,129 @@
+<!--meta
+{
+  "slug": "aeo-checklist",
+  "title": "小企业 AEO 检查清单（2026年版）。",
+  "seoTitle": "2026年 AEO 检查清单：小企业 20 步做好 AI 搜索 | Flow AI",
+  "description": "一份小企业一周就能完成的 20 步 AEO 检查清单，涵盖 AI 爬虫访问、企业基本信息、可直接作答的页面、评价、结构化数据和效果衡量。",
+  "schemaDescription": "一份面向新西兰和澳大利亚小企业的 AEO（答案引擎优化）编号检查清单，分为六组：AI 爬虫访问、企业基本信息、可直接作答的页面、证据与提及、结构化数据、效果衡量，并附上关于 llms.txt 的坦诚说明。",
+  "standfirst": "20 项任务，分为六组，按先后顺序排列，每一项都建立在上一项的基础上。<b>大多数企业主不需要开发人员，一周内就能逐项完成。</b>",
+  "shortAnswer": "小企业的 AEO 检查清单涵盖六个方面：向 AI 爬虫开放网站，发布前后一致的企业信息，撰写能直接回答客户问题的页面，在其他网站上积累评价和提及，添加准确的结构化数据，并追踪 AI 引擎如何介绍你。大多数企业主一周内就能逐项完成。",
+  "topic": "ai-search",
+  "pillar": false,
+  "format": "指南",
+  "published": "2026-10-02",
+  "modified": "2026-10-02",
+  "keywords": ["AEO 检查清单", "2026 AEO 检查清单", "答案引擎优化检查清单", "AEO 审核清单", "AEO 最佳实践", "GEO SEO 检查清单", "AI 搜索优化清单", "AEO 自查清单", "小企业 SEO 检查清单", "aeo checklist"],
+  "related": ["what-is-answer-engine-optimisation", "how-to-get-mentioned-by-chatgpt", "aeo-vs-seo-vs-geo"],
+  "faq": [
+    {
+      "q": "要看到效果，20 项都得做完吗？",
+      "a": "不需要。前四项最重要，涉及爬虫访问以及在 Google 和 Bing 中被收录，因为引擎读不到你的网站，就无法引用它。之后，Google 商家资料、一份企业信息表，以及在你最重要的五个页面开头直接给出答案，是投入时间回报最大的几项。其余各项的效果会在几个月里逐步累积，所以可以分散到几个月里慢慢做，但每一项都值得做。"
+    },
+    {
+      "q": "AEO 检查清单和 SEO 检查清单有什么区别？",
+      "a": "大约三分之二的任务是一样的，因为 AI 引擎检索的正是搜索引擎建立的索引。AEO 特有的任务包括：允许 OAI-SearchBot、PerplexityBot 等 AI 搜索爬虫访问，在 Bing 中被收录以便出现在 ChatGPT 和 Copilot 的回答里，撰写单独摘出来也能读懂的段落，以及每月记录 AI 引擎如何介绍你。SEO 检查清单很少涉及这些。"
+    },
+    {
+      "q": "我应该屏蔽 GPTBot 等 AI 训练爬虫吗？",
+      "a": "这是独立于 AEO 的另一个决定。GPTBot、Google-Extended 等训练爬虫收集内容用来训练模型，而 OAI-SearchBot 等搜索爬虫抓取页面，是为了实时回答问题。许多企业允许搜索爬虫访问，对训练爬虫则自行决定。只要 robots.txt 分别列出它们，屏蔽训练爬虫并不会挡住对应的搜索爬虫。"
+    },
+    {
+      "q": "结构化数据标记对 AI 搜索有帮助吗？",
+      "a": "Google 表示，出现在 Google AI 概览（AI Overviews）或 AI 模式中不需要任何特殊的结构化数据。但结构化数据仍能在 Google 中带来富媒体搜索结果，并以任何机器都能读懂、无需猜测的形式说明你的企业信息，所以值得为你的机构、地址和产品加上。务必保持准确，并与页面内容一致，因为错误的结构化数据比没有更糟。"
+    },
+    {
+      "q": "AEO 检查清单多久要重新过一遍？",
+      "a": "每个季度做一次访问检查，网站重建、更换主机或新装安全插件之后也要做，因为爬虫往往就是在这些时候被误挡的。提示词记录每月做一次。价格、营业时间或服务有变化时，更新企业信息表；最重要的页面每年至少更新两次，让日期和数字保持最新。"
+    },
+    {
+      "q": "有没有免费工具可以检查 AI 爬虫访问情况？",
+      "a": "有。Flow AI 的免费 AI 爬虫访问检查工具，会对照你的 robots.txt、页面标签和服务器响应头测试 14 种 AI 爬虫，并为被屏蔽的爬虫给出修复方法。你也可以直接在 yourdomain.co.nz/robots.txt 查看你的 robots.txt，并在 Google Search Console 和 Bing Webmaster Tools 中检查收录情况，两者都是免费的。"
+    }
+  ]
+}
+-->
+<h2>如何使用这份检查清单</h2>
+<p>按顺序完成六组任务，每天一到两组，每完成一项就勾掉。顺序很重要：AI 引擎无法引用它读不到的网站，而且它更信任在网络上各处一致的信息。前两组加起来大约需要一天，其余几组填满这一周。</p>
+<p>这份清单写给 5 到 50 人的企业：有网站，有 Google 商家资料或打算开通，团队里没有人会写代码。需要开发人员的任务，清单里都会注明。如果这些术语对你来说还比较陌生，可以先读<a class="go" href="/blog/what-is-answer-engine-optimisation">什么是答案引擎优化</a>；如果你不确定 AEO 和你已经在做的 SEO 是什么关系，可以读 <a class="go" href="/blog/aeo-vs-seo-vs-geo">AEO、SEO 与 GEO 的区别</a>。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>日期</th><th>分组</th><th>项目</th><th>大致用时</th></tr></thead>
+<tbody>
+<tr><td>周一</td><td>AI 爬虫访问</td><td>第 1 至 4 项</td><td>2 到 3 小时</td></tr>
+<tr><td>周二</td><td>企业基本信息</td><td>第 5 至 8 项</td><td>3 到 4 小时</td></tr>
+<tr><td>周三和周四</td><td>可直接作答的页面</td><td>第 9 至 13 项</td><td>一天半</td></tr>
+<tr><td>周五上午</td><td>证据与提及</td><td>第 14 至 16 项</td><td>设置需 2 小时，之后每月一次</td></tr>
+<tr><td>周五下午</td><td>结构化数据与效果衡量</td><td>第 17 至 20 项</td><td>3 小时</td></tr>
+</tbody>
+</table></div>
+<p>以上用时按 10 到 30 个页面的网站估算。网站更大的话，页面相关的工作会更久，其他部分不变。</p>
+
+<h2>AI 爬虫访问（第 1 至 4 项）</h2>
+<p>访问排在第一位，因为后面的每一项都以它为前提。AI 引擎根据它抓取过的页面作答，抓取途径要么是它自己的爬虫，要么是 Google 或 Bing 这样的搜索索引。如果 robots.txt、防火墙或 JavaScript 渲染挡住了这些爬虫，清单上的其他任何一项都帮不上忙。</p>
+<h3>1. 在 robots.txt 中允许 AI 搜索爬虫</h3>
+<p>打开 yourdomain.co.nz/robots.txt，查看是否有规则屏蔽了 OAI-SearchBot 和 ChatGPT-User（ChatGPT）、PerplexityBot（Perplexity）、Claude-SearchBot 和 Claude-User（Claude）、Googlebot 以及 Bingbot。像“User-agent: * Disallow: /”这样的一行会把它们全部挡住。训练爬虫（GPTBot、ClaudeBot、Google-Extended）是另一个独立的选择；只要每个爬虫单独占一行，屏蔽训练爬虫并不会挡住搜索爬虫。Flow AI 的免费 <a class="go" href="/templates/ai-crawler-check">AI 爬虫访问检查</a>可以一次测试 14 种 <a class="go" href="/glossary/#ai-crawler">AI 爬虫</a>。</p>
+<h3>2. 检查主机和安全设置</h3>
+<p>一些主机服务商、CDN 和安全插件提供屏蔽 AI 机器人的设置，在某些套餐中默认就是开启的。在 Cloudflare、Wix、Squarespace 或 WordPress 的安全设置里，找找带有 AI bots、AI crawlers 或 bot fight mode 字样的选项。另外问问负责网站的人，有没有页面误发了“noindex”元标签或 X-Robots-Tag 响应头。</p>
+<h3>3. 确保文字内容写在 HTML 里</h3>
+<p>许多 AI 爬虫不运行 JavaScript，所以只在脚本加载后才出现的文字可能永远不会被看到。一个快速测试：打开某个页面，在浏览器中选择“查看网页源代码”，搜索页面上的一句话。如果源代码里找不到，就请开发人员为主要页面考虑服务器端渲染。</p>
+<h3>4. 在 Google 和 Bing 中被收录</h3>
+<p>在 Google Search Console 和 Bing Webmaster Tools 中验证你的网站，向两者提交网站地图，并确认主要页面显示为已收录。Bing Webmaster Tools 点几下就能直接从 Search Console 导入已验证的网站。Bing 的重要性远超它的份额：<a class="go" href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI 关于 ChatGPT 搜索的帮助页面说明，它会把查询发送给合作搜索服务商，其中就包括 Microsoft（Bing）</a>，尽管 <a class="go" href="https://gs.statcounter.com/search-engine-market-share/all/new-zealand" target="_blank" rel="noopener">Statcounter 的数据显示，2026年9月 Bing 在新西兰搜索市场的份额仅为 7.71%</a>。</p>
+
+<h2>企业基本信息（第 5 至 8 项）</h2>
+<p>AI 引擎介绍一家企业时，会把它网站上的信息、各平台的商家条目和其他人页面上的内容拼合起来。这些信息一致时，引擎就能有把握地陈述。地址、服务或营业时间在不同网站上互相矛盾时，它可能会把你介绍错，或者干脆不提你。这一组任务的目的，是让每个来源说的都是同一件事。</p>
+<h3>5. 写一页企业信息表</h3>
+<p>列出 AI 推荐你时需要的信息：注册名称和经营名称、一句话说明你做什么、服务项目、按区或城市划分的服务范围、营业时间、常见价格区间、执照和会员资格、成立年份，以及企业主姓名。把同样的信息用平实的句子写进“关于我们”页面。这份文档将成为第 6 至 8 项和第 17 项的唯一信息来源。</p>
+<h3>6. 让名称、地址和电话处处一致</h3>
+<p>搜索你的企业名称，把每一个商家条目都和信息表核对一遍：拼写相同，地址格式相同，电话号码相同。术语表把这称为 <a class="go" href="/glossary/#nap-consistency">NAP 一致性</a>。先修正过去营业地点留下的旧地址，因为它们造成的混乱最多。</p>
+<h3>7. 完善 Google 商家资料和 Bing Places</h3>
+<p>把你的 <a class="go" href="/glossary/#google-business-profile">Google 商家资料（Google Business Profile）</a>每一栏都填满：类别、带说明的服务项目、营业时间、节假日营业时间、照片和商家介绍。然后认领 Bing Places for Business，它可以从 Google 导入信息。ChatGPT 会把“附近的”这类提问当作本地搜索来处理，而本地搜索读取的正是这些商家资料。</p>
+<h3>8. 认领客户常用的商家目录</h3>
+<p>在新西兰，通常是 Yellow、Finda 和 NZ Business Directory，以及适合你行业的 NoCowboys、Builderscrack 等行业网站。在澳大利亚，则是 Yellow Pages、True Local 和 hipages。再加上你所在行业协会的会员名录。5 个准确的条目，胜过 20 个只填了一半的条目。本地基础工作的更多细节，见<a class="go" href="/blog/seo-for-small-business-nz">新西兰小企业 SEO 指南</a>。</p>
+
+<h2>可直接作答的页面（第 9 至 13 项）</h2>
+<p>AI 引擎引用的是段落，所以页面需要有能独立回答问题的句子。这一组任务把你最重要的页面变成答案：开头直接作答，标题写成客户会问的问题，信息附上来源，并为买家打电话之前会问的问题单独建页面。这是耗时最长的一组，也是会持续带来回报的一组。</p>
+<h3>9. 每个重要页面都以直接的答案开头</h3>
+<p>首页、服务页和价格页的开头，用一段 40 到 60 词的文字完整回答页面的核心问题。“我们在汉密尔顿和怀卡托地区安装热泵，通常在报价后一周内完成……”这样的句子，引擎可以直接摘用。欢迎语和公司历史放到后面。</p>
+<h3>10. 把标题写成客户会问的问题</h3>
+<p>从收件箱、来电、报价请求和 Google 的“其他人还问了”板块中收集真实的问题。把最常见的几个变成 H2 标题（例如“浴室翻新需要多长时间？”），并在标题下的第一句话里作答。客户自己的说法，就是你手里最好的关键词。</p>
+<h3>11. 加入数字、引语和来源</h3>
+<p>GEO 背后的研究直接验证过这一点。<a class="go" href="https://arxiv.org/html/2311.09735v3" target="_blank" rel="noopener">Aggarwal 等人发表于 KDD 2024 的论文发现，加入引语、加入统计数据和注明来源，各自都能让内容在 AI 回答中的可见度提升 30% 到 40%，而堆砌关键词几乎没有任何改善</a>。落到你的页面上，就是真实的价格区间、时间周期、一位具名人士的引语，以及指向你所遵循的标准或法规的链接。</p>
+<h3>12. 发布买家会向 AI 询问的页面</h3>
+<p>买家在做选择之前会问的每个问题，都写一个页面：要花多少钱、什么因素会影响价格，你和其他选择相比如何，这项服务适合谁、不适合谁，以及每项服务在每个地区各一个页面。这些都是购买决策类问题，而 <a class="go" href="https://www.semrush.com/blog/semrush-ai-overviews-study/" target="_blank" rel="noopener">Semrush 对超过 1,000 万个美国关键词的研究发现，到 2025年10月，商业类、交易类和导航类查询占触发 Google AI 概览的查询的 42.8%</a>。</p>
+<h3>13. 为页面标注日期并保持更新</h3>
+<p>在指南和价格页上显示“最近更新”日期，数字有变化时及时更新。设一个日历提醒，每六个月检查一次最重要的五个页面。你自己网站上过时的价格，可能会被 AI 的回答一再引用。</p>
+
+<h2>证据与提及（第 14 至 16 项）</h2>
+<p>AI 引擎在看一家企业如何介绍自己的同时，也会看别人怎么说它。评价、本地媒体报道、行业协会名录和视频，都能为引擎提供独立的证据。这一组任务要养成的是逐月积累证据的习惯，因为这些都无法在一天内完成。</p>
+<h3>14. 每月邀请客户评价，并逐条回复</h3>
+<p>评价的新近程度对客户很重要，对读取评价的引擎也一样。<a class="go" href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener">BrightLocal 的《2026年本地消费者评价调查》访问了 1,002 名美国成年人，发现 74% 的人会寻找最近三个月内的评价，31% 的人只会选择评分 4.5 星及以上的商家</a>。每完成一单都附上评价链接，并回复每一条评价，无论好坏。BrightLocal 销售本地 SEO 软件，样本也来自美国，但这个习惯放到哪里都适用。</p>
+<h3>15. 争取在其他网站上被提及</h3>
+<p>目标是每月新增一次提及：一篇本地新闻报道、一家供应商的案例研究、一期播客、一篇“最佳推荐”盘点、一次行业协会的专题介绍。<a class="go" href="https://ahrefs.com/blog/ai-overview-brand-correlation/" target="_blank" rel="noopener">Ahrefs 对 75,000 个品牌的研究发现，网络上的品牌提及与 Google AI 概览可见度的相关性最强（0.664），远高于反向链接（0.218）</a>。Ahrefs 销售 SEO 工具，而且这只是相关性，但这是目前能找到的最清晰的信号。关于这一项的更多内容，见<a class="go" href="/blog/how-to-get-mentioned-by-chatgpt">如何让你的企业被 ChatGPT 提及</a>这篇指南。</p>
+<h3>16. 在 YouTube 上发布两三个短视频</h3>
+<p>用手机拍摄几段视频，回答客户最常问的问题，每段 2 到 4 分钟，在标题和简介中写明企业名称和服务地区。<a class="go" href="https://ahrefs.com/blog/ai-overview-citations-top-10/" target="_blank" rel="noopener">Ahrefs 在 2026年3月对 400 万个 Google AI 概览网址的分析发现，YouTube 是被引用最多的域名，占全部引用的 5.6%</a>。短视频也让客户在打电话之前就有了信任你的理由。</p>
+
+<h2>结构化数据（第 17 和 18 项）</h2>
+<p>结构化数据用机器无需猜测就能读懂的格式，把你的企业信息再说一遍。Google 表示，出现在 Google AI 概览中并不需要它，这个说法可以照字面理解。但它仍能在 Google 搜索中带来富媒体搜索结果，并消除名称、地址和服务方面的歧义，所以值得花一个下午来做。</p>
+<h3>17. 添加 LocalBusiness 或 Organization 结构化数据</h3>
+<p>在首页添加一段<a class="go" href="/glossary/#schema-markup">结构化数据标记（schema）</a>，写入第 5 项中的信息：名称、地址、电话、营业时间、服务地区，以及指向你的 Google 商家资料、Facebook、LinkedIn 和各商家目录条目的“sameAs”链接。大多数建站工具和 SEO 插件都有填写这些内容的表单。用 Google 的富媒体搜索结果测试和 Schema.org 验证工具测试一下。<a class="go" href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google 关于 AI 功能的指南明确表示，Google AI 概览和 AI 模式都不需要任何特殊的结构化数据</a>，所以把这一步当作日常整理就好。</p>
+<h3>18. 只在与页面内容相符时，才为常见问题、产品和文章添加标记</h3>
+<p>为带有真实问答板块的页面添加 FAQPage 标记，为产品页添加 Product 标记，为指南添加 Article 标记。Google 现在只对一小部分权威网站显示常见问题富媒体结果，所以添加 FAQ 标记是为了让问题和答案更明确，搜索结果的外观不会因此变化。如果标记描述的内容在页面上并不存在，就违反了 Google 的指南。</p>
+
+<h2>效果衡量（第 19 和 20 项）</h2>
+<p>在工具成熟之前，用简单的习惯来衡量 AEO。目前还没有哪个仪表盘能像 Search Console 报告 Google 排名那样可靠地报告 AI 可见度，所以每月一次的提示词记录，加上几项分析设置，能给出最清晰的画面。要看三个月的趋势来判断，因为 AI 的回答每次运行都会有所不同。</p>
+<h3>19. 每月做一次提示词记录</h3>
+<p>写下 15 到 20 个客户会问的问题，比如“基督城治疗跑步损伤最好的理疗师”或“奥克兰厨房翻新要花多少钱”。每个月在 ChatGPT、Perplexity、Gemini 和 Google 中各运行一遍，记录你有没有被提到、还有谁被提到，以及哪些页面被引用。每次都开一个新对话，避免之前的对话影响回答。</p>
+<h3>20. 追踪 AI 来源流量，并直接问客户</h3>
+<p>在 Google Analytics 4 中，为来自 chatgpt.com、perplexity.ai、gemini.google.com 和 copilot.microsoft.com 的引荐流量建一份报告。在表单和电话话术中“您是如何了解到我们的？”这个问题下，加上“ChatGPT 等 AI 助手”这个选项。<a class="go" href="https://www.brightlocal.com/research/lcrs-ai-trust/" target="_blank" rel="noopener">BrightLocal 2026年的研究发现，用 AI 获取本地推荐的人中，有 88% 会查看它引用的来源</a>，所以许多受 AI 影响的客户会通过你的商家条目找上门，只有主动问才能发现他们。</p>
+
+<h2>llms.txt 值得加吗？</h2>
+<p>llms.txt 文件是一个可选的附加项，应当排在上面 20 项之后。它是放在网站根目录的一个纯文本文件，为 AI 系统列出你最有用的页面。写一份只要十分钟，但目前还没有任何一家主流 AI 服务商表示会用 llms.txt 来决定引用哪些内容。</p>
+<p>使用数据很少。<a class="go" href="https://ahrefs.com/blog/llmstxt-study/" target="_blank" rel="noopener">Ahrefs 在 2026年6月对 137,210 个域名的研究发现，28% 的域名发布了有效的 llms.txt 文件，但其中 97% 在一个月内没有收到任何请求</a>，而在确实收到的请求中，AI 检索机器人只占 1.1%。Ahrefs 的样本偏向安装了分析工具的网站，所以并不是整个网络的随机样本。Flow AI 发布了一份，因为维护它不花任何成本。你愿意的话也可以加一份，只是目前不要对它抱什么期待。<a class="go" href="/glossary/#llms-txt">术语表中的 llms.txt 条目</a>介绍了它的格式。</p>
+
+<h2>Flow AI 能在哪里帮上忙</h2>
+<p>Flow AI 是一家 AI 营销转型实践机构：从策略、系统到运转营销职能的智能体，端到端完整构建。书面范围说明会在你的网站上逐项过一遍这份清单，并指出第一个要部署的系统，对许多企业来说就是 <a class="go" href="/sprints/ai-search">AI 搜索冲刺</a>。</p>
+<p>更想自己动手？<a class="go" href="/templates/">免费智能体模板</a>中包括 AI 爬虫访问检查、AI 可引用度评分工具和完整的 GEO 审核，开源的 GEO 技能都在<a class="go" href="/skills/#geo">技能库</a>里。</p>
+
+<h2>简要总结</h2>
+<p>向 AI 爬虫开放你的网站，并在 Google 和 Bing 中被收录。让你的企业信息处处一致。重写主要页面，让每个页面都以直接的答案开头，并用数字和来源支撑其中的论断。然后每月积累评价和提及，添加准确的结构化数据，并记录引擎如何介绍你。</p>
+<p>前两组只需一天，却是其他一切的保障。其余各项的效果会逐步累积，而且每一项对普通的 Google 搜索也同样有帮助。完整的背景知识，请阅读<a class="go" href="/blog/what-is-answer-engine-optimisation">答案引擎优化指南</a>。</p>
+<p>想让这份清单在你的网站上跑一遍，并找出第一个要修复的问题，<a class="go" href="/contact">和 Amber 聊聊</a>。</p>

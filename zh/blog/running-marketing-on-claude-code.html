@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>用 Claude Code 运转整个营销职能：一线工作笔记 | Flow AI</title>
+<meta name="description" content="一位独立 AI 营销工程师的工作笔记：如何用 Claude Code 运转整个营销职能，包括分工指令文件、技能库、MCP 连接器和人工审核环节。">
+<meta name="author" content="Amber Lan">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/blog/running-marketing-on-claude-code">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/blog/running-marketing-on-claude-code">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="用 Claude Code 运转整个营销职能：一线工作笔记 | Flow AI">
+<meta property="og:description" content="一位独立 AI 营销工程师的工作笔记：如何用 Claude Code 运转整个营销职能，包括分工指令文件、技能库、MCP 连接器和人工审核环节。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-10-08T00:00:00+13:00">
+<meta property="article:modified_time" content="2026-10-08T00:00:00+13:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code#article",
+      "headline": "如何用 Claude Code 运转整个营销职能？",
+      "description": "奥克兰 AI 营销工程师 Amber Lan 的工作笔记。她一个人用 Claude Code 运转一家 AI 初创公司的整个营销职能。笔记涵盖：整套系统如何按分工指令文件、有版本管理的技能库、MCP 连接器和定时任务来组织；审核环节如何运作；哪些工作交给智能体，哪些留给人；哪些地方出过问题；以及一个人做营销时可以如何起步。",
+      "datePublished": "2026-10-08",
+      "dateModified": "2026-10-08",
+      "inLanguage": "zh-Hans",
+      "articleSection": "AI 营销智能体",
+      "wordCount": 4855,
+      "timeRequired": "PT13M",
+      "image": "https://www.flowai.co.nz/blog/figures/running-marketing-on-claude-code.svg",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#flowai"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/zh/blog/#blog"
+      },
+      "mainEntityOfPage": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".short-answer__text",
+          ".article-hero h1"
+        ]
+      },
+      "keywords": "Claude Code 做营销, 用 Claude Code 运转营销, Claude Code 营销, Claude Code 营销技能, 营销用 CLAUDE.md, MCP 营销应用, 一人营销团队 AI, 独立营销人 AI 智能体, 一个人的营销团队, AI 营销工程师, claude code for marketing, marketing engineer",
+      "about": {
+        "@id": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code#definedterm"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code#definedterm",
+      "name": "用 Claude Code 运转营销（Running marketing on Claude Code）",
+      "description": "用 Claude Code 运转营销，是指把一个营销职能沉淀在一个文件夹里：书面指令加可复用的技能，并接入工作所在的各类工具。AI 智能体每天按这些内容推进工作，由一个人审核产出，决定哪些内容上线。",
+      "url": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code",
+      "inDefinedTermSet": {
+        "@id": "https://www.flowai.co.nz/zh/glossary/#terms"
+      },
+      "alternateName": [
+        "Running marketing on Claude Code",
+        "Claude Code for marketing",
+        "Claude Code 做营销"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "用 Claude Code 做营销需要会写代码吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "需要的代码比大家想象的少，但对文件的熟悉程度要比多数营销人高。大部分配置都是纯文本：用普通语言写成的指令文件和技能文件。等你需要渲染流水线或构建检查时，代码才变得重要。这些代码 Claude Code 能和你一起写出大部分，但你仍然要能读懂，才知道它什么时候写错了。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Claude Code 能做到哪些聊天助手做不到的事？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "聊天助手在一次对话里作答，对话结束就不再记得你的工作文件。Claude Code 在你电脑上的一个文件夹里工作：每次会话开始时读取指令文件，能编辑文件、运行命令，任务匹配时会加载相应技能，还能通过 MCP 连接其他工具。放到营销上，就是简报和草稿都在同一个地方，智能体可以直接在上面动手。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "怎样让 AI 写的内容读起来不像 AI？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "把品牌语调写成机器能检查的规则，在有人阅读之前，逐行对照规则检查。我的规则禁用了特定的词和句式，未通过的草稿会针对出问题的那几行重写。之后再做一轮去 AI 味处理。最后一步是人来读，因为有些痕迹只有在你心里默读那句话时才会显现。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "把智能体接入公司工具安全吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以做到安全，前提是权限收得窄，审批规则定得清楚。Anthropic 的 MCP 文档提醒用户在连接每个服务器之前先确认可以信任它，并警告抓取外部内容的服务器存在提示词注入风险。先从只读权限开始，凡是会发送或发布的操作都设为需要权限确认，使用公司自有的账号，并把智能体从网页或收件箱读到的文字一律当作数据，永远不当作指令。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一个营销团队可以共用一套技能库吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。Claude Code 会从代码仓库内的一个文件夹加载项目技能，Anthropic 的文档建议把这个文件夹提交到仓库，让队友拿到同样的技能。放在 git 里的共享技能库，能让整个团队用同一版语调规则和流程，每次改动都有记录。约定好谁可以修改技能，并像审稿一样审核每次修改。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "搭建需要多长时间？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "第一条能用的工作线需要几天，整个营销职能需要几个月。我的系统是一条线一条线长出来的：先写简报，再把一项重复工作做成技能，然后接入连接器，最后设定时任务。最慢的是写作部分，因为每条工作线都需要先把好的产出是什么样子写清楚，智能体才能做出来。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "指南",
+          "item": "https://www.flowai.co.nz/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI 营销智能体",
+          "item": "https://www.flowai.co.nz/zh/blog/?topic=agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "如何用 Claude Code 运转整个营销职能？",
+          "item": "https://www.flowai.co.nz/zh/blog/running-marketing-on-claude-code"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#article">跳到指南正文</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/blog/" aria-current="page">指南</a>
+      <a href="/zh/about">关于我</a>
+      <span class="lang-switch" role="group" aria-label="语言"><a href="/blog/running-marketing-on-claude-code" lang="en" hreflang="en" data-lang="en">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/blog/running-marketing-on-claude-code" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh" aria-current="true">中文</a></span>
+      <a class="site-header__cta" href="/zh/contact">与我合作</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero article-hero centered" aria-labelledby="article-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow"><a href="/zh/blog/">指南</a><span aria-hidden="true"> / </span><a href="/zh/blog/?topic=agent">AI 营销智能体</a></p>
+        <h1 id="article-title">如何用 Claude Code 运转整个营销职能？</h1>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">简短回答</p>
+          <p class="short-answer__text">给每条营销工作线配一份专属指令文件，把每个重复的流程做成有版本管理的技能，通过 MCP 把智能体接入营销日常使用的工具，再把周期性简报设为定时任务。智能体负责调研和起草，所有内容由一个人审核，上线前由这个人批准，判断始终留在人手里。</p>
+        </aside>
+        <p class="lead">我一个人负责一家 AI 初创公司的全部营销工作，用的是 Claude Code 和我自己搭建的智能体。<b>这份笔记记录了整套系统的组织方式、哪些环节仍由人来决定，也包括出过问题的部分。</b></p>
+        <p class="byline small"><span><a href="/zh/about">Amber Lan</a>，AI 营销工程师</span><span aria-hidden="true">·</span><span>更新于 <time datetime="2026-10-08">2026年10月8日</time></span><span aria-hidden="true">·</span><span>13 分钟阅读</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body" id="article" aria-label="指南正文">
+    <div class="wrap article-grid">
+      <nav class="toc" aria-label="目录">
+        <details class="toc__box" open>
+          <summary class="toc__label">目录 <span class="toc__left" data-minutes-left></span></summary>
+          <div class="toc__progress" aria-hidden="true"><span data-progress></span></div>
+          <ol class="toc__list">
+<li><a href="#what-does-it-mean-to-run-marketing-on-claude-code" data-toc="what-does-it-mean-to-run-marketing-on-claude-code"><span class="toc-num">01</span><span>用 Claude Code 运转营销是什么意思？</span></a></li>
+<li><a href="#how-is-the-setup-organised" data-toc="how-is-the-setup-organised"><span class="toc-num">02</span><span>整套系统是怎么组织的？</span></a></li>
+<li><a href="#how-does-a-draft-get-from-agent-to-published" data-toc="how-does-a-draft-get-from-agent-to-published"><span class="toc-num">03</span><span>一份草稿从智能体到上线要经过什么？</span></a></li>
+<li><a href="#which-work-do-the-agents-do-and-which-do-i-keep" data-toc="which-work-do-the-agents-do-and-which-do-i-keep"><span class="toc-num">04</span><span>哪些工作交给智能体，哪些由我保留？</span></a></li>
+<li><a href="#what-broke-and-what-did-i-change" data-toc="what-broke-and-what-did-i-change"><span class="toc-num">05</span><span>哪些地方出过问题，我改了什么？</span></a></li>
+<li><a href="#how-do-you-start-if-you-are-one-marketer" data-toc="how-do-you-start-if-you-are-one-marketer"><span class="toc-num">06</span><span>如果你是一个人做营销，该怎么起步？</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">07</span><span>Flow AI 能在哪里帮上忙</span></a></li>
+<li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">08</span><span>简要总结</span></a></li>
+<li><a href="#faq" data-toc="faq"><span class="toc-num">09</span><span>企业主常问的问题</span></a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <div class="article-main">
+        <figure class="article-figure"><img src="/blog/figures/running-marketing-on-claude-code.svg" width="960" height="540" alt=""></figure>
+        <article class="prose">
+<h2 id="what-does-it-mean-to-run-marketing-on-claude-code"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">用 Claude Code 运转营销是什么意思？</span></h2>
+<p>用 Claude Code 运转营销，是指把一个营销职能沉淀在一个文件夹里：书面指令加可复用的技能，并接入工作所在的各类工具，由 AI 智能体每天按这些内容推进工作。一个人审核产出，决定哪些内容上线。生产交给智能体，判断留给人。</p>
+<p><a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 在 Claude Code 概览中将它描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。它原本是为软件开发而生的。放到营销上，代码库就是营销职能本身：定位文档、语调规则、内容日历、草稿，以及在这些内容上运行的各项检查。</p>
+<p>我在一家 AI 初创公司工作，一个人负责全部营销，用的就是这样一套系统。我在营销的大多数领域做了十年，最近三年在为营销搭建智能体系统。如果你还不熟悉 <a class="go" href="/zh/blog/what-is-an-ai-marketing-agent">AI 营销智能体</a>这个概念，可以先读那篇定义。这份笔记讲我如何组织工作、哪些地方仍由我决定，失败的经历也在其中。做这类工作的职位叫<a class="go" href="/zh/blog/what-is-a-marketing-engineer">营销工程师</a>。</p>
+
+<h2 id="how-is-the-setup-organised"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">整套系统是怎么组织的？</span></h2>
+<p>系统分四层。每条工作线有一份专属指令文件，读起来像一份岗位说明。技能库收纳每个重复的流程，在 git 里做版本管理。连接器把智能体接入营销已经在用的工具。定时任务启动周期性工作，子智能体则把调研从主线程中分流出去。</p>
+
+<h3>每条工作线一份指令文件</h3>
+<p>Claude Code 会把名为 CLAUDE.md 的文件当作常驻指令来读取。<a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic 的记忆文档说明，工作目录上层的 CLAUDE.md 文件在启动时加载，子目录里的文件则在 Claude 处理该目录下的文件时加载</a><sup class="fn"><a href="#source-2" aria-label="来源 2">2</a></sup>。这个机制很适合营销部门。顶层文件夹存放所有工作线共用的规则，比如语调规则、谁负责签批什么。每个工作线文件夹（内容、社交媒体、搜索、主动外联、活动、报告）各有一份 CLAUDE.md，按岗位说明的写法来写：这条线负责什么、读取哪些输入、完成的工作是什么样子、哪些事需要我批准。</p>
+<p>把它们写成岗位说明，对产出的改善超过任何提示词技巧。给人的好简报，也是给智能体的好简报。同一份文档还提醒，相互矛盾的指令可能让 Claude 随意选其中一条执行，所以我每隔几周会把各条线的文件放在一起对照着读，删掉已经过时的内容。</p>
+
+<h3>放在 git 里的技能库</h3>
+<p>一个技能就是一个文件夹，里面有一份 SKILL.md 文件。<a class="go" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic 的技能文档说明，Claude 会在相关时使用技能，你也可以按名称直接调用；项目技能可以提交到仓库，让团队也能用上</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>。文件顶部的描述告诉 Claude 这个技能在什么情况下适用。</p>
+<p>凡是我手动做过两次的事，都会变成一个技能。我的<a class="go" href="/zh/glossary/#content-engine">内容引擎</a>就打包成了一个技能：输入一份源文档，输出一个月的各平台原生草稿，每一行都对照语调规则检查过。图片是 HTML 画板，用 Playwright 渲染成 PNG 和 PDF，同一条流水线还能用 ffmpeg 把动画转成 MP4。搜索方面，我在 GitHub 上维护着 <a class="go" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude，一个面向 Claude Code 的开源答案引擎优化工具包</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>，它会为页面的可引用程度打分，并检查 AI 爬虫的访问情况。粘贴进提示词的风格指引，几次会话之后就会淡化。一个规则明确、有版本管理的技能，可以把标准维持好几个月，交接之后也依然有效。</p>
+
+<h3>接入营销日常所在的工具</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过模型上下文协议（Model Context Protocol）连接数百种外部工具和数据源</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>，文档里还以 Notion 作为配置示例。我的智能体连接了 Notion（计划和团队知识库都在这里）、社交媒体排期工具、CRM 和潜客挖掘工具，以及邮箱。大多数连接一开始都是只读。智能体有写入权限的地方，写入的也只是草稿。</p>
+
+<h3>定时任务和子智能体</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code Desktop 可以按你设定的时间和频率开启新会话，用来处理诸如根据日历和收件箱生成晨间简报之类的工作</a><sup class="fn"><a href="#source-6" aria-label="来源 6">6</a></sup>。我的晨间启动任务就是这样：在我打开任何东西之前，它已经把工作区和收件箱整理成一张当日优先级看板。本地任务只在应用打开、电脑处于唤醒状态时才会触发，所以必须在夜间运行的任务应当放到云端例行任务里。如果要写脚本，<a class="go" href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic 关于以编程方式运行 Claude Code 的文档介绍了非交互模式，用 claude -p 启动</a><sup class="fn"><a href="#source-7" aria-label="来源 7">7</a></sup>。</p>
+<p><a class="go" href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic 的子智能体文档说明，每个子智能体在独立的上下文窗口中运行，拥有自定义系统提示词、特定的工具权限和独立的权限设置</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>。我用它们做调研和初稿：几个调研问题并行运行，各自以一份报告返回，只有报告会进入主线程。</p>
+
+<h2 id="how-does-a-draft-get-from-agent-to-published"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">一份草稿从智能体到上线要经过什么？</span></h2>
+<p>智能体负责生产，人负责决定。每份草稿在我看到之前都要经过自动检查，从语调规则到每个数字和论断的来源核查。之后，正文会做一轮去 AI 味处理。然后由我来读。没有我的批准，任何内容都不会发送或发布；主动外联中的每一条回复都交给人处理。</p>
+<p>顺序很重要，因为每道检查都能发现下一道发现不了的问题：</p>
+<ol>
+  <li><b>语调审核。</b>逐行对照书面语调规则检查：禁用词、标点习惯、句子节奏，以及品牌自己的规则。未通过的草稿会针对具体出问题的几行重写，效果远好于从头重新生成。</li>
+  <li><b>论断检查。</b>术语表和论断登记册规定了公司可以公开说什么。草稿里出现登记册之外的论断，就退回重写。</li>
+  <li><b>证据审核。</b>任何内容上线前，都有一个技能核查每个链接和每个统计数据及其出处。找不到一手来源的数字，就把数字删掉。</li>
+  <li><b>去 AI 味处理。</b>我会对正文运行 Siqi Chen 开发的开源 Humanizer 技能。它会去掉读者如今一眼就能认出的机器写作习惯。</li>
+  <li><b>我来读。</b>最终版本我会完整读一遍，按下发布键的人也是我。</li>
+</ol>
+<p>主动外联遵循同样的原则。外联智能体调研目标客户，用温和、邀请式的语气起草触达内容；一旦对方回复，整个对话就交给人接手。这条接手规则，就是<a class="go" href="/zh/glossary/#human-in-the-loop">人工把关（human in the loop）</a>最直白的样子。</p>
+<p>Claude Code 的权限设置也能强制执行这条规则。<a class="go" href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic 的权限文档说明，规则按“先拒绝、再询问、后允许”的顺序判定，即使同时匹配了允许规则，只要匹配到询问规则，仍会弹出确认提示</a><sup class="fn"><a href="#source-9" aria-label="来源 9">9</a></sup>。在我的系统里，这条规则落在工作流程中：草稿进入审核队列，在我书面批准之前，任何内容都不会到达客户、渠道或发送按钮。审批也从即时消息挪到了书面审核节点，这样我在开会或参加活动时，工作也能继续推进。</p>
+
+<h2 id="which-work-do-the-agents-do-and-which-do-i-keep"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">哪些工作交给智能体，哪些由我保留？</span></h2>
+<p>智能体负责生产：调研、初稿、渲染、检查和周期性报告。我保留的是定位、公司对外做出的论断、审美判断、所有公开内容的最终审读，以及与每一个真实的人之间的关系。下表按工作线列出目前的分工，随着检查机制不断完善，这条线也在移动。</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>工作线</th><th>智能体做什么</th><th>我保留什么</th></tr></thead>
+  <tbody>
+    <tr><td><b>定位与论断</b></td><td>收集竞品页面，标出缺少证据的论断</td><td>定位本身，以及每一条新论断</td></tr>
+    <tr><td><b>内容</b></td><td>根据一份源文档规划一个月的内容，起草各平台原生帖子，执行语调审核</td><td>选定源文档和最终审读</td></tr>
+    <tr><td><b>设计</b></td><td>用 HTML 制作卡片和轮播图，再渲染成图片、PDF 或视频</td><td>版式决定，以及哪些稿子不用</td></tr>
+    <tr><td><b>AI 搜索</b></td><td>审核爬虫访问和结构化数据，然后生成修复方案</td><td>我们要回答买家的哪些问题，以及答案里说什么</td></tr>
+    <tr><td><b>主动外联</b></td><td>补全并调研目标客户信息，起草首次触达</td><td>联系谁，以及每一条回复</td></tr>
+    <tr><td><b>高管声音</b></td><td>按每位高管已成文的个人语调起草 LinkedIn 帖子，附带有出处的统计数据</td><td>高管本人的观点和最终签批</td></tr>
+    <tr><td><b>活动</b></td><td>通过渲染流水线制作物料，准备检查清单</td><td>与主办方的谈判，以及展位上的交流</td></tr>
+    <tr><td><b>报告与运营</b></td><td>生成晨间优先级看板和每周总结</td><td>决定停掉什么</td></tr>
+  </tbody>
+</table></div>
+<p>右边这一栏才是这份工作的核心。我的一周从写作转向了决策，而决策恰恰是从来不需要自动化的部分。如果你是营销人，正在琢磨自己的分界线落在哪里，<a class="go" href="/zh/blog/ai-for-marketers">营销人的 AI 指南</a>从另一个角度讲了同样的分工。</p>
+
+<h2 id="what-broke-and-what-did-i-change"><span class="sec-num" aria-hidden="true">05</span><span class="sec-title">哪些地方出过问题，我改了什么？</span></h2>
+<p>大多数问题出在我自己这一侧。我搭建的速度快过发布的速度。草稿排队等着我审批。本该冻结规格的系统，我一再重建。品牌语调几周下来逐渐走样，有些统计数据追溯不到一手来源。每次失败都改变了系统，这些修复如今已成为系统的一部分。</p>
+
+<h3>搭建多于发布</h3>
+<p>Claude Code 让搭建变得很便宜，而搭建比发布有趣得多。有一段时间，我手里的系统比发布出去的作品还多。解决办法是我现在给自己定的一条规矩：一个系统只有在交付了真实的成果之后才算数，当前这条工作线跑完一个完整周期之前，新的搭建一律等着。</p>
+
+<h3>草稿堆积在发布环节之前</h3>
+<p>智能体起草的速度一旦超过我判断的速度，瓶颈就成了我自己。已批准的内容被压在未读的内容后面。现在，已批准的稿件进入一个储备池，可以等合适的发布时段；新草稿我也改为在固定时间集中审核，不再随到随看。</p>
+
+<h3>一再重建，没有冻结规格</h3>
+<p>每冒出一个好点子，我都忍不住给原本运转良好的东西做个新版本。我的设计系统就这样重建了好几次。现在每个系统都有一份带版本号的书面规格。新想法记到下一版的清单上，当前版本保持冻结，冻结的时间要足够让它真正用来交付。</p>
+
+<h3>品牌语调走样</h3>
+<p>在长时间的会话中，措辞会慢慢滑回模型的默认表达，不同高管的个人语调也会开始趋同。逐行检查的成文规则把它拉了回来，每个语调技能里附带的好句和坏句示例也起了作用。我还认识到，指令文件只能引导模型，约束不了它。<a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic 的记忆文档说明，Claude 把 CLAUDE.md 当作上下文来对待，并建议用 PreToolUse 钩子来拦截某个操作，无论 Claude 如何决定</a><sup class="fn"><a href="#source-2" aria-label="来源 2">2</a></sup>。<a class="go" href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener">Anthropic 的钩子指南将钩子描述为在固定节点运行的 shell 命令，能提供确定性的控制</a><sup class="fn"><a href="#source-10" aria-label="来源 10">10</a></sup>。凡是每次都必须遵守的规则，现在都放进了自动运行的检查里：比如这个网站的构建流程，会拒绝任何含有破折号的文件。</p>
+
+<h3>追溯不到来源的统计数据</h3>
+<p>模型会给出看似合理的数字，网上的文章又不断转引，直到它们看起来像是定论。有好几个我想用的数字，在发布方自己的页面上根本找不到。现在的规则是：每个数字都要在句子里写明来源，链接到一手来源，并注明年份。如果我无法核实，这句话就不带数字发出去。</p>
+
+<h2 id="how-do-you-start-if-you-are-one-marketer"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">如果你是一个人做营销，该怎么起步？</span></h2>
+<p>从写作开始，然后一条工作线一条工作线地加装机制。先写好每个智能体都会读取的简报，再把你最常重复的那项工作变成一条工作线，配上专属指令文件和技能。等这条线手动运行顺畅之后，再加连接器和定时任务。</p>
+<ol>
+  <li><b>写好简报。</b>把定位、受众、语调规则、禁用论断和几个优秀作品示例写进同一个文件。每个智能体都先读它。</li>
+  <li><b>选一条工作线。</b>挑每周最耗费你时间的那项工作。给它建一个文件夹，配一份按岗位说明写法写成的 CLAUDE.md。</li>
+  <li><b>第二次重复时做成技能。</b>第一次做某项任务时，和智能体一起做。第二次做时，把流程写进一份 SKILL.md，并提交到 git。</li>
+  <li><b>上线前加一道检查。</b>起步时，一道语调审核或一道来源核查就够了。所有内容你仍然要亲自读。</li>
+  <li><b>接入一个工具，只读。</b>先让智能体读取规划工作区或 CRM，再让它往任何地方写入。</li>
+  <li><b>运行顺畅之后再设定时。</b>周期性简报是最容易上手的第一个定时任务。</li>
+  <li><b>冻结规格，跑满一个月。</b>先用这条工作线交付成果，再搭建下一条。</li>
+</ol>
+<p>关于工作线的添加顺序，<a class="go" href="/zh/blog/ai-agents-for-marketing">营销 AI 智能体</a>指南建议从代价最大的缺口入手，通常是搜索或主动外联。如今搜索也包括<a class="go" href="/zh/glossary/#answer-engine-optimisation-aeo">答案引擎优化</a>，让 ChatGPT 这类助手能准确地介绍你的业务。</p>
+
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">Flow AI 能在哪里帮上忙</span></h2>
+<p>Flow AI 是一家 AI 营销转型实践机构：从策略、系统到运转营销职能的智能体，端到端完整构建。我公开搭建这些系统。<a class="go" href="/zh/skills/">Flow AI 技能库</a>列出了 125 个技能，你可以在运行之前逐一查看：其中 16 个由我搭建，其余均注明了原作者。</p>
+<p>团队可以委托我来搭建，合作从一份书面范围说明开始。如果你在招聘营销工程师或 AI 部署相关岗位，我也欢迎<a class="go" href="/zh/about#hire">聊聊高级职位，可远程，地点不限</a>。</p>
+
+<h2 id="the-short-version"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">简要总结</span></h2>
+<p>当每条工作线都有一份书面岗位说明，每个重复的流程都是有版本管理的技能，智能体接入了工作所在的工具，周期性工作按计划自动运行，整个营销职能就可以在 Claude Code 上运转起来。智能体负责生产，由人决定哪些内容上线，并维系每一段关系。</p>
+<p>我遇到的大多数问题都出在人的一侧：搭建得太快，审批得太慢。书面规则和无法跳过的检查，解决的问题比任何一次模型升级都多。如果你正在搭建类似的系统，或者想找人来搭建，<a class="go" href="/zh/contact">和 Amber 聊聊</a>。</p>
+        </article>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">企业主常问的问题</span></h2>
+  <div class="faq__list">
+<details class="faq__item" open><summary><h3>用 Claude Code 做营销需要会写代码吗？</h3></summary><p>需要的代码比大家想象的少，但对文件的熟悉程度要比多数营销人高。大部分配置都是纯文本：用普通语言写成的指令文件和技能文件。等你需要渲染流水线或构建检查时，代码才变得重要。这些代码 Claude Code 能和你一起写出大部分，但你仍然要能读懂，才知道它什么时候写错了。</p></details>
+<details class="faq__item"><summary><h3>Claude Code 能做到哪些聊天助手做不到的事？</h3></summary><p>聊天助手在一次对话里作答，对话结束就不再记得你的工作文件。Claude Code 在你电脑上的一个文件夹里工作：每次会话开始时读取指令文件，能编辑文件、运行命令，任务匹配时会加载相应技能，还能通过 MCP 连接其他工具。放到营销上，就是简报和草稿都在同一个地方，智能体可以直接在上面动手。</p></details>
+<details class="faq__item"><summary><h3>怎样让 AI 写的内容读起来不像 AI？</h3></summary><p>把品牌语调写成机器能检查的规则，在有人阅读之前，逐行对照规则检查。我的规则禁用了特定的词和句式，未通过的草稿会针对出问题的那几行重写。之后再做一轮去 AI 味处理。最后一步是人来读，因为有些痕迹只有在你心里默读那句话时才会显现。</p></details>
+<details class="faq__item"><summary><h3>把智能体接入公司工具安全吗？</h3></summary><p>可以做到安全，前提是权限收得窄，审批规则定得清楚。Anthropic 的 MCP 文档提醒用户在连接每个服务器之前先确认可以信任它，并警告抓取外部内容的服务器存在提示词注入风险。先从只读权限开始，凡是会发送或发布的操作都设为需要权限确认，使用公司自有的账号，并把智能体从网页或收件箱读到的文字一律当作数据，永远不当作指令。</p></details>
+<details class="faq__item"><summary><h3>一个营销团队可以共用一套技能库吗？</h3></summary><p>可以。Claude Code 会从代码仓库内的一个文件夹加载项目技能，Anthropic 的文档建议把这个文件夹提交到仓库，让队友拿到同样的技能。放在 git 里的共享技能库，能让整个团队用同一版语调规则和流程，每次改动都有记录。约定好谁可以修改技能，并像审稿一样审核每次修改。</p></details>
+<details class="faq__item"><summary><h3>搭建需要多长时间？</h3></summary><p>第一条能用的工作线需要几天，整个营销职能需要几个月。我的系统是一条线一条线长出来的：先写简报，再把一项重复工作做成技能，然后接入连接器，最后设定时任务。最慢的是写作部分，因为每条工作线都需要先把好的产出是什么样子写清楚，智能体才能做出来。</p></details>
+  </div>
+</section>
+        <aside class="author-box" aria-label="关于作者">
+          <p class="author-box__label">作者</p>
+          <p class="author-box__name"><a href="/zh/about">Amber Lan</a></p>
+          <p>AI 营销工程师，Flow AI 创始人，常驻新西兰奥克兰。她用自己搭建的智能体系统运行完整的营销职能，并把这些系统公开在 <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a> 上。Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。</p>
+        </aside>
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title" class="sources__title">资料来源</h2>
+  <p class="sources__note">每个数据都链接到一手来源。核对于 2026年10月8日。</p>
+  <ol class="sources__list">
+<li id="source-1"><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 在 Claude Code 概览中将它描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-2"><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic 的记忆文档说明，工作目录上层的 CLAUDE.md 文件在启动时加载，子目录里的文件则在 Claude 处理该目录下的文件时加载</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-3"><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic 的技能文档说明，Claude 会在相关时使用技能，你也可以按名称直接调用；项目技能可以提交到仓库，让团队也能用上</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-4"><a href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude，一个面向 Claude Code 的开源答案引擎优化工具包</a> <span class="src-host">github.com</span></li>
+<li id="source-5"><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过模型上下文协议（Model Context Protocol）连接数百种外部工具和数据源</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-6"><a href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code Desktop 可以按你设定的时间和频率开启新会话，用来处理诸如根据日历和收件箱生成晨间简报之类的工作</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-7"><a href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic 关于以编程方式运行 Claude Code 的文档介绍了非交互模式，用 claude -p 启动</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-8"><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic 的子智能体文档说明，每个子智能体在独立的上下文窗口中运行，拥有自定义系统提示词、特定的工具权限和独立的权限设置</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-9"><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic 的权限文档说明，规则按“先拒绝、再询问、后允许”的顺序判定，即使同时匹配了允许规则，只要匹配到询问规则，仍会弹出确认提示</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-10"><a href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener">Anthropic 的钩子指南将钩子描述为在固定节点运行的 shell 命令，能提供确定性的控制</a> <span class="src-host">code.claude.com</span></li>
+  </ol>
+</section>
+      </div>
+
+      <aside class="rail" aria-label="关于这篇指南">
+        <dl class="rail__facts">
+          <div><dt>主题</dt><dd><a href="/zh/blog/?topic=agent">AI 营销智能体</a></dd></div>
+          <div><dt>形式</dt><dd>工作笔记</dd></div>
+          <div><dt>更新于</dt><dd>2026年10月8日</dd></div>
+          <div><dt>阅读时间</dt><dd>13 分钟</dd></div>
+        </dl>
+        <button class="share-button" type="button" data-share data-share-title="如何用 Claude Code 运转整个营销职能？" data-share-text="一位独立 AI 营销工程师的工作笔记：如何用 Claude Code 运转整个营销职能，包括分工指令文件、技能库、MCP 连接器和人工审核环节。" data-share-url="/zh/blog/running-marketing-on-claude-code" aria-label="分享这篇指南" aria-live="polite">分享指南</button>
+        <div class="explore">
+          <p class="explore__label">用 AI 深入了解</p>
+          <p class="explore__note">在 AI 助手中打开这篇指南，问问它哪些内容适用于你的企业。</p>
+          <ul class="explore__list">
+<li><a href="https://chatgpt.com/?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/running-marketing-on-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Flow%20AI%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">ChatGPT<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://claude.ai/new?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/running-marketing-on-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Flow%20AI%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">Claude<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://www.perplexity.ai/search?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/running-marketing-on-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Flow%20AI%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">Perplexity<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact centered" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="contact-title">一起找出最值得先搭建的营销工作。</h2>
+        <p class="lead">想和团队一起搭建，或在找人来牵头？聊聊你正在推进的事情。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/zh/contact">与我合作</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related__title">继续阅读</h2>
+      <div class="post-grid">
+<article class="post-card" data-topic="agent" data-date="2026-10-06" data-title="什么是营销工程师？这个岗位做什么，以及如何辨别真正的营销工程师。" data-minutes="15">
+  <a class="post-card__figure" href="/zh/blog/what-is-a-marketing-engineer" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-a-marketing-engineer.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>15 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/what-is-a-marketing-engineer">什么是营销工程师？这个岗位做什么，以及如何辨别真正的营销工程师。</a></h3>
+    <p class="post-card__desc">营销工程师负责搭建并运行营销背后的 AI 系统。本文讲清这个岗位做什么、需要哪些技能、和 GTM 工程师有何区别，以及如何招到合适的人。</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="什么是 ai 营销智能体？写给小企业的定义。" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/what-is-an-ai-marketing-agent" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/what-is-an-ai-marketing-agent">什么是 AI 营销智能体？写给小企业的定义。</a></h3>
+    <p class="post-card__desc">AI 营销智能体在人工审核下规划、产出并发布营销工作。这是一份写给小企业的定义，并说明它和营销自动化、ChatGPT 有什么区别。</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-05" data-title="营销 ai 智能体：先搭哪一个，怎么搭。" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/ai-agents-for-marketing" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-agents-for-marketing.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/ai-agents-for-marketing">营销 AI 智能体：先搭哪一个，怎么搭。</a></h3>
+    <p class="post-card__desc">按工作职责梳理十个营销 AI 智能体，给出搭建顺序，并讲清如何稳妥地搭好一个：简报、数据权限、护栏规则、人工审核与效果衡量。</p>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/zh/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI 营销工程师，奥克兰</p>
+        <p class="site-footer__note">我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。</p>
+        <a class="site-footer__cta" href="/zh/contact">与我合作</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/work">作品</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/templates/">免费模板</a>
+      <a href="/zh/about">关于我</a>
+      <a href="/zh/manifesto">宣言</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="给 Amber Lan 发邮件" title="邮件"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

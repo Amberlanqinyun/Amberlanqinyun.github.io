@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>免费企业 AI 就绪度测评 | Flow AI</title>
+<meta name="description" content="两分钟免费自测，评估你的企业借助 AI 增长的就绪程度，并指出哪里已有优势、哪里还有短板。">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="canonical" href="https://www.flowai.co.nz/zh/tools/benchmark">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/tools/benchmark">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/tools/benchmark">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/tools/benchmark">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+  <link rel="alternate" type="application/atom+xml" title="Flow AI" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="免费企业 AI 就绪度测评 | Flow AI">
+<meta property="og:description" content="两分钟免费自测，评估你的企业借助 AI 增长的就绪程度，并指出哪里已有优势、哪里还有短板。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/zh/tools/benchmark">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "WebPage",
+        "WebApplication"
+      ],
+      "@id": "https://www.flowai.co.nz/zh/tools/benchmark",
+      "url": "https://www.flowai.co.nz/zh/tools/benchmark",
+      "name": "AI 就绪度测评",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "NZD"
+      },
+      "description": "两分钟免费自测，从战略、数据、工具、治理和团队五个维度，评估一家公司借助 AI 增长的就绪程度。无需填写邮箱。",
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/#website"
+      },
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI 就绪度测评",
+          "item": "https://www.flowai.co.nz/zh/tools/benchmark"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<script src="/assets/motion.js" defer></script>
+<style>
+  /* Page rules only. Tokens, type, buttons and sections come from /assets/site.css. */
+  .hero { padding-bottom: clamp(3rem, 6vw, 5rem); }
+  .tool { padding-block: 0 clamp(4rem, 8vw, 6rem); border-top: 0; }
+  .layout { display: grid; gap: clamp(3rem, 6vw, 5rem); align-items: start; }
+  @media (min-width: 1000px) {
+    .layout { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: clamp(3rem, 5vw, 5rem); }
+    .result { position: sticky; top: 92px; }
+  }
+
+  /* Questions: hairline-separated rows, no cards */
+  .quiz-col { display: grid; }
+  .q { padding: 2rem 0 2.25rem; border-top: 1px solid var(--hair); }
+  .q:first-child { padding-top: 0; border-top: 0; }
+  .q .qk { color: var(--soft); font-size: 13px; font-weight: 500; letter-spacing: 0.12em; }
+  .q h2 { margin-top: 0.5rem; font-size: var(--h3); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; text-wrap: pretty; }
+  .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
+  @media (max-width: 560px) { .opts { grid-template-columns: 1fr; } }
+  .opt {
+    padding: 0.9rem 1rem; text-align: left;
+    border: 1px solid var(--hair-strong); border-radius: var(--radius); background: var(--surface);
+    color: var(--muted); font: inherit; font-size: 14.5px; line-height: 1.45; cursor: pointer;
+    transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, transform 200ms var(--ease);
+  }
+  .opt .on { display: block; margin-bottom: 0.3rem; color: var(--soft); font-size: 12px; font-weight: 500; }
+  .opt:hover { border-color: var(--fg); color: var(--fg); }
+  .opt:active { transform: translateY(1px) scale(0.98); }
+  .opt.sel { background: var(--fg); border-color: var(--fg); color: var(--ink); }
+  .opt.sel .on { color: rgba(14, 14, 13, 0.6); }
+
+  /* Result: the score is the one Amber job on this screen */
+  .result-label { color: var(--soft); font-size: 13px; font-weight: 500; letter-spacing: 0.12em; }
+  .stage-name { margin-top: 0.5rem; color: var(--fg); font-size: var(--h3); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
+  .score { display: flex; align-items: baseline; gap: 0.75rem; margin-top: 1.5rem; }
+  .score .sv { color: var(--accent); font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; transition: color 300ms ease; }
+  .result.locked .score .sv { color: var(--soft); }
+  .score .sk { color: var(--soft); font-size: 14px; }
+  .bars { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--hair); }
+  .brow { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr) 2rem; gap: 0.9rem; align-items: center; }
+  .brow .bl { color: var(--soft); font-size: 13.5px; font-weight: 500; }
+  .btrack { height: 3px; overflow: hidden; border-radius: var(--pill); background: var(--hair); }
+  .bfill { width: 0; height: 100%; border-radius: var(--pill); background: var(--muted); transition: width 300ms var(--ease), background-color 300ms ease; }
+  .brow.weak .bfill { background: var(--fg); }
+  .brow.weak .bl { color: var(--fg); }
+  .brow .bn { color: var(--soft); font-size: 12.5px; text-align: right; font-variant-numeric: tabular-nums; }
+  .read { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--hair); color: var(--muted); font-size: 15.5px; line-height: 1.6; text-wrap: pretty; }
+  .read b { color: var(--fg); font-weight: 600; }
+  .read .weak { color: var(--fg); }
+  .read .text-link { display: inline-block; margin: 0.75rem 1rem 0 0; font-size: 15px; }
+
+  @media (prefers-reduced-motion: reduce) { .opt, .bfill, .score .sv { transition: none; } }
+</style>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">跳到正文</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/about">关于我</a>
+      <span class="lang-switch" role="group" aria-label="语言"><a href="/tools/benchmark" lang="en" hreflang="en" data-lang="en">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/tools/benchmark" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh" aria-current="true">中文</a></span>
+      <a class="site-header__cta" href="/zh/contact">与我合作</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero centered" aria-labelledby="bench-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow">免费工具 · 两分钟</p>
+        <h1 id="bench-title">你的公司为借助 AI 增长准备到了什么程度？</h1>
+        <p class="lead">回答五个问题，就能得到成熟度得分和所处阶段，同时看清可以继续发挥的优势，以及应当优先补上的短板。</p>
+        <p class="small">隐私优先：你的答案只保存在你的浏览器里，无需填写邮箱。由 <a class="text-link" href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener">Amber Lan</a> 为 <a class="text-link" href="/zh/">Flow AI</a> 制作。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool" aria-label="测评">
+    <div class="wrap">
+      <div class="layout">
+        <div class="quiz-col" id="quiz"></div>
+        <aside class="result locked" id="result" aria-live="polite">
+          <p class="result-label">你所处的阶段</p>
+          <p class="stage-name" id="stageName">作答后显示</p>
+          <p class="score"><span class="sv" id="scoreVal">·</span><span class="sk">就绪度</span></p>
+          <div class="bars" id="bars"></div>
+          <div class="read" id="read">请为五个维度各选一个答案。你的得分和专属解读会显示在这里，并随作答实时更新。</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+    <section id="related" class="centered" aria-labelledby="related-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="related-title">以这个得分为起点，继续推进。</h2>
+        </div>
+        <div class="narrow reveal" style="text-align:left; margin-top: clamp(3rem, 6vw, 4.5rem)">
+          <ul class="systems">
+            <li><b>工具</b><span><a class="text-link" href="/zh/tools/pricing">定价模型</a>，找到既能覆盖成本、又能达到 ROI 目标的价格。</span></li>
+            <li><b>指南</b><span><a class="text-link" href="/zh/blog/ai-marketing-transformation-small-business">90 天转型路线图</a>，一个系统接一个系统地推进。</span></li>
+            <li><b>指南</b><span><a class="text-link" href="/zh/blog/ai-marketing-cost-australia-new-zealand">AI 营销要花多少钱</a>，工具、自由职业者、智能体、代理机构和招聘的费用区间，均注明来源。</span></li>
+            <li><b>智能体</b><span><a class="text-link" href="/zh/sprints/#system">Flow Engine</a>，以及应当先部署哪一个智能体。</span></li>
+            <li><b>数据</b><span><a class="text-link" href="/zh/blog/ai-marketing-statistics-australia-new-zealand">澳大利亚和新西兰 AI 营销数据</a>，共 62 项数据，每一项都注明来源。</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="reading" class="centered" aria-labelledby="reading-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="reading-title">如何解读你的得分。</h2>
+          <p class="lead">只需两分钟，得分就能确定你的企业所处的阶段，并点明背后的优势与短板。</p>
+        </div>
+        <div class="grid grid-3 reveal" style="text-align:left">
+          <div class="pillar"><h3>关键在于阶段</h3><p>分数本身，远没有它所对应的阶段重要。每个阶段都有各自的第一步，选对了，下一个季度的投入就能真正见效。</p></div>
+          <div class="pillar"><h3>最弱的一项，就是计划的起点</h3><p>得分最低的那一项，标出了 AI 营销最先卡住的地方。Flow AI 会先和你一起搭建这一环的系统，书面范围说明也从这里写起。</p></div>
+          <div class="pillar"><h3>答案只留在你的浏览器里</h3><p>测评完全在本页面运行，无需邮箱或账号。当你想基于这个结果一起制定计划时，把它带到书面范围说明里就好。</p></div>
+        </div>
+      </div>
+    </section>
+
+  <section class="contact centered" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="cta-title">把这个得分变成一份计划。</h2>
+        <p class="lead">一套市场进入（GTM）方案，就从这次诊断开始。Flow AI 会和你的团队一起，把这些短板变成一套能把它们补齐的系统。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/zh/contact">与我合作</a>
+          <a class="text-link" href="/zh/sprints/">了解各个冲刺</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var LS='flowai-benchmark-v1';
+  var DIMS=[
+    {key:'strategy',label:'战略',q:'对于 AI 能在哪些环节创造价值，你的计划有多清晰？',
+      opts:['没有计划，想到什么试什么。','心里有个大概，但没有写下来。','针对少数几个用例，有成文的计划。','有按优先级排序、与业务成果挂钩的路线图。']},
+    {key:'data',label:'数据',q:'目前你的数据在多大程度上可供 AI 使用？',
+      opts:['分散各处，大多靠手工处理。','存在各个工具里，但彼此割裂、比较杂乱。','已集中管理，数据比较干净。','结构化、有治理，可以直接接入数据管道。']},
+    {key:'tooling',label:'工具',q:'AI 工具在多大程度上进入了实际的工作流程？',
+      opts:['少数人在试用聊天机器人。','零散的单点工具，用法不统一。','已在一两个职能中采用。','已嵌入各项核心工作流程。']},
+    {key:'governance',label:'治理',q:'你对 AI 使用的治理和追踪做得如何？',
+      opts:['没有监管，很可能存在影子 AI。','已经意识到，但还没有管控措施。','有基本政策，能看到部分使用情况。','有记录、有治理，并且可审计。']},
+    {key:'team',label:'团队',q:'你的团队在多大程度上准备好用 AI 动手搭建？',
+      opts:['还没有人负责。','有兴趣，但各自摸索。','有一两位积极分子在推动。','整个团队都具备相应技能，也各有分工。']}
+  ];
+  var STAGES=[
+    {min:0,  name:'探索期',  read:'你还处在早期，这意味着有充分的空间把方向定好。眼下的机会，是为零散的 AI 使用配上一份计划。<b>见效最快的是一份书面计划</b>：在增加更多工具之前，先选出两三个高价值用例。'},
+    {min:40, name:'采用期',   read:'你在一些方面已经有了势头，下一步是让各方面齐头并进。差距通常出现在<b>工具用到了哪里，与治理覆盖到了哪里</b>之间。先补强下方得分最弱的维度，这样随着业务增长，强项也能顺畅地扩展。'},
+    {min:65, name:'规模化期',    read:'你已经走过试验阶段，进入了真正的采用。现在要做的是<b>一致性与可控性</b>：让成果可以复制，让使用可以审计，使治理跟得上增长的步伐。'},
+    {min:85, name:'领先期',    read:'你已领先市场上的大多数企业。需要守住的优势是<b>复利效应</b>：把你的成熟度转化为外界看得见的市场地位，让买家和人才把你视为标杆。这既是技术工作，也同样是营销工作。'}
+  ];
+  var answers=load();
+
+  function load(){try{var r=localStorage.getItem(LS);if(r)return JSON.parse(r);}catch(e){}return {};}
+  function persist(){try{localStorage.setItem(LS,JSON.stringify(answers));}catch(e){}}
+  function $(id){return document.getElementById(id);}
+
+  // build quiz
+  var quiz=$('quiz');
+  DIMS.forEach(function(dim,di){
+    var card=document.createElement('div');card.className='q';
+    var opts='';
+    dim.opts.forEach(function(o,oi){
+      var sel=answers[dim.key]===oi?' sel':'';
+      opts+='<button class="opt'+sel+'" data-dim="'+dim.key+'" data-lvl="'+oi+'"><span class="on">第 '+(oi+1)+' 级</span>'+o+'</button>';
+    });
+    card.innerHTML='<div class="qk">'+dim.label+'</div><h2>'+dim.q+'</h2><div class="opts">'+opts+'</div>';
+    quiz.appendChild(card);
+  });
+
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest('.opt');if(!b)return;
+    var k=b.dataset.dim, lvl=parseInt(b.dataset.lvl,10);
+    answers[k]=lvl;persist();
+    // update selected state within this question
+    b.parentNode.querySelectorAll('.opt').forEach(function(o){o.classList.toggle('sel',o===b);});
+    render();
+  });
+
+  function render(){
+    var keys=DIMS.map(function(d){return d.key;});
+    var answered=keys.filter(function(k){return answers[k]!=null;});
+    var res=$('result');
+    // per-dimension bars
+    var complete=answered.length===DIMS.length;
+    var weakKey=null;
+    if(complete){weakKey=DIMS.slice().sort(function(a,b){return answers[a.key]-answers[b.key];})[0].key;}
+    var barsHtml='';
+    DIMS.forEach(function(d){
+      var lvl=answers[d.key];
+      var pct=lvl!=null?((lvl+1)/4*100):0;
+      var wk=(complete&&d.key===weakKey)?' weak':'';
+      barsHtml+='<div class="brow'+wk+'"><span class="bl">'+d.label+'</span><div class="btrack"><div class="bfill" style="width:'+pct+'%"></div></div><span class="bn">'+(lvl!=null?(lvl+1)+'/4':'·')+'</span></div>';
+    });
+    $('bars').innerHTML=barsHtml;
+
+    if(answered.length<DIMS.length){
+      res.classList.add('locked');
+      $('stageName').textContent='已答 '+answered.length+' / '+DIMS.length;
+      $('scoreVal').textContent='·';
+      $('read').innerHTML='请为五个维度各选一个答案。你的得分和专属解读会显示在这里，并随作答实时更新。';
+      return;
+    }
+    res.classList.remove('locked');
+    var sum=keys.reduce(function(a,k){return a+(answers[k]+1);},0); // 5..20
+    var score=Math.round((sum-5)/15*100); // 0..100
+    var stage=STAGES[0];
+    STAGES.forEach(function(s){if(score>=s.min)stage=s;});
+    // weakest dimension
+    var weak=DIMS.slice().sort(function(a,b){return answers[a.key]-answers[b.key];})[0];
+    $('stageName').textContent=stage.name;
+    $('scoreVal').textContent=score;
+    var SPRINT={
+      strategy:{url:'/sprints/positioning',say:'冲刺 01，Flow Intelligence：定位冲刺'},
+      data:{url:'/sprints/analytics',say:'冲刺 05，效果衡量智能体'},
+      tooling:{url:'/sprints/content-engine',say:'冲刺 03，内容智能体'},
+      governance:{url:'/sprints/analytics',say:'冲刺 05，效果衡量智能体'},
+      team:{url:'/contact',say:'书面范围说明，因为团队方面的短板需要先有计划，再有系统'}
+    };
+    var rec=SPRINT[weak.key];
+    $('read').innerHTML=stage.read+' <span class="weak">你最弱的维度是<b>'+weak.label.toLowerCase()+'</b>，这里自然就是我们一起起步的地方。</span> <a class=\"text-link\" href=\"/contact\">围绕这个得分拟定书面范围说明。</a> <a class=\"text-link\" href=\"'+rec.url+'\">或者从这里开始：'+rec.say+'。</a>';
+  }
+
+  render();
+})();
+</script>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/zh/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI 营销工程师，奥克兰</p>
+        <p class="site-footer__note">我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。</p>
+        <a class="site-footer__cta" href="/zh/contact">与我合作</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/work">作品</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/templates/">免费模板</a>
+      <a href="/zh/about">关于我</a>
+      <a href="/zh/manifesto">宣言</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="给 Amber Lan 发邮件" title="邮件"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

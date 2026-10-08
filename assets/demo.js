@@ -45,6 +45,47 @@
     }
   };
 
+  /* Chinese pages (/zh/) replay the same runs in Chinese. Same business, same numbers. */
+  var ZH = /^zh/.test(document.documentElement.lang);
+  if (ZH) RUNS = {
+    search: {
+      steps: ["正在读取你的 38 个服务页面", "匹配大家向 AI 提出的 120 个问题", "检查 AI 目前引用了哪些页面", "起草修改，只放入待审区"],
+      title: "AI 搜索优化", agent: "搜索智能体", status: "等待你审核",
+      ask: "找出大家向 AI 询问奥克兰热水器时会问的问题，并修改应该回答这些问题的页面。全部放入待审区，先不要发布。",
+      reply: "已用 120 个常见问题核对 38 个页面。改写了 5 个页面，并起草了 2 个新回答。所有内容都已保存为草稿。",
+      card: "待审改动", action: "全部审核",
+      rows: [["/services/hot-water-cylinders", "6 处改动"], ["/services/blocked-drains", "3 处改动"], ["/faq/plumber-cost-auckland", "新页面"], ["/areas/north-shore", "4 处改动"], ["/llms.txt", "已更新"]],
+      follow: "看起来不错。价格页面先别动，等我核对一下数字。"
+    },
+    content: {
+      steps: ["正在阅读四份工单记录", "套用你的品牌语调规则", "为各个渠道起草 12 篇内容", "逐句通过语调关卡检查"],
+      title: "10月内容", agent: "内容智能体", status: "12 篇草稿已就绪",
+      ask: "把这个月的工单记录整理成社媒帖子和一封邮件。保持我的语调，不要用行话。",
+      reply: "根据 4 份工单记录起草了 12 篇内容。每一篇在交给你之前都通过了你的语调规则。",
+      card: "草稿", action: "打开队列",
+      rows: [["LinkedIn：热水器为什么会嘶嘶作响", "草稿"], ["Google 商家动态：冬季检查", "草稿"], ["邮件：五分钟冬季检查清单", "草稿"], ["指南：什么时候该换热水器", "草稿"], ["Instagram：Ponsonby 维修前后对比", "草稿"]],
+      follow: "把第二篇换成那张维修前后的对比照片。"
+    },
+    outbound: {
+      steps: ["正在筛选奥克兰的物业经理", "寻找近期的维修需求信号", "暂缓不太匹配的对象", "用你的语调起草 20 条首次联系消息"],
+      title: "主动外联", agent: "外联智能体", status: "发送已暂停",
+      ask: "找出本月发过维修相关内容的奥克兰物业经理。给其中 20 位写信，语气温和一些。",
+      reply: "找到 23 位有近期信号的联系人。起草了 20 条首次联系消息，另有 3 位看起来不太匹配，已暂缓。在你批准之前不会发送。",
+      card: "首次联系消息", action: "批准 10 条",
+      rows: [["物业经理，Mt Eden", "正在招聘维修人员"], ["业主委员会负责人，Takapuna", "发帖提到漏水"], ["资产组合经理，Grey Lynn", "新增一栋楼"], ["设施负责人，Newmarket", "正在询价"], ["物业经理，Remuera", "已暂缓：不太匹配"]],
+      follow: "先批准前 10 条。有任何回复都直接转给我。"
+    },
+    report: {
+      steps: ["把每条咨询对应到来源", "逐月对比各个渠道", "核算每小时投入带来的产出", "写成一页报告并附上建议"],
+      title: "9月报告", agent: "报告智能体", status: "已就绪",
+      ask: "上个月哪些投入有回报，接下来应该调整什么？",
+      reply: "搜索带来的咨询最多。主动外联约到了三次通话。内容获得了浏览量，但咨询不多。建议每周从社媒挪出两小时，投入到常见问题页面。",
+      card: "咨询来源", action: "打开报告",
+      bars: [["搜索", 41], ["主动外联", 22], ["转介绍", 19], ["内容", 11], ["其他", 7]],
+      follow: "同意。更新一下11月的计划。"
+    }
+  };
+
   var thread = root.querySelector(".demo__thread");
   /* Keep the newest message in view, like a real chat. */
   if ("MutationObserver" in window) {
@@ -69,7 +110,7 @@
     timers.forEach(function (x) { clearTimeout(x); clearInterval(x); }); timers = [];
     buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.run === key ? "true" : "false"); });
     titleEl.textContent = r.title;
-    statusEl.textContent = "Working";
+    statusEl.textContent = ZH ? "运行中" : "Working";
     statusEl.classList.add("is-working");
     thread.innerHTML = "";
 
@@ -81,7 +122,7 @@
     agent.appendChild(who);
     var think = el("div", "demo__think");
     think.innerHTML = '<span class="demo__dots" aria-hidden="true"><i></i><i></i><i></i></span>';
-    var stepEl = el("span", "demo__step", "Thinking");
+    var stepEl = el("span", "demo__step", ZH ? "思考中" : "Thinking");
     think.appendChild(stepEl);
     var log = el("ol", "demo__log");
     agent.appendChild(think); agent.appendChild(log);
@@ -102,7 +143,7 @@
       log.appendChild(el("li", "", r.steps[r.steps.length - 1]));
       think.remove();
       agent.classList.add("is-done");
-      t.textContent = "Thought for " + Math.max(1, Math.round((Date.now() - start) / 1000)) + "s";
+      t.textContent = (ZH ? "思考了 " : "Thought for ") + Math.max(1, Math.round((Date.now() - start) / 1000)) + (ZH ? " 秒" : "s");
       who.querySelector("b").textContent = "Flow Intelligence · " + r.agent;
       statusEl.textContent = r.status; statusEl.classList.remove("is-working");
       agent.appendChild(el("p", "demo__reply", r.reply));
