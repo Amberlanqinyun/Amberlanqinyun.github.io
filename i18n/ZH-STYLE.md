@@ -43,6 +43,7 @@ in Chinese first. Never word-for-word translation.
 |---|---|
 | Flow AI, Flow Intelligence, the Flow Engine | keep in English: Flow AI, Flow Intelligence, Flow Engine |
 | Amber Lan | Amber Lan |
+| AI marketing transformation practice | AI 营销转型工作室 (approved by Amber 2026-10-08). The entity line is always: Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。 |
 | AI marketing engineer | AI 营销工程师 |
 | marketing engineer | 营销工程师 |
 | GTM engineer | GTM 工程师 |
