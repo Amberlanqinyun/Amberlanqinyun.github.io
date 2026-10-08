@@ -46,7 +46,7 @@
   var LANES = {
     you: ["You decide, the agent informs", "High stakes or hard to undo. The agent brings evidence; a person makes the call."],
     draft: ["The agent drafts, you approve", "Worth a human look. The agent prepares the decision and a person signs it off."],
-    agent: ["The agent decides, you spot-check", "Frequent, low risk and easy to reverse. Write the rule once and review a sample."]
+    agent: ["The agent decides, you spot-check", "Frequent and low risk. Write the rule once and review a sample."]
   };
 
   /* Step 1: pick */

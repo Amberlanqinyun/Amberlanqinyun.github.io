@@ -190,7 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="stack">
         <span class="small step-k">01 · Your cost</span>
         <h2 id="cost-title">What one unit costs you to deliver.</h2>
-        <p class="lead">Marginal cost is the floor: what serving one more customer for one month costs you. You never price below it.</p>
+        <p class="lead">Marginal cost is the floor: what serving one more customer for one month costs you. Every price you set starts above it.</p>
       </div>
       <div class="block">
         <div class="nums">
@@ -307,7 +307,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="ref"><span class="rn">3</span><span><b>Cost-competition-value triangulation</b> · the corridor. The standard framework for setting a price inside the floor-to-ceiling range.<span class="cite">Nagle, T. T. &amp; Müller, G. (2018). The Strategy and Tactics of Pricing, 6th ed. Routledge.</span></span></div>
           <div class="ref"><span class="rn">4</span><span><b>Gabor-Granger price testing</b> · measuring your elasticity. Purchase intent at set price points draws the real demand curve.<span class="cite">Gabor, A. &amp; Granger, C. W. J. (1966). Price as an Indicator of Quality. Economica, 33(129), 43-70.</span></span></div>
         </div>
-        <p class="small note">A decision aid, not financial advice. A live price test replaces the elasticity assumption with your measured value.</p>
+        <p class="small note">This decision aid does not constitute financial advice. A live price test replaces the elasticity assumption with your measured value.</p>
       </div>
     </div>
   </section>
@@ -315,14 +315,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="related" class="centered" aria-labelledby="related-title">
       <div class="wrap">
         <div class="stack reveal">
-          <h2 id="related-title">Keep going.</h2>
+          <h2 id="related-title">Build on your price.</h2>
         </div>
         <div class="narrow reveal" style="text-align:left; margin-top: clamp(3rem, 6vw, 4.5rem)">
           <ul class="systems">
             <li><b>Tool</b><span><a class="text-link" href="/tools/benchmark">The AI-readiness benchmark</a>, five questions in two minutes, with no signup.</span></li>
             <li><b>Guide</b><span><a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand">What AI marketing costs</a>, with sourced ranges for tools, freelancers, agents, agencies and hires.</span></li>
             <li><b>System</b><span><a class="text-link" href="/sprints/positioning">The positioning system</a>: who you sell to, what to say, where the budget goes.</span></li>
-            <li><b>Agents</b><span><a class="text-link" href="/sprints/#system">The Flow Engine</a>, and which one to install first.</span></li>
+            <li><b>Agents</b><span><a class="text-link" href="/sprints/#system">The Flow Engine</a>, and which agent to install first.</span></li>
             <li><b>Guide</b><span><a class="text-link" href="/blog/what-is-an-ai-marketing-agent">What an AI marketing agent is</a>, defined for a small business, and how it differs from automation and ChatGPT.</span></li>
           </ul>
         </div>
@@ -333,10 +333,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <div class="stack">
         <h2 id="cta-title">Build this into your go-to-market.</h2>
-        <p class="lead">Pricing is one of the systems Flow builds for startups, alongside search, outbound and content.</p>
+        <p class="lead">Pricing is one of the systems Flow AI builds with startups, alongside search, outbound and content.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact">Work with me</a>
-          <a class="text-link" href="/">See what Flow AI does</a>
+          <a class="text-link" href="/">Explore what Flow AI builds</a>
         </div>
       </div>
     </div>
@@ -417,7 +417,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     $('sCeil').textContent=money(q.ceiling);
     $('valCaveat').innerHTML=(state.alt!=null&&state.alt>0)?
       'The cheapest alternative at <b>'+money(state.alt)+'</b> caps what a rational buyer pays, so it sets the ceiling.':
-      'No alternative entered, so the ceiling is the top of your value range. Add the buyer’s next-best option to tighten it.';
+      'With no alternative entered, the ceiling is the top of your value range. Add the buyer’s next-best option to sharpen it.';
 
     draw(q);
     $('kOpt').textContent=isFinite(q.opt)?money(q.opt):'ceiling-bound';
@@ -433,7 +433,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       (isFinite(roiNow)?roiNow.toFixed(1)+'×':'·')+'</b> '+(roiNow>=n0(state.roiReq)?'clears':'misses')+' your rule of '+n0(state.roiReq)+'.';
 
     $('corr').innerHTML=
-      '<div class="crow"><span class="cp">'+money(q.floor)+'</span><div class="cb"><h3>The floor · your cost</h3><p>Below your marginal cost of '+money(q.mc)+'/unit you lose money on every sale. Your '+n0(state.roiReq)+'× ROI target lands at '+money(q.mc*(n0(state.roiReq)+1))+'.</p></div></div>'+
+      '<div class="crow"><span class="cp">'+money(q.floor)+'</span><div class="cb"><h3>The floor · your cost</h3><p>Your floor is your marginal cost of '+money(q.mc)+'/unit: price above it and every sale earns a margin. Your '+n0(state.roiReq)+'× ROI target lands at '+money(q.mc*(n0(state.roiReq)+1))+'.</p></div></div>'+
       '<div class="crow hero"><span class="cp">'+money(optLo)+' to '+money(optHi)+'</span><div class="cb"><h3>The optimum range · Lerner rule</h3><p>Elasticity 2.0 to 1.5. A price test collapses this to a single number.</p></div></div>'+
       '<div class="crow"><span class="cp">'+money(q.ceiling)+'</span><div class="cb"><h3>The ceiling · customer value</h3><p>The buyer’s cheapest alternative to your outcome.</p></div></div>';
   }
@@ -477,7 +477,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <p class="site-footer__name"><a href="/about">Amber Lan</a></p>
         <p class="site-footer__role">AI marketing engineer, Auckland</p>
-        <p class="site-footer__note">I build Flow AI's systems and review everything they send.</p>
+        <p class="site-footer__note">I build marketing systems with the teams who run them, and review everything they send.</p>
         <a class="site-footer__cta" href="/contact">Work with me</a>
       </div>
     </div>
