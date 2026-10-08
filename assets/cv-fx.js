@@ -107,6 +107,29 @@
     }, { threshold: 0.35 }).observe(band);
   }
 
+  /* receipts band: mark live for the bars, even when counters are skipped */
+  if (band) {
+    if (io && !reduced) new IntersectionObserver(function (e, o) { if (e[0].isIntersecting) { band.classList.add('is-live'); o.disconnect(); } }, { threshold: 0.3 }).observe(band);
+    else band.classList.add('is-live');
+  }
+
+  /* Q&A cards: three lines, a button to open the rest */
+  slice(document.querySelectorAll('[data-qa]')).forEach(function (card, k) {
+    var p = card.querySelector('p');
+    if (!p) return;
+    p.id = p.id || 'qa-a-' + k;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'qa-more'; b.textContent = 'Read more';
+    b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', p.id);
+    b.addEventListener('click', function () {
+      var open = card.classList.toggle('is-open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.textContent = open ? 'Show less' : 'Read more';
+    });
+    card.appendChild(b);
+    if (p.scrollHeight <= p.clientHeight + 2) { b.hidden = true; card.classList.add('is-open'); }
+  });
+
   /* ---------- 3. spotlight ---------- */
   if (fine && !reduced) {
     document.addEventListener('pointermove', function (e) {
