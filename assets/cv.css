@@ -563,3 +563,28 @@
 .qa-more:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media print { .ba, .lanes-dots, .skills-dots, .cvchips { display: none !important; } }
 @media (prefers-reduced-motion: reduce) { .js .receipts .ba__row i { transform: none; transition: none; } }
+
+/* =====================  lanes as strategy to execution to judgement to metric  ===================== */
+.lane-group { display: block; padding: 0.9rem 0.8rem 0.35rem; color: var(--soft); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; }
+.lane-group:first-child { padding-top: 0.35rem; }
+.lane__head { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1rem; }
+.stage { padding: 0.22rem 0.6rem; border: 1px solid var(--hair-strong); border-radius: 999px; color: var(--soft); font-size: 11.5px; letter-spacing: 0.06em; }
+.flow { position: relative; display: grid; gap: 1rem; align-content: start; padding-left: 1.4rem; }
+.flow::before { content: ""; position: absolute; left: 0.3rem; top: 0.4rem; bottom: 0.6rem; width: 1px; background: linear-gradient(rgba(250, 248, 243, 0.28), var(--accent)); }
+.flow__step, .flow__kpi { position: relative; }
+.flow__step::before, .flow__kpi::before { content: ""; position: absolute; left: -1.4rem; top: 0.2rem; width: 0.62rem; height: 0.62rem; border-radius: 50%; background: #151513; border: 1px solid rgba(250, 248, 243, 0.4); }
+.flow__step--me::before { border-color: var(--accent); }
+.flow__kpi::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.flow .lsplit__who { margin-bottom: 0.4rem; }
+.flow__step--me .lsplit__who, .flow__kpi .lsplit__who { color: var(--accent); }
+.cvchips--strat li { border-color: rgba(250, 248, 243, 0.32); color: var(--fg); }
+.kpis { display: flex; flex-wrap: wrap; gap: 0.3rem 0; margin: 0; color: var(--fg); font-size: 14px; font-weight: 500; }
+.kpis span + span::before { content: "\00B7"; margin: 0 0.55rem; color: var(--accent); }
+.lane.play .flow > * { animation: cv-rise 480ms var(--ease) both; }
+.lane.play .flow > *:nth-child(2) { animation-delay: 110ms; }
+.lane.play .flow > *:nth-child(3) { animation-delay: 220ms; }
+.lane.play .flow > *:nth-child(4) { animation-delay: 330ms; }
+.board__body { min-height: 30rem; }
+@media (max-width: 960px) {
+  .lane-group { display: none; }
+}

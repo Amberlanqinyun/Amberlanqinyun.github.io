@@ -245,7 +245,7 @@
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/texture.css?v=11">
 <link rel="stylesheet" href="/assets/visual.css?v=1">
-<link rel="stylesheet" href="/assets/cv.css?v=8">
+<link rel="stylesheet" href="/assets/cv.css?v=9">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
@@ -287,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="profile__text" data-dotfield-clear>
           <p class="status"><i aria-hidden="true"></i>Now: running marketing solo at an AI company in Auckland</p>
           <h1 id="about-title">Amber Lan. <span>AI marketing engineer and GTM engineer.</span></h1>
-          <p class="lead">I run a whole marketing function on AI agents I build, and I keep the judgement on everything that ships. Ten years in marketing, the last three spent building the systems that run it.</p>
+          <p class="lead">I set the marketing strategy and run the execution on AI agents I build, with my judgement on everything that ships. Ten years in marketing, the last three spent building the systems that run it.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/contact">Work with me</a>
             <a class="btn btn-secondary" href="#hire">Hiring? Let's talk</a>
@@ -321,27 +321,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="function" class="sec" aria-labelledby="function-title">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="stack"><p class="eyebrow"><span class="ch">01</span>The function I run</p><h2 id="function-title">Eight lanes, one person, a review gate on all of them.</h2></div>
-        <p class="lead">Pick a lane to see what the agents do, what stays with me, and a slice of the working surface. The split moves as the checks improve.</p>
+        <div class="stack"><p class="eyebrow"><span class="ch">01</span>The function I run</p><h2 id="function-title">A whole marketing function, from strategy to shipped work.</h2></div>
+        <p class="lead">Every lane runs on the same loop. I set the strategy, agents execute at the volume of a team, and I judge what ships against the number the lane is measured by.</p>
       </div>
 
       <div class="board reveal" data-board data-spot>
         <div class="board__bar" aria-hidden="true"><i></i><i></i><i></i><span data-board-count>01 / 08</span></div>
         <div class="board__body">
           <div class="lanes" role="tablist" aria-label="Lanes of the marketing function" aria-orientation="vertical">
-            <button class="lane-tab" role="tab" id="t-content" aria-controls="p-content" aria-selected="true">Content <small>01</small></button>
-            <button class="lane-tab" role="tab" id="t-search" aria-controls="p-search" aria-selected="false">AI search <small>02</small></button>
-            <button class="lane-tab" role="tab" id="t-outbound" aria-controls="p-outbound" aria-selected="false">Outbound <small>03</small></button>
-            <button class="lane-tab" role="tab" id="t-voices" aria-controls="p-voices" aria-selected="false">Executive voices <small>04</small></button>
-            <button class="lane-tab" role="tab" id="t-design" aria-controls="p-design" aria-selected="false">Design and video <small>05</small></button>
-            <button class="lane-tab" role="tab" id="t-claims" aria-controls="p-claims" aria-selected="false">Positioning and claims <small>06</small></button>
-            <button class="lane-tab" role="tab" id="t-events" aria-controls="p-events" aria-selected="false">Events <small>07</small></button>
-            <button class="lane-tab" role="tab" id="t-ops" aria-controls="p-ops" aria-selected="false">Reporting <small>08</small></button>
+            <span class="lane-group" role="presentation">Strategy</span>
+            <button class="lane-tab" role="tab" id="t-claims" aria-controls="p-claims" aria-selected="true">Positioning <small>01</small></button>
+            <span class="lane-group" role="presentation">Demand</span>
+            <button class="lane-tab" role="tab" id="t-content" aria-controls="p-content" aria-selected="false">Content <small>02</small></button>
+            <button class="lane-tab" role="tab" id="t-search" aria-controls="p-search" aria-selected="false">SEO and AEO <small>03</small></button>
+            <button class="lane-tab" role="tab" id="t-voices" aria-controls="p-voices" aria-selected="false">Thought leadership <small>04</small></button>
+            <button class="lane-tab" role="tab" id="t-outbound" aria-controls="p-outbound" aria-selected="false">Outbound and ABM <small>05</small></button>
+            <button class="lane-tab" role="tab" id="t-events" aria-controls="p-events" aria-selected="false">Events <small>06</small></button>
+            <span class="lane-group" role="presentation">Engine</span>
+            <button class="lane-tab" role="tab" id="t-design" aria-controls="p-design" aria-selected="false">Brand and creative <small>07</small></button>
+            <button class="lane-tab" role="tab" id="t-ops" aria-controls="p-ops" aria-selected="false">Ops and analytics <small>08</small></button>
           </div>
 
-          <div class="lane" role="tabpanel" id="p-content" aria-labelledby="t-content">
-            <h3>Content</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Month plan from one source</li><li>Platform drafts</li><li>Voice audit</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>Choose the source</li><li>Final read</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:3"></i><b style="--m:2"></b></div></div>
+          <div class="lane" role="tabpanel" id="p-claims" aria-labelledby="t-claims">
+            <div class="lane__head"><h3>Positioning and messaging</h3><span class="stage">Strategy</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>ICP and segments</li><li>Category narrative</li><li>Message house</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Competitor teardowns</li><li>Claims checked against the register</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>The positioning</li><li>Every new claim</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Win rate</span><span>Sales cycle length</span></p></div>
+            </div>
+            <div class="art" aria-label="Example: a claims register"><p class="art__label">Claims register <b>gate</b></p>
+              <div class="rows-art"><span>What the product does, in one line <em class="on">locked</em></span><span>Who it is for <em class="on">locked</em></span><span>A new comparison line <em>in testing</em></span><span>A number with no source <em>sent back</em></span></div>
+            </div>
+          </div>
+
+          <div class="lane" role="tabpanel" id="p-content" aria-labelledby="t-content" hidden>
+            <div class="lane__head"><h3>Content marketing</h3><span class="stage">Awareness to consideration</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>Content pillars</li><li>Editorial calendar</li><li>Distribution plan</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Month plan from one source</li><li>Platform-native drafts</li><li>Voice audit</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>Choose the source</li><li>Final read</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Engagement rate</span><span>Content-sourced pipeline</span></p></div>
+            </div>
             <div class="art" aria-label="Example: a draft line going through the voice audit"><p class="art__label">Voice audit <b>line 4 of 18</b></p>
               <p>Teams that <s>leverage</s> <ins>use</ins> one source document ship a month of posts <s>seamlessly</s><ins>, and every line still sounds like them.</ins></p>
               <div class="checks"><span>Banned words and punctuation</span><span>Every number traced to its source</span><span>Humaniser pass</span><span class="wait">Final read</span></div>
@@ -349,8 +370,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="lane" role="tabpanel" id="p-search" aria-labelledby="t-search" hidden>
-            <h3>AI search</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Crawler audit</li><li>Structured data</li><li>Fixes generated</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>Buyer questions</li><li>What the answer says</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:3"></i><b style="--m:2"></b></div></div>
+            <div class="lane__head"><h3>Organic search: SEO and AEO</h3><span class="stage">Demand capture</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>Keyword and question map</li><li>Pillar and cluster architecture</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Technical SEO audit</li><li>Structured data</li><li>AI citation tracking</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>Which buyer questions we own</li><li>What the answer says</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Organic sessions</span><span>AI citations</span><span>Share of voice</span></p></div>
+            </div>
             <div class="art" aria-label="This page's own structured data"><p class="art__label">This page, as AI search reads it <b>excerpt</b></p>
 <pre>{
   "@type": "Person",
@@ -364,50 +390,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
+          <div class="lane" role="tabpanel" id="p-voices" aria-labelledby="t-voices" hidden>
+            <div class="lane__head"><h3>Executive thought leadership</h3><span class="stage">Awareness and trust</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>A point of view per leader</li><li>Quarterly calendar</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Drafts in each codified voice</li><li>Sourced statistics</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>The opinion</li><li>Sign-off</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Reach</span><span>Inbound conversations</span></p></div>
+            </div>
+            <div class="art" aria-label="Example: three voice calendars"><p class="art__label">This quarter <b>3 voices</b></p>
+              <div class="rows-art"><span>Founder essay, weekly <em class="on">stat sourced</em></span><span>Strategy post, data-led <em class="on">stat sourced</em></span><span>Technical note <em>with the leader</em></span></div>
+            </div>
+          </div>
+
           <div class="lane" role="tabpanel" id="p-outbound" aria-labelledby="t-outbound" hidden>
-            <h3>Outbound</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Account research</li><li>First-touch drafts</li><li>Three senders</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>Who we contact</li><li>Every reply</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:3"></i><b style="--m:2"></b></div></div>
+            <div class="lane__head"><h3>Outbound and ABM</h3><span class="stage">Pipeline</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>ICP and account tiers</li><li>Signals and sequences</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Enrichment and account research</li><li>First touches across three senders</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>Who we contact</li><li>Every reply</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Reply rate</span><span>Meetings booked</span><span>Pipeline</span></p></div>
+            </div>
             <div class="art" aria-label="Example: an outbound sequence with a human takeover"><p class="art__label">One account, end to end <b>takeover rule</b></p>
               <div class="flow-art"><span>Research</span><span>Draft</span><span>Approve</span><span>Send</span><span class="human">Reply: a person</span></div>
               <p class="flow-note">Apollo enrichment into sequenced touches through HeyReach and HubSpot. The agent stops the moment someone writes back.</p>
             </div>
           </div>
 
-          <div class="lane" role="tabpanel" id="p-voices" aria-labelledby="t-voices" hidden>
-            <h3>Executive voices</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Drafts in each voice</li><li>Sourced statistics</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>The opinion</li><li>Sign-off</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:2"></i><b style="--m:2"></b></div></div>
-            <div class="art" aria-label="Example: three voice calendars"><p class="art__label">This quarter <b>3 voices</b></p>
-              <div class="rows-art"><span>Founder essay, weekly <em class="on">stat sourced</em></span><span>Strategy post, data-led <em class="on">stat sourced</em></span><span>Technical note <em>with the leader</em></span></div>
-            </div>
-          </div>
-
-          <div class="lane" role="tabpanel" id="p-design" aria-labelledby="t-design" hidden>
-            <h3>Design and video</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>HTML artboards</li><li>PNG, PDF and MP4 renders</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>The layout call</li><li>The rejections</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:2"></i><b style="--m:2"></b></div></div>
-            <div class="art" aria-label="Example: three rendered cards, one chosen"><p class="art__label">Three renders <b>one ships</b></p>
-              <div class="cards-art"><span class="no"><i>Back</i></span><span class="yes"></span><span class="no"><i>Back</i></span></div>
-            </div>
-          </div>
-
-          <div class="lane" role="tabpanel" id="p-claims" aria-labelledby="t-claims" hidden>
-            <h3>Positioning and claims</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Competitor pages</li><li>Unsupported claims flagged</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>Positioning</li><li>Every new claim</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:2"></i><b style="--m:2"></b></div></div>
-            <div class="art" aria-label="Example: a claims register"><p class="art__label">Claims register <b>gate</b></p>
-              <div class="rows-art"><span>What the product does, in one line <em class="on">locked</em></span><span>Who it is for <em class="on">locked</em></span><span>A new comparison line <em>in testing</em></span><span>A number with no source <em>sent back</em></span></div>
-            </div>
-          </div>
-
           <div class="lane" role="tabpanel" id="p-events" aria-labelledby="t-events" hidden>
-            <h3>Events</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Booth artwork</li><li>Collateral</li><li>Exhibitor checklist</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>Organisers</li><li>The stand</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:3"></i><b style="--m:2"></b></div></div>
+            <div class="lane__head"><h3>Field marketing and events</h3><span class="stage">Pipeline and brand</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>Event selection and budget</li><li>Lead capture and follow-up plan</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Booth artwork</li><li>Collateral</li><li>Exhibitor checklist</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>Organisers</li><li>Conversations at the stand</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Qualified leads</span><span>Cost per lead</span></p></div>
+            </div>
             <div class="art" aria-label="Example: an exhibitor checklist"><p class="art__label">Exhibitor checklist <b>national tech events</b></p>
               <div class="checks"><span>Booth artwork, final files</span><span>Collateral rendered and proofed</span><span>Lead capture tiered on the day</span><span class="wait">Follow-up, in person</span></div>
             </div>
           </div>
 
+          <div class="lane" role="tabpanel" id="p-design" aria-labelledby="t-design" hidden>
+            <div class="lane__head"><h3>Brand and creative</h3><span class="stage">Every stage</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>Design system</li><li>Brand voice</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>HTML artboards</li><li>Image, PDF and video renders</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>The layout call</li><li>The rejections</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>Brand consistency</span><span>Speed to ship</span></p></div>
+            </div>
+            <div class="art" aria-label="Example: three rendered cards, one chosen"><p class="art__label">Three renders <b>one ships</b></p>
+              <div class="cards-art"><span class="no"><i>Back</i></span><span class="yes"></span><span class="no"><i>Back</i></span></div>
+            </div>
+          </div>
+
           <div class="lane" role="tabpanel" id="p-ops" aria-labelledby="t-ops" hidden>
-            <h3>Reporting</h3>
-            <div class="lsplit"><div class="lsplit__col"><p class="lsplit__who">Agents</p><ul class="cvchips"><li>Morning priority board</li><li>Weekly summary</li></ul></div><div class="lsplit__col lsplit__col--me"><p class="lsplit__who">Amber</p><ul class="cvchips cvchips--me"><li>What to stop</li></ul></div><div class="lsplit__bar" aria-hidden="true"><i style="--a:2"></i><b style="--m:1"></b></div></div>
+            <div class="lane__head"><h3>Marketing operations and analytics</h3><span class="stage">The engine</span></div>
+            <div class="flow">
+              <div class="flow__step"><p class="lsplit__who">Strategy</p><ul class="cvchips cvchips--strat"><li>Attribution model</li><li>Operating rhythm</li></ul></div>
+              <div class="flow__step"><p class="lsplit__who">Execution by agents</p><ul class="cvchips"><li>Morning priority board</li><li>Weekly performance report</li></ul></div>
+              <div class="flow__step flow__step--me"><p class="lsplit__who">My judgement</p><ul class="cvchips cvchips--me"><li>What to stop</li><li>Where the budget goes</li></ul></div>
+              <div class="flow__kpi"><p class="lsplit__who">Measured by</p><p class="kpis"><span>CAC</span><span>Pipeline velocity</span><span>Hours saved</span></p></div>
+            </div>
             <div class="art" aria-label="Example: the morning priority board"><p class="art__label">Morning board <b>07:30</b></p>
               <div class="quad"><span><b>Do today</b>The one task that moves the launch</span><span><b>Schedule</b>Case study, week two</span><span><b>Hand off</b>Render the card set</span><span><b>Drop</b>A ninth signature variant</span></div>
             </div>
