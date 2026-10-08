@@ -241,12 +241,13 @@
 <link rel="stylesheet" href="/assets/motion.css">
 <link rel="stylesheet" href="/assets/texture.css?v=11">
 <link rel="stylesheet" href="/assets/visual.css?v=1">
-<link rel="stylesheet" href="/assets/cv.css?v=1">
+<link rel="stylesheet" href="/assets/cv.css?v=2">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
 <script src="/assets/visual.js?v=1" defer></script>
-<script src="/assets/cv.js?v=1" defer></script>
+<script src="/assets/cv.js?v=2" defer></script>
+<script src="/assets/cv-fx.js?v=1" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 </head>
@@ -276,10 +277,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main id="main" class="cv">
-  <section class="hero hero-profile cv-hero" aria-labelledby="about-title">
+  <section class="hero hero-profile cv-hero" aria-labelledby="about-title" data-dotfield="hero">
     <div class="wrap">
       <div class="profile">
-        <div class="profile__text">
+        <div class="profile__text" data-dotfield-clear>
           <p class="status"><i aria-hidden="true"></i>Now: running marketing solo at an AI company in Auckland</p>
           <h1 id="about-title">Amber Lan. <span>AI marketing engineer and GTM engineer.</span></h1>
           <p class="lead">I run a whole marketing function on AI agents I build, and I keep the judgement on everything that ships. Ten years in marketing, the last three spent building the systems that run it.</p>
@@ -290,30 +291,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <p class="profile__links"><a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me">LinkedIn</a><a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a><a href="mailto:amber.lan.growth.digital@gmail.com">Email</a></p>
         </div>
-        <figure class="profile__photo">
-          <img src="/assets/amber-lan-editorial-hero-v2.webp" alt="Editorial halftone portrait of Amber Lan, AI marketing engineer" width="1448" height="1086" fetchpriority="high">
+        <figure class="profile__photo dotportrait" data-dotportrait data-src="/assets/amber-lan-cutout.png" data-mode="alpha" data-zoom="1.12" data-focus-x="0.5" data-focus-y="0.3" data-spot>
+          <img src="/assets/amber-lan-editorial-hero-v2.webp" alt="Portrait of Amber Lan, AI marketing engineer, drawn as a field of light" width="1448" height="1086" fetchpriority="high">
+          <figcaption class="dotportrait__cap" aria-hidden="true">Move across the portrait</figcaption>
         </figure>
       </div>
 
+    </div>
+  </section>
+
+  <section class="cv-proof" aria-label="Results and stack">
+    <div class="wrap">
       <div class="receipts" aria-label="Results">
-        <div class="receipt"><span class="receipt__n">+40<small>%</small></span><span class="receipt__what">Paid media performance</span><span class="receipt__how">Sime Motors. Systematic tests of audiences, bidding, creative and landing pages.</span></div>
-        <div class="receipt"><span class="receipt__n">&minus;30<small>%</small></span><span class="receipt__what">Cost per acquisition</span><span class="receipt__how">Sime Motors. Campaigns rebuilt and spend moved to the channels that converted.</span></div>
-        <div class="receipt"><span class="receipt__n">+150<small>%</small></span><span class="receipt__what">Organic traffic in 12 months</span><span class="receipt__how">Rockfort Markets. Site architecture and technical SEO, to number one for core trading keywords.</span></div>
-        <div class="receipt"><span class="receipt__n">70<small>%+</small></span><span class="receipt__what">Less content production effort</span><span class="receipt__how">Ipiphany AI. Brief to draft to publish, automated across HubSpot, Apollo, HeyReach and n8n.</span></div>
-        <div class="receipt"><span class="receipt__n">1</span><span class="receipt__what">Marketing function, run solo</span><span class="receipt__how">An AI company in Auckland, since April 2026. Agents do the production, I do the judgement.</span></div>
-        <div class="receipt"><span class="receipt__n">125</span><span class="receipt__what">Open-source skills</span><span class="receipt__how">Sixteen of them mine, every one credited. <a href="/skills/">Inspect the library</a>.</span></div>
+        <div class="receipt"><span class="receipt__n">+<span data-count="40">40</span><small>%</small></span><span class="meter" data-meter="4" aria-hidden="true"></span><span class="receipt__what">Paid media performance</span><span class="receipt__how">Sime Motors. Systematic tests of audiences, bidding, creative and landing pages.</span></div>
+        <div class="receipt"><span class="receipt__n">&minus;<span data-count="30">30</span><small>%</small></span><span class="meter" data-meter="3" aria-hidden="true"></span><span class="receipt__what">Cost per acquisition</span><span class="receipt__how">Sime Motors. Campaigns rebuilt and spend moved to the channels that converted.</span></div>
+        <div class="receipt"><span class="receipt__n">+<span data-count="150">150</span><small>%</small></span><span class="meter" data-meter="15" aria-hidden="true"></span><span class="receipt__what">Organic traffic in 12 months</span><span class="receipt__how">Rockfort Markets. Site architecture and technical SEO, to number one for core trading keywords.</span></div>
+        <div class="receipt"><span class="receipt__n"><span data-count="70">70</span><small>%+</small></span><span class="meter" data-meter="7" aria-hidden="true"></span><span class="receipt__what">Less content production effort</span><span class="receipt__how">Ipiphany AI. Brief to draft to publish, automated across HubSpot, Apollo, HeyReach and n8n.</span></div>
+        <div class="receipt"><span class="receipt__n"><span data-count="1">1</span></span><span class="meter meter--one" data-meter="1" aria-hidden="true"></span><span class="receipt__what">Marketing function, run solo</span><span class="receipt__how">An AI company in Auckland, since April 2026. Agents do the production, I do the judgement.</span></div>
+        <div class="receipt"><span class="receipt__n"><span data-count="125">125</span></span><span class="meter meter--blank" aria-hidden="true"></span><span class="receipt__what">Open-source skills</span><span class="receipt__how">Sixteen of them mine, every one credited. <a href="/skills/">Inspect the library</a>.</span></div>
       </div>
+      <p class="receipts-note">Each lit dot is ten points of change.</p>
+      <div class="stackline" data-ticker aria-label="Stack"><ul class="hero-proof"><li>Claude Code</li><li>MCP</li><li>Python</li><li>TypeScript</li><li>HubSpot</li><li>Apollo</li><li>HeyReach</li><li>n8n</li><li>GA4</li><li>Google Tag Manager</li><li>BigQuery</li><li>Playwright</li><li>ffmpeg</li><li>Next.js</li><li>Figma</li><li>Webflow</li></ul></div>
     </div>
   </section>
 
   <section id="function" class="sec" aria-labelledby="function-title">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="stack"><p class="eyebrow">The function I run</p><h2 id="function-title">Eight lanes, one person, a review gate on all of them.</h2></div>
+        <div class="stack"><p class="eyebrow"><span class="ch">01</span>The function I run</p><h2 id="function-title">Eight lanes, one person, a review gate on all of them.</h2></div>
         <p class="lead">Pick a lane to see what the agents do, what stays with me, and a slice of the working surface. The split moves as the checks improve.</p>
       </div>
 
-      <div class="board reveal" data-board>
+      <div class="board reveal" data-board data-spot>
         <div class="board__bar" aria-hidden="true"><i></i><i></i><i></i><span data-board-count>01 / 08</span></div>
         <div class="board__body">
           <div class="lanes" role="tablist" aria-label="Lanes of the marketing function" aria-orientation="vertical">
@@ -409,11 +418,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="career" class="sec" aria-labelledby="career-title">
     <div class="wrap">
       <div class="sec-head reveal no-print">
-        <div class="stack"><p class="eyebrow">Career</p><h2 id="career-title">From doing the marketing to building what does it.</h2></div>
+        <div class="stack"><p class="eyebrow"><span class="ch">02</span>Career</p><h2 id="career-title">From doing the marketing to building what does it.</h2></div>
         <p class="lead">Six roles across real estate, retail, finance, automotive and B2B SaaS. The line beside each role thickens as more of the work ran on systems I built.</p>
       </div>
 
-      <article class="sheet reveal" aria-label="Curriculum vitae">
+      <article class="cvsheet reveal" aria-label="Curriculum vitae">
         <header class="sheet__top">
           <div><p class="sheet__name">Amber Lan</p><p class="sheet__role">AI marketing engineer and GTM engineer · Auckland, New Zealand</p></div>
           <p class="sheet__contact"><a href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a><br><a href="https://www.linkedin.com/in/amberlan/">linkedin.com/in/amberlan</a> · <a href="https://www.flowai.co.nz/about">flowai.co.nz/about</a></p>
@@ -444,11 +453,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="systems" class="sec" aria-labelledby="systems-title">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="stack"><p class="eyebrow">Selected work</p><h2 id="systems-title">Shipped systems, linked to the source.</h2></div>
+        <div class="stack"><p class="eyebrow"><span class="ch">03</span>Selected work</p><h2 id="systems-title">Shipped systems, linked to the source.</h2></div>
         <p class="lead">Each case runs from the problem to what I built and what changed. The repositories are public where the work allows it.</p>
       </div>
 
-      <a class="work-lead reveal" href="/work/six-month-marketing-function">
+      <a class="work-lead reveal" href="/work/six-month-marketing-function" data-spot>
         <figure><img src="/assets/flow-system-hero.webp" width="1448" height="1086" loading="lazy" alt="A beam of amber light passing through a row of panels, the Flow system as one line of work"></figure>
         <div class="work-lead__text">
           <p class="tagline">Flagship case · six months</p>
@@ -459,21 +468,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
 
       <div class="work-grid">
-        <a class="work-card reveal" href="/work/content-engine">
+        <a class="work-card reveal" data-spot href="/work/content-engine">
           <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="6" y="6" width="12" height="16" rx="2"/><path d="M22 10h12M22 15h12M22 20h8M6 28h28M6 33h20"/></svg>
           <p class="tagline">Content engine</p>
           <h3>One document in, a month of posts out.</h3>
           <p>Every line passes a codified voice audit before a person reads it, so the output sounds like the brand.</p>
           <p class="shows">Shows <b>storytelling at scale</b></p>
         </a>
-        <a class="work-card reveal" href="/work/geo-seo-toolkit">
+        <a class="work-card reveal" data-spot href="/work/geo-seo-toolkit">
           <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="18" cy="18" r="10"/><path d="M25.5 25.5 34 34M13 18h10M18 13v10"/></svg>
           <p class="tagline">AI search toolkit · open source</p>
           <h3>An SEO toolkit built for AI citations.</h3>
           <p>Citability scoring, AI crawler checks and schema markup for Claude Code. It runs on this site.</p>
           <p class="shows">Shows <b>engineering</b></p>
         </a>
-        <a class="work-card reveal" href="/work/enterprise-gtm">
+        <a class="work-card reveal" data-spot href="/work/enterprise-gtm">
           <svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 10h10l6 10h12M6 20h16M6 30h10l6-10"/><circle cx="34" cy="20" r="2.5"/></svg>
           <p class="tagline">Go-to-market</p>
           <h3>Three demand engines, one pipeline.</h3>
@@ -495,7 +504,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="method" class="sec" aria-labelledby="method-title">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="stack"><p class="eyebrow">How I work</p><h2 id="method-title">Four rules behind every system here.</h2></div>
+        <div class="stack"><p class="eyebrow"><span class="ch">04</span>How I work</p><h2 id="method-title">Four rules behind every system here.</h2></div>
         <p class="lead">I work in English and 中文, both native, and I write strategy and content for both markets.</p>
       </div>
       <div class="rules reveal">
@@ -515,11 +524,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="hire" class="sec" aria-labelledby="hire-title">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="stack"><p class="eyebrow">Two ways in</p><h2 id="hire-title">Hire me for a role, or contract a build.</h2></div>
+        <div class="stack"><p class="eyebrow"><span class="ch">05</span>Two ways in</p><h2 id="hire-title">Hire me for a role, or contract a build.</h2></div>
         <p class="lead">Based in Auckland on New Zealand time, with overlap for APAC, US West Coast and UK working hours.</p>
       </div>
       <div class="hire">
-        <div class="door door--hire reveal">
+        <div class="door door--hire reveal" data-spot>
           <p class="tagline">For recruiters and hiring teams</p>
           <h3>Senior marketing engineer and GTM engineer roles.</h3>
           <dl>
@@ -529,7 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </dl>
           <div class="cta-row"><a class="btn btn-primary" href="mailto:amber.lan.growth.digital@gmail.com?subject=A%20role%20for%20Amber%20Lan">Email me about a role</a><button class="print-cv no-print" type="button" data-print>Print as CV</button></div>
         </div>
-        <div class="door reveal">
+        <div class="door reveal" data-spot>
           <p class="tagline">For teams</p>
           <h3>A system built with your team.</h3>
           <p>Every build starts with a written scope: the gap to close first, the system that closes it, and what your team keeps running after a documented handover.</p>
@@ -556,9 +565,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section id="contact" class="contact centered" aria-labelledby="end-title">
+  <section id="contact" class="contact centered" aria-labelledby="end-title" data-dotfield="closer">
     <div class="wrap">
-      <div class="stack reveal">
+      <div class="stack reveal" data-dotfield-clear>
         <h2 id="end-title">Building marketing on agents too? Let's compare notes.</h2>
         <p class="lead">I read every message myself and reply within two working days.</p>
         <div class="cta-row">
