@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="One source document fanning out through a voice gate to LinkedIn, X, blog, email and cards">
+  <rect width="1200" height="600" fill="#0e0e0d"/>
+  <g fill="none" stroke="#faf8f3" stroke-opacity=".14">
+    <path d="M60 300h1080"/>
+  </g>
+  <!-- source document -->
+  <g transform="translate(150 210)">
+    <rect width="140" height="180" rx="10" fill="#171715" stroke="#faf8f3" stroke-opacity=".28"/>
+    <g stroke="#faf8f3" stroke-opacity=".38" stroke-width="3" stroke-linecap="round">
+      <path d="M26 42h88M26 64h88M26 86h66M26 108h88M26 130h52"/>
+    </g>
+  </g>
+  <!-- the gate -->
+  <g transform="translate(560 170)">
+    <rect width="16" height="260" rx="8" fill="#e4a43c" fill-opacity=".9"/>
+  </g>
+  <!-- source into gate -->
+  <path d="M290 300C400 300 460 300 560 300" stroke="#e4a43c" stroke-width="2.5" fill="none"/>
+  <!-- fan out -->
+  <g fill="none" stroke="#e4a43c" stroke-width="2" stroke-opacity=".85">
+    <path d="M576 300C700 300 760 140 880 140"/>
+    <path d="M576 300C700 300 760 220 880 220"/>
+    <path d="M576 300C700 300 760 300 880 300"/>
+    <path d="M576 300C700 300 760 380 880 380"/>
+    <path d="M576 300C700 300 760 460 880 460"/>
+  </g>
+  <g fill="#e4a43c"><circle cx="880" cy="140" r="5"/><circle cx="880" cy="220" r="5"/><circle cx="880" cy="300" r="5"/><circle cx="880" cy="380" r="5"/><circle cx="880" cy="460" r="5"/></g>
+  <g font-family="Google Sans Flex, -apple-system, Segoe UI, sans-serif" font-size="22" fill="#faf8f3" fill-opacity=".82">
+    <text x="904" y="148">LinkedIn</text>
+    <text x="904" y="228">X</text>
+    <text x="904" y="308">Blog</text>
+    <text x="904" y="388">Email</text>
+    <text x="904" y="468">Cards</text>
+  </g>
+  <g font-family="Google Sans Flex, -apple-system, Segoe UI, sans-serif" font-size="16" fill="#faf8f3" fill-opacity=".5" letter-spacing="2">
+    <text x="150" y="430">ONE SOURCE</text>
+    <text x="510" y="466">VOICE GATE</text>
+  </g>
+</svg>
