@@ -500,3 +500,21 @@
   .cvc__track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem 0.5rem; }
   .seg { min-width: 0; }
 }
+
+/* =====================  edit pass: six sections  ===================== */
+.mini-head { margin-bottom: var(--s-4); color: var(--soft); font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; text-align: left; }
+.howiwork { margin-top: var(--space-band); }
+.howiwork .rules { margin-top: 0; }
+.writing { margin-top: var(--space-band); }
+.writing .reads { margin-top: 0; }
+.doors-wrap { margin-top: var(--space-band); scroll-margin-top: 90px; }
+.doors-wrap .cvhire { margin-top: 0; }
+@media print { .writing, .howiwork { display: none !important; } }
+/* comfortable tap targets for the small text links */
+.cv-hero .profile__links a, .idcard__links a { display: inline-block; padding-block: 0.3rem; }
+.qa-card a, .receipt__how a { padding-block: 0.15rem; }
+.cvc__cols .print-cv { padding-block: 0.25rem; }
+/* the closer's dot wave runs behind the two doors, never over them */
+.doors-wrap { position: relative; z-index: 2; }
+.door { background-color: #131311; }
+.door--hire { background: linear-gradient(160deg, rgba(228, 164, 60, 0.09), transparent 55%), #131311; }
