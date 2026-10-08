@@ -82,6 +82,7 @@ Site structure:
 - /tools/pricing: free interactive pricing model (Lerner rule, economic value to the customer).
 - /tools/decision-map: free marketing decision map toolkit. List your marketing decisions, score value, risk and frequency, see which ones AI can make, which it drafts for approval and which stay human, then write one-page decision rules. Runs in the browser; nothing is sent.
 - /flowai-brand-guidelines: the Flow AI brand system.
+- /zh/: the whole site in Simplified Chinese (简体中文): every page and guide at the same path under /zh/ (for example /zh/about, /zh/blog/what-is-a-marketing-engineer). Each page links its English and Chinese versions with hreflang.
 
 ## What is an AI marketing engineer?
 

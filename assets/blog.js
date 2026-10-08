@@ -1,6 +1,7 @@
 /* Flow AI guides: index filters (state in the address) and the article contents rail. */
 (function () {
   'use strict';
+  var ZH = /^zh/.test(document.documentElement.lang);
 
   /* ---------------- index: topic, sort, view */
   var grid = document.querySelector('[data-posts]');
@@ -38,7 +39,7 @@
       document.querySelectorAll('[data-topic-link]').forEach(function (a) {
         a.setAttribute('aria-current', String(a.dataset.topicLink === topic));
       });
-      if (count) count.textContent = shown + (shown === 1 ? ' guide' : ' guides');
+      if (count) count.textContent = ZH ? shown + ' 篇指南' : shown + (shown === 1 ? ' guide' : ' guides');
       if (empty) empty.hidden = shown !== 0;
       if (push) {
         var p = new URLSearchParams();
@@ -95,7 +96,7 @@
       if (bar) bar.style.width = (p * 100).toFixed(1) + '%';
       if (left && total) {
         var m = Math.ceil(total * (1 - p));
-        left.textContent = p >= 0.98 ? 'Done' : m + ' min left';
+        left.textContent = ZH ? (p >= 0.98 ? '已读完' : '还剩 ' + m + ' 分钟') : (p >= 0.98 ? 'Done' : m + ' min left');
       }
       var line = window.innerHeight * 0.3;
       var current = -1;

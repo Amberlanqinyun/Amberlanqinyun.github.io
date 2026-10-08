@@ -1,0 +1,165 @@
+<!--meta
+{
+  "slug": "what-is-answer-engine-optimisation",
+  "title": "什么是答案引擎优化（AEO）？一份写给小企业的指南。",
+  "seoTitle": "什么是答案引擎优化（AEO）？写给小企业的入门指南",
+  "description": "写给小企业的答案引擎优化（AEO）指南：ChatGPT 和 Google AI 概览如何挑选信息来源，研究发现了哪些有效做法，以及第一步该从哪里做起。",
+  "schemaDescription": "一份写给新西兰和澳大利亚小企业的答案引擎优化（AEO）指南：AEO 是什么，哪些工具算答案引擎，它们如何决定引用谁，研究证明哪些做法有效，AEO 与 SEO、GEO 是什么关系，如何衡量效果，以及从哪里开始。",
+  "standfirst": "过去客户会输入 Google 的问题，如今有越来越多交给 AI 工具来回答，而 AI 在回答时只会点名少数几家企业。<b>这份指南讲的是，一家 5 到 50 人的企业如何成为被点名的那几家之一。</b>",
+  "shortAnswer": "答案引擎优化（AEO）是让 ChatGPT、Perplexity、Gemini 和 Google AI 概览（AI Overviews）等 AI 答案引擎更容易找到你的企业、读懂你的业务，并在回答中提到你的工作。它建立在常规 SEO 之上：页面可被抓取，事实写得清楚，直接回答真实问题，并且有其他可信网站提到你的企业。",
+  "topic": "ai-search",
+  "pillar": true,
+  "format": "指南",
+  "published": "2026-10-02",
+  "modified": "2026-10-02",
+  "keywords": [
+    "答案引擎优化",
+    "什么是答案引擎优化",
+    "AEO",
+    "小企业 AEO",
+    "新西兰 AEO",
+    "AEO 原理",
+    "如何出现在 Google AI 概览",
+    "AEO 和 SEO 的区别",
+    "免费 AEO 工具"
+  ],
+  "definedTerm": {
+    "name": "答案引擎优化（Answer engine optimisation）",
+    "alternateName": [
+      "AEO",
+      "answer engine optimisation",
+      "answer engine optimization",
+      "AI 搜索优化"
+    ],
+    "description": "答案引擎优化（AEO）是指调整企业的网站、事实信息和外部口碑，让 AI 答案引擎能够找到它、信任它，并在生成的回答中引用或推荐它。"
+  },
+  "related": [
+    "how-to-get-mentioned-by-chatgpt",
+    "aeo-vs-seo-vs-geo",
+    "aeo-checklist"
+  ],
+  "faq": [
+    {
+      "q": "答案引擎优化会取代 SEO 吗？",
+      "a": "AEO 建立在 SEO 之上，也依赖 SEO。Google 表示，页面想出现在 AI 概览中，除了常规的 SEO 最佳实践，无需任何特殊标记；ChatGPT 搜索则借助包括 Bing 在内的合作伙伴搜索索引。搜索引擎抓取不到、无法收录的网站，在 AI 回答里同样很难有表现。把 AEO 看作额外的一层：答案先行的页面，一致的事实信息，以及其他网站上的提及。"
+    },
+    {
+      "q": "AEO 适合本地企业吗，还是只适合大品牌？",
+      "a": "本地企业同样适用，而且本地版本更简单。当有人让 AI 工具推荐附近的水管工或理疗师时，引擎会执行一次本地搜索，主要依据商家信息、评价和服务页面。一份完整的 Google 商家资料（Google Business Profile），在 Bing Places 和各类目录上保持一致的信息，近期的评价，再加上每项服务、每个区域各一个页面，就能覆盖大部分工作。"
+    },
+    {
+      "q": "答案引擎优化多久能见效？",
+      "a": "访问层面的修复，比如解除对 AI 爬虫的屏蔽、让网站被 Bing 收录，在引擎重新抓取你的网站后，几周内就可能看到变化。其他网站上的提及和一批答案先行的页面则需要几个月，这一点和 SEO 一样。每个月在 ChatGPT、Perplexity 和 Google 里运行同一组提示词并做对比，因为同一个问题每次得到的回答都可能不同。"
+    },
+    {
+      "q": "小企业做 AEO 要花多少钱？",
+      "a": "第一轮主要花的是时间。检查 robots.txt、认领 Bing Places、改写页面开头、邀请客户留评价，都不需要任何软件。各项检查用免费工具就能完成：Google Search Console、Bing Webmaster Tools、Google 的富媒体搜索结果测试（Rich Results Test），以及 Flow AI 的免费 AI 爬虫访问检查。市面上也有付费的 AI 可见度追踪工具，但对一家 5 到 50 人的企业来说，起步阶段每月手动记录一次提示词结果就够了。"
+    },
+    {
+      "q": "做 AEO 需要 llms.txt 文件吗？",
+      "a": "可有可无。目前没有任何一家主要 AI 提供商表示会用 llms.txt 来挑选信息来源；Ahrefs 在 2026 年对 137,210 个域名的研究发现，已发布的 llms.txt 文件中有 97% 在一个月内没有收到任何请求。添加它只需十分钟，没有坏处，但它应该排在清单末尾，放在爬虫访问、事实信息、答案页面和评价之后。"
+    },
+    {
+      "q": "AEO 和 GEO 是一回事吗？",
+      "a": "几乎是。GEO 即生成式引擎优化，出自 2024 年的一篇研究论文，指针对会撰写回答的 AI 引擎来优化内容。AEO 是更早的行业术语，最初用于精选摘要和语音助手，如今用在同一批 AI 工具上。大多数从业者把两个词混用，对小企业来说，无论叫哪个名字，要做的工作都一样。"
+    }
+  ],
+  "featured": true
+}
+-->
+<h2>什么是答案引擎优化？</h2>
+<p>答案引擎优化，是让 AI 系统在有人提问时，更容易找到、读懂并推荐一家企业的做法。传统搜索返回的是一串链接。答案引擎会自己写出回答，并在其中点名几个来源。AEO 要做的，就是成为被点名的那几个之一。</p>
+<blockquote>答案引擎优化（AEO）是指调整企业的网站、事实信息和外部口碑，让 AI 答案引擎能够找到它、信任它，并在生成的回答中引用或推荐它。</blockquote>
+<p>这个词早在 ChatGPT 出现之前就有了，当时指的是精选摘要和语音助手。2023 年以来，答案引擎开始写出完整的段落，并推荐具体的企业，这项工作也随之扩展为影响 AI 如何描述你。<a class="go" href="/glossary/#answer-engine-optimisation-aeo">术语表中的 AEO 词条</a>给出了一句话版本的定义。</p>
+<p>对一家 5 到 50 人的企业来说，AEO 归结为四个问题。AI 爬虫能读取你的网站吗？关于你的事实（做什么、在哪里、服务谁、大致价格）是否写得直白，并且在各处保持一致？你的页面是否用客户自己的话，回答了客户真正会问的问题？其他网站是否提到你，让 AI 有理由相信你对自己的描述？</p>
+
+<h2>哪些工具算答案引擎？</h2>
+<p>凡是用一段文字作答、而不是返回一页链接的搜索或聊天工具，都算答案引擎。2026 年，对小企业重要的有 ChatGPT、Google AI 概览（AI Overviews）和 AI 模式（AI Mode）、Gemini、Perplexity、Microsoft Copilot 以及 Claude。它们从实时网络获取信息的方式各不相同，因此各自看重的工作也略有差异。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>答案引擎</th><th>实时网络结果的来源</th><th>企业可以检查什么</th></tr></thead>
+<tbody>
+<tr><td><b>Google AI 概览和 AI 模式</b></td><td>Google 自己的搜索索引，遵循常规的搜索规则</td><td>你的页面已在 Google Search Console 中被收录</td></tr>
+<tr><td><b>ChatGPT 搜索</b></td><td>合作伙伴搜索提供商（OpenAI 点名了 Microsoft 的 Bing），以及 OpenAI 自己的搜索爬虫</td><td>你的网站已在 Bing Webmaster Tools 中被收录，且 robots.txt 允许 OAI-SearchBot</td></tr>
+<tr><td><b>Microsoft Copilot</b></td><td>Bing</td><td>Bing Webmaster Tools 和 Bing Places 商家信息</td></tr>
+<tr><td><b>Perplexity</b></td><td>自己的爬虫和索引</td><td>robots.txt 允许 PerplexityBot</td></tr>
+</tbody>
+</table></div>
+<p>Google Search Console 和 Bing Webmaster Tools 这两个免费后台，就能覆盖其中大部分引擎。<a class="go" href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI 关于 ChatGPT 搜索的帮助页面说明，它会把改写后的查询发送给合作伙伴搜索提供商，其中包括 Microsoft（Bing）</a>。它还可能传递基于 IP 的大致位置，于是“附近的电工”就变成了一次本地搜索。</p>
+
+<h2>为什么 AEO 对小企业来说现在就很重要</h2>
+<p>AEO 现在就重要，是因为越来越多的搜索在答案里就结束了。人们仍在搜索，Google 的查询量也还在增长，但真正把人带到网站上的搜索越来越少。当客户读完答案就停下，在答案中被点名，承担的就是过去排名第一页的作用。</p>
+<p><a class="go" href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener">皮尤研究中心（Pew Research Center）在 2025年3月追踪了 900 名美国成年人的 68,879 次 Google 搜索，发现出现 AI 摘要时，人们在 8% 的访问中点击了传统搜索结果；没有 AI 摘要时，这一比例为 15%</a>。只有 1% 的访问点击了摘要内部的链接。<a class="go" href="https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/" target="_blank" rel="noopener">SparkToro 2026 年的研究基于 Similarweb 2026年1月至4月的点击流数据，发现 68.01% 的美国 Google 搜索以零点击结束</a>，高于 2024 年的 60.45%。这两组都是美国数据，新西兰目前还没有同类测量（术语表对<a class="go" href="/glossary/#zero-click-search">零点击搜索</a>有定义）。</p>
+<p>搜索量则是另一回事。2024年2月，<a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents" target="_blank" rel="noopener">Gartner 预测到 2026 年，传统搜索引擎的搜索量将下降 25%</a>，因为人们会转向聊天机器人。这是 2024 年初做出的预测。此后 Google 公布的数字却指向相反的方向：<a class="go" href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2025/" target="_blank" rel="noopener">在 Alphabet 2025 年第二季度财报电话会议上，Sundar Pichai 表示 AI 概览的月用户已超过 20 亿，并且在会显示 AI 概览的查询类型中，带来了超过 10% 的查询增长</a>。人们搜索得更多，点击得更少。</p>
+<p>聊天工具也已成为主流。<a class="go" href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener">OpenAI 在 DevDay 2026 上表示，其产品合计触达 12 亿周用户</a>，这个数字涵盖其全部产品，ChatGPT 也在其中。<a class="go" href="https://openai.com/index/how-people-are-using-chatgpt/" target="_blank" rel="noopener">OpenAI 在 2025年9月发布的研究分析了 150 万段 ChatGPT 对话，发现 49% 的消费者消息是在寻求信息或建议</a>。</p>
+<p>新西兰也是同样的趋势。<a class="go" href="https://internetnz.nz/new-zealands-internet-insights/new-zealands-internet-insights-2025/" target="_blank" rel="noopener">InternetNZ 的《Aotearoa Internet Insights 2025》于 2025 年底调查了 1,003 名新西兰成年人，发现过去一年中 55% 的人在搜索引擎中使用过 AI，53% 的人使用过 AI 聊天机器人</a>。<a class="go" href="https://www.pwc.co.nz/insights-and-publications/2026-publications/the-ai-powered-consumer-how-shopping-behaviour-is-changing-in-nz.html" target="_blank" rel="noopener">普华永道新西兰（PwC New Zealand）2026 年对 1,000 名已在用 AI 购物的新西兰消费者的研究发现，44% 的人表示，AI 减少了他们在研究购买时对搜索引擎的使用</a>。这个样本只包括 AI 用户，但他们正是会在打电话之前比较供应商的那批客户。</p>
+
+<h2>AI 答案引擎如何决定引用谁？</h2>
+<p>大多数答案引擎会先搜索，再写作。它们把问题拆成更细的查询，从索引中抓取页面，提取回答每一部分的段落，然后写出回答，并引用其中几个来源。一个页面能被引用，是因为引擎能访问它，它直白地回答了那个细分查询，而且来源看起来可信。</p>
+<p>这个拆分步骤通常被称为查询扇出（query fan-out）。问一句“在陶朗加（Tauranga）换热水器该找谁？”，引擎可能会分别搜索更换费用、陶朗加的持牌水管工，以及它找到的那些名字的评价。一个价格页面、一个陶朗加服务页面，再加上近期评价，就能在每一步都给它提供素材。</p>
+<p>在 Google 排名靠前有帮助，但并不决定结果。<a class="go" href="https://ahrefs.com/blog/ai-search-overlap/" target="_blank" rel="noopener">Ahrefs 在 2025 年对 15,000 条提示词的分析发现，ChatGPT、Gemini 和 Copilot 引用的 URL 中，只有 12% 在同一提示词的 Google 搜索中排进前 10</a>（仅看 ChatGPT 为 8%）。在 Google 内部，<a class="go" href="https://ahrefs.com/blog/ai-overview-citations-top-10/" target="_blank" rel="noopener">Ahrefs 2026年3月的更新覆盖了 863,000 个关键词结果，发现 AI 概览引用的页面中，37.9% 在该关键词下排名前 10，31.0% 排在前 100 名之外</a>。Ahrefs 本身销售 SEO 软件，所以请把这些看作一家供应商的数据。不过方向很清楚：引擎引用的段落，远远超出了第一页的范围。</p>
+<p>你自己网站之外的口碑分量很重。<a class="go" href="https://ahrefs.com/blog/ai-overview-brand-correlation/" target="_blank" rel="noopener">Ahrefs 对 75,000 个品牌的相关性研究发现，品牌在网络上被提及与 AI 概览可见度的关联最强（0.664），远高于反向链接（0.218）</a>。相关性证据弱于实验证据，但它符合引擎的行为方式：它们很看重别人怎么评价一家企业。</p>
+<p>在以下情况下，引擎更可能引用一家企业：</p>
+<ul>
+<li>它能抓取页面：爬虫被允许访问，页面加载时文字就在 HTML 中。</li>
+<li>页面上有一段话，用一两句能独立成立的句子回答了那个细分问题。</li>
+<li>企业的事实信息在官网、商家信息和各类目录中保持一致，术语表称之为 <a class="go" href="/glossary/#nap-consistency">NAP 一致性</a>。</li>
+<li>其他来源提到它：评价、本地媒体、行业协会、YouTube。</li>
+</ul>
+
+<h2>研究证明哪些做法有效？</h2>
+<p>最有力的证据来自 2024 年那篇为生成式引擎优化命名的论文。<a class="go" href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener">Aggarwal 及其同事（普林斯顿大学、佐治亚理工学院、艾伦人工智能研究所和印度理工学院德里分校，发表于 KDD 2024）在 10,000 个查询上测试了页面修改，发现恰当的修改能让一个来源在 AI 回答中的可见度提升最多 40%</a>。效果最好的修改，都是朴素的写作调整。</p>
+<p><a class="go" href="https://arxiv.org/html/2311.09735v3" target="_blank" rel="noopener">表现最好的是添加引语、添加统计数据和引用来源，各自带来 30% 到 40% 的相对提升，而关键词堆砌几乎没有带来任何提升</a>。</p>
+<p>有一个发现对小网站意义很大。在同一基准测试中，对于在搜索结果中排名第五的网站，引用来源让可见度提升了 115.1%，而排名第一的网站可见度平均下降了 30.3%。这个结果来自模拟搜索的实验室基准测试，所以请把它看作方向上的信号。它表明，一个小网站上来源扎实的页面，有机会胜过大网站上含糊其辞的页面。</p>
+<p>落到小企业的页面修改上：</p>
+<ul>
+<li>给你有把握的说法加上数字，比如一项工作的常见价格区间以及影响价格的因素，并说明数字的出处。</li>
+<li>引用一位具名人士的话，比如企业主、持牌技师，或经本人同意的客户。</li>
+<li>链接到某个说法所依据的法规、标准或研究。</li>
+<li>按客户提问的方式来写，避免重复堆砌关键词。</li>
+</ul>
+
+<h2>AEO 和 SEO、GEO 有什么区别？</h2>
+<p>SEO 争取的是在一串链接中的位置。AEO 争取的是在一段书面回答中被提及。GEO 是研究界对同一目标的叫法，针对的是生成文本的 AI 引擎。它们共用同一个基础，而且 Google 表示 AI 概览只需要常规的 SEO 最佳实践，所以最好把 AEO 看作 SEO 的延伸。</p>
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>SEO</th><th>AEO</th><th>GEO</th></tr></thead>
+<tbody>
+<tr><td><b>目标</b></td><td>在搜索结果中排名靠前</td><td>在 AI 回答中被引用或推荐</td><td>被纳入生成的回答并被引用</td></tr>
+<tr><td><b>出现在</b></td><td>Google 和 Bing 搜索结果页</td><td>ChatGPT、Perplexity、AI 概览、Copilot、Gemini</td><td>同一批 AI 引擎</td></tr>
+<tr><td><b>看重</b></td><td>相关性、链接、技术健康度</td><td>直接的回答、一致的事实、外部提及</td><td>有来源、可引用的段落</td></tr>
+<tr><td><b>衡量方式</b></td><td>排名、点击、Search Console</td><td>提示词记录、AI 引荐流量、咨询</td><td>在 AI 回答中的可见度</td></tr>
+</tbody>
+</table></div>
+<p><a class="go" href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google 搜索中心（Google Search Central）关于 AI 功能的指南表示，想出现在 AI 概览或 AI 模式中，不需要特殊的 schema.org 标记、AI 文本文件或额外标记，除核心 SEO 之外也没有其他要求</a>。这话说得在理，也正是起步的地方。核心 SEO 之外的 AEO 工作，大多发生在 Google 之外：为 ChatGPT 和 Copilot 做好 Bing 收录，为 OpenAI 和 Perplexity 设置爬虫规则，以及每个引擎都会参考的评价和提及。</p>
+<p>完整的对比，以及应该先投入哪一项，详见指南<a class="go" href="/blog/aeo-vs-seo-vs-geo">AEO、SEO 和 GEO 有什么区别？</a></p>
+
+<h2>小企业这个月能为 AEO 做些什么？</h2>
+<p>小企业无需开发人员，按顺序处理五个方面，就能完成 AEO 的大部分工作：让 AI 爬虫进来，写清企业的事实信息，建立回答真实问题的页面，在外部积累证明和提及，最后添加结构化数据。每一步都以前一步为基础。</p>
+<ol>
+<li><b>让爬虫进来。</b>检查 robots.txt 是否允许 OAI-SearchBot、PerplexityBot、Googlebot 和 Bingbot，并确认你的主机服务商没有屏蔽 AI 爬虫。Flow AI 的免费 <a class="go" href="/templates/ai-crawler-check">AI 爬虫访问检查</a>会对照 robots.txt、页面标签和服务器响应头，测试 14 种 <a class="go" href="/glossary/#ai-crawler">AI 爬虫</a>。</li>
+<li><b>写清事实。</b>用一个页面写明名称、服务、区域、营业时间、资质和常见价格，并与 Google 商家资料、Bing Places 和各类目录上的信息完全一致。</li>
+<li><b>回答问题。</b>每个重要页面的开头，用 40 到 60 个词回答该页面针对的问题；标题按客户提问的方式来写，并加入研究所看重的数字、引语和来源。</li>
+<li><b>在外部积累证明。</b>近期评价、行业协会名录、一篇本地新闻报道、一段简短的 YouTube 讲解视频。指南<a class="go" href="/blog/how-to-get-mentioned-by-chatgpt">如何让 ChatGPT 提到你的企业</a>详细讲解了这一步。</li>
+<li><b>添加结构化数据。</b>使用 LocalBusiness 或 Organization 类型的<a class="go" href="/glossary/#schema-markup">结构化数据（schema）标记</a>，把第二步中的事实，以机器无需猜测就能读取的形式再写一遍。</li>
+</ol>
+<p>每个方面都在<a class="go" href="/blog/aeo-checklist">小企业 AEO 检查清单</a>中拆成了具体任务，大多数企业主一周内就能完成。</p>
+
+<h2>如何衡量 AEO？</h2>
+<p>在工具成熟之前，用四个习惯来衡量 AEO：每月记录一次主要引擎在被问到客户问题时怎么说，查看分析工具中的 AI 引荐访问，关注 Search Console 的趋势，并留意客户说是 AI 推荐了你的那些咨询。目前还没有哪个工具能像 Search Console 报告 Google 排名那样，可靠地报告 AI 可见度。</p>
+<p>提示词记录承担了大部分工作。写下 15 到 20 个真实客户会问的问题，比如“惠灵顿小咖啡馆最好的会计师”或“在奥克兰安装热泵要多少钱”，每个月在 ChatGPT、Perplexity、Gemini 和 Google 中各运行一遍。记录你是否被提到、还有谁被提到，以及哪些页面被引用。每次运行的回答都会有差异，所以要看三个月的趋势。</p>
+<p>在 Google Analytics 4 中，来自 AI 工具的访问会显示为来自 chatgpt.com、perplexity.ai、gemini.google.com 和 copilot.microsoft.com 等域名的引荐流量。数字通常不大，因为很多人读完答案就直接打电话，不会点击，所以在“你是从哪里了解到我们的？”的选项中，加上“ChatGPT 等 AI 助手”。</p>
+<p>被引用似乎也有助于留住剩下的点击。<a class="go" href="https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-september-2025-update" target="_blank" rel="noopener">Seer Interactive 2025年9月的更新覆盖了 42 家客户机构的 3,119 个搜索词，发现在 AI 概览中被引用的品牌，比未被引用的品牌多获得 35% 的自然点击和 91% 的付费点击</a>。Seer 是一家代理机构，报告的是自家客户的数据，所以请把它看作趋势方向。</p>
+
+<h2>对新西兰和澳大利亚企业来说，AEO 是什么样子？</h2>
+<p>对大多数新西兰和澳大利亚的小企业来说，AEO 是本地化的。客户让 AI 工具推荐汉密尔顿的建筑商或布里斯班的理疗师，引擎就会去搜索商家信息、评价和服务页面。驱动 Google 地图的那些本地信号承担了大部分权重，而 Bing 索引的重要性，比它的市场份额所显示的更大。</p>
+<p>Bing 是常被忽视的一环。<a class="go" href="https://gs.statcounter.com/search-engine-market-share/all/new-zealand" target="_blank" rel="noopener">Statcounter 2026年9月的数据显示，Google 占新西兰搜索引擎市场份额的 89.02%，Bing 占 7.71%</a>，<a class="go" href="https://gs.statcounter.com/search-engine-market-share/all/australia" target="_blank" rel="noopener">澳大利亚情况相近，Google 为 87.9%，Bing 为 9.17%</a>。由于 ChatGPT 搜索和 Copilot 都依赖 Bing，缺少 Bing Places 商家信息或网站未被收录，带来的损失会比这个份额所显示的更大。</p>
+<p>在有数据可查的地方，本地 AI 使用习惯增长最快。<a class="go" href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener">BrightLocal 的《2026 本地消费者评价调查》（Local Consumer Review Survey 2026）调查了 1,002 名美国成年人，发现 45% 的人用过 ChatGPT 或其他 AI 工具来获取本地商家推荐，前一年这一比例为 6%</a>。BrightLocal 销售本地 SEO 软件，样本来自美国，所以请把它看作早期信号。它的后续研究发现，<a class="go" href="https://www.brightlocal.com/research/lcrs-ai-trust/" target="_blank" rel="noopener">用 AI 获取本地推荐的人中，88% 会查看 AI 引用的来源</a>，这又回到了评价和商家信息上。</p>
+<p>本地基础工作（Google 商家资料、评价、各区域页面、新西兰本地目录）在<a class="go" href="/blog/seo-for-small-business-nz">新西兰小企业 SEO 指南</a>中有详细介绍。想了解 AI 在整个营销职能中的全貌，可以从<a class="go" href="/blog/ai-marketing-for-small-business-nz">新西兰小企业 AI 营销指南</a>读起。</p>
+
+<h2>Flow AI 能帮上什么</h2>
+<p>Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端地设计和搭建。搜索与 AI 搜索往往是它最先安装的系统，通过 <a class="go" href="/sprints/ai-search">AI 搜索冲刺</a>来完成；书面范围说明会写明，这是否是适合你企业的第一步。</p>
+<p>这些工作背后的工具都是公开的。<a class="go" href="/templates/">免费智能体模板</a>包括 AI 爬虫访问检查和一套完整的 GEO 审计；开源的 GEO 技能（skill）收录在 <a class="go" href="/skills/#geo">Flow AI 技能库</a>中，任何人都可以安装，并在自己的网站上运行。</p>
+
+<h2>简要回顾</h2>
+<p>答案引擎优化，就是在 AI 工具回答客户问题时，让你的企业被点名。它以 SEO 为基础，再加上四个习惯：向 AI 爬虫开放网站，让企业信息在各处完全一致，让页面在第一段就回答问题，并在其他网站上赢得提及和评价。</p>
+<p>InternetNZ 发现，过去一年中 55% 的新西兰人在搜索引擎中使用过 AI。现在就打好基础的企业，能给每个引擎提供推荐它所需的一切，而同样的工作在普通 Google 搜索中也会带来回报。</p>
+<p>想知道你的网站应该先改进 AI 搜索的哪个部分，<a class="go" href="/contact">来和 Amber 聊聊</a>。</p>

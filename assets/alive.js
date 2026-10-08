@@ -25,16 +25,26 @@
   function splitLines(el) {
     if (el.getAttribute('data-words') === 'ready') return;
     if (el.children.length) { el.setAttribute('data-words', 'ready'); return; }
-    var words = el.textContent.trim().split(/\s+/);
+    var text = el.textContent.trim(), words, gap = ' ';
+    /* Chinese has no spaces between words. Break headlines at phrase boundaries instead:
+       each clause, with its punctuation, is one unit, so a line never splits a word in two
+       or starts with 。or ，. A clause wider than the column still wraps inside itself. */
+    if (/^zh/.test(document.documentElement.lang) && /[\u3400-\u9fff]/.test(text)) {
+      gap = '';
+      words = text.match(/[^，。、；：？！,;:?]+[，。、；：？！,;:?]*\s*/g) || [text];
+    } else {
+      words = text.split(/\s+/);
+    }
     el.textContent = '';
     words.forEach(function (word, i) {
+      if (word === ' ') { el.appendChild(document.createTextNode(' ')); return; }
       var outer = document.createElement('span');
       outer.className = 'w';
       var inner = document.createElement('span');
       inner.textContent = word;
       outer.appendChild(inner);
       el.appendChild(outer);
-      if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+      if (gap && i < words.length - 1) el.appendChild(document.createTextNode(gap));
     });
     var line = -1, lastTop = null;
     slice(el.querySelectorAll('.w')).forEach(function (w) {

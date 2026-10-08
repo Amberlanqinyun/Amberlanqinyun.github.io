@@ -14,6 +14,8 @@
   var fine = window.matchMedia('(pointer: fine)').matches;
   var slice = function (l) { return Array.prototype.slice.call(l); };
   var io = 'IntersectionObserver' in window;
+  var ZH = /^zh/.test(document.documentElement.lang);
+  var MORE = ZH ? '展开' : 'Read more', LESS = ZH ? '收起' : 'Show less';
 
   /* ---------- 1. halo behind the portrait ---------- */
   slice(document.querySelectorAll('[data-halo]')).forEach(function (host) {
@@ -119,12 +121,12 @@
     if (!p) return;
     p.id = p.id || 'qa-a-' + k;
     var b = document.createElement('button');
-    b.type = 'button'; b.className = 'qa-more'; b.textContent = 'Read more';
+    b.type = 'button'; b.className = 'qa-more'; b.textContent = MORE;
     b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', p.id);
     b.addEventListener('click', function () {
       var open = card.classList.toggle('is-open');
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
-      b.textContent = open ? 'Show less' : 'Read more';
+      b.textContent = open ? LESS : MORE;
     });
     card.appendChild(b);
     if (p.scrollHeight <= p.clientHeight + 2) { b.hidden = true; card.classList.add('is-open'); }

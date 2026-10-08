@@ -1,7 +1,10 @@
 /* Marketing decision map: pick, score, map, write the rules. Runs in the browser only. */
 (function () {
   "use strict";
-  var LS = "flowai-decision-map-v1";
+  var ZH = /^zh/.test(document.documentElement.lang);
+  /* Chinese pages keep their own saved map, so switching language never mixes the two sets. */
+  var LS = ZH ? "flowai-decision-map-v1-zh" : "flowai-decision-map-v1";
+  function tr(en, zh) { return ZH ? zh : en; }
   var LIB = [
     ["Who we sell to", [
       ["Which customer segment to focus on this quarter", 5, 4, 2],
@@ -22,7 +25,27 @@
       ["Which leads get a follow-up", 3, 2, 4],
       ["When a reply goes to a person", 4, 4, 4]]]
   ];
-  var DEFAULTS = ["Our core claim and positioning", "How to split budget across channels", "Which proof and case studies to feature", "What to post this week", "When to send emails", "Which leads get a follow-up", "When a reply goes to a person"];
+  if (ZH) LIB = [
+    ["我们卖给谁", [
+      ["本季度重点聚焦哪个客户群", 5, 4, 2],
+      ["主推哪一项服务", 4, 3, 2],
+      ["优先接触哪些客户", 3, 2, 3]]],
+    ["预算花在哪里", [
+      ["预算如何在各渠道之间分配", 5, 4, 2],
+      ["招人、找代理机构还是自动化", 4, 4, 1],
+      ["效果不好的渠道何时暂停", 3, 3, 2]]],
+    ["我们说什么", [
+      ["核心主张与定位", 5, 5, 1],
+      ["重点展示哪些证据和案例", 3, 2, 3],
+      ["如何回应竞争对手", 3, 4, 2]]],
+    ["工作如何交付", [
+      ["一次营销活动用哪些渠道", 3, 2, 3],
+      ["这周发什么内容", 2, 2, 5],
+      ["什么时候发邮件", 1, 1, 5],
+      ["哪些潜在客户需要跟进", 3, 2, 4],
+      ["什么时候把回复转给人工", 4, 4, 4]]]
+  ];
+  var DEFAULTS = ZH ? ["核心主张与定位", "预算如何在各渠道之间分配", "重点展示哪些证据和案例", "这周发什么内容", "什么时候发邮件", "哪些潜在客户需要跟进", "什么时候把回复转给人工"] : ["Our core claim and positioning", "How to split budget across channels", "Which proof and case studies to feature", "What to post this week", "When to send emails", "Which leads get a follow-up", "When a reply goes to a person"];
 
   var preset = {};
   LIB.forEach(function (g) { g[1].forEach(function (d) { preset[d[0]] = { v: d[1], r: d[2], f: d[3] }; }); });
@@ -43,7 +66,11 @@
     if (s.r <= 2 && s.v <= 2 && s.f >= 3) return "agent";
     return "draft";
   }
-  var LANES = {
+  var LANES = ZH ? {
+    you: ["你来决定，智能体提供依据", "影响大或难以撤回。智能体带来证据，由人拍板。"],
+    draft: ["智能体起草，你来批准", "值得人看一眼。智能体把决策准备好，由人签字确认。"],
+    agent: ["智能体决定，你来抽查", "频繁且风险低。规则写一次，定期抽样复核。"]
+  } : {
     you: ["You decide, the agent informs", "High stakes or hard to undo. The agent brings evidence; a person makes the call."],
     draft: ["The agent drafts, you approve", "Worth a human look. The agent prepares the decision and a person signs it off."],
     agent: ["The agent decides, you spot-check", "Frequent and low risk. Write the rule once and review a sample."]
@@ -58,7 +85,7 @@
       html += "</div></div>";
     });
     if (state.custom.length) {
-      html += '<div class="dm-group"><h3>Your own</h3><div class="dm-chips">' + state.custom.map(chip).join("") + "</div></div>";
+      html += '<div class="dm-group"><h3>' + tr("Your own", "你自己添加的") + '</h3><div class="dm-chips">' + state.custom.map(chip).join("") + "</div></div>";
     }
     $("dm-groups").innerHTML = html;
   }
@@ -83,16 +110,16 @@
 
   /* Step 2: score */
   function seg(name, key, val) {
-    var h = '<div class="dm-seg" role="group" aria-label="' + esc(key) + ' for ' + esc(name) + '">';
+    var h = '<div class="dm-seg" role="group" aria-label="' + esc(ZH ? name + "：" + ({ v: "业务价值", r: "出错的风险", f: "频率" }[key] || key) : key + " for " + name) + '">';
     for (var i = 1; i <= 5; i++) h += '<button type="button" data-name="' + esc(name) + '" data-key="' + key + '" data-val="' + i + '" aria-pressed="' + (val === i) + '">' + i + "</button>";
     return h + "</div>";
   }
   function renderScore() {
-    if (!state.picked.length) { $("dm-score").innerHTML = '<p class="dm-empty">Pick at least one decision above.</p>'; return; }
-    var h = '<table class="dm-table"><thead><tr><th>Decision</th><th>Business value</th><th>Risk if wrong</th><th>How often</th></tr></thead><tbody>';
+    if (!state.picked.length) { $("dm-score").innerHTML = '<p class="dm-empty">' + tr("Pick at least one decision above.", "请在上方至少选择一项决策。") + '</p>'; return; }
+    var h = '<table class="dm-table"><thead><tr><th>' + tr("Decision", "决策") + '</th><th>' + tr("Business value", "业务价值") + '</th><th>' + tr("Risk if wrong", "出错的风险") + '</th><th>' + tr("How often", "频率") + '</th></tr></thead><tbody>';
     state.picked.forEach(function (n) {
       var s = state.scores[n];
-      h += "<tr><td>" + esc(n) + '</td><td data-k="Value">' + seg(n, "v", s.v) + '</td><td data-k="Risk">' + seg(n, "r", s.r) + '</td><td data-k="Frequency">' + seg(n, "f", s.f) + "</td></tr>";
+      h += "<tr><td>" + esc(n) + '</td><td data-k="' + tr("Value", "价值") + '">' + seg(n, "v", s.v) + '</td><td data-k="' + tr("Risk", "风险") + '">' + seg(n, "r", s.r) + '</td><td data-k="' + tr("Frequency", "频率") + '">' + seg(n, "f", s.f) + "</td></tr>";
     });
     $("dm-score").innerHTML = h + "</tbody></table>";
   }
@@ -108,7 +135,7 @@
     var W = 560, H = 380, L = 44, R = 16, T = 16, B = 40;
     var x = function (r) { return L + (r - 0.5) / 5 * (W - L - R); };
     var y = function (v) { return T + (5.5 - v) / 5 * (H - T - B); };
-    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Decision map: business value against risk, bubble size shows how often the decision is made.">';
+    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + tr("Decision map: business value against risk, bubble size shows how often the decision is made.", "决策地图：纵轴为业务价值，横轴为风险，气泡大小表示决策的频率。") + '">';
     svg += '<rect class="zone" x="' + x(3.5) + '" y="' + T + '" width="' + (W - R - x(3.5)) + '" height="' + (H - T - B) + '" rx="6"/>';
     for (var i = 1; i <= 5; i++) {
       svg += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(i) + '" y2="' + y(i) + '"/>';
@@ -116,8 +143,8 @@
       svg += '<text x="' + x(i) + '" y="' + (H - B + 18) + '" text-anchor="middle">' + i + "</text>";
     }
     svg += '<line class="ax" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + (H - B) + '"/><line class="ax" x1="' + L + '" x2="' + (W - R) + '" y1="' + (H - B) + '" y2="' + (H - B) + '"/>';
-    svg += '<text x="' + ((L + W - R) / 2) + '" y="' + (H - 4) + '" text-anchor="middle">Risk if wrong</text>';
-    svg += '<text x="12" y="' + ((T + H - B) / 2) + '" text-anchor="middle" transform="rotate(-90 12 ' + ((T + H - B) / 2) + ')">Business value</text>';
+    svg += '<text x="' + ((L + W - R) / 2) + '" y="' + (H - 4) + '" text-anchor="middle">' + tr("Risk if wrong", "出错的风险") + '</text>';
+    svg += '<text x="12" y="' + ((T + H - B) / 2) + '" text-anchor="middle" transform="rotate(-90 12 ' + ((T + H - B) / 2) + ')">' + tr("Business value", "业务价值") + '</text>';
     var seen = {};
     state.picked.forEach(function (n, k) {
       var s = state.scores[n], key = s.r + "-" + s.v, off = (seen[key] = (seen[key] || 0) + 1) - 1;
@@ -130,13 +157,13 @@
     var groups = { you: [], draft: [], agent: [] };
     state.picked.forEach(function (n) { groups[lane(state.scores[n])].push(n); });
     $("dm-lanes").innerHTML = ["you", "draft", "agent"].map(function (k) {
-      var items = groups[k].length ? groups[k].map(function (n) { return '<li><span class="dm-num">' + (state.picked.indexOf(n) + 1) + "</span>" + esc(n) + "</li>"; }).join("") : '<li class="dm-empty">None yet</li>';
+      var items = groups[k].length ? groups[k].map(function (n) { return '<li><span class="dm-num">' + (state.picked.indexOf(n) + 1) + "</span>" + esc(n) + "</li>"; }).join("") : '<li class="dm-empty">' + tr("None yet", "暂无") + '</li>';
       return '<div class="dm-lane is-' + k + '"><h3>' + LANES[k][0] + "<span>" + groups[k].length + "</span></h3><p>" + LANES[k][1] + "</p><ul>" + items + "</ul></div>";
     }).join("");
   }
 
   /* Step 4: briefs for the top three */
-  var FIELDS = [["owner", "Who owns it", "One named person"], ["inputs", "What it is based on", "Data, research or rules the decision uses"], ["rules", "Guardrails", "Always do… / never do…"], ["review", "Who reviews, and when", "Before it ships, weekly sample, monthly"], ["measure", "How we know it worked", "The one number we watch"]];
+  var FIELDS = ZH ? [["owner", "负责人", "一位具体的人"], ["inputs", "决策依据", "这项决策用到的数据、调研或规则"], ["rules", "护栏规则", "始终要做…… / 绝不能做……"], ["review", "谁来审核，何时审核", "发布前、每周抽样、每月"], ["measure", "怎么判断有效", "我们关注的那一个数字"]] : [["owner", "Who owns it", "One named person"], ["inputs", "What it is based on", "Data, research or rules the decision uses"], ["rules", "Guardrails", "Always do… / never do…"], ["review", "Who reviews, and when", "Before it ships, weekly sample, monthly"], ["measure", "How we know it worked", "The one number we watch"]];
   function top() {
     return state.picked.slice().sort(function (a, b) {
       var A = state.scores[a], B = state.scores[b];
@@ -145,7 +172,7 @@
   }
   function renderBriefs() {
     var t = top();
-    if (!t.length) { $("dm-briefs").innerHTML = '<p class="dm-empty">Your top decisions appear here once you pick some.</p>'; return; }
+    if (!t.length) { $("dm-briefs").innerHTML = '<p class="dm-empty">' + tr("Your top decisions appear here once you pick some.", "选好决策后，最重要的几项会显示在这里。") + '</p>'; return; }
     $("dm-briefs").innerHTML = t.map(function (n) {
       var b = state.briefs[n] || {};
       return '<article class="dm-brief"><h3>' + esc(n) + '</h3><span class="dm-tag">' + LANES[lane(state.scores[n])][0] + "</span>" +
@@ -161,19 +188,19 @@
   });
 
   function asText() {
-    var out = "Marketing decision map\nMade with flowai.co.nz/tools/decision-map\n\n";
+    var out = tr("Marketing decision map\nMade with flowai.co.nz/tools/decision-map\n\n", "营销决策地图\n用 flowai.co.nz/zh/tools/decision-map 制作\n\n");
     ["you", "draft", "agent"].forEach(function (k) {
       var items = state.picked.filter(function (n) { return lane(state.scores[n]) === k; });
       if (!items.length) return;
       out += "## " + LANES[k][0] + "\n";
-      items.forEach(function (n) { var s = state.scores[n]; out += "- " + n + " (value " + s.v + ", risk " + s.r + ", frequency " + s.f + ")\n"; });
+      items.forEach(function (n) { var s = state.scores[n]; out += "- " + n + (ZH ? "（价值 " + s.v + "，风险 " + s.r + "，频率 " + s.f + "）\n" : " (value " + s.v + ", risk " + s.r + ", frequency " + s.f + ")\n"); });
       out += "\n";
     });
-    out += "## Decision briefs\n";
+    out += tr("## Decision briefs\n", "## 决策简报\n");
     top().forEach(function (n) {
       var b = state.briefs[n] || {};
       out += "\n### " + n + "\n";
-      FIELDS.forEach(function (f) { out += "- " + f[1] + ": " + (b[f[0]] || "") + "\n"; });
+      FIELDS.forEach(function (f) { out += "- " + f[1] + tr(": ", "：") + (b[f[0]] || "") + "\n"; });
     });
     return out;
   }
@@ -181,19 +208,19 @@
   function track(kind) { if (window.dataLayer) window.dataLayer.push({ event: "decision_map_export", method: kind }); }
   $("dm-copy").addEventListener("click", function () {
     var txt = asText();
-    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(function () { status("Copied."); }, function () { status("Copy blocked by the browser."); });
+    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(function () { status(tr("Copied.", "已复制。")); }, function () { status(tr("Copy blocked by the browser.", "浏览器阻止了复制。")); });
     track("copy");
   });
   $("dm-download").addEventListener("click", function () {
     var a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([asText()], { type: "text/markdown" }));
-    a.download = "marketing-decision-map.md"; document.body.appendChild(a); a.click(); a.remove();
+    a.download = tr("marketing-decision-map.md", "营销决策地图.md"); document.body.appendChild(a); a.click(); a.remove();
     track("download");
   });
   $("dm-print").addEventListener("click", function () { track("print"); window.print(); });
   $("dm-reset").addEventListener("click", function () {
     try { localStorage.removeItem(LS); } catch (e) {}
-    state = load(); renderPick(); update(); status("Reset to the starter set.");
+    state = load(); renderPick(); update(); status(tr("Reset to the starter set.", "已恢复为初始设置。"));
   });
 
   function update() { renderScore(); renderMap(); renderBriefs(); save(); }

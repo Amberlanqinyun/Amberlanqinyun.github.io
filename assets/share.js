@@ -2,6 +2,7 @@
   'use strict';
 
   var shareButtons = '[data-share]';
+  var ZH = /^zh/.test(document.documentElement.lang);
 
   function resolvedUrl(value) {
     var url = new URL(value || window.location.href, window.location.href);
@@ -51,7 +52,7 @@
     if (typeof navigator.share === 'function') {
       try {
         await navigator.share(payload);
-        feedback(button, 'Shared');
+        feedback(button, ZH ? '已分享' : 'Shared');
         return;
       } catch (error) {
         if (error && error.name === 'AbortError') return;
@@ -60,9 +61,9 @@
 
     try {
       await copyText(payload.url);
-      feedback(button, 'Link copied');
+      feedback(button, ZH ? '链接已复制' : 'Link copied');
     } catch (error) {
-      feedback(button, 'Copy failed', 'error');
+      feedback(button, ZH ? '复制失败' : 'Copy failed', 'error');
     }
   }
 
