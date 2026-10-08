@@ -1631,7 +1631,7 @@ Case study
 
 A content engine that turns one source document into platform-native posts, where every line passes a codified voice audit before it ships.
 
-Built in Python on Claude agents. Clean-room version public on GitHub. By Amber Lan, AI marketing engineer. Last updated 20 August 2026.
+Built in Python on Claude agents. Walkthrough available on a call. By Amber Lan, AI marketing engineer. Last updated 20 August 2026.
 
 Back to selected work
 
