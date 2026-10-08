@@ -372,6 +372,8 @@
 @media print {
   .cv-proof, .cvc, .portrait { display: none !important; }
   .cvsheet { display: block !important; }
+  /* PDF engines flatten a blurred shadow into a solid box, so the glow stays on screen only. */
+  .cvsheet .role:first-child::before { box-shadow: none; }
 }
 
 .cv .cv-proof { padding-block: 0 clamp(1rem, 2vw, 1.5rem); }

@@ -2,6 +2,10 @@
 <html lang="en-NZ">
 <head>
 <meta charset="utf-8">
+<!-- i18n:start -->
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -12,6 +16,7 @@
   <!-- End Google Tag Manager -->
 <title>Page not found · Flow AI</title>
 <meta name="robots" content="noindex">
+<script>/* Missing pages under /zh/ get the Chinese 404. */if(/^\/zh(\/|$)/.test(location.pathname)&&location.pathname!=='/zh/404')location.replace('/zh/404');</script>
 <meta name="theme-color" content="#0e0e0d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>
@@ -46,6 +51,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/sprints/">How it works</a>
       <a href="/blog/">Guides</a>
       <a href="/about">About</a>
+      <span class="lang-switch" role="group" aria-label="Language"><a href="/" lang="en" hreflang="en" data-lang="en" aria-current="true">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh">中文</a></span>
       <a class="site-header__cta" href="/contact">Work with me</a>
     </nav>
   </div>

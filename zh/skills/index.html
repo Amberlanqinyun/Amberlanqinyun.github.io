@@ -1,0 +1,2900 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+  <title>AI 营销技能与智能体实战手册 | Flow AI</title>
+  <meta name="description" content="125 个 AI 智能体技能，覆盖 AI 搜索、社交媒体、内容、转化与增长，先看源码再安装。其中 16 个由 Flow AI 开发，其余精选自采用 MIT 许可的开源技能库。">
+  <meta name="theme-color" content="#0e0e0d">
+  <link rel="canonical" href="https://www.flowai.co.nz/zh/skills/">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/skills/">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/skills/">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/skills/">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+  <link rel="alternate" type="application/atom+xml" title="Flow AI" href="https://www.flowai.co.nz/feed.xml">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Flow AI 技能库 | Amber Lan">
+  <meta property="og:description" content="125 个 AI 智能体技能，覆盖 AI 搜索、社交媒体、内容、转化与增长，先看源码再安装。其中 16 个由 Flow AI 开发，其余精选自采用 MIT 许可的开源技能库。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Flow AI">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://www.flowai.co.nz/zh/skills/">
+  <meta property="og:image" content="https://www.flowai.co.nz/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.flowai.co.nz/zh/skills/#page",
+      "url": "https://www.flowai.co.nz/zh/skills/",
+      "name": "Flow AI 技能库",
+      "description": "一个公开的技能库，收录 125 个 AI 智能体技能，涵盖搜索可见度、产品发布、增长、社群、内容运营和产品系统。其中 16 个由 Flow AI 开发，41 个是精选的 Gingiris 增长实战手册，作者为 Iris Wei。",
+      "inLanguage": "zh-Hans",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.flowai.co.nz/zh/skills/#list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.flowai.co.nz/zh/skills/#list",
+      "numberOfItems": 125,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "GEO operator",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Full GEO audit",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-audit"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI citability scorer",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-citability"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AI crawler access",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-crawlers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "llms.txt builder",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-llmstxt"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Brand mention scanner",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-brand-mentions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "AI platform optimiser",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-platform-optimizer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Schema architect",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-schema"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Technical SEO audit",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-technical"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Content quality audit",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-content"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Client report writer",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-report"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "PDF report generator",
+          "url": "https://www.flowai.co.nz/zh/skills/#geo-report-pdf"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Brand DNA researcher",
+          "url": "https://www.flowai.co.nz/zh/skills/#research-brand"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Reddit opportunity researcher",
+          "url": "https://www.flowai.co.nz/zh/skills/#reddit-opportunity-research"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Content evidence auditor",
+          "url": "https://www.flowai.co.nz/zh/skills/#audit-content"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Latticework build brief",
+          "url": "https://www.flowai.co.nz/zh/skills/#latticework"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "AI product launch",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-launch"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Product Hunt playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#product-hunt-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Product Hunt launch guide",
+          "url": "https://www.flowai.co.nz/zh/skills/#product-hunt-launch-guide"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Startup launch checklist",
+          "url": "https://www.flowai.co.nz/zh/skills/#startup-launch"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Startup launch playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#startup-launch-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "AI launch playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#ai-launch-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "AI product shipping guide",
+          "url": "https://www.flowai.co.nz/zh/skills/#ai-product-launch"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Go-to-market playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#go-to-market-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "SEO and GEO agent ops",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-seo-geo-agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "SEO and GEO 2026",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-seo-geo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "B2B SaaS growth",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-b2b-growth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "SaaS growth playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#saas-growth-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Product-led growth",
+          "url": "https://www.flowai.co.nz/zh/skills/#plg-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "B2B marketing playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#b2b-marketing-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "SaaS marketing playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#saas-marketing-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Open source marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-opensource"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "GitHub stars sprint",
+          "url": "https://www.flowai.co.nz/zh/skills/#github-stars-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Sustained star growth",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-github-star-growth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Open source launch",
+          "url": "https://www.flowai.co.nz/zh/skills/#open-source-marketing-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "README writing system",
+          "url": "https://www.flowai.co.nz/zh/skills/#gr-readme"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "ASO and app cold start",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-aso-growth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "ASO playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#aso-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Hardware and SaaS GTM",
+          "url": "https://www.flowai.co.nz/zh/skills/#hardware-saas-gtm"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "KOL outreach pipeline",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-kol-outreach"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "KOL cold templates",
+          "url": "https://www.flowai.co.nz/zh/skills/#kol-outreach"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "UGC matrix growth",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-ugc-matrix"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Ambassador programme",
+          "url": "https://www.flowai.co.nz/zh/skills/#community-ambassador-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Community building",
+          "url": "https://www.flowai.co.nz/zh/skills/#community-building-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "DevRel playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#devrel-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Developer marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#developer-marketing-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Reddit marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-reddit-marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Twitter/X agent ops",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-twitter-agent-ops"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "User interviews and PMF",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-user-interview"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Competitor teardowns",
+          "url": "https://www.flowai.co.nz/zh/skills/#competitor-research-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Startup consultant",
+          "url": "https://www.flowai.co.nz/zh/skills/#startup-consultant"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Startup growth playbook",
+          "url": "https://www.flowai.co.nz/zh/skills/#startup-growth-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Startup marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#startup-marketing-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Viral marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#viral-marketing-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Growth hacking tactics",
+          "url": "https://www.flowai.co.nz/zh/skills/#growth-hacking-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Growth finder router",
+          "url": "https://www.flowai.co.nz/zh/skills/#gingiris-growth-finder"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Agent workflows",
+          "url": "https://www.flowai.co.nz/zh/skills/#agent-workflow-playbook"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "SEO audit",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-seo-audit"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "AI search visibility",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-ai-seo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Site architecture",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-site-architecture"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Programmatic SEO",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-programmatic-seo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Schema markup",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-schema"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "App store optimisation",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-aso"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Copywriting",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-copywriting"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Copy editing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-copy-editing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Content strategy",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-content-strategy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Email marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-emails"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Cold email",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-cold-email"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "SMS marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-sms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Social content",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-social"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Video marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-video"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Marketing imagery",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-image"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Lead magnets",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-lead-magnets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Conversion optimisation",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-cro"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Signup flow",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-signup"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "User onboarding",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-onboarding"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Popups and overlays",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-popups"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Paywalls",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-paywalls"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "A/B testing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-ab-testing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Paid advertising",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-ads"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Ad creative",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-ad-creative"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Analytics setup",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-analytics"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Attribution",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-attribution"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Referral programmes",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-referrals"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Free tools",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-free-tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Churn prevention",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-churn-prevention"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Marketing loops",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-marketing-loops"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Co-marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-co-marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Influencer marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-influencer-marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Pricing strategy",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-pricing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Offer design",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-offers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Marketing ideas",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-marketing-ideas"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Marketing plan",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-marketing-plan"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Community marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-community-marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Event marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-events"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Public relations",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-public-relations"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Customer research",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-customer-research"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "Competitive analysis",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-competitors"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "Competitor profiling",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-competitor-profiling"
+        },
+        {
+          "@type": "ListItem",
+          "position": 100,
+          "name": "Marketing psychology",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-marketing-psychology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 101,
+          "name": "Product launch",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-launch"
+        },
+        {
+          "@type": "ListItem",
+          "position": 102,
+          "name": "Product marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-product-marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 103,
+          "name": "Directory submissions",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-directory-submissions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 104,
+          "name": "Revenue operations",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-revops"
+        },
+        {
+          "@type": "ListItem",
+          "position": 105,
+          "name": "Sales enablement",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-sales-enablement"
+        },
+        {
+          "@type": "ListItem",
+          "position": 106,
+          "name": "Prospecting",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-prospecting"
+        },
+        {
+          "@type": "ListItem",
+          "position": 107,
+          "name": "Marketing council",
+          "url": "https://www.flowai.co.nz/zh/skills/#ms-marketing-council"
+        },
+        {
+          "@type": "ListItem",
+          "position": 108,
+          "name": "Humanizer",
+          "url": "https://www.flowai.co.nz/zh/skills/#humanizer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 109,
+          "name": "Voice builder",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-voice-builder"
+        },
+        {
+          "@type": "ListItem",
+          "position": 110,
+          "name": "Newsletter voice",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-newsletter-voice"
+        },
+        {
+          "@type": "ListItem",
+          "position": 111,
+          "name": "LinkedIn post writer",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-post-writer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 112,
+          "name": "Post formatter",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-post-formatter"
+        },
+        {
+          "@type": "ListItem",
+          "position": 113,
+          "name": "Hook generator",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-hook-generator"
+        },
+        {
+          "@type": "ListItem",
+          "position": 114,
+          "name": "Content matrix",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-content-matrix"
+        },
+        {
+          "@type": "ListItem",
+          "position": 115,
+          "name": "Post scorer",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-post-scorer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 116,
+          "name": "Analytics dashboard",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-analytics-dashboard"
+        },
+        {
+          "@type": "ListItem",
+          "position": 117,
+          "name": "Profile optimiser",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-profile-optimizer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 118,
+          "name": "Pinned comment",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-pinned-comment"
+        },
+        {
+          "@type": "ListItem",
+          "position": 119,
+          "name": "Quote post",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-quote-post"
+        },
+        {
+          "@type": "ListItem",
+          "position": 120,
+          "name": "Reels scripting",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-reels-scripting"
+        },
+        {
+          "@type": "ListItem",
+          "position": 121,
+          "name": "Post graphics",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-graphic-designer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 122,
+          "name": "Carousel builder",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-gemini-carousel"
+        },
+        {
+          "@type": "ListItem",
+          "position": 123,
+          "name": "Infographic prompt",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-gemini-infographic"
+        },
+        {
+          "@type": "ListItem",
+          "position": 124,
+          "name": "YouTube thumbnail",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-youtube-thumbnail"
+        },
+        {
+          "@type": "ListItem",
+          "position": 125,
+          "name": "Niche research",
+          "url": "https://www.flowai.co.nz/zh/skills/#sm-niche-research"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "什么是 AI 智能体技能？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI 智能体技能是一个可复用的 SKILL.md 文件，为兼容的智能体提供专门的指令、工作流程、参考资料和质量检查，用来完成一项明确的工作。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "这些技能由谁开发？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "其中 16 个技能由 Flow AI 的 Amber Lan 开发并维护。41 个是 Gingiris 的 Iris Wei 编写的增长实战手册，50 个是 Corey Haines 的营销技能，17 个是 Charlie Hills 的社交媒体技能，另有 1 个是 Siqi Chen 的 Humanizer 文字编辑技能。所有精选技能均采用 MIT 许可，从作者自己的代码仓库安装。每一条都注明了作者。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "安装之前，可以先查看技能内容吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。每一条都直接链接到它在 GitHub 上的公开源码。把它添加到智能体之前，先读一读其中的指令、依赖项和脚本。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "列出的技能，可移植性都一样吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可移植性各有不同。Flow AI 的研究类和审计类技能可以移植，且自成一体。GEO 套件和 Latticework 简报设计为安装后使用。内容引擎依赖其文档中说明的品牌文件和本地工作流程。Gingiris 实战手册是自成一体的 SKILL.md 文件，从各自的代码仓库安装。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <style>
+    /* Skill library. Tokens, reset, type, buttons, grids and FAQ come from /assets/site.css.
+       Only the library chrome lives here. */
+    button, input { font: inherit; }
+    code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    [hidden] { display: none !important; }
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+    button.text-link {
+      appearance: none;
+      padding: 0 0 2px;
+      border: 0;
+      border-bottom: 1px solid var(--hair-strong);
+      background: transparent;
+      font-size: 15.5px;
+      cursor: pointer;
+    }
+    button.text-link:hover { border-color: var(--fg); }
+
+    /* Hero: the GEO suite install line sits under the stack, as on the home page */
+    .hero .install code { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Library header, search and filters */
+    .library .lead { max-width: 46ch; }
+    .controls {
+      position: sticky;
+      z-index: 30;
+      top: 68px;
+      margin-top: clamp(3rem, 6vw, 4.5rem);
+      padding: 1rem 0 1.25rem;
+      border-bottom: 1px solid var(--hair);
+      background: var(--bg);
+    }
+    .controls-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 1.5rem;
+    }
+    .search-wrap { display: block; min-width: 0; }
+    .search {
+      width: 100%;
+      padding: 0.6rem 0;
+      border: 0;
+      border-bottom: 1px solid var(--hair-strong);
+      border-radius: 0;
+      background: transparent;
+      color: var(--fg);
+      font-size: 1.05rem;
+      outline: 0;
+      transition: border-color 180ms ease;
+    }
+    .search::placeholder { color: var(--soft); }
+    .search:focus { border-color: var(--fg); }
+    .result-count { color: var(--soft); font-size: 14px; white-space: nowrap; }
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .filter {
+      padding: 0.5rem 0.9rem;
+      border: 1px solid var(--hair);
+      border-radius: var(--pill);
+      background: transparent;
+      color: var(--muted);
+      font-size: 13.5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+    }
+    .filter:hover { border-color: var(--hair-strong); color: var(--fg); }
+    .filter[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Skill rows: name, one line, install command, text links, all on hairlines */
+    .skills-grid { border-bottom: 1px solid var(--hair); }
+    .skill-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 27rem);
+      align-items: start;
+      gap: 1rem 3rem;
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--hair);
+      scroll-margin-top: 200px;
+    }
+    .skill-card:target h3 { text-decoration: underline; text-decoration-color: var(--hair-strong); text-underline-offset: 6px; }
+    .featured-layout { display: block; }
+    .skill-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.25rem 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--soft);
+      font-size: 13px;
+    }
+    .skill-card h3 { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
+    .skill-description { max-width: 52ch; margin-top: 0.45rem; color: var(--muted); font-size: 1rem; line-height: 1.55; text-wrap: pretty; }
+    .skill-list { display: grid; max-width: 30rem; margin-top: 1rem; }
+    .skill-list span { display: flex; gap: 0.75rem; padding: 0.45rem 0; border-top: 1px solid var(--hair); color: var(--muted); font-size: 14px; }
+    .skill-list b { flex: none; min-width: 5rem; color: var(--fg); font-weight: 600; }
+    .skill-bottom { display: grid; min-width: 0; gap: 0.85rem; }
+    .command { display: flex; min-width: 0; align-items: center; gap: 0.75rem; }
+    .command code {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      padding: 0.6rem 0.85rem;
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      color: var(--fg);
+      font-size: 13px;
+      line-height: 1.4;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .command .copy-button { flex: none; padding: 0.5rem 0.85rem; font-size: 13px; }
+    .skill-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.25rem; color: var(--soft); font-size: 14px; }
+    .skill-links > span { margin-left: auto; text-align: right; }
+    .source-link, .share-link {
+      padding: 0 0 2px;
+      border: 0;
+      border-bottom: 1px solid var(--hair-strong);
+      background: transparent;
+      color: var(--fg);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: border-color 180ms ease;
+    }
+    .source-link:hover, .share-link:hover { border-color: var(--fg); }
+    .empty-state { padding: 4rem 0; border-top: 1px solid var(--hair); color: var(--muted); text-align: center; }
+    .empty-state b { display: block; margin-bottom: 0.4rem; color: var(--fg); font-size: 1.1rem; font-weight: 600; }
+
+    /* This page reveals with its own observer: is-visible must beat site.css's is-hidden */
+    .reveal.is-hidden.is-visible { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      .skill-card { grid-template-columns: 1fr; }
+      .controls-top { grid-template-columns: 1fr; gap: 0.5rem; }
+      .result-count { white-space: normal; }
+      .skill-links > span { margin-left: 0; text-align: left; }
+    }
+    @media (max-width: 720px) {
+      .controls { top: 64px; }
+      .command { flex-wrap: wrap; }
+      .command code { flex-basis: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .filter, .search, .source-link, .share-link { transition: none; }
+    }
+  </style>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<script src="/assets/motion.js" defer></script>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <a class="skip-link" href="#library">跳到技能库</a>
+  <div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/about">关于我</a>
+      <span class="lang-switch" role="group" aria-label="语言"><a href="/skills/" lang="en" hreflang="en" data-lang="en">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/skills/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh" aria-current="true">中文</a></span>
+      <a class="site-header__cta" href="/zh/contact">与我合作</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero centered" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="stack">
+          <p class="eyebrow">Flow AI 技能库</p>
+          <h1 id="hero-title">写给 AI 智能体的一线操盘经验。</h1>
+          <p class="lead">面向 AI 搜索、产品发布、增长、社群、内容运营和产品系统的专项工作流程。每个技能在你运行之前，源码就已公开。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#library">浏览 125 个技能</a>
+            <button class="text-link share-control" type="button" data-share-library>分享技能库</button>
+          </div>
+        </div>
+        <div class="install" aria-label="精选安装命令">
+          <code>npx skills add Amberlanqinyun/geo-seo-claude</code>
+          <button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude" aria-label="复制 GEO 套件安装命令">复制</button>
+          <p class="small">建议从 GEO 套件开始：1 个总控技能，外加 11 个专项技能。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="library centered" id="library" aria-labelledby="library-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="library-title">按要完成的工作来挑选。</h2>
+          <p class="lead">共 125 个技能：16 个由 Flow AI 开发，41 个是 Gingiris 的 Iris Wei 编写的增长实战手册，50 个是 Corey Haines 的营销技能，17 个是 Charlie Hills 的社交媒体技能，还有 Siqi Chen 的 Humanizer 文字编辑技能。每一条都注明作者，并链接到源码。</p>
+        </div>
+
+        <div class="controls" aria-label="技能库筛选与搜索" style="text-align:left">
+          <div class="controls-top">
+            <label class="search-wrap">
+              <span class="visually-hidden">搜索技能</span>
+              <input class="search" id="skill-search" type="search" placeholder="按工作、产出或技能名称搜索" autocomplete="off">
+            </label>
+            <p class="result-count" id="result-count" aria-live="polite">显示 125 个技能</p>
+          </div>
+          <div class="filters" role="group" aria-label="按类别筛选">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">全部 125</button>
+            <button class="filter" type="button" data-filter="search" aria-pressed="false">AI 搜索 20</button>
+            <button class="filter" type="button" data-filter="social" aria-pressed="false">社交媒体 14</button>
+            <button class="filter" type="button" data-filter="launch" aria-pressed="false">发布 14</button>
+            <button class="filter" type="button" data-filter="growth" aria-pressed="false">增长 23</button>
+            <button class="filter" type="button" data-filter="community" aria-pressed="false">社群 12</button>
+            <button class="filter" type="button" data-filter="conversion" aria-pressed="false">转化 6</button>
+            <button class="filter" type="button" data-filter="content" aria-pressed="false">内容 14</button>
+            <button class="filter" type="button" data-filter="paid" aria-pressed="false">付费与数据 4</button>
+            <button class="filter" type="button" data-filter="opensource" aria-pressed="false">开源 5</button>
+            <button class="filter" type="button" data-filter="research" aria-pressed="false">研究 9</button>
+            <button class="filter" type="button" data-filter="product" aria-pressed="false">产品 1</button>
+            <button class="filter" type="button" data-filter="agents" aria-pressed="false">智能体 3</button>
+          </div>
+        </div>
+
+        <div class="skills-grid" id="skills-grid" style="text-align:left">
+          <article class="skill-card featured reveal" id="geo" data-category="search" data-search="geo operator ai search seo full suite router citability crawlers llms schema technical content report">
+            <div class="featured-layout">
+              <div>
+                <div class="skill-meta"><span>AI 搜索 / 12 个技能组成的套件</span><span>Flow AI · 持续维护的分支版本</span></div>
+                <h3>GEO operator</h3>
+                <p class="skill-description">带着一个网站依次走完 AI 可见度、技术 SEO（搜索引擎优化）、内容质量、结构化数据和平台检查，最后给出一份排好优先级的报告。</p>
+              </div>
+              <div class="skill-list" aria-label="GEO 套件包含的能力">
+                <span><b>发现</b> 抓取网站并分类</span>
+                <span><b>分析</b> 并行运行各项专项检查</span>
+                <span><b>决策</b> 按影响大小排定工作</span>
+                <span><b>交付</b> 产出可直接交给客户的报告</span>
+              </div>
+            </div>
+            <div class="skill-bottom">
+              <div class="command">
+                <code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo</code>
+                <button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo" aria-label="复制 GEO operator 安装命令">复制</button>
+              </div>
+              <div class="skill-links">
+                <a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/geo" target="_blank" rel="noopener">查看源码 ↗</a>
+                <span>也可以安装上方的完整仓库</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-audit" data-category="search" data-search="full geo audit site crawl score action plan search ai visibility seo">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>Full GEO audit</h3>
+              <p class="skill-description">完整运行 AI 可见度与搜索审计，再把发现整理成一份按优先级排序的行动计划。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-audit</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-audit" aria-label="复制 Full GEO audit 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-audit" target="_blank" rel="noopener">查看源码 ↗</a><span>审计并排出优先级</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-citability" data-category="search" data-search="ai citability scorer citations answer blocks evidence density page content llm">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>AI citability scorer</h3>
+              <p class="skill-description">逐块为页面评分：能否直接回答问题，证据是否充分，表达是否清晰，以及是否适合被 AI 系统引用。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-citability</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-citability" aria-label="复制 AI citability scorer 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-citability" target="_blank" rel="noopener">查看源码 ↗</a><span>评估回答就绪度</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-crawlers" data-category="search" data-search="ai crawler access robots txt gptbot claudebot perplexitybot discoverability">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>AI crawler access</h3>
+              <p class="skill-description">在内容工作开始之前，先检查 robots.txt 对主流 AI 爬虫是否开放，并标出影响网站被发现的障碍。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-crawlers</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-crawlers" aria-label="复制 AI crawler access 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-crawlers" target="_blank" rel="noopener">查看源码 ↗</a><span>找出访问障碍</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-llmstxt" data-category="search" data-search="llms txt builder generator ai crawler site map content discoverability">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>llms.txt builder</h3>
+              <p class="skill-description">审计或生成 llms.txt，让 AI 系统找到网站上最有价值的页面和来源背景。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-llmstxt</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-llmstxt" aria-label="复制 llms.txt builder 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-llmstxt" target="_blank" rel="noopener">查看源码 ↗</a><span>梳理重点内容</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-brand-mentions" data-category="search" data-search="brand mentions authority entity reddit youtube wikipedia linkedin scan">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>Brand mention scanner</h3>
+              <p class="skill-description">梳理品牌在各个公开平台上的信号，找出削弱 AI 推荐的权威度缺口。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-brand-mentions</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-brand-mentions" aria-label="复制 Brand mention scanner 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-brand-mentions" target="_blank" rel="noopener">查看源码 ↗</a><span>梳理实体权威度</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-platform-optimizer" data-category="search" data-search="ai platform optimiser optimizer chatgpt perplexity gemini google ai overviews recommendations">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>AI platform optimiser</h3>
+              <p class="skill-description">针对 ChatGPT、Perplexity、Gemini 和 Google AI 概览（AI Overviews），分别调整可见度建议。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-platform-optimizer</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-platform-optimizer" aria-label="复制 AI platform optimiser 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-platform-optimizer" target="_blank" rel="noopener">查看源码 ↗</a><span>按平台规划</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-schema" data-category="search" data-search="schema architect structured data json ld organization local business article product software">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>Schema architect</h3>
+              <p class="skill-description">审计并生成结构化数据（schema），让搜索系统更清楚地理解实体、产品与服务、作者和答案。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-schema</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-schema" aria-label="复制 Schema architect 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-schema" target="_blank" rel="noopener">查看源码 ↗</a><span>让实体更清晰</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-technical" data-category="search" data-search="technical seo audit crawl rendering mobile core web vitals performance indexability">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>Technical SEO audit</h3>
+              <p class="skill-description">检查可抓取性、渲染、移动端表现、性能、安全性，以及搜索的核心基础。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-technical</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-technical" aria-label="复制 Technical SEO audit 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-technical" target="_blank" rel="noopener">查看源码 ↗</a><span>修好基础</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-content" data-category="search" data-search="content quality audit eeat e-e-a-t information gain readability freshness helpful content">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Flow AI</span></div>
+              <h3>Content quality audit</h3>
+              <p class="skill-description">在改写页面之前，先审视信息增量、经验信号、可读性、时效性和证据。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-content</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-content" aria-label="复制 Content quality audit 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-content" target="_blank" rel="noopener">查看源码 ↗</a><span>把内容本身做扎实</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-report" data-category="search" data-search="client report writer geo seo findings action plan executive deliverable markdown">
+            <div>
+              <div class="skill-meta"><span>报告</span><span>Flow AI</span></div>
+              <h3>Client report writer</h3>
+              <p class="skill-description">把审计发现整合成一份简明的交付物，写清优先级、证据、负责人和下一步行动。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-report</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-report" aria-label="复制 Client report writer 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-report" target="_blank" rel="noopener">查看源码 ↗</a><span>把检查结果变成决策</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="geo-report-pdf" data-category="search" data-search="pdf report generator charts scores professional deliverable geo audit">
+            <div>
+              <div class="skill-meta"><span>报告</span><span>Flow AI</span></div>
+              <h3>PDF report generator</h3>
+              <p class="skill-description">把审计评分、图表、发现和建议生成一份便于分享的 PDF 交付物。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/geo-seo-claude --skill geo-report-pdf</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude --skill geo-report-pdf" aria-label="复制 PDF report generator 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/geo-seo-claude/tree/main/skills/geo-report-pdf" target="_blank" rel="noopener">查看源码 ↗</a><span>把证据整理成册</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="research-brand" data-category="research" data-search="brand dna researcher positioning audience competitors voice messaging evidence sources public research">
+            <div>
+              <div class="skill-meta"><span>品牌研究</span><span>Flow AI</span></div>
+              <h3>Brand DNA researcher</h3>
+              <p class="skill-description">输入一个公司网址，产出一份有证据支撑的品牌简报，涵盖定位、受众、竞品、品牌语调、证明材料和内容缺口。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill research-brand</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill research-brand" aria-label="复制 Brand DNA researcher 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/Amberlanqinyun.github.io/tree/main/skills/research-brand" target="_blank" rel="noopener">查看源码 ↗</a><span>产出 brand_dna.md</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="reddit-opportunity-research" data-category="research" data-search="reddit opportunity research audience pain points subreddits search language prompts helpful no spam">
+            <div>
+              <div class="skill-meta"><span>受众研究</span><span>Flow AI</span></div>
+              <h3>Reddit opportunity researcher</h3>
+              <p class="skill-description">梳理公开的痛点讨论、目标社区和用户的真实说法，把它们转化为真正有帮助的参与方式和内容机会。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill reddit-opportunity-research</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill reddit-opportunity-research" aria-label="复制 Reddit opportunity researcher 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/Amberlanqinyun.github.io/tree/main/skills/reddit-opportunity-research" target="_blank" rel="noopener">查看源码 ↗</a><span>不自动发帖，也不抓取非公开数据</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="audit-content" data-category="content" data-search="content evidence audit claims facts links statistics sources brand dna hallucination pre publication">
+            <div>
+              <div class="skill-meta"><span>内容质量</span><span>Flow AI</span></div>
+              <h3>Content evidence auditor</h3>
+              <p class="skill-description">内容上线之前，逐一核查每个网址、统计数据、来源标注和公司声明，再返回一份按严重程度排序的报告。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill audit-content</code><button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/Amberlanqinyun.github.io --skill audit-content" aria-label="复制 Content evidence auditor 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/Amberlanqinyun.github.io/tree/main/skills/audit-content" target="_blank" rel="noopener">查看源码 ↗</a><span>产出一份声明核查报告</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="latticework" data-category="product" data-search="latticework product build brief ios swiftui swiftdata tdd design system app mental models">
+            <div>
+              <div class="skill-meta"><span>产品系统</span><span>Flow AI</span></div>
+              <h3>Latticework build brief</h3>
+              <p class="skill-description">承载一个 SwiftUI 应用的产品规格、设计系统、架构、内容结构和测试先行的工作流程。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add https://github.com/Amberlanqinyun/latticework --skill latticework</code><button class="copy-button" type="button" data-copy="npx skills add https://github.com/Amberlanqinyun/latticework --skill latticework" aria-label="复制 Latticework build brief 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/latticework/tree/main/skills/latticework" target="_blank" rel="noopener">查看源码 ↗</a><span>产品上下文长期保留</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-launch" data-category="launch" data-search="ai product launch product hunt gtm go to market multi channel debut">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>AI product launch</h3>
+              <p class="skill-description">Multi-channel go-to-market plan for launching an AI product, anchored on a Product Hunt debut.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-launch</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-launch" aria-label="复制 AI product launch 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-launch" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="product-hunt-playbook" data-category="launch" data-search="product hunt daily ranking launch framework upvotes hunter">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>Product Hunt playbook</h3>
+              <p class="skill-description">Framework for planning a Product Hunt launch and competing for the daily ranking.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/product-hunt-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/product-hunt-playbook" aria-label="复制 Product Hunt playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/product-hunt-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="product-hunt-launch-guide" data-category="launch" data-search="product hunt hour by hour sop first launch checklist">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>Product Hunt launch guide</h3>
+              <p class="skill-description">Hour-by-hour operating procedure for a first Product Hunt launch.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/product-hunt-launch-guide</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/product-hunt-launch-guide" aria-label="复制 Product Hunt launch guide 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/product-hunt-launch-guide" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="startup-launch" data-category="launch" data-search="startup launch checklist first 100 users day one execution">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>Startup launch checklist</h3>
+              <p class="skill-description">Execution checklist that runs from day one to the first hundred users.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/startup-launch</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/startup-launch" aria-label="复制 Startup launch checklist 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/startup-launch" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="startup-launch-playbook" data-category="launch" data-search="startup launch week multi channel early stage strategy">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>Startup launch playbook</h3>
+              <p class="skill-description">Multi-channel strategy for an early-stage company's first launch week.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/startup-launch-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/startup-launch-playbook" aria-label="复制 Startup launch playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/startup-launch-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ai-launch-playbook" data-category="launch" data-search="ai native launch gtm go to market strategy playbook">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>AI launch playbook</h3>
+              <p class="skill-description">Go-to-market strategy written for AI-native products.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/ai-launch-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/ai-launch-playbook" aria-label="复制 AI launch playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/ai-launch-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ai-product-launch" data-category="launch" data-search="ai product 30 day shipping guide launch technical">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>AI product shipping guide</h3>
+              <p class="skill-description">Thirty-day guide for shipping and launching a first AI product.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/ai-product-launch</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/ai-product-launch" aria-label="复制 AI product shipping guide 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/ai-product-launch" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="go-to-market-playbook" data-category="launch" data-search="go to market gtm positioning channel selection template">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Gingiris</span></div>
+              <h3>Go-to-market playbook</h3>
+              <p class="skill-description">Strategy template covering positioning and channel selection.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/go-to-market-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/go-to-market-playbook" aria-label="复制 Go-to-market playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/go-to-market-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-seo-geo-agent" data-category="search" data-search="seo geo agent operations sop daily audit ranking backlinks">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Gingiris</span></div>
+              <h3>SEO and GEO agent ops</h3>
+              <p class="skill-description">Daily operating procedure for an SEO and GEO agent covering audits, ranking tracking, and backlink management.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-seo-geo-agent</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-seo-geo-agent" aria-label="复制 SEO and GEO agent ops 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-seo-geo-agent" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-seo-geo" data-category="search" data-search="seo geo 2026 google ai search dual engine ranking strategy">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Gingiris</span></div>
+              <h3>SEO and GEO 2026</h3>
+              <p class="skill-description">Dual-engine strategy for ranking on Google and on AI search platforms at the same time.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-seo-geo</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-seo-geo" aria-label="复制 SEO and GEO 2026 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-seo-geo" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-b2b-growth" data-category="growth" data-search="b2b saas growth plg slg product market fit arr scale">
+            <div>
+              <div class="skill-meta"><span>B2B SaaS</span><span>Gingiris</span></div>
+              <h3>B2B SaaS growth</h3>
+              <p class="skill-description">Product-led and sales-led playbook for scaling from product-market fit toward $10M ARR.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-b2b-growth</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-b2b-growth" aria-label="复制 B2B SaaS growth 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-b2b-growth" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="saas-growth-playbook" data-category="growth" data-search="saas growth revenue mrr playbook path">
+            <div>
+              <div class="skill-meta"><span>B2B SaaS</span><span>Gingiris</span></div>
+              <h3>SaaS growth playbook</h3>
+              <p class="skill-description">Revenue playbook structured around the path to $50K MRR.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/saas-growth-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/saas-growth-playbook" aria-label="复制 SaaS growth playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/saas-growth-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="plg-playbook" data-category="growth" data-search="plg product led growth freemium self serve onboarding">
+            <div>
+              <div class="skill-meta"><span>B2B SaaS</span><span>Gingiris</span></div>
+              <h3>Product-led growth</h3>
+              <p class="skill-description">Product-led growth implementation covering freemium models and self-serve onboarding.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/plg-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/plg-playbook" aria-label="复制 Product-led growth 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/plg-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="b2b-marketing-playbook" data-category="growth" data-search="b2b marketing enterprise abm account based arr early stage">
+            <div>
+              <div class="skill-meta"><span>B2B SaaS</span><span>Gingiris</span></div>
+              <h3>B2B marketing playbook</h3>
+              <p class="skill-description">Enterprise go-to-market and account-based marketing for the $0 to $1M ARR stage.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/b2b-marketing-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/b2b-marketing-playbook" aria-label="复制 B2B marketing playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/b2b-marketing-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="saas-marketing-playbook" data-category="growth" data-search="saas marketing channels growth stage full stack system">
+            <div>
+              <div class="skill-meta"><span>B2B SaaS</span><span>Gingiris</span></div>
+              <h3>SaaS marketing playbook</h3>
+              <p class="skill-description">Channel system for SaaS marketing, organised by growth stage.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/saas-marketing-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/saas-marketing-playbook" aria-label="复制 SaaS marketing playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/saas-marketing-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-opensource" data-category="opensource" data-search="open source marketing github stars growth system community">
+            <div>
+              <div class="skill-meta"><span>开源</span><span>Gingiris</span></div>
+              <h3>Open source marketing</h3>
+              <p class="skill-description">GitHub stars growth system, from the first launch spike to long-term community growth.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-opensource</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-opensource" aria-label="复制 Open source marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-opensource" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="github-stars-playbook" data-category="opensource" data-search="github stars 14 day sprint show hn reddit trending">
+            <div>
+              <div class="skill-meta"><span>开源</span><span>Gingiris</span></div>
+              <h3>GitHub stars sprint</h3>
+              <p class="skill-description">Fourteen-day sprint covering Show HN, Reddit, and GitHub trending strategies.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/github-stars-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/github-stars-playbook" aria-label="复制 GitHub stars sprint 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/github-stars-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-github-star-growth" data-category="opensource" data-search="github star sustained growth monthly framework post launch">
+            <div>
+              <div class="skill-meta"><span>开源</span><span>Gingiris</span></div>
+              <h3>Sustained star growth</h3>
+              <p class="skill-description">Monthly framework for keeping GitHub stars growing after the launch spike.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-github-star-growth</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-github-star-growth" aria-label="复制 Sustained star growth 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-github-star-growth" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="open-source-marketing-playbook" data-category="opensource" data-search="open source launch readme optimisation community led sop">
+            <div>
+              <div class="skill-meta"><span>开源</span><span>Gingiris</span></div>
+              <h3>Open source launch</h3>
+              <p class="skill-description">README optimisation and community-led launch procedure for open source projects.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/open-source-marketing-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/open-source-marketing-playbook" aria-label="复制 Open source launch 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/open-source-marketing-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gr-readme" data-category="opensource" data-search="github readme writing conversion first screen framework">
+            <div>
+              <div class="skill-meta"><span>开源</span><span>Gingiris</span></div>
+              <h3>README writing system</h3>
+              <p class="skill-description">Framework for writing a GitHub README that converts a visitor within the first screen.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gr-readme</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gr-readme" aria-label="复制 README writing system 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gr-readme" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-aso-growth" data-category="growth" data-search="aso app store cold start mobile organic ugc growth">
+            <div>
+              <div class="skill-meta"><span>移动端 ASO</span><span>Gingiris</span></div>
+              <h3>ASO and app cold start</h3>
+              <p class="skill-description">Organic discovery and user-generated content growth for a mobile app starting from zero.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-aso-growth</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-aso-growth" aria-label="复制 ASO and app cold start 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-aso-growth" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="aso-playbook" data-category="growth" data-search="aso app store optimisation keywords screenshots ratings">
+            <div>
+              <div class="skill-meta"><span>移动端 ASO</span><span>Gingiris</span></div>
+              <h3>ASO playbook</h3>
+              <p class="skill-description">App store optimisation covering keywords, screenshots, and rating management.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/aso-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/aso-playbook" aria-label="复制 ASO playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/aso-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="hardware-saas-gtm" data-category="growth" data-search="hardware saas gtm crowdfunding kickstarter kol matrix">
+            <div>
+              <div class="skill-meta"><span>硬件 GTM</span><span>Gingiris</span></div>
+              <h3>Hardware and SaaS GTM</h3>
+              <p class="skill-description">Go-to-market strategy for hardware plus software products, from crowdfunding through a KOL matrix.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/hardware-saas-gtm</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/hardware-saas-gtm" aria-label="复制 Hardware and SaaS GTM 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/hardware-saas-gtm" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-kol-outreach" data-category="community" data-search="kol influencer outreach pipeline discovery roi tracking">
+            <div>
+              <div class="skill-meta"><span>KOL 外联</span><span>Gingiris</span></div>
+              <h3>KOL outreach pipeline</h3>
+              <p class="skill-description">Influencer marketing pipeline that runs from creator discovery through ROI tracking.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-kol-outreach</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-kol-outreach" aria-label="复制 KOL outreach pipeline 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-kol-outreach" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="kol-outreach" data-category="community" data-search="kol cold outreach dm scripts email pitch templates influencer">
+            <div>
+              <div class="skill-meta"><span>KOL 外联</span><span>Gingiris</span></div>
+              <h3>KOL cold templates</h3>
+              <p class="skill-description">DM scripts and email pitch sequences for reaching influencers cold.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/kol-outreach</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/kol-outreach" aria-label="复制 KOL cold templates 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/kol-outreach" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-ugc-matrix" data-category="community" data-search="ugc matrix user generated content creators ai scaling">
+            <div>
+              <div class="skill-meta"><span>UGC</span><span>Gingiris</span></div>
+              <h3>UGC matrix growth</h3>
+              <p class="skill-description">Content scaling system that combines human creators with AI production.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-ugc-matrix</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-ugc-matrix" aria-label="复制 UGC matrix growth 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-ugc-matrix" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="community-ambassador-playbook" data-category="community" data-search="community ambassador programme recruitment retention sop">
+            <div>
+              <div class="skill-meta"><span>社群</span><span>Gingiris</span></div>
+              <h3>Ambassador programme</h3>
+              <p class="skill-description">Community ambassador procedure covering recruitment through retention.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/community-ambassador-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/community-ambassador-playbook" aria-label="复制 Ambassador programme 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/community-ambassador-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="community-building-playbook" data-category="community" data-search="community building developer user from scratch growth">
+            <div>
+              <div class="skill-meta"><span>社群</span><span>Gingiris</span></div>
+              <h3>Community building</h3>
+              <p class="skill-description">Playbook for growing a developer and user community from scratch.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/community-building-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/community-building-playbook" aria-label="复制 Community building 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/community-building-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="devrel-playbook" data-category="community" data-search="devrel developer relations community documentation events">
+            <div>
+              <div class="skill-meta"><span>开发者关系</span><span>Gingiris</span></div>
+              <h3>DevRel playbook</h3>
+              <p class="skill-description">Developer relations playbook covering community, documentation, and events.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/devrel-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/devrel-playbook" aria-label="复制 DevRel playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/devrel-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="developer-marketing-playbook" data-category="community" data-search="developer marketing devrel documentation as marketing">
+            <div>
+              <div class="skill-meta"><span>开发者关系</span><span>Gingiris</span></div>
+              <h3>Developer marketing</h3>
+              <p class="skill-description">DevRel programmes and documentation treated as a marketing channel.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/developer-marketing-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/developer-marketing-playbook" aria-label="复制 Developer marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/developer-marketing-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-reddit-marketing" data-category="community" data-search="reddit marketing shadow ban prevention ai citation participation">
+            <div>
+              <div class="skill-meta"><span>Reddit</span><span>Gingiris</span></div>
+              <h3>Reddit marketing</h3>
+              <p class="skill-description">Reddit participation playbook covering shadow-ban prevention and AI citation optimisation.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-reddit-marketing</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-reddit-marketing" aria-label="复制 Reddit marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-reddit-marketing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-twitter-agent-ops" data-category="community" data-search="twitter x agent operations ghostwriting daily logging safety">
+            <div>
+              <div class="skill-meta"><span>Twitter/X 运营</span><span>Gingiris</span></div>
+              <h3>Twitter/X agent ops</h3>
+              <p class="skill-description">Operating procedure for an AI-assisted Twitter/X account with daily logging and safety checks.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-twitter-agent-ops</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-twitter-agent-ops" aria-label="复制 Twitter/X agent ops 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-twitter-agent-ops" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-user-interview" data-category="research" data-search="user interview pmf product market fit jtbd churn validation">
+            <div>
+              <div class="skill-meta"><span>用户研究</span><span>Gingiris</span></div>
+              <h3>User interviews and PMF</h3>
+              <p class="skill-description">User interview and product-market fit validation playbook built on the jobs-to-be-done framework.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-user-interview</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-user-interview" aria-label="复制 User interviews and PMF 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-user-interview" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="competitor-research-playbook" data-category="research" data-search="competitor research teardown wayback machine growth flywheel">
+            <div>
+              <div class="skill-meta"><span>竞品研究</span><span>Gingiris</span></div>
+              <h3>Competitor teardowns</h3>
+              <p class="skill-description">Competitor research method using Wayback Machine history and growth flywheel analysis.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/competitor-research-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/competitor-research-playbook" aria-label="复制 Competitor teardowns 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/competitor-research-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="startup-consultant" data-category="growth" data-search="startup consultant growth advisory launch gtm on demand">
+            <div>
+              <div class="skill-meta"><span>初创增长</span><span>Gingiris</span></div>
+              <h3>Startup consultant</h3>
+              <p class="skill-description">On-demand growth advisory skill for launch and go-to-market questions.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/startup-consultant</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/startup-consultant" aria-label="复制 Startup consultant 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/startup-consultant" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="startup-growth-playbook" data-category="growth" data-search="startup growth seed series a channel prioritisation">
+            <div>
+              <div class="skill-meta"><span>初创增长</span><span>Gingiris</span></div>
+              <h3>Startup growth playbook</h3>
+              <p class="skill-description">Channel prioritisation playbook for the seed to Series A stage.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/startup-growth-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/startup-growth-playbook" aria-label="复制 Startup growth playbook 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/startup-growth-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="startup-marketing-playbook" data-category="growth" data-search="startup marketing zero budget organic seo community">
+            <div>
+              <div class="skill-meta"><span>初创增长</span><span>Gingiris</span></div>
+              <h3>Startup marketing</h3>
+              <p class="skill-description">Zero-budget organic channel playbook covering SEO and community.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/startup-marketing-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/startup-marketing-playbook" aria-label="复制 Startup marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/startup-marketing-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="viral-marketing-playbook" data-category="growth" data-search="viral marketing referral k factor loops calculation">
+            <div>
+              <div class="skill-meta"><span>初创增长</span><span>Gingiris</span></div>
+              <h3>Viral marketing</h3>
+              <p class="skill-description">Referral system design and K-factor calculation playbook.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/viral-marketing-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/viral-marketing-playbook" aria-label="复制 Viral marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/viral-marketing-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="growth-hacking-playbook" data-category="growth" data-search="growth hacking 50 tactics effort impact ranked">
+            <div>
+              <div class="skill-meta"><span>初创增长</span><span>Gingiris</span></div>
+              <h3>Growth hacking tactics</h3>
+              <p class="skill-description">Fifty growth tactics ranked by effort against impact.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/growth-hacking-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/growth-hacking-playbook" aria-label="复制 Growth hacking tactics 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/growth-hacking-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="gingiris-growth-finder" data-category="agents" data-search="growth finder router match product type playbook meta">
+            <div>
+              <div class="skill-meta"><span>智能体路由</span><span>Gingiris</span></div>
+              <h3>Growth finder router</h3>
+              <p class="skill-description">Router skill that matches a product type to the right Gingiris playbook.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/gingiris-growth-finder</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/gingiris-growth-finder" aria-label="复制 Growth finder router 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/gingiris-growth-finder" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="agent-workflow-playbook" data-category="agents" data-search="agent workflow multi agent orchestration plugin marketplace">
+            <div>
+              <div class="skill-meta"><span>智能体运营</span><span>Gingiris</span></div>
+              <h3>Agent workflows</h3>
+              <p class="skill-description">Multi-agent orchestration patterns and plugin marketplace design.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add Gingiris-1031/agent-workflow-playbook</code><button class="copy-button" type="button" data-copy="npx skills add Gingiris-1031/agent-workflow-playbook" aria-label="复制 Agent workflows 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/Gingiris-1031/agent-workflow-playbook" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Iris Wei · MIT</span></div>
+            </div>
+          </article>
+
+
+          <article class="skill-card reveal" id="ms-seo-audit" data-category="search" data-search="seo audit technical on page crawl rankings fixes corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Corey Haines</span></div>
+              <h3>SEO audit</h3>
+              <p class="skill-description">Works through a site's technical and on-page health, then ranks the fixes by what will move rankings first.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill seo-audit</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill seo-audit" aria-label="复制 SEO audit 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-ai-seo" data-category="search" data-search="ai seo llm citation chatgpt perplexity answers generative corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Corey Haines</span></div>
+              <h3>AI search visibility</h3>
+              <p class="skill-description">Structures content so large language models quote it when answering questions about your category.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill ai-seo</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill ai-seo" aria-label="复制 AI search visibility 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/ai-seo" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-site-architecture" data-category="search" data-search="site architecture url structure internal linking hierarchy crawl corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Corey Haines</span></div>
+              <h3>Site architecture</h3>
+              <p class="skill-description">Plans URL structure, internal linking, and hierarchy so both crawlers and buyers can find their way.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill site-architecture</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill site-architecture" aria-label="复制 Site architecture 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-programmatic-seo" data-category="search" data-search="programmatic seo templates scale pages thin content corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Corey Haines</span></div>
+              <h3>Programmatic SEO</h3>
+              <p class="skill-description">Builds template-driven page sets at scale without tipping into the thin content that gets penalised.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill programmatic-seo</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill programmatic-seo" aria-label="复制 Programmatic SEO 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-schema" data-category="search" data-search="schema structured data json ld markup validate rich results corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>AI 搜索</span><span>Corey Haines</span></div>
+              <h3>Schema markup</h3>
+              <p class="skill-description">Adds and validates structured data so search and AI engines read the page correctly.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill schema</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill schema" aria-label="复制 Schema markup 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/schema" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-aso" data-category="search" data-search="aso app store play listing keywords screenshots ratings corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>移动端 ASO</span><span>Corey Haines</span></div>
+              <h3>App store optimisation</h3>
+              <p class="skill-description">Audits an App Store or Play listing across keywords, screenshots, and ratings.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill aso</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill aso" aria-label="复制 App store optimisation 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/aso" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-copywriting" data-category="content" data-search="copywriting landing page headlines body copy voice customer corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>文案</span><span>Corey Haines</span></div>
+              <h3>Copywriting</h3>
+              <p class="skill-description">Writes landing pages, headlines, and body copy grounded in what customers actually say.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill copywriting</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill copywriting" aria-label="复制 Copywriting 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-copy-editing" data-category="content" data-search="copy editing tighten clarity rhythm voice polish corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>文案</span><span>Corey Haines</span></div>
+              <h3>Copy editing</h3>
+              <p class="skill-description">Tightens existing copy for clarity and rhythm without flattening the voice it came in with.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill copy-editing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill copy-editing" aria-label="复制 Copy editing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/copy-editing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-content-strategy" data-category="content" data-search="content strategy editorial plan topics buyer questions cadence corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>内容</span><span>Corey Haines</span></div>
+              <h3>Content strategy</h3>
+              <p class="skill-description">Decides what to publish and in what order, tied to the buyer's questions rather than a keyword list.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill content-strategy</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill content-strategy" aria-label="复制 Content strategy 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-emails" data-category="content" data-search="email marketing lifecycle nurture broadcast newsletter sequence corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>邮件</span><span>Corey Haines</span></div>
+              <h3>Email marketing</h3>
+              <p class="skill-description">Builds lifecycle, nurture, and broadcast emails with the sequencing worked out.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill emails</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill emails" aria-label="复制 Email marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/emails" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-cold-email" data-category="content" data-search="cold email b2b outreach follow up sequence reply deliverability corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>邮件</span><span>Corey Haines</span></div>
+              <h3>Cold email</h3>
+              <p class="skill-description">Writes B2B cold outreach and follow-ups built to earn a reply rather than a block.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill cold-email</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill cold-email" aria-label="复制 Cold email 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-sms" data-category="content" data-search="sms text message campaigns flows compliance opt in corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>核心信息</span><span>Corey Haines</span></div>
+              <h3>SMS marketing</h3>
+              <p class="skill-description">Plans SMS campaigns and flows that stay useful and stay compliant.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill sms</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill sms" aria-label="复制 SMS marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/sms" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-social" data-category="content" data-search="social media posts platform native repurpose linkedin x corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Corey Haines</span></div>
+              <h3>Social content</h3>
+              <p class="skill-description">Adapts one idea into posts that read as native on each platform.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill social</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill social" aria-label="复制 Social content 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/social" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-video" data-category="content" data-search="video script short form hooks youtube walkthrough demo corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>视频</span><span>Corey Haines</span></div>
+              <h3>Video marketing</h3>
+              <p class="skill-description">Plans and scripts video, from short-form hooks through to product walkthroughs.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill video</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill video" aria-label="复制 Video marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/video" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-image" data-category="content" data-search="image visual assets creative generation campaign graphics corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>创意</span><span>Corey Haines</span></div>
+              <h3>Marketing imagery</h3>
+              <p class="skill-description">Briefs and generates the visual assets a campaign needs.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill image</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill image" aria-label="复制 Marketing imagery 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/image" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-lead-magnets" data-category="content" data-search="lead magnet gated asset ebook checklist opt in email capture corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>内容</span><span>Corey Haines</span></div>
+              <h3>Lead magnets</h3>
+              <p class="skill-description">Designs the free asset worth an email address, and the page that hands it over.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill lead-magnets</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill lead-magnets" aria-label="复制 Lead magnets 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/lead-magnets" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-cro" data-category="conversion" data-search="cro conversion rate optimisation landing page friction drop off corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>转化</span><span>Corey Haines</span></div>
+              <h3>Conversion optimisation</h3>
+              <p class="skill-description">Finds where a page loses people and rewrites the moment they drop.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill cro</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill cro" aria-label="复制 Conversion optimisation 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/cro" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-signup" data-category="conversion" data-search="signup flow registration friction form onboarding start corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>转化</span><span>Corey Haines</span></div>
+              <h3>Signup flow</h3>
+              <p class="skill-description">Cuts the friction between wanting the product and being inside it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill signup</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill signup" aria-label="复制 Signup flow 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/signup" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-onboarding" data-category="conversion" data-search="onboarding activation first session aha moment retention corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>转化</span><span>Corey Haines</span></div>
+              <h3>User onboarding</h3>
+              <p class="skill-description">Designs the first session so people reach the point where the product proves itself.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill onboarding</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill onboarding" aria-label="复制 User onboarding 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/onboarding" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-popups" data-category="conversion" data-search="popup overlay modal exit intent timing conversion corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>转化</span><span>Corey Haines</span></div>
+              <h3>Popups and overlays</h3>
+              <p class="skill-description">Times and writes interruptions so they convert instead of annoy.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill popups</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill popups" aria-label="复制 Popups and overlays 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-paywalls" data-category="conversion" data-search="paywall pricing gate upgrade monetisation subscription corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>转化</span><span>Corey Haines</span></div>
+              <h3>Paywalls</h3>
+              <p class="skill-description">Structures the moment you ask for money, and what sits either side of it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill paywalls</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill paywalls" aria-label="复制 Paywalls 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/paywalls" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-ab-testing" data-category="conversion" data-search="ab testing experiment split test statistical significance program corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>实验</span><span>Corey Haines</span></div>
+              <h3>A/B testing</h3>
+              <p class="skill-description">Designs experiments with enough power to tell you something true.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill ab-testing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill ab-testing" aria-label="复制 A/B testing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/ab-testing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-ads" data-category="paid" data-search="ads paid advertising google meta linkedin campaigns ppc corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>付费媒体</span><span>Corey Haines</span></div>
+              <h3>Paid advertising</h3>
+              <p class="skill-description">Plans and runs campaigns across Google, Meta, LinkedIn, and the rest.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill ads</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill ads" aria-label="复制 Paid advertising 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/ads" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-ad-creative" data-category="paid" data-search="ad creative headlines primary text concepts iterate variations corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>付费媒体</span><span>Corey Haines</span></div>
+              <h3>Ad creative</h3>
+              <p class="skill-description">Generates and iterates ad headlines, copy, and concepts at volume.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill ad-creative</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill ad-creative" aria-label="复制 Ad creative 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-analytics" data-category="paid" data-search="analytics tracking ga4 measurement events audit setup corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>效果衡量</span><span>Corey Haines</span></div>
+              <h3>Analytics setup</h3>
+              <p class="skill-description">Sets up and audits tracking so the numbers you report can be trusted.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill analytics</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill analytics" aria-label="复制 Analytics setup 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/analytics" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-attribution" data-category="paid" data-search="attribution multi touch model revenue conversions credit corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>效果衡量</span><span>Corey Haines</span></div>
+              <h3>Attribution</h3>
+              <p class="skill-description">Works out which marketing actually produced the revenue.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill attribution</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill attribution" aria-label="复制 Attribution 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/attribution" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-referrals" data-category="growth" data-search="referral programme word of mouth incentive viral loop advocacy corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>增长</span><span>Corey Haines</span></div>
+              <h3>Referral programmes</h3>
+              <p class="skill-description">Builds the mechanics that turn happy customers into new ones.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill referrals</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill referrals" aria-label="复制 Referral programmes 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/referrals" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-free-tools" data-category="growth" data-search="free tool calculator utility lead generation qualify traffic corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>增长</span><span>Corey Haines</span></div>
+              <h3>Free tools</h3>
+              <p class="skill-description">Designs the free tool that earns attention and qualifies the people using it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill free-tools</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill free-tools" aria-label="复制 Free tools 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/free-tools" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-churn-prevention" data-category="growth" data-search="churn retention cancellation save offer dunning failed payment corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>留存</span><span>Corey Haines</span></div>
+              <h3>Churn prevention</h3>
+              <p class="skill-description">Builds cancellation flows, save offers, and failed-payment recovery.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill churn-prevention</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill churn-prevention" aria-label="复制 Churn prevention 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-marketing-loops" data-category="growth" data-search="marketing loops compounding growth flywheel viral network effect corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>增长</span><span>Corey Haines</span></div>
+              <h3>Marketing loops</h3>
+              <p class="skill-description">Designs the compounding loop that replaces one-off campaign spend.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill marketing-loops</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill marketing-loops" aria-label="复制 Marketing loops 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-loops" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-co-marketing" data-category="growth" data-search="co marketing partnership joint campaign audience swap webinar corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>合作伙伴</span><span>Corey Haines</span></div>
+              <h3>Co-marketing</h3>
+              <p class="skill-description">Finds partners with your audience and plans the joint campaign.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill co-marketing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill co-marketing" aria-label="复制 Co-marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/co-marketing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-influencer-marketing" data-category="growth" data-search="influencer creator partnership sponsorship ugc measurement corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>合作伙伴</span><span>Corey Haines</span></div>
+              <h3>Influencer marketing</h3>
+              <p class="skill-description">Runs creator partnerships from finding people through to measuring them.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill influencer-marketing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill influencer-marketing" aria-label="复制 Influencer marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/influencer-marketing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-pricing" data-category="growth" data-search="pricing strategy value based packaging tiers willingness to pay corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>定价</span><span>Corey Haines</span></div>
+              <h3>Pricing strategy</h3>
+              <p class="skill-description">Sets and tests price using what the outcome is worth to the buyer.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill pricing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill pricing" aria-label="复制 Pricing strategy 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/pricing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-offers" data-category="growth" data-search="offer design bundle guarantee urgency positioning package corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>定价</span><span>Corey Haines</span></div>
+              <h3>Offer design</h3>
+              <p class="skill-description">Shapes what someone actually gets for the money, and why now.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill offers</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill offers" aria-label="复制 Offer design 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-marketing-ideas" data-category="growth" data-search="marketing ideas brainstorm campaign concepts tactics stage corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>策略</span><span>Corey Haines</span></div>
+              <h3>Marketing ideas</h3>
+              <p class="skill-description">Generates campaign ideas fitted to your stage and constraints.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill marketing-ideas</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill marketing-ideas" aria-label="复制 Marketing ideas 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-ideas" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-marketing-plan" data-category="growth" data-search="marketing plan strategy roadmap goals budget sequencing corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>策略</span><span>Corey Haines</span></div>
+              <h3>Marketing plan</h3>
+              <p class="skill-description">Turns goals into a sequenced plan with owners and numbers attached.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill marketing-plan</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill marketing-plan" aria-label="复制 Marketing plan 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-plan" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-community-marketing" data-category="community" data-search="community marketing forum discord slack members engagement corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>社群</span><span>Corey Haines</span></div>
+              <h3>Community marketing</h3>
+              <p class="skill-description">Builds a community that grows the product rather than sitting beside it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill community-marketing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill community-marketing" aria-label="复制 Community marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/community-marketing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-events" data-category="community" data-search="events conference webinar meetup booth follow up sponsorship corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>活动</span><span>Corey Haines</span></div>
+              <h3>Event marketing</h3>
+              <p class="skill-description">Plans events and the follow-up that decides whether they were worth it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill events</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill events" aria-label="复制 Event marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/events" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-public-relations" data-category="community" data-search="public relations pr press media pitch journalist coverage story corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>公关</span><span>Corey Haines</span></div>
+              <h3>Public relations</h3>
+              <p class="skill-description">Works out the story worth pitching and who would actually run it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill public-relations</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill public-relations" aria-label="复制 Public relations 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/public-relations" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-customer-research" data-category="research" data-search="customer research interviews jtbd surveys reviews voice of customer corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>研究</span><span>Corey Haines</span></div>
+              <h3>Customer research</h3>
+              <p class="skill-description">Runs interviews and mines reviews to surface the language buyers use.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill customer-research</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill customer-research" aria-label="复制 Customer research 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/customer-research" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-competitors" data-category="research" data-search="competitors competitive analysis landscape positioning market corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>研究</span><span>Corey Haines</span></div>
+              <h3>Competitive analysis</h3>
+              <p class="skill-description">Maps the field so positioning is a decision rather than a guess.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill competitors</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill competitors" aria-label="复制 Competitive analysis 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitors" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-competitor-profiling" data-category="research" data-search="competitor profiling teardown url analysis structured profile corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>研究</span><span>Corey Haines</span></div>
+              <h3>Competitor profiling</h3>
+              <p class="skill-description">Takes competitor URLs and returns a structured teardown of each.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill competitor-profiling</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill competitor-profiling" aria-label="复制 Competitor profiling 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-profiling" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-marketing-psychology" data-category="research" data-search="marketing psychology behavioural cognitive bias persuasion decision corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>策略</span><span>Corey Haines</span></div>
+              <h3>Marketing psychology</h3>
+              <p class="skill-description">Applies decision-making research to copy and offers, with the sources named.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill marketing-psychology</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill marketing-psychology" aria-label="复制 Marketing psychology 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-psychology" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-launch" data-category="launch" data-search="launch product hunt go to market announcement sequencing channels corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>发布</span><span>Corey Haines</span></div>
+              <h3>Product launch</h3>
+              <p class="skill-description">Sequences a launch across the channels that matter for it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill launch</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill launch" aria-label="复制 Product launch 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/launch" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-product-marketing" data-category="launch" data-search="product marketing positioning icp audience messaging foundation corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>定位</span><span>Corey Haines</span></div>
+              <h3>Product marketing</h3>
+              <p class="skill-description">Establishes the product, audience, and positioning every other skill reads first.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill product-marketing</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill product-marketing" aria-label="复制 Product marketing 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/product-marketing" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-directory-submissions" data-category="launch" data-search="directory submissions listings backlinks aggregators citations corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>分发</span><span>Corey Haines</span></div>
+              <h3>Directory submissions</h3>
+              <p class="skill-description">Gets the product listed where buyers and AI engines go looking.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill directory-submissions</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill directory-submissions" aria-label="复制 Directory submissions 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/directory-submissions" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-revops" data-category="launch" data-search="revops revenue operations crm pipeline handoff lifecycle data corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>销售</span><span>Corey Haines</span></div>
+              <h3>Revenue operations</h3>
+              <p class="skill-description">Connects the pipeline, the data, and the handoffs between marketing and sales.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill revops</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill revops" aria-label="复制 Revenue operations 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/revops" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-sales-enablement" data-category="launch" data-search="sales enablement battle cards one pager objection deck collateral corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>销售</span><span>Corey Haines</span></div>
+              <h3>Sales enablement</h3>
+              <p class="skill-description">Builds the material a seller needs in a live conversation.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill sales-enablement</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill sales-enablement" aria-label="复制 Sales enablement 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/sales-enablement" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-prospecting" data-category="launch" data-search="prospecting list building icp qualification leads targeting research corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>销售</span><span>Corey Haines</span></div>
+              <h3>Prospecting</h3>
+              <p class="skill-description">Builds and qualifies the target list before anyone reaches out.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill prospecting</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill prospecting" aria-label="复制 Prospecting 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/prospecting" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="ms-marketing-council" data-category="agents" data-search="marketing council panel advisors perspectives review decision critique corey haines marketing skills">
+            <div>
+              <div class="skill-meta"><span>智能体运营</span><span>Corey Haines</span></div>
+              <h3>Marketing council</h3>
+              <p class="skill-description">Runs a panel of marketing perspectives over one decision before you commit to it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add coreyhaines31/marketingskills --skill marketing-council</code><button class="copy-button" type="button" data-copy="npx skills add coreyhaines31/marketingskills --skill marketing-council" aria-label="复制 Marketing council 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-council" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Corey Haines · MIT</span></div>
+            </div>
+          </article>
+
+
+          <article class="skill-card reveal" id="humanizer" data-category="content" data-search="humanizer ai writing patterns rewrite prose editing tells em dash filler passive voice chatbot artifacts wikipedia signs of ai writing siqi chen">
+            <div>
+              <div class="skill-meta"><span>文字编辑</span><span>Siqi Chen</span></div>
+              <h3>Humanizer</h3>
+              <p class="skill-description">Rewrites AI-sounding prose so it reads like a person wrote it, without changing what it says. Works from Wikipedia's catalogue of AI writing tells: inflated claims, stock words, filler, and repetitive structure.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add blader/humanizer</code><button class="copy-button" type="button" data-copy="npx skills add blader/humanizer" aria-label="复制 Humanizer 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/blader/humanizer" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Siqi Chen · MIT</span></div>
+            </div>
+          </article>
+
+
+          <article class="skill-card reveal" id="sm-voice-builder" data-category="content" data-search="voice builder profile about me tone writing samples interview foundation charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>语调</span><span>Charlie Hills</span></div>
+              <h3>Voice builder</h3>
+              <p class="skill-description">Interviews you, reads a few samples of your writing, and produces the voice profile every other skill in this set reads first.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill voice-builder</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill voice-builder" aria-label="复制 Voice builder 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/voice-builder" target="_blank" rel="noopener">查看源码 ↗</a><span>基础技能</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-newsletter-voice" data-category="content" data-search="newsletter voice long form email writing rules substack charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>语调</span><span>Charlie Hills</span></div>
+              <h3>Newsletter voice</h3>
+              <p class="skill-description">Turns your voice profile into newsletter-specific writing rules, so the long-form piece sounds like the short ones.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill newsletter-voice</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill newsletter-voice" aria-label="复制 Newsletter voice 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/newsletter-voice" target="_blank" rel="noopener">查看源码 ↗</a><span>在 Voice builder 之后运行</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-post-writer" data-category="social" data-search="linkedin post writer draft voice profile social content charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>LinkedIn post writer</h3>
+              <p class="skill-description">Drafts posts against your voice profile rather than a generic house style.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill post-writer</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill post-writer" aria-label="复制 LinkedIn post writer 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/post-writer" target="_blank" rel="noopener">查看源码 ↗</a><span>需要语调档案</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-post-formatter" data-category="social" data-search="post format pas aida bab star slay mobile formatting structure charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Post formatter</h3>
+              <p class="skill-description">Shapes a topic into a finished post using PAS, AIDA, BAB, STAR, or SLAY, formatted for reading on a phone.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill post-formatter</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill post-formatter" aria-label="复制 Post formatter 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/post-formatter" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Charlie Hills · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-hook-generator" data-category="social" data-search="hook generator opening line variations contrast scroll stopper charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Hook generator</h3>
+              <p class="skill-description">Produces six opening-line variations for a topic, built to the two-line contrast pattern.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill hook-generator</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill hook-generator" aria-label="复制 Hook generator 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/hook-generator" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Charlie Hills · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-content-matrix" data-category="social" data-search="content matrix pillars formats ideas table planning justin welsh charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Content matrix</h3>
+              <p class="skill-description">Crosses your content pillars with eight formats to produce a table of post ideas in one pass.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill content-matrix</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill content-matrix" aria-label="复制 Content matrix 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/content-matrix" target="_blank" rel="noopener">查看源码 ↗</a><span>Justin Welsh 内容矩阵</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-post-scorer" data-category="social" data-search="post scorer scoring performance history benchmark apify data charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Post scorer</h3>
+              <p class="skill-description">Scores a draft against how your own past posts actually performed rather than generic best practice.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill post-scorer</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill post-scorer" aria-label="复制 Post scorer 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/post-scorer" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Apify 或缓存数据</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-analytics-dashboard" data-category="social" data-search="analytics dashboard linkedin export react recommendations reporting charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Analytics dashboard</h3>
+              <p class="skill-description">Turns a LinkedIn analytics export into an interactive dashboard and a written audit with recommendations.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill analytics-dashboard</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill analytics-dashboard" aria-label="复制 Analytics dashboard 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/analytics-dashboard" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 LinkedIn 导出数据</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-profile-optimizer" data-category="social" data-search="profile optimiser linkedin headline about section conversion bio charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Profile optimiser</h3>
+              <p class="skill-description">Rebuilds a LinkedIn profile for conversion: headline options, about section, experience, and featured strategy.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill profile-optimizer</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill profile-optimizer" aria-label="复制 Profile optimiser 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/profile-optimizer" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Charlie Hills · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-pinned-comment" data-category="social" data-search="pinned comment first comment linkedin link expansion image prompt charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Pinned comment</h3>
+              <p class="skill-description">Writes the first comment that carries the link or the expansion, plus a matching image prompt.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill pinned-comment</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill pinned-comment" aria-label="复制 Pinned comment 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/pinned-comment" target="_blank" rel="noopener">查看源码 ↗</a><span>默认使用作者本人的语调</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-quote-post" data-category="social" data-search="quote post motivational caption image prompt gemini reference charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>社交媒体</span><span>Charlie Hills</span></div>
+              <h3>Quote post</h3>
+              <p class="skill-description">Generates a quote and caption pair, then an image prompt that matches a reference you supply.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill quote-post</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill quote-post" aria-label="复制 Quote post 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/quote-post" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Gemini</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-reels-scripting" data-category="social" data-search="reels script instagram short form video repurpose newsletter apify charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>视频</span><span>Charlie Hills</span></div>
+              <h3>Reels scripting</h3>
+              <p class="skill-description">Takes a reference Reel and rewrites it as a script in your voice from your own source material.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill reels-scripting</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill reels-scripting" aria-label="复制 Reels scripting 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/reels-scripting" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Apify</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-graphic-designer" data-category="social" data-search="graphic designer post image html css infographic decision charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>设计</span><span>Charlie Hills</span></div>
+              <h3>Post graphics</h3>
+              <p class="skill-description">Decides whether a post needs a coded graphic or a generated one, then produces it.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill graphic-designer</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill graphic-designer" aria-label="复制 Post graphics 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/graphic-designer" target="_blank" rel="noopener">查看源码 ↗</a><span>作者 Charlie Hills · MIT</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-gemini-carousel" data-category="social" data-search="carousel slides linkedin gemini image prompts design brief charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>设计</span><span>Charlie Hills</span></div>
+              <h3>Carousel builder</h3>
+              <p class="skill-description">Turns source content into a slide-by-slide carousel brief, then per-slide image prompts.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill gemini-carousel</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill gemini-carousel" aria-label="复制 Carousel builder 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/gemini-carousel" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Gemini</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-gemini-infographic" data-category="social" data-search="infographic whiteboard hand drawn gemini prompt visual explainer charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>设计</span><span>Charlie Hills</span></div>
+              <h3>Infographic prompt</h3>
+              <p class="skill-description">Produces the hand-drawn whiteboard infographic prompt from a piece of source content.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill gemini-infographic</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill gemini-infographic" aria-label="复制 Infographic prompt 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/gemini-infographic" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Gemini</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-youtube-thumbnail" data-category="social" data-search="youtube thumbnail ctr image prompt brand colours video charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>设计</span><span>Charlie Hills</span></div>
+              <h3>YouTube thumbnail</h3>
+              <p class="skill-description">Builds a thumbnail prompt from a video title using a reference photo and your brand colours.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill youtube-thumbnail</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill youtube-thumbnail" aria-label="复制 YouTube thumbnail 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/youtube-thumbnail" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Gemini</span></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" id="sm-niche-research" data-category="research" data-search="niche research trending stories reddit x news weekly angles browser charlie hills social media skills">
+            <div>
+              <div class="skill-meta"><span>研究</span><span>Charlie Hills</span></div>
+              <h3>Niche research</h3>
+              <p class="skill-description">Sweeps Reddit, X, and news from the last seven days for the stories worth having an opinion about.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="command"><code>npx skills add charlie947/social-media-skills --skill niche-research</code><button class="copy-button" type="button" data-copy="npx skills add charlie947/social-media-skills --skill niche-research" aria-label="复制 Niche research 安装命令">复制</button></div>
+              <div class="skill-links"><a class="source-link" href="https://github.com/charlie947/social-media-skills/tree/main/skills/niche-research" target="_blank" rel="noopener">查看源码 ↗</a><span>需要 Claude for Chrome</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <b>找不到匹配的技能。</b>
+          <span>试试搜索一项具体工作，比如发布、schema、社群、报告或增长。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles centered" aria-labelledby="principles-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="principles-title">运行之前，先看清每一个技能。</h2>
+        </div>
+        <div class="grid grid-3 reveal" style="text-align:left">
+          <div class="step">
+            <span class="small">01</span>
+            <h3>源码先于口号</h3>
+            <p>每一条都链接到背后对应的 SKILL.md 文件或代码仓库，说法有据可查。</p>
+          </div>
+          <div class="step">
+            <span class="small">02</span>
+            <h3>任务越专，效果越好</h3>
+            <p>专项技能的触发条件、检查项和完成标准都更清晰。</p>
+          </div>
+          <div class="step">
+            <span class="small">03</span>
+            <h3>生产环境信息一目了然</h3>
+            <p>每一条都在复制按钮旁写明依赖项和可移植性限制，打开页面就能看到。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section centered" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="faq-title">安装前须知。</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>什么是 AI 智能体技能？</summary>
+            <p>AI 智能体技能是一个可复用的 SKILL.md 文件，为兼容的智能体提供专门的指令、工作流程、参考资料和质量检查，用来完成一项明确的工作。</p>
+          </details>
+          <details>
+            <summary>这些技能由谁开发？</summary>
+            <p>其中 16 个技能由 Flow AI 的 Amber Lan 开发并维护。41 个是 Gingiris 的 Iris Wei 编写的增长实战手册，50 个是 Corey Haines 的营销技能，17 个是 Charlie Hills 的社交媒体技能，另有 1 个是 Siqi Chen 的 Humanizer 文字编辑技能。所有精选技能均采用 MIT 许可，从作者自己的代码仓库安装。每一条都注明了作者。</p>
+          </details>
+          <details>
+            <summary>安装之前，可以先查看技能内容吗？</summary>
+            <p>可以。每一条都直接链接到它在 GitHub 上的公开源码。把它添加到智能体之前，先读一读其中的指令、依赖项和脚本。</p>
+          </details>
+          <details>
+            <summary>这些技能适用于所有 AI 智能体吗？</summary>
+            <p>它们采用 SKILL.md 格式。具体的安装方式和工具支持，取决于你使用的智能体和命令行工具（CLI）。GEO 套件目前提供的是针对 Claude Code 的说明文档。</p>
+          </details>
+          <details>
+            <summary>列出的技能，可移植性都一样吗？</summary>
+            <p>可移植性各有不同。Flow AI 的研究类和审计类技能可以移植，且自成一体。GEO 套件和 Latticework 简报设计为安装后使用。内容引擎依赖其文档中说明的品牌文件和本地工作流程。Gingiris 实战手册是自成一体的 SKILL.md 文件，从各自的代码仓库安装。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="related" class="centered" aria-labelledby="related-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="related-title">让这些技能真正用起来。</h2>
+        </div>
+        <div class="narrow reveal" style="text-align:left; margin-top: clamp(3rem, 6vw, 4.5rem)">
+          <ul class="systems">
+            <li><b>指南</b><span><a class="text-link" href="/zh/blog/what-is-an-ai-marketing-agent">AI 营销智能体是什么</a>：面向小企业的定义，以及它和自动化工具、ChatGPT 的区别。</span></li>
+            <li><b>指南</b><span><a class="text-link" href="/zh/blog/ai-marketing-transformation-small-business">90 天转型路线图</a>，按系统逐一展开。</span></li>
+            <li><b>智能体</b><span><a class="text-link" href="/zh/sprints/#system">智能体团队</a>，以及应该先安装哪一个。</span></li>
+            <li><b>案例</b><span><a class="text-link" href="/zh/work/geo-seo-toolkit">AI 搜索工具包案例</a>，已在 GitHub 开源。</span></li>
+            <li><b>案例</b><span><a class="text-link" href="/zh/work/content-engine">内容引擎案例</a>：把语调关卡写成规则，并已投入实际使用。</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact centered" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <h2 id="contact-title">一起把你的业务经验变成技能。</h2>
+          <p class="lead">带上你的工作流程，以及它必须达到的质量标准，我会和你一起把它搭建成一个可以检查的智能体系统。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/zh/contact">与我合作</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.skill-card'));
+      var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+      var search = document.getElementById('skill-search');
+      var count = document.getElementById('result-count');
+      var empty = document.getElementById('empty-state');
+      var activeFilter = 'all';
+
+      cards.forEach(function (card) {
+        var links = card.querySelector('.skill-links');
+        var title = card.querySelector('h3').textContent;
+        var share = document.createElement('button');
+        share.type = 'button';
+        share.className = 'share-link';
+        share.setAttribute('data-share-skill', '');
+        share.setAttribute('aria-label', '分享 ' + title);
+        share.textContent = '分享';
+        links.insertBefore(share, links.lastElementChild);
+      });
+
+      function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(value);
+        }
+
+        return new Promise(function (resolve, reject) {
+          var field = document.createElement('textarea');
+          field.value = value;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+          var copied = document.execCommand('copy');
+          field.remove();
+          if (copied) resolve();
+          else reject(new Error('Copy unavailable'));
+        });
+      }
+
+      function feedback(button, message) {
+        var original = button.textContent;
+        button.textContent = message;
+        window.setTimeout(function () { button.textContent = original; }, 1800);
+      }
+
+      function shareItem(button, payload) {
+        if (typeof navigator.share === 'function') {
+          navigator.share(payload).then(function () {
+            feedback(button, '已分享');
+          }).catch(function (error) {
+            if (error && error.name === 'AbortError') return;
+            copyText(payload.url).then(function () {
+              feedback(button, '链接已复制');
+            }).catch(function () {
+              feedback(button, '复制失败');
+            });
+          });
+          return;
+        }
+
+        copyText(payload.url).then(function () {
+          feedback(button, '链接已复制');
+        }).catch(function () {
+          feedback(button, '复制失败');
+        });
+      }
+
+      function updateLibrary() {
+        var query = search.value.trim().toLowerCase();
+        var visible = 0;
+
+        cards.forEach(function (card) {
+          var matchesCategory = activeFilter === 'all' || card.dataset.category === activeFilter;
+          var matchesQuery = !query || card.dataset.search.indexOf(query) !== -1 || card.textContent.toLowerCase().indexOf(query) !== -1;
+          var show = matchesCategory && matchesQuery;
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        count.textContent = '显示 ' + visible + (visible === 1 ? ' 个技能' : ' 个技能');
+        empty.hidden = visible !== 0;
+      }
+
+      filters.forEach(function (button) {
+        button.addEventListener('click', function () {
+          activeFilter = button.dataset.filter;
+          filters.forEach(function (item) {
+            item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+          });
+          updateLibrary();
+        });
+      });
+
+      search.addEventListener('input', updateLibrary);
+      document.addEventListener('keydown', function (event) {
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+          event.preventDefault();
+          search.focus();
+        }
+      });
+
+      document.addEventListener('click', function (event) {
+        var shareButton = event.target.closest('[data-share-library], [data-share-skill]');
+        if (shareButton) {
+          var url = new URL(window.location.href);
+          var title = 'Flow AI 技能库';
+          var text = '125 个可查看源码的 AI 智能体技能，覆盖 AI 搜索、社交媒体、转化、内容、付费媒体和增长。';
+          url.search = '';
+          url.hash = '';
+
+          if (shareButton.hasAttribute('data-share-skill')) {
+            var card = shareButton.closest('.skill-card');
+            var skillTitle = card.querySelector('h3').textContent;
+            title = skillTitle + ' | Flow AI 技能库';
+            text = skillTitle + '：' + card.querySelector('.skill-description').textContent;
+            url.hash = card.id;
+          }
+
+          shareItem(shareButton, { title: title, text: text, url: url.href });
+          return;
+        }
+
+        var button = event.target.closest('[data-copy]');
+        if (!button) return;
+        var original = button.textContent;
+        copyText(button.dataset.copy).then(function () {
+          button.textContent = '已复制';
+          window.setTimeout(function () { button.textContent = original; }, 1600);
+        }).catch(function () {
+          button.textContent = '请手动复制';
+          var range = document.createRange();
+          range.selectNodeContents(button.previousElementSibling);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+        });
+      });
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+        items.forEach(function (item) {
+          if (item.getBoundingClientRect().top > window.innerHeight * 0.94) item.classList.add('is-hidden');
+        });
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -4% 0px' });
+        items.forEach(function (item) { observer.observe(item); });
+      }
+    }());
+  </script>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/zh/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI 营销工程师，奥克兰</p>
+        <p class="site-footer__note">我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。</p>
+        <a class="site-footer__cta" href="/zh/contact">与我合作</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/work">作品</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/templates/">免费模板</a>
+      <a href="/zh/about">关于我</a>
+      <a href="/zh/manifesto">宣言</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="给 Amber Lan 发邮件" title="邮件"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
