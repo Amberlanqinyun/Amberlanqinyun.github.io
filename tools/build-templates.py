@@ -311,7 +311,7 @@ def gallery():
           <p>Amber checks every run before it goes out, and the result reaches your inbox within two working days.</p>
         </div>
       </div>
-      <p class="small reveal" style="margin-top:2.25rem">Prefer to run them yourself? Each template page carries its install command for Claude Code, and the <a class="text-link" href="/skills/">skill library</a> holds 125 more.</p>
+      <p class="small reveal" style="margin-top:2.25rem">Prefer to run them yourself? Each template page carries its install command for Claude Code, and the <a class="text-link" href="/skills/">skill library</a> holds 126 more.</p>
     </div>
   </section>
 

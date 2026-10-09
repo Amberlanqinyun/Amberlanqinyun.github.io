@@ -15,7 +15,7 @@ Key facts:
 About Amber Lan (the person behind Flow AI):
 - Who: Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. Over ten years across every part of marketing, and three years building the AI agent systems that run it.
 - Now: runs the marketing function of an AI startup on an agent stack she built herself; the system does the production, she does the judgment.
-- Builds: a content engine with a codified brand voice and quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. 125 published skills, open source.
+- Builds: a content engine with a codified brand voice and quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. 126 published skills, open source.
 - Languages: English and Mandarin (native).
 - Roles: marketing engineer, GTM engineer, AI marketing engineer, growth engineer, RevOps / marketing ops engineer. Open to conversations about senior roles, remote from anywhere (based in Auckland, NZT). Contact: amber.lan.growth.digital@gmail.com or https://www.linkedin.com/in/amberlan/
 - Profile: https://www.flowai.co.nz/about · GitHub https://github.com/Amberlanqinyun · LinkedIn https://www.linkedin.com/in/amberlan/
@@ -36,7 +36,7 @@ Site structure:
 - /manifesto: The Flow AI manifesto. Every other function built an engineering layer; Flow Intelligence is marketing's, run by one engineer.
 - /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
-- /skills/: Flow AI skill library with 125 inspectable AI agent skills: 16 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and Humanizer by Siqi Chen for stripping AI writing tells out of prose. Every entry names its author and links to source.
+- /skills/: Flow AI skill library with 126 inspectable AI agent skills: 16 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and two editing skills: Humanizer by Siqi Chen for stripping AI writing tells out of prose, and 说人话 (Shuorenhua) by MrGeDiao for Chinese-first editing that keeps every fact. Every entry names its author and links to source.
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
@@ -493,7 +493,7 @@ Onboarding, then a strategy deckA written scope before any build starts
 
 What you can inspect
 
-A monthly reportThe systems themselves, and 125 published skills on GitHub
+A monthly reportThe systems themselves, and 126 published skills on GitHub
 
 When it ends
 
@@ -525,7 +525,7 @@ An enterprise AI launch: positioning and channel design on one operating cadence
 
 Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
 
-Open source and open to inspect, one of 125 skills in the library.
+Open source and open to inspect, one of 126 skills in the library.
 
 Questions
 
@@ -1711,7 +1711,7 @@ Generated content wins or loses at the last metre, in the lines a reader would f
 
 - GuideWhat an AI marketing agent is, defined for a small business, and how it differs from automation and ChatGPT.
 
-- LibraryThe skill library, 125 published skills, open source.
+- LibraryThe skill library, 126 published skills, open source.
 
 ## Let's point a system like this at your business.
 
@@ -1811,7 +1811,7 @@ Answer-engine optimisation is a discipline: let the crawlers in, say who you are
 
 - DataAI marketing statistics for Australia and New Zealand, 62 figures, every one sourced.
 
-- LibraryThe skill library, 125 published skills, open source.
+- LibraryThe skill library, 126 published skills, open source.
 
 ## Let's point a system like this at your business.
 
@@ -1838,7 +1838,7 @@ Work with meHiring? Let's talk
 
 LinkedInGitHubEmail
 
-125open-source marketing skills, published10+ yearsacross every part of marketing1 functionrun end to end on agents, soloEN · 中文native in both languagesNeed a buildContract me to build the system with your teamDiscuss a buildRecruitingRoles I fit and how to reach meSee availabilityHiring managerInspect the systems I have shippedSee the work
+126open-source marketing skills, published10+ yearsacross every part of marketing1 functionrun end to end on agents, soloEN · 中文native in both languagesNeed a buildContract me to build the system with your teamDiscuss a buildRecruitingRoles I fit and how to reach meSee availabilityHiring managerInspect the systems I have shippedSee the work
 
 Now
 
@@ -1930,7 +1930,7 @@ Email me about a roleLinkedInRoles
 
 - RevOps / Marketing Ops Engineer
 
-WhereAuckland, New Zealand (NZT). Remote with teams in any timezone, with overlap for APAC, US West Coast and UK mornings or evenings.ShippedAn outbound agent (Apollo enrichment into sequenced touches through HeyReach and HubSpot, three senders, human takeover on reply). An answer engine optimisation toolkit, open source. A content engine with a voice gate. 125 published skills. The six-month case.StackClaude agents and skills, MCP, Python, TypeScript, React and Next.js, HubSpot, Apollo, HeyReach, Google Tag Manager, Playwright, Vercel, GitHub CI.BackgroundTen years across every part of marketing, three building AI agent systems. English and Mandarin (native).
+WhereAuckland, New Zealand (NZT). Remote with teams in any timezone, with overlap for APAC, US West Coast and UK mornings or evenings.ShippedAn outbound agent (Apollo enrichment into sequenced touches through HeyReach and HubSpot, three senders, human takeover on reply). An answer engine optimisation toolkit, open source. A content engine with a voice gate. 126 published skills. The six-month case.StackClaude agents and skills, MCP, Python, TypeScript, React and Next.js, HubSpot, Apollo, HeyReach, Google Tag Manager, Playwright, Vercel, GitHub CI.BackgroundTen years across every part of marketing, three building AI agent systems. English and Mandarin (native).
 
 Experience and skills
 
@@ -1966,7 +1966,7 @@ Building the AI that runs it
 
 - Outbound agent
 
-- 125 skills
+- 126 skills
 
 ### Strategy
 
@@ -2086,7 +2086,7 @@ Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Ze
 
 ### What does Amber Lan build?
 
-Agent systems for marketing: a content engine with a codified brand voice and a quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. She has published 125 skills, open source, on GitHub.
+Agent systems for marketing: a content engine with a codified brand voice and a quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. She has published 126 skills, open source, on GitHub.
 
 ### Where is Amber Lan based?
 
@@ -2421,7 +2421,7 @@ That is all a run needs. The agent does the research and the drafting.
 
 Amber checks every run before it is sent, and it reaches your inbox within two working days.
 
-Prefer to run them yourself? Each template page carries its install command for Claude Code, and the skill library holds 125 more.
+Prefer to run them yourself? Each template page carries its install command for Claude Code, and the skill library holds 126 more.
 
 ## Put the whole Flow Engine to work.
 
@@ -3463,7 +3463,7 @@ For the order in which to add lanes, the guide to AI agents for marketing sugges
 
 Where Flow AI fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. The Flow AI skill library lists 125 skills you can inspect before running them: 16 I built, and the rest credited to their authors.
+Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. The Flow AI skill library lists 126 skills you can inspect before running them: 16 I built, and the rest credited to their authors.
 
 Teams can contract a build, which starts with a written scope. If you are hiring for a marketing engineer or AI deployment role, I am open to conversations about senior roles, remote from anywhere.
 
@@ -4842,7 +4842,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It builds the planning and the production as installable systems that stay on the business's own domain and accounts, and a human reviews everything before it ships.
 
-The method is public. The skill library holds 125 inspectable skills, and the written scope names the first system to install and why, before any money changes hands.
+The method is public. The skill library holds 126 inspectable skills, and the written scope names the first system to install and why, before any money changes hands.
 
 The short version
 
