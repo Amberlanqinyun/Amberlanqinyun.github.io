@@ -56,7 +56,7 @@
       "dateModified": "2026-10-08",
       "inLanguage": "zh-Hans",
       "articleSection": "AI 营销智能体",
-      "wordCount": 4857,
+      "wordCount": 4854,
       "timeRequired": "PT13M",
       "image": "https://www.flowai.co.nz/blog/figures/running-marketing-on-claude-code.svg",
       "author": {
@@ -249,7 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <article class="prose">
 <h2 id="what-does-it-mean-to-run-marketing-on-claude-code"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">用 Claude Code 运转营销是什么意思？</span></h2>
 <p>用 Claude Code 运转营销，是指把一个营销职能沉淀在一个文件夹里：书面指令加可复用的技能，并接入工作所在的各类工具，由 AI 智能体每天按这些内容推进工作。一个人审核产出，决定哪些内容上线。生产交给智能体，判断留给人。</p>
-<p><a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 在 Claude Code 概览中将它描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。它原本是为软件开发而生的。放到营销上，代码库就是营销职能本身：定位文档、语调规则、内容日历、草稿，以及在这些内容上运行的各项检查。</p>
+<p><a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 在 Claude Code 概览中将它描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。它原本是为软件开发设计的。放到营销上，代码库就是营销职能本身：定位文档、语调规则、内容日历、草稿，以及在这些内容上运行的各项检查。</p>
 <p>我在一家 AI 初创公司工作，一个人负责全部营销，用的就是这样一套系统。我在营销的大多数领域做了十年，最近三年在为营销搭建智能体系统。如果你还不熟悉 <a class="go" href="/zh/blog/what-is-an-ai-marketing-agent">AI 营销智能体</a>这个概念，可以先读那篇定义。这份笔记讲我如何组织工作、哪些地方仍由我决定，失败的经历也在其中。做这类工作的职位叫<a class="go" href="/zh/blog/what-is-a-marketing-engineer">营销工程师</a>。</p>
 
 <h2 id="how-is-the-setup-organised"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">整套系统是怎么组织的？</span></h2>
@@ -267,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过模型上下文协议（Model Context Protocol）连接数百种外部工具和数据源</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>，文档里还以 Notion 作为配置示例。我的智能体连接了 Notion（计划和团队知识库都在这里）、社交媒体排期工具、CRM 和潜客挖掘工具，以及邮箱。大多数连接一开始都是只读。智能体有写入权限的地方，写入的也只是草稿。</p>
 
 <h3>定时任务和子智能体</h3>
-<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code Desktop 可以按你设定的时间和频率开启新会话，用来处理诸如根据日历和收件箱生成晨间简报之类的工作</a><sup class="fn"><a href="#source-6" aria-label="来源 6">6</a></sup>。我的晨间启动任务就是这样：在我打开任何东西之前，它已经把工作区和收件箱整理成一张当日优先级看板。本地任务只在应用打开、电脑处于唤醒状态时才会触发，所以必须在夜间运行的任务应当放到云端例行任务里。如果要写脚本，<a class="go" href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic 关于以编程方式运行 Claude Code 的文档介绍了非交互模式，用 claude -p 启动</a><sup class="fn"><a href="#source-7" aria-label="来源 7">7</a></sup>。</p>
+<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code Desktop 可以按你设定的时间和频率开启新会话，用来处理根据日历和收件箱生成晨间简报这类工作</a><sup class="fn"><a href="#source-6" aria-label="来源 6">6</a></sup>。我的晨间启动任务就是这样：在我打开任何东西之前，它已经把工作区和收件箱整理成一张当日优先级看板。本地任务只在应用打开、电脑处于唤醒状态时才会触发，所以必须在夜间运行的任务应当放到云端例行任务里。如果要写脚本，<a class="go" href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic 关于以编程方式运行 Claude Code 的文档介绍了非交互模式，用 claude -p 启动</a><sup class="fn"><a href="#source-7" aria-label="来源 7">7</a></sup>。</p>
 <p><a class="go" href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic 的子智能体文档说明，每个子智能体在独立的上下文窗口中运行，拥有自定义系统提示词、特定的工具权限和独立的权限设置</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>。我用它们做调研和初稿：几个调研问题并行运行，各自以一份报告返回，只有报告会进入主线程。</p>
 
 <h2 id="how-does-a-draft-get-from-agent-to-published"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">一份草稿从智能体到上线要经过什么？</span></h2>
@@ -332,7 +332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>关于工作线的添加顺序，<a class="go" href="/zh/blog/ai-agents-for-marketing">营销 AI 智能体</a>指南建议从代价最大的缺口入手，通常是搜索或主动外联。如今搜索也包括<a class="go" href="/zh/glossary/#answer-engine-optimisation-aeo">答案引擎优化</a>，让 ChatGPT 这类助手能准确地介绍你的业务。</p>
 
 <h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">Flow AI 能在哪里帮上忙</span></h2>
-<p>Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。我公开搭建这些系统。<a class="go" href="/zh/skills/">Flow AI 技能库</a>列出了 125 个技能，你可以在运行之前逐一查看：其中 16 个由我搭建，其余均注明了原作者。</p>
+<p>Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。我公开搭建这些系统。<a class="go" href="/zh/skills/">Flow AI 技能库</a>列出了 126 个技能，你可以在运行之前逐一查看：其中 16 个由我搭建，其余均注明了原作者。</p>
 <p>团队可以委托我来搭建，合作从一份书面范围说明开始。如果你在招聘营销工程师或 AI 部署相关岗位，我也欢迎<a class="go" href="/zh/about#hire">聊聊高级职位，可远程，地点不限</a>。</p>
 
 <h2 id="the-short-version"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">简要总结</span></h2>
@@ -359,14 +359,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="sources" aria-labelledby="sources-title">
   <h2 id="sources-title" class="sources__title">资料来源</h2>
-  <p class="sources__note">每个数据都链接到一手来源。核对于 2026年10月8日。</p>
+  <p class="sources__note">每个数据都附有一手来源链接，最近核对：2026年10月8日。</p>
   <ol class="sources__list">
 <li id="source-1"><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 在 Claude Code 概览中将它描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成</a> <span class="src-host">code.claude.com</span></li>
 <li id="source-2"><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic 的记忆文档说明，工作目录上层的 CLAUDE.md 文件在启动时加载，子目录里的文件则在 Claude 处理该目录下的文件时加载</a> <span class="src-host">code.claude.com</span></li>
 <li id="source-3"><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic 的技能文档说明，Claude 会在相关时使用技能，你也可以按名称直接调用；项目技能可以提交到仓库，让团队也能用上</a> <span class="src-host">code.claude.com</span></li>
 <li id="source-4"><a href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">geo-seo-claude，一个面向 Claude Code 的开源答案引擎优化工具包</a> <span class="src-host">github.com</span></li>
 <li id="source-5"><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过模型上下文协议（Model Context Protocol）连接数百种外部工具和数据源</a> <span class="src-host">code.claude.com</span></li>
-<li id="source-6"><a href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code Desktop 可以按你设定的时间和频率开启新会话，用来处理诸如根据日历和收件箱生成晨间简报之类的工作</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-6"><a href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code Desktop 可以按你设定的时间和频率开启新会话，用来处理根据日历和收件箱生成晨间简报这类工作</a> <span class="src-host">code.claude.com</span></li>
 <li id="source-7"><a href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Anthropic 关于以编程方式运行 Claude Code 的文档介绍了非交互模式，用 claude -p 启动</a> <span class="src-host">code.claude.com</span></li>
 <li id="source-8"><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Anthropic 的子智能体文档说明，每个子智能体在独立的上下文窗口中运行，拥有自定义系统提示词、特定的工具权限和独立的权限设置</a> <span class="src-host">code.claude.com</span></li>
 <li id="source-9"><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic 的权限文档说明，规则按“先拒绝、再询问、后允许”的顺序判定，即使同时匹配了允许规则，只要匹配到询问规则，仍会弹出确认提示</a> <span class="src-host">code.claude.com</span></li>

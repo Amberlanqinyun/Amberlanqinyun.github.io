@@ -93,7 +93,7 @@
   },
   "src/zh/blog/running-marketing-on-claude-code.html": {
     "source": "src/blog/running-marketing-on-claude-code.html",
-    "sha": "88d32d81f275"
+    "sha": "2a745139f18f"
   },
   "src/zh/blog/seo-for-small-business-nz.html": {
     "source": "src/blog/seo-for-small-business-nz.html",
@@ -105,7 +105,7 @@
   },
   "src/zh/blog/what-is-an-ai-cmo.html": {
     "source": "src/blog/what-is-an-ai-cmo.html",
-    "sha": "2e2a71f0cc6f"
+    "sha": "8fa7422e4204"
   },
   "src/zh/blog/what-is-an-ai-marketing-agent.html": {
     "source": "src/blog/what-is-an-ai-marketing-agent.html",
@@ -125,7 +125,7 @@
   },
   "zh/about.html": {
     "source": "about.html",
-    "sha": "e9a4a69bf6e0"
+    "sha": "a6ea372159fb"
   },
   "zh/cases.html": {
     "source": "cases.html",
@@ -137,7 +137,7 @@
   },
   "zh/index.html": {
     "source": "index.html",
-    "sha": "9aa76dfa03bd"
+    "sha": "2a93373c8204"
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
@@ -149,7 +149,7 @@
   },
   "zh/skills/index.html": {
     "source": "skills/index.html",
-    "sha": "089a77f54d4c"
+    "sha": "f2ce1c47f8f4"
   },
   "zh/sprints/ai-search.html": {
     "source": "sprints/ai-search.html",
@@ -197,7 +197,7 @@
   },
   "zh/templates/index.html": {
     "source": "templates/index.html",
-    "sha": "bd3532cedafe"
+    "sha": "d31d4f7a314c"
   },
   "zh/templates/reddit-opportunities.html": {
     "source": "templates/reddit-opportunities.html",
@@ -217,11 +217,11 @@
   },
   "zh/work.html": {
     "source": "work.html",
-    "sha": "08923bb9b10e"
+    "sha": "fa9e7cc7855e"
   },
   "zh/work/content-engine.html": {
     "source": "work/content-engine.html",
-    "sha": "4aa7dddf92ac"
+    "sha": "b35d44ba161a"
   },
   "zh/work/enterprise-gtm.html": {
     "source": "work/enterprise-gtm.html",
@@ -229,10 +229,10 @@
   },
   "zh/work/geo-seo-toolkit.html": {
     "source": "work/geo-seo-toolkit.html",
-    "sha": "99d827c09c9b"
+    "sha": "060e7a858c9a"
   },
   "zh/work/six-month-marketing-function.html": {
     "source": "work/six-month-marketing-function.html",
-    "sha": "cbcae22f4060"
+    "sha": "4663c0a48fa8"
   }
 }
