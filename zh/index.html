@@ -231,6 +231,9 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=1">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 
 <body>
@@ -271,6 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="demo" data-demo aria-label="Flow 工作演示：以一家虚构企业为例的示意演示">
+          <div class="bezel">
           <div class="demo__win">
             <aside class="demo__side">
               <p class="demo__ws"><i>F</i>Fernwick Plumbing</p>
@@ -292,6 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="demo__input" aria-hidden="true"><span>向 Flow Intelligence 提出需求</span><span>&uarr;</span></div>
             </div>
           </div>
+          </div>
           <p class="demo__note">以虚构企业为例的示意演示。在“最近”中选择一次运行。</p>
         </div>
       </div>
@@ -299,6 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section id="why" class="centered" aria-labelledby="why-title">
       <div class="wrap">
+        <div class="why-split">
         <div class="stack reveal">
           <p class="eyebrow">宣言</p>
           <h2 id="why-title" class="fill-on-scroll">营销终于有了自己的工程层。</h2>
@@ -307,7 +313,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="text-link arrow-link" href="/zh/manifesto">阅读宣言</a>
           </div>
         </div>
-        <div class="grid grid-3 reveal" style="text-align:left">
+        <div class="pillars reveal">
           <div class="pillar">
             <h3>流程比提示词更长久</h3>
             <p>Flow AI 和你的团队一起把策略写进智能体，让第五十次运行和第一次一样到位。</p>
@@ -320,6 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3>判断始终由你掌握</h3>
             <p>智能体负责产出，由人来做决定。每一条内容在客户看到之前都要经过审核人批准，小团队也能放心承担这么多工作。</p>
           </div>
+        </div>
         </div>
       </div>
     </section>

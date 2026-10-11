@@ -40,6 +40,7 @@ Last updated: 2026-08-20
 - robots.txt allows all AI answer-engine crawlers and references the sitemap.
 - `llms.txt` at root and `/.well-known/llms.txt` mirror the site structure; update both when pages change.
 - `.nojekyll` must stay in the repo root or GitHub Pages stops serving `.well-known/`.
+- `assets/highend.css` is the last stylesheet on every page and `assets/nav.js` the last script (both added just before `</head>`, also in the head templates of `scripts/build_blog.py` and `tools/build-templates.py`). They carry the high-end treatment from October 2026: the floating island header and its phone menu, pill buttons with the nested arrow, double-bezel panels, the amber light behind the hero and the closer, and spring-eased reveals. Remove those two tags to go back to the plain layout; nothing else depends on them.
 
 ## Two languages: English at `/`, Simplified Chinese at `/zh/` (since 2026-10-08)
 
