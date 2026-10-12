@@ -516,3 +516,11 @@ input, textarea, select { border-radius: var(--r-md); }
 .demo__run-msg--you { top: 2.75rem; }
 /* While the run plays, the demo thread scrolls under the overlay; without this the browser's scroll anchoring drags the page. */
 html.fdot-run { overflow-anchor: none; }
+/* The run, round three: captions are sentences, and it ends on what you get. */
+.demo__run-cap { font-family: inherit; font-size: 0.875rem; letter-spacing: -0.005em; text-transform: none; color: var(--fg); }
+.demo__run-incl { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); width: min(50%, 24rem); display: grid; gap: 0.4rem; pointer-events: none; opacity: 0; transition: opacity 400ms var(--ease-out); }
+.demo__run-incl.is-on { opacity: 1; }
+.demo__run-incl .demo__run-card span { font-family: inherit; font-size: 0.8125rem; white-space: normal; }
+.demo__run-incl .demo__run-card::before { content: "\2713"; color: var(--accent); flex: none; }
+.demo__run-incl .demo__run-card { justify-content: flex-start; gap: 0.6rem; }
+@media (max-width: 720px) { .demo__run-incl { display: none; } }

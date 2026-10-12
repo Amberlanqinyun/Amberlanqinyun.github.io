@@ -108,7 +108,7 @@ window.FlowDot = (function () {
     this.gaze = { x: { x: 0, v: 0 }, y: { x: 0, v: 0 } };
     this.tiltS = { x: 0, v: 0 };
     this.target = [0, 0]; this.hold = null; this.t = Math.random() * 10; this.nextSac = 1 + Math.random() * 2; this.nextBlink = 2 + Math.random() * 3;
-    this.nodT = -1; this.lidT = -1; this.mood = 'idle';
+    this.nodAt = -1; this.lidAt = -1; this.mood = 'idle';
     this.setStyle(styleName);
     this.set(o.state || 'idle');
     dots.push(this); start();
@@ -139,7 +139,7 @@ window.FlowDot = (function () {
     this.ring.setAttribute('stroke-opacity', 0);
     if (!m.orbit) this.sats.forEach(function (s) { s.setAttribute('r', 0); });
     if (mood === 'done') this.nod();
-    if (this.st) { this.wob.v += 2.4; if (mood === 'work' || mood === 'done') this.trail(); }
+    if (this.st) { this.wob.v += 2.4; if (this.role === 'flow' && (mood === 'work' || mood === 'done')) this.trail(); }
     this.setStyle(this.styleName);
     return this;
   };
@@ -171,8 +171,8 @@ window.FlowDot = (function () {
   };
   Dot.prototype.setGlow = function (on) { this.glow = !!on; this.catch = !this.glow; this.halo.setAttribute('opacity', this.glow ? 1 : 0); this.body.setAttribute('r', this.glow ? this.r * 1.08 : this.r); return this.set(this.mood); };
   Dot.prototype.lookAt = function (x, y) { this.hold = x === null ? null : [x, y]; return this; };
-  Dot.prototype.nod = function () { this.nodT = 0; return this; };
-  Dot.prototype.blink = function (twice) { if (!reduced) { this.lidT = 0; this.lidTwice = !!twice; } return this; };
+  Dot.prototype.nod = function () { this.nodAt = performance.now(); return this; };
+  Dot.prototype.blink = function (twice) { if (!reduced) { this.lidAt = performance.now(); this.lidTwice = !!twice; } return this; };
   Dot.prototype.step = function (dt) {
     var m = MOODS[this.mood] || MOODS.idle, st = this.st, r = this.r; this.t += dt;
     var tgt;
@@ -194,20 +194,21 @@ window.FlowDot = (function () {
     var breathe = reduced ? 0 : Math.sin(this.t * m.rate) * m.breath;
     var wobble = reduced ? 0 : this.wob.x * 0.05;
     var cheekTarget = (this.mood === 'done' ? 0.6 : 0) + this.curious * 0.45; this.cheekA += (Math.min(0.6, cheekTarget) - this.cheekA) * Math.min(1, dt * 6); this.cheeks.setAttribute('opacity', this.cheekA);
-    var nodY = 0, nodSq = 0, nodLid = 1;
-    if (this.nodT >= 0) { this.nodT += dt; var p = Math.min(this.nodT / 0.6, 1), w = Math.sin(p * Math.PI); nodY = w * r * 0.1; nodSq = w * 0.1; nodLid = 1 - w * 0.6; if (this.nodT > 0.6) this.nodT = -1; }
+    /* nod and blink run on the wall clock, so a starved tab never freezes them mid-way */
+    var nowMs = performance.now(), nodY = 0, nodSq = 0, nodLid = 1;
+    if (this.nodAt >= 0) { var nt = (nowMs - this.nodAt) / 1000; if (nt > 0.6) this.nodAt = -1; else { var w = Math.sin(Math.min(nt / 0.6, 1) * Math.PI); nodY = w * r * 0.1; nodSq = w * 0.1; nodLid = 1 - w * 0.6; } }
     var sx = 1 + breathe + nodSq + wobble, sy = 1 - breathe - nodSq - wobble;
     var bodyTf = 'rotate(' + this.tiltS.x + ' ' + this.cx + ' ' + this.cy + ') translate(' + this.cx + ' ' + (this.cy + nodY) + ') scale(' + sx + ' ' + sy + ') translate(' + (-this.cx) + ' ' + (-this.cy) + ')';
     this.body.setAttribute('transform', bodyTf);
     if (this.glow) { var pulse = reduced ? 1 : 0.85 + 0.15 * Math.sin(this.t * m.rate * 0.5) + (m.ring ? 0.15 : 0); this.halo.setAttribute('opacity', pulse); this.halo.setAttribute('transform', 'translate(' + this.cx + ' ' + (this.cy + nodY) + ') scale(' + (1 + breathe * 2) + ') translate(' + (-this.cx) + ' ' + (-this.cy) + ')'); }
     var lid = 1;
     if (!reduced) {
-      if (this.lidT < 0) { this.nextBlink -= dt; if (this.nextBlink <= 0) { this.lidT = 0; this.lidTwice = this.dbl; this.nextBlink = 3 + Math.random() * 3; } }
-      if (this.lidT >= 0) {
-        var T = this.lidT; this.lidT += dt;
+      if (this.lidAt < 0) { this.nextBlink -= dt; if (this.nextBlink <= 0) { this.lidAt = nowMs; this.lidTwice = this.dbl; this.nextBlink = 3 + Math.random() * 3; } }
+      if (this.lidAt >= 0) {
+        var T = (nowMs - this.lidAt) / 1000;
         var one = function (x) { if (x < 0.06) return 1.04; if (x < 0.13) return 1 - (x - 0.06) / 0.07 * 0.92; if (x < 0.27) return 0.08 + (x - 0.13) / 0.14 * 0.92; return 1; };
         lid = one(T); if (this.lidTwice && T > 0.26) lid = one(T - 0.26);
-        if (T > (this.lidTwice ? 0.54 : 0.28)) this.lidT = -1;
+        if (T > (this.lidTwice ? 0.54 : 0.28)) { this.lidAt = -1; lid = 1; }
       }
     }
     lid = Math.min(lid, m.lid) * nodLid;
@@ -308,26 +309,30 @@ window.FlowDot = (function () {
       function sel(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
       var ZH = /^zh/.test(document.documentElement.lang);
       var S = ZH ? {
-        you: '找出人们向 AI 询问奥克兰热水缸的问题，修好应该回答这些问题的页面。全部暂存，先不发布。',
-        reply: '三个页面已暂存。等待你审核。', ok: '看起来不错。定价页先留着，等我核对数字。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
-        caps: ['收到指令', '阅读网站', '交代三个智能体', '智能体工作中', '智能体返回', '已暂存，等你', '已批准', '休息'],
+        you: '找出人们向 AI 询问热水缸的问题，修好应该回答的页面。全部暂存。',
+        reply: '三个页面已暂存。等待你审核。', ok: '看起来不错。定价页先留着。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
+        caps: ['一句大白话的指令', '它逐行读你的网站', '它给合适的智能体交代任务', '智能体去干活', '把成果带回来', '一切先暂存，等你审核', '没有你的同意，什么都不会发出', '你得到的是'],
+        incl: ['掌握你定位的 Flow Intelligence', '十个智能体：搜索、内容、外联、报告等', '每一次发送都先暂存，等你批准', '每月一份报告'],
         cards: [['/services/hot-water-cylinders', '6 处修改'], ['/faq/plumber-cost-auckland', '新页面'], ['/areas/north-shore', '4 处修改']]
       } : {
-        you: 'Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.',
-        reply: 'Three pages staged. Waiting for your review.', ok: 'Looks good. Hold the pricing page until I check the numbers.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
-        caps: ['brief received', 'reading the site', 'briefing three agents', 'agents at work', 'agents return', 'staged, waiting for you', 'approved', 'rest'],
+        you: 'Find the questions people ask AI about hot water cylinders and fix the pages that answer them. Stage everything.',
+        reply: 'Three pages staged. Waiting for your review.', ok: 'Looks good. Hold the pricing page for now.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
+        caps: ['A brief, in plain words', 'It reads your site, line by line', 'It briefs the right agents', 'The agents do the work', 'They bring it back', 'Everything is staged for your review', 'Nothing ships without your yes', 'What you get'],
+        incl: ['Flow Intelligence that holds your positioning', 'Ten agents: search, content, outbound, reporting and more', 'Every send staged for your approval', 'One report a month'],
         cards: [['/services/hot-water-cylinders', '6 changes'], ['/faq/plumber-cost-auckland', 'New page'], ['/areas/north-shore', '4 changes']]
       };
       var ov = document.createElement('div'); ov.className = 'demo__run'; ov.setAttribute('role', 'presentation');
       ov.innerHTML = '<div class="demo__run-stage"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>' +
         '<div class="demo__run-msg demo__run-msg--you">' + S.you + '</div>' +
         '<div class="demo__run-cards">' + S.cards.map(function (c) { return '<div class="demo__run-card"><span>' + c[0] + '</span><em>' + c[1] + '</em></div>'; }).join('') + '</div>' +
+        '<div class="demo__run-incl">' + S.incl.map(function (x) { return '<div class="demo__run-card is-ok"><span>' + x + '</span></div>'; }).join('') + '</div>' +
         '<div class="demo__run-msg demo__run-msg--dot">' + S.reply + '</div>' +
         '<div class="demo__run-msg demo__run-msg--ok">' + S.ok + '</div></div>' +
         '<div class="demo__run-foot"><div class="demo__run-row"><span class="demo__run-eyebrow">' + S.eyebrow + '</span><span class="demo__run-cap"></span><button type="button" class="demo__run-skip">' + S.skip + '</button></div><span class="demo__run-bar"><b></b></span></div>';
       win.appendChild(ov); document.documentElement.classList.add('fdot-run');
       var rsvg = ov.querySelector('svg'), m1 = ov.querySelector('.demo__run-msg--you'), m2 = ov.querySelector('.demo__run-msg--dot'), m3 = ov.querySelector('.demo__run-msg--ok');
-      var cards = Array.prototype.slice.call(ov.querySelectorAll('.demo__run-card'));
+      var cards = Array.prototype.slice.call(ov.querySelectorAll('.demo__run-cards .demo__run-card'));
+      var incl = ov.querySelector('.demo__run-incl'), inclRows = Array.prototype.slice.call(incl.querySelectorAll('.demo__run-card'));
       var capEl = ov.querySelector('.demo__run-cap'), barEl = ov.querySelector('.demo__run-bar b');
       var run = F.mount(rsvg, { role: 'flow', r: 15, dy: 6, goo: true });
       /* a flat amber disc inside the goo group, under the light core, so the agents pull
@@ -337,7 +342,7 @@ window.FlowDot = (function () {
       var lines = sel('g', { opacity: 0 }); rsvg.insertBefore(lines, rsvg.firstChild);
       var lineEls = [];
       for (var li = 0; li < 6; li++) { var ln = sel('rect', { x: 66, y: 36 + li * 5.2, width: li % 3 === 2 ? 18 : 26, height: 1.3, rx: 0.65, fill: '#faf8f3', 'fill-opacity': 0.16 }); lines.appendChild(ln); lineEls.push(ln); }
-      var sats = run.sats, satT = [[22, 44, 5.5], [80, 40, 5], [30, 82, 4.5]], satAnim = null, t0 = -1, LEN = 19.5, fired = [], done = false, lineT = -1, lit = -1;
+      var sats = run.sats, satT = [[22, 44, 5.5], [80, 40, 5], [30, 82, 4.5]], satAnim = null, t0 = -1, LEN = 17.5, fired = [], done = false, lineT = -1, lit = -1;
       var agentKeys = ['ai-search', 'content', 'outbound'], faces = [];
       function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
       function showFaces(on) {
@@ -350,28 +355,28 @@ window.FlowDot = (function () {
         if (on) sats.forEach(function (s) { s.setAttribute('r', 0); });
       }
       var SCRIPT = [
-        { at: 0,    i: 0, fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 900); } },
-        { at: 1.5,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); lines.setAttribute('opacity', 1); lineT = performance.now(); } },
-        { at: 4.8,  i: 2, fn: function () { lines.setAttribute('opacity', 0); run.set('think'); satAnim = { t0: performance.now(), dir: 1 }; } },
-        { at: 7.2,  i: 3, fn: function () { run.set('idle'); showFaces(true); faces.forEach(function (f) { f.dot.set('work'); }); } },
-        { at: 10.6, i: 4, fn: function () { faces.forEach(function (f) { f.dot.set('done'); }); setTimeout(function () { showFaces(false); sats.forEach(function (s, i) { s.setAttribute('cx', satT[i][0]); s.setAttribute('cy', satT[i][1]); s.setAttribute('r', satT[i][2]); }); satAnim = { t0: performance.now(), dir: -1 }; }, 500); } },
-        { at: 12.8, i: 5, fn: function () { run.trail(); run.set('review'); ov.classList.add('is-staged'); m2.classList.add('is-on'); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 150 + i * 160); }); } },
-        { at: 16.2, i: 6, fn: function () { m2.classList.remove('is-on'); m3.classList.add('is-on'); run.lookAt(0.9, 0.6); setTimeout(function () { run.set('done'); run.lookAt(null); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-ok'); }, i * 140); }); }, 700); } },
-        { at: 18.3, i: 7, fn: function () { run.set('idle'); } }
+        { at: 0,    i: 0, fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 700); } },
+        { at: 1.1,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); lines.setAttribute('opacity', 1); lineT = performance.now(); } },
+        { at: 3.4,  i: 2, fn: function () { lines.setAttribute('opacity', 0); run.set('think'); satAnim = { t0: performance.now(), dir: 1 }; } },
+        { at: 5.4,  i: 3, fn: function () { run.set('idle'); showFaces(true); faces.forEach(function (f) { f.dot.set('work'); }); } },
+        { at: 7.2,  i: 4, fn: function () { faces.forEach(function (f) { f.dot.set('done'); }); setTimeout(function () { showFaces(false); sats.forEach(function (s, i) { s.setAttribute('cx', satT[i][0]); s.setAttribute('cy', satT[i][1]); s.setAttribute('r', satT[i][2]); }); satAnim = { t0: performance.now(), dir: -1 }; }, 350); } },
+        { at: 8.6,  i: 5, fn: function () { run.trail(); run.set('review'); ov.classList.add('is-staged'); m1.classList.remove('is-on'); m2.classList.add('is-on'); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 120 + i * 140); }); } },
+        { at: 10.8, i: 6, fn: function () { m2.classList.remove('is-on'); m3.classList.add('is-on'); run.lookAt(0.9, 0.6); setTimeout(function () { run.set('done'); run.lookAt(null); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-ok'); }, i * 120); }); }, 600); } },
+        { at: 12.6, i: 7, fn: function () { m3.classList.remove('is-on'); cards.forEach(function (c) { c.classList.remove('is-on'); }); incl.classList.add('is-on'); inclRows.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 150 + i * 130); }); run.set('done'); } }
       ];
       function satFrame(now) {
         if (!satAnim) return;
         var tt = (now - satAnim.t0) / 1000;
         sats.forEach(function (s, i) {
-          var local = Math.max(0, Math.min(1, (tt - i * 0.4) / 1.1)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
+          var local = Math.max(0, Math.min(1, (tt - i * 0.3) / 0.9)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
           var wob = Math.sin(now / 400 + i) * 1.5 * p;
           s.setAttribute('cx', run.cx + (satT[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satT[i][1] - run.cy) * p + Math.cos(now / 500 + i) * p); s.setAttribute('r', satT[i][2] * Math.min(1, 0.4 + p * 0.9));
         });
-        if (tt > 2.2) { if (satAnim.dir < 0) { sats.forEach(function (s) { s.setAttribute('r', 0); }); run.wob.v += 2.5; } satAnim = null; }
+        if (tt > 1.9) { if (satAnim.dir < 0) { sats.forEach(function (s) { s.setAttribute('r', 0); }); run.wob.v += 2.5; } satAnim = null; }
       }
       function lineFrame(now) {
         if (lineT < 0) return;
-        var idx = Math.floor((now - lineT) / 520) % 6;
+        var idx = Math.floor((now - lineT) / 360) % 6;
         if (idx !== lit) { lit = idx; lineEls.forEach(function (l, i) { l.setAttribute('fill-opacity', i === idx ? 0.9 : (i < idx ? 0.42 : 0.16)); }); }
       }
       function finish() {
