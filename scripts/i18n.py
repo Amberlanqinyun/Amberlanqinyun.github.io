@@ -46,6 +46,7 @@ KEEP_IDS = {f"{SITE}/#amber", f"{SITE}/#flowai", f"{SITE}/#website"}
 HEADER_ZH = [
     ('aria-label="Flow AI home"', 'aria-label="Flow AI 首页"'),
     ('aria-label="Primary navigation"', 'aria-label="主导航"'),
+    ('>Services</a>', '>服务</a>'),
     ('>How it works</a>', '>合作方式</a>'),
     ('>Guides</a>', '>指南</a>'),
     ('>About</a>', '>关于我</a>'),
@@ -59,6 +60,7 @@ FOOTER_ZH = HEADER_ZH + [
     ('>Work</a>', '>作品</a>'),
     ('>Free templates</a>', '>免费模板</a>'),
     ('>Manifesto</a>', '>宣言</a>'),
+    ('>The dot</a>', '>这颗点</a>'),
     ('>Privacy</a>', '>隐私政策</a>'),
     ('&copy; 2026, Auckland, New Zealand', '&copy; 2026 · 新西兰奥克兰'),
     ('aria-label="Amber Lan on LinkedIn"', 'aria-label="Amber Lan 的 LinkedIn"'),
