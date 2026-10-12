@@ -337,7 +337,7 @@ animation:none!important;transition:none!important}
 
 </style>
 <script src="/assets/motion.js" defer></script>
-<script src="/assets/dot.js?v=4" defer></script>
+<script src="/assets/dot.js?v=5" defer></script>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=3">
 <script>document.documentElement.className += ' has-nav';</script>
@@ -493,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="stack">
     <p class="eyebrow">标志与像素网格</p>
     <h2>轨迹保持抽象。角色从 32 像素起才出现。</h2>
-    <p class="lead">小于 32 像素时，眼睛只是两个污点，所以页眉和页脚保持原来的轨迹。网站图标是唯一的例外：一个带眼睛的琥珀点，在 16 像素网格上手绘，而不是缩放。</p>
+    <p class="lead">小于 32 像素时，眼睛只是两个污点，所以页眉和页脚保持原来的轨迹。网站图标是唯一的例外：只有那颗玻璃球，铺满整个图标，眼睛画得更大，在标签页里也看得清。</p>
   </div>
   <div class="goo-stage" id="goo-stage">
     <svg viewBox="0 0 960 300" id="goo-svg">
@@ -514,20 +514,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="size"><svg width="64" height="64" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/></svg><span class="lbl">64 · 有眼睛</span></div>
     <div class="size"><svg width="32" height="32" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/></svg><span class="lbl">32 · 下限</span></div>
     <div class="size"><svg width="24" height="24" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/></svg><span class="lbl">24 · 页眉，无眼睛</span></div>
-    <div class="size"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="4" fill="#0e0e0d"/><circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/><rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/></svg><span class="lbl">网站图标 · 32</span></div>
-    <div class="size"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="4" fill="#0e0e0d"/><circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/><rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/></svg><span class="lbl">16 · 标签页</span></div>
+    <div class="size"><img src="/favicon.svg" width="32" height="32" alt=""><span class="lbl">网站图标 · 32</span></div>
+    <div class="size"><img src="/favicon.svg" width="16" height="16" alt=""><span class="lbl">16 · 标签页</span></div>
   </div>
   <div class="pix">
-    <svg width="256" height="256" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-label="16 像素网格上的网站图标">
-      <rect width="16" height="16" rx="4" fill="#0e0e0d"/>
-      <circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/>
-      <rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/>
-      <g stroke="rgba(250,248,243,.18)" stroke-width=".04"><path d="M0 1H16M0 2H16M0 3H16M0 4H16M0 5H16M0 6H16M0 7H16M0 8H16M0 9H16M0 10H16M0 11H16M0 12H16M0 13H16M0 14H16M0 15H16M1 0V16M2 0V16M3 0V16M4 0V16M5 0V16M6 0V16M7 0V16M8 0V16M9 0V16M10 0V16M11 0V16M12 0V16M13 0V16M14 0V16M15 0V16"/></g>
-    </svg>
+    <svg width="256" height="256" viewBox="0 0 32 32" aria-label="16 像素网格上的网站图标"><image href="/favicon.svg" width="32" height="32"/><g stroke="rgba(250,248,243,.22)" stroke-width=".06"><path d="M0 2H32M0 4H32M0 6H32M0 8H32M0 10H32M0 12H32M0 14H32M0 16H32M0 18H32M0 20H32M0 22H32M0 24H32M0 26H32M0 28H32M0 30H32M2 0V32M4 0V32M6 0V32M8 0V32M10 0V32M12 0V32M14 0V32M16 0V32M18 0V32M20 0V32M22 0V32M24 0V32M26 0V32M28 0V32M30 0V32"/></g></svg>
     <div>
-      <h3>网站图标，画在网格上。</h3>
-      <p class="small" style="margin-top:.5rem;max-width:46ch">半径六像素、边缘柔和的琥珀光核，两个 2×2 的墨色方块，位于中线上方一像素，相距两像素。把大脸缩小只会得到一团灰；把方块放在网格上，眼睛在每个标签栏里都清晰。32 像素版本是同一张图放大一倍，所以同样清晰。</p>
-      <p class="small" style="margin-top:.75rem">以 favicon.svg 发布，眼睛加上 <span class="mono">shape-rendering="crispEdges"</span>，并为 Safari 和 iOS 另出 32 和 180 像素的 PNG。</p>
+      <h3>网站图标：那颗玻璃球，铺满边缘。</h3>
+      <p class="small" style="margin-top:.5rem;max-width:46ch">没有底板，没有深色边框，只有透明背景上的玻璃球，放在任何颜色的标签栏上都干净。眼睛比角色本身画得更大，16 像素时依然看得清；32 像素以上还能看到笑容。</p>
+      <p class="small" style="margin-top:.75rem">以 favicon.svg 发布，另加一个 180 像素的 apple-touch-icon.png，琥珀色的光铺满整个图标，因为 iOS 会把透明的角涂成黑色。</p>
     </div>
   </div>
 </section>

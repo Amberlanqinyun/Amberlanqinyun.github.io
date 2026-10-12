@@ -436,13 +436,13 @@ window.FlowDot = (function () {
       var S = ZH ? {
         you: '找出人们向 AI 询问热水缸的问题，修好应该回答的页面。全部暂存。',
         reply: '三个页面已暂存。等待你审核。', ok: '看起来不错。定价页先留着。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
-        caps: ['一句大白话的指令', '它逐行读你的网站', '它给合适的智能体交代任务', '智能体去干活', '把成果带回来', '一切先暂存，等你审核', '没有你的同意，什么都不会发出', '你得到的是'],
+        caps: ['一句大白话的指令', '它逐行读你的网站', '它给整个团队交代任务：十个智能体', '十个智能体，作为一个系统一起干活', '所有成果回到一处', '一切先暂存，等你审核', '没有你的同意，什么都不会发出', '你得到的是'],
         incl: ['掌握你定位的 Flow Intelligence', '十个智能体：搜索、内容、外联、报告等', '每一次发送都先暂存，等你批准', '每月一份报告'],
         cards: [['/services/hot-water-cylinders', '6 处修改'], ['/faq/plumber-cost-auckland', '新页面'], ['/areas/north-shore', '4 处修改']]
       } : {
         you: 'Find the questions people ask AI about hot water cylinders and fix the pages that answer them. Stage everything.',
         reply: 'Three pages staged. Waiting for your review.', ok: 'Looks good. Hold the pricing page for now.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
-        caps: ['A brief, in plain words', 'It reads your site, line by line', 'It briefs the right agents', 'The agents do the work', 'They bring it back', 'Everything is staged for your review', 'Nothing ships without your yes', 'What you get'],
+        caps: ['A brief, in plain words', 'It reads your site, line by line', 'It briefs the whole team: ten agents', 'Ten agents work as one system', 'Everything comes back to one place', 'Everything is staged for your review', 'Nothing ships without your yes', 'What you get'],
         incl: ['Flow Intelligence that holds your positioning', 'Ten agents: search, content, outbound, reporting and more', 'Every send staged for your approval', 'One report a month'],
         cards: [['/services/hot-water-cylinders', '6 changes'], ['/faq/plumber-cost-auckland', 'New page'], ['/areas/north-shore', '4 changes']]
       };
@@ -459,46 +459,72 @@ window.FlowDot = (function () {
       var cards = Array.prototype.slice.call(ov.querySelectorAll('.demo__run-cards .demo__run-card'));
       var incl = ov.querySelector('.demo__run-incl'), inclRows = Array.prototype.slice.call(incl.querySelectorAll('.demo__run-card'));
       var capEl = ov.querySelector('.demo__run-cap'), barEl = ov.querySelector('.demo__run-bar b');
-      var run = F.mount(rsvg, { role: 'flow', r: 15, dy: 6, goo: true });
-      /* a flat amber disc inside the goo group, under the light core, so the agents pull
-         off the core with a liquid neck instead of appearing beside it */
-      run.gooG.insertBefore(sel('circle', { cx: run.cx, cy: run.cy, r: run.r * 0.98, fill: '#e4a43c' }), run.gooG.firstChild);
+      var run = F.mount(rsvg, { role: 'flow', r: 11, dy: 2 });
       /* the page it reads: six hairlines to the right of the core, one lit at a time */
       var lines = sel('g', { opacity: 0 }); rsvg.insertBefore(lines, rsvg.firstChild);
       var lineEls = [];
-      for (var li = 0; li < 6; li++) { var ln = sel('rect', { x: 66, y: 36 + li * 5.2, width: li % 3 === 2 ? 18 : 26, height: 1.3, rx: 0.65, fill: '#faf8f3', 'fill-opacity': 0.16 }); lines.appendChild(ln); lineEls.push(ln); }
-      var sats = run.sats, satT = [[22, 44, 5.5], [80, 40, 5], [30, 82, 4.5]], satAnim = null, t0 = -1, LEN = 17.5, fired = [], done = false, lineT = -1, lit = -1;
-      var agentKeys = ['ai-search', 'content', 'outbound'], faces = [];
+      for (var li = 0; li < 6; li++) { var ln = sel('rect', { x: 66, y: 40 + li * 5, width: li % 3 === 2 ? 16 : 24, height: 1.3, rx: 0.65, fill: '#faf8f3', 'fill-opacity': 0.16 }); lines.appendChild(ln); lineEls.push(ln); }
+
+      /* The whole team: ten agents in their three groups, set around Flow Intelligence
+         the way /sprints/ lists them, each joined to the core by a hairline. */
+      var CX = run.cx, CY = run.cy, RX = 38, RY = 34, AS = 16.5;
+      var TEAM = [['search', -150], ['content', -120], ['social', -90], ['outbound', -48], ['conversion', -16], ['launch', 16], ['paid', 48], ['community', 100], ['measurement', 133], ['reporting', 166]];
+      var GROUPS = ZH ? [['被找到', 16, 10], ['获取潜在客户', 88, 97], ['留住客户', 12, 97]] : [['Get found', 16, 10], ['Get leads', 88, 97], ['Keep customers', 14, 97]];
+      var wires = sel('g', {}), pulsesG = sel('g', {}), labels = sel('g', { opacity: 0 }), crew = sel('g', {});
+      rsvg.insertBefore(wires, rsvg.firstChild); rsvg.appendChild(pulsesG); rsvg.appendChild(labels); rsvg.appendChild(crew);
+      labels.style.transition = 'opacity 600ms ease';
+      GROUPS.forEach(function (g) { var t = sel('text', { x: g[1], y: g[2], 'text-anchor': 'middle', 'font-size': 3.1, 'letter-spacing': 0.35, fill: 'rgba(250,248,243,.5)', 'font-family': 'ui-monospace, SFMono-Regular, Menlo, monospace' }); t.textContent = ZH ? g[0] : g[0].toUpperCase(); labels.appendChild(t); });
+      var glass = (rsvg.getBoundingClientRect().width * AS / 100) >= 56;
+      var agents = TEAM.map(function (a, i) {
+        var ang = a[1] * Math.PI / 180, fx = CX + Math.cos(ang) * RX, fy = CY + Math.sin(ang) * RY;
+        var dx = fx - CX, dy = fy - CY, len = Math.hypot(dx, dy), ux = dx / len, uy = dy / len;
+        var x1 = CX + ux * (run.r + 2.5), y1 = CY + uy * (run.r + 2.5), x2 = fx - ux * AS * 0.38, y2 = fy - uy * AS * 0.38, L = Math.hypot(x2 - x1, y2 - y1);
+        var wire = sel('line', { x1: x1, y1: y1, x2: x2, y2: y2, stroke: '#e4a43c', 'stroke-opacity': 0.32, 'stroke-width': 0.35, 'stroke-linecap': 'round', 'stroke-dasharray': L, 'stroke-dashoffset': L });
+        wires.appendChild(wire);
+        var wrap = sel('g', { opacity: 0 }), inner = sel('svg', { x: fx - AS / 2, y: fy - AS / 2, width: AS, height: AS, viewBox: '0 0 100 100', overflow: 'visible' });
+        wrap.appendChild(inner); crew.appendChild(wrap);
+        var dot = F.mount(inner, { role: 'agent', agent: a[0], r: 34, material: glass ? 'glass' : 'solid' });
+        var pulse = sel('circle', { r: 0, fill: '#f3c572' }); pulsesG.appendChild(pulse);
+        return { key: a[0], fx: fx, fy: fy, wire: wire, L: L, x1: x1, y1: y1, x2: x2, y2: y2, wrap: wrap, dot: dot, pulse: pulse, t0: -1, pt: -1, pdir: 1 };
+      });
+      var teamOut = -1, pulsing = false, homing = -1;
       function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
-      function showFaces(on) {
-        if (on && !faces.length) {
-          satT.forEach(function (p, i) {
-            var inner = sel('svg', { x: p[0] - p[2] * 1.45, y: p[1] - p[2] * 1.45, width: p[2] * 2.9, height: p[2] * 2.9, viewBox: '0 0 100 100' });
-            rsvg.appendChild(inner); var fd = F.mount(inner, { role: 'agent', agent: agentKeys[i], r: 34, state: 'work' }); faces.push({ svg: inner, dot: fd });
-          });
-        } else faces.forEach(function (f, i) { f.svg.setAttribute('opacity', on ? 1 : 0); if (!on) f.dot.set('idle'); });
-        if (on) sats.forEach(function (s) { s.setAttribute('r', 0); });
+      function back(x) { var c = 1.6; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); }
+      function crewFrame(now) {
+        agents.forEach(function (a, i) {
+          if (teamOut >= 0) {
+            var p = Math.max(0, Math.min(1, (now - teamOut - i * 150) / 650));
+            if (p > 0) {
+              var e = easeOut(p), k = 0.25 + 0.75 * back(p), x = a.fx + (CX - a.fx) * (1 - e), y = a.fy + (CY - a.fy) * (1 - e);
+              a.wrap.setAttribute('opacity', Math.min(1, p * 2.2));
+              a.wrap.setAttribute('transform', 'translate(' + x.toFixed(2) + ' ' + y.toFixed(2) + ') scale(' + k.toFixed(3) + ') translate(' + (-a.fx).toFixed(2) + ' ' + (-a.fy).toFixed(2) + ')');
+              a.wire.setAttribute('stroke-dashoffset', (a.L * (1 - e)).toFixed(2));
+              if (p >= 1 && a.t0 < 0) { a.t0 = now; a.dot.nod(); a.dot.blink(true); }
+            }
+          }
+          /* light runs along each wire: out to the agent while it works, home to the core when it is done */
+          if (pulsing || homing >= 0) {
+            var period = 1400, ph = ((now + i * 260) % period) / period;
+            if (homing >= 0) { ph = Math.max(0, Math.min(1, (now - homing - i * 70) / 700)); }
+            var out = homing < 0, q = out ? ph : 1 - ph;
+            var px = a.x1 + (a.x2 - a.x1) * q, py = a.y1 + (a.y2 - a.y1) * q;
+            a.pulse.setAttribute('cx', px.toFixed(2)); a.pulse.setAttribute('cy', py.toFixed(2));
+            a.pulse.setAttribute('r', (homing >= 0 && ph >= 1) ? 0 : 0.75 * Math.sin(Math.PI * Math.min(1, ph * 1.05)) + 0.15);
+          } else a.pulse.setAttribute('r', 0);
+        });
       }
+      function wave(fn, step) { agents.forEach(function (a, i) { setTimeout(function () { fn(a, i); }, i * (step || 80)); }); }
+      var t0 = -1, LEN = 19, fired = [], done = false, lineT = -1, lit = -1;
       var SCRIPT = [
         { at: 0,    i: 0, fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 700); } },
-        { at: 1.1,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); lines.setAttribute('opacity', 1); lineT = performance.now(); } },
-        { at: 3.4,  i: 2, fn: function () { lines.setAttribute('opacity', 0); run.set('think'); satAnim = { t0: performance.now(), dir: 1 }; } },
-        { at: 5.4,  i: 3, fn: function () { run.set('idle'); showFaces(true); faces.forEach(function (f) { f.dot.set('work'); }); } },
-        { at: 7.2,  i: 4, fn: function () { faces.forEach(function (f) { f.dot.set('done'); }); setTimeout(function () { showFaces(false); sats.forEach(function (s, i) { s.setAttribute('cx', satT[i][0]); s.setAttribute('cy', satT[i][1]); s.setAttribute('r', satT[i][2]); }); satAnim = { t0: performance.now(), dir: -1 }; }, 350); } },
-        { at: 8.6,  i: 5, fn: function () { run.trail(); run.set('review'); ov.classList.add('is-staged'); m1.classList.remove('is-on'); m2.classList.add('is-on'); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 120 + i * 140); }); } },
-        { at: 10.8, i: 6, fn: function () { m2.classList.remove('is-on'); m3.classList.add('is-on'); run.lookAt(0.9, 0.6); setTimeout(function () { run.set('done'); run.lookAt(null); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-ok'); }, i * 120); }); }, 600); } },
-        { at: 12.6, i: 7, fn: function () { m3.classList.remove('is-on'); cards.forEach(function (c) { c.classList.remove('is-on'); }); incl.classList.add('is-on'); inclRows.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 150 + i * 130); }); run.set('done'); } }
+        { at: 1.2,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); lines.setAttribute('opacity', 1); lineT = performance.now(); } },
+        { at: 3.4,  i: 2, fn: function () { lines.setAttribute('opacity', 0); run.set('think'); setTimeout(function () { run.set('idle'); run.trail(); teamOut = performance.now(); }, 300); setTimeout(function () { labels.setAttribute('opacity', 1); }, 1500); } },
+        { at: 6.2,  i: 3, fn: function () { run.set('work'); pulsing = true; wave(function (a) { a.dot.set('work'); }, 60); } },
+        { at: 9.4,  i: 4, fn: function () { pulsing = false; homing = performance.now(); wave(function (a) { a.dot.set('done'); }, 70); setTimeout(function () { run.wob.v += 3; run.set('idle'); }, 1300); } },
+        { at: 11.0, i: 5, fn: function () { homing = -1; labels.setAttribute('opacity', 0); run.set('review'); ov.classList.add('is-staged'); m1.classList.remove('is-on'); m2.classList.add('is-on'); wave(function (a) { a.dot.set('idle'); a.dot.lookAt(0.9, 0.1); }, 40); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 120 + i * 140); }); } },
+        { at: 13.4, i: 6, fn: function () { m2.classList.remove('is-on'); m3.classList.add('is-on'); run.lookAt(0.9, 0.6); setTimeout(function () { run.set('done'); run.lookAt(null); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-ok'); }, i * 120); }); wave(function (a) { a.dot.lookAt(null); a.dot.set('done'); }, 90); }, 600); } },
+        { at: 15.6, i: 7, fn: function () { m3.classList.remove('is-on'); cards.forEach(function (c) { c.classList.remove('is-on'); }); incl.classList.add('is-on'); inclRows.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 150 + i * 130); }); run.set('idle'); wave(function (a) { a.dot.set('idle'); }, 50); } }
       ];
-      function satFrame(now) {
-        if (!satAnim) return;
-        var tt = (now - satAnim.t0) / 1000;
-        sats.forEach(function (s, i) {
-          var local = Math.max(0, Math.min(1, (tt - i * 0.3) / 0.9)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
-          var wob = Math.sin(now / 400 + i) * 1.5 * p;
-          s.setAttribute('cx', run.cx + (satT[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satT[i][1] - run.cy) * p + Math.cos(now / 500 + i) * p); s.setAttribute('r', satT[i][2] * Math.min(1, 0.4 + p * 0.9));
-        });
-        if (tt > 1.9) { if (satAnim.dir < 0) { sats.forEach(function (s) { s.setAttribute('r', 0); }); run.wob.v += 2.5; } satAnim = null; }
-      }
       function lineFrame(now) {
         if (lineT < 0) return;
         var idx = Math.floor((now - lineT) / 360) % 6;
@@ -517,7 +543,7 @@ window.FlowDot = (function () {
         var tt = (now - t0) / 1000;
         barEl.style.width = Math.min(100, tt / LEN * 100) + '%';
         SCRIPT.forEach(function (s, i) { if (tt >= s.at && !fired[i]) { fired[i] = true; s.fn(); capEl.textContent = S.caps[s.i]; if (s.i !== 1) lineT = -1; } });
-        satFrame(now); lineFrame(now);
+        crewFrame(now); lineFrame(now);
         if (tt < LEN) requestAnimationFrame(frame); else finish();
       }
       ov.querySelector('.demo__run-skip').addEventListener('click', finish);
