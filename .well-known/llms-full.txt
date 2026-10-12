@@ -51,7 +51,7 @@ Site structure:
   - /blog/aeo-checklist: An AEO checklist for a small business covers six areas: open your site to AI crawlers, publish consistent facts about the business, write pages that answer customer questions directly, earn reviews and mentions elsewhere, add accurate structured data, and track what AI engines say about you. Most owners can work through it in a week.
   - /blog/aeo-vs-seo-vs-geo: SEO gets your pages ranked in search results. AEO gets your business quoted or recommended inside the answers AI tools write. GEO is the research term for the same goal in generative AI engines such as ChatGPT and Perplexity. In practice AEO and GEO overlap almost completely, and both rest on good SEO.
   - /blog/get-recommended-by-chatgpt-auckland: Auckland businesses get recommended by ChatGPT and Google Maps when local facts about them are complete and agree everywhere. Set up your Google Business Profile with the right category and your suburbs as service areas, keep your name, address and phone identical everywhere including the NZBN register, collect recent reviews, and publish a page for each service and area.
-  - /blog/how-to-get-mentioned-by-chatgpt: There is no form to submit your business to ChatGPT. ChatGPT, Perplexity, Google AI Mode and Copilot build answers from the open web and their search partners, so you get mentioned by being easy to find and confirm: crawlable pages that answer buyer questions, consistent business details, recent reviews, and mentions on sites the assistants already trust.
+  - /blog/how-to-get-mentioned-by-chatgpt: There is no form to submit your business to ChatGPT. ChatGPT, Perplexity, Google AI Mode and Copilot build answers from the open web and their search partners, so you get mentioned and recommended by being easy to find and confirm: crawlable pages that answer buyer questions, consistent business details, recent reviews, and mentions on sites the assistants already trust.
   - /blog/seo-for-small-business-nz: SEO for a New Zealand small business starts with Google, which handles about nine in ten NZ searches. Complete and maintain your Google Business Profile, collect recent reviews every week, give each service and each area you cover its own page, and fix the technical basics in Search Console. Most owners can do the first month themselves.
 - Topic: Costs and choices (/blog/?topic=costs). What marketing help costs in New Zealand and Australia, and how to choose.
   - /blog/ai-marketing-cost-australia-new-zealand [pillar]: In 2026, AI marketing for a small business costs USD 20 to 99 a month per tool if you do the work yourself, NZD 60 to 150 an hour from a freelancer, NZD 1,500 to 10,000 a month from an agency, or NZD 90,000 to 130,000 a year for an in-house hire. AI marketing agents sit between the tool and the agency.
@@ -75,7 +75,7 @@ Site structure:
   - /blog/ai-agents-for-marketing: Build a positioning brief first, because every marketing agent is briefed from it. Then build the agent for the gap that costs you most, usually search or outbound for a 5 to 50 person business. Install one agent at a time, give it narrow data access, put a human review before anything reaches a customer, and measure enquiries.
   - /blog/ai-marketing-automation-small-business: AI marketing automation is software that runs marketing steps on triggers, such as a welcome email after a sign-up, with AI writing, sorting and personalising the content inside each step. A small business should start with six: a welcome sequence, enquiry follow-up, quote follow-up, review requests, abandoned bookings or carts, and re-engagement.
   - /blog/running-marketing-on-claude-code: You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.
-  - /blog/what-is-a-marketing-engineer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content, outbound and reporting, and who keeps the judgement over what ships. Job listings with the title grew fast in 2025, but the role is still small. A real one can show you a running system.
+  - /blog/what-is-a-marketing-engineer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content and reporting, and keeps the judgement over what ships. A GTM engineer builds the systems that feed sales: prospect lists, enrichment, sequencing and CRM automation. Either way, a real one can show you a running system.
   - /blog/what-is-an-ai-cmo: An AI CMO is software that does the planning half of a chief marketing officer's job. It reads the business and its market, sets priorities, writes the marketing plan, briefs the work and reviews the results each cycle. A human still owns positioning, pricing, claims, spend and anything that reaches a customer.
 - Topic: Transformation (/blog/?topic=transformation). Moving a small business marketing function onto AI systems, job by job.
   - /blog/ai-marketing-transformation-small-business [pillar]: AI marketing transformation for a small business is the move from marketing done in spare hours to marketing run by systems, one job at a time. A practical 90-day path fixes positioning and measurement first, then search and content, then social and outbound, with a human approving everything that reaches a customer.
@@ -116,29 +116,31 @@ Everything below is the complete, current text of flowai.co.nz, provided so AI a
 
 ## AI Marketing for Small Business in NZ: Complete Guide
 
-Source URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz.html
+Source URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz
 Type: Guide
 Author: Amber Lan (Flow AI)
 Published: 2026-08-20
-Last updated: 2026-08-20
+Last updated: 2026-10-08
 
 Guides / Transformation
 
 # AI marketing for small business in NZ: the complete guide.
 
-AI marketing means using AI systems to run the repetitive parts of marketing, so a business without a marketing hire can still show up consistently: found on Google, cited by AI assistants, publishing every week, and following up with every lead. This guide covers what that includes, what it costs, and where to start.
-
-Amber Lan, AI marketing engineer·Updated 20 August 2026·9 min read
-
 The short answer
 
 AI marketing for a New Zealand small business covers four systems: SEO so Google finds you, answer engine optimisation so ChatGPT and AI search quote you, a content engine that publishes every week, and outbound follow-up that never forgets. Most businesses start with one system, prove it, then add the next.
+
+AI marketing means using AI systems to run the repetitive parts of marketing, so a business without a marketing hire can still show up consistently: found on Google, cited by AI assistants, publishing every week, and following up with every lead. This guide covers what that includes, what it costs, and where to start.
+
+Amber Lan, AI marketing engineer·Updated 8 October 2026·13 min read
 
 ## 01Why AI changes the marketing math for NZ small businesses
 
 The old math was brutal. A small business could not justify a full-time marketer, so the owner did the marketing personally, in the gaps between actual work. Content went out when there was time, which meant rarely. SEO was something the website person mentioned once. Leads got followed up when someone remembered. The result was a business that was good at its job and invisible to everyone who had not already heard of it.
 
-AI changes which parts of that need a human. Adoption reflects it: in the U.S. Chamber of Commerce's 2025 Empowering Small Business report1, the share of small businesses using generative AI jumped from 40% to 58% in a single year. The pattern in New Zealand looks the same from where I sit: the owners I talk to already use ChatGPT for one-off tasks. The gap is between using AI occasionally and having it run a system.
+AI changes which parts of that need a human, and New Zealand owners have started. Xero's May 2026 research found 61% of New Zealand small and medium businesses proactively using AI, and 79% of those users learning through self-guided experimentation1. MBIE-commissioned research by The Research Agency, which surveyed 500 SMEs in April 2025, found 94% aware of at least one AI tool2, and named confidence and capability as the factors that decide whether a business adopts AI and expands its use.
+
+The payoff shows up in the numbers too. Deloitte Access Economics' April 2026 study for 2degrees, surveyed in January and February 2026, found 82% of New Zealand businesses reporting AI use, and the average SME using AI earning around $400,000 more in FY25 than a comparable non-adopter3. That is an association, and adopters may differ in other ways, but it matches what owners describe. The gap now is between using AI occasionally and having it run a system.
 
 Here is the distinction that matters, and the one most AI marketing content glosses over. AI removes repetitive work. It does not remove judgment. Drafting fifty product descriptions is repetitive work. Deciding what your business should claim, and to whom, is judgment. A system that automates the first and leaves you the second makes one person as productive as a small team. A system that pretends to automate both produces the generic sludge you already recognise in your inbox.
 
@@ -154,7 +156,7 @@ Concretely, for a NZ service business that means: every service you offer gets i
 
 ### 2. AEO and GEO: being cited by ChatGPT and AI search
 
-The new layer, and the one almost no NZ small business has touched. When someone asks ChatGPT, Perplexity, or Google's AI Overviews to recommend a business that does what you do, the assistant answers with names. Getting into that answer is called answer engine optimization, and it is engineering rather than magic: let the AI crawlers in, describe your business in structured data, publish content that can be quoted in isolation, and keep your facts consistent across the web. I run an open-source toolkit for exactly this, and this website is its live demonstration.
+The new layer, and the one almost no NZ small business has touched. When someone asks ChatGPT, Perplexity, or Google's AI Overviews to recommend a business that does what you do, the assistant answers with names. Getting into that answer is called answer engine optimisation, and it is engineering rather than magic: let the AI crawlers in, describe your business in structured data, publish content that can be quoted in isolation, and keep your facts consistent across the web. I run an open-source toolkit for exactly this, and this website is its live demonstration.
 
 The reason to move on this now is simple: the space is nearly empty. Very few NZ businesses have made themselves legible to AI assistants, which means the ones that do are competing against absence. In every other marketing channel you fight incumbents with budgets. In this one, for the moment, you mostly fight nobody.
 
@@ -196,9 +198,49 @@ When you want the first system built with your team, AI marketing services for N
 
 - Already getting traffic that does not convert: start with analytics and follow-up before spending anything on more visibility. Fix the leak before paying for more water.
 
-## 05What this costs against an agency, a freelancer, or a hire
+## 05Which AI marketing tools does a small business need, and what do they cost?
 
-The honest answer is that every option can work, and each has a structural trade-off. Prices for agencies and freelancers vary widely in NZ, so get current quotes rather than trusting anyone's summary of the market, including mine. What I can compare is the structure of what you pay for.
+A New Zealand small business can start with an AI assistant for drafting and research and a design tool for visuals. As of October 2026, ChatGPT Plus or Claude Pro costs NZD 40 a month and Canva Pro NZD 180 a year, so a basic stack runs about NZD 55 to 95 a month before anyone's time.
+
+Tool
+
+What it does in a marketing system
+
+NZ price, October 2026
+
+ChatGPT (OpenAI)
+
+Drafting, research, image creation and scheduled tasks
+
+Go NZD 14 a month; Plus NZD 40 a month
+
+Claude (Anthropic)
+
+Long-form drafting and editing, analysis, and Claude Code for building agents
+
+Pro NZD 40 a month billed monthly, or NZD 33 a month billed annually, including GST
+
+Canva
+
+Social graphics, presentations and brand templates
+
+Free plan; Pro NZD 180 a year for one person
+
+Google Business Profile
+
+Your listing in Google Search and Maps, which local search and AI answers both read
+
+Free
+
+Prices come from each vendor's New Zealand pricing page, read on 8 October 2026: OpenAI lists ChatGPT Go at NZD 14 and Plus at NZD 40 a month4, Anthropic lists Claude Pro at NZD 40 a month, or NZD 33 a month billed annually, including 15% GST5, Canva lists Pro at NZD 180 a year for one person6, and Google says creating a Business Profile is free7. The NZD 55 to 95 range is one assistant plus Canva at the low end, and both assistants plus Canva at the top. Vendors change plans often, so check the page before you budget.
+
+The subscriptions are the cheap part. What decides the result is the system around them: the brief the tools work from, the schedule they run on, and the hour a week someone spends reviewing what they produce.
+
+## 06What this costs against an agency, a freelancer, or a hire
+
+Every option can work, and each has a structural trade-off. In New Zealand dollars, published 2026 ranges put an AI tool stack you run yourself at about NZD 55 to 95 a month, a freelancer at NZD 50 to 150 an hour, an agency at NZD 1,000 to 10,000 a month, and an in-house marketer at about NZD 76,000 to 167,000 a year all in.
+
+The freelancer and agency figures are agencies estimating their own market: King Tide Marketing's July 2026 guide puts most NZ small and medium businesses at NZD 1,000 to 10,000 a month with an agency, and freelancers at NZD 60 to 150 an hour8, while Jelly Digital's September 2026 guide puts freelancers at NZD 50 to 120 an hour9. The in-house range adds KiwiSaver, ACC levies and overheads to SEEK and Robert Walters salary data, worked through in the agency vs freelancer vs in-house guide. For agency prices by service, see what a marketing agency costs in NZ. Treat every range as a starting point and get current quotes. The table below compares the structure of what you pay for.
 
 Option
 
@@ -234,9 +276,9 @@ AI systems + one engineer
 
 Systems that do the production, one accountable person doing the judgment. Flow AI's version is a contract build, scoped per project.
 
-Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub2.
+Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub10.
 
-## 06A practical starting checklist
+## 07A practical starting checklist
 
 You do not need all four systems on day one. This is the order that compounds.
 
@@ -264,7 +306,15 @@ You do not need all four systems on day one. This is the order that compounds.
 
 - Measure. One page of numbers a month tells you which channel pays. Without it you are guessing.
 
-## 07Common mistakes NZ small businesses make with AI marketing
+## 08What does the Privacy Act 2020 mean for AI marketing?
+
+The Privacy Act 2020 applies whenever a New Zealand business puts personal information into an AI tool, such as customer emails, enquiry details or prospect lists. The Privacy Commissioner expects a privacy impact assessment before you start, and advises keeping personal information out of AI tools whenever you are unsure.
+
+The Office of the Privacy Commissioner's AI guidance, first published in September 2023, starts from the position that the Privacy Act applies to everyone using AI tools in New Zealand, and recommends a privacy impact assessment that you update regularly11. A newer rule matters for outbound work: from 1 May 2026, information privacy principle 3A requires a business that collects personal information indirectly to take reasonable steps to tell the person12, which covers contact details bought from a data provider or pulled in by an enrichment tool.
+
+In practice that means a few habits. Strip names and contact details before pasting customer material into an assistant. Use the setting that stops your content training the vendor's models, which OpenAI's pricing page lists as an opt-out on every ChatGPT plan. Keep a one-page record of which tools see which data, and review it when you add a system.
+
+## 09Common mistakes NZ small businesses make with AI marketing
 
 Buying tools without a system. A ChatGPT subscription is not a marketing function. Tools produce output; a system decides what to produce, checks the quality, and ships it on schedule. The tool spend is wasted without the surrounding discipline.
 
@@ -274,7 +324,7 @@ Publishing unreviewed AI output. Readers recognise generated text faster every m
 
 Doing everything at once. Four systems launched simultaneously by one busy owner means four systems abandoned by June. Sequence them. The checklist above is the order I use with clients.
 
-## 08Questions owners ask
+## 10Questions owners ask
 
 ### What is AI marketing for a small business?
 
@@ -282,11 +332,15 @@ AI marketing means using AI systems to run the repetitive parts of marketing: dr
 
 ### How much does AI marketing cost for a small NZ business?
 
-It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI scopes and prices each build per project.
+Published 2026 ranges in New Zealand dollars: an AI tool stack you run yourself costs about NZD 55 to 95 a month, a freelancer NZD 50 to 150 an hour, an agency NZD 1,000 to 10,000 a month, and an in-house marketer about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Flow AI scopes and prices each build per project.
+
+### Can I put customer details into ChatGPT or Claude under New Zealand privacy law?
+
+Treat it as a privacy decision. The Privacy Act 2020 applies to AI tools, and the Privacy Commissioner advises against using AI tools for personal information when in doubt. Remove names and contact details before pasting, switch off model training on your content where the vendor offers that setting, and record which tools hold which data in a short privacy impact assessment.
 
 ### Do I still need SEO if I am doing AEO?
 
-Yes. Answer engine optimization builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
+Yes. Answer engine optimisation builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 
 ### Can one person really run all of this?
 
@@ -300,13 +354,33 @@ AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. Sh
 
 ## Sources
 
-Every figure links to its primary source. Checked 20 August 2026.
+Every figure links to its primary source. Checked 8 October 2026.
 
-- U.S. Chamber of Commerce's 2025 Empowering Small Business reportuschamber.com
+- Xero's May 2026 research found 61% of New Zealand small and medium businesses proactively using AI, and 79% of those users learning through self-guided experimentationblog.xero.com
+
+- MBIE-commissioned research by The Research Agency, which surveyed 500 SMEs in April 2025, found 94% aware of at least one AI toolmbie.govt.nz
+
+- Deloitte Access Economics' April 2026 study for 2degrees, surveyed in January and February 2026, found 82% of New Zealand businesses reporting AI use, and the average SME using AI earning around $400,000 more in FY25 than a comparable non-adopter2degrees.nz
+
+- OpenAI lists ChatGPT Go at NZD 14 and Plus at NZD 40 a monthchatgpt.com
+
+- Anthropic lists Claude Pro at NZD 40 a month, or NZD 33 a month billed annually, including 15% GSTclaude.com
+
+- Canva lists Pro at NZD 180 a year for one personcanva.com
+
+- Google says creating a Business Profile is freebusiness.google.com
+
+- King Tide Marketing's July 2026 guide puts most NZ small and medium businesses at NZD 1,000 to 10,000 a month with an agency, and freelancers at NZD 60 to 150 an hourkingtide.nz
+
+- Jelly Digital's September 2026 guide puts freelancers at NZD 50 to 120 an hourjellydigital.nz
 
 - public on GitHubgithub.com
 
-TopicTransformationFormatGuideUpdated20 August 2026Reading time9 minutesShare guide
+- The Office of the Privacy Commissioner's AI guidance, first published in September 2023, starts from the position that the Privacy Act applies to everyone using AI tools in New Zealand, and recommends a privacy impact assessment that you update regularlyprivacy.org.nz
+
+- from 1 May 2026, information privacy principle 3A requires a business that collects personal information indirectly to take reasonable steps to tell the personprivacy.org.nz
+
+TopicTransformationFormatGuideUpdated8 October 2026Reading time13 minutesShare guide
 
 Explore with AI
 
@@ -356,7 +430,7 @@ Amber Lan · AI marketing engineer · Auckland, worldwide
 
 # Let's build the AI agents that run your marketing.
 
-I run a whole marketing function on these agents, and this site walks you through that system. Bring me in to build it with your team, or talk to me about a role.
+I'm Amber Lan, and Flow AI is my AI marketing engineering practice in Auckland, New Zealand. I run a whole marketing function on these agents, and this site walks you through that system. Bring me in to build it with your team, or talk to me about a role.
 
 Work with meHiring? Let's talk
 
@@ -761,7 +835,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ## AI Marketing Services in New Zealand | Flow AI, Auckland
 
-Source URL: https://www.flowai.co.nz/ai-marketing-services/new-zealand.html
+Source URL: https://www.flowai.co.nz/ai-marketing-services/new-zealand
 Type: Service
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-13
@@ -944,7 +1018,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ## AI Marketing Services for Australian Businesses | Flow AI
 
-Source URL: https://www.flowai.co.nz/ai-marketing-services/australia.html
+Source URL: https://www.flowai.co.nz/ai-marketing-services/australia
 Type: Service
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-13
@@ -1127,7 +1201,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ## AI Marketing Services in Auckland | Flow AI
 
-Source URL: https://www.flowai.co.nz/ai-marketing-services/auckland.html
+Source URL: https://www.flowai.co.nz/ai-marketing-services/auckland
 Type: Service
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-13
@@ -1652,7 +1726,7 @@ Work with meExplore the engine in production
 
 ## Positioning Sprint · fixed scope · Flow AI
 
-Source URL: https://www.flowai.co.nz/sprints/positioning.html
+Source URL: https://www.flowai.co.nz/sprints/positioning
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
@@ -1770,7 +1844,7 @@ A short form. I reply personally.
 
 ## AI-Search Sprint · fixed scope · Flow AI
 
-Source URL: https://www.flowai.co.nz/sprints/ai-search.html
+Source URL: https://www.flowai.co.nz/sprints/ai-search
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
@@ -1886,7 +1960,7 @@ A short form. I reply personally.
 
 ## Content Engine Sprint · fixed scope · Flow AI
 
-Source URL: https://www.flowai.co.nz/sprints/content-engine.html
+Source URL: https://www.flowai.co.nz/sprints/content-engine
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
@@ -2004,7 +2078,7 @@ A short form. I reply personally.
 
 ## Outbound Sprint · fixed scope · Flow AI
 
-Source URL: https://www.flowai.co.nz/sprints/outbound.html
+Source URL: https://www.flowai.co.nz/sprints/outbound
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
@@ -2122,7 +2196,7 @@ A short form. I reply personally.
 
 ## Analytics Sprint · fixed scope · Flow AI
 
-Source URL: https://www.flowai.co.nz/sprints/analytics.html
+Source URL: https://www.flowai.co.nz/sprints/analytics
 Type: Sprint
 Author: Amber Lan (Flow AI)
 
@@ -2252,7 +2326,7 @@ A short form. I reply personally.
 
 ## Three demand engines, one pipeline | Flow AI
 
-Source URL: https://www.flowai.co.nz/work/enterprise-gtm.html
+Source URL: https://www.flowai.co.nz/work/enterprise-gtm
 Type: Case study
 Author: Amber Lan (Flow AI)
 Published: 2026-08-20
@@ -2356,7 +2430,7 @@ Work with me
 
 ## Content engine with a codified voice gate | Flow AI
 
-Source URL: https://www.flowai.co.nz/work/content-engine.html
+Source URL: https://www.flowai.co.nz/work/content-engine
 Type: Case study
 Author: Amber Lan (Flow AI)
 Published: 2026-08-20
@@ -2460,7 +2534,7 @@ Work with me
 
 ## An SEO toolkit built for AI citations | Flow AI
 
-Source URL: https://www.flowai.co.nz/work/geo-seo-toolkit.html
+Source URL: https://www.flowai.co.nz/work/geo-seo-toolkit
 Type: Case study
 Author: Amber Lan (Flow AI)
 Published: 2026-08-20
@@ -2558,18 +2632,18 @@ Work with me
 
 ---
 
-## Amber Lan, AI Marketing Engineer and GTM Engineer (Remote)
+## Amber Lan, AI Marketing Engineer and GTM Engineer, Auckland (Remote)
 
-Source URL: https://www.flowai.co.nz/about.html
+Source URL: https://www.flowai.co.nz/about
 Type: Page
 Author: Amber Lan (Flow AI)
-Last updated: 2026-10-06
+Last updated: 2026-10-08
 
 Now: running marketing solo at Novamind Labs in Auckland
 
 # Amber Lan. AI marketing engineer and GTM engineer.
 
-I run a whole marketing function, strategy and execution, on AI agents I build.
+I'm Amber Lan, and Flow AI is my AI marketing engineering practice in Auckland, New Zealand. I run a whole marketing function, strategy and execution, on AI agents I build.
 
 Work with meGet my CV
 
@@ -3136,6 +3210,7 @@ Lead genlistings, social, paid
 - AI search: SEO through to AEO and GEO
 
 - Lifecycle, attribution and RevOps
+
 - Marketing analytics: SQL on BigQuery, GA4 and CRM data
 
 ### Stack
@@ -3210,7 +3285,7 @@ Yes, she is open to conversations about senior marketing engineer, GTM engineer 
 
 ## The Flow AI manifesto | Marketing finally has its engineering layer
 
-Source URL: https://www.flowai.co.nz/manifesto.html
+Source URL: https://www.flowai.co.nz/manifesto
 Type: Page
 Author: Amber Lan (Flow AI)
 Published: 2026-10-01
@@ -3519,7 +3594,7 @@ Work with meExplore how it works
 
 ## Brand DNA researcher | Free Flow AI agent template
 
-Source URL: https://www.flowai.co.nz/templates/brand-dna.html
+Source URL: https://www.flowai.co.nz/templates/brand-dna
 Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
@@ -3610,7 +3685,7 @@ Work with meInstall Flow Intelligence as a one-week positioning sprint
 
 ## Full GEO audit | Free Flow AI agent template
 
-Source URL: https://www.flowai.co.nz/templates/geo-audit.html
+Source URL: https://www.flowai.co.nz/templates/geo-audit
 Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
@@ -3701,7 +3776,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 ## AI crawler access check | Free Flow AI agent template
 
-Source URL: https://www.flowai.co.nz/templates/ai-crawler-check.html
+Source URL: https://www.flowai.co.nz/templates/ai-crawler-check
 Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
@@ -3916,7 +3991,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 ## AI citability scorer | Free Flow AI agent template
 
-Source URL: https://www.flowai.co.nz/templates/ai-citability.html
+Source URL: https://www.flowai.co.nz/templates/ai-citability
 Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
@@ -4005,7 +4080,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 ## Content evidence auditor | Free Flow AI agent template
 
-Source URL: https://www.flowai.co.nz/templates/content-evidence-audit.html
+Source URL: https://www.flowai.co.nz/templates/content-evidence-audit
 Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
@@ -4096,7 +4171,7 @@ Work with meInstall the content agent as a one-week content engine sprint
 
 ## Reddit opportunity researcher | Free Flow AI agent template
 
-Source URL: https://www.flowai.co.nz/templates/reddit-opportunities.html
+Source URL: https://www.flowai.co.nz/templates/reddit-opportunities
 Type: Template
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-02
@@ -4189,7 +4264,7 @@ Work with meAsk about running the community agent every month
 
 ## Privacy policy | Flow AI
 
-Source URL: https://www.flowai.co.nz/privacy.html
+Source URL: https://www.flowai.co.nz/privacy
 Type: Page
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-06
@@ -4338,7 +4413,7 @@ Questions about privacy? Email amber.lan.growth.digital@gmail.com.
 
 ## Work with Amber Lan | Flow AI, Auckland NZ
 
-Source URL: https://www.flowai.co.nz/contact.html
+Source URL: https://www.flowai.co.nz/contact
 Type: Page
 Author: Amber Lan (Flow AI)
 
@@ -6542,12 +6617,12 @@ A: Yes, as group training. The RBPN eligible subjects page lists artificial inte
 Q: Can the AI Advisory Pilot fund a new website or app with AI built in?
 A: Usually it cannot. The pilot excludes general software or product development, and AI products or services built to sell to customers. It is designed to help a business adopt AI in its own processes and support its team to use it. A website or app project with AI features is likely to fall outside scope, though a growth advisor can confirm where a specific idea sits.
 
-## What is a marketing engineer? What the role does and how to tell a real one.
+## What is a marketing engineer, and how is it different from a GTM engineer?
 URL: https://www.flowai.co.nz/blog/what-is-a-marketing-engineer
 Author: Amber Lan, Flow AI
 Updated: 2026-10-08
 
-Short answer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content, outbound and reporting, and who keeps the judgement over what ships. Job listings with the title grew fast in 2025, but the role is still small. A real one can show you a running system.
+Short answer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content and reporting, and keeps the judgement over what ships. A GTM engineer builds the systems that feed sales: prospect lists, enrichment, sequencing and CRM automation. Either way, a real one can show you a running system.
 
 What is a marketing engineer?
 
@@ -6591,14 +6666,16 @@ The Journal's report lists the same kind of work: AI systems that automate compe
 
 Marketing engineer vs GTM engineer vs growth engineer: what is the difference?
 
-The five roles below overlap in tools but differ in what they build and what they answer for. A marketing engineer builds the systems that produce marketing. A GTM engineer builds the systems that feed sales. A growth engineer changes the product to lift sign-ups. Marketing operations and SEO managers run narrower parts of the same machine.
+The six roles below overlap in tools but differ in what they build and what they answer for. A marketing engineer builds the systems that produce marketing. A GTM engineer builds the systems that feed sales. RevOps owns the shared data and process underneath both. A growth engineer changes the product to lift sign-ups.
 
   RoleWhat they buildTypical toolsHow success is measured
 
   
-    Marketing engineerAI agents and systems that produce marketing: content engines, AI search fixes, outbound, reportingLanguage models and agent frameworks, Python or TypeScript, workflow tools, CMS, analyticsAgents running each week, time saved, enquiries and revenue they drive, how the brand appears in AI answers
+    Marketing engineerAI agents and systems that produce marketing: content engines, AI search fixes, outbound, reportingLanguage models, Claude Code and other agent frameworks, Python or TypeScript, workflow tools, CMS, analyticsAgents running each week, time saved, enquiries and revenue they drive, how the brand appears in AI answers
 
-    GTM engineerProspect lists, enrichment, sequencing and CRM automation for the sales teamCRM, enrichment and sequencing tools, workflow tools, scriptsPipeline created, meetings booked, data quality in the CRM
+    GTM engineerProspect lists, enrichment, sequencing and CRM automation for the sales teamClay and other enrichment tools, CRM, sequencing tools, workflow tools, scriptsPipeline created, meetings booked, data quality in the CRM
+
+    RevOps (revenue operations)The shared process and data across marketing, sales and customer success: CRM design, pipeline stages, handover rules, forecasting and attributionCRM, marketing automation and sales engagement platforms, BI and reporting toolsForecast accuracy, conversion between pipeline stages, data quality, speed of handover
 
     Growth engineerProduct changes and experiments: onboarding flows, sign-up steps, referral loopsThe product codebase, feature flags, experimentation and product analyticsActivation, conversion and retention inside the product
 
@@ -6608,7 +6685,13 @@ The five roles below overlap in tools but differ in what they build and what the
 
   
 
-The Journal noted that "go-to-market engineer" is now used for sales operations work, and "narrative engineer" has appeared too. When you read a listing, the "what they build" column tells you more than the title. In small companies, one person often covers both marketing engineer and GTM engineer work.
+The Journal noted that "go-to-market engineer" is now used for sales operations work, and "narrative engineer" has appeared too. When you read a listing, the "what they build" column tells you more than the title. In small companies, one person often covers both marketing engineer and GTM engineer work, and sometimes the RevOps plumbing as well.
+
+What does a GTM engineer earn?
+
+The best public pay data for GTM engineers comes from US job postings. RevGuild's July 2026 salary report, built on 71 US postings that disclosed pay between June 2025 and June 2026, found a median base salary of USD 150,000, with the middle half between about USD 130,000 and 170,000. Cargo, a GTM software vendor, analysed 509 US postings with disclosed pay from April to July 2026 and found a median of USD 159,000, with most between USD 135,000 and 190,000.
+
+Read both as a guide to the US market. They count only postings that publish a salary, which is about a quarter of them by Cargo's estimate, and they report base pay without equity. For New Zealand and Australia, where the titles are still rare in job ads, the 2026 jobs data for NZ and Australia covers what local employers advertise instead.
 
 What skills does a marketing engineer need?
 
@@ -6621,6 +6704,8 @@ On the technical side:
   A scripting language, usually Python or TypeScript, plus APIs and webhooks.
 
   Workflow tools such as n8n or Zapier, and the judgement to know when code is the better choice.
+
+  Agent and data tools that have become standard on both sides of the role: Claude Code for building and running agents from a code repository, and Clay for prospect research and enrichment, which GTM engineers use heavily. The working notes on running marketing on Claude Code show one setup in detail.
 
   Marketing data: analytics events, CRM fields, attribution, and enough SQL or spreadsheet skill to check a number.
 
@@ -6723,7 +6808,7 @@ To find out which system your marketing needs first, talk to Amber.
 Q: What does a marketing engineer do?
 A: A marketing engineer builds the systems that produce marketing work and then runs them every week. Typical systems include a content engine briefed from the company's positioning, an outbound agent with a human takeover rule, AI search fixes so assistants describe the business correctly, and a reporting agent. The engineer reviews what the systems produce and decides what reaches customers.
 Q: What is the difference between a marketing engineer and a GTM engineer?
-A: A GTM engineer usually works on the sales side: prospect lists, enrichment, sequencing and the CRM plumbing that feeds a sales team. A marketing engineer works on the marketing side: positioning, content, search visibility, campaigns and reporting. The tools overlap and many people do both, but the measure differs. GTM engineers answer to pipeline; marketing engineers answer to demand and how the brand shows up.
+A: A GTM engineer usually works on the sales side: prospect lists, enrichment in tools such as Clay, sequencing and the CRM plumbing that feeds a sales team. A marketing engineer works on the marketing side: positioning, content, search visibility, campaigns and reporting. RevOps owns the shared data and process underneath both. The tools overlap and many people do both, but GTM engineers answer to pipeline and marketing engineers to demand.
 Q: Do you need to code to be a marketing engineer?
 A: You need enough technical skill to build, deploy and fix the systems you run, which usually means comfort with APIs, a scripting language such as Python, and workflow tools. You do not need to be a software engineer. The harder half of the job is marketing judgement: knowing what good output looks like and when a system should not be sending anything at all.
 Q: Is marketing engineer a real job title or a rebrand?
@@ -7892,7 +7977,7 @@ A: With a system in place, two to three hours a week covers a small programme: a
 ## How much does a marketing agency cost in NZ?
 URL: https://www.flowai.co.nz/blog/marketing-agency-cost-nz
 Author: Amber Lan, Flow AI
-Updated: 2026-10-02
+Updated: 2026-10-08
 
 Short answer: Most New Zealand marketing agencies charge NZD 95 to 200 an hour. Monthly retainers run about NZD 500 to 1,500 for one channel, NZD 1,500 to 4,000 for several, and NZD 4,000 to 10,000 or more for full service, plus GST and ad spend. From NZD 1,000 a month, an agency has room to do one channel properly.
 
@@ -7903,6 +7988,28 @@ A New Zealand marketing agency in 2026 bills NZD 95 to 200 an hour, or a monthly
 Those bands come from Jelly Digital's September 2026 NZ pricing guide, which puts agency hourly rates at NZD 95 to 200 and multi-channel retainers at NZD 1,500 to 4,000 a month. A second Auckland agency lands in a similar place: King Tide Marketing's July 2026 guide prices one channel done properly at NZD 1,000 to 2,000 a month and genuine multi-channel work from NZD 5,000. Both are agencies estimating their own market, so read them as a range and check them against the published price pages further down.
 
 Very little of this is public. Digital Nomads HQ audited 411 service lines across 140 Australian agencies in June 2026 and found 78% published no pricing at all. Expect to ask for a quote, and expect it to arrive in a format that is hard to set beside the next one. That is why the last half of this guide is about comparing quotes. The wider guide to AI marketing costs in Australia and New Zealand puts agencies next to tools, freelancers and hires.
+
+Agency, freelancer, in-house or AI systems: what each costs in NZD
+
+Side by side, a New Zealand agency retainer runs about NZD 500 to 10,000 or more a month, a freelancer about NZD 50 to 150 an hour, and a marketing hire about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. The main AI assistant plans cost about NZD 40 a month each, plus the hours to run them.
+
+OptionTypical NZ costSource and date
+
+Agency retainerNZD 500 to 1,500 a month for one channel, 1,500 to 4,000 for several, 4,000 to 10,000+ for full service (excl. GST)Jelly Digital, Sep 2026; King Tide, Jul 2026
+
+FreelancerNZD 50 to 150 an hour, or NZD 500 to 3,000 a month on retainerJelly Digital, Sep 2026; King Tide, Jul 2026 (agency estimates)
+
+In-house hire, fully loadedAbout NZD 76,100 to 167,000 a year, or NZD 6,300 to 13,900 a month, with KiwiSaver, ACC and overheadsSEEK, Oct 2026; Robert Walters 2026; Inland Revenue, Apr 2026; King Tide, Jul 2026
+
+AI systemsChatGPT Plus NZD 40 a month; Claude Pro NZD 40 a month (incl. GST); Canva Pro NZD 180 a year. One published AI-led package: NZD 1,500 setup plus NZD 500 a month (excl. GST)OpenAI, Anthropic and Canva NZ pricing pages, 8 Oct 2026; Growin, Oct 2026
+
+Content and blog writingAgency: usually bundled into the retainer, with no per-post price in either NZ agency guide. Freelance per-post rates: no published NZ survey found. Contract content marketing specialist: NZD 40 to 60 an hour; permanent: NZD 80,000 to 100,000 a year, Auckland. AI: drafts come from the same subscriptions, plus a person's time to edit and check every pieceRobert Walters 2026; Jelly Digital, Sep 2026; King Tide, Jul 2026
+
+The agency and freelancer bands are agencies estimating their own market. King Tide Marketing's July 2026 guide puts freelancers at NZD 60 to 150 an hour or NZD 500 to 3,000 a month on retainer, and Jelly Digital's September 2026 guide puts them at NZD 50 to 120 an hour. This guide found no published survey of New Zealand freelance marketing or blog writing rates, so read those bands as indicative and ask for quotes. The nearest survey figure for content work comes from a recruiter: Robert Walters' 2026 Salary Guide lists Auckland content marketing specialists at NZD 80,000 to 100,000 a year permanent, or NZD 40 to 60 an hour on contract. Those are recruiter-placed contractors, a different market from independent freelancers.
+
+The in-house figures start from SEEK's October 2026 advertised average of NZD 61,498 for a marketing coordinator in Marketing and Communications and Robert Walters' 2026 Auckland average of NZD 135,000 for a marketing manager. On top sit employer KiwiSaver at 3.5% from 1 April 2026, according to Inland Revenue, ACC levies and King Tide's allowance of about 20% for tools, training and recruitment. The agency vs freelancer vs in-house guide shows the working line by line.
+
+The AI column uses each vendor's New Zealand pricing page as read on 8 October 2026: OpenAI lists ChatGPT Plus at NZD 40 a month and ChatGPT Go at NZD 14, Anthropic lists Claude Pro at NZD 40 a month billed monthly, or NZD 33 a month billed annually, including GST, and Canva lists Canva Pro at NZD 180 a year. Built AI marketing systems are mostly quoted per project, so published prices are rare. One exception: Growin, an NZ AI marketing agency, lists a launch package at NZD 1,500 setup plus NZD 500 a month plus GST, covering a campaign, a landing page and lead tracking.
 
 What does a marketing retainer buy?
 
@@ -8184,9 +8291,9 @@ A: Check your notice period first. Published NZ terms range from one month's not
 ## How to get your business mentioned by ChatGPT.
 URL: https://www.flowai.co.nz/blog/how-to-get-mentioned-by-chatgpt
 Author: Amber Lan, Flow AI
-Updated: 2026-10-02
+Updated: 2026-10-08
 
-Short answer: There is no form to submit your business to ChatGPT. ChatGPT, Perplexity, Google AI Mode and Copilot build answers from the open web and their search partners, so you get mentioned by being easy to find and confirm: crawlable pages that answer buyer questions, consistent business details, recent reviews, and mentions on sites the assistants already trust.
+Short answer: There is no form to submit your business to ChatGPT. ChatGPT, Perplexity, Google AI Mode and Copilot build answers from the open web and their search partners, so you get mentioned and recommended by being easy to find and confirm: crawlable pages that answer buyer questions, consistent business details, recent reviews, and mentions on sites the assistants already trust.
 
 Can you submit your business to ChatGPT?
 
@@ -8196,7 +8303,7 @@ This matters more each quarter. OpenAI said at DevDay in September 2026 that its
 
 The useful question is what those assistants read when someone asks for a business like yours. The guide to answer engine optimisation covers the theory. This page is the practical version, in the order I would do it for a small business.
 
-Where does ChatGPT get its information about businesses?
+Where does ChatGPT find the businesses it recommends?
 
 When ChatGPT searches the web, it rewrites the question into targeted queries, sends them to partner search providers including Microsoft Bing, and reads the pages that come back. It then writes an answer and cites some of those pages. Your website, your Google and Bing listings, directories, reviews and press mentions are all raw material for that answer.
 
@@ -8283,6 +8390,8 @@ Supplier and partner pages that list approved installers or stockists.
 "Best of" roundups for your city that the assistants already cite. Ask to be considered, with facts the writer can check.
 
 Accuracy beats volume here. One current listing on a site the assistants read is worth more than twenty on directories nobody visits.
+
+Reddit and LinkedIn count as third-party sources too. OpenAI and Reddit announced a partnership in May 2024 that brings Reddit content into ChatGPT through Reddit's Data API, so a useful, honest answer in a local or industry subreddit can become part of what the assistant reads when it recommends a business. LinkedIn plays a similar role for B2B firms: public posts and articles from you and your team are pages other than your own website, and they can turn up among the cited sources you collected in Step 1. Answer as a named person, say where you work, and keep the pitch out; communities remove promotional posts quickly. The Reddit opportunities template finds the threads where a business can help.
 
 Step 5: Keep your business details identical everywhere
 
@@ -10774,7 +10883,7 @@ A: Expect setup fees of AUD 500 to 3,000, reporting fees of AUD 150 to 400 a mon
 ## AI marketing for small business in NZ: the complete guide.
 URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz
 Author: Amber Lan, Flow AI
-Updated: 2026-08-20
+Updated: 2026-10-08
 
 Short answer: AI marketing for a New Zealand small business covers four systems: SEO so Google finds you, answer engine optimisation so ChatGPT and AI search quote you, a content engine that publishes every week, and outbound follow-up that never forgets. Most businesses start with one system, prove it, then add the next.
 
@@ -10782,7 +10891,9 @@ Why AI changes the marketing math for NZ small businesses
 
     The old math was brutal. A small business could not justify a full-time marketer, so the owner did the marketing personally, in the gaps between actual work. Content went out when there was time, which meant rarely. SEO was something the website person mentioned once. Leads got followed up when someone remembered. The result was a business that was good at its job and invisible to everyone who had not already heard of it.
 
-    AI changes which parts of that need a human. Adoption reflects it: in the U.S. Chamber of Commerce's 2025 Empowering Small Business report, the share of small businesses using generative AI jumped from 40% to 58% in a single year. The pattern in New Zealand looks the same from where I sit: the owners I talk to already use ChatGPT for one-off tasks. The gap is between using AI occasionally and having it run a system.
+    AI changes which parts of that need a human, and New Zealand owners have started. Xero's May 2026 research found 61% of New Zealand small and medium businesses proactively using AI, and 79% of those users learning through self-guided experimentation. MBIE-commissioned research by The Research Agency, which surveyed 500 SMEs in April 2025, found 94% aware of at least one AI tool, and named confidence and capability as the factors that decide whether a business adopts AI and expands its use.
+
+    The payoff shows up in the numbers too. Deloitte Access Economics' April 2026 study for 2degrees, surveyed in January and February 2026, found 82% of New Zealand businesses reporting AI use, and the average SME using AI earning around $400,000 more in FY25 than a comparable non-adopter. That is an association, and adopters may differ in other ways, but it matches what owners describe. The gap now is between using AI occasionally and having it run a system.
 
     Here is the distinction that matters, and the one most AI marketing content glosses over. AI removes repetitive work. It does not remove judgment. Drafting fifty product descriptions is repetitive work. Deciding what your business should claim, and to whom, is judgment. A system that automates the first and leaves you the second makes one person as productive as a small team. A system that pretends to automate both produces the generic sludge you already recognise in your inbox.
 
@@ -10800,7 +10911,7 @@ Why AI changes the marketing math for NZ small businesses
 
     2. AEO and GEO: being cited by ChatGPT and AI search
 
-    The new layer, and the one almost no NZ small business has touched. When someone asks ChatGPT, Perplexity, or Google's AI Overviews to recommend a business that does what you do, the assistant answers with names. Getting into that answer is called answer engine optimization, and it is engineering rather than magic: let the AI crawlers in, describe your business in structured data, publish content that can be quoted in isolation, and keep your facts consistent across the web. I run an open-source toolkit for exactly this, and this website is its live demonstration.
+    The new layer, and the one almost no NZ small business has touched. When someone asks ChatGPT, Perplexity, or Google's AI Overviews to recommend a business that does what you do, the assistant answers with names. Getting into that answer is called answer engine optimisation, and it is engineering rather than magic: let the AI crawlers in, describe your business in structured data, publish content that can be quoted in isolation, and keep your facts consistent across the web. I run an open-source toolkit for exactly this, and this website is its live demonstration.
 
     The reason to move on this now is simple: the space is nearly empty. Very few NZ businesses have made themselves legible to AI assistants, which means the ones that do are competing against absence. In every other marketing channel you fight incumbents with budgets. In this one, for the moment, you mostly fight nobody.
 
@@ -10851,9 +10962,33 @@ Why AI changes the marketing math for NZ small businesses
 
     
 
+    Which AI marketing tools does a small business need, and what do they cost?
+
+    A New Zealand small business can start with an AI assistant for drafting and research and a design tool for visuals. As of October 2026, ChatGPT Plus or Claude Pro costs NZD 40 a month and Canva Pro NZD 180 a year, so a basic stack runs about NZD 55 to 95 a month before anyone's time.
+
+    
+      ToolWhat it does in a marketing systemNZ price, October 2026
+
+      
+        ChatGPT (OpenAI)Drafting, research, image creation and scheduled tasksGo NZD 14 a month; Plus NZD 40 a month
+
+        Claude (Anthropic)Long-form drafting and editing, analysis, and Claude Code for building agentsPro NZD 40 a month billed monthly, or NZD 33 a month billed annually, including GST
+
+        CanvaSocial graphics, presentations and brand templatesFree plan; Pro NZD 180 a year for one person
+
+        Google Business ProfileYour listing in Google Search and Maps, which local search and AI answers both readFree
+
+      
+    
+    Prices come from each vendor's New Zealand pricing page, read on 8 October 2026: OpenAI lists ChatGPT Go at NZD 14 and Plus at NZD 40 a month, Anthropic lists Claude Pro at NZD 40 a month, or NZD 33 a month billed annually, including 15% GST, Canva lists Pro at NZD 180 a year for one person, and Google says creating a Business Profile is free. The NZD 55 to 95 range is one assistant plus Canva at the low end, and both assistants plus Canva at the top. Vendors change plans often, so check the page before you budget.
+
+    The subscriptions are the cheap part. What decides the result is the system around them: the brief the tools work from, the schedule they run on, and the hour a week someone spends reviewing what they produce.
+
     What this costs against an agency, a freelancer, or a hire
 
-    The honest answer is that every option can work, and each has a structural trade-off. Prices for agencies and freelancers vary widely in NZ, so get current quotes rather than trusting anyone's summary of the market, including mine. What I can compare is the structure of what you pay for.
+    Every option can work, and each has a structural trade-off. In New Zealand dollars, published 2026 ranges put an AI tool stack you run yourself at about NZD 55 to 95 a month, a freelancer at NZD 50 to 150 an hour, an agency at NZD 1,000 to 10,000 a month, and an in-house marketer at about NZD 76,000 to 167,000 a year all in.
+
+    The freelancer and agency figures are agencies estimating their own market: King Tide Marketing's July 2026 guide puts most NZ small and medium businesses at NZD 1,000 to 10,000 a month with an agency, and freelancers at NZD 60 to 150 an hour, while Jelly Digital's September 2026 guide puts freelancers at NZD 50 to 120 an hour. The in-house range adds KiwiSaver, ACC levies and overheads to SEEK and Robert Walters salary data, worked through in the agency vs freelancer vs in-house guide. For agency prices by service, see what a marketing agency costs in NZ. Treat every range as a starting point and get current quotes. The table below compares the structure of what you pay for.
 
     
       OptionWhat you pay forStructural trade-off
@@ -10908,6 +11043,14 @@ Why AI changes the marketing math for NZ small businesses
 
     
 
+    What does the Privacy Act 2020 mean for AI marketing?
+
+    The Privacy Act 2020 applies whenever a New Zealand business puts personal information into an AI tool, such as customer emails, enquiry details or prospect lists. The Privacy Commissioner expects a privacy impact assessment before you start, and advises keeping personal information out of AI tools whenever you are unsure.
+
+    The Office of the Privacy Commissioner's AI guidance, first published in September 2023, starts from the position that the Privacy Act applies to everyone using AI tools in New Zealand, and recommends a privacy impact assessment that you update regularly. A newer rule matters for outbound work: from 1 May 2026, information privacy principle 3A requires a business that collects personal information indirectly to take reasonable steps to tell the person, which covers contact details bought from a data provider or pulled in by an enrichment tool.
+
+    In practice that means a few habits. Strip names and contact details before pasting customer material into an assistant. Use the setting that stops your content training the vendor's models, which OpenAI's pricing page lists as an opt-out on every ChatGPT plan. Keep a one-page record of which tools see which data, and review it when you add a system.
+
     Common mistakes NZ small businesses make with AI marketing
 
     Buying tools without a system. A ChatGPT subscription is not a marketing function. Tools produce output; a system decides what to produce, checks the quality, and ships it on schedule. The tool spend is wasted without the surrounding discipline.
@@ -10921,10 +11064,11 @@ Why AI changes the marketing math for NZ small businesses
 Q: What is AI marketing for a small business?
 A: AI marketing means using AI systems to run the repetitive parts of marketing: drafting content, keeping SEO and AI-search visibility healthy, researching and contacting prospects, and reporting. The owner keeps the judgment calls; the systems do the production. Done well, one person can run what used to need a team.
 Q: How much does AI marketing cost for a small NZ business?
-A: It ranges from roughly the cost of a few software subscriptions if you run tools yourself, up to agency-level retainers. Flow AI scopes and prices each build per project.
+A: Published 2026 ranges in New Zealand dollars: an AI tool stack you run yourself costs about NZD 55 to 95 a month, a freelancer NZD 50 to 150 an hour, an agency NZD 1,000 to 10,000 a month, and an in-house marketer about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Flow AI scopes and prices each build per project.
+Q: Can I put customer details into ChatGPT or Claude under New Zealand privacy law?
+A: Treat it as a privacy decision. The Privacy Act 2020 applies to AI tools, and the Privacy Commissioner advises against using AI tools for personal information when in doubt. Remove names and contact details before pasting, switch off model training on your content where the vendor offers that setting, and record which tools hold which data in a short privacy impact assessment.
 Q: Do I still need SEO if I am doing AEO?
-A: Yes. Answer engine optimization builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
+A: Yes. Answer engine optimisation builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 Q: Can one person really run all of this?
 A: Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
-
 <!-- blog-full:end -->
