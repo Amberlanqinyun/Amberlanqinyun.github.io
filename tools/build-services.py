@@ -50,7 +50,7 @@ CHECK = ('<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="no
 # The agent team, as services a buyer recognises. (name, what it delivers, link)
 SERVICES = {
     "en": [
-        ("Positioning", "One page every agent works from: who you serve, what you claim, the proof.", "/sprints/positioning"),
+        ("Positioning", "One page every agent works from, setting out who you serve and the claims you can prove.", "/sprints/positioning"),
         ("AI search and SEO", "Technical SEO through to answer engine optimisation, so Google ranks you and ChatGPT, Perplexity and AI Overviews cite you.", "/sprints/ai-search"),
         ("Content engine", "A month of drafts in your voice, approved by your team before anything ships.", "/sprints/content-engine"),
         ("Social", "Posts and threads in your voice, on a calendar that holds.", "/sprints/#system"),
@@ -63,7 +63,7 @@ SERVICES = {
         ("Reporting", "One short monthly read on what shipped and what comes next.", "/sprints/#system"),
     ],
     "zh": [
-        ("定位", "所有智能体共用的一页纸：服务谁、主张什么、证据在哪里。", "/sprints/positioning"),
+        ("定位", "所有智能体共用的一页纸，写清你服务谁，以及你能证明的主张。", "/sprints/positioning"),
         ("AI 搜索与 SEO", "从技术 SEO 到 AEO（答案引擎优化），让 Google 给你排名，也让 ChatGPT、Perplexity 和 Google AI 概览引用你。", "/sprints/ai-search"),
         ("内容引擎", "一个月的稿件，用你的品牌语调写成，团队审核通过后才发布。", "/sprints/content-engine"),
         ("社交媒体", "用你的语调写帖子和讨论串，按日历稳定发布。", "/sprints/#system"),
@@ -79,14 +79,14 @@ SERVICES = {
 
 STEPS = {
     "en": [
-        ("Scope", "We agree in writing what gets built, which data the agents may read, where a person reviews, and how we measure it. The scope sets the price."),
+        ("Scope", "Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope."),
         ("Build", "I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer."),
-        ("Hand over", "Documented handover: your team runs the system and owns every agent, prompt and file. Ongoing help is there if you want it."),
+        ("Hand over", "A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it."),
     ],
     "zh": [
-        ("书面范围", "先用文字说清楚：搭建什么、智能体能读取哪些数据、由谁在哪个环节审核、如何衡量。价格依据这份范围确定。"),
+        ("书面范围", "我们一起用文字说清楚：搭建什么、智能体能读取哪些数据、你的团队在哪个环节审核、怎样衡量成效。价格依据这份范围确定。"),
         ("一起搭建", "我和你的团队一起，在你自己的账号里逐个搭建智能体。任何内容在触达客户之前，都由你的团队审核。"),
-        ("交接", "完整的交接文档：系统由你的团队运行，每个智能体、提示词和文件都归你所有。需要持续支持时，我也在。"),
+        ("交接", "完整的交接文档，让你的团队从容运行系统，每个智能体、提示词和文件都归你所有。需要持续支持时，我随时都在。"),
     ],
 }
 
@@ -94,13 +94,13 @@ PROOF = {
     "en": [
         ("Case study", '<a class="text-link" href="/work/six-month-marketing-function">Six months of one operator running a whole marketing function on AI agents</a>, phase by phase.'),
         ("Open source", '<a class="text-link" href="/skills/">126 inspectable skills</a>, sixteen built by Flow AI, every one linked to its source.'),
-        ("Try one", '<a class="text-link" href="/templates/">Free agent templates</a> you can run on your own site today.'),
+        ("Templates", '<a class="text-link" href="/templates/">Free agent templates</a>, ready to run on your own site today.'),
         ("Method", '<a class="text-link" href="/sprints/">How the agent team works</a>, with a public checklist for every sprint.'),
     ],
     "zh": [
         ("案例研究", '<a class="text-link" href="/work/six-month-marketing-function">一个人用 AI 智能体运行完整营销职能的六个月</a>，逐阶段拆解。'),
         ("开源", '<a class="text-link" href="/skills/">126 个可检查的技能</a>，其中 16 个由 Flow AI 搭建，每一个都链接到源码。'),
-        ("马上试用", '<a class="text-link" href="/templates/">免费智能体模板</a>，今天就能在你自己的网站上运行。'),
+        ("模板", '<a class="text-link" href="/templates/">免费智能体模板</a>，今天就能在你自己的网站上运行。'),
         ("方法", '<a class="text-link" href="/sprints/">智能体团队如何工作</a>，每个冲刺都有公开的交付清单。'),
     ],
 }
@@ -108,31 +108,31 @@ PROOF = {
 UI = {
     "en": dict(
         lang="en-NZ", services_eyebrow="What the agents run", services_h2="Every part of marketing, one agent each.",
-        services_lead="Start with the agent that closes your biggest gap. Add the next when the first is running well.",
-        how_eyebrow="How a build runs", how_h2="Written scope, a build with your team, then it's yours.",
-        proof_eyebrow="See it running", proof_h2="Every system is public.",
-        proof_lead="Client results appear here only with real names and real numbers. Until then, judge the work itself.",
-        fit_h2="When an agency is the better call.",
-        fit_p="Large paid media budgets and brand campaigns with heavy production suit a full-service agency. Flow AI fits when you want marketing that runs every week on systems your team owns.",
-        cost_h2="What it costs.",
-        cost_p='Each build is priced per project once the written scope is agreed, so you pay for what your business needs. For market context, <a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand">the cost guide</a> sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.',
-        guides_h2="Read before you choose.", faq_h2="Questions.", cta="Work with me", step="Step",
+        services_lead="Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.",
+        how_eyebrow="How a build runs", how_h2="Built together with your team, then yours to keep.",
+        proof_eyebrow="Explore the work", proof_h2="Every system is public.",
+        proof_lead="The systems behind this practice are public, so you can judge the craft before we begin.",
+        fit_h2="When an agency is the better fit.",
+        fit_p="Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.",
+        cost_h2="How pricing works.",
+        cost_p='Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, <a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand">the cost guide</a> sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.',
+        guides_h2="Guides to help you choose well.", faq_h2="Questions.", cta="Work with me", step="Step",
         crumb_home="Flow AI", crumb_hub="AI marketing services",
-        end_note="A short form. I read every message myself and reply within two working days.",
+        end_note="The form takes a minute. I read every message myself and reply within two working days.",
     ),
     "zh": dict(
         lang="zh-Hans", services_eyebrow="智能体负责什么", services_h2="营销的每个环节，各由一个智能体负责。",
-        services_lead="先从最大的缺口开始，搭建第一个智能体。它运行稳定后，再加下一个。",
-        how_eyebrow="搭建流程", how_h2="书面范围，一起搭建，然后交给你。",
-        proof_eyebrow="看它运行", proof_h2="每个系统都是公开的。",
-        proof_lead="客户成果只有在可以公开真实名字和真实数字时才会出现在这里。在那之前，请直接评判作品本身。",
+        services_lead="我们一起从最大的缺口开始，搭建第一个智能体。它运行稳定后，再加下一个。",
+        how_eyebrow="搭建流程", how_h2="和你的团队一起搭建，然后由你长期拥有。",
+        proof_eyebrow="探索作品", proof_h2="每个系统都是公开的。",
+        proof_lead="这个工作室背后的系统都是公开的，开始合作之前，你可以先评判它的工艺。",
         fit_h2="什么时候代理机构更合适。",
-        fit_p="大额付费广告预算、制作量很大的品牌活动，更适合全案代理机构。如果你希望营销每周都在运转，而且系统归自己团队所有，Flow AI 更合适。",
-        cost_h2="费用。",
-        cost_p='每个项目在书面范围确定后单独报价，你只为业务真正需要的部分付费。想了解市场行情，可以看<a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand">费用指南</a>，里面列出了新西兰和澳大利亚的工具、自由职业者、代理机构和内部招聘的有出处的价格区间。',
-        guides_h2="做决定之前，先读这些。", faq_h2="常见问题。", cta="与我合作", step="步骤",
+        fit_p="大额付费广告预算、制作量很大的品牌活动，交给全案代理机构更合适。如果你希望营销每周都在运转，系统由自己的团队拥有并不断成长，Flow AI 是合适的伙伴。",
+        cost_h2="报价方式。",
+        cost_p='每个项目在书面范围确定后单独报价，让投入与业务真正的需要相匹配。想了解市场行情，可以看<a class="text-link" href="/blog/ai-marketing-cost-australia-new-zealand">费用指南</a>，里面列出了新西兰和澳大利亚的工具、自由职业者、代理机构和内部招聘的有出处的价格区间。',
+        guides_h2="帮你做出好选择的指南。", faq_h2="常见问题。", cta="与我合作", step="步骤",
         crumb_home="Flow AI", crumb_hub="AI 营销服务",
-        end_note="一份简短的表单。每条留言我都亲自阅读，两个工作日内回复。",
+        end_note="填写表单只需一分钟。每条留言我都亲自阅读，两个工作日内回复。",
     ),
 }
 
@@ -148,7 +148,7 @@ PAGES = [
             eyebrow="AI marketing services · New Zealand and Australia",
             h1="AI marketing services for New Zealand and Australian businesses.",
             answer=DEFINITION + " Each build starts with a written scope, and your team keeps every agent.",
-            lead="Let's build the marketing team your business deserves, one agent at a time, and keep it running in your hands.",
+            lead="Let's build your marketing team together, one AI agent at a time, and hand it to your people to run with confidence.",
             local=None,
             places=[("New Zealand", "/ai-marketing-services/new-zealand", "Privacy Act 2020, spam law and what Kiwi buyers search."),
                     ("Australia", "/ai-marketing-services/australia", "Spam Act and privacy rules, AUD, and working across the Tasman."),
@@ -156,7 +156,7 @@ PAGES = [
             guides=["what-do-ai-marketing-services-include", "how-to-choose-an-ai-marketing-provider", "ai-marketing-services-vs-tools", "ai-marketing-scope-of-work", "first-month-of-an-ai-marketing-build", "what-is-an-ai-marketing-agent"],
             faq=[
                 ("What are AI marketing services?", "AI marketing services are marketing work delivered through AI systems, such as agents for search, content, outbound and reporting, with people setting direction and approving what reaches customers. Some providers run the systems for you on a retainer. Flow AI builds them with your team and hands them over, so you own them."),
-                ("Is Flow AI an AI marketing agency?", "Flow AI does the work people look for when they search for an AI marketing agency: AI search, content, social, outbound and reporting. The difference is the model. One marketing engineer builds the agents with your team, documents them and hands them over, so the system stays yours instead of sitting inside a retainer."),
+                ("Is Flow AI an AI marketing agency?", "Flow AI does the work people look for when they search for an AI marketing agency: AI search, content, social, outbound and reporting. The model is a partnership. One marketing engineer builds the agents with your team, documents them and hands them over, so the system stays with your business for good."),
                 ("Do you work with businesses in Australia?", "Yes. Flow AI is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles."),
                 ("How much do AI marketing services cost?", "Flow AI prices each build per project once a written scope is agreed. Market ranges for AI tools, freelancers, agencies and in-house hires in New Zealand and Australia are set out, with sources, in the Flow AI cost guide."),
                 ("Who owns the agents after the build?", "You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Flow AI."),
@@ -169,7 +169,7 @@ PAGES = [
             eyebrow="AI 营销服务 · 新西兰和澳大利亚",
             h1="面向新西兰和澳大利亚企业的 AI 营销服务。",
             answer="Flow AI 为新西兰和澳大利亚的企业提供 AI 营销服务。Amber Lan 是奥克兰的 AI 营销工程师，她和你的团队一起搭建负责搜索、内容、主动外联和报告的 AI 智能体，然后交接给你。每个项目都从书面范围说明开始，所有智能体都归你的团队所有。",
-            lead="一起搭建你的业务值得拥有的营销团队，一次一个智能体，并且一直掌握在你自己手里。",
+            lead="一起搭建你的营销团队，一次一个 AI 智能体，再交给你的团队从容运行。",
             local=None,
             places=[("新西兰", "/ai-marketing-services/new-zealand", "《2020 年隐私法》、垃圾邮件法，以及新西兰买家怎么搜索。"),
                     ("澳大利亚", "/ai-marketing-services/australia", "《垃圾邮件法》和隐私规则、澳元，以及跨塔斯曼海合作。"),
@@ -177,7 +177,7 @@ PAGES = [
             guides=None,
             faq=[
                 ("什么是 AI 营销服务？", "AI 营销服务是通过 AI 系统完成的营销工作，例如负责搜索、内容、主动外联和报告的智能体，由人来定方向，并审核所有触达客户的内容。有的服务商按月费替你运行这些系统。Flow AI 和你的团队一起搭建，然后交接给你，系统归你所有。"),
-                ("Flow AI 是 AI 营销代理机构吗？", "人们搜索 AI 营销代理机构时想要的工作，Flow AI 都做：AI 搜索、内容、社交媒体、主动外联和报告。区别在于合作模式。一位营销工程师和你的团队一起搭建智能体，写好文档后交接给你，系统留在你手里，而不是锁在月费合同里。"),
+                ("Flow AI 是 AI 营销代理机构吗？", "人们搜索 AI 营销代理机构时想要的工作，Flow AI 都做：AI 搜索、内容、社交媒体、主动外联和报告。合作模式是伙伴关系。一位营销工程师和你的团队一起搭建智能体，写好文档后交接给你，系统长期留在你的公司里。"),
                 ("你们和澳大利亚的企业合作吗？", "合作。Flow AI 位于奥克兰，服务新西兰和澳大利亚两地的企业。项目远程进行，在你自己的账号上搭建，通话时间兼顾两地时区。澳大利亚的项目遵守《2003 年垃圾邮件法》和澳大利亚隐私原则。"),
                 ("AI 营销服务要花多少钱？", "Flow AI 在书面范围确定后，按项目单独报价。新西兰和澳大利亚的 AI 工具、自由职业者、代理机构和内部招聘的市场价格区间，都附出处整理在 Flow AI 的费用指南里。"),
                 ("搭建完成后，智能体归谁？", "归你。每个智能体、提示词、工作流和文档都建在你的账号上，并附书面说明交接，你的团队可以自己运行、修改或扩展，不需要依赖 Flow AI。"),
@@ -203,7 +203,7 @@ PAGES = [
                 ("Pricing", "Quoted in NZD, plus GST, once the written scope is agreed."),
             ]),
             places=[("Auckland", "/ai-marketing-services/auckland", "Meet in person and run the build workshop on site."),
-                    ("Australia", "/ai-marketing-services/australia", "Selling across the Tasman as well.")],
+                    ("Australia", "/ai-marketing-services/australia", "For businesses that also sell across the Tasman.")],
             guides=["ai-marketing-providers-new-zealand", "do-you-need-an-ai-marketing-agency-nz", "ai-agency-vs-ai-consultant-nz", "ai-marketing-for-small-business-nz", "marketing-agency-cost-nz", "ai-marketing-privacy-law-nz-australia"],
             faq=[
                 ("Who offers AI marketing services in New Zealand?", "Providers range from established digital agencies that added AI services to AI-native agencies, automation consultants, AI search specialists and build-and-handover practices such as Flow AI. The Flow AI guide to New Zealand providers lists them by type, using each provider's own public pages, with Flow AI disclosed as the publisher."),
@@ -211,7 +211,7 @@ PAGES = [
                 ("Is my customer data safe with AI marketing agents?", "The written scope names exactly what each agent may read, and customer data stays inside the tools you already use. Agents draft from what they are allowed to see, and a person on your team approves anything that reaches a customer, in line with the Privacy Act 2020."),
                 ("What do AI marketing services cost in New Zealand?", "Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, the Flow AI cost guide sets out sourced New Zealand ranges: agency retainers, freelancer rates, in-house salaries and AI tools."),
                 ("How is this different from a New Zealand marketing agency?", "An agency usually runs marketing for you on a monthly retainer. Flow AI builds the AI agents that run it with your team and hands them over, so the system, the prompts and the know-how stay inside your business."),
-                ("How do I start?", "Send a short note through the contact form about your business and the marketing gap that costs you most. Amber replies personally, and the first step is a written scope."),
+                ("How do I start?", "Share a few lines about your business and the marketing gap you most want to close. Amber replies personally, and together you shape a written scope as the first step."),
             ],
         ),
         zh=dict(
@@ -230,7 +230,7 @@ PAGES = [
                 ("报价", "书面范围确定后，以新西兰元报价，另加 GST。"),
             ]),
             places=[("奥克兰", "/ai-marketing-services/auckland", "可以见面，在你的办公室开搭建工作坊。"),
-                    ("澳大利亚", "/ai-marketing-services/australia", "同时在塔斯曼海对岸做生意。")],
+                    ("澳大利亚", "/ai-marketing-services/australia", "适合同时在塔斯曼海对岸做生意的企业。")],
             guides=None,
             faq=[
                 ("新西兰有哪些 AI 营销服务商？", "服务商类型很多：增加了 AI 服务的老牌数字代理机构、AI 原生代理机构、自动化顾问、AI 搜索专家，以及像 Flow AI 这样搭建后交接的工作室。Flow AI 的新西兰服务商指南按类型列出，依据各家自己的公开页面，并注明 Flow AI 是发布方。"),
@@ -238,7 +238,7 @@ PAGES = [
                 ("把客户数据交给 AI 营销智能体安全吗？", "书面范围会写清楚每个智能体能读取什么，客户数据留在你已经在用的工具里。智能体只根据允许看到的内容起草，任何触达客户的内容都由你团队里的人批准，符合《2020 年隐私法》。"),
                 ("在新西兰，AI 营销服务要花多少钱？", "Flow AI 在书面范围确定后按项目报价，以新西兰元计，另加 GST。想了解市场行情，Flow AI 的费用指南整理了有出处的新西兰价格区间：代理机构月费、自由职业者费率、内部招聘薪资和 AI 工具。"),
                 ("这和新西兰的营销代理机构有什么不同？", "代理机构通常按月费替你运营营销。Flow AI 和你的团队一起搭建运行营销的 AI 智能体，然后交接给你，系统、提示词和方法都留在你的公司里。"),
-                ("怎么开始？", "通过联系表单简单介绍你的业务，以及最让你头疼的营销缺口。Amber 会亲自回复，第一步是一份书面范围说明。"),
+                ("怎么开始？", "简单介绍你的业务，以及你最想补上的营销缺口。Amber 会亲自回复，第一步是你们一起确定一份书面范围说明。"),
             ],
         ),
     ),
@@ -259,7 +259,7 @@ PAGES = [
                 ("Costs", 'For Australian market ranges, read <a class="text-link" href="/blog/marketing-agency-cost-australia">what a marketing agency costs in Australia</a>.'),
                 ("Pricing", "Quoted per project once the written scope is agreed."),
             ]),
-            places=[("New Zealand", "/ai-marketing-services/new-zealand", "Selling into New Zealand too."),
+            places=[("New Zealand", "/ai-marketing-services/new-zealand", "For businesses that also sell into New Zealand."),
                     ("All services", "/ai-marketing-services/", "The full agent team, in one place.")],
             guides=["ai-marketing-providers-australia", "marketing-agency-cost-australia", "how-to-choose-an-ai-marketing-provider", "ai-marketing-statistics-australia-new-zealand", "fractional-cmo-vs-ai-cmo", "ai-marketing-privacy-law-nz-australia"],
             faq=[
@@ -267,8 +267,8 @@ PAGES = [
                 ("Who offers AI marketing services in Australia?", "Australian businesses can choose from AI-native agencies, established agencies adding AI, automation consultancies, AI search specialists and build-and-handover practices. The Flow AI guide to Australian providers lists them by type from their own public pages, with Flow AI disclosed as the publisher."),
                 ("Do you work with businesses in Sydney and Melbourne?", "Yes, and anywhere else in Australia. Every build runs remotely, so a business in Brisbane, Perth or regional Australia gets the same process as one in Sydney or Melbourne."),
                 ("Does outbound follow Australian spam law?", "Yes. Every commercial message the outbound agent drafts must meet the Spam Act 2003: consent, clear identification of the sender and a working unsubscribe. A person on your team approves the first message to every new contact."),
-                ("Do you charge in Australian dollars?", "The written scope sets the price for each build, and the currency is agreed in that scope. Flow AI does not publish prices; market ranges for Australia sit in the Flow AI cost guides."),
-                ("How do I start?", "Send a short note through the contact form about your business and your biggest marketing gap. Amber replies personally, and the first step is a written scope."),
+                ("Do you charge in Australian dollars?", "The currency is agreed in the written scope for each build, alongside the price. For Australian market context, the Flow AI cost guides set out sourced ranges for agencies, freelancers and hires."),
+                ("How do I start?", "Share a few lines about your business and the marketing gap you most want to close. Amber replies personally, and together you shape a written scope as the first step."),
             ],
         ),
         zh=dict(
@@ -286,7 +286,7 @@ PAGES = [
                 ("费用", '想了解澳大利亚的市场价格，可以读<a class="text-link" href="/blog/marketing-agency-cost-australia">澳大利亚营销代理机构的费用</a>。'),
                 ("报价", "书面范围确定后，按项目报价。"),
             ]),
-            places=[("新西兰", "/ai-marketing-services/new-zealand", "同时也在新西兰做生意。"),
+            places=[("新西兰", "/ai-marketing-services/new-zealand", "适合同时在新西兰做生意的企业。"),
                     ("全部服务", "/ai-marketing-services/", "完整的智能体团队，一页看全。")],
             guides=None,
             faq=[
@@ -294,8 +294,8 @@ PAGES = [
                 ("澳大利亚有哪些 AI 营销服务商？", "澳大利亚企业可以选择 AI 原生代理机构、增加了 AI 服务的老牌代理机构、自动化咨询公司、AI 搜索专家，以及搭建后交接的工作室。Flow AI 的澳大利亚服务商指南按类型列出，依据各家自己的公开页面，并注明 Flow AI 是发布方。"),
                 ("你们和悉尼、墨尔本的企业合作吗？", "合作，澳大利亚其他地方也一样。所有项目都远程进行，布里斯班、珀斯或澳大利亚地区的企业，和悉尼、墨尔本的企业走同样的流程。"),
                 ("主动外联遵守澳大利亚的垃圾邮件法吗？", "遵守。外联智能体起草的每一封商业邮件都必须符合《2003 年垃圾邮件法》：取得同意、清楚表明发件人身份、能正常退订。每个新联系人的第一封邮件，都由你团队里的人批准。"),
-                ("你们用澳元收费吗？", "每个项目的价格由书面范围确定，币种也在范围里约定。Flow AI 不公开报价；澳大利亚的市场价格区间在 Flow AI 的费用指南里。"),
-                ("怎么开始？", "通过联系表单简单介绍你的业务和最大的营销缺口。Amber 会亲自回复，第一步是一份书面范围说明。"),
+                ("你们用澳元收费吗？", "币种和价格一起在每个项目的书面范围里约定。想了解澳大利亚的市场行情，Flow AI 的费用指南整理了代理机构、自由职业者和招聘的有出处的价格区间。"),
+                ("怎么开始？", "简单介绍你的业务，以及你最想补上的营销缺口。Amber 会亲自回复，第一步是你们一起确定一份书面范围说明。"),
             ],
         ),
     ),
@@ -312,20 +312,20 @@ PAGES = [
                 ("In person", "The scoping workshop and the handover can happen at your office anywhere in Auckland, from the CBD and Ponsonby to the North Shore, East Auckland and South Auckland."),
                 ("Google Maps", 'The search agent starts with your Google Business Profile: categories, service areas, photos and a steady flow of genuine reviews. <a class="text-link" href="/blog/get-recommended-by-chatgpt-auckland">How Auckland businesses get recommended</a>.'),
                 ("Local AI search", "When someone asks ChatGPT for the best provider in Auckland, it draws on the open web, maps data and reviews. The agent makes sure your business shows up accurately in all three."),
-                ("Same time zone", "Your team and the person building the agents work the same hours, so review loops close the same day."),
-                ("Community", 'Amber builds in public and shows up at Auckland builder events. <a class="text-link" href="/about">More about Amber</a>.'),
+                ("Same time zone", "Your team and the person building the agents share the same working day, so reviews come back within hours."),
+                ("Building in public", 'Amber shares her working notes and open-source systems as she builds. <a class="text-link" href="/about">Meet Amber</a>.'),
                 ("Pricing", "Quoted in NZD, plus GST, once the written scope is agreed."),
             ]),
             places=[("New Zealand", "/ai-marketing-services/new-zealand", "The same service for the rest of New Zealand."),
-                    ("Australia", "/ai-marketing-services/australia", "Selling across the Tasman as well.")],
+                    ("Australia", "/ai-marketing-services/australia", "For businesses that also sell across the Tasman.")],
             guides=["get-recommended-by-chatgpt-auckland", "seo-for-small-business-nz", "ai-marketing-providers-new-zealand", "how-to-get-mentioned-by-chatgpt", "first-month-of-an-ai-marketing-build", "content-marketing-small-business-nz"],
             faq=[
                 ("Can we meet in person in Auckland?", "Yes. Flow AI is based in Auckland, so the scoping workshop and the handover can happen at your office. The build itself runs on your own accounts between sessions, with your team reviewing as it goes."),
                 ("Who offers AI marketing services in Auckland?", "Auckland has established digital agencies that added AI services, AI automation studios, AI search specialists and build-and-handover practices such as Flow AI. The Flow AI guide to New Zealand providers lists them by type from their own public pages, with Flow AI disclosed as the publisher."),
                 ("Can you help my Auckland business show up on Google Maps?", "Yes. The search agent sets up and maintains your Google Business Profile, keeps your business details consistent across the web and builds a steady process for asking customers for genuine reviews. Google ranks local results on relevance, distance and prominence."),
                 ("How do I get my Auckland business recommended by ChatGPT?", "Make your business easy to find and confirm: clear service pages, consistent details on your site and directories, recent genuine reviews, and mentions on sites the assistants already trust. The Flow AI guide for Auckland businesses walks through it step by step."),
-                ("Do you only work with Auckland businesses?", "No. Auckland businesses can meet in person, and the same service runs remotely for businesses across New Zealand and Australia."),
-                ("How do I start?", "Send a short note through the contact form. Amber replies personally, usually suggests a first meeting in Auckland, and the first step is a written scope."),
+                ("Do you work with businesses outside Auckland?", "Yes, across New Zealand and Australia. Auckland businesses can meet in person, and everywhere else the same service runs remotely on your own accounts."),
+                ("How do I start?", "Share a few lines through the contact form. Amber replies personally, often with an invitation to meet in Auckland, and together you shape a written scope as the first step."),
             ],
         ),
         zh=dict(
@@ -339,20 +339,20 @@ PAGES = [
                 ("当面合作", "范围工作坊和交接可以在你的办公室进行，奥克兰市中心、Ponsonby、北岸、东区、南区都可以。"),
                 ("Google 地图", '搜索智能体从 Google 商家资料做起：类别、服务区域、照片，以及持续收集的真实评价。<a class="text-link" href="/blog/get-recommended-by-chatgpt-auckland">奥克兰企业如何被推荐</a>。'),
                 ("本地 AI 搜索", "有人问 ChatGPT 奥克兰最好的服务商是谁时，它会参考公开网页、地图数据和评价。智能体确保你的业务在这三处都准确出现。"),
-                ("同一时区", "你的团队和搭建智能体的人在同一个时间工作，审核当天就能完成。"),
-                ("社区", 'Amber 公开分享自己的搭建过程，也常去奥克兰的开发者活动。<a class="text-link" href="/about">了解 Amber</a>。'),
+                ("同一时区", "你的团队和搭建智能体的人共享同一个工作日，审核几小时内就能往返。"),
+                ("公开搭建", 'Amber 在搭建过程中公开分享工作笔记和开源系统。<a class="text-link" href="/about">认识 Amber</a>。'),
                 ("报价", "书面范围确定后，以新西兰元报价，另加 GST。"),
             ]),
             places=[("新西兰", "/ai-marketing-services/new-zealand", "新西兰其他地区，同样的服务。"),
-                    ("澳大利亚", "/ai-marketing-services/australia", "同时在塔斯曼海对岸做生意。")],
+                    ("澳大利亚", "/ai-marketing-services/australia", "适合同时在塔斯曼海对岸做生意的企业。")],
             guides=None,
             faq=[
                 ("可以在奥克兰见面吗？", "可以。Flow AI 就在奥克兰，范围工作坊和交接都可以在你的办公室进行。两次见面之间，搭建在你自己的账号上进行，你的团队边做边审核。"),
                 ("奥克兰有哪些 AI 营销服务商？", "奥克兰有增加了 AI 服务的老牌数字代理机构、AI 自动化工作室、AI 搜索专家，以及像 Flow AI 这样搭建后交接的工作室。Flow AI 的新西兰服务商指南按类型列出，依据各家自己的公开页面，并注明 Flow AI 是发布方。"),
                 ("能帮我的奥克兰企业出现在 Google 地图上吗？", "可以。搜索智能体负责设置和维护你的 Google 商家资料，保持你的业务信息在各处一致，并建立一套持续邀请客户留下真实评价的流程。Google 按相关性、距离和知名度对本地结果排名。"),
                 ("怎样让 ChatGPT 推荐我的奥克兰企业？", "让你的业务容易被找到、也容易被确认：清楚的服务页面、网站和目录上一致的信息、近期的真实评价，以及 AI 助手本来就信任的网站上的提及。Flow AI 写给奥克兰企业的指南逐步讲解。"),
-                ("你们只和奥克兰企业合作吗？", "也服务其他地方。奥克兰的企业可以见面合作，新西兰和澳大利亚各地的企业，同样的服务远程进行。"),
-                ("怎么开始？", "通过联系表单简单留言。Amber 会亲自回复，通常会约在奥克兰先见一面，第一步是一份书面范围说明。"),
+                ("你们和奥克兰以外的企业合作吗？", "合作，覆盖新西兰和澳大利亚。奥克兰的企业可以见面合作，其他地方同样的服务在你自己的账号上远程进行。"),
+                ("怎么开始？", "通过联系表单简单留言。Amber 会亲自回复，常常会邀请你在奥克兰见一面，第一步是你们一起确定一份书面范围说明。"),
             ],
         ),
     ),
@@ -594,8 +594,8 @@ def render(page, lang):
     <section id="book" class="contact centered" aria-labelledby="book-title">
       <div class="wrap">
         <div class="stack">
-          <h2 id="book-title">{"一起开始搭建吧。" if zh else "Let's build your agent team."}</h2>
-          <p class="lead">{"告诉我你的业务，以及最让你头疼的营销缺口。第一步是一份书面范围说明。" if zh else "Tell me about your business and the marketing gap that costs you most. The first step is a written scope."}</p>
+          <h2 id="book-title">{"一起搭建你的智能体团队吧。" if zh else "Let's build your agent team together."}</h2>
+          <p class="lead">{"告诉我你的业务，以及你最想补上的营销缺口。我们先一起确定一份书面范围说明。" if zh else "Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together."}</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="{pre('/contact')}">{esc(ui['cta'])}</a>
             <a class="text-link" href="{pre('/sprints/')}">{"了解合作方式" if zh else "Explore how it works"}</a>
