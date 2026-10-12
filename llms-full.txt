@@ -60,12 +60,12 @@ Site structure:
   - /blog/ai-agency-vs-ai-consultant-nz: Choose an AI marketing agency when you want marketing produced and run for you, an AI automation agency when a specific process wastes hours every week, and an AI consultant when you need a plan before you buy anything. If you have staff with time, an in-house person plus an outside engineer can cost less than all three.
   - /blog/ai-marketing-providers-australia: In October 2026, Australian AI marketing services came from five kinds of provider: AI-native agencies such as Flowterra Labs, established agencies adding AI such as Yoghurt Digital, AI search specialists such as Prosperity Media, automation firms such as Bolder Digital, and remote build-and-handover practices. Few publish prices, so compare what each shows and what you keep.
   - /blog/ai-marketing-providers-new-zealand: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Flow AI.
-  - /blog/ai-marketing-scope-of-work: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Anything left unwritten becomes a dispute later.
+  - /blog/ai-marketing-scope-of-work: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Writing each point down now keeps both sides aligned later.
   - /blog/ai-marketing-services-vs-tools: Buy AI marketing tools when someone in the business has three or more hours a week and the skill to run one or two channels. Hire an AI marketing service when several channels must run and nobody has the time. Choose a build and handover when a team member has some hours and you want systems you own.
   - /blog/do-you-need-an-ai-marketing-agency-nz: You need an AI marketing agency when marketing must run every week across more than one channel and nobody inside the business has the hours to run it. Check that the agency runs real AI systems you can see and keep. If you have the time or only one channel, a freelancer or AI tools may serve you better.
   - /blog/fractional-cmo-vs-ai-cmo: A fractional CMO is a senior marketer working part time, costing about NZD 4,000 to 10,000 a month in New Zealand and AUD 6,000 to 18,000 in Australia. An AI CMO is software that plans and often produces the work for far less. Choose the person for judgment and accountability, the software for weekly execution, or combine them.
   - /blog/fractional-marketing-manager-nz: A fractional marketing manager is an experienced marketer who works for your business part time, usually one or two days a week, owning the plan and the results without a full-time salary. Robert Walters' 2026 guide puts Auckland contract marketing managers at NZD 70 to 105 an hour, roughly NZD 2,450 to 3,700 a month for one day a week.
-  - /blog/how-to-choose-an-ai-marketing-provider: Choose an AI marketing provider by asking to see its system run on a real business, who reviews the work, who owns the agents, accounts and data, how it meets the NZ or Australian Privacy Act, what it measures, what it costs in writing, and how you leave. Score each answer and pick the provider that shows the most.
+  - /blog/how-to-choose-an-ai-marketing-provider: Choose an AI marketing provider by asking for a run of its system on a real business, then asking who reviews the work, who owns the agents, accounts and data, how it meets the NZ or Australian Privacy Act, what it measures, what it costs in writing, and how you leave. Score each answer and pick the provider that shows the most.
   - /blog/marketing-agency-alternatives-nz: The main alternatives to a marketing agency in New Zealand are doing it yourself with AI tools, a freelancer at NZD 50 to 150 an hour, a fractional marketing manager from about NZD 1,200 a month, a specialist package, an AI-led service, or an in-house hire on NZD 55,000 to 150,000 a year.
   - /blog/marketing-agency-cost-australia: Most Australian businesses pay a marketing agency AUD 2,000 to 6,000 a month in 2026. One channel such as SEO starts at about AUD 1,200 to 2,500, multi-channel growth work runs AUD 6,000 to 15,000, and agency hourly rates sit between AUD 80 and 350. Quotes usually exclude 10% GST and ad spend.
   - /blog/marketing-agency-cost-nz: Most New Zealand marketing agencies charge NZD 95 to 200 an hour. Monthly retainers run about NZD 500 to 1,500 for one channel, NZD 1,500 to 4,000 for several, and NZD 4,000 to 10,000 or more for full service, plus GST and ad spend. From NZD 1,000 a month, an agency has room to do one channel properly.
@@ -601,7 +601,7 @@ AI marketing services · New Zealand and Australia
 
 # AI marketing services for New Zealand and Australian businesses.
 
-Let's build the marketing team your business deserves, one agent at a time, and keep it running in your hands.
+Let's build your marketing team together, one AI agent at a time, and hand it to your people to run with confidence.
 
 Work with meExplore what the agents run
 
@@ -613,11 +613,11 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Start with the agent that closes your biggest gap. Add the next when the first is running well.
+Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
 
 - 01Positioning
 
-One page every agent works from: who you serve, what you claim, the proof.
+One page every agent works from, setting out who you serve and the claims you can prove.
 
 - 02AI search and SEO
 
@@ -661,13 +661,13 @@ One short monthly read on what shipped and what comes next.
 
 How a build runs
 
-## Written scope, a build with your team, then it's yours.
+## Built together with your team, then yours to keep.
 
 01
 
 ### Scope
 
-We agree in writing what gets built, which data the agents may read, where a person reviews, and how we measure it. The scope sets the price.
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
 
 02
 
@@ -679,31 +679,31 @@ I build the agents with your team, one at a time, on your accounts. Your people 
 
 ### Hand over
 
-Documented handover: your team runs the system and owns every agent, prompt and file. Ongoing help is there if you want it.
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
 
-See it running
+Explore the work
 
 ## Every system is public.
 
-Client results appear here only with real names and real numbers. Until then, judge the work itself.
+The systems behind this practice are public, so you can judge the craft before we begin.
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
 - Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
 
-- Try oneFree agent templates you can run on your own site today.
+- TemplatesFree agent templates, ready to run on your own site today.
 
 - MethodHow the agent team works, with a public checklist for every sprint.
 
-## What it costs.
+## How pricing works.
 
-Each build is priced per project once the written scope is agreed, so you pay for what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
 
-## When an agency is the better call.
+## When an agency is the better fit.
 
-Large paid media budgets and brand campaigns with heavy production suit a full-service agency. Flow AI fits when you want marketing that runs every week on systems your team owns.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
 
-## Read before you choose.
+## Guides to help you choose well.
 
 - GuideWhat do AI marketing services include? A buyer's checklist.
 
@@ -731,7 +731,7 @@ AI marketing services are marketing work delivered through AI systems, such as a
 
 ### Is Flow AI an AI marketing agency?
 
-Flow AI does the work people look for when they search for an AI marketing agency: AI search, content, social, outbound and reporting. The difference is the model. One marketing engineer builds the agents with your team, documents them and hands them over, so the system stays yours instead of sitting inside a retainer.
+Flow AI does the work people look for when they search for an AI marketing agency: AI search, content, social, outbound and reporting. The model is a partnership. One marketing engineer builds the agents with your team, documents them and hands them over, so the system stays with your business for good.
 
 ### Do you work with businesses in Australia?
 
@@ -749,13 +749,13 @@ You do. Every agent, prompt, workflow and document is built on your accounts and
 
 Before anything reaches a customer. Each agent drafts, a named person on your team approves, and the scope records who reviews what. Positioning, pricing, claims and spend always stay with people.
 
-## Let's build your agent team.
+## Let's build your agent team together.
 
-Tell me about your business and the marketing gap that costs you most. The first step is a written scope.
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
 
 Work with meExplore how it works
 
-A short form. I read every message myself and reply within two working days.
+The form takes a minute. I read every message myself and reply within two working days.
 
 ---
 
@@ -782,11 +782,11 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Start with the agent that closes your biggest gap. Add the next when the first is running well.
+Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
 
 - 01Positioning
 
-One page every agent works from: who you serve, what you claim, the proof.
+One page every agent works from, setting out who you serve and the claims you can prove.
 
 - 02AI search and SEO
 
@@ -830,13 +830,13 @@ One short monthly read on what shipped and what comes next.
 
 How a build runs
 
-## Written scope, a build with your team, then it's yours.
+## Built together with your team, then yours to keep.
 
 01
 
 ### Scope
 
-We agree in writing what gets built, which data the agents may read, where a person reviews, and how we measure it. The scope sets the price.
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
 
 02
 
@@ -848,7 +848,7 @@ I build the agents with your team, one at a time, on your accounts. Your people 
 
 ### Hand over
 
-Documented handover: your team runs the system and owns every agent, prompt and file. Ongoing help is there if you want it.
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
 
 ## Built for how New Zealand buys.
 
@@ -866,29 +866,29 @@ Every build starts from the rules and habits of the New Zealand market.
 
 - PricingQuoted in NZD, plus GST, once the written scope is agreed.
 
-See it running
+Explore the work
 
 ## Every system is public.
 
-Client results appear here only with real names and real numbers. Until then, judge the work itself.
+The systems behind this practice are public, so you can judge the craft before we begin.
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
 - Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
 
-- Try oneFree agent templates you can run on your own site today.
+- TemplatesFree agent templates, ready to run on your own site today.
 
 - MethodHow the agent team works, with a public checklist for every sprint.
 
-## What it costs.
+## How pricing works.
 
-Each build is priced per project once the written scope is agreed, so you pay for what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
 
-## When an agency is the better call.
+## When an agency is the better fit.
 
-Large paid media budgets and brand campaigns with heavy production suit a full-service agency. Flow AI fits when you want marketing that runs every week on systems your team owns.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
 
-## Read before you choose.
+## Guides to help you choose well.
 
 - GuideWho offers AI marketing services in New Zealand in 2026?
 
@@ -904,7 +904,7 @@ Large paid media budgets and brand campaigns with heavy production suit a full-s
 
 - PlaceAuckland: Meet in person and run the build workshop on site.
 
-- PlaceAustralia: Selling across the Tasman as well.
+- PlaceAustralia: For businesses that also sell across the Tasman.
 
 ## Questions.
 
@@ -930,15 +930,15 @@ An agency usually runs marketing for you on a monthly retainer. Flow AI builds t
 
 ### How do I start?
 
-Send a short note through the contact form about your business and the marketing gap that costs you most. Amber replies personally, and the first step is a written scope.
+Share a few lines about your business and the marketing gap you most want to close. Amber replies personally, and together you shape a written scope as the first step.
 
-## Let's build your agent team.
+## Let's build your agent team together.
 
-Tell me about your business and the marketing gap that costs you most. The first step is a written scope.
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
 
 Work with meExplore how it works
 
-A short form. I read every message myself and reply within two working days.
+The form takes a minute. I read every message myself and reply within two working days.
 
 ---
 
@@ -965,11 +965,11 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Start with the agent that closes your biggest gap. Add the next when the first is running well.
+Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
 
 - 01Positioning
 
-One page every agent works from: who you serve, what you claim, the proof.
+One page every agent works from, setting out who you serve and the claims you can prove.
 
 - 02AI search and SEO
 
@@ -1013,13 +1013,13 @@ One short monthly read on what shipped and what comes next.
 
 How a build runs
 
-## Written scope, a build with your team, then it's yours.
+## Built together with your team, then yours to keep.
 
 01
 
 ### Scope
 
-We agree in writing what gets built, which data the agents may read, where a person reviews, and how we measure it. The scope sets the price.
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
 
 02
 
@@ -1031,7 +1031,7 @@ I build the agents with your team, one at a time, on your accounts. Your people 
 
 ### Hand over
 
-Documented handover: your team runs the system and owns every agent, prompt and file. Ongoing help is there if you want it.
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
 
 ## Built for how Australia buys.
 
@@ -1049,29 +1049,29 @@ Every Australian build starts from the local rules and the way your buyers searc
 
 - PricingQuoted per project once the written scope is agreed.
 
-See it running
+Explore the work
 
 ## Every system is public.
 
-Client results appear here only with real names and real numbers. Until then, judge the work itself.
+The systems behind this practice are public, so you can judge the craft before we begin.
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
 - Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
 
-- Try oneFree agent templates you can run on your own site today.
+- TemplatesFree agent templates, ready to run on your own site today.
 
 - MethodHow the agent team works, with a public checklist for every sprint.
 
-## What it costs.
+## How pricing works.
 
-Each build is priced per project once the written scope is agreed, so you pay for what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
 
-## When an agency is the better call.
+## When an agency is the better fit.
 
-Large paid media budgets and brand campaigns with heavy production suit a full-service agency. Flow AI fits when you want marketing that runs every week on systems your team owns.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
 
-## Read before you choose.
+## Guides to help you choose well.
 
 - GuideWho offers AI marketing services in Australia in 2026?
 
@@ -1085,7 +1085,7 @@ Large paid media budgets and brand campaigns with heavy production suit a full-s
 
 - GuideAI marketing and privacy law in NZ and Australia: what your provider must do with your data.
 
-- PlaceNew Zealand: Selling into New Zealand too.
+- PlaceNew Zealand: For businesses that also sell into New Zealand.
 
 - PlaceAll services: The full agent team, in one place.
 
@@ -1109,19 +1109,19 @@ Yes. Every commercial message the outbound agent drafts must meet the Spam Act 2
 
 ### Do you charge in Australian dollars?
 
-The written scope sets the price for each build, and the currency is agreed in that scope. Flow AI does not publish prices; market ranges for Australia sit in the Flow AI cost guides.
+The currency is agreed in the written scope for each build, alongside the price. For Australian market context, the Flow AI cost guides set out sourced ranges for agencies, freelancers and hires.
 
 ### How do I start?
 
-Send a short note through the contact form about your business and your biggest marketing gap. Amber replies personally, and the first step is a written scope.
+Share a few lines about your business and the marketing gap you most want to close. Amber replies personally, and together you shape a written scope as the first step.
 
-## Let's build your agent team.
+## Let's build your agent team together.
 
-Tell me about your business and the marketing gap that costs you most. The first step is a written scope.
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
 
 Work with meExplore how it works
 
-A short form. I read every message myself and reply within two working days.
+The form takes a minute. I read every message myself and reply within two working days.
 
 ---
 
@@ -1148,11 +1148,11 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Start with the agent that closes your biggest gap. Add the next when the first is running well.
+Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
 
 - 01Positioning
 
-One page every agent works from: who you serve, what you claim, the proof.
+One page every agent works from, setting out who you serve and the claims you can prove.
 
 - 02AI search and SEO
 
@@ -1196,13 +1196,13 @@ One short monthly read on what shipped and what comes next.
 
 How a build runs
 
-## Written scope, a build with your team, then it's yours.
+## Built together with your team, then yours to keep.
 
 01
 
 ### Scope
 
-We agree in writing what gets built, which data the agents may read, where a person reviews, and how we measure it. The scope sets the price.
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
 
 02
 
@@ -1214,7 +1214,7 @@ I build the agents with your team, one at a time, on your accounts. Your people 
 
 ### Hand over
 
-Documented handover: your team runs the system and owns every agent, prompt and file. Ongoing help is there if you want it.
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
 
 ## Local, in person, built together.
 
@@ -1226,35 +1226,35 @@ Working in the same city makes the build faster and the handover stronger.
 
 - Local AI searchWhen someone asks ChatGPT for the best provider in Auckland, it draws on the open web, maps data and reviews. The agent makes sure your business shows up accurately in all three.
 
-- Same time zoneYour team and the person building the agents work the same hours, so review loops close the same day.
+- Same time zoneYour team and the person building the agents share the same working day, so reviews come back within hours.
 
-- CommunityAmber builds in public and shows up at Auckland builder events. More about Amber.
+- Building in publicAmber shares her working notes and open-source systems as she builds. Meet Amber.
 
 - PricingQuoted in NZD, plus GST, once the written scope is agreed.
 
-See it running
+Explore the work
 
 ## Every system is public.
 
-Client results appear here only with real names and real numbers. Until then, judge the work itself.
+The systems behind this practice are public, so you can judge the craft before we begin.
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
 - Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
 
-- Try oneFree agent templates you can run on your own site today.
+- TemplatesFree agent templates, ready to run on your own site today.
 
 - MethodHow the agent team works, with a public checklist for every sprint.
 
-## What it costs.
+## How pricing works.
 
-Each build is priced per project once the written scope is agreed, so you pay for what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
 
-## When an agency is the better call.
+## When an agency is the better fit.
 
-Large paid media budgets and brand campaigns with heavy production suit a full-service agency. Flow AI fits when you want marketing that runs every week on systems your team owns.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
 
-## Read before you choose.
+## Guides to help you choose well.
 
 - GuideHow do Auckland businesses get recommended by ChatGPT and Google Maps?
 
@@ -1270,7 +1270,7 @@ Large paid media budgets and brand campaigns with heavy production suit a full-s
 
 - PlaceNew Zealand: The same service for the rest of New Zealand.
 
-- PlaceAustralia: Selling across the Tasman as well.
+- PlaceAustralia: For businesses that also sell across the Tasman.
 
 ## Questions.
 
@@ -1290,21 +1290,21 @@ Yes. The search agent sets up and maintains your Google Business Profile, keeps 
 
 Make your business easy to find and confirm: clear service pages, consistent details on your site and directories, recent genuine reviews, and mentions on sites the assistants already trust. The Flow AI guide for Auckland businesses walks through it step by step.
 
-### Do you only work with Auckland businesses?
+### Do you work with businesses outside Auckland?
 
-No. Auckland businesses can meet in person, and the same service runs remotely for businesses across New Zealand and Australia.
+Yes, across New Zealand and Australia. Auckland businesses can meet in person, and everywhere else the same service runs remotely on your own accounts.
 
 ### How do I start?
 
-Send a short note through the contact form. Amber replies personally, usually suggests a first meeting in Auckland, and the first step is a written scope.
+Share a few lines through the contact form. Amber replies personally, often with an invitation to meet in Auckland, and together you shape a written scope as the first step.
 
-## Let's build your agent team.
+## Let's build your agent team together.
 
-Tell me about your business and the marketing gap that costs you most. The first step is a written scope.
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
 
 Work with meExplore how it works
 
-A short form. I read every message myself and reply within two working days.
+The form takes a minute. I read every message myself and reply within two working days.
 
 ---
 
@@ -2565,7 +2565,7 @@ Type: Page
 Author: Amber Lan (Flow AI)
 Last updated: 2026-10-06
 
-Now: running marketing solo at an AI company in Auckland
+Now: running marketing solo at Novamind Labs in Auckland
 
 # Amber Lan. AI marketing engineer and GTM engineer.
 
@@ -2575,7 +2575,7 @@ Work with meGet my CV
 
 Before this: Ipiphany AISime MotorsRockfort MarketsDFS GroupBarfoot & Thompson
 
-+40%Paid media performanceSime Motors+150%Organic traffic in 12 monthsRockfort Markets1 personRunning the whole marketing functionAI company, Auckland
++40%Paid media performanceSime Motors+150%Organic traffic in 12 monthsRockfort Markets1 personRunning the whole marketing functionNovamind Labs, Auckland
 
 ### All results, and how
 
@@ -2927,7 +2927,7 @@ Career
 
 ## Six roles, 2017 to now.
 
-2017Barfoot & Thompson2019DFS Group2020Rockfort Markets2021Sime Motors New Zealand2025Ipiphany AI2026AI company
+2017Barfoot & Thompson2019DFS Group2020Rockfort Markets2021Sime Motors New Zealand2025Ipiphany AI2026Novamind Labs
 
 Nov 2017 to Jan 2019
 
@@ -3009,7 +3009,7 @@ Apr 2026 to now
 
 ### AI Product Marketing & Growth Lead
 
-AI company · Auckland
+Novamind Labs · Auckland
 
 - Category and positioning
 
@@ -3069,9 +3069,9 @@ Apr 2026 to now
 
 AI Product Marketing & Growth Lead
 
-AI company · Auckland
+Novamind Labs · Auckland
 
-Founding marketer for an AI-native B2B SaaS company. The whole function runs on agents I built: category and positioning, the launch, content, three executive voices, events and reporting.
+Founding marketer for Novamind Labs, an AI-native B2B SaaS company. The whole function runs on agents I built: category and positioning, the launch, content, three executive voices, events and reporting.
 
 1 personthe entire marketing function
 
@@ -3183,7 +3183,7 @@ LinkedInGitHubEmail
 
 ### Who is Amber Lan?
 
-Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of an AI startup on an agent stack she built herself.
+Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of Novamind Labs, an AI startup, on an agent stack she built herself.
 
 ### What does Amber Lan build?
 
@@ -3199,7 +3199,7 @@ Two ways. Teams contract a build through Flow AI: a written scope, then a fixed-
 
 ### Does Amber Lan build with Claude Code?
 
-Yes. Amber runs the whole marketing function of an AI startup on Claude Code: per-lane instruction files, a versioned skills library with 126 skills published open source, connectors to the tools marketing runs in, and a review gate before anything ships. Her working notes on the setup show how it fits together.
+Yes. Amber runs the whole marketing function of Novamind Labs, an AI startup, on Claude Code: per-lane instruction files, a versioned skills library with 126 skills published open source, connectors to the tools marketing runs in, and a review gate before anything ships. Her working notes on the setup show how it fits together.
 
 ### Is Amber Lan open to marketing engineer or GTM engineer roles?
 
@@ -4429,11 +4429,11 @@ AI marketing services are marketing services in which AI systems such as agents,
 
 Owners already buy marketing help and already use AI. LocaliQ's December 2025 trends report, from 730+ small business owners and marketers (74% in the US or Canada), found nearly 60% using AI for some of their marketing and 60% working with at least one marketing partner. Providers have responded by adding "AI" to almost every service name, which makes offers harder to compare.
 
-This page is the checklist. Whether you need a provider at all is covered in the guide to whether you need an AI marketing agency in NZ, and prices are in the AI marketing cost guide for Australia and New Zealand.
+This page is the checklist. The guide to whether you need an AI marketing agency in NZ helps you weigh up whether to bring in a provider at all, and the AI marketing cost guide for Australia and New Zealand sets out prices.
 
 How does an AI marketing agency work week to week?
 
-An AI marketing agency works in a weekly loop. Its systems read your business, your market and last week's numbers, draft the next piece of work, and pass it to a person for review. Approved work ships, results are measured, and the next round starts from what was learned. The review step is where quality is won or lost.
+An AI marketing agency works in a weekly loop. Its systems read your business, your market and last week's numbers, draft the next piece of work, and pass it to a person for review. Approved work ships, results are measured, and the next round starts from what was learned. The review step sets the quality of everything that ships.
 
 In practice the loop has six steps:
 
@@ -4445,15 +4445,15 @@ Draft. The system produces the work: a page, a guide, a set of posts, outbound e
 
 Review. A named person checks facts, claims, tone and anything involving price or a customer, then approves or sends it back.
 
-Ship. Approved work is published, scheduled or sent from your own accounts.
+Ship. Approved work goes out from your own accounts, whether published, scheduled or sent.
 
-Measure. Enquiries, their sources and the cost of each are logged and fed into next week's brief.
+Measure. The system logs enquiries, their sources and the cost of each, and feeds them into next week's brief.
 
 The time saving is real at the production end. Salesforce's 2026 State of Marketing, from 4,450 marketers surveyed late 2025, reports that AI agents free up 6 to 7 hours a week for creative and strategic work. The hours move to review and decisions, so the loop only works when someone owns them. The pillar guide on what an AI marketing agent is explains the agent side in more depth.
 
 Which service lines do AI marketing services cover?
 
-AI marketing services can cover ten lines of work: positioning, AI search, SEO, content, social, outbound, conversion, paid media checks, community and reviews, and measurement with reporting. Most providers sell two to four of them. Ask for the list in writing, because the gaps between lines are where enquiries leak.
+AI marketing services can cover ten lines of work: positioning, AI search, SEO, content, social, outbound, conversion, paid media checks, community and reviews, and measurement with reporting. Most providers sell two to four of them. Ask for the list in writing, so the handoffs between lines are covered and every enquiry has an owner.
 
 Service lineWhat the AI doesWhat you should receive each month
 
@@ -4481,7 +4481,7 @@ Sellers use different names for the same work. "AI-powered marketing services" a
 
 What should AI search and SEO work deliver?
 
-AI search and SEO work should deliver changes on your own website that help Google rank you and help AI assistants name you: clear answer pages, accurate schema, consistent business details and a tested set of customer questions. You should see which questions now return your business, alongside rankings and enquiries from search.
+AI search and SEO work should deliver changes on your own website that help Google rank you and help AI assistants name you: clear answer pages, accurate schema, consistent business details and a tested set of customer questions. You should be able to track which questions now return your business, alongside rankings and enquiries from search.
 
 This line matters more each year because fewer searches end in a click. SparkToro found 68.01% of US Google searches ended without a click from January to April 2026, up from 60.45% in 2024. Buyers also ask assistants directly: BrightLocal's 2026 Local Consumer Review Survey of 1,002 US consumers found 45% used AI tools such as ChatGPT to find local recommendations, up from 6%.
 
@@ -4531,7 +4531,7 @@ Which delivery model fits: retainer, build and handover, software or consulting?
 
 AI marketing services come in four delivery models. A done-for-you retainer runs the work for you each month. A build and handover installs the systems in your accounts and trains your team to run them. Software gives you the tools to run yourself. Consulting gives you a plan. Each suits a different amount of in-house time.
 
-ModelWhat you getUsual pricing shapeWhat you keep at the endSuits
+ModelWhat it includesUsual pricing shapeWhat you keep at the endSuits
 
 Done-for-you retainerThe provider's systems run your marketing; you approveMonthly fee, often with a minimum termThe published work; the systems usually stay with the providerNo one inside has hours for marketing
 
@@ -4567,13 +4567,13 @@ Term and exitMinimum term, notice period and a handover list"What does the hando
 
 PrivacyHow the work meets the NZ Privacy Act 2020 or the Australian Privacy Act"Have you done a privacy assessment for these tools?"
 
-The guide to choosing an AI marketing provider turns these items into twelve questions and a scoring table, and the AI marketing scope of work guide shows how to write the scope itself. For a NZ and Australian overview of the options, see the AI marketing services hub for both countries.
+The guide to choosing an AI marketing provider turns these items into twelve questions and a scoring table, and the AI marketing scope of work guide shows how to write the scope itself. For a NZ and Australian overview of the options, explore the AI marketing services hub for both countries.
 
 Where Flow AI fits
 
 Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. On the delivery table above, that is the build and handover model.
 
-Flow Intelligence handles positioning, and ten agents cover the service lines listed on this page, installed on your own accounts. Each build starts with a written scope, is priced per project, and ends with a documented handover; your team owns and keeps running it. The systems are public: the skill library, free agent templates, and a case study of a six-month marketing function. Companies hiring a marketing engineer can reach Amber at the hiring page.
+Flow Intelligence handles positioning, and ten agents cover the service lines listed on this page, installed on your own accounts. Each build starts with a written scope and is priced per project. It ends with a documented handover, and from there your team owns it and keeps it running. You can explore the systems in the open: the skill library, free agent templates, and a case study of a six-month marketing function. Companies hiring a marketing engineer can reach Amber at the hiring page.
 
 The short version
 
@@ -4581,7 +4581,7 @@ AI marketing services cover up to ten lines of marketing work, from positioning 
 
 You still own the strategy, the claims, the budget and the conversations with buyers, and someone on your side needs an hour or two a week to review. Get every proposal in writing and compare them against the checklist above.
 
-To work through which lines your business needs first, talk to Amber.
+To work out together which lines your business needs first, talk to Amber.
 
 Q: What do AI marketing services include?
 A: AI marketing services usually include some mix of positioning, AI search optimisation, SEO, content, social media, outbound prospecting, conversion work, paid media checks, community and review management, and measurement with reporting. Few providers cover all of them. Ask each one to list the lines it covers, what each delivers every month, and which person approves the work before it reaches customers.
@@ -4590,11 +4590,11 @@ A: An AI marketing agency runs a weekly loop. Its systems read your business, yo
 Q: What does an AI marketing agency do that a normal agency does not?
 A: An AI marketing agency does more of the production with systems: research, first drafts, repurposing, scheduling, follow-up and reporting. That should show up as faster turnaround, more output for the same budget, or a lower price. A normal agency may use AI tools too. The difference is whether you can see the systems running and whether the saving reaches you.
 Q: What should I still do myself if I buy AI marketing services?
-A: You still own positioning, pricing, offers, claims about results, the budget, and every conversation with a buyer. You also need one named person who reviews and approves work on a set day each week. Most AI marketing services fail on the client side when nobody has time to review, so plan for one to two hours a week.
+A: You still own positioning, pricing, offers, claims about results, the budget, and every conversation with a buyer. You also need one named person who reviews and approves work on a set day each week. AI marketing services work best when someone on your side has protected time to review, so plan for one to two hours a week.
 Q: Are AI-powered marketing services cheaper than an agency?
-A: Sometimes. Published prices are rare in both countries: Digital Nomads HQ's June 2026 audit of 140 Australian agencies found 78% publish no pricing. A productised AI service can cost less than a traditional retainer for the same scope, while a build you keep has a project fee up front and lower running costs after. Compare written scopes, not labels.
+A: Sometimes. Published prices are rare in both countries: Digital Nomads HQ's June 2026 audit of 140 Australian agencies found 78% publish no pricing. A productised AI service can cost less than a traditional retainer for the same scope, while a build you keep has a project fee up front and lower running costs after. Compare the written scopes side by side.
 Q: What should an AI marketing services proposal include?
-A: A proposal should name each service line, the monthly deliverables for each, who reviews and approves the work, which accounts and files are in your name, the numbers that will be reported, the price and what it covers, the minimum term and notice period, and what is handed over when the engagement ends. Anything missing should be added in writing before you sign.
+A: A proposal should name each service line, the monthly deliverables for each, who reviews and approves the work, which accounts and files are in your name, the numbers that will be reported, the price and what it covers, the minimum term and notice period, and what is handed over when the engagement ends. Ask for anything missing to be added in writing before you sign.
 
 ## How much does a marketing agency cost in Australia? (2026, AUD)
 URL: https://www.flowai.co.nz/blog/marketing-agency-cost-australia
@@ -4609,7 +4609,7 @@ An Australian marketing agency in 2026 costs most businesses AUD 2,000 to 6,000 
 
 The headline range comes from Precision Digital's April 2026 guide, which puts most Australian businesses at AUD 2,000 to 6,000 a month on digital marketing services. The bands by scope come from Digital Nomads HQ's June 2026 audit, which suggests AUD 1,500 to 3,000 a month for a local business on one channel, AUD 3,000 to 6,000 for an established business on two, and AUD 6,000 to 15,000 for multi-channel growth. Both are agencies estimating their own market, so read them as ranges.
 
-Very little of this is public. The same audit covered 411 service lines and found 78% published no pricing at all, with only 8% showing a genuine rate card. Expect to ask for quotes, and expect them in formats that are hard to compare, which is why the second half of this guide is about comparison. The wider guide to AI marketing costs in Australia and New Zealand sets agencies next to tools, freelancers and hires.
+Very little of this is public. The same audit covered 411 service lines and found 78% published no pricing at all, with only 8% showing a genuine rate card. Expect to ask for quotes, often in formats that differ, so the second half of this guide sets out how to compare them on one scale. The wider guide to AI marketing costs in Australia and New Zealand sets agencies next to tools, freelancers and hires.
 
 What does a marketing retainer buy?
 
@@ -4617,7 +4617,7 @@ A marketing retainer is a fixed monthly fee paid to an agency or freelancer for 
 
 workspacein.com's 2026 pricing guide, built from quoted proposals in early 2026, puts Australian agency rates at AUD 120 to 350 an hour for senior strategists and AUD 80 to 180 for production roles. At those rates a AUD 3,000 retainer buys about 17 to 37 hours of production time, or 9 to 25 hours of strategist time. Account management and reporting come out of those hours first.
 
-Small retainers spread across several channels get thin quickly. Twelve hours a month split three ways is four hours per channel, enough to keep something ticking over and rarely enough to build it. Ask any agency for the hours or deliverables behind the fee. The glossary entry on marketing retainer gives the term in one line.
+Small retainers stretch thin across several channels. Twelve hours a month split three ways is four hours per channel, enough to maintain a channel and rarely enough to build one. Ask any agency for the hours or deliverables behind the fee. The glossary entry on marketing retainer gives the term in one line.
 
 Marketing agency prices in Australia by service
 
@@ -4649,7 +4649,7 @@ Branding and logo, agencyAUD 5,000 to 30,000+workspacein.com, Jul 2026
 
 The spread inside each service is wide because the work differs. A AUD 1,200 SEO package and a AUD 5,000 one should cover very different numbers of pages, content and technical fixes. Ask for page counts and monthly deliverables in writing, then compare like with like.
 
-What you get at each price tier
+What each price tier covers
 
 Under about AUD 3,000 a month, an Australian agency can run one channel properly. AUD 3,000 to 6,000 covers two channels for an established small business. Above AUD 6,000, an agency can run several channels together and tie its reporting to enquiries and sales. Ad spend and large creative projects sit outside every tier.
 
@@ -4689,7 +4689,7 @@ Fractional CMOAUD 6,000 to 9,000 a month (0.5 to 1 day a week) up to AUD 15,000 
 
 Cemoh's live rate guide, as of 12 October 2026, puts its consultants at an average AUD 823 a day across 23 roles, with CMO consultants at AUD 191 an hour and a managed marketing plan from AUD 1,800 a month plus GST. Robert Walters' 2026 salary guide lists NSW contract rates of AUD 61 to 74 an hour for marketing managers and AUD 120 to 160 for CMOs. AlwaysOn Marketing Co's November 2025 pricing guide puts Australian fractional CMOs at AUD 6,000 to 18,000 or more a month, with day rates of AUD 1,200 to 3,000, and Fractionus's September 2026 market report found an average day rate of about AUD 1,900 from a small sample of 13 verified rates.
 
-The fractional CMO vs AI CMO comparison covers when part-time senior judgment is worth more than extra production hours.
+The fractional CMO vs AI CMO comparison covers when part-time senior judgement is worth more than extra production hours.
 
 What does an in-house marketer cost in Australia?
 
@@ -4735,15 +4735,15 @@ Where Flow AI fits
 
 Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
 
-That is a different purchase from a retainer: each build starts with a written scope, is priced per project, and ends with a documented handover, so your team owns and runs the system afterwards. Agencies remain the right answer for large paid media budgets and brand campaigns. The skill library behind the builds is public, so you can inspect it before you talk to anyone.
+That is a different purchase from a retainer: each build starts with a written scope and a per-project price, and ends with a documented handover, so your team owns and runs the system you build together. Agencies remain the right answer for large paid media budgets and brand campaigns. The skill library behind the builds is public, so you can explore it before the first conversation.
 
 The short version
 
 An Australian marketing agency costs most businesses AUD 2,000 to 6,000 a month in 2026, from about AUD 1,500 for one channel to AUD 15,000 for multi-channel growth work. Hourly rates run AUD 80 to 350. Add GST if you are unregistered, plus ad spend, setup fees and your own time.
 
-Compare quotes on cost per enquiry, keep your accounts in your own name, and start with one channel done well. For the New Zealand figures, see the guide to marketing agency costs in NZ, and for named providers, the guide to AI marketing providers in Australia.
+Start with one channel done well, and compare quotes on cost per enquiry with your accounts kept in your own name. For the New Zealand figures, read the guide to marketing agency costs in NZ, and for named providers, the guide to AI marketing providers in Australia.
 
-To have a quote checked against your own numbers, talk to Amber.
+To work through a quote against your own numbers together, talk to Amber.
 
 Q: How much does a digital marketing agency cost per month in Australia?
 A: Precision Digital's April 2026 guide puts most Australian businesses at AUD 2,000 to 6,000 a month, and workspacein.com reports a median small-business retainer of AUD 3,400 to 4,800 a month from quotes in early 2026. Digital Nomads HQ's June 2026 audit suggests AUD 1,500 to 3,000 for one channel and AUD 6,000 to 15,000 for multi-channel growth work, all before GST and ad spend.
@@ -4763,11 +4763,11 @@ URL: https://www.flowai.co.nz/blog/how-to-choose-an-ai-marketing-provider
 Author: Amber Lan, Flow AI
 Updated: 2026-10-13
 
-Short answer: Choose an AI marketing provider by asking to see its system run on a real business, who reviews the work, who owns the agents, accounts and data, how it meets the NZ or Australian Privacy Act, what it measures, what it costs in writing, and how you leave. Score each answer and pick the provider that shows the most.
+Short answer: Choose an AI marketing provider by asking for a run of its system on a real business, then asking who reviews the work, who owns the agents, accounts and data, how it meets the NZ or Australian Privacy Act, what it measures, what it costs in writing, and how you leave. Score each answer and pick the provider that shows the most.
 
 What makes an AI marketing provider the right choice?
 
-The right AI marketing provider shows you a working system, names the person who reviews your work, keeps everything it builds in your name, handles customer data within NZ or Australian privacy law, and puts price and exit terms in writing. Labels and awards tell you little; what the provider will show you before you sign tells you a lot.
+The right AI marketing provider shows you a working system, names the person who reviews your work, keeps everything it builds in your name, handles customer data within NZ or Australian privacy law, and puts price and exit terms in writing. What the provider will show you before you sign tells you the most.
 
 Labels are a weak signal in this market. Gartner estimated in June 2025 that only about 130 of the thousands of vendors selling agentic AI are real, in a warning about "agent washing", and predicted over 40% of agentic AI projects will be cancelled by the end of 2027. The same caution applies to marketing providers that have added "AI" to their name.
 
@@ -4779,11 +4779,11 @@ Before the first call, write down the one or two marketing jobs you most need do
 
 Half a page is enough. Include your last three months of enquiries if you have them, even as a rough count, and a list of the accounts you already own: website, Google Business Profile, ad accounts, email platform, social pages. Send the same brief to every provider on the shortlist.
 
-Value is where most client relationships go wrong, so set expectations early. Setup's 2025 Marketing Relationship Survey found 61% of clients who ended an agency relationship cited dissatisfaction with value, and 44% said the agency did not understand the business, though from only about 100 responses, mostly larger US brands.
+Agree early on what value looks like, because value is one of the most common reasons clients leave an agency. Setup's 2025 Marketing Relationship Survey found 61% of clients who ended an agency relationship cited dissatisfaction with value, and 44% said the agency did not understand the business, though from only about 100 responses, mostly larger US brands.
 
 Which questions test the system itself?
 
-Four questions test whether a provider runs real AI systems: ask to see one running, ask what it reads and produces, ask where a person reviews it, and ask how the work splits between systems and people. A provider with working systems answers these in minutes, with a screen share of a real run.
+Four questions test whether a provider runs real AI systems: ask for a live run of one, ask what it reads and produces, ask where a person reviews it, and ask how the work splits between systems and people. A provider with working systems answers these in minutes, with a screen share of a real run.
 
 1. Can you show me the system running on a real business?
 
@@ -4817,7 +4817,7 @@ In Australia, the OAIC says the Privacy Act generally applies to businesses with
 
 7. Which AI tools and models touch our data, and where is it stored?
 
-Ask for a list: the AI models, the automation platform, the CRM, and the country each one stores data in. Customers care. The Privacy Commissioner's 2026 survey of 1,245 New Zealanders found 82% want more say in how their information is collected and used.
+Ask for a list: the AI models, the automation platform, the CRM, and the country each one stores data in. Your customers care about this too. The Privacy Commissioner's 2026 survey of 1,245 New Zealanders found 82% want more say in how their information is collected and used.
 
 8. How do outbound lists and messages meet spam law?
 
@@ -4887,7 +4887,7 @@ Measurement (9, 10)2Enquiries and cost per enquiry monthly, month-one outputs li
 
 Price and terms (11)1Written price, extras listed, short minimum termNo written price
 
-The maximum is 42. A provider under 25 needs a good reason to stay on the list. Ask for references as well: Setup's 2025 survey found 82% of clients who found an agency through word of mouth were satisfied, against 70% through internet search. For named providers in each country, see the overviews of AI marketing providers in New Zealand and AI marketing providers in Australia.
+The maximum is 42. A provider under 25 needs a good reason to stay on the list. Ask for references as well: Setup's 2025 survey found 82% of clients who found an agency through word of mouth were satisfied, against 70% through internet search. For named providers in each country, explore the overviews of AI marketing providers in New Zealand and AI marketing providers in Australia.
 
 Is the best choice different for a small business?
 
@@ -4897,9 +4897,9 @@ Agencies with media buying teams remain the right answer for large paid media bu
 
 Where Flow AI fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI is one more provider to run through these twelve questions.
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI welcomes the same twelve questions as any provider on your list.
 
-Its systems are public in the skill library and the free agent templates, so you can answer most of questions 1 and 2 before a call. Each build starts with a written scope, is priced per project, and ends with a documented handover; your team owns and keeps running it. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
+Its systems are public in the skill library and the free agent templates, so you can answer most of questions 1 and 2 before a call. Each build starts with a written scope and is priced per project. It ends with a documented handover, and from there your team owns it and keeps it running. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
 
 The short version
 
@@ -4963,7 +4963,7 @@ Ask every customer, the day the job finishes, with your direct review link. Rece
 
 Posts and photos
 
-Google lets you publish short updates on your profile: a finished job in Mt Eden, a new service, holiday hours for Matariki or Auckland Anniversary Day. Add two or three real photos a month. Neither is a ranking trick. They show people (and the assistants reading your profile) that the business is active.
+Google lets you publish short updates on your profile: a finished job in Mt Eden, a new service, holiday hours for Matariki or Auckland Anniversary Day. Add two or three real photos a month. Their value lies in showing people (and the assistants reading your profile) that the business is active.
 
 Why do consistent details and your NZBN matter?
 
@@ -5009,7 +5009,7 @@ Mentions matter for AI answers in particular. Ahrefs' own study of 75,000 brands
 
 A 30-day checklist for Auckland businesses
 
-Thirty days is enough to fix the foundations. Spend week one on the Business Profile, week two on consistent details and the NZBN, week three on service and area pages, and week four on directories, crawler access and a baseline. Budget three to five hours a week, then about an hour a week to keep it running.
+Thirty days is enough to put the foundations in place. Spend week one on the Business Profile, week two on consistent details and the NZBN, week three on service and area pages, and week four on directories, crawler access and a baseline. Budget three to five hours a week, then about an hour a week to keep it running.
 
 WeekTaskTimeDone when
 
@@ -5039,28 +5039,28 @@ Where Flow AI fits
 
 Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For a local business, its search agent covers the website side of this guide. The AI search sprint lists its deliverables.
 
-Each build starts with a written scope and is priced per project, and you own what is installed. If you would like to meet in person, the page on AI marketing in Auckland explains how local work runs. Companies hiring for a marketing engineer role can reach Amber through the hiring page.
+Each build starts with a written scope and a per-project price, and your team owns what you build together. If you would like to meet in person, the page on AI marketing in Auckland explains how local work runs. Companies hiring for a marketing engineer role are welcome to reach Amber through the hiring page.
 
 The short version
 
 ChatGPT, Perplexity and Google Maps recommend the Auckland businesses they can match to the request and confirm from several sources. Get the Business Profile right first, with a specific category and your real suburbs as service areas, then make every listing, including the NZBN, carry the same name, address and phone.
 
-After that, add a page for each service and area you serve, ask every customer for a review, and check five local prompts each month. Most owners can do all of it with free tools.
+After that, add a page for each service and area you serve, and ask every customer for a review. Check five local prompts each month to track progress. Most owners can do all of it with free tools.
 
-If you would rather have the search work built and handed over, talk to Amber.
+If you would like to build the search work together and take it over afterwards, talk to Amber.
 
 Q: Can I pay to be recommended by ChatGPT or ranked higher in Google Maps?
 A: No. Google's Business Profile help states there is no way to request or pay for a better local ranking, and OpenAI's help centre says placement in ChatGPT search results is not guaranteed. Google Maps does sell ads, which appear labelled as sponsored. The organic recommendations come from relevance, distance, prominence and the information assistants can find and confirm about your business.
 Q: How many service areas can I add to a Google Business Profile in Auckland?
 A: Google allows up to 20 service areas, set by city, postcode or other named area, and asks that the overall area stay within about two hours' drive of where the business is based. For an Auckland business that usually means listing the suburbs or local board areas you really travel to, such as Albany, Takapuna and Devonport, rather than all of Auckland.
 Q: Does my NZBN help my business show up in AI search?
-A: No public evidence shows the NZBN register feeding ChatGPT or Google directly. It still helps, because it is an official public record of your trading name, website, phone and addresses, and other directories and data providers draw on official records. Keeping your NZBN details identical to your Business Profile and website removes one more source of conflicting facts about your business.
+A: It helps indirectly. No public evidence shows the NZBN register feeding ChatGPT or Google directly, but it is an official public record of your trading name, website, phone and addresses, and other directories and data providers draw on official records. Keeping your NZBN details identical to your Business Profile and website removes one more source of conflicting facts about your business.
 Q: How long does it take to appear in Google Maps results in Auckland?
 A: A new or newly verified Business Profile can appear for your own business name within days, and Google says service area edits can take up to 48 hours to show. Ranking for competitive searches such as plumber or accountant in a busy suburb takes longer, often a few months of steady reviews, accurate details and useful pages. Track enquiries monthly and judge the trend over a quarter.
 Q: How do I check whether ChatGPT recommends my Auckland business?
 A: Ask it the questions your customers ask, with a place in each one, such as best physio in Mt Albert or emergency electrician on the North Shore. Run the same prompts in Perplexity, Google AI Mode and Copilot, note which businesses are named and which sources are cited, and repeat once a month. Use a logged-out or fresh session so your own history does not shape the answers.
 Q: Do I need a separate website page for every Auckland suburb?
-A: Only for areas you actively serve and can write about with real detail: jobs you have done there, travel times, local conditions and the services people there ask for. Ten thin pages with the suburb name swapped tend to be ignored by Google. Four strong pages for the parts of Auckland where most of your work comes from will do more.
+A: Only for areas you actively serve and can write about with real detail: jobs you have done there, travel times, local conditions and the services people there ask for. Four strong pages for the parts of Auckland where most of your work comes from will do more than ten thin pages with the suburb name swapped, which Google tends to ignore.
 
 ## What happens in the first month of an AI marketing build? A week-by-week guide.
 URL: https://www.flowai.co.nz/blog/first-month-of-an-ai-marketing-build
@@ -5079,7 +5079,7 @@ This guide describes how a good first month runs in general, whichever provider 
 
 What should you have ready before week one?
 
-Have access ready for the accounts the first agent will use, and name one person who can make decisions each week. Bring the numbers you track today too, even rough ones, so there is a baseline. A provider can work around missing material. Slow access and an absent decision maker are what usually stretch a four-week build into three months.
+Have access ready for the accounts the first agent will use, and name one person who can make decisions each week. Bring the numbers you track today too, even rough ones, so there is a baseline. A provider can work around missing material. Quick access and a decision maker available each week are what stop a four-week build stretching into three months.
 
 The account list depends on the first agent. For search work it is the website or CMS, Google Search Console, Google Business Profile and Bing Webmaster Tools. For content it is the social accounts and the scheduling tool. For outbound it is the email domain and the CRM. Grant access through user roles where the tool allows it, so you can remove the provider later without changing passwords.
 
@@ -5089,13 +5089,13 @@ Week 1: the written scope and positioning brief
 
 The first week ends with two documents you approve. The written scope names the first agent, what it may and may not do, who reviews its work and how success will be measured. The positioning brief sets out who you serve and the proof behind each claim you make, so every agent writes from the same facts.
 
-Expect a working session of about an hour early in the week, where the provider asks about your customers, your best and worst months, and the marketing jobs that never get done. They should have read your website, reviews and competitors beforehand. By mid-week you get drafts to mark up, and by the end of the week, final versions.
+Expect a working session of about an hour early in the week, where the provider asks about your customers, your best and worst months, and the marketing jobs that never get done. They should have read your website, reviews and competitors beforehand. By mid-week you have drafts to mark up, and by the end of the week, final versions.
 
 The scope is the most important document of the month. It turns "help us with AI marketing" into a specific job, such as "keep our service pages crawlable and quotable, and report monthly on which AI assistants name us". The guide to what an AI marketing scope of work should include lists every section to check before you sign.
 
-You provide: access, an hour of conversation, examples of writing you like and dislike, any claims you can prove. You get: the scope and the positioning brief. A person approves: both documents, before any agent is built.
+You provide: access, an hour of conversation, examples of writing you like and dislike, any claims you can prove. Your team receives: the scope and the positioning brief. A person approves: both documents, before any agent is built.
 
-Week 2: the first agent goes in, with a human review step
+Week 2: building the first agent, with a human review step
 
 In week two the provider builds the first agent inside your accounts and sets up the point where a person checks its work. Nothing reaches a customer until that review step has been tested on real output. By Friday the agent has produced its first batch, and your reviewer has approved or sent back each piece.
 
@@ -5103,7 +5103,7 @@ Which agent comes first depends on the scope. A business that buyers cannot find
 
 The review step is where most of the design work sits. It should say exactly what the agent may do on its own (draft, research, schedule internal reports) and what waits for a person (anything published, sent or spent). This is human in the loop in practice. The reviewer should be someone who knows the business, usually the owner or marketing lead, with a clear way to send work back.
 
-You provide: a reviewer with 30 to 60 minutes this week. You get: a working agent and its first output. A person approves: every item before it goes live, plus the review rules themselves.
+You provide: a reviewer with 30 to 60 minutes this week. Your team receives: a working agent and its first output. A person approves: every item before it goes live, plus the review rules themselves.
 
 Week 3: run it and measure
 
@@ -5111,9 +5111,9 @@ Week three is a live run. The agent does its job on a normal schedule, your revi
 
 Keep the measure close to money. For search, that might be enquiries from organic search and whether ChatGPT or Perplexity names you for five agreed prompts. For outbound, positive replies and meetings booked. For content, pieces approved and published on schedule, and the enquiries they bring. Raw output counts, such as posts drafted, say little on their own.
 
-Three weeks is too short to judge most marketing results, and an honest provider will say so. What week three can show is whether the agent runs reliably and the review step catches its mistakes. Early signals are a bonus. Ask for a written note of what was changed during the week and why.
+Most marketing results take longer than three weeks to judge, and an honest provider will say so. What week three can show is whether the agent runs reliably and the review step catches its mistakes. Early signals are a bonus. Ask for a written note of what was changed during the week and why.
 
-You provide: approvals on time. You get: a first results note against the baseline. A person approves: each piece of customer-facing work, and any change to the agent's rules.
+You provide: approvals on time. Your team receives: a first results note against the baseline. A person approves: each piece of customer-facing work, and any change to the agent's rules.
 
 Week 4: handover documents and the next agent
 
@@ -5123,13 +5123,13 @@ A handover session of an hour, recorded if possible, should walk the person who 
 
 The choice of second agent should come from evidence. If search is working and enquiries now arrive faster than you can answer them, conversion or reporting may come next. If content is drafted but nobody publishes it, the gap is process, and the next build should fix that first.
 
-You provide: the owner for handover, and a decision on the next job. You get: the documentation, the account list and a scope for the next agent. A person approves: the handover as complete, and the next scope.
+You provide: the owner for handover, and a decision on the next job. Your team receives: the documentation, the account list and a scope for the next agent. A person approves: the handover as complete, and the next scope.
 
 The first month on one table
 
 The table below puts the four weeks side by side: what you hand over, what comes back and what a person signs off. Use it as a checklist when you talk to providers. If a proposal cannot show you something similar, ask how they handle each row, especially the approvals column.
 
-WeekFocusYou provideYou getA person approves
+WeekFocusYou provideYour team receivesA person approves
 
 BeforeAccess and baselineAccount access, a decision maker, current numbersA list of what the provider can and cannot reachWho has access to what
 
@@ -5169,14 +5169,14 @@ A good first month of an AI marketing build has one output per week: a written s
 
 Your part is access, a decision maker and an hour or two of approvals each week. Keep every account in your name, and make sure a person signs off anything a customer will see.
 
-To plan the first month for your business, talk to Amber.
+To plan your first month together, talk to Amber.
 
 Q: How long does an AI marketing build take?
 A: A first agent can be scoped, installed and handed over within a month, and some providers do a single agent in one focused week. A full set of agents covering search, content, outbound and reporting is usually built one at a time over several months, because each one needs its own review rules, baseline and handover before the next one starts.
 Q: What do I need to provide to an AI marketing agency in the first week?
 A: Admin or delegated access to the accounts the first agent will touch, such as your website, Google Business Profile, Search Console, analytics and CRM. Add your current positioning, examples of writing you like, a list of claims you can prove, and the numbers you track today. Most important, name one person who can make decisions and approve work each week.
 Q: Will an AI agent publish or send anything without my approval?
-A: It should not, in a well-run build. The written scope names what the agent may do on its own, such as drafting or scheduling internal reports, and what needs a person's approval, such as anything a customer will see. Ask to see the review step working in week two, before the agent goes live, and keep the right to tighten it later.
+A: It should not, in a well-run build. The written scope names what the agent may do on its own, such as drafting or scheduling internal reports, and what needs a person's approval, such as anything a customer will see. Ask to test the review step together in week two, before the agent goes live, and keep the right to tighten it later.
 Q: What should the handover from an AI marketing provider include?
 A: Written documentation of what each agent does and how to run it, the prompts, skills or configuration files it uses, a list of every account and tool with who owns it, the review rules, a baseline and first results report, and a short guide for what to do when something breaks. Everything should live in accounts your business owns.
 Q: How much of my team's time does an AI marketing build take?
@@ -5243,9 +5243,9 @@ A service is a good choice for a business with buyers who research before they c
 
 When does a build and handover win?
 
-A build and handover wins when a team member has a few hours a week, marketing needs to run across more than one channel, and you want to own the systems. A provider installs agents and workflows on your accounts, trains your person, and leaves. You pay a project fee once and only your running costs after.
+A build and handover wins when a team member has a few hours a week, marketing needs to run across more than one channel, and you want to own the systems. A provider installs agents and workflows on your accounts and trains the person who will run them, then steps back. You pay a project fee once and only your running costs after.
 
-This route suits a business with a marketing coordinator, an office manager with a writing streak, or an owner who wants to understand the system. The person on your side runs the weekly loop: reviews drafts, approves what ships, reads the report. The agents do the research and production.
+This route suits a business with a marketing coordinator, an office manager who writes well, or an owner who wants to understand the system. The person on your side runs the weekly loop: reviews drafts, approves what ships, reads the report. The agents do the research and production.
 
 Ask these of any build. Are the agents, prompts and workflows yours to keep? Is the documentation good enough that a new staff member could run it? Does the handover include training on a real week of work? Who do you call if something breaks after handover? The pillar guide on what an AI marketing agent is explains what the installed system does, and the guide to the first month of an AI marketing build shows how the handover period runs.
 
@@ -5313,20 +5313,20 @@ Where Flow AI fits
 
 Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. In this guide's terms, that is the build and handover route.
 
-Each build starts with a written scope, is priced per project, and ends with a documented handover; your team owns and keeps running it. If you prefer tools for now, the free agent templates and the skill library are open to use. Companies hiring a marketing engineer can reach Amber through the hiring page.
+Each build starts with a written scope and is priced per project. It ends with a documented handover, and from there your team owns it and keeps it running. If you prefer tools for now, the free agent templates and the skill library are open to use. Companies hiring a marketing engineer can reach Amber through the hiring page.
 
 The short version
 
 Buy AI marketing tools when someone has three or more hours a week and one or two channels to run. Hire a service when several channels must run and nobody has the hours. Choose a build and handover when a team member has some time and you want systems you own.
 
-Whichever route you pick, keep the accounts in your name, measure enquiries and cost per enquiry, and review the choice after 90 days.
+Whichever route you pick, keep the accounts in your name and track enquiries with cost per enquiry, then review the choice after 90 days.
 
-To work out which route fits your business, talk to Amber.
+To work out together which route fits your business, talk to Amber.
 
 Q: What is the difference between AI marketing tools and AI marketing services?
 A: AI marketing tools are software you operate yourself, such as a writing assistant, a design tool or an automation platform. AI marketing services are marketing work a provider delivers using AI systems, with a person reviewing it. Tools cost less each month but need your hours and skill. Services cost more and give those hours back.
 Q: What are the best AI marketing tools for a small business in Australia or New Zealand?
-A: Most small businesses get far with a general AI assistant for drafting and research, a design tool such as Canva, the email platform they already use, and Google Business Profile with Search Console. Add an automation platform only when a repeated task is costing hours each week. The best tool is the one someone in the business will use every week.
+A: Most small businesses are well served by a general AI assistant for drafting and research, a design tool such as Canva, the email platform they already use, and Google Business Profile with Search Console. Add an automation platform only when a repeated task is costing hours each week. The best tool is the one someone in the business will use every week.
 Q: How much do AI marketing tools cost?
 A: Published prices as of October 2026 include Canva Pro at NZD 180 a year for one person, Jasper Pro at USD 69 a seat a month, and Autohive's plans from USD 20 to USD 499 a month. A small stack usually costs less than one hour of agency time a week. The larger cost is the hours someone spends running the tools.
 Q: Are AI marketing services worth it for a small business?
@@ -5341,7 +5341,7 @@ URL: https://www.flowai.co.nz/blog/ai-marketing-scope-of-work
 Author: Amber Lan, Flow AI
 Updated: 2026-10-13
 
-Short answer: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Anything left unwritten becomes a dispute later.
+Short answer: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Writing each point down now keeps both sides aligned later.
 
 What is an AI marketing scope of work?
 
@@ -5353,15 +5353,15 @@ AI work needs more in the scope than a traditional marketing retainer, because t
 
 Why does an AI marketing project need a written scope?
 
-Marketing relationships that end badly usually end over delivery or value, and both are scope problems. A written scope sets out what will be delivered and how value will be judged before any money changes hands. For AI work it also records what the systems may do on their own, which nobody remembers accurately six months later.
+Delivery and value decide whether a marketing relationship thrives, and both are scope questions. A written scope sets out what will be delivered and how value will be judged before any money changes hands. For AI work it also records what the systems may do on their own, which nobody remembers accurately six months later.
 
-The data on why relationships end points straight at scope. Setup's 2025 Marketing Relationship Survey found dissatisfaction with delivery and with value were each cited by 61% of clients who ended an agency relationship, and 44% said the agency did not understand their business. It is a small sample of about 100 responses, mostly from larger US brands, but the pattern will be familiar to any owner who has fired an agency.
+The data on why relationships end points straight at scope. Setup's 2025 Marketing Relationship Survey found dissatisfaction with delivery and with value were each cited by 61% of clients who ended an agency relationship, and 44% said the agency did not understand their business. It is a small sample of about 100 responses, mostly from larger US brands, but the pattern will be familiar to any owner who has parted ways with an agency.
 
 AI projects add their own risk. Gartner predicted in June 2025 that over 40% of agentic AI projects will be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls. A scope that names the outcome, the measure, the costs outside the fee and the review rules deals with each of those before the build starts.
 
 What sections should an AI marketing scope of work include?
 
-A complete scope covers ten sections: outcomes, agents and systems, data access, review points, deliverables, measurement, ownership, handover, exit and price including GST. Small projects can cover each in a few lines. If any section is missing, ask for it in writing before you sign, because the gaps are where disputes start.
+A complete scope covers ten sections: outcomes, agents and systems, data access, review points, deliverables, measurement, ownership, handover, exit and price including GST. Small projects can cover each in a few lines. If any section is missing, ask for it in writing before you sign, so both sides agree on it from day one.
 
 Outcomes
 
@@ -5387,7 +5387,7 @@ Regulators on both sides of the Tasman are clear about caution. New Zealand's Of
 
 Lead lists bought or built from other sources raise a newer duty. The Privacy Commissioner's note on the Privacy Amendment Act says that from 1 May 2026, under the new IPP3A, organisations collecting personal information indirectly must take reasonable steps to tell the person it was collected, why, and who will receive it. If an outbound agent enriches prospect data, the scope should say who handles that. The guide to AI marketing and privacy law in NZ and Australia covers the detail.
 
-Grant access by role rather than through shared passwords: "editor access to the website CMS; read access to Google Analytics; no access to the accounting system". At the end of the project, access is removed and the provider confirms in writing that copies of your data are deleted.
+Grant access by role rather than through shared passwords: "editor access to the website CMS; read access to Google Analytics; no access to the accounting system". At the end of the project, the provider removes its access and confirms in writing that copies of your data are deleted.
 
 Who owns the work, and how do handover and exit work?
 
@@ -5405,7 +5405,7 @@ State the price per deliverable or per project, whether each figure includes GST
 
 Inland Revenue states that New Zealand GST is charged at 15%, and the Australian Taxation Office describes GST as a broad-based tax of 10% on most goods and services. Business quotes usually exclude it. A review of Australian agency pricing by Digital Nomads HQ found 78% of listed prices exclude GST and only 22% of agencies disclose a minimum ad spend, so ask about both.
 
-For market price ranges across agencies, freelancers and AI tools, see the guide to AI marketing costs in Australia and New Zealand. A clear scope is also what makes two quotes comparable.
+For market price ranges across agencies, freelancers and AI tools, explore the guide to AI marketing costs in Australia and New Zealand. A clear scope is also what makes two quotes comparable.
 
 An AI marketing scope of work template you can copy
 
@@ -5459,7 +5459,7 @@ Where Flow AI fits
 
 Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every build starts with a written scope like the one above.
 
-Builds are priced per project after that scope is agreed, end with a documented handover, and leave the systems in your hands. The page on AI marketing services for NZ and Australian businesses explains how a build runs. Companies hiring a marketing engineer can reach Amber through the hiring page.
+Once you agree that scope together, the build is priced per project and ends with a documented handover that leaves the systems in your hands. The page on AI marketing services for NZ and Australian businesses explains how a build runs. Companies hiring a marketing engineer can reach Amber through the hiring page.
 
 The short version
 
@@ -5467,20 +5467,20 @@ A good AI marketing scope of work names the outcome and the measure, the agents 
 
 Then it settles ownership, handover, exit and price with GST stated. Copy the template, send it to every provider you are considering, and compare the answers line by line.
 
-To scope an AI marketing build for your business, talk to Amber.
+To shape the scope of your AI marketing build together, talk to Amber.
 
 Q: What is the difference between a scope of work and a statement of work?
 A: In marketing they are usually the same document under two names. Some firms use statement of work for the signed document that sits under a master services agreement, and scope of work for the description of the work itself. What matters is the content: outcomes, deliverables, data access, review points, ownership, handover, exit and price, in writing and agreed before any work starts.
 Q: Who should write the scope of work, the client or the agency?
-A: The provider usually drafts it, because they know how the work is built, and the client edits it until it describes the result they are paying for. Bring your own list of must-haves to the first draft: the outcome you want, the data you will and will not share, who approves work, and the exit terms you need. Never sign a draft you did not mark up.
+A: The provider usually drafts it, because they know how the work is built, and the client edits it until it describes the result they are paying for. Bring your own list of must-haves to the first draft: the outcome you want, the data you will and will not share, who approves work, and the exit terms you need. Mark up every draft before you sign it.
 Q: Should an AI marketing scope of work guarantee results?
-A: It should commit to deliverables, timelines and how results will be measured, and be wary of anything that guarantees rankings or AI mentions. Google states there is no way to pay for a better local ranking, and OpenAI says placement in ChatGPT search results is not guaranteed. A sound scope names a target and a baseline, with an agreed review if results fall short.
+A: It should commit to deliverables, timelines and how results will be measured. Treat any promise of guaranteed rankings or AI mentions with caution. Google states there is no way to pay for a better local ranking, and OpenAI says placement in ChatGPT search results is not guaranteed. A sound scope names a target and a baseline, with an agreed review if results fall short.
 Q: Who owns the AI agents and content after the project ends?
 A: Whoever the contract says. Copyright defaults for commissioned work differ between New Zealand and Australia and by type of work, so the scope should state plainly that you own the deliverables, prompts, configuration and data produced for you, and that accounts sit in your name. If the provider keeps rights to its own reusable tools, the scope should say so and grant you a licence.
 Q: Do AI marketing quotes in New Zealand include GST?
 A: Most do not. Business-to-business quotes in New Zealand are usually written excluding GST, which is 15%, and Australian quotes usually exclude GST at 10%. The scope should state whether every figure includes or excludes GST, and list costs outside the fee, such as software subscriptions, ad spend and data tools. If the provider is in another country, ask your accountant how GST applies.
 Q: How long should an AI marketing scope of work be?
-A: Two to five pages is enough for most small business projects. Length matters less than precision: each section should be specific enough that two people reading it would agree on whether it was delivered. A one-page proposal that only lists services usually leaves out data access, review points, ownership and exit, which are the sections that matter when something goes wrong.
+A: Two to five pages is enough for most small business projects. Length matters less than precision: each section should be specific enough that two people reading it would agree on whether it was delivered. A one-page proposal that only lists services usually leaves out data access, review points, ownership and exit, which are the sections both sides rely on if plans change.
 
 ## Who offers AI marketing services in New Zealand in 2026?
 URL: https://www.flowai.co.nz/blog/ai-marketing-providers-new-zealand
@@ -5489,9 +5489,9 @@ Updated: 2026-10-13
 
 Short answer: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Flow AI.
 
-How was this list of NZ AI marketing providers compiled?
+How did Flow AI compile this list of NZ AI marketing providers?
 
-This list includes every provider that passed three tests: it runs a public website, its own pages offer AI marketing services to New Zealand businesses, and it shows public evidence of delivery. Each provider's pages were read in October 2026. The list is refreshed every quarter, and the next refresh is due in January 2027.
+This list includes every provider that passed three tests: it runs a public website, its own pages offer AI marketing services to New Zealand businesses, and it shows public evidence of delivery. Flow AI read each provider's pages in October 2026 and refreshes the list every quarter, with the next refresh due in January 2027.
 
 A public website the provider runs, live when checked.
 
@@ -5499,11 +5499,11 @@ AI marketing services for NZ businesses, named on its own pages.
 
 Public evidence of delivery: case pages, named clients or testimonials, or published work.
 
-Names came from search results, directories and NZ trade press. Seventeen third-party providers were checked and twelve passed. The other five, mostly lacking a working site or case page of their own, will be checked again at the next refresh. Every description below uses only the provider's own pages.
+Names came from search results, directories and NZ trade press. Of seventeen third-party providers checked, twelve passed. Flow AI will check the other five again at the next refresh; most lacked a working site or case page of their own. Every description below uses only the provider's own pages.
 
-Prices are left out on purpose, because few providers publish them: a June 2026 Digital Nomads HQ audit of 411 service lines across 140 Australian agencies found 78% publish no pricing. The guide to AI marketing costs in Australia and New Zealand covers price ranges.
+This guide leaves prices out because few providers publish them: a June 2026 Digital Nomads HQ audit of 411 service lines across 140 Australian agencies found 78% publish no pricing. The guide to AI marketing costs in Australia and New Zealand covers price ranges.
 
-People check what AI tools tell them: BrightLocal's March 2026 analysis of 455 US consumers who use AI for local recommendations found 88% check the sources the AI cites. Existing NZ lists were agency blog posts, which tend to include their publisher, or directories that sell visibility. This guide has a publisher too, hence the method and disclosure up front.
+People check what AI tools tell them: BrightLocal's March 2026 analysis of 455 US consumers who use AI for local recommendations found 88% check the sources the AI cites. Existing NZ lists were agency blog posts, which tend to include their publisher, or directories that sell visibility. This guide has a publisher too, so it opens with its method and disclosure.
 
 Which providers offer AI marketing services in New Zealand?
 
@@ -5609,7 +5609,7 @@ King Tide's AI marketing integration page describes designing a business's AI st
 
 Where do marketing engineers fit?
 
-A marketing engineer builds the AI systems that run a company's marketing, works on them with the client's team and hands them over documented, so the team owns and runs them afterwards. Flow AI, which publishes this guide, sits in this category. It is held to the same three criteria and described in the same plain terms as everyone else.
+A marketing engineer builds the AI systems that run a company's marketing, works on them with the client's team and hands them over documented, so the team owns and runs them afterwards. Flow AI, which publishes this guide, sits in this category. This guide holds it to the same three criteria and describes it in the same plain terms as everyone else.
 
 Flow AI (publisher of this guide)
 
@@ -5633,23 +5633,23 @@ How do you choose between the types?
 
 Choose the type by the job you need done. An established agency suits ongoing search, ads and web work with AI added. An AI-native agency suits one defined outcome run on its system. An AI search specialist suits visibility in AI answers. Build-and-train firms and marketing engineers suit owners who want to keep the systems.
 
-Several channels and nobody inside with the hours: an established or AI-native agency (the guide to whether you need an AI marketing agency tests this).
+Several channels to run and a team already at capacity: an established or AI-native agency (the guide to whether you need an AI marketing agency tests this).
 
 Customers research you before they call: an AI search specialist.
 
-A team with time and no method yet: a build-and-train firm.
+A team with time and a method still to build: a build-and-train firm.
 
 Systems your team owns and runs: a marketing engineer or a build-and-train firm that hands over. The overview of AI marketing services for NZ businesses shows what such a build covers.
 
 Large media budgets or brand campaigns: an established agency, where buying power and creative teams count most.
 
-With a shortlist in hand, the twelve questions for choosing an AI marketing provider test each one, and the checklist of what AI marketing services include compares scopes line by line. Auckland owners can also read about AI marketing builds in Auckland.
+With a shortlist in hand, the twelve questions for choosing an AI marketing provider test each one, and the checklist of what AI marketing services include compares scopes line by line. Auckland owners can also explore AI marketing builds in Auckland.
 
 Where Flow AI fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. It suits teams that want to own their marketing systems.
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. It is a natural fit for teams that want to own and run their marketing systems.
 
-For large media buying or brand campaigns, an agency from the lists above is the better fit. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through the hiring page.
+For large media buying or brand campaigns, an agency from the lists above is the better fit. Companies hiring a senior marketing engineer or GTM engineer are welcome to reach Amber through the hiring page.
 
 The short version
 
@@ -5657,12 +5657,12 @@ AI marketing services in New Zealand come from five kinds of provider, from AI-n
 
 Start with the job and pick the type that does it. Then test a shortlist from that type with the twelve questions, reading directory sponsorship labels as you go.
 
-To work out which type fits your business, talk to Amber.
+To work through which type fits your business together, talk to Amber.
 
 Q: What are the best AI marketing services in New Zealand?
-A: There is no independent ranking of AI marketing services in New Zealand, so the right answer depends on the job. Providers whose own pages lead with AI search include The Optimisers and Pead. Growin runs lead generation on its own AI engine. Net Branding, NiKa Consulting and Web Genius add AI to full agency services. AI Marketing NZ, King Tide and Flow AI build systems your team keeps.
+A: The best fit depends on the job you need done, since New Zealand has no independent ranking of AI marketing services. Providers whose own pages lead with AI search include The Optimisers and Pead. Growin runs lead generation on its own AI engine. Net Branding, NiKa Consulting and Web Genius add AI to full agency services. AI Marketing NZ, King Tide and Flow AI build systems your team keeps.
 Q: Is there an independent list of AI marketing agencies in NZ?
-A: As of October 2026, the NZ lists in search results were either agency blog posts, which tend to include their publisher, or directories that sell visibility next to earned rankings. This guide is published by Flow AI, which has the same interest, so it states its criteria, lists Flow AI in its own category with a disclosure, ranks nobody and is refreshed every quarter.
+A: As of October 2026, the NZ lists in search results were either agency blog posts, which tend to include their publisher, or directories that sell visibility next to earned rankings. Flow AI publishes this guide and shares that interest, so the guide states its criteria, lists Flow AI in its own category with a disclosure, ranks nobody and returns to every provider's pages each quarter.
 Q: Do agencies pay to appear on Clutch or DesignRush?
 A: Some do. Clutch's help centre says its directory pages are sorted by sponsorship first and then by Clutch rank, while its Leaders Matrices use Clutch rank alone. DesignRush says sponsored listings pay for a place above organic positions and labels each one as a paid placement. Semrush Agency Partners lists only agencies with a paid Semrush plan, an Agency Growth Kit subscription and two passed exams.
 Q: Who offers AI SEO or AEO in New Zealand?
@@ -5670,7 +5670,7 @@ A: On pages read in October 2026, The Optimisers and Pead lead with GEO and AEO 
 Q: Are there AI marketing agencies in Auckland?
 A: Yes. Most providers on this list are based in Auckland: Growin in Glenfield, Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, plus Net Branding, NiKa Consulting, Pead, The Optimisers and Flow AI. Outside Auckland, Web Genius is on the Kāpiti Coast and King Tide is in the Waikato, while AI Marketing NZ works as a network of specialists across the country.
 Q: How can a provider be added to this list?
-A: A provider that meets the three criteria, which are a public website, AI marketing services offered to New Zealand businesses and public evidence of delivery, can ask to be considered through the Flow AI contact page. Corrections to any description are welcome the same way. Every provider's pages are read again each quarter, and the next refresh is due in January 2027.
+A: Any provider that meets the three criteria, which are a public website, AI marketing services offered to New Zealand businesses and public evidence of delivery, is welcome to request a review through the Flow AI contact page. Corrections to any description are welcome the same way. Flow AI reads every provider's pages again each quarter, and the next refresh is due in January 2027.
 
 ## Who offers AI marketing services in Australia in 2026?
 URL: https://www.flowai.co.nz/blog/ai-marketing-providers-australia
@@ -5679,9 +5679,9 @@ Updated: 2026-10-13
 
 Short answer: In October 2026, Australian AI marketing services came from five kinds of provider: AI-native agencies such as Flowterra Labs, established agencies adding AI such as Yoghurt Digital, AI search specialists such as Prosperity Media, automation firms such as Bolder Digital, and remote build-and-handover practices. Few publish prices, so compare what each shows and what you keep.
 
-How was this list put together?
+How did Flow AI build this list?
 
-This list includes a provider only when it meets three published criteria, checked against its own website in October 2026. Each entry describes what the provider says it does, with a link to the page. Providers are grouped by type, nobody is ranked, and the list is refreshed every quarter.
+This list includes a provider only when it meets three published criteria, checked against its own website in October 2026. Each entry describes what the provider says it does, with a link to the page. The guide groups providers by type without ranking them, and refreshes the list every quarter.
 
 A public website that describes the service.
 
@@ -5689,11 +5689,11 @@ AI marketing services offered to Australian businesses, stated on that site.
 
 Public evidence of delivery: named clients, case studies, testimonials or reviews.
 
-Prices appear only where a provider publishes them, with the date read. Claims quoted are the providers' own and were not independently verified. Names from other lists were left out when their own pages could not be read or showed no AI marketing service or delivery evidence.
+Prices appear only where a provider publishes them, with the date read. Claims quoted are the providers' own; Flow AI has not independently verified them. Flow AI left out names from other lists when their own pages could not be read or showed no AI marketing service or delivery evidence.
 
 An AI marketing provider is any business that sells marketing work in which AI systems do a meaningful share of the research, production, follow-up or reporting, whether it calls itself an agency, a consultancy, a software company or a sole practitioner.
 
-Flow AI publishes this page and appears in its own category, described with the same restraint as everyone else.
+Flow AI publishes this page and sits in its own category, and it describes itself with the same restraint as everyone else.
 
 Which providers offer AI marketing services in Australia?
 
@@ -5773,7 +5773,7 @@ Webmasters Group's home page places it in Derrimut, in Melbourne's west, and cla
 
 AI automation, consulting and build-and-handover practices
 
-This group installs AI systems or AI strategy, and the day-to-day channel work may stay with your team. Bolder Digital builds lead and customer-contact tools, Robotic Marketer sells an AI strategy platform with a managed tier, and Lilach Bullock builds automations remotely and hands them over. What you own at the end differs, so ask.
+This group installs AI systems or AI strategy, and the day-to-day channel work may stay with your team. Bolder Digital builds lead and customer-contact tools, Robotic Marketer sells an AI strategy platform with a managed tier, and Lilach Bullock builds automations remotely and hands them over. What you own at the end differs from firm to firm, so settle it in the first conversation.
 
 AI automation and consulting firms
 
@@ -5809,7 +5809,7 @@ The OAIC lists 13 Australian Privacy Principles. It says most small businesses w
 
 How do you choose an AI marketing provider in Australia?
 
-Start from the job you need done, then pick the type, then compare two or three names inside it. A business that wants ChatGPT to mention it should talk to an AI search specialist, while one losing enquiries after hours is better served by an automation firm. Then ask each shortlisted provider for a written scope and price.
+Start from the job you need done, then pick the type, then compare two or three names inside it. A business that wants ChatGPT to mention it should talk to an AI search specialist, while one that wants enquiries answered after hours is better served by an automation firm. Then ask each shortlisted provider for a written scope and price.
 
 Prices are rarely public. Digital Nomads HQ's June 2026 audit of 411 service lines across 140 Australian agencies found 78% publish no pricing, with a median SEO entry price of AUD 1,470 a month. In this list only Robotic Marketer publishes prices. The AI marketing cost guide for Australia and New Zealand sets out sourced ranges for tools, freelancers, agencies and hires.
 
@@ -5819,20 +5819,20 @@ Where Flow AI fits
 
 Flow AI publishes this page and sits in its own category, as an Auckland build-and-handover practice working with Australian businesses remotely. Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
 
-Each build starts with a written scope, is priced per project and ends with a documented handover; your team owns and keeps running what was built. The systems are public in the skill library, the free agent templates and the six-month marketing function case study. More for Australian teams is on the AI marketing services page for Australian businesses; companies hiring can reach Amber about marketing engineer roles.
+Each build starts with a written scope and a per-project price, and ends with a documented handover, so your team owns and keeps running what you build together. You can explore the systems in the skill library, the free agent templates and the six-month marketing function case study. Australian teams can find more on the AI marketing services page for Australian businesses, and companies hiring are welcome to reach Amber about marketing engineer roles.
 
 The short version
 
 Australian AI marketing services come from AI-native agencies, established agencies adding AI, AI search specialists, automation firms and remote build-and-handover practices. Eleven providers in Sydney, Melbourne, Brisbane, Launceston and overseas met this page's criteria in October 2026, and only one published prices on its own site.
 
-Pick the type that matches the job, check each name on its own pages and get the scope and price in writing. A provider's own evidence tells you more than its position on a list. The next refresh is due in January 2027, and the full set of AI marketing services Flow AI builds is on the hub page.
+Pick the type that matches the job and check each name on its own pages. Before you sign, get the scope and price in writing. A provider's own evidence tells you more than its position on a list. The next refresh is due in January 2027, and you can explore the full set of AI marketing services Flow AI builds on the hub page.
 
-To work out which type fits your business, talk to Amber.
+To work through which type fits your business together, talk to Amber.
 
 Q: Who offers AI marketing services in Australia?
 A: In October 2026, providers meeting this guide's criteria included the AI-native agencies Flowterra Labs (Sydney), AiMRed (Melbourne) and Due North (Brisbane); the established agencies Yoghurt Digital and Marketing Eye; the AI search specialists Prosperity Media, Optimising and Webmasters Group; the automation firms Bolder Digital and Robotic Marketer; and remote build-and-handover practices including Lilach Bullock and Flow AI, which publishes the list.
 Q: What is the best AI marketing service for a small business in Australia?
-A: The best fit depends on the job you need done. To be mentioned in ChatGPT and Google's AI answers, look at an AI search specialist. To stop losing enquiries after hours, or to get systems your own team keeps running, look at an automation firm or a build-and-handover practice. Whichever type you choose, ask to see a system running and get the scope and price in writing.
+A: The best fit depends on the job you need done. To be mentioned in ChatGPT and Google's AI answers, start with an AI search specialist. To capture enquiries after hours, or to own systems your team keeps running, explore an automation firm or a build-and-handover practice. Whichever type you choose, ask to see a system running and get the scope and price in writing.
 Q: How much do AI marketing services cost in Australia?
 A: Few providers publish prices. In this list only Robotic Marketer did, showing $99 a month for its software and $1,200 a month for a done-for-you service in October 2026, without naming the currency. Across the wider market, Digital Nomads HQ's June 2026 audit found 78% of 140 Australian agencies publish no pricing, with a median SEO entry price of AUD 1,470 a month.
 Q: Are "best AI agency in Australia" lists independent?
@@ -5840,7 +5840,7 @@ A: Many widely shared lists are published by companies that rank themselves, suc
 Q: Can an overseas provider run AI marketing for an Australian business?
 A: Yes, and several do, working remotely from New Zealand and further afield. Australian rules still apply to the messages and the data. The Spam Act 2003 requires consent, sender identification and an unsubscribe honoured within five working days, and covered businesses must meet the Australian Privacy Principles. Your business stays responsible for consent even when a provider sends on its behalf.
 Q: How was this list compiled and how often is it updated?
-A: Providers were included if they had a public website, offered AI marketing services to Australian businesses and showed public evidence of delivery such as named clients, case studies or reviews. Each entry was written from the provider's own pages, read in October 2026, with prices only where published. Flow AI, the publisher, is listed in its own category. The list is refreshed quarterly, next in January 2027.
+A: Flow AI included providers that had a public website, offered AI marketing services to Australian businesses and showed public evidence of delivery such as named clients, case studies or reviews. Each entry draws on the provider's own pages, read in October 2026, with prices only where published. Flow AI, the publisher, sits in its own category. The list refreshes quarterly, next in January 2027.
 
 ## AI marketing and privacy law in NZ and Australia: what your provider must do with your data.
 URL: https://www.flowai.co.nz/blog/ai-marketing-privacy-law-nz-australia
@@ -5855,7 +5855,7 @@ It is safe when the provider takes only the data a job needs, uses AI tools that
 
 Hiring a provider does not move the legal duty to them. The New Zealand Privacy Commissioner's guidance on cloud services puts it plainly: in most cases you remain responsible for personal information you put with a service provider. Australia reaches a similar place by a different route, covered in the offshore section below.
 
-This guide is general information about the law as published by the regulators, and it is not legal advice. For a contract worth real money, or for sensitive data such as health information, have a privacy lawyer read it. For the questions to ask before any of that, the guide to choosing an AI marketing provider covers fit, scope and price.
+This guide is general information about the law as published by the regulators, and it is not legal advice. For a contract of real commercial value, or for sensitive data such as health information, have a privacy lawyer read it. For the questions to ask first, the guide to choosing an AI marketing provider covers fit, scope and price.
 
 Which privacy laws apply in New Zealand and Australia?
 
@@ -5971,7 +5971,7 @@ Where Flow AI fits
 
 Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
 
-Each build starts with a written scope, which is the natural place to record what data each agent may touch, and ends with a documented handover so your team owns and runs the system. The agent templates are public, so you can read how an agent is instructed before you share anything. Companies hiring a marketing engineer can reach Amber about roles.
+Each build starts with a written scope, which is the natural place to agree what data each agent may touch, and ends with a documented handover so your team owns and runs the system. The agent templates are public, so you can read how an agent is instructed before you share anything. Companies hiring a marketing engineer are welcome to reach Amber about roles.
 
 The short version
 
@@ -5979,7 +5979,7 @@ Giving customer data to an AI marketing provider is safe when the provider takes
 
 Spam law applies to every AI-written message, so consent records and a working unsubscribe come before the first send. For how this fits a wider programme, the guide to AI marketing transformation for a small business sets out the order of work.
 
-To scope an agent build with data rules written in from the start, talk to Amber.
+To scope an agent build together, with data rules written in from the start, talk to Amber.
 
 Q: Is it safe to give an AI marketing agency my customer data?
 A: It can be, when the agency needs the data for a defined job, uses AI tools that do not retain or train on your inputs, holds the data under a written contract, and can tell you where it is stored and processed. Ask for those four things before any export. In both New Zealand and Australia your business remains responsible for personal information it passes to a provider.
@@ -7045,7 +7045,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the ten agents in this guide from one positioning brief, installs them one at a time as week-long sprints, and a marketing engineer reviews every send before it reaches a customer.
 
-If you would rather have them built with your team, the services page shows how each agent becomes a service.
+To build them together with your team, the services page explains how each agent becomes a service.
 
 The scope reads the business and names the first agent to build and why. If you would rather build your own, the free agent templates are a starting point for the brief, the guardrails and the review step.
 
@@ -7203,7 +7203,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is the engineered version of the fourth column: AI agents plus one marketing engineer, Amber Lan, who builds the systems on your accounts, documents them and reviews the work before it ships.
 
-The Flow AI service page for New Zealand businesses sets out the agents, the process and the local rules a build follows.
+The Flow AI service page for New Zealand businesses sets out the agent team and how a build runs under New Zealand rules.
 
 The skill library shows the systems openly. It starts with a written scope that names the first system to install. Each build is scoped and priced per project. The sprints page lists what each install covers.
 
@@ -7679,7 +7679,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For search, that means the Business Profile routine, review requests, service pages and monthly tracking in this guide, installed on your own site and accounts so they keep running when you are busy.
 
-Auckland businesses can meet in person: see AI marketing services in Auckland.
+Auckland businesses are welcome to meet in person: explore AI marketing services in Auckland.
 
 The written scope names the first system to install. If you would rather do it yourself, every step above works with free tools.
 
@@ -8797,7 +8797,7 @@ Where Flow AI fits
 
 Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is closest to the last row of the comparison table. Amber Lan builds the systems, they run on your own accounts, and she reviews the work before it ships. The skill library shows the systems openly.
 
-If you have decided you want the work done, AI marketing services in New Zealand shows what each agent runs and how a build works.
+When you are ready to build it together, AI marketing services in New Zealand sets out what each agent runs and how a build unfolds.
 
 It starts with a written scope that names the first system to install. Each build is scoped and priced per project.
 
@@ -10135,7 +10135,7 @@ Why the term needs a small business definition
 
     Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It was built by a marketing engineer rather than assembled by a platform team, and it runs the eleven departments above as installable systems that stay on the business's own domain and accounts. A human reviews everything before it ships, which is a design rule rather than a plan setting.
 
-    How the agents work as a paid engagement is on the AI marketing services page.
+    To build these agents together with your team, explore the AI marketing services page.
 
     It starts with a written scope: a written plan on the business, produced before any money changes hands, naming the first department and why. The departments available today are on the sprints page.
 
@@ -10745,7 +10745,7 @@ Why AI marketing pricing is hard to compare
 
     Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It works as a fixed-scope install of one marketing department, such as search and AI search or content, then a monthly run in which Flow produces the work and the owner reviews it. Current figures come with the written scope.
 
-    To see what the agents cover, read Flow AI's AI marketing services; Australian businesses can start from the page for Australia.
+    To explore what the agents cover, read Flow AI's AI marketing services; Australian businesses are welcome to start from the page for Australia.
 
     The scope is a written plan on the business, produced before any money changes hands, and it names which department to install first and why. It sits in the agent row of the table above: priced by the department and the month, not by the hour, with the owner keeping the decisions. The five departments available today are listed on the sprints page.
 
