@@ -461,3 +461,10 @@ input, textarea, select { border-radius: var(--r-md); }
 .fdot--lost { width: 112px; height: 112px; margin: 0 auto 0.5rem; }
 @media (max-width: 720px) { .fdot--run { width: 22px; height: 22px; } }
 .has-fdot .demo__side button::before { display: none; }
+/* The glance: on hover, the arrow circle on an amber button becomes the dot for a moment. */
+.btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
+  content: "";
+  background-color: rgba(14, 14, 13, 0.16);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cellipse cx='10.6' cy='12.4' rx='2.2' ry='2.4' fill='%230e0e0d'/%3E%3Cellipse cx='17.6' cy='12.4' rx='2.6' ry='2.8' fill='%230e0e0d'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}

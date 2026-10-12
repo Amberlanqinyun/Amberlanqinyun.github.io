@@ -33,6 +33,7 @@ Site structure:
 - /work/six-month-marketing-function: flagship case study, six months of one operator running a whole marketing function on AI systems; sanitised.
 - /contact: contact form. Choose a contract build, a full-time role or something else; Amber Lan replies personally within two working days.
 - /about: About Amber Lan, every shipped system linked to its public GitHub repository.
+- /dot: the dot, the character behind Flow Intelligence. A luminous amber core with two eyes (the agents are solid cream dots), its seven states, twelve eye styles, a 23-second run of one job told by the character, the motion spec and the open-source engine assets/dot.js. Chinese at /zh/dot.
 - /manifesto: The Flow AI manifesto. Every other function built an engineering layer; Flow Intelligence is marketing's, run by one engineer.
 - /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.

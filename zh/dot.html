@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+  <script>document.documentElement.className += ' js';</script>
+<title>这颗点 · Flow Intelligence 背后的角色 · Flow AI</title>
+<meta name="description" content="Flow AI 标志顶端的琥珀色点就是 Flow Intelligence：一个带两只眼睛的光核，有真实的物理和开源引擎。它的状态、智能体、行为与规范。">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="canonical" href="https://www.flowai.co.nz/zh/dot">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/dot">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/dot">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/dot">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="这颗点 · Flow Intelligence 背后的角色 · Flow AI">
+<meta property="og:description" content="Flow AI 标志顶端的琥珀色点就是 Flow Intelligence：一个带两只眼睛的光核，有真实的物理和开源引擎。它的状态、智能体、行为与规范。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/zh/dot">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/motion.css">
+<style>
+.dotpage{
+--amber:#e4a43c;--amber-soft:rgba(228,164,60,.14);--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+.dotpage a{
+color:var(--fg);text-decoration:none;border-bottom:1px solid var(--hair-strong)}
+.dotpage h1, .dotpage h2, .dotpage h3{
+color:var(--fg);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:0;text-wrap:balance}
+.dotpage h1{
+font-size:clamp(2.4rem,5.5vw,4.5rem)}
+.dotpage h2{
+font-size:clamp(1.6rem,3vw,2.4rem)}
+.dotpage h3{
+font-size:1.1rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.dotpage p{
+margin:0}
+.dotpage .eyebrow{
+font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft)}
+.dotpage .wrap{
+width:min(100% - 48px,1080px);margin-inline:auto}
+.dotpage section{
+padding:clamp(4rem,9vw,7rem) 0;border-top:1px solid var(--hair)}
+.dotpage section:first-of-type{
+border-top:0}
+.dotpage .stack>*+*{
+margin-top:1.25rem}
+.dotpage .lead{
+font-size:1.15rem;max-width:52ch;color:var(--muted)}
+.dotpage .small{
+font-size:13px;color:var(--soft)}
+.dotpage .mono{
+font-family:var(--mono);font-size:.85em}
+.dotpage .dbtn{
+display:inline-flex;align-items:center;gap:.5rem;min-height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--hair-strong);background:none;color:var(--fg);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:border-color .2s,background .2s,transform .2s var(--ease)}
+.dotpage .dbtn:hover{
+border-color:var(--fg)}
+.dotpage .dbtn:active{
+transform:translateY(1px) scale(.98)}
+.dotpage .dbtn[aria-pressed="true"]{
+background:var(--fg);color:var(--ink);border-color:var(--fg)}
+.dotpage .dbtn-amber{
+background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.dotpage .drow{
+display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.dotpage .toc{
+display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;font-size:13px;margin-top:1.5rem}
+.dotpage .toc a{
+border:0;color:var(--soft)}
+.dotpage .toc a:hover{
+color:var(--fg)}
+.dotpage /* stage */
+.dhero{
+display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:center;padding-top:clamp(3rem,7vw,5rem)}
+.dotpage .stage{
+position:relative;aspect-ratio:1;max-width:520px;margin-inline:auto;border:1px solid var(--hair);border-radius:24px;background:radial-gradient(60% 60% at 50% 55%,rgba(228,164,60,.10),transparent 70%),var(--surface);overflow:hidden;transition:background .6s}
+.dotpage .stage.night{
+background:#0a0a09}
+.dotpage .stage svg{
+width:100%;height:100%;display:block}
+.dotpage .stage .cap{
+position:absolute;left:1rem;bottom:.9rem;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.dotpage .stage .cap b{
+color:var(--fg);font-weight:500}
+.dotpage .ctl-group{
+margin-top:1.5rem}
+.dotpage .ctl-group .eyebrow{
+display:block;margin-bottom:.5rem}
+.dotpage /* run */
+.run{
+display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2rem;margin-top:2.5rem;align-items:stretch}
+.dotpage .run .stage{
+max-width:none;aspect-ratio:auto;min-height:420px}
+.dotpage .steps{
+list-style:none;margin:0;padding:0;border:1px solid var(--hair);border-radius:16px;background:var(--surface);overflow:hidden}
+.dotpage .steps li{
+display:grid;grid-template-columns:2.4rem 1fr auto;gap:.75rem;align-items:baseline;padding:.9rem 1.1rem;border-bottom:1px solid var(--hair);font-size:14px;color:var(--soft);transition:background .3s,color .3s}
+.dotpage .steps li:last-child{
+border-bottom:0}
+.dotpage .steps li i{
+font-family:var(--mono);font-style:normal;font-size:11px;color:var(--soft)}
+.dotpage .steps li b{
+color:inherit;font-weight:500}
+.dotpage .steps li em{
+font-style:normal;font-family:var(--mono);font-size:11px}
+.dotpage .steps li.is-on{
+background:var(--amber-soft);color:var(--fg)}
+.dotpage .steps li.is-on i{
+color:var(--amber)}
+.dotpage .run-bar{
+height:2px;background:var(--hair);margin:1rem 0 0;border-radius:2px;overflow:hidden}
+.dotpage .run-bar b{
+display:block;height:100%;width:0;background:var(--amber);transition:width .2s linear}
+.dotpage .thread{
+position:absolute;left:1.25rem;right:1.25rem;top:1.25rem;display:grid;gap:.5rem;pointer-events:none}
+.dotpage .msg{
+max-width:72%;padding:.55rem .8rem;border-radius:12px;font-size:13px;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.dotpage .msg.is-on{
+opacity:1;transform:none}
+.dotpage .msg.you{
+justify-self:end;background:var(--surface-strong);color:var(--fg);border:1px solid var(--hair)}
+.dotpage .msg.dot{
+justify-self:start;background:rgba(228,164,60,.12);color:var(--fg);border:1px solid rgba(228,164,60,.25)}
+.dotpage /* eye studio */
+.studio{
+display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.75rem;margin-top:2rem}
+.dotpage .eye{
+display:grid;justify-items:center;gap:.5rem;padding:1rem .5rem .9rem;border:1px solid var(--hair);border-radius:14px;background:var(--surface);cursor:pointer;text-align:center;transition:border-color .2s,background .2s;font:inherit;color:inherit}
+.dotpage .eye:hover{
+border-color:var(--hair-strong)}
+.dotpage .eye[aria-pressed="true"]{
+border-color:var(--amber);background:var(--amber-soft)}
+.dotpage .eye svg{
+width:72px;height:72px;display:block}
+.dotpage .eye b{
+display:block;color:var(--fg);font-weight:600;font-size:13.5px;letter-spacing:-.01em}
+.dotpage .eye span{
+display:block;font-size:11.5px;color:var(--soft);line-height:1.35}
+.dotpage /* panels */
+.dgrid{
+display:grid;gap:1rem;margin-top:2.25rem}
+.dotpage .g2{
+grid-template-columns:repeat(2,minmax(0,1fr))}
+.dotpage .g3{
+grid-template-columns:repeat(3,minmax(0,1fr))}
+.dotpage .g5{
+grid-template-columns:repeat(5,minmax(0,1fr))}
+.dotpage .panel{
+border:1px solid var(--hair);border-radius:16px;background:var(--surface);padding:1.25rem 1.35rem}
+.dotpage .panel h3{
+margin-bottom:.45rem}
+.dotpage .panel p{
+font-size:14.5px;color:var(--muted)}
+.dotpage .panel .eyebrow{
+display:block;margin-bottom:.9rem}
+.dotpage .panel .demo-row{
+display:flex;align-items:center;gap:1rem;margin-top:1rem}
+.dotpage .panel .demo-row svg{
+width:48px;height:48px;flex:none}
+.dotpage .panel input{
+width:100%;min-height:42px;padding:0 .9rem;border:1px solid var(--hair-strong);border-radius:10px;background:var(--surface-strong);color:var(--fg);font:inherit;font-size:14px}
+.dotpage .panel input:focus{
+outline:none;border-color:var(--fg)}
+.dotpage .toggle{
+display:inline-flex;align-items:center;gap:.6rem;font-size:14px;color:var(--fg);cursor:pointer;margin-top:1rem}
+.dotpage .toggle input{
+width:auto;min-height:0;accent-color:var(--amber)}
+.dotpage /* anatomy */
+.anatomy{
+display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;margin-top:2.25rem;align-items:center}
+.dotpage .anatomy svg{
+width:100%;height:auto;display:block}
+.dotpage .anatomy ol{
+margin:0;padding-left:1.2rem;font-size:14.5px}
+.dotpage .anatomy li{
+margin:.5rem 0}
+.dotpage .anatomy li b{
+color:var(--fg);font-weight:600}
+.dotpage /* spec tables */
+.spec{
+width:100%;border-collapse:collapse;margin-top:2rem;font-size:14px}
+.dotpage .spec th{
+font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);text-align:left;padding:.6rem .75rem .6rem 0;border-bottom:1px solid var(--hair-strong);font-weight:500}
+.dotpage .spec td{
+padding:.7rem .75rem .7rem 0;border-bottom:1px solid var(--hair);vertical-align:top;color:var(--muted)}
+.dotpage .spec td:first-child{
+color:var(--fg);font-weight:500}
+.dotpage .spec td.m{
+font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+.dotpage .tablewrap{
+overflow-x:auto}
+.dotpage /* sizes and pixel grid */
+.sizes{
+display:flex;flex-wrap:wrap;align-items:flex-end;gap:2.5rem;margin-top:2rem;padding:2rem;border:1px solid var(--hair);border-radius:16px;background:var(--surface)}
+.dotpage .size{
+display:grid;justify-items:center;gap:.75rem}
+.dotpage .size .lbl{
+font-family:var(--mono);font-size:11px;color:var(--soft)}
+.dotpage .pix{
+display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;margin-top:1rem;padding:2rem;border:1px solid var(--hair);border-radius:16px;background:var(--surface)}
+.dotpage .pix svg{
+display:block}
+.dotpage .goo-stage{
+position:relative;border:1px solid var(--hair);border-radius:16px;background:var(--surface);overflow:hidden;margin-top:2rem}
+.dotpage .goo-stage svg{
+width:100%;height:auto;display:block}
+.dotpage .goo-stage .ctl{
+position:absolute;right:1rem;bottom:1rem}
+.dotpage /* agents */
+.agent{
+display:grid;grid-template-columns:52px 1fr;gap:.9rem;align-items:center;padding:1rem;border:1px solid var(--hair);border-radius:14px;background:var(--surface);transition:border-color .2s}
+.dotpage .agent:hover{
+border-color:var(--hair-strong)}
+.dotpage .agent svg{
+width:52px;height:52px;display:block}
+.dotpage .agent b{
+display:block;color:var(--fg);font-weight:600;font-size:14.5px;letter-spacing:-.01em}
+.dotpage .agent span{
+display:block;font-size:12.5px;color:var(--soft);margin-top:.15rem;line-height:1.4}
+.dotpage .agent .sig{
+font-family:var(--mono);font-size:10.5px;color:var(--soft);margin-top:.35rem;letter-spacing:.04em}
+.dotpage .subhead{
+margin-top:2.5rem;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.dotpage .subhead h3{
+font-size:1.2rem}
+.dotpage .subhead .small{
+max-width:60ch}
+.dotpage /* in-context mockups */
+.mock{
+border:1px solid var(--hair);border-radius:16px;background:var(--surface);overflow:hidden}
+.dotpage .mock .bar{
+display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1rem;border-bottom:1px solid var(--hair);font-size:13px}
+.dotpage .mock .bar b{
+color:var(--fg);font-weight:600}
+.dotpage .status{
+display:inline-flex;align-items:center;gap:.5rem;color:var(--soft);font-size:12.5px}
+.dotpage .status svg{
+width:18px;height:18px}
+.dotpage .recents{
+list-style:none;margin:0;padding:.5rem}
+.dotpage .recents li{
+display:grid;grid-template-columns:28px 1fr auto;gap:.75rem;align-items:center;padding:.6rem .6rem;border-radius:10px;font-size:13.5px;color:var(--muted)}
+.dotpage .recents li:hover{
+background:var(--surface-strong)}
+.dotpage .recents li svg{
+width:28px;height:28px}
+.dotpage .recents li b{
+color:var(--fg);font-weight:500}
+.dotpage .recents li em{
+font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--soft)}
+.dotpage .pillnav{
+display:inline-flex;align-items:center;gap:1.1rem;padding:.45rem .5rem .45rem .9rem;border:1px solid var(--hair-strong);border-radius:999px;background:rgba(23,23,21,.85);font-size:13.5px;color:var(--muted);white-space:nowrap;max-width:100%;overflow:hidden}
+.dotpage .pillnav>span{
+flex:none}
+.dotpage .pillnav .brand{
+display:inline-flex;align-items:center;gap:.5rem;color:var(--fg);font-weight:600}
+.dotpage .pillnav .brand svg{
+width:24px;height:24px}
+.dotpage .pillnav .cta{
+display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:var(--ink);font-weight:600;padding:.45rem .5rem .45rem .9rem;border-radius:999px;font-size:13.5px}
+.dotpage .pillnav .cta i{
+display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(14,14,13,.18);font-style:normal;font-size:11px}
+.dotpage .pillnav .cta svg{
+width:22px;height:22px;display:none}
+.dotpage .pillnav .cta:hover i{
+display:none}
+.dotpage .pillnav .cta:hover svg{
+display:block}
+.dotpage .four04{
+display:grid;place-items:center;gap:1rem;padding:2.5rem 1rem;text-align:center}
+.dotpage .four04 svg{
+width:96px;height:96px}
+.dotpage .four04 b{
+color:var(--fg);font-size:1.3rem;font-weight:600;letter-spacing:-.02em}
+.dotpage .loading{
+display:flex;align-items:center;gap:.75rem;padding:1.5rem;font-size:14px}
+.dotpage .loading svg{
+width:40px;height:40px}
+.dotpage .night{
+background:#0a0a09}
+.dotpage /* code */
+pre{
+margin:1.5rem 0 0;padding:1.1rem 1.25rem;border:1px solid var(--hair);border-radius:12px;background:var(--surface);color:var(--muted);font-family:var(--mono);font-size:12.5px;line-height:1.6;overflow:auto;max-height:420px}
+.dotpage pre b{
+color:var(--fg);font-weight:500}
+.dotpage /* rules */
+.rules{
+display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.dotpage .rules ul{
+margin:0;padding-left:1.1rem}
+.dotpage .rules li{
+margin:.35rem 0;font-size:14.5px;color:var(--muted)}
+.dotpage .rules li b{
+color:var(--fg);font-weight:600}
+.dotpage .decide{
+counter-reset:d;list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--hair)}
+.dotpage .decide li{
+counter-increment:d;display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--hair)}
+.dotpage .decide li::before{
+content:counter(d,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--amber);padding-top:.3rem}
+.dotpage .decide b{
+display:block;color:var(--fg);font-weight:600;margin-bottom:.2rem}
+.dotpage .decide p{
+font-size:14.5px}
+@media(max-width:860px){
+.dotpage .dhero, .dotpage .g2, .dotpage .g3, .dotpage .rules, .dotpage .run, .dotpage .anatomy, .dotpage .pix{
+grid-template-columns:1fr}
+.dotpage .g5{
+grid-template-columns:repeat(2,1fr)}
+.dotpage .studio{
+grid-template-columns:repeat(3,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+.dotpage *{
+animation:none!important;transition:none!important}
+}
+.dotpage{padding-top:clamp(2rem,5vw,3rem)}
+.dotpage section{padding:clamp(4rem,9vw,7rem) 0}
+.dotpage .wrap{width:min(100% - 48px,1080px);margin-inline:auto}
+.dotpage h1{font-weight:600}
+
+</style>
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/dot.js" defer></script>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=1">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">跳到内容</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="Flow AI home">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/about">关于我</a>
+      <span class="lang-switch" role="group" aria-label="语言"><a href="/dot" lang="en" hreflang="en" data-lang="en">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/dot" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh" aria-current="true">中文</a></span>
+      <a class="site-header__cta" href="/zh/contact">与我合作</a>
+    </nav>
+  </div>
+</header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="goo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="g"/>
+      <feComposite in="SourceGraphic" in2="g" operator="atop"/>
+    </filter>
+    <filter id="goo-sm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="g"/>
+      <feComposite in="SourceGraphic" in2="g" operator="atop"/>
+    </filter>
+    <radialGradient id="flowdot-core" cx="50%" cy="46%" r="50%"><stop offset="0" stop-color="#fff2d2"/><stop offset=".38" stop-color="#f3c572"/><stop offset=".72" stop-color="#e4a43c"/><stop offset=".9" stop-color="#e4a43c" stop-opacity=".85"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="flowdot-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".42"/><stop offset=".45" stop-color="#e4a43c" stop-opacity=".14"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="flowdot-core-night" cx="50%" cy="46%" r="50%"><stop offset="0" stop-color="#2a2518"/><stop offset=".6" stop-color="#151410"/><stop offset=".92" stop-color="#121211" stop-opacity=".9"/><stop offset="1" stop-color="#121211" stop-opacity="0"/></radialGradient>
+    <radialGradient id="flowdot-halo-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".08"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <filter id="glow-big" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.4"/></filter>
+  </defs>
+</svg>
+
+<main id="main" class="dotpage">
+<section class="wrap dhero">
+  <div class="stack">
+    <p class="eyebrow">Flow AI · 这颗点</p>
+    <h1>琥珀色的点，睁开了眼睛。</h1>
+    <p class="lead">Flow AI 的标志是四个点，向上汇成一个琥珀色的点。这个琥珀色的点就是 Flow Intelligence。它不是一个物件，而是一束光：一个智能的核心，两只眼睛是光缺席的地方。奶白色的点是它派出去的智能体，它们是实心的，因为智能体做的是实实在在的工作。这一页是这个角色、它的物理，以及在本站驱动它的引擎，和这里的一切一样开源。</p>
+    <div class="ctl-group"><span class="eyebrow">状态</span><div class="drow" id="moods">
+      <button class="dbtn" data-mood="idle" aria-pressed="true">待机</button>
+      <button class="dbtn" data-mood="think">思考中</button>
+      <button class="dbtn" data-mood="work">工作中</button>
+      <button class="dbtn" data-mood="review">等待你审核</button>
+      <button class="dbtn" data-mood="done">完成</button>
+      <button class="dbtn" data-mood="late">深夜加班</button>
+      <button class="dbtn" data-mood="error">出了点问题</button>
+    </div></div>
+    <div class="ctl-group"><span class="eyebrow">身体</span><div class="drow" id="bodies"><button class="dbtn" data-body="glow" aria-pressed="true">光核</button><button class="dbtn" data-body="solid" aria-pressed="false">实心，用于对比</button></div></div>
+    <p class="small">在舞台上移动指针：眼睛先动，身体慢一拍跟上。不管它时，它会自己四处看。</p>
+    <nav class="toc" aria-label="Sections"><a href="#run">一次运行</a><a href="#physics">物理</a><a href="#studio">眼睛工作室</a><a href="#behaviours">行为</a><a href="#mark">标志与像素</a><a href="#agents">智能体</a><a href="#context">在网站上</a><a href="#spec">规范与 API</a></nav>
+  </div>
+  <div class="stage" id="stage">
+    <svg viewBox="0 0 100 100" id="hero-svg"></svg>
+    <p class="cap">眼睛 · <b id="capStyle">圆形，偏高偏左</b> &nbsp;·&nbsp; 状态 · <b id="cap">待机</b></p>
+  </div>
+</section>
+
+<section class="wrap" id="run">
+  <div class="stack">
+    <p class="eyebrow">一次运行</p>
+    <h2>一项任务，从头到尾，只由这个角色来讲。</h2>
+    <p class="lead">这是世界级角色要通过的测试：访客不读一个字，只看这颗点，能否明白产品在做什么？一条指令进来，它读网站，向三个智能体交代任务，它们回来，它把成果暂存并等待人来审核，人批准，它休息。</p>
+  </div>
+  <div class="run">
+    <div class="stage" id="runStage">
+      <svg viewBox="0 0 100 100" id="run-svg"></svg>
+      <div class="thread" id="thread">
+        <div class="msg you" id="m1">找出人们向 AI 询问奥克兰热水缸的问题，修好应该回答这些问题的页面。全部暂存，先不发布。</div>
+        <div class="msg dot" id="m2">三个页面已暂存。等待你审核。</div>
+      </div>
+      <p class="cap">运行 · <b id="runCap">就绪</b></p>
+    </div>
+    <div>
+      <ol class="steps" id="steps">
+        <li data-at="0"><i>00</i><b>收到指令</b><em>点头</em></li>
+        <li data-at="1.6"><i>01</i><b>阅读网站</b><em>扫视</em></li>
+        <li data-at="5.2"><i>02</i><b>交代三个智能体</b><em>分离</em></li>
+        <li data-at="8.4"><i>03</i><b>智能体工作中</b><em>环绕</em></li>
+        <li data-at="12.4"><i>04</i><b>智能体返回</b><em>合并</em></li>
+        <li data-at="14.6"><i>05</i><b>已暂存，等你</b><em>光环</em></li>
+        <li data-at="19"><i>06</i><b>已批准</b><em>点头，眯眼</em></li>
+        <li data-at="21"><i>07</i><b>休息</b><em>待机</em></li>
+      </ol>
+      <div class="run-bar"><b id="runBar"></b></div>
+      <div class="drow" style="margin-top:1rem"><button class="dbtn dbtn-amber" id="runPlay">播放这次运行</button><span class="small">23 秒。不需要文字，但这两条消息展示了它在演示窗口中的位置。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="physics">
+  <div class="stack">
+    <p class="eyebrow">物理</p>
+    <h2>为什么它现在有了生命感。</h2>
+    <p class="lead">早先的版本用线性缓动移动眼睛，那是光标的动法。活物的动作是眼跳和弹簧。八处改动，都很小，都借自动画的基本功，而非凭空发明。</p>
+  </div>
+  <div class="anatomy">
+    <svg viewBox="0 0 400 300" aria-label="Anatomy of the dot">
+      <circle cx="170" cy="160" r="170" fill="url(#flowdot-halo)"/><circle cx="170" cy="160" r="96" fill="url(#flowdot-core)"/>
+      <g transform="translate(132 128)"><ellipse rx="13" ry="13.8" fill="#0e0e0d"/><circle cx="-4.5" cy="-5.2" r="2.6" fill="#faf8f3"/></g>
+      <g transform="translate(184 128)"><ellipse rx="15.6" ry="16.5" fill="#0e0e0d"/><circle cx="-5.4" cy="-6.2" r="3.1" fill="#faf8f3"/></g>
+      <g stroke="rgba(250,248,243,.35)" stroke-width="1" fill="none" stroke-dasharray="3 3">
+        <line x1="132" y1="128" x2="184" y2="128"/>
+        <line x1="170" y1="70" x2="170" y2="250"/>
+        <line x1="80" y1="128" x2="260" y2="128"/>
+        <circle cx="170" cy="160" r="90"/>
+      </g>
+      <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(250,248,243,.6)">
+        <text x="276" y="132">眼线 · −0.36 r</text>
+        <text x="276" y="150">中心 · 左偏 0.15 r</text>
+        <text x="276" y="168">间距 · 0.58 r</text>
+        <text x="276" y="186">右眼 · ×1.2</text>
+        <text x="276" y="204">光晕 · 2.1 r，会呼吸</text>
+        <text x="276" y="222">眼睛 · 0.17 r</text>
+        <text x="276" y="240">身体 · r</text>
+        <text x="20" y="286">比例在任何尺寸下不变。小于 32 像素时不画眼睛。</text>
+      </g>
+    </svg>
+    <ol>
+      <li><b>弹簧，而非缓动。</b>视线是一个阻尼弹簧（刚度 140，阻尼 18），会微微过冲再稳住，像真的眼睛。</li>
+      <li><b>眼跳。</b>没人理它时，每 1.5 到 4 秒选一个新点跳过去。眼睛从不漂移。</li>
+      <li><b>眼先动，身后随。</b>身体通过一个更慢的弹簧，慢一拍朝视线方向倾斜。这个延迟就是重量感。</li>
+      <li><b>透视。</b>向右看时，右眼放大 6%，左眼缩小 12%。平面的圆盘变成了一颗头。</li>
+      <li><b>预备动作。</b>眨眼前，眼睛先放大 4% 持续 60 毫秒再闭上。闭眼 70 毫秒，睁眼 140 毫秒。自然界没有对称的动作。</li>
+      <li><b>眼睛是缺席。</b>在光核上，眼睛是光不在的两处，所以没有高光：光本身没有高光。实心的智能体点在每只眼的左上保留一点奶白，让眼睛显得湿润而圆。</li>
+      <li><b>挤压与拉伸。</b>呼吸时纵向拉伸 1.2%；点头时压扁到 90%，再经同一个弹簧恢复。</li>
+      <li><b>向下看时眼睛变细。</b>视线下落时眼睑合上 15%，于是阅读看起来像阅读。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap" id="studio">
+  <div class="stack">
+    <p class="eyebrow">眼睛工作室</p>
+    <h2>画两只眼睛的十二种方法。点一个试试。</h2>
+    <p class="lead">同样的身体、同样的墨色、同样的物理。整个性格都在眼睛里，所以这是最重要的决定。</p>
+  </div>
+  <div class="studio" id="studioGrid"></div>
+  <p class="small" style="margin-top:1rem">本站采用：Flow Intelligence 用<b style="color:var(--fg);font-weight:500">圆形、偏高偏左</b>，每个智能体各有一种眼型，十个一眼可辨。</p>
+</section>
+
+<section class="wrap" id="behaviours">
+  <div class="stack">
+    <p class="eyebrow">独一无二</p>
+    <h2>眼睛让它成为一张脸，行为让它只属于这里。</h2>
+    <p class="lead">谁都能画一个带眼睛的点。这些行为来自 Flow AI 真正在做的事：读网站、给智能体交代任务、等人审核、在奥克兰的夜里工作。</p>
+  </div>
+  <div class="dgrid g3">
+    <div class="panel"><span class="eyebrow">01 · 双眨眼</span><h3>招牌眨眼。</h3><p>人眨一次。这颗点快速眨两次，像相机确认对焦。最小的商标。</p><label class="toggle"><input type="checkbox" id="dbl" checked> 在主舞台上</label></div>
+    <div class="panel"><span class="eyebrow">02 · 逐行阅读</span><h3>它一行一行地读。</h3><p>工作时，眼睛从左扫到右，再换一行，像人读书一样。从外面看，AI 搜索审计就是这个样子。</p><label class="toggle"><input type="checkbox" id="scan" checked> 工作时</label></div>
+    <div class="panel"><span class="eyebrow">03 · 看你打字</span><h3>注意力跟着你走。</h3><p>聚焦输入框，它就看过去。打字时跟着光标。停下来，它抬头看你。</p><div class="demo-row"><svg viewBox="0 0 100 100" id="typerDot"></svg><input id="typer" placeholder="向 Flow Intelligence 提个要求" autocomplete="off"></div></div>
+    <div class="panel"><span class="eyebrow">04 · 点头</span><h3>批准就是一个点头。</h3><p>一次运行被批准时，身体往下一沉，眼睛眯起。没有对勾，没有彩带。像同事点一下头。</p><div class="demo-row"><svg viewBox="0 0 100 100" id="nodDot"></svg><button class="dbtn" id="nodBtn">批准</button></div></div>
+    <div class="panel"><span class="eyebrow">05 · 奥克兰时间</span><h3>它按你的作息。</h3><p>奥克兰晚上十点到早上六点，网站上的点进入暗夜状态。地球另一边的访客看得到：你睡着时，它还在工作。</p><div class="demo-row"><svg viewBox="0 0 100 100" id="nztDot"></svg><span class="small" id="nztNow"></span></div></div>
+    <div class="panel"><span class="eyebrow">06 · 由点组成的眼睛</span><h3>眼睛就是那条轨迹。</h3><p>轨迹折叠时，离琥珀点最近的两个奶白点成了眼睛。标志和脸是同样的四个点。</p><div class="demo-row"><svg viewBox="0 0 120 60" id="foldSvg" style="width:140px;height:70px"></svg><button class="dbtn" id="foldBtn">折叠</button></div></div>
+  </div>
+</section>
+
+<section class="wrap" id="mark">
+  <div class="stack">
+    <p class="eyebrow">标志与像素网格</p>
+    <h2>轨迹保持抽象。角色从 32 像素起才出现。</h2>
+    <p class="lead">小于 32 像素时，眼睛只是两个污点，所以页眉和页脚保持原来的轨迹。网站图标是唯一的例外：一个带眼睛的琥珀点，在 16 像素网格上手绘，而不是缩放。</p>
+  </div>
+  <div class="goo-stage" id="goo-stage">
+    <svg viewBox="0 0 960 300" id="goo-svg">
+      <circle cx="760" cy="90" r="100" fill="url(#flowdot-halo)"/>
+      <g filter="url(#goo)" style="filter:url(#goo)">
+        <circle class="gd" cx="760" cy="90" r="0" fill="#faf8f3"/>
+        <circle class="gd" cx="760" cy="90" r="0" fill="#faf8f3"/>
+        <circle class="gd" cx="760" cy="90" r="0" fill="#faf8f3"/>
+      </g>
+      <circle id="gb" cx="760" cy="90" r="50" fill="url(#flowdot-core)"/>
+      <g id="geyes"><g id="geL" transform="translate(740 76)"><ellipse rx="5" ry="5.4" fill="#0e0e0d"/><circle cx="-1.7" cy="-2" r="1" fill="#faf8f3"/></g><g id="geR" transform="translate(766 76)"><ellipse rx="6" ry="6.4" fill="#0e0e0d"/><circle cx="-2" cy="-2.4" r="1.2" fill="#faf8f3"/></g></g>
+      <text x="40" y="262" font-family="JetBrains Mono, monospace" font-size="12" fill="rgba(250,248,243,.54)" letter-spacing="2">标志动画 · 智能体出发、工作、再合并回来</text>
+    </svg>
+    <button class="dbtn ctl" id="replay">重播</button>
+  </div>
+  <div class="sizes">
+    <div class="size"><svg width="128" height="128" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/><circle cx="21.3" cy="4.75" r=".16" fill="#faf8f3"/><circle cx="23.65" cy="4.7" r=".18" fill="#faf8f3"/></svg><span class="lbl">128 · 有眼睛</span></div>
+    <div class="size"><svg width="64" height="64" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/></svg><span class="lbl">64 · 有眼睛</span></div>
+    <div class="size"><svg width="32" height="32" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/></svg><span class="lbl">32 · 下限</span></div>
+    <div class="size"><svg width="24" height="24" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/></svg><span class="lbl">24 · 页眉，无眼睛</span></div>
+    <div class="size"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="4" fill="#0e0e0d"/><circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/><rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/></svg><span class="lbl">网站图标 · 32</span></div>
+    <div class="size"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="4" fill="#0e0e0d"/><circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/><rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/></svg><span class="lbl">16 · 标签页</span></div>
+  </div>
+  <div class="pix">
+    <svg width="256" height="256" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-label="16 像素网格上的网站图标">
+      <rect width="16" height="16" rx="4" fill="#0e0e0d"/>
+      <circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/>
+      <rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/>
+      <g stroke="rgba(250,248,243,.18)" stroke-width=".04"><path d="M0 1H16M0 2H16M0 3H16M0 4H16M0 5H16M0 6H16M0 7H16M0 8H16M0 9H16M0 10H16M0 11H16M0 12H16M0 13H16M0 14H16M0 15H16M1 0V16M2 0V16M3 0V16M4 0V16M5 0V16M6 0V16M7 0V16M8 0V16M9 0V16M10 0V16M11 0V16M12 0V16M13 0V16M14 0V16M15 0V16"/></g>
+    </svg>
+    <div>
+      <h3>网站图标，画在网格上。</h3>
+      <p class="small" style="margin-top:.5rem;max-width:46ch">半径六像素、边缘柔和的琥珀光核，两个 2×2 的墨色方块，位于中线上方一像素，相距两像素。把大脸缩小只会得到一团灰；把方块放在网格上，眼睛在每个标签栏里都清晰。32 像素版本是同一张图放大一倍，所以同样清晰。</p>
+      <p class="small" style="margin-top:.75rem">以 favicon.svg 发布，眼睛加上 <span class="mono">shape-rendering="crispEdges"</span>，并为 Safari 和 iOS 另出 32 和 180 像素的 PNG。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="agents">
+  <div class="stack">
+    <p class="eyebrow">辨认智能体</p>
+    <h2>十个智能体，十个奶白点，各有各的眼睛。</h2>
+    <p class="lead">颜色不能用（只有三种墨色），所以身份都在眼睛里。每个智能体拥有一种按职责选定的眼型，一周之后，“最近”列表不看标签也能读懂。把指针放到任一智能体上：它看你一眼，再移开，像同事打个招呼。</p>
+  </div>
+  <div class="dgrid g5" id="agentsB"></div>
+  <p class="small" style="margin-top:1rem">API 里保留了一个后备方案，供以后新增的智能体使用：<span class="mono">FlowDot.mount(el, {agent: 'new-agent'})</span> 会从名字推导出一张稳定的脸。</p>
+</section>
+
+<section class="wrap" id="context">
+  <div class="stack">
+    <p class="eyebrow">在网站上</p>
+    <h2>它在网站上的位置。</h2>
+    <p class="lead">五个地方，都很小，都在现有版式里。这个角色是一种在场，不是在首屏大喊大叫的吉祥物。</p>
+  </div>
+  <div class="dgrid g2">
+    <div class="mock">
+      <div class="bar"><b>AI search fixes</b><span class="status" id="st"><svg viewBox="0 0 100 100"></svg>等待你审核</span></div>
+      <ul class="recents" id="recents"></ul>
+      <p class="small" style="padding:.6rem 1.1rem 1rem">演示窗口。每次运行带着它的智能体的点；状态栏里的 Flow Intelligence 一直看着你，直到你批准。</p>
+    </div>
+    <div class="mock">
+      <div style="padding:1.25rem 1.1rem 1rem"><span class="pillnav"><span class="brand"><svg viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/></svg>Flow AI.</span><span>如何运作</span><span>指南</span><span class="cta">与我合作 <i>↗</i><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="11" fill="url(#flowdot-core)"/><ellipse cx="8" cy="9.2" rx="1.6" ry="1.75" fill="#0e0e0d"/><ellipse cx="13.2" cy="9.2" rx="1.9" ry="2.05" fill="#0e0e0d"/></svg></span></span></div>
+      <p class="small" style="padding:0 1.1rem 1rem">悬浮页眉。轨迹保持不变。在琥珀色按钮上悬停时，↗ 圆圈会变成这颗点一瞬间：一瞥，而不是噱头。</p>
+      <div class="loading" style="border-top:1px solid var(--hair)"><svg viewBox="0 0 100 100" id="loader"></svg><span>Flow Intelligence 正在读你的网站……</span></div>
+      <p class="small" style="padding:0 1.1rem 1rem">加载与空状态。工作时这颗点呼吸、阅读；全站没有一个转圈图标。</p>
+    </div>
+    <div class="mock four04"><svg viewBox="0 0 100 100" id="lost"></svg><b>这一页流到别处去了。</b><p class="small">404 页面。它先看左，再看右，然后看你。</p></div>
+    <div class="mock night"><div class="loading" style="padding:2.5rem 1.5rem"><svg viewBox="0 0 100 100" id="night"></svg><span>夜间运行，02:14 · 三份草稿已为早晨暂存</span></div><p class="small" style="padding:0 1.5rem 1.5rem">灯灭了，只有眼睛在发光。用于人不在时发生的一切。</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="spec">
+  <div class="stack">
+    <p class="eyebrow">规范与 API</p>
+    <h2>开发者需要的一切，都在这一页。</h2>
+    <p class="lead">驱动这一页的引擎就是参考实现：一个文件，无依赖，7 KB。挂载到任意 SVG 上，其余交给它。下面的动效表是它遵守的规则。</p>
+  </div>
+  <div class="tablewrap"><table class="spec">
+    <thead><tr><th>时刻</th><th>时长</th><th>曲线</th><th>动的是什么</th></tr></thead>
+    <tbody>
+      <tr><td>视线</td><td class="m">spring k 140 · d 18</td><td class="m">临界阻尼</td><td>眼睛位置，横向最多 0.18 r，纵向 0.14 r。远眼缩至 0.88，近眼放大到 1.06。</td></tr>
+      <tr><td>身体跟随</td><td class="m">spring k 40 · d 10</td><td class="m">欠阻尼</td><td>朝视线方向倾斜最多 6 度，慢一拍。</td></tr>
+      <tr><td>眼跳</td><td class="m">every 1.5 to 4 s</td><td class="m">即时目标</td><td>新的注视点在 ±0.5、±0.35 之内。仅在没有其他事吸引注意时。</td></tr>
+      <tr><td>眨眼</td><td class="m">60 · 70 · 140 ms</td><td class="m">放大、闭、睁</td><td>眼睑从上方合拢。双眨眼在 260 毫秒后重复。静止时每 3 到 6 秒一次。</td></tr>
+      <tr><td>呼吸</td><td class="m">3.9 s period</td><td class="m">sine</td><td>纵向拉伸 1.2%。工作时快 6 倍。</td></tr>
+      <tr><td>点头</td><td class="m">600 ms</td><td class="m">半正弦</td><td>身体下沉 r 的 10% 并压扁至 0.9；眼睑合至 0.4；再经身体弹簧恢复。</td></tr>
+      <tr><td>分离与合并</td><td class="m">1.1 s per dot, 0.55 s apart</td><td class="m">三次缓出</td><td>经由黏液滤镜（100 单位下模糊 2.2，alpha 矩阵 22 −10）。智能体沿轨迹的对角线出发。</td></tr>
+      <tr><td>光晕</td><td class="m">2.1 r · 0.85 to 1.0</td><td class="m">正弦，半速</td><td>光的呼吸在强度上，不在大小上。等待审核时亮 0.15。夜间状态降到 0.08。</td></tr>
+      <tr><td>审核光环</td><td class="m">2.9 s period</td><td class="m">sine</td><td>一道 1.5 单位的琥珀色光环在 r + 6 与 r + 18 之间呼吸，不透明度 0.2 到 0.9。</td></tr>
+      <tr><td>减少动态</td><td class="m">—</td><td class="m">—</td><td>视线直接跳转，没有弹簧、眼跳、眨眼和呼吸。状态依然可辨。</td></tr>
+    </tbody>
+  </table></div>
+  <h3 style="margin-top:2.5rem">API</h3>
+<pre><b>&lt;script src="/assets/dot.js" defer&gt;&lt;/script&gt;</b>
+
+<b>// Flow Intelligence, 48 px, in the demo window status</b>
+var fi = FlowDot.mount(document.querySelector('#status svg'), { role: 'flow', style: 'high' });
+fi.set('review');          <b>// idle · think · work · review · done · late · error</b>
+fi.lookAt(0.2, -0.1);      <b>// −1..1, overrides saccades until lookAt(null)</b>
+fi.nod();                  <b>// on approve</b>
+fi.blink(true);            <b>// double</b>
+
+<b>// an agent, 28 px, in Recents. Style comes from the agent map,
+// or is derived from the name for agents the map does not know.</b>
+FlowDot.mount(li.querySelector('svg'), { role: 'agent', agent: 'ai-search' });
+
+<b>// the dark state follows Auckland time on its own</b>
+FlowDot.autoNight(fi);     <b>// 22:00–06:00 Pacific/Auckland</b>
+
+<b>// every mounted dot shares one requestAnimationFrame loop and
+// pauses off screen. Nothing is hidden if the script fails:
+// the SVG you mount can carry a static dot as its fallback.</b></pre>
+  <p class="small" style="margin-top:1rem">本页所用引擎的源码：<a href="#" id="showSrc">显示 dot.js</a></p>
+  <pre id="src" hidden></pre>
+</section>
+
+<section class="wrap">
+  <div class="stack">
+    <p class="eyebrow">规则</p>
+    <h2>什么让它可爱，而不是企业吉祥物。</h2>
+  </div>
+  <div class="rules">
+    <div class="panel"><h3>永远</h3><ul>
+      <li><b>两只眼睛，别无其他。</b>没有嘴、手臂、眉毛或帽子。表情来自眼型、方向和眨眼的时机。</li>
+      <li><b>光与物。</b>Flow Intelligence 是发光的琥珀色核心，品牌唯一允许的发光，因为它是网站上唯一不是物件的东西。智能体是实心奶白。眼睛是墨色，或光的缺席。</li>
+      <li><b>不对称的眼睛。</b>右眼大 20%。对称读作图标，不对称读作脸。</li>
+      <li><b>双眨眼，</b>每 3 到 6 秒一次。绝不是看得出的循环。</li>
+      <li><b>弹簧与眼跳。</b>没有滑动。眼睛跳，身体稳。</li>
+    </ul></div>
+    <div class="panel"><h3>绝不</h3><ul>
+      <li><b>32 像素以下不画眼睛，</b>手绘的网站图标除外。</li>
+      <li><b>没有第二个角色。</b>智能体靠眼睛区分，不靠颜色、衣服或体型。</li>
+      <li><b>不说话。</b>它永远没有对话气泡。演示窗口里的对话属于产品，不属于角色。</li>
+      <li><b>没有悲伤状态。</b>失败是眯平的眼睛和一点倾斜，不是眼泪。</li>
+      <li><b>没有为动而动。</b>每个动画都标记一个真实状态：工作、等待、完成、离开。</li>
+    </ul></div>
+  </div>
+</section>
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  var NAMES = { round: ['圆形', '温暖、开放，默认款。32 像素可辨。'], high: ['圆形，偏高偏左', '同样的眼睛，放得偏离中心。轮廓就成了你的。'], pill: ['长胶囊', '警觉，动画片的气质。眨起眼来很好看。'], wide: ['宽椭圆', '平静，有点困。适合夜间状态。'], arc: ['笑弧', '永远在笑。很快可爱，更快腻。留给完成状态。'], sly: ['半月', '心里有数，略带狡黠。一个发现了什么的智能体。'], lens: ['镜头', '一圈加一个瞳孔。更像仪器而非生物。'], slit: ['阅读细缝', '专注。正在扫描页面的眼睛。'], bean: ['豆子', '倾斜的椭圆，好玩，有点调皮。'], odd: ['一大一小', '极端不对称。难忘，略怪。'], square: ['圆角方', '屏幕像素。机械、精确，少些温度。'], one: ['独眼', '单个镜头。很有辨识度，但不太像脸。一个挑衅。'] };
+  var ORDER = ['round', 'high', 'pill', 'wide', 'arc', 'sly', 'lens', 'slit', 'bean', 'odd', 'square', 'one'];
+
+  /* hero */
+  var stage = document.getElementById('stage');
+  var hero = FlowDot.mount(document.getElementById('hero-svg'), { role: 'flow', style: 'high', r: 24, goo: true });
+  var cap = document.getElementById('cap'), capStyle = document.getElementById('capStyle');
+  function setMood(m) {
+    hero.set(m); cap.textContent = ({idle:'待机',think:'思考中',work:'工作中',review:'等待你审核',done:'完成',late:'深夜加班',error:'出了点问题'})[m];
+    stage.classList.toggle('night', m === 'late');
+    document.querySelectorAll('#moods .dbtn').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-mood') === m)); });
+  }
+  document.getElementById('moods').addEventListener('click', function (e) { var b = e.target.closest('[data-mood]'); if (b) setMood(b.getAttribute('data-mood')); });
+  stage.addEventListener('pointermove', function (e) { var r = stage.getBoundingClientRect(); hero.lookAt(((e.clientX - r.left) / r.width - 0.5) * 2, ((e.clientY - r.top) / r.height - 0.5) * 2); });
+  stage.addEventListener('pointerleave', function () { hero.lookAt(null); });
+  document.getElementById('bodies').addEventListener('click', function (e) { var b = e.target.closest('[data-body]'); if (!b) return; hero.setGlow(b.getAttribute('data-body') === 'glow'); document.querySelectorAll('#bodies .dbtn').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); });
+  document.getElementById('dbl').addEventListener('change', function (e) { hero.dbl = e.target.checked; });
+  document.getElementById('scan').addEventListener('change', function (e) { FlowDot.MOODS.work.scan = e.target.checked; });
+
+  /* eye studio */
+  var grid = document.getElementById('studioGrid');
+  ORDER.forEach(function (key) {
+    var card = document.createElement('button'); card.className = 'eye'; card.type = 'button'; card.setAttribute('data-style', key); card.setAttribute('aria-pressed', String(key === 'high'));
+    var svg = el('svg', { viewBox: '0 0 100 100' }); var d = FlowDot.mount(svg, { role: 'flow', style: key, r: 30 }); card.appendChild(svg);
+    var b = document.createElement('b'); b.textContent = NAMES[key][0]; card.appendChild(b);
+    var sp = document.createElement('span'); sp.textContent = NAMES[key][1]; card.appendChild(sp);
+    card.addEventListener('click', function () { hero.setStyle(key); capStyle.textContent = NAMES[key][0].toLowerCase(); document.querySelectorAll('.eye').forEach(function (x) { x.setAttribute('aria-pressed', String(x === card)); }); });
+    card.addEventListener('pointerenter', function () { d.lookAt(0, 0.25); d.blink(true); });
+    card.addEventListener('pointerleave', function () { d.lookAt(null); });
+    grid.appendChild(card);
+  });
+
+  /* the run */
+  var runStage = document.getElementById('runStage');
+  var run = FlowDot.mount(document.getElementById('run-svg'), { role: 'flow', style: 'high', r: 17, dy: 10, goo: true });
+  var runCap = document.getElementById('runCap'), runBar = document.getElementById('runBar'), steps = Array.prototype.slice.call(document.querySelectorAll('#steps li'));
+  var m1 = document.getElementById('m1'), m2 = document.getElementById('m2');
+  var runT = -1, runLen = 23;
+  var SCRIPT = [
+    { at: 0,    cap: '收到指令',        fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 900); } },
+    { at: 1.6,  cap: '阅读网站',      fn: function () { run.set('work'); FlowDot.MOODS.work.orbit = false; } },
+    { at: 5.2,  cap: '交代三个智能体', fn: function () { run.set('think'); splitOut(); } },
+    { at: 8.4,  cap: '智能体工作中',        fn: function () { run.set('idle'); } },
+    { at: 12.4, cap: '智能体返回',         fn: function () { mergeBack(); } },
+    { at: 14.6, cap: '已暂存，等你', fn: function () { run.set('review'); m2.classList.add('is-on'); } },
+    { at: 19,   cap: '已批准',              fn: function () { run.set('done'); } },
+    { at: 21,   cap: '休息',                  fn: function () { run.set('idle'); m1.classList.remove('is-on'); m2.classList.remove('is-on'); } }
+  ];
+  var runSats = run.sats, satTargets = [[22, 30, 7], [78, 26, 6], [26, 80, 5.5]], satAnim = null;
+  function splitOut() { satAnim = { t0: performance.now(), dir: 1 }; }
+  function mergeBack() { satAnim = { t0: performance.now(), dir: -1 }; }
+  function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+  function satFrame() {
+    if (satAnim) {
+      var tt = (performance.now() - satAnim.t0) / 1000;
+      runSats.forEach(function (s, i) {
+        var local = Math.max(0, Math.min(1, (tt - i * 0.45) / 1.1)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
+        var wob = Math.sin(performance.now() / 400 + i) * 2 * p;
+        s.setAttribute('cx', run.cx + (satTargets[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satTargets[i][1] - run.cy) * p); s.setAttribute('r', satTargets[i][2] * Math.min(1, p * 1.4));
+      });
+      if (tt > 2.2) { if (satAnim.dir < 0) runSats.forEach(function (s) { s.setAttribute('r', 0); }); else satAnim = { hold: true, t0: satAnim.t0 }; if (satAnim && satAnim.hold) { /* keep wobbling */ } }
+      if (satAnim && satAnim.hold) runSats.forEach(function (s, i) { var wob = Math.sin(performance.now() / 400 + i) * 2; s.setAttribute('cx', satTargets[i][0] + wob); s.setAttribute('cy', satTargets[i][1] + Math.cos(performance.now() / 500 + i) * 1.5); });
+      if (satAnim && satAnim.dir < 0 && tt > 2.4) satAnim = null;
+    }
+    requestAnimationFrame(satFrame);
+  }
+  requestAnimationFrame(satFrame);
+  var fired = [];
+  function runFrame(now) {
+    if (runT < 0) return;
+    var tt = (now - runT) / 1000;
+    runBar.style.width = Math.min(100, tt / runLen * 100) + '%';
+    SCRIPT.forEach(function (s, i) { if (tt >= s.at && !fired[i]) { fired[i] = true; s.fn(); runCap.textContent = s.cap; steps.forEach(function (li, j) { li.classList.toggle('is-on', j === i); }); } });
+    if (tt < runLen) requestAnimationFrame(runFrame); else { runT = -1; document.getElementById('runPlay').textContent = '再播一次'; runCap.textContent = '就绪'; FlowDot.MOODS.work.orbit = true; }
+  }
+  document.getElementById('runPlay').addEventListener('click', function () {
+    if (runT >= 0) return; fired = []; runT = performance.now(); this.textContent = '播放中'; run.set('idle'); satAnim = null; runSats.forEach(function (s) { s.setAttribute('r', 0); });
+    requestAnimationFrame(runFrame);
+  });
+
+  /* behaviours */
+  var typerDot = FlowDot.mount(document.getElementById('typerDot'), { role: 'flow', style: 'high', r: 32 });
+  var typer = document.getElementById('typer'), typerIdle = null;
+  typer.addEventListener('focus', function () { typerDot.lookAt(0.9, 0.3); });
+  typer.addEventListener('blur', function () { typerDot.lookAt(null); });
+  typer.addEventListener('input', function () { var n = Math.min(typer.value.length, 36) / 36; typerDot.lookAt(0.6 + n * 0.4, 0.35); if (Math.random() < 0.25) typerDot.blink(false); clearTimeout(typerIdle); typerIdle = setTimeout(function () { typerDot.lookAt(0, -0.2); }, 1800); });
+  var nodDot = FlowDot.mount(document.getElementById('nodDot'), { role: 'flow', style: 'high', r: 32 });
+  document.getElementById('nodBtn').addEventListener('click', function () { nodDot.nod(); });
+  var hourNZ = parseInt(new Intl.DateTimeFormat('en-NZ', { hour: 'numeric', hour12: false, timeZone: 'Pacific/Auckland' }).format(new Date()), 10);
+  var timeNZ = new Intl.DateTimeFormat('en-NZ', { hour: '2-digit', minute: '2-digit', timeZone: 'Pacific/Auckland' }).format(new Date());
+  var isNight = hourNZ >= 22 || hourNZ < 6;
+  var nztDot = FlowDot.mount(document.getElementById('nztDot'), { role: 'flow', style: isNight ? 'wide' : 'high', r: 32, state: isNight ? 'late' : 'idle' });
+  document.getElementById('nztNow').textContent = '奥克兰现在是 ' + timeNZ + '，所以这颗点' + (isNight ? '在深夜加班。' : '是醒着的。');
+  var fold = document.getElementById('foldSvg'), folded = false;
+  var fd = [el('circle', { cx: 18, cy: 48, r: 4, fill: '#faf8f3', 'fill-opacity': '.4' }), el('circle', { cx: 42, cy: 42, r: 5.5, fill: '#faf8f3', 'fill-opacity': '.65' }), el('circle', { cx: 66, cy: 31, r: 7, fill: '#faf8f3' }), el('circle', { cx: 94, cy: 14, r: 10.5, fill: 'url(#flowdot-core)' })];
+  var fg = el('g', { filter: 'url(#goo-sm)' }); fd.forEach(function (c) { fg.appendChild(c); }); fold.appendChild(fg);
+  var home = [[18, 48, 4], [42, 42, 5.5], [66, 31, 7], [94, 14, 9.5]], face = [[60, 30, 0], [52, 25, 3], [66, 24, 3.6], [60, 30, 18]];
+  document.getElementById('foldBtn').addEventListener('click', function () {
+    folded = !folded; var to = folded ? face : home, from = folded ? home : face, t0 = 0;
+    if (folded) { fg.appendChild(fd[1]); fg.appendChild(fd[2]); }
+    (function f() { t0 += 0.025; var e = 1 - Math.pow(1 - Math.min(t0, 1), 3); fd.forEach(function (c, i) { c.setAttribute('cx', from[i][0] + (to[i][0] - from[i][0]) * e); c.setAttribute('cy', from[i][1] + (to[i][1] - from[i][1]) * e); c.setAttribute('r', from[i][2] + (to[i][2] - from[i][2]) * e); if (i < 3) c.setAttribute('fill-opacity', folded ? String(0.4 + e * 0.6) : String(i === 0 ? 1 - e * 0.6 : i === 1 ? 1 - e * 0.35 : 1)); }); if (t0 < 1) requestAnimationFrame(f); })();
+    this.textContent = folded ? '展开' : '折叠';
+  });
+
+  /* logo animation */
+  var gb = document.getElementById('gb'), gds = Array.prototype.slice.call(document.querySelectorAll('.gd'));
+  var geL = document.getElementById('geL'), geR = document.getElementById('geR'), geyes = document.getElementById('geyes');
+  var targets = [[640, 160, 36], [530, 212, 28], [430, 245, 22]], gt0 = null, playing = false;
+  function easeO(x) { return 1 - Math.pow(1 - x, 3); }
+  function playGoo() { if (reduced) { gds.forEach(function (d, i) { d.setAttribute('cx', targets[i][0]); d.setAttribute('cy', targets[i][1]); d.setAttribute('r', targets[i][2]); }); return; } gt0 = performance.now(); playing = true; requestAnimationFrame(gooFrame); }
+  function gooFrame(now) {
+    var tt = (now - gt0) / 1000;
+    gds.forEach(function (d, i) { var local = Math.max(0, Math.min(1, (tt - i * 0.55) / 1.1)), e = easeO(local); d.setAttribute('cx', 760 + (targets[i][0] - 760) * e); d.setAttribute('cy', 90 + (targets[i][1] - 90) * e); d.setAttribute('r', targets[i][2] * Math.min(1, local * 1.6)); });
+    var sq = Math.sin(tt * 9) * Math.max(0, 1 - tt / 2.4) * 0.06;
+    gb.setAttribute('transform', 'translate(760 90) scale(' + (1 + sq) + ' ' + (1 - sq) + ') translate(-760 -90)');
+    var ox = tt < 2.4 ? -6 : 0; geL.setAttribute('transform', 'translate(' + (740 + ox) + ' 76)'); geR.setAttribute('transform', 'translate(' + (766 + ox) + ' 76)');
+    if (tt > 5.2 && tt < 7.4) gds.forEach(function (d, i) { var back = easeO(Math.max(0, Math.min(1, (tt - 5.2 - i * 0.3) / 1.2))); d.setAttribute('cx', targets[i][0] + (760 - targets[i][0]) * back); d.setAttribute('cy', targets[i][1] + (90 - targets[i][1]) * back); d.setAttribute('r', targets[i][2] * (1 - back)); });
+    if (tt < 8) requestAnimationFrame(gooFrame); else { playing = false; setTimeout(playGoo, 1200); }
+  }
+  document.getElementById('replay').addEventListener('click', function () { if (!playing) playGoo(); });
+  setTimeout(playGoo, 600);
+  if (!reduced) setInterval(function () { geyes.setAttribute('transform-origin', '753px 76px'); geyes.setAttribute('transform', 'scale(1 0.08)'); setTimeout(function () { geyes.setAttribute('transform', ''); }, 110); setTimeout(function () { geyes.setAttribute('transform', 'scale(1 0.08)'); setTimeout(function () { geyes.setAttribute('transform', ''); }, 110); }, 260); }, 4200);
+
+  /* agents */
+  var names = [['定位', 'positioning', '主张与核心信息', '半月：它有自己的看法'], ['AI 搜索', 'ai-search', '被 ChatGPT 和 Perplexity 引用', '镜头：它看得仔细'], ['内容', 'content', '一份素材，一个月的内容', '长胶囊：清醒而多产'], ['社交', 'social', '用你的语气，准时发布', '豆子：好玩，有点皮'], ['外联', 'outbound', '对的那一百个买家', '一大一小：盯住最重要的那个'], ['增长', 'growth', '报价与落地页', '宽椭圆：有耐心，盯着数字'], ['发布', 'launch', '跨渠道排期', '偏高偏左：向前看'], ['付费', 'paid', '创意与受众', '方形：像素与预算'], ['社区', 'community', '诚实地回答论坛', '笑弧：友善的那个'], ['报告', 'reporting', '每月一页', '细缝：每行都读']];
+  var host = document.getElementById('agentsB');
+  names.forEach(function (n) {
+    var card = document.createElement('div'); card.className = 'agent';
+    var svg = el('svg', { viewBox: '0 0 100 100' }); var d = FlowDot.mount(svg, { role: 'agent', agent: n[1], r: 34 }); card.appendChild(svg);
+    var txt = document.createElement('div'); txt.innerHTML = '<b>' + n[0] + '</b><span>' + n[2] + '</span><div class="sig">' + n[3] + '</div>'; card.appendChild(txt);
+    card.addEventListener('pointerenter', function () { d.lookAt(0, 0.2); d.blink(true); setTimeout(function () { d.lookAt(null); }, 1400); });
+    host.appendChild(card);
+  });
+
+  /* in context */
+  var st = FlowDot.mount(document.querySelector('#st svg'), { role: 'flow', style: 'high', r: 36, state: 'review' });
+  var rec = document.getElementById('recents');
+  [['AI 搜索优化', 'AI 搜索', 'ai-search', '今天'], ['10月内容日历', '内容', 'content', '昨天'], ['物业经理，第 3 批', '外联', 'outbound', '周一'], ['9月报告', '报告', 'reporting', '10月1日']].forEach(function (row) {
+    var li = document.createElement('li'); var svg = el('svg', { viewBox: '0 0 100 100' }); FlowDot.mount(svg, { role: 'agent', agent: row[2], r: 36 }); li.appendChild(svg);
+    var b = document.createElement('div'); b.innerHTML = '<b>' + row[0] + '</b><br><span class="small">' + row[1] + '智能体</span>'; var e = document.createElement('em'); e.textContent = row[3]; li.appendChild(b); li.appendChild(e); rec.appendChild(li);
+  });
+  FlowDot.mount(document.getElementById('loader'), { role: 'flow', style: 'high', r: 34, state: 'work' });
+  var lost = FlowDot.mount(document.getElementById('lost'), { role: 'flow', style: 'high', r: 34 });
+  (function () { var seq = [[-0.9, 0], [0.9, 0], [0, 0], null], i = 0; setInterval(function () { var s = seq[i % 4]; if (s) lost.lookAt(s[0], s[1]); else lost.lookAt(null); i++; }, 1100); })();
+  FlowDot.mount(document.getElementById('night'), { role: 'flow', style: 'wide', r: 34, state: 'late' }).body.setAttribute('stroke', 'rgba(250,248,243,.08)');
+
+  /* source */
+  document.getElementById('showSrc').addEventListener('click', function (e) { e.preventDefault(); var pre = document.getElementById('src'); pre.hidden = !pre.hidden; if (!pre.textContent) fetch('/assets/dot.js').then(function (r) { return r.text(); }).then(function (t) { pre.textContent = t; }); this.textContent = pre.hidden ? '显示 dot.js' : '隐藏 dot.js'; });
+});
+</script>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/zh/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI 营销工程师，奥克兰</p>
+        <p class="site-footer__note">我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。</p>
+        <a class="site-footer__cta" href="/zh/contact">与我合作</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/work">作品</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/templates/">免费模板</a>
+      <a href="/zh/about">关于我</a>
+      <a href="/zh/manifesto">宣言</a>
+      <a href="/zh/dot">这颗点</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="给 Amber Lan 发邮件" title="邮件"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

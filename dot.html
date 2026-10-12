@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+  <script>document.documentElement.className += ' js';</script>
+<title>The dot · the character behind Flow Intelligence · Flow AI</title>
+<meta name="description" content="The amber dot at the head of the Flow AI mark is Flow Intelligence: a light core with two eyes, built with real physics and an open-source engine. Its states, the agents, the behaviours, the spec.">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="canonical" href="https://www.flowai.co.nz/dot">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/dot">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/dot">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/dot">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The dot · the character behind Flow Intelligence · Flow AI">
+<meta property="og:description" content="The amber dot at the head of the Flow AI mark is Flow Intelligence: a light core with two eyes, built with real physics and an open-source engine. Its states, the agents, the behaviours, the spec.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:url" content="https://www.flowai.co.nz/dot">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/motion.css">
+<style>
+.dotpage{
+--amber:#e4a43c;--amber-soft:rgba(228,164,60,.14);--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--ease:cubic-bezier(.16,1,.3,1)}
+.dotpage a{
+color:var(--fg);text-decoration:none;border-bottom:1px solid var(--hair-strong)}
+.dotpage h1, .dotpage h2, .dotpage h3{
+color:var(--fg);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:0;text-wrap:balance}
+.dotpage h1{
+font-size:clamp(2.4rem,5.5vw,4.5rem)}
+.dotpage h2{
+font-size:clamp(1.6rem,3vw,2.4rem)}
+.dotpage h3{
+font-size:1.1rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.dotpage p{
+margin:0}
+.dotpage .eyebrow{
+font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft)}
+.dotpage .wrap{
+width:min(100% - 48px,1080px);margin-inline:auto}
+.dotpage section{
+padding:clamp(4rem,9vw,7rem) 0;border-top:1px solid var(--hair)}
+.dotpage section:first-of-type{
+border-top:0}
+.dotpage .stack>*+*{
+margin-top:1.25rem}
+.dotpage .lead{
+font-size:1.15rem;max-width:52ch;color:var(--muted)}
+.dotpage .small{
+font-size:13px;color:var(--soft)}
+.dotpage .mono{
+font-family:var(--mono);font-size:.85em}
+.dotpage .dbtn{
+display:inline-flex;align-items:center;gap:.5rem;min-height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--hair-strong);background:none;color:var(--fg);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:border-color .2s,background .2s,transform .2s var(--ease)}
+.dotpage .dbtn:hover{
+border-color:var(--fg)}
+.dotpage .dbtn:active{
+transform:translateY(1px) scale(.98)}
+.dotpage .dbtn[aria-pressed="true"]{
+background:var(--fg);color:var(--ink);border-color:var(--fg)}
+.dotpage .dbtn-amber{
+background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.dotpage .drow{
+display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.dotpage .toc{
+display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;font-size:13px;margin-top:1.5rem}
+.dotpage .toc a{
+border:0;color:var(--soft)}
+.dotpage .toc a:hover{
+color:var(--fg)}
+.dotpage /* stage */
+.dhero{
+display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:center;padding-top:clamp(3rem,7vw,5rem)}
+.dotpage .stage{
+position:relative;aspect-ratio:1;max-width:520px;margin-inline:auto;border:1px solid var(--hair);border-radius:24px;background:radial-gradient(60% 60% at 50% 55%,rgba(228,164,60,.10),transparent 70%),var(--surface);overflow:hidden;transition:background .6s}
+.dotpage .stage.night{
+background:#0a0a09}
+.dotpage .stage svg{
+width:100%;height:100%;display:block}
+.dotpage .stage .cap{
+position:absolute;left:1rem;bottom:.9rem;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.dotpage .stage .cap b{
+color:var(--fg);font-weight:500}
+.dotpage .ctl-group{
+margin-top:1.5rem}
+.dotpage .ctl-group .eyebrow{
+display:block;margin-bottom:.5rem}
+.dotpage /* run */
+.run{
+display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2rem;margin-top:2.5rem;align-items:stretch}
+.dotpage .run .stage{
+max-width:none;aspect-ratio:auto;min-height:420px}
+.dotpage .steps{
+list-style:none;margin:0;padding:0;border:1px solid var(--hair);border-radius:16px;background:var(--surface);overflow:hidden}
+.dotpage .steps li{
+display:grid;grid-template-columns:2.4rem 1fr auto;gap:.75rem;align-items:baseline;padding:.9rem 1.1rem;border-bottom:1px solid var(--hair);font-size:14px;color:var(--soft);transition:background .3s,color .3s}
+.dotpage .steps li:last-child{
+border-bottom:0}
+.dotpage .steps li i{
+font-family:var(--mono);font-style:normal;font-size:11px;color:var(--soft)}
+.dotpage .steps li b{
+color:inherit;font-weight:500}
+.dotpage .steps li em{
+font-style:normal;font-family:var(--mono);font-size:11px}
+.dotpage .steps li.is-on{
+background:var(--amber-soft);color:var(--fg)}
+.dotpage .steps li.is-on i{
+color:var(--amber)}
+.dotpage .run-bar{
+height:2px;background:var(--hair);margin:1rem 0 0;border-radius:2px;overflow:hidden}
+.dotpage .run-bar b{
+display:block;height:100%;width:0;background:var(--amber);transition:width .2s linear}
+.dotpage .thread{
+position:absolute;left:1.25rem;right:1.25rem;top:1.25rem;display:grid;gap:.5rem;pointer-events:none}
+.dotpage .msg{
+max-width:72%;padding:.55rem .8rem;border-radius:12px;font-size:13px;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.dotpage .msg.is-on{
+opacity:1;transform:none}
+.dotpage .msg.you{
+justify-self:end;background:var(--surface-strong);color:var(--fg);border:1px solid var(--hair)}
+.dotpage .msg.dot{
+justify-self:start;background:rgba(228,164,60,.12);color:var(--fg);border:1px solid rgba(228,164,60,.25)}
+.dotpage /* eye studio */
+.studio{
+display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.75rem;margin-top:2rem}
+.dotpage .eye{
+display:grid;justify-items:center;gap:.5rem;padding:1rem .5rem .9rem;border:1px solid var(--hair);border-radius:14px;background:var(--surface);cursor:pointer;text-align:center;transition:border-color .2s,background .2s;font:inherit;color:inherit}
+.dotpage .eye:hover{
+border-color:var(--hair-strong)}
+.dotpage .eye[aria-pressed="true"]{
+border-color:var(--amber);background:var(--amber-soft)}
+.dotpage .eye svg{
+width:72px;height:72px;display:block}
+.dotpage .eye b{
+display:block;color:var(--fg);font-weight:600;font-size:13.5px;letter-spacing:-.01em}
+.dotpage .eye span{
+display:block;font-size:11.5px;color:var(--soft);line-height:1.35}
+.dotpage /* panels */
+.dgrid{
+display:grid;gap:1rem;margin-top:2.25rem}
+.dotpage .g2{
+grid-template-columns:repeat(2,minmax(0,1fr))}
+.dotpage .g3{
+grid-template-columns:repeat(3,minmax(0,1fr))}
+.dotpage .g5{
+grid-template-columns:repeat(5,minmax(0,1fr))}
+.dotpage .panel{
+border:1px solid var(--hair);border-radius:16px;background:var(--surface);padding:1.25rem 1.35rem}
+.dotpage .panel h3{
+margin-bottom:.45rem}
+.dotpage .panel p{
+font-size:14.5px;color:var(--muted)}
+.dotpage .panel .eyebrow{
+display:block;margin-bottom:.9rem}
+.dotpage .panel .demo-row{
+display:flex;align-items:center;gap:1rem;margin-top:1rem}
+.dotpage .panel .demo-row svg{
+width:48px;height:48px;flex:none}
+.dotpage .panel input{
+width:100%;min-height:42px;padding:0 .9rem;border:1px solid var(--hair-strong);border-radius:10px;background:var(--surface-strong);color:var(--fg);font:inherit;font-size:14px}
+.dotpage .panel input:focus{
+outline:none;border-color:var(--fg)}
+.dotpage .toggle{
+display:inline-flex;align-items:center;gap:.6rem;font-size:14px;color:var(--fg);cursor:pointer;margin-top:1rem}
+.dotpage .toggle input{
+width:auto;min-height:0;accent-color:var(--amber)}
+.dotpage /* anatomy */
+.anatomy{
+display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;margin-top:2.25rem;align-items:center}
+.dotpage .anatomy svg{
+width:100%;height:auto;display:block}
+.dotpage .anatomy ol{
+margin:0;padding-left:1.2rem;font-size:14.5px}
+.dotpage .anatomy li{
+margin:.5rem 0}
+.dotpage .anatomy li b{
+color:var(--fg);font-weight:600}
+.dotpage /* spec tables */
+.spec{
+width:100%;border-collapse:collapse;margin-top:2rem;font-size:14px}
+.dotpage .spec th{
+font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);text-align:left;padding:.6rem .75rem .6rem 0;border-bottom:1px solid var(--hair-strong);font-weight:500}
+.dotpage .spec td{
+padding:.7rem .75rem .7rem 0;border-bottom:1px solid var(--hair);vertical-align:top;color:var(--muted)}
+.dotpage .spec td:first-child{
+color:var(--fg);font-weight:500}
+.dotpage .spec td.m{
+font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+.dotpage .tablewrap{
+overflow-x:auto}
+.dotpage /* sizes and pixel grid */
+.sizes{
+display:flex;flex-wrap:wrap;align-items:flex-end;gap:2.5rem;margin-top:2rem;padding:2rem;border:1px solid var(--hair);border-radius:16px;background:var(--surface)}
+.dotpage .size{
+display:grid;justify-items:center;gap:.75rem}
+.dotpage .size .lbl{
+font-family:var(--mono);font-size:11px;color:var(--soft)}
+.dotpage .pix{
+display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;margin-top:1rem;padding:2rem;border:1px solid var(--hair);border-radius:16px;background:var(--surface)}
+.dotpage .pix svg{
+display:block}
+.dotpage .goo-stage{
+position:relative;border:1px solid var(--hair);border-radius:16px;background:var(--surface);overflow:hidden;margin-top:2rem}
+.dotpage .goo-stage svg{
+width:100%;height:auto;display:block}
+.dotpage .goo-stage .ctl{
+position:absolute;right:1rem;bottom:1rem}
+.dotpage /* agents */
+.agent{
+display:grid;grid-template-columns:52px 1fr;gap:.9rem;align-items:center;padding:1rem;border:1px solid var(--hair);border-radius:14px;background:var(--surface);transition:border-color .2s}
+.dotpage .agent:hover{
+border-color:var(--hair-strong)}
+.dotpage .agent svg{
+width:52px;height:52px;display:block}
+.dotpage .agent b{
+display:block;color:var(--fg);font-weight:600;font-size:14.5px;letter-spacing:-.01em}
+.dotpage .agent span{
+display:block;font-size:12.5px;color:var(--soft);margin-top:.15rem;line-height:1.4}
+.dotpage .agent .sig{
+font-family:var(--mono);font-size:10.5px;color:var(--soft);margin-top:.35rem;letter-spacing:.04em}
+.dotpage .subhead{
+margin-top:2.5rem;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.dotpage .subhead h3{
+font-size:1.2rem}
+.dotpage .subhead .small{
+max-width:60ch}
+.dotpage /* in-context mockups */
+.mock{
+border:1px solid var(--hair);border-radius:16px;background:var(--surface);overflow:hidden}
+.dotpage .mock .bar{
+display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1rem;border-bottom:1px solid var(--hair);font-size:13px}
+.dotpage .mock .bar b{
+color:var(--fg);font-weight:600}
+.dotpage .status{
+display:inline-flex;align-items:center;gap:.5rem;color:var(--soft);font-size:12.5px}
+.dotpage .status svg{
+width:18px;height:18px}
+.dotpage .recents{
+list-style:none;margin:0;padding:.5rem}
+.dotpage .recents li{
+display:grid;grid-template-columns:28px 1fr auto;gap:.75rem;align-items:center;padding:.6rem .6rem;border-radius:10px;font-size:13.5px;color:var(--muted)}
+.dotpage .recents li:hover{
+background:var(--surface-strong)}
+.dotpage .recents li svg{
+width:28px;height:28px}
+.dotpage .recents li b{
+color:var(--fg);font-weight:500}
+.dotpage .recents li em{
+font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--soft)}
+.dotpage .pillnav{
+display:inline-flex;align-items:center;gap:1.1rem;padding:.45rem .5rem .45rem .9rem;border:1px solid var(--hair-strong);border-radius:999px;background:rgba(23,23,21,.85);font-size:13.5px;color:var(--muted);white-space:nowrap;max-width:100%;overflow:hidden}
+.dotpage .pillnav>span{
+flex:none}
+.dotpage .pillnav .brand{
+display:inline-flex;align-items:center;gap:.5rem;color:var(--fg);font-weight:600}
+.dotpage .pillnav .brand svg{
+width:24px;height:24px}
+.dotpage .pillnav .cta{
+display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:var(--ink);font-weight:600;padding:.45rem .5rem .45rem .9rem;border-radius:999px;font-size:13.5px}
+.dotpage .pillnav .cta i{
+display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(14,14,13,.18);font-style:normal;font-size:11px}
+.dotpage .pillnav .cta svg{
+width:22px;height:22px;display:none}
+.dotpage .pillnav .cta:hover i{
+display:none}
+.dotpage .pillnav .cta:hover svg{
+display:block}
+.dotpage .four04{
+display:grid;place-items:center;gap:1rem;padding:2.5rem 1rem;text-align:center}
+.dotpage .four04 svg{
+width:96px;height:96px}
+.dotpage .four04 b{
+color:var(--fg);font-size:1.3rem;font-weight:600;letter-spacing:-.02em}
+.dotpage .loading{
+display:flex;align-items:center;gap:.75rem;padding:1.5rem;font-size:14px}
+.dotpage .loading svg{
+width:40px;height:40px}
+.dotpage .night{
+background:#0a0a09}
+.dotpage /* code */
+pre{
+margin:1.5rem 0 0;padding:1.1rem 1.25rem;border:1px solid var(--hair);border-radius:12px;background:var(--surface);color:var(--muted);font-family:var(--mono);font-size:12.5px;line-height:1.6;overflow:auto;max-height:420px}
+.dotpage pre b{
+color:var(--fg);font-weight:500}
+.dotpage /* rules */
+.rules{
+display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.dotpage .rules ul{
+margin:0;padding-left:1.1rem}
+.dotpage .rules li{
+margin:.35rem 0;font-size:14.5px;color:var(--muted)}
+.dotpage .rules li b{
+color:var(--fg);font-weight:600}
+.dotpage .decide{
+counter-reset:d;list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--hair)}
+.dotpage .decide li{
+counter-increment:d;display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--hair)}
+.dotpage .decide li::before{
+content:counter(d,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--amber);padding-top:.3rem}
+.dotpage .decide b{
+display:block;color:var(--fg);font-weight:600;margin-bottom:.2rem}
+.dotpage .decide p{
+font-size:14.5px}
+@media(max-width:860px){
+.dotpage .dhero, .dotpage .g2, .dotpage .g3, .dotpage .rules, .dotpage .run, .dotpage .anatomy, .dotpage .pix{
+grid-template-columns:1fr}
+.dotpage .g5{
+grid-template-columns:repeat(2,1fr)}
+.dotpage .studio{
+grid-template-columns:repeat(3,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+.dotpage *{
+animation:none!important;transition:none!important}
+}
+.dotpage{padding-top:clamp(2rem,5vw,3rem)}
+.dotpage section{padding:clamp(4rem,9vw,7rem) 0}
+.dotpage .wrap{width:min(100% - 48px,1080px);margin-inline:auto}
+.dotpage h1{font-weight:600}
+
+</style>
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/dot.js" defer></script>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=1">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="Flow AI home">
+      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
+      <span class="site-header__brand-text">Flow AI.</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/sprints/">How it works</a>
+      <a href="/blog/">Guides</a>
+      <a href="/about">About</a>
+      <span class="lang-switch" role="group" aria-label="Language"><a href="/dot" lang="en" hreflang="en" data-lang="en" aria-current="true">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/dot" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh">中文</a></span>
+      <a class="site-header__cta" href="/contact">Work with me</a>
+    </nav>
+  </div>
+</header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="goo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="g"/>
+      <feComposite in="SourceGraphic" in2="g" operator="atop"/>
+    </filter>
+    <filter id="goo-sm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/>
+      <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="g"/>
+      <feComposite in="SourceGraphic" in2="g" operator="atop"/>
+    </filter>
+    <radialGradient id="flowdot-core" cx="50%" cy="46%" r="50%"><stop offset="0" stop-color="#fff2d2"/><stop offset=".38" stop-color="#f3c572"/><stop offset=".72" stop-color="#e4a43c"/><stop offset=".9" stop-color="#e4a43c" stop-opacity=".85"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="flowdot-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".42"/><stop offset=".45" stop-color="#e4a43c" stop-opacity=".14"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="flowdot-core-night" cx="50%" cy="46%" r="50%"><stop offset="0" stop-color="#2a2518"/><stop offset=".6" stop-color="#151410"/><stop offset=".92" stop-color="#121211" stop-opacity=".9"/><stop offset="1" stop-color="#121211" stop-opacity="0"/></radialGradient>
+    <radialGradient id="flowdot-halo-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".08"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <filter id="glow-big" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.4"/></filter>
+  </defs>
+</svg>
+
+<main id="main" class="dotpage">
+<section class="wrap dhero">
+  <div class="stack">
+    <p class="eyebrow">Flow AI · the dot</p>
+    <h1>The amber dot opens its eyes.</h1>
+    <p class="lead">The Flow AI mark is four dots rising to one amber dot. The amber dot is Flow Intelligence, and it is not a thing: it is a light, a core of intelligence with two eyes where the light is absent. The cream dots are the agents it sends out, and they are solid, because agents do tangible work. This page is the character, its physics, and the engine that runs it on this site, open source like everything else here.</p>
+    <div class="ctl-group"><span class="eyebrow">State</span><div class="drow" id="moods">
+      <button class="dbtn" data-mood="idle" aria-pressed="true">Idle</button>
+      <button class="dbtn" data-mood="think">Thinking</button>
+      <button class="dbtn" data-mood="work">Working</button>
+      <button class="dbtn" data-mood="review">Waiting for your review</button>
+      <button class="dbtn" data-mood="done">Done</button>
+      <button class="dbtn" data-mood="late">Working late</button>
+      <button class="dbtn" data-mood="error">Something failed</button>
+    </div></div>
+    <div class="ctl-group"><span class="eyebrow">Body</span><div class="drow" id="bodies"><button class="dbtn" data-body="glow" aria-pressed="true">Light core</button><button class="dbtn" data-body="solid" aria-pressed="false">Solid, for comparison</button></div></div>
+    <p class="small">Move your pointer around the stage: the eyes lead, the body follows a beat later. Leave it alone and it looks around on its own.</p>
+    <nav class="toc" aria-label="Sections"><a href="#run">The run</a><a href="#physics">Physics</a><a href="#studio">Eye studio</a><a href="#behaviours">Behaviours</a><a href="#mark">Mark and pixels</a><a href="#agents">Agents</a><a href="#context">In context</a><a href="#spec">Spec and API</a></nav>
+  </div>
+  <div class="stage" id="stage">
+    <svg viewBox="0 0 100 100" id="hero-svg"></svg>
+    <p class="cap">Eyes · <b id="capStyle">round, high and left</b> &nbsp;·&nbsp; State · <b id="cap">idle</b></p>
+  </div>
+</section>
+
+<section class="wrap" id="run">
+  <div class="stack">
+    <p class="eyebrow">The run</p>
+    <h2>One job, start to finish, told by the character alone.</h2>
+    <p class="lead">This is the test a world-class character passes: can a visitor understand what the product does by watching the dot, with no copy? A brief arrives, it reads the site, it briefs three agents, they come back, it stages the work and waits for a human, the human approves, it rests.</p>
+  </div>
+  <div class="run">
+    <div class="stage" id="runStage">
+      <svg viewBox="0 0 100 100" id="run-svg"></svg>
+      <div class="thread" id="thread">
+        <div class="msg you" id="m1">Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.</div>
+        <div class="msg dot" id="m2">Three pages staged. Waiting for your review.</div>
+      </div>
+      <p class="cap">Run · <b id="runCap">ready</b></p>
+    </div>
+    <div>
+      <ol class="steps" id="steps">
+        <li data-at="0"><i>00</i><b>Brief received</b><em>nod</em></li>
+        <li data-at="1.6"><i>01</i><b>Reading the site</b><em>scan</em></li>
+        <li data-at="5.2"><i>02</i><b>Briefing three agents</b><em>split</em></li>
+        <li data-at="8.4"><i>03</i><b>Agents at work</b><em>orbit</em></li>
+        <li data-at="12.4"><i>04</i><b>Agents return</b><em>merge</em></li>
+        <li data-at="14.6"><i>05</i><b>Staged, waiting for you</b><em>ring</em></li>
+        <li data-at="19"><i>06</i><b>Approved</b><em>nod, squint</em></li>
+        <li data-at="21"><i>07</i><b>Rest</b><em>idle</em></li>
+      </ol>
+      <div class="run-bar"><b id="runBar"></b></div>
+      <div class="drow" style="margin-top:1rem"><button class="dbtn dbtn-amber" id="runPlay">Play the run</button><span class="small">23 seconds. No copy is needed, but the two messages show where it would sit in the demo window.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="physics">
+  <div class="stack">
+    <p class="eyebrow">Physics</p>
+    <h2>Why it feels alive now, and did not before.</h2>
+    <p class="lead">Round two moved the eyes with a linear ease, which is how a cursor moves. Living things move in saccades and springs. Eight changes, all small, all borrowed from animation fundamentals rather than invented.</p>
+  </div>
+  <div class="anatomy">
+    <svg viewBox="0 0 400 300" aria-label="Anatomy of the dot">
+      <circle cx="170" cy="160" r="170" fill="url(#flowdot-halo)"/><circle cx="170" cy="160" r="96" fill="url(#flowdot-core)"/>
+      <g transform="translate(132 128)"><ellipse rx="13" ry="13.8" fill="#0e0e0d"/><circle cx="-4.5" cy="-5.2" r="2.6" fill="#faf8f3"/></g>
+      <g transform="translate(184 128)"><ellipse rx="15.6" ry="16.5" fill="#0e0e0d"/><circle cx="-5.4" cy="-6.2" r="3.1" fill="#faf8f3"/></g>
+      <g stroke="rgba(250,248,243,.35)" stroke-width="1" fill="none" stroke-dasharray="3 3">
+        <line x1="132" y1="128" x2="184" y2="128"/>
+        <line x1="170" y1="70" x2="170" y2="250"/>
+        <line x1="80" y1="128" x2="260" y2="128"/>
+        <circle cx="170" cy="160" r="90"/>
+      </g>
+      <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(250,248,243,.6)">
+        <text x="276" y="132">eye line · −0.36 r</text>
+        <text x="276" y="150">centre · −0.15 r left</text>
+        <text x="276" y="168">gap · 0.58 r</text>
+        <text x="276" y="186">right eye · ×1.2</text>
+        <text x="276" y="204">halo · 2.1 r, breathes</text>
+        <text x="276" y="222">eye · 0.17 r</text>
+        <text x="276" y="240">body · r</text>
+        <text x="20" y="286">Proportions hold at every size. Eyes are hidden under 32 px.</text>
+      </g>
+    </svg>
+    <ol>
+      <li><b>Springs, not eases.</b> The gaze is a damped spring (stiffness 140, damping 18), so it overshoots a hair and settles, like an eye.</li>
+      <li><b>Saccades.</b> Left alone, it picks a new point every 1.5 to 4 seconds and jumps there. Eyes never drift.</li>
+      <li><b>Eyes lead, body follows.</b> The body tilts toward the gaze a beat later, through a slower spring. That lag is what reads as weight.</li>
+      <li><b>Perspective.</b> Looking right, the right eye grows 6 percent and the left shrinks 12. A flat disc becomes a head.</li>
+      <li><b>Anticipation.</b> A blink widens the eyes 4 percent for 60 ms before it closes. Closes in 70, opens in 140. Nothing in nature is symmetrical.</li>
+      <li><b>Eyes as absence.</b> On the light core the eyes are the two places the light is not, so there is no catchlight: a light has none. Solid agent dots keep one cream point in the upper left of each eye, so they read as wet and round.</li>
+      <li><b>Squash and stretch.</b> Breathing stretches along the vertical by 1.2 percent; the nod squashes to 90 and recovers through the same spring.</li>
+      <li><b>Looking down narrows the eyes.</b> A 15 percent lid when the gaze drops, so reading looks like reading.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap" id="studio">
+  <div class="stack">
+    <p class="eyebrow">Eye studio</p>
+    <h2>Twelve ways to draw two eyes. Click one to try it on.</h2>
+    <p class="lead">Same body, same inks, same physics. The eyes carry the whole personality, so this is the decision that matters most.</p>
+  </div>
+  <div class="studio" id="studioGrid"></div>
+  <p class="small" style="margin-top:1rem">Recommendation: <b style="color:var(--fg);font-weight:500">round, high and left</b> for Flow Intelligence, with a different style per agent so the ten are told apart at a glance.</p>
+</section>
+
+<section class="wrap" id="behaviours">
+  <div class="stack">
+    <p class="eyebrow">Unmistakable</p>
+    <h2>Eyes make it a face. Behaviour makes it yours.</h2>
+    <p class="lead">Anyone can draw a dot with eyes. The behaviours come from what Flow AI actually does: reading sites, briefing agents, waiting for a human, working overnight in Auckland.</p>
+  </div>
+  <div class="dgrid g3">
+    <div class="panel"><span class="eyebrow">01 · the double blink</span><h3>A signature blink.</h3><p>Humans blink once. The dot blinks twice, fast, like a camera confirming focus. The smallest possible trademark.</p><label class="toggle"><input type="checkbox" id="dbl" checked> On the hero</label></div>
+    <div class="panel"><span class="eyebrow">02 · the reading scan</span><h3>It reads, line by line.</h3><p>While working, the eyes sweep left to right and drop a line, as a person reads. This is what an AI-search audit looks like from the outside.</p><label class="toggle"><input type="checkbox" id="scan" checked> While working</label></div>
+    <div class="panel"><span class="eyebrow">03 · it watches you type</span><h3>Attention goes where you are.</h3><p>Focus the field and it looks at it. Type and it follows the caret. Stop and it looks back up at you.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="typerDot"></svg><input id="typer" placeholder="Ask Flow Intelligence for something" autocomplete="off"></div></div>
+    <div class="panel"><span class="eyebrow">04 · the nod</span><h3>Approval is a nod.</h3><p>When a run is approved, the body dips once and the eyes squint. No tick mark, no confetti. A nod from a colleague.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="nodDot"></svg><button class="dbtn" id="nodBtn">Approve</button></div></div>
+    <div class="panel"><span class="eyebrow">05 · auckland time</span><h3>It keeps your hours.</h3><p>Between ten at night and six in the morning in Auckland the site's dot is in the dark state. Visitors on the other side of the world see that it works while you sleep.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="nztDot"></svg><span class="small" id="nztNow"></span></div></div>
+    <div class="panel"><span class="eyebrow">06 · eyes made of dots</span><h3>The eyes are the trail.</h3><p>The two cream dots nearest the amber one become the eyes when the trail folds in. Logo and face are the same four dots.</p><div class="demo-row"><svg viewBox="0 0 120 60" id="foldSvg" style="width:140px;height:70px"></svg><button class="dbtn" id="foldBtn">Fold</button></div></div>
+  </div>
+</section>
+
+<section class="wrap" id="mark">
+  <div class="stack">
+    <p class="eyebrow">The mark and the pixel grid</p>
+    <h2>The trail stays abstract. The character appears at 32 pixels and up.</h2>
+    <p class="lead">Below 32 pixels the eyes are two smudges, so the header and footer keep the trail exactly as it is today. The favicon is the one exception: a single amber dot with eyes, drawn on the 16-pixel grid by hand rather than scaled.</p>
+  </div>
+  <div class="goo-stage" id="goo-stage">
+    <svg viewBox="0 0 960 300" id="goo-svg">
+      <circle cx="760" cy="90" r="100" fill="url(#flowdot-halo)"/>
+      <g filter="url(#goo)" style="filter:url(#goo)">
+        <circle class="gd" cx="760" cy="90" r="0" fill="#faf8f3"/>
+        <circle class="gd" cx="760" cy="90" r="0" fill="#faf8f3"/>
+        <circle class="gd" cx="760" cy="90" r="0" fill="#faf8f3"/>
+      </g>
+      <circle id="gb" cx="760" cy="90" r="50" fill="url(#flowdot-core)"/>
+      <g id="geyes"><g id="geL" transform="translate(740 76)"><ellipse rx="5" ry="5.4" fill="#0e0e0d"/><circle cx="-1.7" cy="-2" r="1" fill="#faf8f3"/></g><g id="geR" transform="translate(766 76)"><ellipse rx="6" ry="6.4" fill="#0e0e0d"/><circle cx="-2" cy="-2.4" r="1.2" fill="#faf8f3"/></g></g>
+      <text x="40" y="262" font-family="JetBrains Mono, monospace" font-size="12" fill="rgba(250,248,243,.54)" letter-spacing="2">LOGO ANIMATION · THE AGENTS LEAVE, WORK, AND MERGE BACK</text>
+    </svg>
+    <button class="dbtn ctl" id="replay">Replay</button>
+  </div>
+  <div class="sizes">
+    <div class="size"><svg width="128" height="128" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/><circle cx="21.3" cy="4.75" r=".16" fill="#faf8f3"/><circle cx="23.65" cy="4.7" r=".18" fill="#faf8f3"/></svg><span class="lbl">128 · eyes on</span></div>
+    <div class="size"><svg width="64" height="64" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/></svg><span class="lbl">64 · eyes on</span></div>
+    <div class="size"><svg width="32" height="32" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/><ellipse cx="21.5" cy="5" rx=".6" ry=".65" fill="#0e0e0d"/><ellipse cx="23.9" cy="5" rx=".72" ry=".78" fill="#0e0e0d"/></svg><span class="lbl">32 · limit</span></div>
+    <div class="size"><svg width="24" height="24" viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/></svg><span class="lbl">24 · header, no eyes</span></div>
+    <div class="size"><svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="4" fill="#0e0e0d"/><circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/><rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/></svg><span class="lbl">favicon · 32</span></div>
+    <div class="size"><svg width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" rx="4" fill="#0e0e0d"/><circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/><rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/></svg><span class="lbl">16 · tab</span></div>
+  </div>
+  <div class="pix">
+    <svg width="256" height="256" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-label="The favicon on its 16 pixel grid">
+      <rect width="16" height="16" rx="4" fill="#0e0e0d"/>
+      <circle cx="8" cy="8" r="7.5" fill="url(#flowdot-halo)" shape-rendering="auto"/><circle cx="8" cy="8" r="6.2" fill="url(#flowdot-core)" shape-rendering="auto"/>
+      <rect x="5" y="5" width="2" height="2" fill="#0e0e0d"/><rect x="9" y="5" width="2" height="2" fill="#0e0e0d"/>
+      <g stroke="rgba(250,248,243,.18)" stroke-width=".04"><path d="M0 1H16M0 2H16M0 3H16M0 4H16M0 5H16M0 6H16M0 7H16M0 8H16M0 9H16M0 10H16M0 11H16M0 12H16M0 13H16M0 14H16M0 15H16M1 0V16M2 0V16M3 0V16M4 0V16M5 0V16M6 0V16M7 0V16M8 0V16M9 0V16M10 0V16M11 0V16M12 0V16M13 0V16M14 0V16M15 0V16"/></g>
+    </svg>
+    <div>
+      <h3>The favicon, drawn on the grid.</h3>
+      <p class="small" style="margin-top:.5rem;max-width:46ch">A six-pixel-radius amber core with a soft edge, two two-by-two ink squares one pixel above the centre line, two pixels apart. Scaling the big face down produces grey mush; placing squares on the grid produces eyes that are crisp in every tab bar. The 32-pixel version uses the same drawing doubled, which is why it also stays crisp.</p>
+      <p class="small" style="margin-top:.75rem">Ship as favicon.svg with <span class="mono">shape-rendering="crispEdges"</span> on the eyes, plus a 32 and 180 PNG for Safari and iOS.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="agents">
+  <div class="stack">
+    <p class="eyebrow">Identifying the agents</p>
+    <h2>Ten agents, ten cream dots, each with its own eyes.</h2>
+    <p class="lead">Colour is off the table (three inks), so identity lives in the eyes. Each agent owns a style chosen for its job, so the Recents list reads without labels after a week. Hover any agent: it looks at you, then away, the way a colleague acknowledges you.</p>
+  </div>
+  <div class="dgrid g5" id="agentsB"></div>
+  <p class="small" style="margin-top:1rem">Option A from round two (one style, ten geometries) is kept in the API as a fallback for agents added later: <span class="mono">FlowDot.mount(el, {agent: 'new-agent'})</span> derives a stable face from the name.</p>
+</section>
+
+<section class="wrap" id="context">
+  <div class="stack">
+    <p class="eyebrow">In context</p>
+    <h2>Where it lives on the site.</h2>
+    <p class="lead">Five places, all small, all in the existing layouts. The character is a presence, not a mascot shouting from the hero.</p>
+  </div>
+  <div class="dgrid g2">
+    <div class="mock">
+      <div class="bar"><b>AI search fixes</b><span class="status" id="st"><svg viewBox="0 0 100 100"></svg>Waiting for your review</span></div>
+      <ul class="recents" id="recents"></ul>
+      <p class="small" style="padding:.6rem 1.1rem 1rem">The demo window. Each run carries its agent's dot; the status carries Flow Intelligence looking at you until you approve.</p>
+    </div>
+    <div class="mock">
+      <div style="padding:1.25rem 1.1rem 1rem"><span class="pillnav"><span class="brand"><svg viewBox="0 0 28 28"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="8.5" fill="url(#flowdot-halo)"/><circle cx="23" cy="6.2" r="4.5" fill="url(#flowdot-core)"/></svg>Flow AI.</span><span>How it works</span><span>Guides</span><span class="cta">Work with me <i>↗</i><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="11" fill="url(#flowdot-core)"/><ellipse cx="8" cy="9.2" rx="1.6" ry="1.75" fill="#0e0e0d"/><ellipse cx="13.2" cy="9.2" rx="1.9" ry="2.05" fill="#0e0e0d"/></svg></span></span></div>
+      <p class="small" style="padding:0 1.1rem 1rem">The island header. The trail stays as it is. On the amber button, hover turns the ↗ circle into the dot for a second: a glance, not a gag.</p>
+      <div class="loading" style="border-top:1px solid var(--hair)"><svg viewBox="0 0 100 100" id="loader"></svg><span>Flow Intelligence is reading your site…</span></div>
+      <p class="small" style="padding:0 1.1rem 1rem">Loading and empty states. The dot breathes and reads while it works; no spinner anywhere on the site.</p>
+    </div>
+    <div class="mock four04"><svg viewBox="0 0 100 100" id="lost"></svg><b>This page flowed somewhere else.</b><p class="small">The 404. It looks left, then right, then at you.</p></div>
+    <div class="mock night"><div class="loading" style="padding:2.5rem 1.5rem"><svg viewBox="0 0 100 100" id="night"></svg><span>Nightly run, 02:14 · three drafts staged for the morning</span></div><p class="small" style="padding:0 1.5rem 1.5rem">Lights off, only the eyes glow. For anything that happened while the person was away.</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="spec">
+  <div class="stack">
+    <p class="eyebrow">Spec and API</p>
+    <h2>Everything a developer needs, on one page.</h2>
+    <p class="lead">The engine running this page is the reference implementation: one file, no dependencies, 7 KB. Mount it on any SVG and it does the rest. The motion table is what it obeys.</p>
+  </div>
+  <div class="tablewrap"><table class="spec">
+    <thead><tr><th>Moment</th><th>Timing</th><th>Curve</th><th>What moves</th></tr></thead>
+    <tbody>
+      <tr><td>Gaze</td><td class="m">spring k 140 · d 18</td><td class="m">critically damped</td><td>Eye position, up to 0.18 r horizontally, 0.14 r vertically. Far eye scales 0.88, near eye 1.06.</td></tr>
+      <tr><td>Body follow</td><td class="m">spring k 40 · d 10</td><td class="m">underdamped</td><td>Tilt up to 6 degrees toward the gaze, one beat behind.</td></tr>
+      <tr><td>Saccade</td><td class="m">every 1.5 to 4 s</td><td class="m">instant target</td><td>New gaze target within ±0.5, ±0.35. Only when nothing else holds attention.</td></tr>
+      <tr><td>Blink</td><td class="m">60 · 70 · 140 ms</td><td class="m">widen, close, open</td><td>Lids scale from the top. Double blink repeats after 260 ms. Every 3 to 6 s at rest.</td></tr>
+      <tr><td>Breathing</td><td class="m">3.9 s period</td><td class="m">sine</td><td>1.2 percent vertical stretch. 6× faster while working.</td></tr>
+      <tr><td>Nod</td><td class="m">600 ms</td><td class="m">half sine</td><td>Body drops 10 percent of r and squashes to 0.9; lids to 0.4; then recovers through the body spring.</td></tr>
+      <tr><td>Split and merge</td><td class="m">1.1 s per dot, 0.55 s apart</td><td class="m">cubic out</td><td>Through the goo filter (blur 2.2 at 100 units, alpha matrix 22 −10). Agents leave along the trail's diagonal.</td></tr>
+      <tr><td>Halo</td><td class="m">2.1 r · 0.85 to 1.0</td><td class="m">sine, half rate</td><td>The light breathes in intensity, not size. Brighter by 0.15 while waiting for review. Night state drops to 0.08.</td></tr>
+      <tr><td>Review ring</td><td class="m">2.9 s period</td><td class="m">sine</td><td>A 1.5-unit amber ring breathes between r + 6 and r + 18, opacity 0.2 to 0.9.</td></tr>
+      <tr><td>Reduced motion</td><td class="m">—</td><td class="m">—</td><td>Gaze jumps without springs, no saccades, no blink, no breathing. States still read.</td></tr>
+    </tbody>
+  </table></div>
+  <h3 style="margin-top:2.5rem">API</h3>
+<pre><b>&lt;script src="/assets/dot.js" defer&gt;&lt;/script&gt;</b>
+
+<b>// Flow Intelligence, 48 px, in the demo window status</b>
+var fi = FlowDot.mount(document.querySelector('#status svg'), { role: 'flow', style: 'high' });
+fi.set('review');          <b>// idle · think · work · review · done · late · error</b>
+fi.lookAt(0.2, -0.1);      <b>// −1..1, overrides saccades until lookAt(null)</b>
+fi.nod();                  <b>// on approve</b>
+fi.blink(true);            <b>// double</b>
+
+<b>// an agent, 28 px, in Recents. Style comes from the agent map,
+// or is derived from the name for agents the map does not know.</b>
+FlowDot.mount(li.querySelector('svg'), { role: 'agent', agent: 'ai-search' });
+
+<b>// the dark state follows Auckland time on its own</b>
+FlowDot.autoNight(fi);     <b>// 22:00–06:00 Pacific/Auckland</b>
+
+<b>// every mounted dot shares one requestAnimationFrame loop and
+// pauses off screen. Nothing is hidden if the script fails:
+// the SVG you mount can carry a static dot as its fallback.</b></pre>
+  <p class="small" style="margin-top:1rem">Source of the engine on this page, for the build: <a href="#" id="showSrc">show dot.js</a></p>
+  <pre id="src" hidden></pre>
+</section>
+
+<section class="wrap">
+  <div class="stack">
+    <p class="eyebrow">Rules</p>
+    <h2>What keeps it cute instead of corporate-mascot.</h2>
+  </div>
+  <div class="rules">
+    <div class="panel"><h3>Always</h3><ul>
+      <li><b>Two eyes, nothing else.</b> No mouth, no arms, no eyebrows, no hat. Expression comes from eye shape, direction and blink timing.</li>
+      <li><b>Light and matter.</b> Flow Intelligence is a luminous amber core, the one glow the brand permits, because it is the one thing on the site that is not an object. Agents are solid cream. Eyes are ink, or the absence of light.</li>
+      <li><b>Asymmetric eyes.</b> The right eye is 20 percent larger. Symmetry reads as an icon; the imbalance reads as a face.</li>
+      <li><b>The double blink,</b> every 3 to 6 seconds. Never on a visible loop.</li>
+      <li><b>Springs and saccades.</b> Nothing glides. Eyes jump, bodies settle.</li>
+    </ul></div>
+    <div class="panel"><h3>Never</h3><ul>
+      <li><b>No eyes under 32 pixels,</b> except the hand-drawn favicon.</li>
+      <li><b>No second character.</b> Agents differ by eyes, not by colour, clothes or body shape.</li>
+      <li><b>No talking.</b> It never gets speech bubbles. The thread in the demo window is the product's, not the character's.</li>
+      <li><b>No sad state.</b> Failure is flat eyes and a tilt, not tears.</li>
+      <li><b>No motion for its own sake.</b> Every animation marks a real state: working, waiting, done, away.</li>
+    </ul></div>
+  </div>
+</section>
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  var NAMES = { round: ['Round', 'Warm, open, the default. Reads at 32 px.'], high: ['Round, high and left', 'Same eyes, placed off centre. The silhouette becomes yours.'], pill: ['Tall pills', 'Alert, animated-film energy. Blinks beautifully.'], wide: ['Wide ovals', 'Calm, a little sleepy. Good for the night state.'], arc: ['Happy arcs', 'Permanent smile. Cute fast, tiring faster. Keep for done.'], sly: ['Half moons', 'Knowing, slightly sly. An agent that found something.'], lens: ['The lens', 'A ring with a pupil. Instrument more than creature.'], slit: ['Reading slits', 'Focused. The eyes of something scanning a page.'], bean: ['Beans', 'Tilted ovals, playful, a bit mischievous.'], odd: ['One big, one small', 'Extreme asymmetry. Unforgettable, slightly strange.'], square: ['Rounded squares', 'Screen pixels. Robotic, precise, less warm.'], one: ['One eye', 'A single lens. Very ownable, less a face. The provocation.'] };
+  var ORDER = ['round', 'high', 'pill', 'wide', 'arc', 'sly', 'lens', 'slit', 'bean', 'odd', 'square', 'one'];
+
+  /* hero */
+  var stage = document.getElementById('stage');
+  var hero = FlowDot.mount(document.getElementById('hero-svg'), { role: 'flow', style: 'high', r: 24, goo: true });
+  var cap = document.getElementById('cap'), capStyle = document.getElementById('capStyle');
+  function setMood(m) {
+    hero.set(m); cap.textContent = m === 'late' ? 'working late' : (m === 'review' ? 'waiting for your review' : (m === 'error' ? 'something failed' : m));
+    stage.classList.toggle('night', m === 'late');
+    document.querySelectorAll('#moods .dbtn').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-mood') === m)); });
+  }
+  document.getElementById('moods').addEventListener('click', function (e) { var b = e.target.closest('[data-mood]'); if (b) setMood(b.getAttribute('data-mood')); });
+  stage.addEventListener('pointermove', function (e) { var r = stage.getBoundingClientRect(); hero.lookAt(((e.clientX - r.left) / r.width - 0.5) * 2, ((e.clientY - r.top) / r.height - 0.5) * 2); });
+  stage.addEventListener('pointerleave', function () { hero.lookAt(null); });
+  document.getElementById('bodies').addEventListener('click', function (e) { var b = e.target.closest('[data-body]'); if (!b) return; hero.setGlow(b.getAttribute('data-body') === 'glow'); document.querySelectorAll('#bodies .dbtn').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); });
+  document.getElementById('dbl').addEventListener('change', function (e) { hero.dbl = e.target.checked; });
+  document.getElementById('scan').addEventListener('change', function (e) { FlowDot.MOODS.work.scan = e.target.checked; });
+
+  /* eye studio */
+  var grid = document.getElementById('studioGrid');
+  ORDER.forEach(function (key) {
+    var card = document.createElement('button'); card.className = 'eye'; card.type = 'button'; card.setAttribute('data-style', key); card.setAttribute('aria-pressed', String(key === 'high'));
+    var svg = el('svg', { viewBox: '0 0 100 100' }); var d = FlowDot.mount(svg, { role: 'flow', style: key, r: 30 }); card.appendChild(svg);
+    var b = document.createElement('b'); b.textContent = NAMES[key][0]; card.appendChild(b);
+    var sp = document.createElement('span'); sp.textContent = NAMES[key][1]; card.appendChild(sp);
+    card.addEventListener('click', function () { hero.setStyle(key); capStyle.textContent = NAMES[key][0].toLowerCase(); document.querySelectorAll('.eye').forEach(function (x) { x.setAttribute('aria-pressed', String(x === card)); }); });
+    card.addEventListener('pointerenter', function () { d.lookAt(0, 0.25); d.blink(true); });
+    card.addEventListener('pointerleave', function () { d.lookAt(null); });
+    grid.appendChild(card);
+  });
+
+  /* the run */
+  var runStage = document.getElementById('runStage');
+  var run = FlowDot.mount(document.getElementById('run-svg'), { role: 'flow', style: 'high', r: 17, dy: 10, goo: true });
+  var runCap = document.getElementById('runCap'), runBar = document.getElementById('runBar'), steps = Array.prototype.slice.call(document.querySelectorAll('#steps li'));
+  var m1 = document.getElementById('m1'), m2 = document.getElementById('m2');
+  var runT = -1, runLen = 23;
+  var SCRIPT = [
+    { at: 0,    cap: 'brief received',        fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 900); } },
+    { at: 1.6,  cap: 'reading the site',      fn: function () { run.set('work'); FlowDot.MOODS.work.orbit = false; } },
+    { at: 5.2,  cap: 'briefing three agents', fn: function () { run.set('think'); splitOut(); } },
+    { at: 8.4,  cap: 'agents at work',        fn: function () { run.set('idle'); } },
+    { at: 12.4, cap: 'agents return',         fn: function () { mergeBack(); } },
+    { at: 14.6, cap: 'staged, waiting for you', fn: function () { run.set('review'); m2.classList.add('is-on'); } },
+    { at: 19,   cap: 'approved',              fn: function () { run.set('done'); } },
+    { at: 21,   cap: 'rest',                  fn: function () { run.set('idle'); m1.classList.remove('is-on'); m2.classList.remove('is-on'); } }
+  ];
+  var runSats = run.sats, satTargets = [[22, 30, 7], [78, 26, 6], [26, 80, 5.5]], satAnim = null;
+  function splitOut() { satAnim = { t0: performance.now(), dir: 1 }; }
+  function mergeBack() { satAnim = { t0: performance.now(), dir: -1 }; }
+  function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+  function satFrame() {
+    if (satAnim) {
+      var tt = (performance.now() - satAnim.t0) / 1000;
+      runSats.forEach(function (s, i) {
+        var local = Math.max(0, Math.min(1, (tt - i * 0.45) / 1.1)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
+        var wob = Math.sin(performance.now() / 400 + i) * 2 * p;
+        s.setAttribute('cx', run.cx + (satTargets[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satTargets[i][1] - run.cy) * p); s.setAttribute('r', satTargets[i][2] * Math.min(1, p * 1.4));
+      });
+      if (tt > 2.2) { if (satAnim.dir < 0) runSats.forEach(function (s) { s.setAttribute('r', 0); }); else satAnim = { hold: true, t0: satAnim.t0 }; if (satAnim && satAnim.hold) { /* keep wobbling */ } }
+      if (satAnim && satAnim.hold) runSats.forEach(function (s, i) { var wob = Math.sin(performance.now() / 400 + i) * 2; s.setAttribute('cx', satTargets[i][0] + wob); s.setAttribute('cy', satTargets[i][1] + Math.cos(performance.now() / 500 + i) * 1.5); });
+      if (satAnim && satAnim.dir < 0 && tt > 2.4) satAnim = null;
+    }
+    requestAnimationFrame(satFrame);
+  }
+  requestAnimationFrame(satFrame);
+  var fired = [];
+  function runFrame(now) {
+    if (runT < 0) return;
+    var tt = (now - runT) / 1000;
+    runBar.style.width = Math.min(100, tt / runLen * 100) + '%';
+    SCRIPT.forEach(function (s, i) { if (tt >= s.at && !fired[i]) { fired[i] = true; s.fn(); runCap.textContent = s.cap; steps.forEach(function (li, j) { li.classList.toggle('is-on', j === i); }); } });
+    if (tt < runLen) requestAnimationFrame(runFrame); else { runT = -1; document.getElementById('runPlay').textContent = 'Play again'; runCap.textContent = 'ready'; FlowDot.MOODS.work.orbit = true; }
+  }
+  document.getElementById('runPlay').addEventListener('click', function () {
+    if (runT >= 0) return; fired = []; runT = performance.now(); this.textContent = 'Playing'; run.set('idle'); satAnim = null; runSats.forEach(function (s) { s.setAttribute('r', 0); });
+    requestAnimationFrame(runFrame);
+  });
+
+  /* behaviours */
+  var typerDot = FlowDot.mount(document.getElementById('typerDot'), { role: 'flow', style: 'high', r: 32 });
+  var typer = document.getElementById('typer'), typerIdle = null;
+  typer.addEventListener('focus', function () { typerDot.lookAt(0.9, 0.3); });
+  typer.addEventListener('blur', function () { typerDot.lookAt(null); });
+  typer.addEventListener('input', function () { var n = Math.min(typer.value.length, 36) / 36; typerDot.lookAt(0.6 + n * 0.4, 0.35); if (Math.random() < 0.25) typerDot.blink(false); clearTimeout(typerIdle); typerIdle = setTimeout(function () { typerDot.lookAt(0, -0.2); }, 1800); });
+  var nodDot = FlowDot.mount(document.getElementById('nodDot'), { role: 'flow', style: 'high', r: 32 });
+  document.getElementById('nodBtn').addEventListener('click', function () { nodDot.nod(); });
+  var hourNZ = parseInt(new Intl.DateTimeFormat('en-NZ', { hour: 'numeric', hour12: false, timeZone: 'Pacific/Auckland' }).format(new Date()), 10);
+  var timeNZ = new Intl.DateTimeFormat('en-NZ', { hour: '2-digit', minute: '2-digit', timeZone: 'Pacific/Auckland' }).format(new Date());
+  var isNight = hourNZ >= 22 || hourNZ < 6;
+  var nztDot = FlowDot.mount(document.getElementById('nztDot'), { role: 'flow', style: isNight ? 'wide' : 'high', r: 32, state: isNight ? 'late' : 'idle' });
+  document.getElementById('nztNow').textContent = 'It is ' + timeNZ + ' in Auckland right now, so the dot is ' + (isNight ? 'working late.' : 'awake.');
+  var fold = document.getElementById('foldSvg'), folded = false;
+  var fd = [el('circle', { cx: 18, cy: 48, r: 4, fill: '#faf8f3', 'fill-opacity': '.4' }), el('circle', { cx: 42, cy: 42, r: 5.5, fill: '#faf8f3', 'fill-opacity': '.65' }), el('circle', { cx: 66, cy: 31, r: 7, fill: '#faf8f3' }), el('circle', { cx: 94, cy: 14, r: 10.5, fill: 'url(#flowdot-core)' })];
+  var fg = el('g', { filter: 'url(#goo-sm)' }); fd.forEach(function (c) { fg.appendChild(c); }); fold.appendChild(fg);
+  var home = [[18, 48, 4], [42, 42, 5.5], [66, 31, 7], [94, 14, 9.5]], face = [[60, 30, 0], [52, 25, 3], [66, 24, 3.6], [60, 30, 18]];
+  document.getElementById('foldBtn').addEventListener('click', function () {
+    folded = !folded; var to = folded ? face : home, from = folded ? home : face, t0 = 0;
+    if (folded) { fg.appendChild(fd[1]); fg.appendChild(fd[2]); }
+    (function f() { t0 += 0.025; var e = 1 - Math.pow(1 - Math.min(t0, 1), 3); fd.forEach(function (c, i) { c.setAttribute('cx', from[i][0] + (to[i][0] - from[i][0]) * e); c.setAttribute('cy', from[i][1] + (to[i][1] - from[i][1]) * e); c.setAttribute('r', from[i][2] + (to[i][2] - from[i][2]) * e); if (i < 3) c.setAttribute('fill-opacity', folded ? String(0.4 + e * 0.6) : String(i === 0 ? 1 - e * 0.6 : i === 1 ? 1 - e * 0.35 : 1)); }); if (t0 < 1) requestAnimationFrame(f); })();
+    this.textContent = folded ? 'Unfold' : 'Fold';
+  });
+
+  /* logo animation */
+  var gb = document.getElementById('gb'), gds = Array.prototype.slice.call(document.querySelectorAll('.gd'));
+  var geL = document.getElementById('geL'), geR = document.getElementById('geR'), geyes = document.getElementById('geyes');
+  var targets = [[640, 160, 36], [530, 212, 28], [430, 245, 22]], gt0 = null, playing = false;
+  function easeO(x) { return 1 - Math.pow(1 - x, 3); }
+  function playGoo() { if (reduced) { gds.forEach(function (d, i) { d.setAttribute('cx', targets[i][0]); d.setAttribute('cy', targets[i][1]); d.setAttribute('r', targets[i][2]); }); return; } gt0 = performance.now(); playing = true; requestAnimationFrame(gooFrame); }
+  function gooFrame(now) {
+    var tt = (now - gt0) / 1000;
+    gds.forEach(function (d, i) { var local = Math.max(0, Math.min(1, (tt - i * 0.55) / 1.1)), e = easeO(local); d.setAttribute('cx', 760 + (targets[i][0] - 760) * e); d.setAttribute('cy', 90 + (targets[i][1] - 90) * e); d.setAttribute('r', targets[i][2] * Math.min(1, local * 1.6)); });
+    var sq = Math.sin(tt * 9) * Math.max(0, 1 - tt / 2.4) * 0.06;
+    gb.setAttribute('transform', 'translate(760 90) scale(' + (1 + sq) + ' ' + (1 - sq) + ') translate(-760 -90)');
+    var ox = tt < 2.4 ? -6 : 0; geL.setAttribute('transform', 'translate(' + (740 + ox) + ' 76)'); geR.setAttribute('transform', 'translate(' + (766 + ox) + ' 76)');
+    if (tt > 5.2 && tt < 7.4) gds.forEach(function (d, i) { var back = easeO(Math.max(0, Math.min(1, (tt - 5.2 - i * 0.3) / 1.2))); d.setAttribute('cx', targets[i][0] + (760 - targets[i][0]) * back); d.setAttribute('cy', targets[i][1] + (90 - targets[i][1]) * back); d.setAttribute('r', targets[i][2] * (1 - back)); });
+    if (tt < 8) requestAnimationFrame(gooFrame); else { playing = false; setTimeout(playGoo, 1200); }
+  }
+  document.getElementById('replay').addEventListener('click', function () { if (!playing) playGoo(); });
+  setTimeout(playGoo, 600);
+  if (!reduced) setInterval(function () { geyes.setAttribute('transform-origin', '753px 76px'); geyes.setAttribute('transform', 'scale(1 0.08)'); setTimeout(function () { geyes.setAttribute('transform', ''); }, 110); setTimeout(function () { geyes.setAttribute('transform', 'scale(1 0.08)'); setTimeout(function () { geyes.setAttribute('transform', ''); }, 110); }, 260); }, 4200);
+
+  /* agents */
+  var names = [['Positioning', 'positioning', 'Claims and the core message', 'half moons: it has an opinion'], ['AI search', 'ai-search', 'Cited by ChatGPT and Perplexity', 'the lens: it looks closely'], ['Content', 'content', 'A month from one source', 'tall pills: awake and prolific'], ['Social', 'social', 'Posts in your voice, on time', 'beans: playful, a little cheeky'], ['Outbound', 'outbound', 'The right hundred buyers', 'one big, one small: spots the one that matters'], ['Growth', 'growth', 'Offers and landing pages', 'wide ovals: patient, watches the numbers'], ['Launch', 'launch', 'Sequenced across channels', 'high and left: looking ahead'], ['Paid', 'paid', 'Creative and audiences', 'squares: pixels and budgets'], ['Community', 'community', 'Forums answered honestly', 'arcs: the friendly one'], ['Reporting', 'reporting', 'One page a month', 'slits: reads every line']];
+  var host = document.getElementById('agentsB');
+  names.forEach(function (n) {
+    var card = document.createElement('div'); card.className = 'agent';
+    var svg = el('svg', { viewBox: '0 0 100 100' }); var d = FlowDot.mount(svg, { role: 'agent', agent: n[1], r: 34 }); card.appendChild(svg);
+    var txt = document.createElement('div'); txt.innerHTML = '<b>' + n[0] + '</b><span>' + n[2] + '</span><div class="sig">' + n[3] + '</div>'; card.appendChild(txt);
+    card.addEventListener('pointerenter', function () { d.lookAt(0, 0.2); d.blink(true); setTimeout(function () { d.lookAt(null); }, 1400); });
+    host.appendChild(card);
+  });
+
+  /* in context */
+  var st = FlowDot.mount(document.querySelector('#st svg'), { role: 'flow', style: 'high', r: 36, state: 'review' });
+  var rec = document.getElementById('recents');
+  [['AI search fixes', 'AI search', 'ai-search', 'today'], ['October content calendar', 'Content', 'content', 'yesterday'], ['Property managers, batch 3', 'Outbound', 'outbound', 'Mon'], ['September report', 'Reporting', 'reporting', '1 Oct']].forEach(function (row) {
+    var li = document.createElement('li'); var svg = el('svg', { viewBox: '0 0 100 100' }); FlowDot.mount(svg, { role: 'agent', agent: row[2], r: 36 }); li.appendChild(svg);
+    var b = document.createElement('div'); b.innerHTML = '<b>' + row[0] + '</b><br><span class="small">' + row[1] + ' agent</span>'; var e = document.createElement('em'); e.textContent = row[3]; li.appendChild(b); li.appendChild(e); rec.appendChild(li);
+  });
+  FlowDot.mount(document.getElementById('loader'), { role: 'flow', style: 'high', r: 34, state: 'work' });
+  var lost = FlowDot.mount(document.getElementById('lost'), { role: 'flow', style: 'high', r: 34 });
+  (function () { var seq = [[-0.9, 0], [0.9, 0], [0, 0], null], i = 0; setInterval(function () { var s = seq[i % 4]; if (s) lost.lookAt(s[0], s[1]); else lost.lookAt(null); i++; }, 1100); })();
+  FlowDot.mount(document.getElementById('night'), { role: 'flow', style: 'wide', r: 34, state: 'late' }).body.setAttribute('stroke', 'rgba(250,248,243,.08)');
+
+  /* source */
+  document.getElementById('showSrc').addEventListener('click', function (e) { e.preventDefault(); var pre = document.getElementById('src'); pre.hidden = !pre.hidden; if (!pre.textContent) fetch('/assets/dot.js').then(function (r) { return r.text(); }).then(function (t) { pre.textContent = t; }); this.textContent = pre.hidden ? 'show dot.js' : 'hide dot.js'; });
+});
+</script>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI marketing engineer, Auckland</p>
+        <p class="site-footer__note">I build marketing systems with the teams who run them, and review everything they send.</p>
+        <a class="site-footer__cta" href="/contact">Work with me</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/sprints/">How it works</a>
+      <a href="/work">Work</a>
+      <a href="/blog/">Guides</a>
+      <a href="/templates/">Free templates</a>
+      <a href="/about">About</a>
+      <a href="/manifesto">Manifesto</a>
+      <a href="/dot">The dot</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/" aria-label="Flow AI home"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026, Auckland, New Zealand</span><a href="/privacy">Privacy</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="Email Amber Lan" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
