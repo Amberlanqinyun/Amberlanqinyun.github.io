@@ -410,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="stage" id="stage">
     <svg viewBox="0 0 100 100" id="hero-svg"></svg>
-    <p class="cap">Eyes · <b id="capStyle">round, high and left</b> &nbsp;·&nbsp; State · <b id="cap">idle</b></p>
+    <p class="cap">Eyes · <b id="capStyle">big and low</b> &nbsp;·&nbsp; State · <b id="cap">idle</b></p>
   </div>
 </section>
 
@@ -480,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><b>Eyes lead, body follows.</b> The body tilts toward the gaze a beat later, through a slower spring. That lag is what reads as weight.</li>
       <li><b>Perspective.</b> Looking right, the right eye grows 6 percent and the left shrinks 12. A flat disc becomes a head.</li>
       <li><b>Anticipation.</b> A blink widens the eyes 4 percent for 60 ms before it closes. Closes in 70, opens in 140. Nothing in nature is symmetrical.</li>
-      <li><b>Eyes as absence.</b> On the light core the eyes are the two places the light is not, so there is no catchlight: a light has none. Solid agent dots keep one cream point in the upper left of each eye, so they read as wet and round.</li>
+      <li><b>Eyes as absence, with a glint.</b> On the light core the eyes are the two places the light is not, and each carries one cream point in the upper left: the light reflected in the eye. Solid agent dots have the same point. It is the cheapest cuteness there is, and it is why the eyes read as wet and round.</li>
       <li><b>Squash and stretch.</b> Breathing stretches along the vertical by 1.2 percent; the nod squashes to 90 and recovers through the same spring.</li>
       <li><b>Looking down narrows the eyes.</b> A 15 percent lid when the gaze drops, so reading looks like reading.</li>
     </ol>
@@ -494,7 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="lead">Same body, same inks, same physics. The eyes carry the whole personality, so this is the decision that matters most.</p>
   </div>
   <div class="studio" id="studioGrid"></div>
-  <p class="small" style="margin-top:1rem">Recommendation: <b style="color:var(--fg);font-weight:500">round, high and left</b> for Flow Intelligence, with a different style per agent so the ten are told apart at a glance.</p>
+  <p class="small" style="margin-top:1rem">On this site Flow Intelligence wears <b style="color:var(--fg);font-weight:500">big and low</b>, with a different style per agent so the ten are told apart at a glance.</p>
 </section>
 
 <section class="wrap" id="behaviours">
@@ -504,9 +504,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="lead">Anyone can draw a dot with eyes. The behaviours come from what Flow AI actually does: reading sites, briefing agents, waiting for a human, working overnight in Auckland.</p>
   </div>
   <div class="dgrid g3">
-    <div class="panel"><span class="eyebrow">01 · the double blink</span><h3>A signature blink.</h3><p>Humans blink once. The dot blinks twice, fast, like a camera confirming focus. The smallest possible trademark.</p><label class="toggle"><input type="checkbox" id="dbl" checked> On the hero</label></div>
+    <div class="panel"><span class="eyebrow">01 · the double blink and the trail</span><h3>A signature blink, and the trail it leaves.</h3><p>Humans blink once. The dot blinks twice, fast, like a camera confirming focus. And whenever it moves, the three dots of the mark appear behind it and fade: the character carries the logo wherever it goes.</p><label class="toggle"><input type="checkbox" id="dbl" checked> On the hero</label></div>
     <div class="panel"><span class="eyebrow">02 · the reading scan</span><h3>It reads, line by line.</h3><p>While working, the eyes sweep left to right and drop a line, as a person reads. This is what an AI-search audit looks like from the outside.</p><label class="toggle"><input type="checkbox" id="scan" checked> While working</label></div>
-    <div class="panel"><span class="eyebrow">03 · it watches you type</span><h3>Attention goes where you are.</h3><p>Focus the field and it looks at it. Type and it follows the caret. Stop and it looks back up at you.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="typerDot"></svg><input id="typer" placeholder="Ask Flow Intelligence for something" autocomplete="off"></div></div>
+    <div class="panel"><span class="eyebrow">03 · the shy glance</span><h3>It looks at you, looks away, looks back.</h3><p>Put your pointer on it: it tilts its head, meets your eye, glances shyly away, and comes back, with a little amber in its cheeks. Focus the field and it looks at it; type and it follows the caret.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="typerDot"></svg><input id="typer" placeholder="Ask Flow Intelligence for something" autocomplete="off"></div></div>
     <div class="panel"><span class="eyebrow">04 · the nod</span><h3>Approval is a nod.</h3><p>When a run is approved, the body dips once and the eyes squint. No tick mark, no confetti. A nod from a colleague.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="nodDot"></svg><button class="dbtn" id="nodBtn">Approve</button></div></div>
     <div class="panel"><span class="eyebrow">05 · auckland time</span><h3>It keeps your hours.</h3><p>Between ten at night and six in the morning in Auckland the site's dot is in the dark state. Visitors on the other side of the world see that it works while you sleep.</p><div class="demo-row"><svg viewBox="0 0 100 100" id="nztDot"></svg><span class="small" id="nztNow"></span></div></div>
     <div class="panel"><span class="eyebrow">06 · eyes made of dots</span><h3>The eyes are the trail.</h3><p>The two cream dots nearest the amber one become the eyes when the trail folds in. Logo and face are the same four dots.</p><div class="demo-row"><svg viewBox="0 0 120 60" id="foldSvg" style="width:140px;height:70px"></svg><button class="dbtn" id="foldBtn">Fold</button></div></div>
@@ -664,12 +664,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var NS = 'http://www.w3.org/2000/svg';
   function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
-  var NAMES = { round: ['Round', 'Warm, open, the default. Reads at 32 px.'], high: ['Round, high and left', 'Same eyes, placed off centre. The silhouette becomes yours.'], pill: ['Tall pills', 'Alert, animated-film energy. Blinks beautifully.'], wide: ['Wide ovals', 'Calm, a little sleepy. Good for the night state.'], arc: ['Happy arcs', 'Permanent smile. Cute fast, tiring faster. Keep for done.'], sly: ['Half moons', 'Knowing, slightly sly. An agent that found something.'], lens: ['The lens', 'A ring with a pupil. Instrument more than creature.'], slit: ['Reading slits', 'Focused. The eyes of something scanning a page.'], bean: ['Beans', 'Tilted ovals, playful, a bit mischievous.'], odd: ['One big, one small', 'Extreme asymmetry. Unforgettable, slightly strange.'], square: ['Rounded squares', 'Screen pixels. Robotic, precise, less warm.'], one: ['One eye', 'A single lens. Very ownable, less a face. The provocation.'] };
-  var ORDER = ['round', 'high', 'pill', 'wide', 'arc', 'sly', 'lens', 'slit', 'bean', 'odd', 'square', 'one'];
+  var NAMES = { cute: ['Big and low', 'Big round eyes set low and wide, a touch left. The cute one. Used on this site.'], round: ['Round', 'Warm, open, the default. Reads at 32 px.'], high: ['Round, high and left', 'Same eyes, placed off centre. The silhouette becomes yours.'], pill: ['Tall pills', 'Alert, animated-film energy. Blinks beautifully.'], wide: ['Wide ovals', 'Calm, a little sleepy. Good for the night state.'], arc: ['Happy arcs', 'Permanent smile. Cute fast, tiring faster. Keep for done.'], sly: ['Half moons', 'Knowing, slightly sly. An agent that found something.'], lens: ['The lens', 'A ring with a pupil. Instrument more than creature.'], slit: ['Reading slits', 'Focused. The eyes of something scanning a page.'], bean: ['Beans', 'Tilted ovals, playful, a bit mischievous.'], odd: ['One big, one small', 'Extreme asymmetry. Unforgettable, slightly strange.'], square: ['Rounded squares', 'Screen pixels. Robotic, precise, less warm.'], one: ['One eye', 'A single lens. Very ownable, less a face. The provocation.'] };
+  var ORDER = ['cute', 'round', 'high', 'pill', 'wide', 'arc', 'sly', 'lens', 'slit', 'bean', 'odd', 'square', 'one'];
 
   /* hero */
   var stage = document.getElementById('stage');
-  var hero = FlowDot.mount(document.getElementById('hero-svg'), { role: 'flow', style: 'high', r: 24, goo: true });
+  var hero = FlowDot.mount(document.getElementById('hero-svg'), { role: 'flow', style: 'cute', r: 24, goo: true }); hero.attach(stage); FlowDot.greetOnSight(hero);
   var cap = document.getElementById('cap'), capStyle = document.getElementById('capStyle');
   function setMood(m) {
     hero.set(m); cap.textContent = m === 'late' ? 'working late' : (m === 'review' ? 'waiting for your review' : (m === 'error' ? 'something failed' : m));
@@ -686,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* eye studio */
   var grid = document.getElementById('studioGrid');
   ORDER.forEach(function (key) {
-    var card = document.createElement('button'); card.className = 'eye'; card.type = 'button'; card.setAttribute('data-style', key); card.setAttribute('aria-pressed', String(key === 'high'));
+    var card = document.createElement('button'); card.className = 'eye'; card.type = 'button'; card.setAttribute('data-style', key); card.setAttribute('aria-pressed', String(key === 'cute'));
     var svg = el('svg', { viewBox: '0 0 100 100' }); var d = FlowDot.mount(svg, { role: 'flow', style: key, r: 30 }); card.appendChild(svg);
     var b = document.createElement('b'); b.textContent = NAMES[key][0]; card.appendChild(b);
     var sp = document.createElement('span'); sp.textContent = NAMES[key][1]; card.appendChild(sp);
@@ -698,7 +698,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* the run */
   var runStage = document.getElementById('runStage');
-  var run = FlowDot.mount(document.getElementById('run-svg'), { role: 'flow', style: 'high', r: 17, dy: 10, goo: true });
+  var run = FlowDot.mount(document.getElementById('run-svg'), { role: 'flow', style: 'cute', r: 17, dy: 10, goo: true });
   var runCap = document.getElementById('runCap'), runBar = document.getElementById('runBar'), steps = Array.prototype.slice.call(document.querySelectorAll('#steps li'));
   var m1 = document.getElementById('m1'), m2 = document.getElementById('m2');
   var runT = -1, runLen = 23;
@@ -745,17 +745,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* behaviours */
-  var typerDot = FlowDot.mount(document.getElementById('typerDot'), { role: 'flow', style: 'high', r: 32 });
+  var typerDot = FlowDot.mount(document.getElementById('typerDot'), { role: 'flow', style: 'cute', r: 32 });
   var typer = document.getElementById('typer'), typerIdle = null;
   typer.addEventListener('focus', function () { typerDot.lookAt(0.9, 0.3); });
   typer.addEventListener('blur', function () { typerDot.lookAt(null); });
   typer.addEventListener('input', function () { var n = Math.min(typer.value.length, 36) / 36; typerDot.lookAt(0.6 + n * 0.4, 0.35); if (Math.random() < 0.25) typerDot.blink(false); clearTimeout(typerIdle); typerIdle = setTimeout(function () { typerDot.lookAt(0, -0.2); }, 1800); });
-  var nodDot = FlowDot.mount(document.getElementById('nodDot'), { role: 'flow', style: 'high', r: 32 });
+  var nodDot = FlowDot.mount(document.getElementById('nodDot'), { role: 'flow', style: 'cute', r: 32 });
   document.getElementById('nodBtn').addEventListener('click', function () { nodDot.nod(); });
   var hourNZ = parseInt(new Intl.DateTimeFormat('en-NZ', { hour: 'numeric', hour12: false, timeZone: 'Pacific/Auckland' }).format(new Date()), 10);
   var timeNZ = new Intl.DateTimeFormat('en-NZ', { hour: '2-digit', minute: '2-digit', timeZone: 'Pacific/Auckland' }).format(new Date());
   var isNight = hourNZ >= 22 || hourNZ < 6;
-  var nztDot = FlowDot.mount(document.getElementById('nztDot'), { role: 'flow', style: isNight ? 'wide' : 'high', r: 32, state: isNight ? 'late' : 'idle' });
+  var nztDot = FlowDot.mount(document.getElementById('nztDot'), { role: 'flow', style: isNight ? 'wide' : 'cute', r: 32, state: isNight ? 'late' : 'idle' });
   document.getElementById('nztNow').textContent = 'It is ' + timeNZ + ' in Auckland right now, so the dot is ' + (isNight ? 'working late.' : 'awake.');
   var fold = document.getElementById('foldSvg'), folded = false;
   var fd = [el('circle', { cx: 18, cy: 48, r: 4, fill: '#faf8f3', 'fill-opacity': '.4' }), el('circle', { cx: 42, cy: 42, r: 5.5, fill: '#faf8f3', 'fill-opacity': '.65' }), el('circle', { cx: 66, cy: 31, r: 7, fill: '#faf8f3' }), el('circle', { cx: 94, cy: 14, r: 10.5, fill: 'url(#flowdot-core)' })];
@@ -799,14 +799,14 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* in context */
-  var st = FlowDot.mount(document.querySelector('#st svg'), { role: 'flow', style: 'high', r: 36, state: 'review' });
+  var st = FlowDot.mount(document.querySelector('#st svg'), { role: 'flow', style: 'cute', r: 36, state: 'review' });
   var rec = document.getElementById('recents');
   [['AI search fixes', 'AI search', 'ai-search', 'today'], ['October content calendar', 'Content', 'content', 'yesterday'], ['Property managers, batch 3', 'Outbound', 'outbound', 'Mon'], ['September report', 'Reporting', 'reporting', '1 Oct']].forEach(function (row) {
     var li = document.createElement('li'); var svg = el('svg', { viewBox: '0 0 100 100' }); FlowDot.mount(svg, { role: 'agent', agent: row[2], r: 36 }); li.appendChild(svg);
     var b = document.createElement('div'); b.innerHTML = '<b>' + row[0] + '</b><br><span class="small">' + row[1] + ' agent</span>'; var e = document.createElement('em'); e.textContent = row[3]; li.appendChild(b); li.appendChild(e); rec.appendChild(li);
   });
-  FlowDot.mount(document.getElementById('loader'), { role: 'flow', style: 'high', r: 34, state: 'work' });
-  var lost = FlowDot.mount(document.getElementById('lost'), { role: 'flow', style: 'high', r: 34 });
+  FlowDot.mount(document.getElementById('loader'), { role: 'flow', style: 'cute', r: 34, state: 'work' });
+  var lost = FlowDot.mount(document.getElementById('lost'), { role: 'flow', style: 'cute', r: 34 });
   (function () { var seq = [[-0.9, 0], [0.9, 0], [0, 0], null], i = 0; setInterval(function () { var s = seq[i % 4]; if (s) lost.lookAt(s[0], s[1]); else lost.lookAt(null); i++; }, 1100); })();
   FlowDot.mount(document.getElementById('night'), { role: 'flow', style: 'wide', r: 34, state: 'late' }).body.setAttribute('stroke', 'rgba(250,248,243,.08)');
 

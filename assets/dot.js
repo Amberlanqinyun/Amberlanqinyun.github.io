@@ -39,6 +39,8 @@ window.FlowDot = (function () {
   var STYLES = {
     round:  { pos: [[-0.29, -0.12], [0.29, -0.12]], ratio: 1.2, draw: function (s, k) { return el('ellipse', { rx: s * k, ry: s * 1.06 * k }); } },
     high:   { pos: [[-0.44, -0.36], [0.14, -0.36]], ratio: 1.2, draw: function (s, k) { return el('ellipse', { rx: s * k, ry: s * 1.06 * k }); } },
+    /* The cute one: big round eyes, set low and wide, a touch left of centre. */
+    cute:   { pos: [[-0.36, -0.02], [0.24, -0.02]], ratio: 1.18, size: 1.34, draw: function (s, k) { return el('ellipse', { rx: s * k, ry: s * 1.08 * k }); } },
     pill:   { pos: [[-0.3, -0.1], [0.3, -0.1]], ratio: 1.15, draw: function (s, k) { var w = s * 1.3 * k, h = s * 2.6 * k; return el('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: w / 2 }); } },
     wide:   { pos: [[-0.32, -0.1], [0.32, -0.1]], ratio: 1.15, draw: function (s, k) { return el('ellipse', { rx: s * 1.5 * k, ry: s * 0.78 * k }); } },
     arc:    { pos: [[-0.3, -0.06], [0.3, -0.06]], ratio: 1.15, draw: function (s, k) { var a = s * 1.25 * k; return el('path', { d: 'M' + (-a) + ' 0A' + a + ' ' + a + ' 0 0 1 ' + a + ' 0Z' }); } },
@@ -56,7 +58,7 @@ window.FlowDot = (function () {
     think:  { look: [-0.7, -0.9],   k: 0.92, lid: 1,    tilt: -7, body: AMBER, eye: INK,   breath: 0.01,  rate: 1.6, ring: false, orbit: false, scan: false, glow: false },
     work:   { look: [0.5, 0.6],     k: 0.9,  lid: 1,    tilt: 4,  body: AMBER, eye: INK,   breath: 0.035, rate: 9,   ring: false, orbit: true,  scan: true,  glow: false },
     review: { look: [0, 0],         k: 1.3,  lid: 1,    tilt: 0,  body: AMBER, eye: INK,   breath: 0.02,  rate: 2.2, ring: true,  orbit: false, scan: false, glow: false },
-    done:   { look: [0, 0.1],       k: 1.1,  lid: 0.42, tilt: 0,  body: AMBER, eye: INK,   breath: 0.02,  rate: 1.6, ring: false, orbit: false, scan: false, glow: false },
+    done:   { look: [0, 0.1],       k: 1.1,  lid: 1,    tilt: 0,  body: AMBER, eye: INK,   breath: 0.02,  rate: 1.6, ring: false, orbit: false, scan: false, glow: false, eyeStyle: 'arc' },
     late:   { free: true,  k: 1.15, lid: 1,    tilt: 0,  body: '#131312', eye: CREAM, breath: 0.01, rate: 1.2, ring: false, orbit: false, scan: false, glow: true },
     error:  { look: [0.3, 0.3],     k: 1,    lid: 0.3,  tilt: 9,  body: AMBER, eye: INK,   breath: 0,     rate: 1,   ring: false, orbit: false, scan: false, glow: false }
   };
@@ -77,7 +79,7 @@ window.FlowDot = (function () {
     this.r = o.r || (this.role === 'flow' ? 32 : 34);
     this.cx = 50; this.cy = 50 + (o.dy || 0);
     this.fill = o.fill || (this.role === 'flow' ? AMBER : CREAM);
-    var styleName = o.style || (this.role === 'agent' ? (AGENTS[o.agent] || null) : 'high');
+    var styleName = o.style || (this.role === 'agent' ? (AGENTS[o.agent] || null) : 'cute');
     this.sig = { gapK: 1, yK: 0, tilt: 0, ratioK: 1 };
     if (!styleName) { var h = hash(o.agent || 'agent'), u = function (n) { return ((h >>> (n * 5)) & 31) / 31; }; styleName = 'round'; this.sig = { gapK: 0.78 + u(0) * 0.5, ratioK: 0.9 + u(1) * 0.35, yK: -0.14 + u(2) * 0.26, tilt: -8 + u(3) * 16 }; }
     this.styleName = styleName;
@@ -92,6 +94,12 @@ window.FlowDot = (function () {
     if (this.role === 'flow') for (var i = 0; i < 3; i++) { var s = el('circle', { cx: this.cx, cy: this.cy, r: 0, fill: CREAM }); this.sats.push(s); this.gooG.appendChild(s); }
     svg.appendChild(this.halo); svg.appendChild(this.gooG); svg.appendChild(this.body);
     if (this.glow) this.catch = false;
+    /* cheeks: a lighter amber, only when it is pleased */
+    this.cheeks = el('g', { opacity: 0 });
+    this.cheeks.appendChild(el('ellipse', { cx: this.cx - this.r * 0.46, cy: this.cy + this.r * 0.3, rx: this.r * 0.2, ry: this.r * 0.11, fill: '#f7d08a' }));
+    this.cheeks.appendChild(el('ellipse', { cx: this.cx + this.r * 0.46, cy: this.cy + this.r * 0.3, rx: this.r * 0.2, ry: this.r * 0.11, fill: '#f7d08a' }));
+    svg.appendChild(this.cheeks);
+    this.cheekA = 0; this.wob = { x: 0, v: 0 }; this.trails = []; this.curious = 0; this.ticUntil = 0; this.nextTic = 8 + Math.random() * 8; this.seen = false;
     this.ring = el('circle', { cx: this.cx, cy: this.cy, r: this.r, fill: 'none', stroke: AMBER, 'stroke-width': 1.5, 'stroke-opacity': 0 });
     svg.appendChild(this.ring);
     this.eyes = el('g', {}); this.L = el('g', {}); this.R = el('g', {}); this.eyes.appendChild(this.L); this.eyes.appendChild(this.R); svg.appendChild(this.eyes);
@@ -104,16 +112,22 @@ window.FlowDot = (function () {
     dots.push(this); start();
   }
   Dot.prototype.setStyle = function (name) {
-    var st = STYLES[name] || STYLES.round, m = MOODS[this.mood] || MOODS.idle, s = this.r * 0.17;
-    this.styleName = name; this.st = st;
+    var st = STYLES[name] || STYLES.round, m = MOODS[this.mood] || MOODS.idle, s = this.r * 0.17 * (st.size || 1);
+    var shape = (m.eyeStyle && STYLES[m.eyeStyle]) || st; /* a mood may borrow another style's eye shape, keeping this style's placement */
+    this.styleName = name; this.st = st; this.gL = this.gR = null;
     while (this.L.firstChild) this.L.removeChild(this.L.firstChild);
     while (this.R.firstChild) this.R.removeChild(this.R.firstChild);
-    var nL = st.draw(s, 1 * this.sig.ratioK, 'L'); paint(nL, m.eye, m.glow); this.L.appendChild(nL);
-    if (st.pos[1]) { var nR = st.draw(s, st.ratio * this.sig.ratioK, 'R'); paint(nR, m.eye, m.glow); this.R.appendChild(nR); }
+    var nL = shape.draw(s, 1 * this.sig.ratioK, 'L'); paint(nL, m.eye, m.glow); this.L.appendChild(nL);
+    if (st.pos[1]) { var nR = shape.draw(s, st.ratio * this.sig.ratioK, 'R'); paint(nR, m.eye, m.glow); this.R.appendChild(nR); }
     if (this.catch && !st.ring && m.eye === INK) {
       this.cL = el('circle', { cx: -s * 0.36, cy: -s * 0.42, r: s * 0.2, fill: CREAM }); this.L.appendChild(this.cL);
       if (st.pos[1]) { this.cR = el('circle', { cx: -s * 0.42, cy: -s * 0.5, r: s * 0.24, fill: CREAM }); this.R.appendChild(this.cR); }
     } else { this.cL = this.cR = null; }
+    /* the glint: the light reflected in the eye, one small cream point, upper left */
+    if (this.glow && !st.ring && !shape.ring && m.eye === INK) {
+      this.gL = el('circle', { cx: -s * 0.3, cy: -s * 0.34, r: s * 0.24, fill: CREAM }); this.L.appendChild(this.gL);
+      if (st.pos[1]) { this.gR = el('circle', { cx: -s * 0.34, cy: -s * 0.4, r: s * 0.27, fill: CREAM }); this.R.appendChild(this.gR); }
+    }
     return this;
   };
   Dot.prototype.set = function (mood) {
@@ -123,7 +137,34 @@ window.FlowDot = (function () {
     this.ring.setAttribute('stroke-opacity', 0);
     if (!m.orbit) this.sats.forEach(function (s) { s.setAttribute('r', 0); });
     if (mood === 'done') this.nod();
+    if (this.st) { this.wob.v += 2.4; if (mood === 'work' || mood === 'done') this.trail(); }
     this.setStyle(this.styleName);
+    return this;
+  };
+  /* the signature: when it moves, it leaves the mark's trail behind for a moment */
+  Dot.prototype.trail = function () {
+    if (reduced) return this;
+    var self = this, now = performance.now();
+    [[0.95, 0.3], [1.55, 0.22], [2.15, 0.15]].forEach(function (q, i) {
+      var c = el('circle', { cx: self.cx, cy: self.cy, r: 0, fill: CREAM, opacity: 0 }); self.gooG.appendChild(c);
+      self.trails.push({ el: c, t0: now + i * 70, d: q[0] * self.r, rr: q[1] * self.r });
+    });
+    return this;
+  };
+  Dot.prototype.greet = function () { this.nod(); this.blink(true); this.wob.v += 3; this.trail(); return this; };
+  Dot.prototype.hover = function (on) { this.curious = on ? 1 : 0; return this; };
+  /* the shy glance: looks at you, looks away, looks back */
+  Dot.prototype.shy = function () {
+    var self = this; self.lookAt(0, 0.12); self.blink(true);
+    setTimeout(function () { if (self.curious) self.lookAt(-0.95, 0.4); }, 700);
+    setTimeout(function () { if (self.curious) self.lookAt(0.05, 0); }, 1350);
+    setTimeout(function () { if (self.curious) self.blink(false); }, 1500);
+    return this;
+  };
+  Dot.prototype.attach = function (host) {
+    var self = this;
+    host.addEventListener('pointerenter', function () { self.hover(true); self.shy(); });
+    host.addEventListener('pointerleave', function () { self.hover(false); self.lookAt(null); });
     return this;
   };
   Dot.prototype.setGlow = function (on) { this.glow = !!on; this.catch = !this.glow; this.halo.setAttribute('opacity', this.glow ? 1 : 0); this.body.setAttribute('r', this.glow ? this.r * 1.08 : this.r); return this.set(this.mood); };
@@ -136,16 +177,24 @@ window.FlowDot = (function () {
     if (this.hold) tgt = this.hold;
     else if (m.scan && !reduced) { var u = (this.t * 0.9) % 1, line = Math.floor((this.t * 0.9) % 3); tgt = [-0.8 + u * 1.6, -0.25 + line * 0.35]; }
     else if (m.look) tgt = m.look;
-    else { this.nextSac -= dt; if (this.nextSac <= 0 && !reduced) { this.target = [(Math.random() - 0.5), (Math.random() - 0.5) * 0.7]; this.nextSac = 1.5 + Math.random() * 2.5; } tgt = this.target; }
+    else {
+      this.nextSac -= dt; this.nextTic -= dt;
+      if (this.nextTic <= 0 && !reduced) { this.ticUntil = this.t + 0.9; this.nextTic = 10 + Math.random() * 8; }
+      if (this.t < this.ticUntil) tgt = [-0.6, -0.85];
+      else { if (this.nextSac <= 0 && !reduced) { this.target = [(Math.random() - 0.5), (Math.random() - 0.5) * 0.7]; this.nextSac = 1.5 + Math.random() * 2.5; } tgt = this.target; }
+    }
     if (reduced) { this.gaze.x.x = tgt[0]; this.gaze.y.x = tgt[1]; }
     else if (m.scan && !this.hold) { this.gaze.x.x = tgt[0]; spring(this.gaze.y, tgt[1], 140, 18, dt); }
     else { spring(this.gaze.x, tgt[0], 140, 18, dt); spring(this.gaze.y, tgt[1], 140, 18, dt); }
     var gx = Math.max(-1, Math.min(1, this.gaze.x.x)), gy = Math.max(-1, Math.min(1, this.gaze.y.x));
-    spring(this.tiltS, gx * 6 + m.tilt, 40, 10, dt);
+    spring(this.tiltS, gx * 6 + m.tilt + this.curious * 9, 40, 10, dt);
+    spring(this.wob, 0, 90, 7, dt);
     var breathe = reduced ? 0 : Math.sin(this.t * m.rate) * m.breath;
+    var wobble = reduced ? 0 : this.wob.x * 0.05;
+    var cheekTarget = (this.mood === 'done' ? 0.6 : 0) + this.curious * 0.45; this.cheekA += (Math.min(0.6, cheekTarget) - this.cheekA) * Math.min(1, dt * 6); this.cheeks.setAttribute('opacity', this.cheekA);
     var nodY = 0, nodSq = 0, nodLid = 1;
     if (this.nodT >= 0) { this.nodT += dt; var p = Math.min(this.nodT / 0.6, 1), w = Math.sin(p * Math.PI); nodY = w * r * 0.1; nodSq = w * 0.1; nodLid = 1 - w * 0.6; if (this.nodT > 0.6) this.nodT = -1; }
-    var sx = 1 + breathe + nodSq, sy = 1 - breathe - nodSq;
+    var sx = 1 + breathe + nodSq + wobble, sy = 1 - breathe - nodSq - wobble;
     var bodyTf = 'rotate(' + this.tiltS.x + ' ' + this.cx + ' ' + this.cy + ') translate(' + this.cx + ' ' + (this.cy + nodY) + ') scale(' + sx + ' ' + sy + ') translate(' + (-this.cx) + ' ' + (-this.cy) + ')';
     this.body.setAttribute('transform', bodyTf);
     if (this.glow) { var pulse = reduced ? 1 : 0.85 + 0.15 * Math.sin(this.t * m.rate * 0.5) + (m.ring ? 0.15 : 0); this.halo.setAttribute('opacity', pulse); this.halo.setAttribute('transform', 'translate(' + this.cx + ' ' + (this.cy + nodY) + ') scale(' + (1 + breathe * 2) + ') translate(' + (-this.cx) + ' ' + (-this.cy) + ')'); }
@@ -163,12 +212,28 @@ window.FlowDot = (function () {
     if (gy > 0) lid *= 1 - gy * 0.15;
     var ox = gx * r * 0.18, oy = gy * r * 0.14 + nodY;
     var pL = [this.cx + st.pos[0][0] * r * this.sig.gapK, this.cy + (st.pos[0][1] + this.sig.yK) * r];
-    var kL = m.k * (1 - Math.max(0, gx) * 0.12 + Math.max(0, -gx) * 0.06), kR = m.k * (1 - Math.max(0, -gx) * 0.12 + Math.max(0, gx) * 0.06);
+    var kc = m.k * (1 + this.curious * 0.1);
+    var kL = kc * (1 - Math.max(0, gx) * 0.12 + Math.max(0, -gx) * 0.06), kR = kc * (1 - Math.max(0, -gx) * 0.12 + Math.max(0, gx) * 0.06);
     var rot = 'rotate(' + (this.tiltS.x + this.sig.tilt) + ' ' + this.cx + ' ' + this.cy + ') ';
-    var s = r * 0.17;
+    var s = r * 0.17 * (st.size || 1);
+    this.cheeks.setAttribute('transform', 'translate(0 ' + nodY + ')');
     this.L.setAttribute('transform', rot + 'translate(' + (pL[0] + ox) + ' ' + (pL[1] + oy) + ') translate(0 ' + (-s) + ') scale(' + kL + ' ' + (kL * lid) + ') translate(0 ' + s + ')');
     if (st.pos[1]) { var pR = [this.cx + st.pos[1][0] * r * this.sig.gapK, this.cy + (st.pos[1][1] + this.sig.yK) * r]; this.R.setAttribute('transform', rot + 'translate(' + (pR[0] + ox) + ' ' + (pR[1] + oy) + ') translate(0 ' + (-s) + ') scale(' + kR + ' ' + (kR * lid) + ') translate(0 ' + s + ')'); }
     if (this.cL) { var cv = lid > 0.5 ? 1 : 0; this.cL.setAttribute('opacity', cv); if (this.cR) this.cR.setAttribute('opacity', cv); }
+    if (this.gL) { var gv = lid > 0.5 ? 1 : 0; this.gL.setAttribute('opacity', gv); if (this.gR) this.gR.setAttribute('opacity', gv); }
+    if (this.trails.length) {
+      var now = performance.now(), keep = [];
+      for (var ti = 0; ti < this.trails.length; ti++) {
+        var tr = this.trails[ti], pp = (now - tr.t0) / 850;
+        if (pp < 0) { keep.push(tr); continue; }
+        if (pp >= 1) { if (tr.el.parentNode) tr.el.parentNode.removeChild(tr.el); continue; }
+        var dd = tr.d + pp * r * 0.5, ease = pp < 0.25 ? pp / 0.25 : 1 - (pp - 0.25) / 0.75;
+        tr.el.setAttribute('cx', this.cx - dd * 0.83); tr.el.setAttribute('cy', this.cy + dd * 0.56 + nodY);
+        tr.el.setAttribute('r', tr.rr * (0.6 + 0.4 * ease)); tr.el.setAttribute('opacity', 0.9 * ease);
+        keep.push(tr);
+      }
+      this.trails = keep;
+    }
     if (m.ring) { var ph = Math.sin(this.t * 2.2); this.ring.setAttribute('r', r + 12 + ph * 6); this.ring.setAttribute('stroke-opacity', 0.55 - ph * 0.35); }
     if (m.orbit && !reduced) { var self = this; this.sats.forEach(function (sat, i) { var a = self.t * 1.4 + i * (Math.PI * 2 / 3), rad = r * 1.55 + Math.sin(self.t * 2 + i) * r * 0.15; sat.setAttribute('r', r * 0.19 + Math.sin(self.t * 3 + i) * r * 0.05); sat.setAttribute('cx', self.cx + Math.cos(a) * rad); sat.setAttribute('cy', self.cy + Math.sin(a) * rad * 0.9); }); }
   };
@@ -185,8 +250,13 @@ window.FlowDot = (function () {
     function check() { var n = isNightNZ(); if (n && dot.mood === 'idle') dot.set('late'); else if (!n && dot.mood === 'late') dot.set('idle'); }
     check(); setInterval(check, 60000); return dot;
   }
+  function greetOnSight(dot) {
+    if (!('IntersectionObserver' in window)) return dot;
+    var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { setTimeout(function () { dot.greet(); }, 350); io.disconnect(); } }, { threshold: 0.6 });
+    io.observe(dot.svg); return dot;
+  }
   function make(cls, size) { var svg = el('svg', { viewBox: '0 0 100 100', 'aria-hidden': 'true', focusable: 'false' }); svg.setAttribute('class', 'fdot ' + (cls || '')); if (size) { svg.setAttribute('width', size); svg.setAttribute('height', size); } return svg; }
-  return { mount: mount, make: make, autoNight: autoNight, isNightNZ: isNightNZ, STYLES: STYLES, AGENTS: AGENTS, MOODS: MOODS, Dot: Dot };
+  return { mount: mount, make: make, autoNight: autoNight, greetOnSight: greetOnSight, isNightNZ: isNightNZ, STYLES: STYLES, AGENTS: AGENTS, MOODS: MOODS, Dot: Dot };
 }());
 
 /* ---------- boot: this site ---------- */
@@ -204,7 +274,7 @@ window.FlowDot = (function () {
       var statusEl = demo.querySelector('.demo__status');
       if (statusEl && statusEl.parentNode) {
         var sv = F.make('fdot--status'); statusEl.parentNode.insertBefore(sv, statusEl);
-        var fi = F.mount(sv, { role: 'flow', style: 'high', r: 36, state: 'review' });
+        var fi = F.mount(sv, { role: 'flow', r: 36, state: 'review' }); fi.attach(statusEl.parentNode); F.greetOnSight(fi);
         var moodFor = function (text) {
           var t = (text || '').trim();
           if (/working|running|运行中/i.test(t)) return 'work';
@@ -217,7 +287,7 @@ window.FlowDot = (function () {
         new MutationObserver(apply).observe(statusEl, { childList: true, characterData: true, subtree: true });
       }
       var here = demo.querySelector('.demo__nav.is-here');
-      if (here) { var hv = F.make('fdot--side'); here.insertBefore(hv, here.firstChild); F.autoNight(F.mount(hv, { role: 'flow', style: 'high', r: 36 })); }
+      if (here) { var hv = F.make('fdot--side'); here.insertBefore(hv, here.firstChild); var sd = F.autoNight(F.mount(hv, { role: 'flow', r: 36 })); sd.attach(here); F.greetOnSight(sd); }
       Array.prototype.slice.call(demo.querySelectorAll('[data-run]')).forEach(function (b) {
         var key = b.getAttribute('data-run'), av = F.make('fdot--run'); b.insertBefore(av, b.firstChild);
         var d = F.mount(av, { role: 'agent', agent: key, r: 36 });
@@ -228,7 +298,7 @@ window.FlowDot = (function () {
     /* The 404: it looks left, then right, then at you. */
     var lost = document.querySelector('[data-fdot-lost]');
     if (lost) {
-      var d = F.mount(lost, { role: 'flow', style: 'high', r: 30 });
+      var d = F.mount(lost, { role: 'flow', r: 30 }); d.attach(lost.parentNode || lost); F.greetOnSight(d);
       var seq = [[-0.9, 0], [0.9, 0], [0, 0], null], i = 0;
       setInterval(function () { var s = seq[i % 4]; if (s) d.lookAt(s[0], s[1]); else d.lookAt(null); i++; }, 1100);
       F.autoNight(d);
