@@ -35,13 +35,18 @@ window.FlowDot = (function () {
     svg.innerHTML =
       '<defs>' +
       /* the light inside Flow Intelligence, and the glow it throws */
-      '<radialGradient id="flowdot-core" cx="50%" cy="60%" r="55%"><stop offset="0" stop-color="#fbe0a8"/><stop offset=".5" stop-color="#f1bb5a"/><stop offset=".85" stop-color="#df9c36"/><stop offset="1" stop-color="#c47f27"/></radialGradient>' +
+      '<radialGradient id="flowdot-core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6e2"/><stop offset=".32" stop-color="#f8d590" stop-opacity=".95"/><stop offset=".66" stop-color="#eeb04c" stop-opacity=".55"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
+      /* a solid amber for static marks (the logo trail, small sizes) */
+      '<radialGradient id="flowdot-amber" cx="50%" cy="60%" r="55%"><stop offset="0" stop-color="#fbe0a8"/><stop offset=".5" stop-color="#f1bb5a"/><stop offset=".85" stop-color="#df9c36"/><stop offset="1" stop-color="#c47f27"/></radialGradient>' +
+      '<radialGradient id="flowdot-tint" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#f2b64f" stop-opacity=".5"/><stop offset=".72" stop-color="#e8a83e" stop-opacity=".34"/><stop offset="1" stop-color="#d4922f" stop-opacity=".62"/></radialGradient>' +
+      '<radialGradient id="flowdot-tint-night" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#2a2417" stop-opacity=".55"/><stop offset="1" stop-color="#16140f" stop-opacity=".8"/></radialGradient>' +
+      '<filter id="flowdot-bloom" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.2"/></filter>' +
       '<radialGradient id="flowdot-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".42"/><stop offset=".45" stop-color="#e4a43c" stop-opacity=".14"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
-      '<radialGradient id="flowdot-core-night" cx="50%" cy="58%" r="50%"><stop offset="0" stop-color="#3a301c"/><stop offset=".7" stop-color="#1d1a13"/><stop offset="1" stop-color="#141311"/></radialGradient>' +
+      '<radialGradient id="flowdot-core-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".22"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
       '<radialGradient id="flowdot-halo-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".08"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
       /* glass: body, rim light (top bright, sides gone, a little bounce at the bottom), warm pool */
       '<linearGradient id="flowdot-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".3"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".1"/><stop offset="1" stop-color="#ffffff" stop-opacity=".16"/></linearGradient>' +
-      '<linearGradient id="flowdot-rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset=".28" stop-color="#ffffff" stop-opacity=".16"/><stop offset=".62" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#ffe2ad" stop-opacity=".5"/></linearGradient>' +
+      '<linearGradient id="flowdot-rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset=".28" stop-color="#ffffff" stop-opacity=".16"/><stop offset=".62" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#ffe2ad" stop-opacity=".34"/></linearGradient>' +
       '<radialGradient id="flowdot-pool" cx="60%" cy="96%" r="70%"><stop offset="0" stop-color="#f3c572" stop-opacity=".62"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
       '<radialGradient id="flowdot-sheen" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffffff" stop-opacity=".75"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>' +
       /* eyes: a white with a soft fall-off at the bottom, a glossy pupil */
@@ -149,9 +154,13 @@ window.FlowDot = (function () {
     var use = function (fill, extra) { var u = el('use', { href: '#' + gid, fill: fill }); for (var key in extra) u.setAttribute(key, extra[key]); return u; };
     this.glass = el('g', {});
     if (this.role === 'flow') {
-      /* the light fills the orb; the glass shows only where it catches the light */
-      this.core = use('url(#flowdot-core)');
-      this.glass.appendChild(this.core);
+      /* a clear glass orb, tinted amber, with the light glowing inside it */
+      this.tint = use('url(#flowdot-tint)'); this.glass.appendChild(this.tint);
+      var lightG = el('g', { 'clip-path': 'url(#' + this.id + '-c)' });
+      this.core = el('circle', { cx: 50, cy: 55, r: 27.5, fill: 'url(#flowdot-core)', filter: 'url(#flowdot-bloom)' });
+      lightG.appendChild(this.core); this.glass.appendChild(lightG);
+      this.glass.appendChild(use('url(#flowdot-glass)'));
+      this.glass.appendChild(use('url(#flowdot-pool)'));
     } else {
       this.glass.appendChild(use(sh.tone, { 'fill-opacity': 0.16 }));
       this.glass.appendChild(use('url(#flowdot-glass)'));
@@ -164,6 +173,9 @@ window.FlowDot = (function () {
     var sn = sh.sheen; this.sheen = el('ellipse', { cx: sn[0], cy: sn[1], rx: sn[2], ry: sn[3], fill: 'url(#flowdot-sheen)', opacity: this.role === 'flow' ? 0.8 : 0.75 });
     if (sh.tf) this.sheen.setAttribute('transform', sh.tf);
     rimG.appendChild(this.sheen);
+    this.spark = el('ellipse', { cx: sn[0] - sn[2] * 0.5, cy: sn[1] + sn[3] * 0.15, rx: Math.max(1.4, sn[2] * 0.18), ry: Math.max(0.9, sn[3] * 0.32), fill: '#fff', opacity: 0.85 });
+    if (sh.tf) this.spark.setAttribute('transform', sh.tf);
+    rimG.appendChild(this.spark);
     this.solidL = use(sh.tone);
     this.body.appendChild(this.glass); this.body.appendChild(this.solidL);
     svg.appendChild(this.body);
@@ -243,6 +255,7 @@ window.FlowDot = (function () {
     var m = MOODS[mood] || MOODS.idle; this.mood = mood;
     if (this.role === 'flow') {
       this.core.setAttribute('fill', m.night ? 'url(#flowdot-core-night)' : 'url(#flowdot-core)');
+      this.tint.setAttribute('fill', m.night ? 'url(#flowdot-tint-night)' : 'url(#flowdot-tint)');
       this.halo.setAttribute('fill', m.night ? 'url(#flowdot-halo-night)' : 'url(#flowdot-halo)');
     } else this.body.setAttribute('opacity', m.night ? 0.6 : 1);
     this.ring.setAttribute('stroke-opacity', 0);
