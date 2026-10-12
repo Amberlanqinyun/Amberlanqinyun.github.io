@@ -304,52 +304,81 @@ window.FlowDot = (function () {
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var seen = false; try { seen = sessionStorage.getItem('flowai-run') === '1'; } catch (e) {}
     if (win && !reduce && !seen && 'IntersectionObserver' in window) {
+      var NS = 'http://www.w3.org/2000/svg';
+      function sel(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
       var ZH = /^zh/.test(document.documentElement.lang);
       var S = ZH ? {
         you: '找出人们向 AI 询问奥克兰热水缸的问题，修好应该回答这些问题的页面。全部暂存，先不发布。',
-        reply: '三个页面已暂存。等待你审核。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
-        caps: ['收到指令', '阅读网站', '交代三个智能体', '智能体工作中', '智能体返回', '已暂存，等你', '已批准', '休息']
+        reply: '三个页面已暂存。等待你审核。', ok: '看起来不错。定价页先留着，等我核对数字。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
+        caps: ['收到指令', '阅读网站', '交代三个智能体', '智能体工作中', '智能体返回', '已暂存，等你', '已批准', '休息'],
+        cards: [['/services/hot-water-cylinders', '6 处修改'], ['/faq/plumber-cost-auckland', '新页面'], ['/areas/north-shore', '4 处修改']]
       } : {
         you: 'Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.',
-        reply: 'Three pages staged. Waiting for your review.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
-        caps: ['brief received', 'reading the site', 'briefing three agents', 'agents at work', 'agents return', 'staged, waiting for you', 'approved', 'rest']
+        reply: 'Three pages staged. Waiting for your review.', ok: 'Looks good. Hold the pricing page until I check the numbers.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
+        caps: ['brief received', 'reading the site', 'briefing three agents', 'agents at work', 'agents return', 'staged, waiting for you', 'approved', 'rest'],
+        cards: [['/services/hot-water-cylinders', '6 changes'], ['/faq/plumber-cost-auckland', 'New page'], ['/areas/north-shore', '4 changes']]
       };
       var ov = document.createElement('div'); ov.className = 'demo__run'; ov.setAttribute('role', 'presentation');
-      ov.innerHTML = '<div class="demo__run-top"><span class="demo__run-eyebrow">' + S.eyebrow + '</span><button type="button" class="demo__run-skip">' + S.skip + '</button></div>' +
-        '<div class="demo__run-stage"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>' +
-        '<div class="demo__run-msg demo__run-msg--you">' + S.you + '</div><div class="demo__run-msg demo__run-msg--dot">' + S.reply + '</div></div>' +
-        '<div class="demo__run-foot"><span class="demo__run-cap"></span><span class="demo__run-bar"><b></b></span></div>';
-      win.appendChild(ov);
-      var rsvg = ov.querySelector('svg'), m1 = ov.querySelector('.demo__run-msg--you'), m2 = ov.querySelector('.demo__run-msg--dot');
+      ov.innerHTML = '<div class="demo__run-stage"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>' +
+        '<div class="demo__run-msg demo__run-msg--you">' + S.you + '</div>' +
+        '<div class="demo__run-cards">' + S.cards.map(function (c) { return '<div class="demo__run-card"><span>' + c[0] + '</span><em>' + c[1] + '</em></div>'; }).join('') + '</div>' +
+        '<div class="demo__run-msg demo__run-msg--dot">' + S.reply + '</div>' +
+        '<div class="demo__run-msg demo__run-msg--ok">' + S.ok + '</div></div>' +
+        '<div class="demo__run-foot"><div class="demo__run-row"><span class="demo__run-eyebrow">' + S.eyebrow + '</span><span class="demo__run-cap"></span><button type="button" class="demo__run-skip">' + S.skip + '</button></div><span class="demo__run-bar"><b></b></span></div>';
+      win.appendChild(ov); document.documentElement.classList.add('fdot-run');
+      var rsvg = ov.querySelector('svg'), m1 = ov.querySelector('.demo__run-msg--you'), m2 = ov.querySelector('.demo__run-msg--dot'), m3 = ov.querySelector('.demo__run-msg--ok');
+      var cards = Array.prototype.slice.call(ov.querySelectorAll('.demo__run-card'));
       var capEl = ov.querySelector('.demo__run-cap'), barEl = ov.querySelector('.demo__run-bar b');
-      var run = F.mount(rsvg, { role: 'flow', r: 15, dy: 8, goo: true });
-      var sats = run.sats, satT = [[18, 26, 6], [82, 22, 5], [24, 82, 4.5]], satAnim = null, t0 = -1, LEN = 23, fired = [], done = false;
+      var run = F.mount(rsvg, { role: 'flow', r: 15, dy: 6, goo: true });
+      /* a flat amber disc inside the goo group, under the light core, so the agents pull
+         off the core with a liquid neck instead of appearing beside it */
+      run.gooG.insertBefore(sel('circle', { cx: run.cx, cy: run.cy, r: run.r * 0.98, fill: '#e4a43c' }), run.gooG.firstChild);
+      /* the page it reads: six hairlines to the right of the core, one lit at a time */
+      var lines = sel('g', { opacity: 0 }); rsvg.insertBefore(lines, rsvg.firstChild);
+      var lineEls = [];
+      for (var li = 0; li < 6; li++) { var ln = sel('rect', { x: 66, y: 36 + li * 5.2, width: li % 3 === 2 ? 18 : 26, height: 1.3, rx: 0.65, fill: '#faf8f3', 'fill-opacity': 0.16 }); lines.appendChild(ln); lineEls.push(ln); }
+      var sats = run.sats, satT = [[22, 44, 5.5], [80, 40, 5], [30, 82, 4.5]], satAnim = null, t0 = -1, LEN = 19.5, fired = [], done = false, lineT = -1, lit = -1;
+      var agentKeys = ['ai-search', 'content', 'outbound'], faces = [];
       function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+      function showFaces(on) {
+        if (on && !faces.length) {
+          satT.forEach(function (p, i) {
+            var inner = sel('svg', { x: p[0] - p[2] * 1.45, y: p[1] - p[2] * 1.45, width: p[2] * 2.9, height: p[2] * 2.9, viewBox: '0 0 100 100' });
+            rsvg.appendChild(inner); var fd = F.mount(inner, { role: 'agent', agent: agentKeys[i], r: 34, state: 'work' }); faces.push({ svg: inner, dot: fd });
+          });
+        } else faces.forEach(function (f, i) { f.svg.setAttribute('opacity', on ? 1 : 0); if (!on) f.dot.set('idle'); });
+        if (on) sats.forEach(function (s) { s.setAttribute('r', 0); });
+      }
       var SCRIPT = [
         { at: 0,    i: 0, fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 900); } },
-        { at: 1.6,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); } },
-        { at: 5.2,  i: 2, fn: function () { run.set('think'); satAnim = { t0: performance.now(), dir: 1 }; } },
-        { at: 8.4,  i: 3, fn: function () { run.set('idle'); } },
-        { at: 12.4, i: 4, fn: function () { satAnim = { t0: performance.now(), dir: -1 }; } },
-        { at: 14.6, i: 5, fn: function () { run.set('review'); m2.classList.add('is-on'); } },
-        { at: 19,   i: 6, fn: function () { run.set('done'); } },
-        { at: 21,   i: 7, fn: function () { run.set('idle'); } }
+        { at: 1.5,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); lines.setAttribute('opacity', 1); lineT = performance.now(); } },
+        { at: 4.8,  i: 2, fn: function () { lines.setAttribute('opacity', 0); run.set('think'); satAnim = { t0: performance.now(), dir: 1 }; } },
+        { at: 7.2,  i: 3, fn: function () { run.set('idle'); showFaces(true); faces.forEach(function (f) { f.dot.set('work'); }); } },
+        { at: 10.6, i: 4, fn: function () { faces.forEach(function (f) { f.dot.set('done'); }); setTimeout(function () { showFaces(false); sats.forEach(function (s, i) { s.setAttribute('cx', satT[i][0]); s.setAttribute('cy', satT[i][1]); s.setAttribute('r', satT[i][2]); }); satAnim = { t0: performance.now(), dir: -1 }; }, 500); } },
+        { at: 12.8, i: 5, fn: function () { run.trail(); run.set('review'); ov.classList.add('is-staged'); m2.classList.add('is-on'); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-on'); }, 150 + i * 160); }); } },
+        { at: 16.2, i: 6, fn: function () { m2.classList.remove('is-on'); m3.classList.add('is-on'); run.lookAt(0.9, 0.6); setTimeout(function () { run.set('done'); run.lookAt(null); cards.forEach(function (c, i) { setTimeout(function () { c.classList.add('is-ok'); }, i * 140); }); }, 700); } },
+        { at: 18.3, i: 7, fn: function () { run.set('idle'); } }
       ];
       function satFrame(now) {
         if (!satAnim) return;
         var tt = (now - satAnim.t0) / 1000;
         sats.forEach(function (s, i) {
-          var local = Math.max(0, Math.min(1, (tt - i * 0.45) / 1.1)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
+          var local = Math.max(0, Math.min(1, (tt - i * 0.4) / 1.1)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
           var wob = Math.sin(now / 400 + i) * 1.5 * p;
-          s.setAttribute('cx', run.cx + (satT[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satT[i][1] - run.cy) * p + Math.cos(now / 500 + i) * p); s.setAttribute('r', satT[i][2] * Math.min(1, p * 1.4));
+          s.setAttribute('cx', run.cx + (satT[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satT[i][1] - run.cy) * p + Math.cos(now / 500 + i) * p); s.setAttribute('r', satT[i][2] * Math.min(1, 0.4 + p * 0.9));
         });
-        if (satAnim.dir < 0 && tt > 2.4) { sats.forEach(function (s) { s.setAttribute('r', 0); }); satAnim = null; }
+        if (tt > 2.2) { if (satAnim.dir < 0) { sats.forEach(function (s) { s.setAttribute('r', 0); }); run.wob.v += 2.5; } satAnim = null; }
+      }
+      function lineFrame(now) {
+        if (lineT < 0) return;
+        var idx = Math.floor((now - lineT) / 520) % 6;
+        if (idx !== lit) { lit = idx; lineEls.forEach(function (l, i) { l.setAttribute('fill-opacity', i === idx ? 0.9 : (i < idx ? 0.42 : 0.16)); }); }
       }
       function finish() {
         if (done) return; done = true;
         try { sessionStorage.setItem('flowai-run', '1'); } catch (e) {}
         F.MOODS.work.orbit = true;
-        ov.classList.add('is-done');
+        ov.classList.add('is-done'); document.documentElement.classList.remove('fdot-run');
         setTimeout(function () { if (ov.parentNode) ov.parentNode.removeChild(ov); }, 700);
       }
       function frame(now) {
@@ -357,14 +386,15 @@ window.FlowDot = (function () {
         if (t0 < 0) t0 = now;
         var tt = (now - t0) / 1000;
         barEl.style.width = Math.min(100, tt / LEN * 100) + '%';
-        SCRIPT.forEach(function (s, i) { if (tt >= s.at && !fired[i]) { fired[i] = true; s.fn(); capEl.textContent = S.caps[s.i]; } });
-        satFrame(now);
+        SCRIPT.forEach(function (s, i) { if (tt >= s.at && !fired[i]) { fired[i] = true; s.fn(); capEl.textContent = S.caps[s.i]; if (s.i !== 1) lineT = -1; } });
+        satFrame(now); lineFrame(now);
         if (tt < LEN) requestAnimationFrame(frame); else finish();
       }
       ov.querySelector('.demo__run-skip').addEventListener('click', finish);
-      var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); setTimeout(function () { requestAnimationFrame(frame); }, 400); } }, { threshold: 0.45 });
+      var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); setTimeout(function () { requestAnimationFrame(frame); }, 400); } }, { threshold: 0.2 });
       io.observe(win);
     }
+
     /* The 404: it looks left, then right, then at you. */
     var lost = document.querySelector('[data-fdot-lost]');
     if (lost) {

@@ -493,3 +493,26 @@ input, textarea, select { border-radius: var(--r-md); }
 .demo__run-bar b { display: block; height: 100%; width: 0; background: var(--accent); transition: width 200ms linear; }
 @media (max-width: 720px) { .demo__run-msg { max-width: 80%; font-size: 0.75rem; } }
 @media (prefers-reduced-motion: reduce) { .demo__run { display: none; } }
+.demo__run-stage svg { width: min(56vh, 92%); }
+.demo__run-msg--ok { bottom: 1.25rem; right: 1.5rem; background: #1b1b19; color: var(--fg); border: 1px solid rgba(250, 248, 243, 0.1); }
+.demo__run-cards { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); width: min(44%, 22rem); display: grid; gap: 0.4rem; pointer-events: none; }
+.demo__run-card { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.55rem 0.75rem; border: 1px solid rgba(250, 248, 243, 0.1); border-radius: 10px; background: rgba(27, 27, 25, 0.9); font-size: 0.75rem; color: var(--fg); opacity: 0; transform: translateX(10px); transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out), border-color 300ms var(--ease-out); }
+.demo__run-card.is-on { opacity: 1; transform: none; }
+.demo__run-card span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem; color: var(--fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.demo__run-card em { font-style: normal; color: var(--soft); white-space: nowrap; }
+.demo__run-card.is-ok { border-color: rgba(228, 164, 60, 0.45); }
+.demo__run-card.is-ok em { color: var(--accent); }
+.demo__run-card.is-ok em::before { content: "\2713\00a0"; }
+@media (max-width: 720px) { .demo__run-cards { display: none; } .demo__run-msg--ok { max-width: 60%; } }
+.demo__run-stage svg { transition: left 900ms var(--ease-spring); }
+.demo__run.is-staged .demo__run-stage svg { left: 30%; }
+@media (max-width: 720px) { .demo__run.is-staged .demo__run-stage svg { left: 50%; } }
+.demo__run { grid-template-rows: 1fr auto; }
+.demo__run-row { display: flex; align-items: center; gap: 1rem; }
+.demo__run-row .demo__run-cap { flex: 1; text-align: center; }
+.demo__run-foot { gap: 0.65rem; padding-top: 0.7rem; }
+@media (max-width: 720px) { .demo__run-row .demo__run-eyebrow { display: none; } }
+.demo, .demo__win, .demo__run, .demo__thread { overflow-anchor: none; }
+.demo__run-msg--you { top: 2.75rem; }
+/* While the run plays, the demo thread scrolls under the overlay; without this the browser's scroll anchoring drags the page. */
+html.fdot-run { overflow-anchor: none; }
