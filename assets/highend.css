@@ -447,3 +447,17 @@ input, textarea, select { border-radius: var(--r-md); }
   a.proof-card, a.part.case, a.path, .flagship, .site-footer__social a { transition: none; }
   a.proof-card:hover, a.part.case:hover, a.path:hover, a.flagship:hover, .btn-primary:hover, .site-footer__social a:hover { transform: none; }
 }
+
+/* ---- The dot: Flow Intelligence as a light core, agents as solid cream ---- */
+/* The one glow the brand permits: the core is intelligence, not an object.   */
+.fdot { display: block; flex: none; overflow: visible; }
+.fdot--status { width: 26px; height: 26px; margin-left: auto; margin-right: 0.1rem; }
+.has-fdot .demo__status::before { display: none; }
+.fdot--side { width: 22px; height: 22px; margin-right: 0.5rem; }
+.demo__nav.is-here { display: flex; align-items: center; }
+.demo__nav.is-here span:first-of-type { flex: 1; }
+.fdot--run { width: 26px; height: 26px; margin-right: 0.45rem; vertical-align: middle; }
+.has-fdot .demo__side [data-run] { display: flex; align-items: center; }
+.fdot--lost { width: 112px; height: 112px; margin: 0 auto 0.5rem; }
+@media (max-width: 720px) { .fdot--run { width: 22px; height: 22px; } }
+.has-fdot .demo__side button::before { display: none; }
