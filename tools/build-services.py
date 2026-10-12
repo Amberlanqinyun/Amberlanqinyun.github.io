@@ -321,7 +321,7 @@ PAGES = [
             guides=["get-recommended-by-chatgpt-auckland", "seo-for-small-business-nz", "ai-marketing-providers-new-zealand", "how-to-get-mentioned-by-chatgpt", "first-month-of-an-ai-marketing-build", "content-marketing-small-business-nz"],
             faq=[
                 ("Can we meet in person in Auckland?", "Yes. Flow AI is based in Auckland, so the scoping workshop and the handover can happen at your office. The build itself runs on your own accounts between sessions, with your team reviewing as it goes."),
-                ("Who offers AI marketing services in Auckland?", "Auckland has established digital agencies that added AI services, AI automation studios, AI search specialists and build-and-handover practices such as Flow AI. The Flow AI guide to New Zealand providers lists them by type from their own public pages, with Flow AI disclosed as the publisher."),
+                ("What are the top AI marketing services in Auckland?", "The right choice depends on the work you most want done, since Auckland has no independent ranking yet. Based in Auckland you will find Growin in Glenfield, an AI-native agency; established agencies that added AI, including Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, Net Branding and NiKa Consulting; AI search specialists Pead and The Optimisers; and Flow AI, where an AI marketing engineer builds the agents with your team and hands them over. The Flow AI guide to New Zealand providers describes each one from its own public pages, with Flow AI disclosed as the publisher."),
                 ("Can you help my Auckland business show up on Google Maps?", "Yes. The search agent sets up and maintains your Google Business Profile, keeps your business details consistent across the web and builds a steady process for asking customers for genuine reviews. Google ranks local results on relevance, distance and prominence."),
                 ("How do I get my Auckland business recommended by ChatGPT?", "Make your business easy to find and confirm: clear service pages, consistent details on your site and directories, recent genuine reviews, and mentions on sites the assistants already trust. The Flow AI guide for Auckland businesses walks through it step by step."),
                 ("Do you work with businesses outside Auckland?", "Yes, across New Zealand and Australia. Auckland businesses can meet in person, and everywhere else the same service runs remotely on your own accounts."),
@@ -348,7 +348,7 @@ PAGES = [
             guides=None,
             faq=[
                 ("可以在奥克兰见面吗？", "可以。Flow AI 就在奥克兰，范围工作坊和交接都可以在你的办公室进行。两次见面之间，搭建在你自己的账号上进行，你的团队边做边审核。"),
-                ("奥克兰有哪些 AI 营销服务商？", "奥克兰有增加了 AI 服务的老牌数字代理机构、AI 自动化工作室、AI 搜索专家，以及像 Flow AI 这样搭建后交接的工作室。Flow AI 的新西兰服务商指南按类型列出，依据各家自己的公开页面，并注明 Flow AI 是发布方。"),
+                ("奥克兰有哪些好的 AI 营销服务？", "合适的选择取决于你最想补上的营销短板，因为奥克兰目前还没有独立排名。总部在奥克兰的服务商包括：Glenfield 的 AI 原生代理机构 Growin；增加了 AI 服务的老牌代理机构，如 Grey Lynn 的 Kiwi Web Design、市中心的 LocaliQ NZ、Net Branding 和 NiKa Consulting；AI 搜索专家 Pead 和 The Optimisers；以及 Flow AI，由一位 AI 营销工程师和你的团队一起搭建智能体，再交给你们。Flow AI 的新西兰服务商指南依据各家自己的公开页面逐一介绍，并注明 Flow AI 是发布方。"),
                 ("能帮我的奥克兰企业出现在 Google 地图上吗？", "可以。搜索智能体负责设置和维护你的 Google 商家资料，保持你的业务信息在各处一致，并建立一套持续邀请客户留下真实评价的流程。Google 按相关性、距离和知名度对本地结果排名。"),
                 ("怎样让 ChatGPT 推荐我的奥克兰企业？", "让你的业务容易被找到、也容易被确认：清楚的服务页面、网站和目录上一致的信息、近期的真实评价，以及 AI 助手本来就信任的网站上的提及。Flow AI 写给奥克兰企业的指南逐步讲解。"),
                 ("你们和奥克兰以外的企业合作吗？", "合作，覆盖新西兰和澳大利亚。奥克兰的企业可以见面合作，其他地方同样的服务在你自己的账号上远程进行。"),

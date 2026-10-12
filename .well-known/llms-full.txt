@@ -9,7 +9,7 @@ Key facts:
 - Work with Amber: contract builds for teams that want an AI marketing system built with them, covering AI search and answer engine optimisation, a content engine, outbound and measurement. Each build starts with a written scope and is priced per project. The team keeps running the system after a documented handover.
 - Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland, across New Zealand and in Australia (Sydney, Melbourne, Brisbane). The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
-- Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, and agentic AI tooling (Claude).
+- Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
@@ -1278,9 +1278,9 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 Yes. Flow AI is based in Auckland, so the scoping workshop and the handover can happen at your office. The build itself runs on your own accounts between sessions, with your team reviewing as it goes.
 
-### Who offers AI marketing services in Auckland?
+### What are the top AI marketing services in Auckland?
 
-Auckland has established digital agencies that added AI services, AI automation studios, AI search specialists and build-and-handover practices such as Flow AI. The Flow AI guide to New Zealand providers lists them by type from their own public pages, with Flow AI disclosed as the publisher.
+The right choice depends on the work you most want done, since Auckland has no independent ranking yet. Based in Auckland you will find Growin in Glenfield, an AI-native agency; established agencies that added AI, including Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, Net Branding and NiKa Consulting; AI search specialists Pead and The Optimisers; and Flow AI, where an AI marketing engineer builds the agents with your team and hands them over. The Flow AI guide to New Zealand providers describes each one from its own public pages, with Flow AI disclosed as the publisher.
 
 ### Can you help my Auckland business show up on Google Maps?
 
@@ -3027,7 +3027,7 @@ Novamind Labs · Auckland
 
 ### Capabilities
 
-Marketing engineering with Claude Code, agents, skills and MCP. Positioning, launch and founder go-to-market. Demand generation, ABM and outbound. AI search from SEO through to AEO and GEO. Lifecycle, attribution and RevOps.
+Marketing engineering with Claude Code, agents, skills and MCP. Positioning, launch and founder go-to-market. Demand generation, ABM and outbound. AI search from SEO through to AEO and GEO. Lifecycle, attribution and RevOps. Marketing analytics in SQL on BigQuery, GA4 and CRM data.
 
 ### Education
 
@@ -3136,10 +3136,11 @@ Lead genlistings, social, paid
 - AI search: SEO through to AEO and GEO
 
 - Lifecycle, attribution and RevOps
+- Marketing analytics: SQL on BigQuery, GA4 and CRM data
 
 ### Stack
 
-Claude Code, MCP, Python, TypeScript, React and Next.js, Playwright and ffmpeg, HubSpot, Apollo, HeyReach, n8n, Zapier, GA4, Google Tag Manager, BigQuery, Webflow, Figma, LinkedIn, Google and Meta Ads, Vercel and GitHub.
+Claude Code, MCP, Python, TypeScript, SQL, React and Next.js, Playwright and ffmpeg, HubSpot, Apollo, HeyReach, n8n, Zapier, GA4, Google Tag Manager, BigQuery, Webflow, Figma, LinkedIn, Google and Meta Ads, Vercel and GitHub.
 
 ### Education
 
