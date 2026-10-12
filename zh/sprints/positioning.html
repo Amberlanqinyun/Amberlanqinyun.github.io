@@ -133,8 +133,9 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=1">
+<link rel="stylesheet" href="/assets/highend.css?v=2">
 <script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/dot.js?v=4" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
@@ -161,9 +162,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
   <main id="main">
-    <section class="hero centered" aria-labelledby="hero-title">
+    <section class="hero centered" data-fdot-host aria-labelledby="hero-title">
       <div class="wrap">
         <div class="stack">
+          <svg class="fdot fdot--hero" data-fdot="flow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
           <p class="eyebrow">冲刺 01 · Flow Intelligence · 一周</p>
           <h1 id="hero-title">一周，确立清晰的定位。</h1>
           <p class="lead">适合营销已经准备好讲一个清晰故事的团队。我们一起确定你的主张，以及买家为什么相信它，让之后的每个智能体都用同一个声音说话。</p>
