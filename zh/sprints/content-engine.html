@@ -133,8 +133,9 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=1">
+<link rel="stylesheet" href="/assets/highend.css?v=2">
 <script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/dot.js?v=4" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
@@ -161,9 +162,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
   <main id="main">
-    <section class="hero centered" aria-labelledby="hero-title">
+    <section class="hero centered" data-fdot-host aria-labelledby="hero-title">
       <div class="wrap">
         <div class="stack">
+          <svg class="fdot fdot--hero" data-fdot="content" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
           <p class="eyebrow">冲刺 03 · 内容智能体 · 一周</p>
           <h1 id="hero-title">一份源文档，变成一个月符合你品牌语调的内容。</h1>
           <p class="lead">适合深知持续输出才能取胜的企业主。每周都用你自己的语调出现，又不必亲手写每一篇帖子。</p>

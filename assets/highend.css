@@ -524,3 +524,9 @@ html.fdot-run { overflow-anchor: none; }
 .demo__run-incl .demo__run-card::before { content: "\2713"; color: var(--accent); flex: none; }
 .demo__run-incl .demo__run-card { justify-content: flex-start; gap: 0.6rem; }
 @media (max-width: 720px) { .demo__run-incl { display: none; } }
+
+/* Flow AI characters placed by markup (data-fdot), see /dot */
+.fdot--ico { display: inline-block; width: 30px; height: 30px; margin: -6px 0.45rem -6px -2px; vertical-align: middle; }
+.fdot--sprint { width: 92px; height: 92px; margin: 0 0 0.6rem -8px; }
+.fdot--hero { width: 132px; height: 132px; margin: 0 auto 0.5rem; }
+@media (max-width: 720px) { .fdot--sprint { width: 76px; height: 76px; } .fdot--hero { width: 108px; height: 108px; } }

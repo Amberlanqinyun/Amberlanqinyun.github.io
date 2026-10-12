@@ -135,9 +135,13 @@
     "source": "contact.html",
     "sha": "1d9fdec420aa"
   },
+  "zh/dot.html": {
+    "source": "dot.html",
+    "sha": "37e3228a8608"
+  },
   "zh/index.html": {
     "source": "index.html",
-    "sha": "2a93373c8204"
+    "sha": "3e5455b7b92a"
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
