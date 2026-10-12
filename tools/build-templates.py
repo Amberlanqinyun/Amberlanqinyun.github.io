@@ -220,6 +220,9 @@ def head(title, description, path, schema, og_type="website"):
 <script src="/assets/template-form.js?v={V}" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=6">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body>
 {GTM_BODY}
@@ -311,7 +314,7 @@ def gallery():
           <p>Amber checks every run before it goes out, and the result reaches your inbox within two working days.</p>
         </div>
       </div>
-      <p class="small reveal" style="margin-top:2.25rem">Prefer to run them yourself? Each template page carries its install command for Claude Code, and the <a class="text-link" href="/skills/">skill library</a> holds 125 more.</p>
+      <p class="small reveal" style="margin-top:2.25rem">Prefer to run them yourself? Each template page carries its install command for Claude Code, and the <a class="text-link" href="/skills/">skill library</a> holds 126 more.</p>
     </div>
   </section>
 

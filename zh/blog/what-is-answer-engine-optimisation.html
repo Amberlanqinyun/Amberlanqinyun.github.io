@@ -56,7 +56,7 @@
       "dateModified": "2026-10-02",
       "inLanguage": "zh-Hans",
       "articleSection": "AI 搜索",
-      "wordCount": 5153,
+      "wordCount": 5152,
       "timeRequired": "PT14M",
       "image": "https://www.flowai.co.nz/blog/figures/what-is-answer-engine-optimisation.svg",
       "author": {
@@ -185,6 +185,9 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=6">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
 <!-- Google Tag Manager (noscript) -->
@@ -196,10 +199,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
-      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
-      <span class="site-header__brand-text">Flow AI.</span>
+      <img class="site-header__brand-mark" src="/assets/flowai-mark.svg" width="24" height="24" alt="" aria-hidden="true">
+      <span class="site-header__brand-text">Flow <span class="wm-chip">AI</span></span>
     </a>
     <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/ai-marketing-services/">服务</a>
       <a href="/zh/sprints/">合作方式</a>
       <a href="/zh/blog/" aria-current="page">指南</a>
       <a href="/zh/about">关于我</a>
@@ -219,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="short-answer__label" id="short-answer-label">简短回答</p>
           <p class="short-answer__text">答案引擎优化（AEO）是让 ChatGPT、Perplexity、Gemini 和 Google AI 概览（AI Overviews）等 AI 答案引擎更容易找到你的企业、读懂你的业务，并在回答中提到你的工作。它建立在常规 SEO 之上：页面可被抓取，事实写得清楚，直接回答真实问题，并且有其他可信网站提到你的企业。</p>
         </aside>
-        <p class="lead">过去客户会输入 Google 的问题，如今有越来越多交给 AI 工具来回答，而 AI 在回答时只会点名少数几家企业。<b>这份指南讲的是，一家 5 到 50 人的企业如何成为被点名的那几家之一。</b></p>
+        <p class="lead">过去客户会输入 Google 的问题，如今越来越多交给 AI 工具来回答，而 AI 在回答时只会点名少数几家企业。<b>这份指南讲的是，一家 5 到 50 人的企业如何成为被点名的那几家之一。</b></p>
         <p class="byline small"><span><a href="/zh/about">Amber Lan</a>，AI 营销工程师</span><span aria-hidden="true">·</span><span>更新于 <time datetime="2026-10-02">2026年10月2日</time></span><span aria-hidden="true">·</span><span>14 分钟阅读</span></p>
       </div>
     </div>
@@ -271,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Google Search Console 和 Bing Webmaster Tools 这两个免费后台，就能覆盖其中大部分引擎。<a class="go" href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI 关于 ChatGPT 搜索的帮助页面说明，它会把改写后的查询发送给合作伙伴搜索提供商，其中包括 Microsoft（Bing）</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。它还可能传递基于 IP 的大致位置，于是“附近的电工”就变成了一次本地搜索。</p>
 
 <h2 id="why-aeo-matters-for-a-small-business-now"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">为什么 AEO 对小企业来说现在就很重要</span></h2>
-<p>AEO 现在就重要，是因为越来越多的搜索在答案里就结束了。人们仍在搜索，Google 的查询量也还在增长，但真正把人带到网站上的搜索越来越少。当客户读完答案就停下，在答案中被点名，承担的就是过去排名第一页的作用。</p>
+<p>AEO 现在就重要，是因为越来越多的搜索在答案里就结束了。人们仍在搜索，Google 的查询量也还在增长，但真正把人带到网站上的搜索越来越少。客户读完答案就停下时，在答案中被点名，起的就是过去排进第一页的作用。</p>
 <p><a class="go" href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener">皮尤研究中心（Pew Research Center）在 2025年3月追踪了 900 名美国成年人的 68,879 次 Google 搜索，发现出现 AI 摘要时，人们在 8% 的访问中点击了传统搜索结果；没有 AI 摘要时，这一比例为 15%</a><sup class="fn"><a href="#source-2" aria-label="来源 2">2</a></sup>。只有 1% 的访问点击了摘要内部的链接。<a class="go" href="https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/" target="_blank" rel="noopener">SparkToro 2026 年的研究基于 Similarweb 2026年1月至4月的点击流数据，发现 68.01% 的美国 Google 搜索以零点击结束</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>，高于 2024 年的 60.45%。这两组都是美国数据，新西兰目前还没有同类测量（术语表对<a class="go" href="/zh/glossary/#zero-click-search">零点击搜索</a>有定义）。</p>
 <p>搜索量则是另一回事。2024年2月，<a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents" target="_blank" rel="noopener">Gartner 预测到 2026 年，传统搜索引擎的搜索量将下降 25%</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>，因为人们会转向聊天机器人。这是 2024 年初做出的预测。此后 Google 公布的数字却指向相反的方向：<a class="go" href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2025/" target="_blank" rel="noopener">在 Alphabet 2025 年第二季度财报电话会议上，Sundar Pichai 表示 AI 概览的月用户已超过 20 亿，并且在会显示 AI 概览的查询类型中，带来了超过 10% 的查询增长</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>。人们搜索得更多，点击得更少。</p>
 <p>聊天工具也已成为主流。<a class="go" href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener">OpenAI 在 DevDay 2026 上表示，其产品合计触达 12 亿周用户</a><sup class="fn"><a href="#source-6" aria-label="来源 6">6</a></sup>，这个数字涵盖其全部产品，ChatGPT 也在其中。<a class="go" href="https://openai.com/index/how-people-are-using-chatgpt/" target="_blank" rel="noopener">OpenAI 在 2025年9月发布的研究分析了 150 万段 ChatGPT 对话，发现 49% 的消费者消息是在寻求信息或建议</a><sup class="fn"><a href="#source-7" aria-label="来源 7">7</a></sup>。</p>
@@ -368,7 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="sources" aria-labelledby="sources-title">
   <h2 id="sources-title" class="sources__title">资料来源</h2>
-  <p class="sources__note">每个数据都链接到一手来源。核对于 2026年10月2日。</p>
+  <p class="sources__note">每个数据都附有一手来源链接，最近核对：2026年10月2日。</p>
   <ol class="sources__list">
 <li id="source-1"><a href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI 关于 ChatGPT 搜索的帮助页面说明，它会把改写后的查询发送给合作伙伴搜索提供商，其中包括 Microsoft（Bing）</a> <span class="src-host">help.openai.com</span></li>
 <li id="source-2"><a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener">皮尤研究中心（Pew Research Center）在 2025年3月追踪了 900 名美国成年人的 68,879 次 Google 搜索，发现出现 AI 摘要时，人们在 8% 的访问中点击了传统搜索结果；没有 AI 摘要时，这一比例为 15%</a> <span class="src-host">pewresearch.org</span></li>
@@ -471,16 +475,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/ai-marketing-services/">服务</a>
       <a href="/zh/sprints/">合作方式</a>
       <a href="/zh/work">作品</a>
       <a href="/zh/blog/">指南</a>
       <a href="/zh/templates/">免费模板</a>
       <a href="/zh/about">关于我</a>
       <a href="/zh/manifesto">宣言</a>
+      <a href="/zh/dot">这颗点</a>
     </nav>
   </div>
   <div class="site-footer__bar">
-    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><img class="site-footer__mark" src="/assets/flowai-mark.svg" width="18" height="18" alt="" aria-hidden="true"><span class="site-footer__wm">Flow <span class="wm-chip">AI</span></span></a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
     <span class="site-footer__social">
       <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
       <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>

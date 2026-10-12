@@ -56,7 +56,7 @@
       "dateModified": "2026-10-08",
       "inLanguage": "zh-Hans",
       "articleSection": "成本与选择",
-      "wordCount": 4391,
+      "wordCount": 4426,
       "timeRequired": "PT12M",
       "image": "https://www.flowai.co.nz/blog/figures/ai-advisory-pilot-nz.svg",
       "author": {
@@ -104,7 +104,7 @@
           "name": "AI 咨询试点计划和管理能力发展基金可以一起用吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "有可能，但要用在不同的事情上。试点计划资助规划和落地 AI 的专家帮助，管理能力发展基金则补贴管理培训。RBPN 的合规服务主题页面排除了已通过其他政府资金获得补贴的服务，所以同一项服务不能被付两次钱。能否同时使用两者，取决于你的具体情况，所以在投入任何一项之前，先问问你的增长顾问。"
+            "text": "有可能，但要用在不同的事情上。试点计划资助规划和落地 AI 的专家帮助，管理能力发展基金则补贴管理培训。RBPN 的合规服务主题页面排除了已通过其他政府资金获得补贴的服务，所以同一项服务不能重复获得补贴。能否同时使用两者，取决于你的具体情况，所以在投入任何一项之前，先问问你的增长顾问。"
           }
         },
         {
@@ -183,6 +183,9 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=6">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
 <!-- Google Tag Manager (noscript) -->
@@ -194,10 +197,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
-      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
-      <span class="site-header__brand-text">Flow AI.</span>
+      <img class="site-header__brand-mark" src="/assets/flowai-mark.svg" width="24" height="24" alt="" aria-hidden="true">
+      <span class="site-header__brand-text">Flow <span class="wm-chip">AI</span></span>
     </a>
     <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/ai-marketing-services/">服务</a>
       <a href="/zh/sprints/">合作方式</a>
       <a href="/zh/blog/" aria-current="page">指南</a>
       <a href="/zh/about">关于我</a>
@@ -263,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>算一笔账：一份花费 $5,000 的路线图，最多可获得 $2,500 资助；一个花费 $25,000 的实施项目，最多可获得 $12,500 资助。超出这些金额后，资助停在上限，其余由企业支付。官方页面没有说明上限是否含 GST，请问你的增长顾问。如果想和无补贴的价格做对比，可以看<a class="go" href="/zh/blog/ai-marketing-cost-australia-new-zealand">澳大利亚和新西兰 AI 营销成本指南</a>。</p>
 
 <h2 id="who-is-eligible-for-the-ai-advisory-pilot"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">谁有资格申请 AI 咨询试点计划？</span></h2>
-<p>符合资格的企业需要有新西兰企业编号（NZBN），全职当量员工少于 50 人，并且经营已经成型、准备好探索 AI 的实际用途。毛利信托和毛利法人团体也包括在内。目标必须是提升企业自身的生产力和效率，这基本符合大多数对 AI 感兴趣的 5 到 49 人企业。</p>
+<p>符合资格的企业需要有新西兰企业编号（NZBN），全职当量员工少于 50 人，并且经营已经成型、准备好探索 AI 的实际用途。毛利信托和毛利法人团体也包括在内。目标必须是提升企业自身的生产力和效率，大多数对 AI 感兴趣的 5 到 49 人企业基本都符合。</p>
 <p>business.govt.nz 上的条件，核对于 2026年10月8日：</p>
 <ul>
   <li><b>企业类型。</b>拥有 NZBN 的新西兰企业，包括毛利信托和毛利法人团体。</li>
@@ -271,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li><b>阶段。</b>已经成型，准备好探索 AI 的实际用途。</li>
   <li><b>目标。</b>用 AI 提升生产力和效率。</li>
 </ul>
-<p>规模标准按 FTE 计算，所以一家在册员工超过 50 人、其中部分为兼职的企业，仍可能在线以下。页面没有用经营年限来定义“已经成型”，这由你的增长顾问判断。</p>
+<p>规模标准按 FTE 计算，所以一家在册员工超过 50 人、其中部分为兼职的企业，仍可能低于这条线。页面没有用经营年限来定义“已经成型”，这由你的增长顾问判断。</p>
 
 <h2 id="what-the-ai-advisory-pilot-will-not-pay-for"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">AI 咨询试点计划不资助哪些内容</span></h2>
 <p>试点计划排除以下内容：为销售而开发的 AI 产品或服务，一般性的软件或产品开发，与落地 AI 无关的培训，资助批准前已完成的工作，以及超出约定项目范围的费用。最后两项最常让企业主吃亏：开工太早，或者让范围不断蔓延，这部分花费就只能自己承担。</p>
@@ -291,12 +295,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li>等资助批准之后再开始任何工作。</li>
 </ol>
 <p>截止日期变过，这也是较早的文章说法不一的原因。试点计划最初计划运行六个月，2026年5月延期至 2027年1月31日。2026年9月22日，<a class="go" href="https://insidegovernment.co.nz/government-to-extend-ai-advisory-pilot-for-small-business/" target="_blank" rel="noopener">Inside Government 报道了部长的宣布：试点计划将运行至 2027年6月30日，并新增 120 个名额</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>，自 1月以来已有约 150 家企业加入。business.govt.nz 页面现在显示的官方日期是 2027年6月30日。</p>
-<p>由于名额有限且以竞争方式分配，实际的截止时间可能会更早到来。请和你的增长顾问确认当前日期和剩余名额。</p>
+<p>由于名额有限且以竞争方式分配，实际截止时间可能更早。请和你的增长顾问确认当前日期和剩余名额。</p>
 
 <h2 id="what-is-the-management-capability-development-fund"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">什么是管理能力发展基金？</span></h2>
 <p>管理能力发展基金（Management Capability Development Fund）是 RBPN 另一项独立的管理培训补贴。它最多资助一对一培训费用的 50%、小组培训费用的 75%，每家企业每年上限 $5,000，因此企业分别至少承担 50% 或 25%。营销属于合规主题，AI 则作为小组数字工具主题出现。</p>
 <p><a class="go" href="https://www.business.govt.nz/browse-our-resource-library/funding-explorer/management-capability-development-fund" target="_blank" rel="noopener">business.govt.nz 上管理能力发展基金页面（最近编辑于 2026年8月3日）把上限定为每家企业每年 $5,000</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>，并把营销、战略以及数字技术与工具列入培训领域。规模规定与试点计划一致：全职当量少于 50 人、已经成型的新西兰企业，包括管理毛利资产的毛利信托和毛利法人团体。资金用完即止，且只用于由注册服务商提供的、经批准的培训。</p>
-<p>细节在 <a class="go" href="https://www.business.govt.nz/strategy-and-performance/regional-business-partner-network/eligible-service-subjects" target="_blank" rel="noopener">RBPN 合规服务主题页面（最近审阅于 2025年7月21日），其中把 AI 列在小组数字工具培训之下</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>。就营销和 AI 而言，有两点值得注意：</p>
+<p>细节见 <a class="go" href="https://www.business.govt.nz/strategy-and-performance/regional-business-partner-network/eligible-service-subjects" target="_blank" rel="noopener">RBPN 合规服务主题页面（最近审阅于 2025年7月21日），其中把 AI 列在小组数字工具培训之下</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>。就营销和 AI 而言，有两点值得注意：</p>
 <ul>
   <li><b>营销在两种形式下都符合资格。</b>小组（一对多）培训涵盖营销基础。一对一培训涵盖营销策略，包括“数字营销策略和社交媒体规划”。</li>
   <li><b>AI 出现在小组培训里。</b>人工智能位于一对多的数字工具主题中，和 CRM、预约系统并列。一对一清单里没有点名 AI。</li>
@@ -338,10 +342,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <ol>
   <li><b>你的 NZBN</b>和企业法定名称。</li>
   <li><b>你的 FTE 人数</b>，按工时折算。</li>
-  <li><b>两三项任务</b>，AI 可能帮得上忙的，比如回复咨询或做月度报告，并写明每项每周花多少小时。</li>
+  <li><b>两三项任务</b>，即 AI 可能帮得上忙的工作，比如回复咨询或做月度报告，并写明每项每周花多少小时。</li>
   <li><b>你已经在付费使用的工具</b>，因为大多数 AI 工作都会接入你的 CRM、账务系统或网站。</li>
   <li><b>企业内部的一位负责人</b>，在服务商离开后负责审核 AI 产出：也就是你的<a class="go" href="/zh/glossary/#human-in-the-loop">人工把关（human in the loop）</a>。</li>
-  <li><b>你那一份的预算</b>，每个阶段至少一半，再加上范围之外的任何花费。</li>
+  <li><b>你自付部分的预算</b>，每个阶段至少一半，再加上范围之外的任何花费。</li>
   <li><b>任何已经在进行的工作。</b>批准之前完成的工作不予资助。</li>
 </ol>
 <p>如果你预计 AI 主要帮在营销上，<a class="go" href="/zh/blog/ai-marketing-strategy-small-business">小企业 AI 营销策略指南</a>能让路线图阶段更聚焦，<a class="go" href="/zh/blog/ai-marketing-transformation-small-business">AI 营销转型指南</a>则展示了落地实施是什么样子。</p>
@@ -354,12 +358,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li>这些工具和自动化会运行在我企业自己名下的账号上吗？</li>
   <li>你们会培训我团队里的谁来运行它，交接之后的支持持续多久？</li>
   <li>我们怎么衡量它是否有效，从我给你们的那些小时数算起？</li>
-  <li>你们和推荐的软件之间是否独立，还是会转售或从中拿佣金？</li>
+  <li>你们推荐软件时是独立的，还是会转售或从中拿佣金？</li>
 </ul>
 <p>有些服务商已经公开了自己的身份。<a class="go" href="https://www.theicehouse.co.nz/blog/icehouse-announced-as-a-partner-in-mbies-ai-initiative" target="_blank" rel="noopener">The Icehouse 在 2026年1月22日宣布，已被选为 RBPN AI 咨询试点计划的获批服务商</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>，技术方面与 Harnex 合作。最新名单请向你的增长顾问索取。<a class="go" href="/zh/blog/ai-agency-vs-ai-consultant-nz">新西兰 AI 代理机构与 AI 顾问指南</a>讲了顾问和搭建者有什么不同。</p>
 
 <h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">10</span><span class="sec-title">Flow AI 的位置</span></h2>
 <p>Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。Flow AI 并非 AI 咨询试点计划的获批服务商，也不是 RBPN 注册服务商，所以和 Flow AI 的合作无法通过这两个项目获得资助。</p>
+<p>如果是试点计划之外的工作，<a class="go" href="/zh/ai-marketing-services/new-zealand">Flow AI 在新西兰的 AI 营销服务</a>说明了合同制搭建怎么进行。</p>
 <p>Amber Lan 是奥克兰的一位 AI 营销工程师，在企业自己的账号上搭建营销系统。Flow AI 可以为其他服务商写的路线图提供第二份意见，也可以在这两项基金之外承接合同制搭建。<a class="go" href="/zh/skills/">技能库</a>是公开的。</p>
 
 <h2 id="the-short-version"><span class="sec-num" aria-hidden="true">11</span><span class="sec-title">简要总结</span></h2>
@@ -371,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="faq" id="faq" aria-labelledby="faq-title">
   <h2 id="faq-title"><span class="sec-num" aria-hidden="true">12</span><span class="sec-title">企业主常问的问题</span></h2>
   <div class="faq__list">
-<details class="faq__item" open><summary><h3>AI 咨询试点计划和管理能力发展基金可以一起用吗？</h3></summary><p>有可能，但要用在不同的事情上。试点计划资助规划和落地 AI 的专家帮助，管理能力发展基金则补贴管理培训。RBPN 的合规服务主题页面排除了已通过其他政府资金获得补贴的服务，所以同一项服务不能被付两次钱。能否同时使用两者，取决于你的具体情况，所以在投入任何一项之前，先问问你的增长顾问。</p></details>
+<details class="faq__item" open><summary><h3>AI 咨询试点计划和管理能力发展基金可以一起用吗？</h3></summary><p>有可能，但要用在不同的事情上。试点计划资助规划和落地 AI 的专家帮助，管理能力发展基金则补贴管理培训。RBPN 的合规服务主题页面排除了已通过其他政府资金获得补贴的服务，所以同一项服务不能重复获得补贴。能否同时使用两者，取决于你的具体情况，所以在投入任何一项之前，先问问你的增长顾问。</p></details>
 <details class="faq__item"><summary><h3>AI 咨询试点计划什么时候截止？</h3></summary><p>截至 2026年10月8日，business.govt.nz 显示 AI 咨询试点计划开放至 2027年6月30日。较早的报道写的是 2027年1月31日，那是部长在 2026年9月宣布延期之前的截止日期。资金有限且以竞争方式分配，所以名额可能在官方日期之前就用完。请向 RBPN 增长顾问确认当前的截止日期和剩余名额。</p></details>
 <details class="faq__item"><summary><h3>参加 AI 咨询试点计划，我的企业要自己付多少？</h3></summary><p>至少 50% 的合规费用。资助最多覆盖一半，AI 路线图上限 $2,500，落地实施上限 $12,500，所以一家拿到全额 $15,000 的企业，自己在合规费用上至少花了 $30,000。超出约定范围的工作，或在批准之前完成的工作，全部由企业自付。GST 如何处理，请问你的增长顾问。</p></details>
 <details class="faq__item"><summary><h3>我的企业对 AI 咨询试点计划来说太大还是太小？</h3></summary><p>上限是全职当量（FTE）员工少于 50 人。企业还需要有新西兰企业编号（NZBN），并且已经成型、准备好探索 AI 的实际用途。官方页面没有列出最低规模，但也没有定义什么算“已经成型”，所以非常新的企业应先和增长顾问确认。这个上限按 FTE 计算，如果有员工兼职，FTE 可能低于实际人数。</p></details>
@@ -387,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="sources" aria-labelledby="sources-title">
   <h2 id="sources-title" class="sources__title">资料来源</h2>
-  <p class="sources__note">每个数据都链接到一手来源。核对于 2026年10月8日。</p>
+  <p class="sources__note">每个数据都附有一手来源链接，最近核对：2026年10月8日。</p>
   <ol class="sources__list">
 <li id="source-1"><a href="https://www.business.govt.nz/browse-our-resource-library/funding-explorer/ai-advisory-pilot" target="_blank" rel="noopener">business.govt.nz 资助查询（Funding Explorer）中 AI 咨询试点计划页面（最近审阅于 2026年9月22日）列出了两个阶段</a> <span class="src-host">business.govt.nz</span></li>
 <li id="source-2"><a href="https://www.hcamag.com/nz/specialisation/hr-technology/new-zealand-expands-ai-advisory-pilot-after-strong-demand/575714" target="_blank" rel="noopener">据 Human Resources Director 在 2026年5月19日的报道，小企业与制造业部长 Cameron Brewer 已将试点规模从 50 家企业扩大到 150 家</a> <span class="src-host">hcamag.com</span></li>
@@ -478,16 +483,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/ai-marketing-services/">服务</a>
       <a href="/zh/sprints/">合作方式</a>
       <a href="/zh/work">作品</a>
       <a href="/zh/blog/">指南</a>
       <a href="/zh/templates/">免费模板</a>
       <a href="/zh/about">关于我</a>
       <a href="/zh/manifesto">宣言</a>
+      <a href="/zh/dot">这颗点</a>
     </nav>
   </div>
   <div class="site-footer__bar">
-    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><img class="site-footer__mark" src="/assets/flowai-mark.svg" width="18" height="18" alt="" aria-hidden="true"><span class="site-footer__wm">Flow <span class="wm-chip">AI</span></span></a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
     <span class="site-footer__social">
       <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
       <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>

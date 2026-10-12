@@ -1,0 +1,586 @@
+/* Flow AI · high-end layer (Oct 2026).
+
+   Loaded last on every page, after claude.css. One stylesheet carries the
+   whole treatment, so removing its one link puts the site back exactly as
+   it was. Colours do not move: warm ink, cream type, one amber. What moves:
+
+   1. The header is a floating glass island, not a bar glued to the top. On
+      phones the links fold into a full-screen menu (assets/nav.js) behind a
+      hamburger that turns into a cross.
+   2. Buttons are pills. The primary button carries its arrow inside a small
+      circle of its own, and answers the hand: a lift on hover, a press on
+      click, the circle leaning into the corner.
+   3. Panels are machined, not drawn: an inner core with a highlight along
+      its top edge, a hairline, and a second ring just outside it, so a card
+      reads as a plate sitting in a tray. Shadows are tinted to the ink.
+   4. Amber light sits behind the hero object and behind the closer.
+   5. Everything that moves uses one spring curve. Blocks arrive from a
+      little lower and a little blurred, then settle.
+
+   Every rule is additive. Nothing hides content, nothing changes a text
+   colour, and every entrance is gated to visitors who allow motion. */
+
+:root {
+  --pill: 999px;
+  --r-xl: 2rem;
+  --r-lg: 1.5rem;
+  --r-md: 1rem;
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --shell: rgba(250, 248, 243, 0.035);
+  --shell-line: rgba(250, 248, 243, 0.075);
+  --core: #121211;
+  --core-line: rgba(250, 248, 243, 0.1);
+  --highlight: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --ambient: 0 32px 80px -40px rgba(5, 4, 2, 0.9), 0 12px 32px -20px rgba(5, 4, 2, 0.7);
+  --ring: 0 0 0 1px var(--core-line), 0 0 0 6px var(--shell), 0 0 0 7px var(--shell-line);
+  --section: clamp(6.5rem, 12vw, 10.5rem);
+  --space-block: clamp(4rem, 8vw, 6.5rem);
+}
+
+/* ---- Ground ------------------------------------------------------------
+   The blueprint rails and the hairline between sections step aside: the
+   plates and the light carry the structure now. The grain stays. */
+body::before, body::after { display: none; }
+section { padding-block: var(--section) calc(var(--section) * 0.9); }
+section + section::before { display: none; }
+.skip-link { border-radius: var(--pill); }
+
+/* ---- Type --------------------------------------------------------------- */
+h1 { letter-spacing: -0.04em; }
+h2 { letter-spacing: -0.032em; }
+
+/* The label above a heading is a small machined pill. */
+.stack > .eyebrow {
+  display: inline-flex; align-items: center;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--core-line); border-radius: var(--pill);
+  background: var(--shell); box-shadow: var(--highlight);
+  color: var(--soft);
+  font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  line-height: 1.3; text-align: center;
+}
+.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: var(--s-6); }
+@media (max-width: 640px) {
+  .stack > .eyebrow { padding: 0.4rem 0.8rem; font-size: 10px; letter-spacing: 0.1em; }
+}
+
+/* ---- Buttons ------------------------------------------------------------ */
+.btn, .site-header__nav .site-header__cta, .dm-btn {
+  position: relative; overflow: visible;
+  gap: 0.7rem;
+  min-height: 48px; padding: 0 1.4rem;
+  border-radius: var(--pill);
+  font-size: 14.5px; font-weight: 500; letter-spacing: -0.005em;
+  transform: translateZ(0);
+  transition:
+    transform 560ms var(--ease-spring),
+    background-color 320ms var(--ease-out),
+    border-color 320ms var(--ease-out),
+    color 320ms var(--ease-out),
+    box-shadow 560ms var(--ease-spring);
+}
+.btn-secondary {
+  border-color: var(--core-line); background: var(--shell);
+  box-shadow: var(--highlight);
+}
+.btn-secondary:hover { border-color: var(--hair-strong); background: rgba(250, 248, 243, 0.06); }
+
+/* The primary button and its nested arrow */
+.btn-primary, .site-header__nav .site-header__cta, .site-menu .site-header__cta {
+  padding: 0 0.4rem 0 1.3rem;
+  background: var(--accent); color: var(--ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 12px 30px -14px rgba(228, 164, 60, 0.6);
+}
+.btn-primary::before, .site-header__nav .site-header__cta::before { content: none; }
+.btn-primary::after, .site-header__nav .site-header__cta::after, .site-menu .site-header__cta::after {
+  content: "\2197";
+  position: static; inset: auto;
+  display: grid; place-items: center;
+  width: 30px; height: 30px; flex: none;
+  border-radius: 50%;
+  background: rgba(14, 14, 13, 0.1);
+  color: var(--ink);
+  font-size: 13px; font-weight: 600; line-height: 1;
+  opacity: 1; pointer-events: none;
+  transform: none;
+  transition: transform 560ms var(--ease-spring), background-color 320ms var(--ease-out);
+}
+.btn-primary:hover, .hero .btn-primary:hover, .site-header__nav .site-header__cta:hover, .site-menu .site-header__cta:hover {
+  filter: none; background: #ebb04a; color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), 0 16px 36px -14px rgba(228, 164, 60, 0.7);
+}
+.btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
+  transform: translate(2px, -2px) scale(1.06);
+  background: rgba(14, 14, 13, 0.16);
+}
+.btn:active, .btn-primary:active, .site-header__nav .site-header__cta:active, .site-menu .site-header__cta:active {
+  transform: scale(0.98); filter: none;
+}
+.site-header__nav .site-header__cta { min-height: 40px; }
+.site-header__nav .site-header__cta::after { width: 26px; height: 26px; font-size: 12px; }
+
+.cta-row { gap: var(--s-4) var(--s-6); }
+@media (max-width: 720px) {
+  .btn, .dm-btn { width: auto; }
+}
+
+/* ---- The island: a floating glass pill ---------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 75;
+  border: 0; background: transparent;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  padding: 14px 0 0;
+  pointer-events: none;
+}
+.site-header__inner {
+  position: relative; z-index: 2;
+  pointer-events: auto;
+  width: max-content; max-width: calc(100% - var(--gutter) * 2);
+  min-height: 0; margin-inline: auto;
+  padding: 6px 6px 6px 16px; gap: 18px;
+  border: 1px solid rgba(250, 248, 243, 0.1); border-radius: var(--pill);
+  background: rgba(14, 14, 13, 0.74);
+  -webkit-backdrop-filter: blur(22px) saturate(140%); backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 24px 60px -28px rgba(5, 4, 2, 0.85);
+}
+.site-header__brand { font-size: 15px; gap: 10px; }
+.site-header__brand-mark { width: 24px; height: 24px; flex-basis: 24px; }
+.site-header__nav { gap: 2px; }
+.site-header__nav > a:not(.site-header__cta) {
+  padding: 9px 12px; border-radius: var(--pill);
+  color: rgba(250, 248, 243, 0.7);
+  transition: color 240ms var(--ease-out), background-color 240ms var(--ease-out), transform 240ms var(--ease-out);
+}
+.site-header__nav > a:not(.site-header__cta):hover,
+.site-header__nav > a[aria-current="page"] { color: var(--fg); background: rgba(250, 248, 243, 0.06); }
+.site-header__nav .lang-switch { margin: 0 6px 0 4px; }
+.site-header__nav .site-header__cta { margin-left: 2px; }
+@media (prefers-reduced-transparency: reduce) {
+  .site-header { background: transparent; }
+  .site-header__inner { background: #0e0e0d; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* The hamburger, drawn only once nav.js has built the menu */
+.site-header__menu { display: none; }
+.site-menu { display: none; }
+
+@media (max-width: 820px) {
+  .site-header { padding-top: 10px; }
+  .site-header__inner {
+    width: calc(100% - var(--gutter) * 2); max-width: none;
+    flex-wrap: wrap; justify-content: space-between;
+    gap: 6px 12px; padding: 6px 6px 6px 14px;
+    border-radius: 28px;
+  }
+  .site-header__brand { order: 0; min-height: 40px; }
+  /* Without the script, the links stay in a row beneath the brand. */
+  .site-header__nav {
+    order: 2; width: 100%; justify-content: flex-start;
+    gap: 2px; padding: 2px 0 4px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .site-header__nav > a:not(.site-header__cta) { padding: 9px 10px; font-size: 14px; }
+  .site-header__nav .site-header__cta {
+    position: static; order: 9; margin-left: auto;
+    min-height: 40px; font-size: 13px; padding: 0 0.35rem 0 1rem;
+  }
+  /* With the script, the pill holds brand, button and the hamburger. */
+  .has-nav .site-header__inner { flex-wrap: nowrap; border-radius: var(--pill); gap: 10px; }
+  .has-nav .site-header__nav { order: 0; width: auto; padding: 0; gap: 8px; overflow: visible; }
+  .has-nav .site-header__nav > a:not(.site-header__cta),
+  .has-nav .site-header__nav .lang-switch { display: none; }
+  .has-nav .site-header__nav .site-header__cta { margin-left: 0; }
+  .has-nav .site-header__menu {
+    position: relative; display: inline-grid; place-items: center;
+    width: 40px; height: 40px; flex: none; padding: 0;
+    appearance: none; cursor: pointer;
+    border: 1px solid rgba(250, 248, 243, 0.12); border-radius: 50%;
+    background: rgba(250, 248, 243, 0.04); color: var(--fg);
+    transition: background-color 240ms var(--ease-out), border-color 240ms var(--ease-out);
+  }
+  .has-nav .site-header__menu:hover { background: rgba(250, 248, 243, 0.08); }
+  .has-nav .site-header__menu:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .site-header__menu span {
+    position: absolute; left: 11px; top: 19px;
+    width: 16px; height: 1.5px; border-radius: 2px;
+    background: currentColor;
+    transition: transform 520ms var(--ease-spring);
+  }
+  .site-header__menu span:nth-child(1) { transform: translateY(-4px); }
+  .site-header__menu span:nth-child(2) { transform: translateY(4px); }
+  .site-header__menu[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg); }
+  .site-header__menu[aria-expanded="true"] span:nth-child(2) { transform: rotate(-45deg); }
+
+  /* The menu: a screen of heavy glass, links rising in one by one */
+  .site-menu {
+    position: fixed; inset: 0; z-index: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 96px var(--gutter) 40px;
+    pointer-events: auto;
+    background: rgba(14, 14, 13, 0.86);
+    -webkit-backdrop-filter: blur(28px) saturate(140%); backdrop-filter: blur(28px) saturate(140%);
+    opacity: 0;
+    transition: opacity 420ms var(--ease-out);
+  }
+  .site-menu[hidden] { display: none; }
+  .site-menu.is-open { opacity: 1; }
+  .site-menu__links { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+  .site-menu__links a {
+    display: block; padding: 12px 0;
+    color: var(--fg);
+    font-size: clamp(2rem, 8.5vw, 2.75rem); font-weight: 520; letter-spacing: -0.03em; line-height: 1.05;
+    opacity: 0; transform: translateY(32px);
+    transition: transform 720ms var(--ease-spring), opacity 480ms var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 70ms + 80ms);
+  }
+  .site-menu__links a[aria-current="page"] { color: var(--accent); }
+  .site-menu.is-open .site-menu__links a { opacity: 1; transform: none; }
+  .site-menu__foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--hair);
+    opacity: 0; transform: translateY(16px);
+    transition: transform 720ms var(--ease-spring) 340ms, opacity 480ms var(--ease-out) 340ms;
+  }
+  .site-menu.is-open .site-menu__foot { opacity: 1; transform: none; }
+  .site-menu .site-header__cta {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    min-height: 48px; padding: 0 0.4rem 0 1.3rem;
+    border-radius: var(--pill); font-size: 15px; font-weight: 500; line-height: 1;
+    text-decoration: none;
+  }
+  .site-menu .lang-switch {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border: 1px solid rgba(250, 248, 243, 0.16); border-radius: var(--pill);
+    font-size: 13px; line-height: 1;
+  }
+  .site-menu .lang-switch a { color: rgba(250, 248, 243, 0.55); font-weight: 560; }
+  .site-menu .lang-switch a[aria-current="true"] { color: var(--fg); }
+  .site-menu .lang-switch__sep { color: rgba(250, 248, 243, 0.24); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+}
+
+/* ---- Panels: core, ring, tray -------------------------------------------- */
+.bezel {
+  padding: 6px;
+  border: 1px solid var(--shell-line); border-radius: var(--r-xl);
+  background: var(--shell);
+  box-shadow: var(--highlight), var(--ambient);
+}
+.bezel > * { border-radius: calc(var(--r-xl) - 6px); }
+
+.shell,
+.outcome, .proof-card.proof-text, .install, .offer, .sx__doc, .form-thanks, .flagship, .team__hq, .versus::before {
+  border: 1px solid transparent; border-radius: var(--r-lg);
+  background: var(--core);
+  box-shadow: var(--highlight), var(--ring), var(--ambient);
+}
+
+/* Grids of smaller tiles keep a single hairline, so rings never collide. */
+.team__col, .poss, .rule, .pp-card, .path, .glass, .tpl-card, .grid > .part.case, .split__col, .buys-band .fig, .pp-table, .pp-contact, .compound, .team__review {
+  border-radius: var(--r-lg);
+  box-shadow: var(--highlight);
+}
+.glass, .team__col, .poss, .rule, .pp-card, .path, .grid > .part.case { background: var(--shell); }
+
+/* Linked panels answer the cursor */
+@media (prefers-reduced-motion: no-preference) {
+  a.proof-card, a.part.case, a.path, .flagship, .glass {
+    transition: transform 560ms var(--ease-spring), border-color 320ms var(--ease-out), background-color 320ms var(--ease-out), box-shadow 560ms var(--ease-spring);
+  }
+  a.proof-card:hover, a.part.case:hover, a.path:hover, a.flagship:hover {
+    transform: translateY(-4px);
+  }
+  a.proof-card:hover { box-shadow: var(--highlight), var(--ring), 0 40px 90px -40px rgba(5, 4, 2, 0.95), 0 16px 36px -20px rgba(5, 4, 2, 0.75); }
+}
+
+/* ---- The hero: the one lit object --------------------------------------- */
+.hero { padding-top: clamp(5rem, 9vw, 7rem); overflow: clip; }
+.hero::before, .hero::after {
+  content: ""; display: block; position: absolute; z-index: 0;
+  border: 0; height: auto; width: auto; left: auto; top: auto;
+  border-radius: 50%; pointer-events: none; transform: none;
+}
+.hero::before {
+  left: 50%; bottom: -14%;
+  width: min(92vw, 72rem); height: 62%;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(228, 164, 60, 0.17), rgba(228, 164, 60, 0.05) 48%, transparent 74%);
+}
+.hero::after {
+  left: 14%; top: 4%;
+  width: 36rem; height: 36rem;
+  background: radial-gradient(closest-side, rgba(250, 248, 243, 0.05), transparent 72%);
+}
+.hero > .wrap { position: relative; z-index: 1; }
+
+.demo { margin-top: clamp(3.5rem, 7vw, 5rem); }
+.demo__win {
+  border-color: var(--core-line); border-radius: calc(var(--r-xl) - 6px);
+  background: var(--core);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.demo__note { margin-top: var(--s-5); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .demo {
+    opacity: 0; transform: translateY(28px) scale(0.985);
+    animation: he-settle 1200ms var(--ease-spring) 420ms forwards;
+  }
+  @keyframes he-settle { to { opacity: 1; transform: none; } }
+}
+
+/* ---- Home: the manifesto, as a split ------------------------------------ */
+.why-split {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(2.5rem, 6vw, 5.5rem); align-items: start; text-align: left;
+}
+.why-split > .stack { position: sticky; top: 6.5rem; }
+.pillars { display: grid; }
+.pillars .pillar {
+  display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+  gap: var(--s-5); align-items: start;
+  padding: var(--s-6) 0; border-top: 1px solid var(--hair);
+}
+.pillars .pillar:last-child { border-bottom: 1px solid var(--hair); }
+.pillars .pillar h3, .pillars .pillar p { margin: 0; }
+.pillars .pillar h3 { color: var(--fg); font-weight: 500; }
+.pillars .pillar p .text-link { display: inline; margin: 0; font-size: inherit; }
+@media (max-width: 900px) {
+  .why-split { grid-template-columns: 1fr; }
+  .why-split > .stack { position: static; }
+  .pillars .pillar { grid-template-columns: 1fr; gap: var(--s-3); }
+}
+
+/* ---- Home: the three outcomes, as a bento -------------------------------- */
+.outcomes { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 22px; }
+.outcome {
+  grid-column: span 12;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-top: 0;
+}
+.outcome:nth-child(1) {
+  grid-column: span 7;
+  background: radial-gradient(60% 55% at 100% 0%, rgba(228, 164, 60, 0.09), transparent 70%), var(--core);
+}
+.outcome:nth-child(2) { grid-column: span 5; }
+.outcome:nth-child(3) {
+  grid-column: span 12;
+  background: radial-gradient(38% 90% at 0% 50%, rgba(250, 248, 243, 0.04), transparent 70%), var(--core);
+}
+.outcome > p { max-width: 42ch; }
+.outcome:nth-child(3) .sys { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 var(--s-6); }
+.outcome:nth-child(3) .sys li { border-bottom: 1px solid var(--hair); }
+.outcome .arrow-link { margin-top: var(--s-2); }
+@media (max-width: 900px) {
+  .outcomes { gap: 18px; }
+  .outcome, .outcome:nth-child(1), .outcome:nth-child(2), .outcome:nth-child(3) { grid-column: span 12; }
+  .outcome:nth-child(3) .sys { grid-template-columns: 1fr; gap: 0; }
+  .outcome:nth-child(3) .sys li { border-bottom: 0; }
+  .outcome:nth-child(3) .sys li:last-child { border-bottom: 1px solid var(--hair); }
+}
+
+/* ---- Home: proof, install, questions ------------------------------------ */
+.proof-card.proof-text { padding: clamp(1.5rem, 3vw, 2.25rem); border-top: 0; }
+.proof-card.proof-text::before { margin-bottom: var(--s-6); }
+.install { padding: 1.1rem; gap: var(--s-3) var(--s-4); }
+.install code {
+  border-color: var(--core-line); border-radius: var(--pill);
+  background: rgba(250, 248, 243, 0.04); box-shadow: var(--highlight);
+}
+.copy-button { border-radius: var(--pill); border-color: var(--hair-strong); }
+.copy-button:hover { background: rgba(250, 248, 243, 0.06); }
+.install .small { margin-top: var(--s-1); }
+
+.faq summary::after {
+  display: grid; place-items: center;
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 1px solid var(--hair-strong); background: var(--shell);
+  font-size: 1.1rem; font-weight: 300;
+  transition: transform 520ms var(--ease-spring), background-color 240ms var(--ease-out), color 240ms var(--ease-out);
+}
+.faq summary:hover::after { background: rgba(250, 248, 243, 0.07); color: var(--fg); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+
+/* ---- Versus: the raised side sits in its tray ---------------------------- */
+.versus::before { border: 0; }
+
+/* ---- The closer, lit from behind ----------------------------------------- */
+.contact { overflow: clip; }
+.contact::before {
+  content: ""; display: block; position: absolute; z-index: 0;
+  left: 50%; top: 50%; width: min(92vw, 60rem); height: 72%;
+  transform: translate(-50%, -50%);
+  border: 0; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(228, 164, 60, 0.15), transparent 72%);
+}
+.contact > .wrap { position: relative; z-index: 1; }
+
+/* ---- Forms --------------------------------------------------------------- */
+input, textarea, select { border-radius: var(--r-md); }
+
+/* ---- Footer -------------------------------------------------------------- */
+.site-footer { background: transparent; border-top-color: var(--hair); }
+.site-footer__social a { width: 40px; height: 40px; border-radius: 50%; transition: color 240ms var(--ease-out), border-color 240ms var(--ease-out), background-color 240ms var(--ease-out), transform 560ms var(--ease-spring); }
+.site-footer__social a:hover { transform: translateY(-2px); }
+
+/* ---- Motion: arrive from below, a little blurred, then settle ------------ */
+.reveal {
+  transition: opacity 900ms var(--ease-spring), transform 900ms var(--ease-spring), filter 900ms var(--ease-spring);
+}
+.reveal.is-hidden { opacity: 0; transform: translateY(28px); filter: blur(6px); }
+[data-motion-item] {
+  transition: opacity 900ms var(--ease-spring), transform 900ms var(--ease-spring), filter 900ms var(--ease-spring);
+  transition-delay: calc(var(--motion-index, 0) * var(--motion-stagger));
+}
+[data-motion-item="hidden"] { transform: translate3d(0, 28px, 0); filter: blur(6px); }
+[data-motion-item][data-motion-card="hidden"] { transform: translate3d(0, 36px, 0) scale(0.985); }
+[data-motion-item="shown"] { filter: none; }
+.arrow-link::after { transition: transform 520ms var(--ease-spring); }
+.text-link { transition: border-color 240ms var(--ease-out), color 240ms var(--ease-out); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.is-hidden { opacity: 1; transform: none; filter: none; transition: none; }
+  .js .hero .demo { opacity: 1; transform: none; animation: none; }
+  .site-menu, .site-menu__links a, .site-menu__foot, .site-header__menu span,
+  .btn, .btn-primary::after, .site-header__nav .site-header__cta::after, .faq summary::after,
+  a.proof-card, a.part.case, a.path, .flagship, .site-footer__social a { transition: none; }
+  a.proof-card:hover, a.part.case:hover, a.path:hover, a.flagship:hover, .btn-primary:hover, .site-footer__social a:hover { transform: none; }
+}
+
+/* ---- The dot: Flow Intelligence as a light core, agents as solid cream ---- */
+/* The one glow the brand permits: the core is intelligence, not an object.   */
+.fdot { display: block; flex: none; overflow: visible; }
+.fdot--status { width: 26px; height: 26px; margin-left: auto; margin-right: 0.1rem; }
+.has-fdot .demo__status::before { display: none; }
+.fdot--side { width: 22px; height: 22px; margin-right: 0.5rem; }
+.demo__nav.is-here { display: flex; align-items: center; }
+.demo__nav.is-here span:first-of-type { flex: 1; }
+.fdot--run { width: 26px; height: 26px; margin-right: 0.45rem; vertical-align: middle; }
+.has-fdot .demo__side [data-run] { display: flex; align-items: center; }
+.fdot--lost { width: 112px; height: 112px; margin: 0 auto 0.5rem; }
+@media (max-width: 720px) { .fdot--run { width: 22px; height: 22px; } }
+.has-fdot .demo__side button::before { display: none; }
+/* The glance: on hover, the arrow circle on an amber button becomes the dot for a moment. */
+.btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
+  content: "";
+  background-color: rgba(14, 14, 13, 0.16);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cellipse cx='10.2' cy='15' rx='2.9' ry='3.1' fill='%230e0e0d'/%3E%3Cellipse cx='18.6' cy='15' rx='3.4' ry='3.6' fill='%230e0e0d'/%3E%3Ccircle cx='9.3' cy='13.9' r='.8' fill='%23faf8f3'/%3E%3Ccircle cx='17.5' cy='13.7' r='.9' fill='%23faf8f3'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+/* ---- The run: a one-time intro over the demo window ---------------------- */
+.demo__win { position: relative; }
+.demo__run {
+  position: absolute; inset: 0; z-index: 6;
+  display: grid; grid-template-rows: auto 1fr auto;
+  background: radial-gradient(60% 50% at 50% 55%, rgba(228, 164, 60, 0.08), transparent 70%), #121211;
+  opacity: 1; transition: opacity 640ms var(--ease-out);
+}
+.demo__run.is-done { opacity: 0; pointer-events: none; }
+.demo__run-top { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.25rem; border-bottom: 1px solid rgba(250, 248, 243, 0.08); }
+.demo__run-eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10.5px; letter-spacing: 0.2em; color: var(--soft); }
+.demo__run-skip { appearance: none; border: 1px solid rgba(250, 248, 243, 0.22); background: none; color: var(--fg); font: inherit; font-size: 12.5px; padding: 0.3rem 0.8rem; border-radius: 999px; cursor: pointer; }
+.demo__run-skip:hover { border-color: var(--fg); }
+.demo__run-stage { position: relative; min-height: 0; }
+.demo__run-stage > svg { position: absolute; left: 50%; top: 50%; width: min(60vh, 100%); height: 100%; transform: translate(-50%, -50%); overflow: visible; }
+.demo__run-msg { position: absolute; max-width: min(60%, 26rem); padding: 0.6rem 0.85rem; border-radius: 12px; font-size: 0.8125rem; line-height: 1.45; opacity: 0; transform: translateY(6px); transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out); }
+.demo__run-msg.is-on { opacity: 1; transform: none; }
+.demo__run-msg--you { top: 1.25rem; right: 1.5rem; background: #1b1b19; color: var(--fg); border: 1px solid rgba(250, 248, 243, 0.1); }
+.demo__run-msg--dot { bottom: 1.25rem; left: 1.5rem; background: rgba(228, 164, 60, 0.12); color: var(--fg); border: 1px solid rgba(228, 164, 60, 0.25); }
+.demo__run-foot { display: grid; gap: 0.5rem; padding: 0.8rem 1.25rem 1rem; border-top: 1px solid rgba(250, 248, 243, 0.08); }
+.demo__run-cap { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg); min-height: 1em; }
+.demo__run-bar { display: block; height: 2px; background: rgba(250, 248, 243, 0.1); border-radius: 2px; overflow: hidden; }
+.demo__run-bar b { display: block; height: 100%; width: 0; background: var(--accent); transition: width 200ms linear; }
+@media (max-width: 720px) { .demo__run-msg { max-width: 80%; font-size: 0.75rem; } }
+@media (prefers-reduced-motion: reduce) { .demo__run { display: none; } }
+.demo__run-stage > svg { width: min(56vh, 92%); }
+.demo__run-msg--ok { bottom: 1.25rem; right: 1.5rem; background: #1b1b19; color: var(--fg); border: 1px solid rgba(250, 248, 243, 0.1); }
+.demo__run-cards { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); width: min(44%, 22rem); display: grid; gap: 0.4rem; pointer-events: none; }
+.demo__run-card { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.55rem 0.75rem; border: 1px solid rgba(250, 248, 243, 0.1); border-radius: 10px; background: rgba(27, 27, 25, 0.9); font-size: 0.75rem; color: var(--fg); opacity: 0; transform: translateX(10px); transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out), border-color 300ms var(--ease-out); }
+.demo__run-card.is-on { opacity: 1; transform: none; }
+.demo__run-card span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem; color: var(--fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.demo__run-card em { font-style: normal; color: var(--soft); white-space: nowrap; }
+.demo__run-card.is-ok { border-color: rgba(228, 164, 60, 0.45); }
+.demo__run-card.is-ok em { color: var(--accent); }
+.demo__run-card.is-ok em::before { content: "\2713\00a0"; }
+@media (max-width: 720px) { .demo__run-cards { display: none; } .demo__run-msg--ok { max-width: 60%; } }
+.demo__run-stage > svg { transition: left 900ms var(--ease-spring); }
+.demo__run.is-staged .demo__run-stage > svg { left: 30%; }
+@media (max-width: 720px) { .demo__run.is-staged .demo__run-stage > svg { left: 50%; } }
+.demo__run { grid-template-rows: 1fr auto; }
+.demo__run-row { display: flex; align-items: center; gap: 1rem; }
+.demo__run-row .demo__run-cap { flex: 1; text-align: center; }
+.demo__run-foot { gap: 0.65rem; padding-top: 0.7rem; }
+@media (max-width: 720px) { .demo__run-row .demo__run-eyebrow { display: none; } }
+.demo, .demo__win, .demo__run, .demo__thread { overflow-anchor: none; }
+.demo__run-msg--you { top: 2.75rem; }
+/* While the run plays, the demo thread scrolls under the overlay; without this the browser's scroll anchoring drags the page. */
+html.fdot-run { overflow-anchor: none; }
+/* The run, round three: captions are sentences, and it ends on what you get. */
+.demo__run-cap { font-family: inherit; font-size: 0.875rem; letter-spacing: -0.005em; text-transform: none; color: var(--fg); }
+.demo__run-incl { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); width: min(50%, 24rem); display: grid; gap: 0.4rem; pointer-events: none; opacity: 0; transition: opacity 400ms var(--ease-out); }
+.demo__run-incl.is-on { opacity: 1; }
+.demo__run-incl .demo__run-card span { font-family: inherit; font-size: 0.8125rem; white-space: normal; }
+.demo__run-incl .demo__run-card::before { content: "\2713"; color: var(--accent); flex: none; }
+.demo__run-incl .demo__run-card { justify-content: flex-start; gap: 0.6rem; }
+@media (max-width: 720px) { .demo__run-incl { display: none; } }
+
+/* Flow AI characters placed by markup (data-fdot), see /dot */
+.fdot--ico { display: inline-block; width: 30px; height: 30px; margin: -6px 0.45rem -6px -2px; vertical-align: middle; }
+.fdot--sprint { width: 92px; height: 92px; margin: 0 0 0.6rem -8px; }
+.fdot--hero { width: 132px; height: 132px; margin: 0 auto 0.5rem; }
+@media (max-width: 720px) { .fdot--sprint { width: 76px; height: 76px; } .fdot--hero { width: 108px; height: 108px; } }
+
+/* ---- Primary buttons in glass ------------------------------------------
+   The same material as the dot: amber-tinted glass the page shows through,
+   lit along the top edge, warm light pooling at the bottom, cream text, no
+   outline. The arrow sits in a small glass bead. */
+.btn-primary, .hero .btn-primary, .site-header__nav .site-header__cta, .site-menu .site-header__cta {
+  background:
+    radial-gradient(120% 150% at 50% 125%, rgba(243, 197, 114, 0.5), rgba(228, 164, 60, 0) 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0.07)),
+    rgba(228, 164, 60, 0.22);
+  color: var(--fg);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 226, 173, 0.22),
+    0 10px 28px -14px rgba(228, 164, 60, 0.55);
+}
+.btn-primary:hover, .hero .btn-primary:hover, .site-header__nav .site-header__cta:hover, .site-menu .site-header__cta:hover {
+  background:
+    radial-gradient(120% 150% at 50% 125%, rgba(246, 207, 134, 0.62), rgba(228, 164, 60, 0) 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.09)),
+    rgba(228, 164, 60, 0.3);
+  color: var(--fg);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 226, 173, 0.3),
+    0 14px 34px -14px rgba(228, 164, 60, 0.7);
+}
+.btn-primary::after, .site-header__nav .site-header__cta::after, .site-menu .site-header__cta::after {
+  background: radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.1) 70%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  color: var(--fg);
+}
+/* the glance: on hover the bead becomes the glass orb's face for a moment */
+.btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
+  background-color: rgba(243, 197, 114, 0.4);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='10.6' cy='13.6' r='3.7' fill='%23fff'/%3E%3Ccircle cx='19.4' cy='13.6' r='3.7' fill='%23fff'/%3E%3Ccircle cx='11' cy='14.5' r='1.9' fill='%230e0e0d'/%3E%3Ccircle cx='19.8' cy='14.5' r='1.9' fill='%230e0e0d'/%3E%3Cpath d='M12.4 19.4Q15 21.6 17.6 19.4' fill='none' stroke='%230e0e0d' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+/* ---- The wordmark: Flow, then AI in a glass chip ----------------------
+   The same glass as the primary buttons. A real space sits before the chip
+   so the name always reads "Flow AI". */
+.wm-chip {
+  display: inline-block; margin-left: -0.08em;
+  padding: 0.08em 0.32em 0.1em; border-radius: 0.42em;
+  background:
+    radial-gradient(120% 150% at 50% 125%, rgba(243, 197, 114, 0.5), rgba(228, 164, 60, 0) 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04) 55%, rgba(255, 255, 255, 0.08)),
+    rgba(228, 164, 60, 0.24);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(255, 226, 173, 0.22);
+  color: var(--fg, #faf8f3); line-height: 1; letter-spacing: -0.01em; vertical-align: 0.02em;
+}

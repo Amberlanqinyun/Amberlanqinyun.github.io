@@ -56,7 +56,7 @@
       "dateModified": "2026-10-02",
       "inLanguage": "zh-Hans",
       "articleSection": "AI 搜索",
-      "wordCount": 4814,
+      "wordCount": 4808,
       "timeRequired": "PT13M",
       "image": "https://www.flowai.co.nz/blog/figures/aeo-checklist.svg",
       "author": {
@@ -166,6 +166,9 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=6">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
 <!-- Google Tag Manager (noscript) -->
@@ -177,10 +180,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
-      <svg class="site-header__brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>
-      <span class="site-header__brand-text">Flow AI.</span>
+      <img class="site-header__brand-mark" src="/assets/flowai-mark.svg" width="24" height="24" alt="" aria-hidden="true">
+      <span class="site-header__brand-text">Flow <span class="wm-chip">AI</span></span>
     </a>
     <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/ai-marketing-services/">服务</a>
       <a href="/zh/sprints/">合作方式</a>
       <a href="/zh/blog/" aria-current="page">指南</a>
       <a href="/zh/about">关于我</a>
@@ -258,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>在 Google Search Console 和 Bing Webmaster Tools 中验证你的网站，向两者提交网站地图，并确认主要页面显示为已收录。Bing Webmaster Tools 点几下就能直接从 Search Console 导入已验证的网站。Bing 的重要性远超它的份额：<a class="go" href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI 关于 ChatGPT 搜索的帮助页面说明，它会把查询发送给合作搜索服务商，其中就包括 Microsoft（Bing）</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>，尽管 <a class="go" href="https://gs.statcounter.com/search-engine-market-share/all/new-zealand" target="_blank" rel="noopener">Statcounter 的数据显示，2026年9月 Bing 在新西兰搜索市场的份额仅为 7.71%</a><sup class="fn"><a href="#source-2" aria-label="来源 2">2</a></sup>。</p>
 
 <h2 id="facts-about-the-business-items-5-to-8"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">企业基本信息（第 5 至 8 项）</span></h2>
-<p>AI 引擎介绍一家企业时，会把它网站上的信息、各平台的商家条目和其他人页面上的内容拼合起来。这些信息一致时，引擎就能有把握地陈述。地址、服务或营业时间在不同网站上互相矛盾时，它可能会把你介绍错，或者干脆不提你。这一组任务的目的，是让每个来源说的都是同一件事。</p>
+<p>AI 引擎介绍一家企业时，会把它网站上的信息、各平台的商家条目和其他人页面上的内容拼合起来。这些信息一致时，引擎就能有把握地陈述。地址、服务或营业时间在不同网站上互相矛盾时，它可能会把你介绍错，或者干脆不提你。这一组任务要让每个来源说的都是同一件事。</p>
 <h3>5. 写一页企业信息表</h3>
 <p>列出 AI 推荐你时需要的信息：注册名称和经营名称、一句话说明你做什么、服务项目、按区或城市划分的服务范围、营业时间、常见价格区间、执照和会员资格、成立年份，以及企业主姓名。把同样的信息用平实的句子写进“关于我们”页面。这份文档将成为第 6 至 8 项和第 17 项的唯一信息来源。</p>
 <h3>6. 让名称、地址和电话处处一致</h3>
@@ -293,12 +297,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 id="structured-data-items-17-and-18"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">结构化数据（第 17 和 18 项）</span></h2>
 <p>结构化数据用机器无需猜测就能读懂的格式，把你的企业信息再说一遍。Google 表示，出现在 Google AI 概览中并不需要它，这个说法可以照字面理解。但它仍能在 Google 搜索中带来富媒体搜索结果，并消除名称、地址和服务方面的歧义，所以值得花一个下午来做。</p>
 <h3>17. 添加 LocalBusiness 或 Organization 结构化数据</h3>
-<p>在首页添加一段<a class="go" href="/zh/glossary/#schema-markup">结构化数据标记（schema）</a>，写入第 5 项中的信息：名称、地址、电话、营业时间、服务地区，以及指向你的 Google 商家资料、Facebook、LinkedIn 和各商家目录条目的“sameAs”链接。大多数建站工具和 SEO 插件都有填写这些内容的表单。用 Google 的富媒体搜索结果测试和 Schema.org 验证工具测试一下。<a class="go" href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google 关于 AI 功能的指南明确表示，Google AI 概览和 AI 模式都不需要任何特殊的结构化数据</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>，所以把这一步当作日常整理就好。</p>
+<p>在首页添加一段<a class="go" href="/zh/glossary/#schema-markup">结构化数据标记（schema）</a>，写入第 5 项中的信息：名称、地址、电话、营业时间、服务地区，以及指向你的 Google 商家资料、Facebook、LinkedIn 和各商家目录条目的“sameAs”链接。大多数建站工具和 SEO 插件都有填写这些内容的表单。用 Google 的富媒体搜索结果测试和 Schema.org 验证工具检查一下。<a class="go" href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google 关于 AI 功能的指南明确表示，Google AI 概览和 AI 模式都不需要任何特殊的结构化数据</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>，所以把这一步当作日常整理就好。</p>
 <h3>18. 只在与页面内容相符时，才为常见问题、产品和文章添加标记</h3>
 <p>为带有真实问答板块的页面添加 FAQPage 标记，为产品页添加 Product 标记，为指南添加 Article 标记。Google 现在只对一小部分权威网站显示常见问题富媒体结果，所以添加 FAQ 标记是为了让问题和答案更明确，搜索结果的外观不会因此变化。如果标记描述的内容在页面上并不存在，就违反了 Google 的指南。</p>
 
 <h2 id="measurement-items-19-and-20"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">效果衡量（第 19 和 20 项）</span></h2>
-<p>在工具成熟之前，用简单的习惯来衡量 AEO。目前还没有哪个仪表盘能像 Search Console 报告 Google 排名那样可靠地报告 AI 可见度，所以每月一次的提示词记录，加上几项分析设置，能给出最清晰的画面。要看三个月的趋势来判断，因为 AI 的回答每次运行都会有所不同。</p>
+<p>在工具成熟之前，用简单的习惯来衡量 AEO。目前还没有哪个仪表盘能像 Search Console 报告 Google 排名那样可靠地报告 AI 可见度，所以每月一次的提示词记录，加上几项分析设置，最能看清情况。要看三个月的趋势来判断，因为 AI 的回答每次运行都会有所不同。</p>
 <h3>19. 每月做一次提示词记录</h3>
 <p>写下 15 到 20 个客户会问的问题，比如“基督城治疗跑步损伤最好的理疗师”或“奥克兰厨房翻新要花多少钱”。每个月在 ChatGPT、Perplexity、Gemini 和 Google 中各运行一遍，记录你有没有被提到、还有谁被提到，以及哪些页面被引用。每次都开一个新对话，避免之前的对话影响回答。</p>
 <h3>20. 追踪 AI 来源流量，并直接问客户</h3>
@@ -337,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="sources" aria-labelledby="sources-title">
   <h2 id="sources-title" class="sources__title">资料来源</h2>
-  <p class="sources__note">每个数据都链接到一手来源。核对于 2026年10月2日。</p>
+  <p class="sources__note">每个数据都附有一手来源链接，最近核对：2026年10月2日。</p>
   <ol class="sources__list">
 <li id="source-1"><a href="https://help.openai.com/en/articles/9237897-chatgpt-search" target="_blank" rel="noopener">OpenAI 关于 ChatGPT 搜索的帮助页面说明，它会把查询发送给合作搜索服务商，其中就包括 Microsoft（Bing）</a> <span class="src-host">help.openai.com</span></li>
 <li id="source-2"><a href="https://gs.statcounter.com/search-engine-market-share/all/new-zealand" target="_blank" rel="noopener">Statcounter 的数据显示，2026年9月 Bing 在新西兰搜索市场的份额仅为 7.71%</a> <span class="src-host">gs.statcounter.com</span></li>
@@ -430,16 +434,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/ai-marketing-services/">服务</a>
       <a href="/zh/sprints/">合作方式</a>
       <a href="/zh/work">作品</a>
       <a href="/zh/blog/">指南</a>
       <a href="/zh/templates/">免费模板</a>
       <a href="/zh/about">关于我</a>
       <a href="/zh/manifesto">宣言</a>
+      <a href="/zh/dot">这颗点</a>
     </nav>
   </div>
   <div class="site-footer__bar">
-    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><svg class="site-footer__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="4" cy="21.5" r="1.9" fill="#faf8f3" fill-opacity=".4"/><circle cx="10" cy="19" r="2.5" fill="#faf8f3" fill-opacity=".65"/><circle cx="16.2" cy="14.2" r="3.2" fill="#faf8f3"/><circle cx="23" cy="6.2" r="4.2" fill="#e4a43c"/></svg>Flow AI</a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><img class="site-footer__mark" src="/assets/flowai-mark.svg" width="18" height="18" alt="" aria-hidden="true"><span class="site-footer__wm">Flow <span class="wm-chip">AI</span></span></a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
     <span class="site-footer__social">
       <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
       <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
