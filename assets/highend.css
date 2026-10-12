@@ -530,3 +530,43 @@ html.fdot-run { overflow-anchor: none; }
 .fdot--sprint { width: 92px; height: 92px; margin: 0 0 0.6rem -8px; }
 .fdot--hero { width: 132px; height: 132px; margin: 0 auto 0.5rem; }
 @media (max-width: 720px) { .fdot--sprint { width: 76px; height: 76px; } .fdot--hero { width: 108px; height: 108px; } }
+
+/* ---- Primary buttons in glass ------------------------------------------
+   The same material as the dot: amber-tinted glass the page shows through,
+   lit along the top edge, warm light pooling at the bottom, cream text, no
+   outline. The arrow sits in a small glass bead. */
+.btn-primary, .hero .btn-primary, .site-header__nav .site-header__cta, .site-menu .site-header__cta {
+  background:
+    radial-gradient(120% 150% at 50% 125%, rgba(243, 197, 114, 0.5), rgba(228, 164, 60, 0) 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0.07)),
+    rgba(228, 164, 60, 0.22);
+  color: var(--fg);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 226, 173, 0.22),
+    0 10px 28px -14px rgba(228, 164, 60, 0.55);
+}
+.btn-primary:hover, .hero .btn-primary:hover, .site-header__nav .site-header__cta:hover, .site-menu .site-header__cta:hover {
+  background:
+    radial-gradient(120% 150% at 50% 125%, rgba(246, 207, 134, 0.62), rgba(228, 164, 60, 0) 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.09)),
+    rgba(228, 164, 60, 0.3);
+  color: var(--fg);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 226, 173, 0.3),
+    0 14px 34px -14px rgba(228, 164, 60, 0.7);
+}
+.btn-primary::after, .site-header__nav .site-header__cta::after, .site-menu .site-header__cta::after {
+  background: radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.1) 70%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  color: var(--fg);
+}
+/* the glance: on hover the bead becomes the glass orb's face for a moment */
+.btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
+  background-color: rgba(243, 197, 114, 0.4);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='10.6' cy='13.6' r='3.7' fill='%23fff'/%3E%3Ccircle cx='19.4' cy='13.6' r='3.7' fill='%23fff'/%3E%3Ccircle cx='11' cy='14.5' r='1.9' fill='%230e0e0d'/%3E%3Ccircle cx='19.8' cy='14.5' r='1.9' fill='%230e0e0d'/%3E%3Cpath d='M12.4 19.4Q15 21.6 17.6 19.4' fill='none' stroke='%230e0e0d' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
