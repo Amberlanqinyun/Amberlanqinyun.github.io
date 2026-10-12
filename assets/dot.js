@@ -30,6 +30,7 @@ window.FlowDot = (function () {
       '<radialGradient id="flowdot-core-night" cx="50%" cy="46%" r="50%"><stop offset="0" stop-color="#2a2518"/><stop offset=".6" stop-color="#151410"/><stop offset=".92" stop-color="#121211" stop-opacity=".9"/><stop offset="1" stop-color="#121211" stop-opacity="0"/></radialGradient>' +
       '<radialGradient id="flowdot-halo-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".08"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
       '<filter id="flowdot-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.2"/></filter>' +
+      '<filter id="flowdot-goo" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b"/><feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="g"/><feComposite in="SourceGraphic" in2="g" operator="atop"/></filter>' +
       '</defs>';
     document.body.appendChild(svg);
   }
@@ -88,6 +89,7 @@ window.FlowDot = (function () {
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     this.glow = this.role === 'flow' && o.glow !== false;
     this.gooG = el('g', {});
+    if (o.goo) this.gooG.setAttribute('filter', 'url(#flowdot-goo)');
     this.halo = el('circle', { cx: this.cx, cy: this.cy, r: this.r * 2.1, fill: 'url(#flowdot-halo)', opacity: this.glow ? 1 : 0 });
     this.body = el('circle', { cx: this.cx, cy: this.cy, r: this.glow ? this.r * 1.08 : this.r, fill: this.glow ? 'url(#flowdot-core)' : this.fill });
     this.sats = [];
@@ -295,6 +297,74 @@ window.FlowDot = (function () {
       });
     }
 
+    /* The run: the first time the demo window comes into view, one job is told by the
+       character alone, over the window, then it fades out and the live window takes over.
+       Once per visit, never under reduced motion, skippable. */
+    var win = demo && demo.querySelector('.demo__win');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var seen = false; try { seen = sessionStorage.getItem('flowai-run') === '1'; } catch (e) {}
+    if (win && !reduce && !seen && 'IntersectionObserver' in window) {
+      var ZH = /^zh/.test(document.documentElement.lang);
+      var S = ZH ? {
+        you: '找出人们向 AI 询问奥克兰热水缸的问题，修好应该回答这些问题的页面。全部暂存，先不发布。',
+        reply: '三个页面已暂存。等待你审核。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
+        caps: ['收到指令', '阅读网站', '交代三个智能体', '智能体工作中', '智能体返回', '已暂存，等你', '已批准', '休息']
+      } : {
+        you: 'Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.',
+        reply: 'Three pages staged. Waiting for your review.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
+        caps: ['brief received', 'reading the site', 'briefing three agents', 'agents at work', 'agents return', 'staged, waiting for you', 'approved', 'rest']
+      };
+      var ov = document.createElement('div'); ov.className = 'demo__run'; ov.setAttribute('role', 'presentation');
+      ov.innerHTML = '<div class="demo__run-top"><span class="demo__run-eyebrow">' + S.eyebrow + '</span><button type="button" class="demo__run-skip">' + S.skip + '</button></div>' +
+        '<div class="demo__run-stage"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>' +
+        '<div class="demo__run-msg demo__run-msg--you">' + S.you + '</div><div class="demo__run-msg demo__run-msg--dot">' + S.reply + '</div></div>' +
+        '<div class="demo__run-foot"><span class="demo__run-cap"></span><span class="demo__run-bar"><b></b></span></div>';
+      win.appendChild(ov);
+      var rsvg = ov.querySelector('svg'), m1 = ov.querySelector('.demo__run-msg--you'), m2 = ov.querySelector('.demo__run-msg--dot');
+      var capEl = ov.querySelector('.demo__run-cap'), barEl = ov.querySelector('.demo__run-bar b');
+      var run = F.mount(rsvg, { role: 'flow', r: 15, dy: 8, goo: true });
+      var sats = run.sats, satT = [[18, 26, 6], [82, 22, 5], [24, 82, 4.5]], satAnim = null, t0 = -1, LEN = 23, fired = [], done = false;
+      function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+      var SCRIPT = [
+        { at: 0,    i: 0, fn: function () { m1.classList.add('is-on'); run.lookAt(0.8, -0.9); setTimeout(function () { run.nod(); run.lookAt(null); }, 900); } },
+        { at: 1.6,  i: 1, fn: function () { F.MOODS.work.orbit = false; run.set('work'); } },
+        { at: 5.2,  i: 2, fn: function () { run.set('think'); satAnim = { t0: performance.now(), dir: 1 }; } },
+        { at: 8.4,  i: 3, fn: function () { run.set('idle'); } },
+        { at: 12.4, i: 4, fn: function () { satAnim = { t0: performance.now(), dir: -1 }; } },
+        { at: 14.6, i: 5, fn: function () { run.set('review'); m2.classList.add('is-on'); } },
+        { at: 19,   i: 6, fn: function () { run.set('done'); } },
+        { at: 21,   i: 7, fn: function () { run.set('idle'); } }
+      ];
+      function satFrame(now) {
+        if (!satAnim) return;
+        var tt = (now - satAnim.t0) / 1000;
+        sats.forEach(function (s, i) {
+          var local = Math.max(0, Math.min(1, (tt - i * 0.45) / 1.1)), e = easeOut(local), p = satAnim.dir > 0 ? e : 1 - e;
+          var wob = Math.sin(now / 400 + i) * 1.5 * p;
+          s.setAttribute('cx', run.cx + (satT[i][0] - run.cx) * p + wob); s.setAttribute('cy', run.cy + (satT[i][1] - run.cy) * p + Math.cos(now / 500 + i) * p); s.setAttribute('r', satT[i][2] * Math.min(1, p * 1.4));
+        });
+        if (satAnim.dir < 0 && tt > 2.4) { sats.forEach(function (s) { s.setAttribute('r', 0); }); satAnim = null; }
+      }
+      function finish() {
+        if (done) return; done = true;
+        try { sessionStorage.setItem('flowai-run', '1'); } catch (e) {}
+        F.MOODS.work.orbit = true;
+        ov.classList.add('is-done');
+        setTimeout(function () { if (ov.parentNode) ov.parentNode.removeChild(ov); }, 700);
+      }
+      function frame(now) {
+        if (done) return;
+        if (t0 < 0) t0 = now;
+        var tt = (now - t0) / 1000;
+        barEl.style.width = Math.min(100, tt / LEN * 100) + '%';
+        SCRIPT.forEach(function (s, i) { if (tt >= s.at && !fired[i]) { fired[i] = true; s.fn(); capEl.textContent = S.caps[s.i]; } });
+        satFrame(now);
+        if (tt < LEN) requestAnimationFrame(frame); else finish();
+      }
+      ov.querySelector('.demo__run-skip').addEventListener('click', finish);
+      var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); setTimeout(function () { requestAnimationFrame(frame); }, 400); } }, { threshold: 0.45 });
+      io.observe(win);
+    }
     /* The 404: it looks left, then right, then at you. */
     var lost = document.querySelector('[data-fdot-lost]');
     if (lost) {
