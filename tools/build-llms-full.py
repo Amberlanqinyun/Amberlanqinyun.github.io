@@ -20,6 +20,10 @@ SITE = "https://www.flowai.co.nz"
 PAGES = [
     ("blog/ai-marketing-for-small-business-nz.html", "Guide"),
     ("index.html", "Page"),
+    ("ai-marketing-services/index.html", "Service"),
+    ("ai-marketing-services/new-zealand.html", "Service"),
+    ("ai-marketing-services/australia.html", "Service"),
+    ("ai-marketing-services/auckland.html", "Service"),
     ("sprints/index.html", "Page"),
     ("sprints/positioning.html", "Sprint"),
     ("sprints/ai-search.html", "Sprint"),
