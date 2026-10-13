@@ -36,6 +36,29 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "VideoObject",
+      "@id": "https://www.flowai.co.nz/sprints/#film",
+      "name": "Flow AI in one minute",
+      "description": "A one-minute silent film showing how Flow AI works: Flow Intelligence holds your positioning and briefs ten marketing agents across getting found, getting leads and keeping customers, and a person approves every send.",
+      "thumbnailUrl": "https://www.flowai.co.nz/assets/film/flowai-film-poster-16x9.jpg",
+      "uploadDate": "2026-10-13T16:00:00+13:00",
+      "duration": "PT1M3S",
+      "contentUrl": "https://www.flowai.co.nz/assets/film/flowai-film-16x9.mp4",
+      "embedUrl": "https://www.flowai.co.nz/sprints/#film",
+      "inLanguage": "en",
+      "isFamilyFriendly": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Amber Lan",
+        "url": "https://www.flowai.co.nz/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Flow AI",
+        "url": "https://www.flowai.co.nz/"
+      }
+    },
+    {
       "@type": "OfferCatalog",
       "@id": "https://www.flowai.co.nz/sprints/",
       "name": "Flow AI starter sprints",
@@ -106,6 +129,13 @@
     .row-detail .buys b { font-weight: 600; }
     .row-detail .handoff { display: block; margin-top: 0.9rem; font-size: 0.85em; opacity: 0.65; }
     .row-detail .text-link { display: inline-block; margin-top: 1rem; }
+    .film { width: min(100%, 72rem); margin: clamp(2.5rem, 5vw, 4rem) auto 0; display: grid; gap: 1.25rem; }
+    .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 20px; background: #0b0b0a; box-shadow: inset 0 0 0 1px rgba(250, 248, 243, 0.08), 0 40px 120px -40px rgba(0, 0, 0, 0.9); }
+    .film video.is-tall { aspect-ratio: 4 / 5; }
+    .film details { text-align: left; width: min(100%, 44rem); margin: 0 auto; }
+    .film summary { cursor: pointer; font-weight: 500; }
+    .film ol { margin: 1rem 0 0; padding-left: 1.4rem; display: grid; gap: 0.35rem; }
+    .film .small { display: block; margin-top: 1rem; opacity: 0.7; }
 </style>
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css?v=2">
@@ -159,6 +189,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="text-link arrow-link" href="#sprints">Explore the five sprints</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="film" class="centered" aria-labelledby="film-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <p class="eyebrow">The film · One minute</p>
+          <h2 id="film-title">See the whole system in a minute.</h2>
+          <p class="lead">Follow one run from positioning to the monthly report: Flow Intelligence briefs ten agents, they do the work, and you approve what ships. The film is silent, so it plays anywhere.</p>
+        </div>
+        <figure class="film reveal">
+          <video id="flow-film" controls playsinline preload="none" width="1280" height="720"
+                 poster="/assets/film/flowai-film-poster-16x9.webp" aria-label="Flow AI film: the agent team at work, one minute">
+            <source src="/assets/film/flowai-film-16x9.mp4" type="video/mp4">
+          </video>
+          <script>(function(){var v=document.getElementById('flow-film');if(!v)return;
+            if(window.matchMedia&&matchMedia('(max-width: 600px)').matches){v.className='is-tall';v.width=720;v.height=900;v.poster='/assets/film/flowai-film-poster-4x5.webp';v.querySelector('source').src='/assets/film/flowai-film-4x5.mp4';v.load();}
+            v.addEventListener('play',function(){(window.dataLayer=window.dataLayer||[]).push({event:'film_play',film:'flowai-launch'});},{once:true});})();</script>
+          <details>
+            <summary>Read the words in the film</summary>
+            <ol>
+              <li>Introducing Flow AI.</li>
+              <li>Let’s build the AI agents that run your marketing.</li>
+              <li>It starts with your positioning.</li>
+              <li>Ten agents. One engineer.</li>
+              <li>Be the answer when people ask AI.</li>
+              <li>One idea becomes a month of content.</li>
+              <li>The right hundred buyers, reached personally.</li>
+              <li>Every enquiry tracked to its source.</li>
+              <li>Agents produce. You decide.</li>
+              <li>10 hours back every week.</li>
+              <li>Marketing that compounds.</li>
+              <li>Work with me at flowai.co.nz.</li>
+            </ol>
+            <span class="small">The business and buyers in the film are illustrative. The 10 hours is measured in production.</span>
+          </details>
+        </figure>
       </div>
     </section>
 

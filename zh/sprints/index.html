@@ -36,6 +36,29 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "VideoObject",
+      "@id": "https://www.flowai.co.nz/zh/sprints/#film",
+      "name": "一分钟了解 Flow AI",
+      "description": "一段一分钟的无声短片，展示 Flow AI 的工作方式：Flow Intelligence 掌握你的定位，给十个营销智能体下达简报，覆盖被找到、获取线索和留住客户，每一次发送都由人来批准。",
+      "thumbnailUrl": "https://www.flowai.co.nz/assets/film/flowai-film-poster-16x9.jpg",
+      "uploadDate": "2026-10-13T16:00:00+13:00",
+      "duration": "PT1M3S",
+      "contentUrl": "https://www.flowai.co.nz/assets/film/flowai-film-16x9.mp4",
+      "embedUrl": "https://www.flowai.co.nz/zh/sprints/#film",
+      "inLanguage": "zh-Hans",
+      "isFamilyFriendly": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Amber Lan",
+        "url": "https://www.flowai.co.nz/zh/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Flow AI",
+        "url": "https://www.flowai.co.nz/zh/"
+      }
+    },
+    {
       "@type": "OfferCatalog",
       "@id": "https://www.flowai.co.nz/zh/sprints/",
       "name": "Flow AI 入门冲刺",
@@ -106,6 +129,13 @@
     .row-detail .buys b { font-weight: 600; }
     .row-detail .handoff { display: block; margin-top: 0.9rem; font-size: 0.85em; opacity: 0.65; }
     .row-detail .text-link { display: inline-block; margin-top: 1rem; }
+    .film { width: min(100%, 72rem); margin: clamp(2.5rem, 5vw, 4rem) auto 0; display: grid; gap: 1.25rem; }
+    .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 20px; background: #0b0b0a; box-shadow: inset 0 0 0 1px rgba(250, 248, 243, 0.08), 0 40px 120px -40px rgba(0, 0, 0, 0.9); }
+    .film video.is-tall { aspect-ratio: 4 / 5; }
+    .film details { text-align: left; width: min(100%, 44rem); margin: 0 auto; }
+    .film summary { cursor: pointer; font-weight: 500; }
+    .film ol { margin: 1rem 0 0; padding-left: 1.4rem; display: grid; gap: 0.35rem; }
+    .film .small { display: block; margin-top: 1rem; opacity: 0.7; }
 </style>
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css?v=2">
@@ -159,6 +189,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="text-link arrow-link" href="#sprints">查看五个冲刺</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="film" class="centered" aria-labelledby="film-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <p class="eyebrow">短片 · 一分钟</p>
+          <h2 id="film-title">一分钟看懂整个系统。</h2>
+          <p class="lead">跟着一次完整的运行，从定位一路走到月度报告。Flow Intelligence 给十个智能体下达简报，它们完成工作，再由你批准发出的内容。短片没有声音，随时随地都能看。</p>
+        </div>
+        <figure class="film reveal">
+          <video id="flow-film" controls playsinline preload="none" width="1280" height="720"
+                 poster="/assets/film/flowai-film-poster-16x9.webp" aria-label="Flow AI 短片：智能体团队的一分钟">
+            <source src="/assets/film/flowai-film-16x9.mp4" type="video/mp4">
+          </video>
+          <script>(function(){var v=document.getElementById('flow-film');if(!v)return;
+            if(window.matchMedia&&matchMedia('(max-width: 600px)').matches){v.className='is-tall';v.width=720;v.height=900;v.poster='/assets/film/flowai-film-poster-4x5.webp';v.querySelector('source').src='/assets/film/flowai-film-4x5.mp4';v.load();}
+            v.addEventListener('play',function(){(window.dataLayer=window.dataLayer||[]).push({event:'film_play',film:'flowai-launch'});},{once:true});})();</script>
+          <details>
+            <summary>读一读短片里的文字</summary>
+            <ol>
+              <li>介绍 Flow AI。</li>
+              <li>一起搭建运行你营销的 AI 智能体。</li>
+              <li>一切从你的定位开始。</li>
+              <li>十个智能体，一位工程师。</li>
+              <li>当人们问 AI 时，答案是你。</li>
+              <li>一个好想法，变成一个月的内容。</li>
+              <li>找到对的一百位买家，一对一联系。</li>
+              <li>每一条询盘都能追溯到来源。</li>
+              <li>智能体负责产出，你来决定。</li>
+              <li>每周省下 10 小时。</li>
+              <li>会复利的营销。</li>
+              <li>来 flowai.co.nz，和我一起做。</li>
+            </ol>
+            <span class="small">片中的商家和买家是演示内容。每周省下 10 小时是生产环境中的实测数据。</span>
+          </details>
+        </figure>
       </div>
     </section>
 
