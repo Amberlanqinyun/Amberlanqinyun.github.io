@@ -188,7 +188,7 @@ def main():
             continue
         url = f"{SITE}/" + ("" if rel == "index.html" else re.sub(r"\.html$", "", rel.replace("index.html", "")))
         pub, mod = dates_of(source)
-        meta = [f"Source URL: {url}", f"Type: {kind}", "Author: Amber Lan (Flow AI)"]
+        meta = [f"Source URL: {url}", f"Type: {kind}", "Author: Amber Lan, AI marketing engineer, Auckland"]
         if pub:
             meta.append(f"Published: {pub}")
         if mod:

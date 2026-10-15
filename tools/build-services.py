@@ -147,7 +147,7 @@ PAGES = [
     dict(
         slug="", area=[NZ, AU],
         en=dict(
-            title="AI Marketing Services for NZ and Australian Businesses | Flow AI",
+            title="AI Marketing Services for NZ and Australian Businesses | Amber Lan",
             description="AI marketing services for New Zealand and Australian businesses: AI agents for search, content, outbound and reporting, built with your team and handed over.",
             eyebrow="AI marketing services · New Zealand and Australia",
             h1="AI marketing services for New Zealand and Australian businesses.",
@@ -168,7 +168,7 @@ PAGES = [
             ],
         ),
         zh=dict(
-            title="新西兰和澳大利亚企业的 AI 营销服务 | Flow AI",
+            title="新西兰和澳大利亚企业的 AI 营销服务 | Amber Lan",
             description="面向新西兰和澳大利亚企业的 AI 营销服务：搜索、内容、主动外联和报告的 AI 智能体，与你的团队一起搭建，然后交接给你。",
             eyebrow="AI 营销服务 · 新西兰和澳大利亚",
             h1="面向新西兰和澳大利亚企业的 AI 营销服务。",
@@ -192,7 +192,7 @@ PAGES = [
     dict(
         slug="new-zealand", area=[NZ],
         en=dict(
-            title="AI Marketing Services in New Zealand | Flow AI, Auckland",
+            title="AI Marketing Services in New Zealand | Amber Lan, Auckland",
             description="AI marketing services for New Zealand businesses: AI search, content, outbound and reporting agents, built with your team under NZ privacy and spam law.",
             eyebrow="AI marketing services · New Zealand",
             h1="AI marketing services in New Zealand.",
@@ -219,7 +219,7 @@ PAGES = [
             ],
         ),
         zh=dict(
-            title="新西兰 AI 营销服务 | Flow AI，奥克兰",
+            title="新西兰 AI 营销服务 | Amber Lan，奥克兰",
             description="面向新西兰企业的 AI 营销服务：AI 搜索、内容、主动外联和报告智能体，与你的团队一起搭建，遵守新西兰隐私法和垃圾邮件法。",
             eyebrow="AI 营销服务 · 新西兰",
             h1="新西兰的 AI 营销服务。",
@@ -249,7 +249,7 @@ PAGES = [
     dict(
         slug="australia", area=[AU],
         en=dict(
-            title="AI Marketing Services for Australian Businesses | Flow AI",
+            title="AI Marketing Services for Australian Businesses | Amber Lan",
             description="AI marketing services for Australian businesses in Sydney, Melbourne, Brisbane and beyond: AI agents for search, content, outbound and reporting, built with your team.",
             eyebrow="AI marketing services · Australia",
             h1="AI marketing services for Australian businesses.",
@@ -276,7 +276,7 @@ PAGES = [
             ],
         ),
         zh=dict(
-            title="面向澳大利亚企业的 AI 营销服务 | Flow AI",
+            title="面向澳大利亚企业的 AI 营销服务 | Amber Lan",
             description="面向悉尼、墨尔本、布里斯班等地澳大利亚企业的 AI 营销服务：搜索、内容、主动外联和报告的 AI 智能体，与你的团队一起搭建。",
             eyebrow="AI 营销服务 · 澳大利亚",
             h1="面向澳大利亚企业的 AI 营销服务。",
@@ -306,7 +306,7 @@ PAGES = [
     dict(
         slug="auckland", area=[AKL],
         en=dict(
-            title="AI Marketing Services in Auckland | Flow AI",
+            title="AI Marketing Services in Auckland | Amber Lan",
             description="AI marketing services in Auckland: meet an AI marketing engineer in person and build the AI agents that run your search, content, outbound and reporting.",
             eyebrow="AI marketing services · Auckland",
             h1="AI marketing services in Auckland.",
@@ -333,7 +333,7 @@ PAGES = [
             ],
         ),
         zh=dict(
-            title="奥克兰 AI 营销服务 | Flow AI",
+            title="奥克兰 AI 营销服务 | Amber Lan",
             description="奥克兰的 AI 营销服务：和 AI 营销工程师当面沟通，一起搭建负责搜索、内容、主动外联和报告的 AI 智能体。",
             eyebrow="AI 营销服务 · 奥克兰",
             h1="奥克兰的 AI 营销服务。",
@@ -397,7 +397,7 @@ PAGES += [
     dict(
         slug="ai-automation-consultant", area=[AKL, NZ, AU], updated="2026-10-16",
         en=dict(
-            title="AI Automation Consultant in Auckland, NZ | Flow AI",
+            title="AI Automation Consultant in Auckland, NZ | Amber Lan",
             description="AI automation consultant in Auckland: map the repetitive marketing and sales work, automate it with AI agents your team approves, and keep every workflow.",
             eyebrow="AI automation consulting · Auckland and New Zealand",
             h1="AI automation consultant in Auckland.",
@@ -436,7 +436,7 @@ PAGES += [
             ],
         ),
         zh=dict(
-            title="奥克兰 AI 自动化顾问 | Flow AI",
+            title="奥克兰 AI 自动化顾问 | Amber Lan",
             description="奥克兰的 AI 自动化顾问：梳理重复的营销和销售工作，用团队审核的 AI 智能体自动化，每个工作流都归你所有。",
             eyebrow="AI 自动化咨询 · 奥克兰和新西兰",
             h1="奥克兰的 AI 自动化顾问。",
@@ -478,7 +478,7 @@ PAGES += [
     dict(
         slug="ai-agent-development", area=[NZ, AU], updated="2026-10-16",
         en=dict(
-            title="AI Agent Development for NZ and Australian Teams | Flow AI",
+            title="AI Agent Development for NZ and Australian Teams | Amber Lan",
             description="Custom AI agent development for NZ and Australian teams: marketing and sales agents built on your accounts, with review points, documentation and full ownership.",
             eyebrow="AI agent development · New Zealand and Australia",
             h1="AI agent development for marketing and sales teams.",
@@ -517,7 +517,7 @@ PAGES += [
             ],
         ),
         zh=dict(
-            title="面向新西兰和澳大利亚团队的 AI 智能体开发 | Flow AI",
+            title="面向新西兰和澳大利亚团队的 AI 智能体开发 | Amber Lan",
             description="面向新西兰和澳大利亚团队的定制 AI 智能体开发：营销和销售智能体建在你的账号上，配有审核环节和文档，完全归你所有。",
             eyebrow="AI 智能体开发 · 新西兰和澳大利亚",
             h1="为营销和销售团队开发 AI 智能体。",
@@ -559,7 +559,7 @@ PAGES += [
     dict(
         slug="marketing-automation-consultant", area=[NZ, AU], updated="2026-10-16",
         en=dict(
-            title="Marketing Automation Consultant in NZ | Flow AI, Auckland",
+            title="Marketing Automation Consultant in NZ | Amber Lan, Auckland",
             description="Marketing automation consultant in NZ: HubSpot and CRM workflows, lead follow-up and reporting automated with AI, built with your team and handed over.",
             eyebrow="Marketing automation · New Zealand and Australia",
             h1="Marketing automation consultant in New Zealand.",
@@ -598,7 +598,7 @@ PAGES += [
             ],
         ),
         zh=dict(
-            title="新西兰营销自动化顾问 | Flow AI，奥克兰",
+            title="新西兰营销自动化顾问 | Amber Lan，奥克兰",
             description="新西兰的营销自动化顾问：HubSpot 和 CRM 工作流、线索跟进和报告，用 AI 自动化，与你的团队一起搭建并交接。",
             eyebrow="营销自动化 · 新西兰和澳大利亚",
             h1="新西兰的营销自动化顾问。",
@@ -640,7 +640,7 @@ PAGES += [
     dict(
         slug="claude-code-consultant", area=[NZ, AU], updated="2026-10-16",
         en=dict(
-            title="Claude Code Consultant for Marketing Teams, NZ | Flow AI",
+            title="Claude Code Consultant for Marketing Teams, NZ | Amber Lan",
             description="Claude Code consultant in Auckland: set up Claude Code for your marketing team with skills, connectors and review gates, built on your accounts and handed over.",
             eyebrow="Claude Code consulting · New Zealand and Australia",
             h1="Claude Code consultant for marketing teams.",
@@ -679,7 +679,7 @@ PAGES += [
             ],
         ),
         zh=dict(
-            title="营销团队的 Claude Code 顾问，新西兰 | Flow AI",
+            title="营销团队的 Claude Code 顾问，新西兰 | Amber Lan",
             description="奥克兰的 Claude Code 顾问：为你的营销团队搭建 Claude Code，配好技能库、连接器和审核关口，建在你的账号上并交接给你。",
             eyebrow="Claude Code 咨询 · 新西兰和澳大利亚",
             h1="营销团队的 Claude Code 顾问。",
@@ -794,12 +794,12 @@ def render(page, lang):
   <meta name="description" content="{esc(d['description'])}">
   <meta name="theme-color" content="#0e0e0d">
   <link rel="canonical" href="{url}">
-  <link rel="alternate" type="application/atom+xml" title="Flow AI" href="{SITE}/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="{esc(d['title'])}">
   <meta property="og:description" content="{esc(d['description'])}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Flow AI">
+  <meta property="og:site_name" content="Amber Lan">
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{SITE}/og.png">
   <meta name="twitter:card" content="summary_large_image">

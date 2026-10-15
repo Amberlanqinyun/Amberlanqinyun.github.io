@@ -1,6 +1,6 @@
-# Flow AI (flowai.co.nz) · Amber Lan · AI marketing engineer · Auckland, New Zealand
+# Amber Lan · AI marketing engineer · Auckland, New Zealand (flowai.co.nz)
 
-> Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI is also Amber Lan's open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. She takes selected contract builds with teams and is open to senior roles.
+> Amber Lan is an AI marketing engineer in Auckland who provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. This site is also Amber Lan's open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. She takes selected contract builds with teams, under the trading name Flow AI, and is open to senior roles.
 
 Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
@@ -9,7 +9,7 @@ Key facts:
 - Work with Amber: contract builds for teams that want an AI marketing system built with them, covering AI search and answer engine optimisation, a content engine, outbound and measurement. Each build starts with a written scope and is priced per project. The team keeps running the system after a documented handover.
 - Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland, across New Zealand and in Australia (Sydney, Melbourne, Brisbane). The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
-- Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
+- Who: Amber Lan, AI marketing engineer. Flow AI is her trading name. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
@@ -129,7 +129,7 @@ Everything below is the complete, current text of flowai.co.nz, provided so AI a
 
 Source URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz
 Type: Guide
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Published: 2026-08-20
 Last updated: 2026-10-08
 
@@ -431,17 +431,17 @@ AI for marketers, in practice: hand AI the research, drafts, repurposing and fol
 
 ---
 
-## Flow AI | AI Marketing Services in NZ and Australia | Amber Lan
+## Amber Lan | AI Marketing Services in NZ and Australia
 
 Source URL: https://www.flowai.co.nz/
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Amber Lan · AI marketing engineer · Auckland, worldwide
 
 # Let's build the AI agents that run your marketing.
 
-I'm Amber Lan, and Flow AI is my AI marketing engineering practice in Auckland, New Zealand. I run a whole marketing function on these agents, and this site walks you through that system. Bring me in to build it with your team, or talk to me about a role.
+I'm Amber Lan, an AI marketing engineer in Auckland, New Zealand. I run a whole marketing function on these agents, and this site walks you through that system. Bring me in to build it with your team, or talk to me about a role.
 
 Work with meHiring? Let's talk
 
@@ -635,9 +635,9 @@ Questions
 
 ## Good questions.
 
-### What is Flow AI?
+### Who is Amber Lan?
 
-Flow AI is an AI marketing transformation practice. It builds the agents that run a marketing function, starting from strategy. Its founder has ten years in marketing and three building agents. Flow AI builds each system with the team that will run it, and the work is open to inspect.
+Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the agents that run a marketing function, starting from strategy, with ten years in marketing and three building agents behind her. She builds each system with the team that will run it, and the work is open to inspect. Her contract builds run under the trading name Flow AI.
 
 ### How is Flow AI different from a marketing agency?
 
@@ -675,11 +675,11 @@ Work with meHiring? Let's talk
 
 ---
 
-## AI Marketing Services for NZ and Australian Businesses | Flow AI
+## AI Marketing Services for NZ and Australian Businesses | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-13
 
 AI marketing services · New Zealand and Australia
@@ -856,7 +856,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/new-zealand
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-13
 
 AI marketing services · New Zealand
@@ -1043,11 +1043,11 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Marketing Services for Australian Businesses | Flow AI
+## AI Marketing Services for Australian Businesses | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/australia
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-13
 
 AI marketing services · Australia
@@ -1234,11 +1234,11 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Marketing Services in Auckland | Flow AI
+## AI Marketing Services in Auckland | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/auckland
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-13
 
 AI marketing services · Auckland
@@ -1425,11 +1425,11 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Automation Consultant in Auckland, NZ | Flow AI
+## AI Automation Consultant in Auckland, NZ | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/ai-automation-consultant
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-16
 
 AI automation consulting · Auckland and New Zealand
@@ -1594,11 +1594,11 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Agent Development for NZ and Australian Teams | Flow AI
+## AI Agent Development for NZ and Australian Teams | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/ai-agent-development
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-16
 
 AI agent development · New Zealand and Australia
@@ -1767,7 +1767,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/marketing-automation-consultant
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-16
 
 Marketing automation · New Zealand and Australia
@@ -1932,11 +1932,11 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## Claude Code Consultant for Marketing Teams, NZ | Flow AI
+## Claude Code Consultant for Marketing Teams, NZ | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/claude-code-consultant
 Type: Service
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-16
 
 Claude Code consulting · New Zealand and Australia
@@ -2101,11 +2101,11 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## How It Works: Your Marketing Team, One Agent a Week | Flow AI
+## How It Works: Your Marketing Team, One Agent a Week | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 How it works · Read, install, run
 
@@ -2481,7 +2481,7 @@ Work with meExplore the engine in production
 
 Source URL: https://www.flowai.co.nz/sprints/positioning
 Type: Sprint
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Sprint 01 · Flow Intelligence · one week
 
@@ -2595,11 +2595,11 @@ A short form. I reply personally.
 
 ---
 
-## AI SEO and AEO Services: the AI Search Sprint | Flow AI
+## AI SEO and AEO Services: the AI Search Sprint | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/ai-search
 Type: Sprint
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Sprint 02 · Search agent · one week
 
@@ -2715,7 +2715,7 @@ A short form. I reply personally.
 
 Source URL: https://www.flowai.co.nz/sprints/content-engine
 Type: Sprint
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Sprint 03 · Content agent · one week
 
@@ -2829,11 +2829,11 @@ A short form. I reply personally.
 
 ---
 
-## AI Lead Generation and LinkedIn Outreach: the Outbound Sprint | Flow AI
+## AI Lead Generation and LinkedIn Outreach: the Outbound Sprint | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/outbound
 Type: Sprint
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Sprint 04 · Outbound agent · one week
 
@@ -2951,7 +2951,7 @@ A short form. I reply personally.
 
 Source URL: https://www.flowai.co.nz/sprints/analytics
 Type: Sprint
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Sprint 05 · Measurement agent · one week
 
@@ -3077,11 +3077,11 @@ A short form. I reply personally.
 
 ---
 
-## Three demand engines, one pipeline | Flow AI
+## Three demand engines, one pipeline | Amber Lan
 
 Source URL: https://www.flowai.co.nz/work/enterprise-gtm
 Type: Case study
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Published: 2026-08-20
 Last updated: 2026-08-20
 
@@ -3181,11 +3181,11 @@ Work with me
 
 ---
 
-## Content engine with a codified voice gate | Flow AI
+## Content engine with a codified voice gate | Amber Lan
 
 Source URL: https://www.flowai.co.nz/work/content-engine
 Type: Case study
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Published: 2026-08-20
 Last updated: 2026-08-20
 
@@ -3285,11 +3285,11 @@ Work with me
 
 ---
 
-## An SEO toolkit built for AI citations | Flow AI
+## An SEO toolkit built for AI citations | Amber Lan
 
 Source URL: https://www.flowai.co.nz/work/geo-seo-toolkit
 Type: Case study
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Published: 2026-08-20
 Last updated: 2026-08-20
 
@@ -3389,14 +3389,14 @@ Work with me
 
 Source URL: https://www.flowai.co.nz/about
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-08
 
 Now: running marketing solo at Novamind Labs in Auckland
 
 # Amber Lan. AI marketing engineer and GTM engineer.
 
-I'm Amber Lan, and Flow AI is my AI marketing engineering practice in Auckland, New Zealand. I run a whole marketing function, strategy and execution, on AI agents I build.
+I'm Amber Lan, an AI marketing engineer in Auckland, New Zealand. I run a whole marketing function, strategy and execution, on AI agents I build.
 
 Work with meGet my CV
 
@@ -4012,7 +4012,7 @@ LinkedInGitHubEmail
 
 ### Who is Amber Lan?
 
-Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of Novamind Labs, an AI startup, on an agent stack she built herself.
+Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, who takes on contract builds under the trading name Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of Novamind Labs, an AI startup, on an agent stack she built herself.
 
 ### What does Amber Lan build?
 
@@ -4040,7 +4040,7 @@ Yes, she is open to conversations about senior marketing engineer, GTM engineer 
 
 Source URL: https://www.flowai.co.nz/manifesto
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Published: 2026-10-01
 Last updated: 2026-10-01
 
@@ -4238,11 +4238,11 @@ Work with meExplore how it works
 
 ---
 
-## Free agent templates | Flow AI
+## Free agent templates | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · free
@@ -4349,7 +4349,7 @@ Work with meExplore how it works
 
 Source URL: https://www.flowai.co.nz/templates/brand-dna
 Type: Template
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · Flow Intelligence
@@ -4440,7 +4440,7 @@ Work with meInstall Flow Intelligence as a one-week positioning sprint
 
 Source URL: https://www.flowai.co.nz/templates/geo-audit
 Type: Template
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · Search agent
@@ -4531,7 +4531,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 Source URL: https://www.flowai.co.nz/templates/ai-crawler-check
 Type: Template
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · Search agent
@@ -4746,7 +4746,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 Source URL: https://www.flowai.co.nz/templates/ai-citability
 Type: Template
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · Search agent
@@ -4835,7 +4835,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 Source URL: https://www.flowai.co.nz/templates/content-evidence-audit
 Type: Template
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · Content agent
@@ -4926,7 +4926,7 @@ Work with meInstall the content agent as a one-week content engine sprint
 
 Source URL: https://www.flowai.co.nz/templates/reddit-opportunities
 Type: Template
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-02
 
 Agent templates · Community agent
@@ -5015,11 +5015,11 @@ Work with meAsk about running the community agent every month
 
 ---
 
-## Privacy policy | Flow AI
+## Privacy policy | Amber Lan
 
 Source URL: https://www.flowai.co.nz/privacy
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 Last updated: 2026-10-06
 
 Privacy policy · Updated 6 October 2026
@@ -5164,11 +5164,11 @@ Questions about privacy? Email amber.lan.growth.digital@gmail.com.
 
 ---
 
-## Work with Amber Lan | Flow AI, Auckland NZ
+## Work with Amber Lan | AI Marketing Engineer, Auckland NZ
 
 Source URL: https://www.flowai.co.nz/contact
 Type: Page
-Author: Amber Lan (Flow AI)
+Author: Amber Lan, AI marketing engineer, Auckland
 
 Contact
 
@@ -5245,7 +5245,7 @@ AI-search optimisation helps AI assistants such as ChatGPT, Claude and Perplexit
 <!-- blog-full:start -->
 ## n8n, Zapier, Make or Claude Code: which automation tool suits a small business?
 URL: https://www.flowai.co.nz/blog/n8n-vs-zapier-vs-make-vs-claude-code
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-16
 
 Short answer: Choose Zapier when non-technical staff need simple app-to-app automations quickly. Choose Make for visual multi-step scenarios at a lower entry price. Choose n8n when someone technical wants self-hosting or high volumes billed per run. Choose Claude Code when the work needs judgement, such as drafting a weekly report, and someone is comfortable working with files.
@@ -5427,7 +5427,7 @@ A: Hire one when an automation touches customer data or money, or must keep runn
 
 ## How to hire an AI agent developer: questions to ask, red flags and what you should own.
 URL: https://www.flowai.co.nz/blog/how-to-hire-an-ai-agent-developer
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-16
 
 Short answer: Hire an AI agent developer by asking to see an agent they built running with its tests and logs, checking how they limit what the agent can read and do, and signing a contract that puts the code, prompts, accounts and data in your name, meets the Privacy Act and includes a written handover.
@@ -5625,7 +5625,7 @@ A: In New Zealand, yes: the Privacy Act 2020 covers any business handling person
 
 ## Claude for business or ChatGPT Business: what does each cost a New Zealand team in 2026?
 URL: https://www.flowai.co.nz/blog/claude-vs-chatgpt-business-cost-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-16
 
 Short answer: On their official pricing pages on 16 October 2026, Claude's Team plan and ChatGPT Business both cost US$20 per user per month billed annually, or US$25 billed monthly, with a two seat minimum. A 10 person team pays US$200 to US$250 a month before GST. Setup and staff training usually cost more than the seats.
@@ -5789,7 +5789,7 @@ A: Start on monthly billing for a trial of a month or two, then move to annual o
 
 ## Claude Code for marketing agencies: what to build first, and how to keep it safe.
 URL: https://www.flowai.co.nz/blog/claude-code-for-marketing-agencies
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-16
 
 Short answer: Start with a brief file for each client, then build research packs, first drafts, an SEO and AEO audit and monthly reporting, in that order. Keep each client in its own folder with its own connectors, put a person on review before the client sees anything, and use a commercial plan so client data stays out of model training.
@@ -5949,7 +5949,7 @@ A: Bring one in when the first workflows run but the setup is starting to strain
 
 ## AI consultant rates in New Zealand and Australia (2026): hourly, daily and project pricing.
 URL: https://www.flowai.co.nz/blog/ai-consultant-rates-nz-australia
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-16
 
 Short answer: AI consultants in Auckland charge about NZD 140 to 190 an hour on contract in 2026, according to Robert Walters, or roughly NZD 1,120 to 1,520 for an eight-hour day. In Australia, Hays puts AI engineer contractors at AUD 900 to 1,200 a day. Published fixed prices for small-business workshops and assessments start at NZD 795 plus GST.
@@ -6099,7 +6099,7 @@ A: A written plan that names the processes to change first, who owns each step a
 
 ## How much does AI agent development cost in New Zealand? (2026, NZD)
 URL: https://www.flowai.co.nz/blog/ai-agent-development-cost-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-16
 
 Short answer: Most of an AI agent's cost is people time. At the NZD 130 to 180 an hour Robert Walters lists for Auckland AI engineer contractors in 2026, a one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. Model and platform fees for a small agent can stay under NZD 100 a month.
@@ -6271,7 +6271,7 @@ A: Contract a build when you need one or two agents and someone in your team can
 
 ## What do AI marketing services include? A buyer's checklist.
 URL: https://www.flowai.co.nz/blog/what-do-ai-marketing-services-include
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: AI marketing services cover the marketing jobs a provider runs on AI systems: positioning, AI search and SEO, content, social, outbound, conversion, paid media checks, community and reporting. Each line should name what it delivers each month and who approves it. You still own the strategy, the claims, the budget and every customer conversation.
@@ -6453,7 +6453,7 @@ A: A proposal should name each service line, the monthly deliverables for each, 
 
 ## How much does a marketing agency cost in Australia? (2026, AUD)
 URL: https://www.flowai.co.nz/blog/marketing-agency-cost-australia
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: Most Australian businesses pay a marketing agency AUD 2,000 to 6,000 a month in 2026. One channel such as SEO starts at about AUD 1,200 to 2,500, multi-channel growth work runs AUD 6,000 to 15,000, and agency hourly rates sit between AUD 80 and 350. Quotes usually exclude 10% GST and ad spend.
@@ -6615,7 +6615,7 @@ A: SEEK's October 2026 data shows an advertised average of AUD 111,784 for marke
 
 ## How to choose an AI marketing agency or provider: 12 questions to ask.
 URL: https://www.flowai.co.nz/blog/how-to-choose-an-ai-marketing-provider
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: Choose an AI marketing provider by asking for a run of its system on a real business, then asking who reviews the work, who owns the agents, accounts and data, how it meets the NZ or Australian Privacy Act, what it measures, what it costs in writing, and how you leave. Score each answer and pick the provider that shows the most.
@@ -6779,7 +6779,7 @@ A: A small business with several channels to run and little in-house time often 
 
 ## How do Auckland businesses get recommended by ChatGPT and Google Maps?
 URL: https://www.flowai.co.nz/blog/get-recommended-by-chatgpt-auckland
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: Auckland businesses get recommended by ChatGPT and Google Maps when local facts about them are complete and agree everywhere. Set up your Google Business Profile with the right category and your suburbs as service areas, keep your name, address and phone identical everywhere including the NZBN register, collect recent reviews, and publish a page for each service and area.
@@ -6919,7 +6919,7 @@ A: Only for areas you actively serve and can write about with real detail: jobs 
 
 ## What happens in the first month of an AI marketing build? A week-by-week guide.
 URL: https://www.flowai.co.nz/blog/first-month-of-an-ai-marketing-build
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: A well-run AI marketing build spends week one on a written scope and positioning brief, week two installing the first agent with a person approving its output, week three running it against a baseline, and week four on handover documents and choosing the next agent. You provide access, decisions and one to two hours of review each week.
@@ -7039,7 +7039,7 @@ A: Plan on one to two hours in week one for the scope conversation and positioni
 
 ## AI marketing services or AI marketing tools: which does a small business need?
 URL: https://www.flowai.co.nz/blog/ai-marketing-services-vs-tools
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: Buy AI marketing tools when someone in the business has three or more hours a week and the skill to run one or two channels. Hire an AI marketing service when several channels must run and nobody has the time. Choose a build and handover when a team member has some hours and you want systems you own.
@@ -7193,7 +7193,7 @@ A: Yes, and many small businesses should. A common split is to run social and em
 
 ## What should an AI marketing scope of work include?
 URL: https://www.flowai.co.nz/blog/ai-marketing-scope-of-work
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Writing each point down now keeps both sides aligned later.
@@ -7339,7 +7339,7 @@ A: Two to five pages is enough for most small business projects. Length matters 
 
 ## Who offers AI marketing services in New Zealand in 2026?
 URL: https://www.flowai.co.nz/blog/ai-marketing-providers-new-zealand
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Flow AI.
@@ -7529,7 +7529,7 @@ A: Any provider that meets the three criteria, which are a public website, AI ma
 
 ## Who offers AI marketing services in Australia in 2026?
 URL: https://www.flowai.co.nz/blog/ai-marketing-providers-australia
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: In October 2026, Australian AI marketing services came from five kinds of provider: AI-native agencies such as Flowterra Labs, established agencies adding AI such as Yoghurt Digital, AI search specialists such as Prosperity Media, automation firms such as Bolder Digital, and remote build-and-handover practices. Few publish prices, so compare what each shows and what you keep.
@@ -7699,7 +7699,7 @@ A: Flow AI included providers that had a public website, offered AI marketing se
 
 ## AI marketing and privacy law in NZ and Australia: what your provider must do with your data.
 URL: https://www.flowai.co.nz/blog/ai-marketing-privacy-law-nz-australia
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: Yes, if the provider takes only the data each job needs, keeps personal information out of AI tools that retain or train on it, signs a contract limiting use to your purposes, and tells you where the data is processed. In New Zealand and Australia your business stays responsible for that data, including when an AI vendor processes it offshore.
@@ -7851,7 +7851,7 @@ A: Ask for a clause limiting use of your data to your purposes, a ban on using i
 
 ## How do you run a whole marketing function on Claude Code?
 URL: https://www.flowai.co.nz/blog/running-marketing-on-claude-code
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.
@@ -8008,7 +8008,7 @@ A: A first useful lane takes days, and the full function takes months. My setup 
 
 ## Marketing engineer and AI marketing jobs in New Zealand and Australia: what the 2026 data shows.
 URL: https://www.flowai.co.nz/blog/marketing-engineer-jobs-nz-australia-2026
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: Demand for AI skills in New Zealand marketing is climbing: SEEK found AI skills in 4.0% of all NZ job ads in August 2026 and in 9.8% of Marketing & Communications ads. In July, NZ's 3.7% compared with Australia's 2.1%. The marketing engineer title itself has yet to reach local ads; the work is advertised under neighbouring titles.
@@ -8199,7 +8199,7 @@ A: Yes. The figures are free to quote with attribution to Amber Lan, Flow AI (fl
 
 ## How does New Zealand's AI Advisory Pilot fund AI for small businesses?
 URL: https://www.flowai.co.nz/blog/ai-advisory-pilot-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: New Zealand's AI Advisory Pilot is a government grant, delivered through the Regional Business Partner Network, that pays up to 50% of eligible costs for expert AI help: up to $2,500 towards an AI roadmap and up to $12,500 towards implementation. Businesses need an NZBN and fewer than 50 full-time employees. It is open until 30 June 2027.
@@ -8398,7 +8398,7 @@ A: Usually it cannot. The pilot excludes general software or product development
 
 ## What is a marketing engineer, and how is it different from a GTM engineer?
 URL: https://www.flowai.co.nz/blog/what-is-a-marketing-engineer
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content and reporting, and keeps the judgement over what ships. A GTM engineer builds the systems that feed sales: prospect lists, enrichment, sequencing and CRM automation. Either way, a real one can show you a running system.
@@ -8599,7 +8599,7 @@ A: Usually not at first. A business of 5 to 50 people often gets more from buyin
 
 ## AI for marketers: what to hand to AI, and what to keep.
 URL: https://www.flowai.co.nz/blog/ai-for-marketers
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-05
 
 Short answer: Hand AI the production work of marketing: research, first drafts, repurposing, scheduling, tracking and follow-up. Keep the judgment: positioning, the claim worth making, taste, the call on what ships and conversations with buyers. Put a named person and a short review step between every AI draft and the customer, and measure hours saved alongside enquiries.
@@ -8759,7 +8759,7 @@ A: AI is most useful at the handover between marketing and sales, where small bu
 
 ## AI agents for marketing: which to build first, and how.
 URL: https://www.flowai.co.nz/blog/ai-agents-for-marketing
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-05
 
 Short answer: Build a positioning brief first, because every marketing agent is briefed from it. Then build the agent for the gap that costs you most, usually search or outbound for a 5 to 50 person business. Install one agent at a time, give it narrow data access, put a human review before anything reaches a customer, and measure enquiries.
@@ -8937,7 +8937,7 @@ A: Marketing automation runs the steps a person designed, such as sending a welc
 
 ## AI agency, AI automation agency or AI consultant: which does an NZ business need?
 URL: https://www.flowai.co.nz/blog/ai-agency-vs-ai-consultant-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-05
 
 Short answer: Choose an AI marketing agency when you want marketing produced and run for you, an AI automation agency when a specific process wastes hours every week, and an AI consultant when you need a plan before you buy anything. If you have staff with time, an in-house person plus an outside engineer can cost less than all three.
@@ -9095,7 +9095,7 @@ A: Use an agency when nobody inside has the hours and the work spans several cha
 
 ## What is answer engine optimisation (AEO)? A guide for small business.
 URL: https://www.flowai.co.nz/blog/what-is-answer-engine-optimisation
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: Answer engine optimisation (AEO) is the work of making your business easy for AI answer engines such as ChatGPT, Perplexity, Gemini and Google's AI Overviews to find, understand and name in their answers. It builds on normal SEO: crawlable pages, clear facts, direct answers to real questions, and mentions of your business on other trusted sites.
@@ -9259,7 +9259,7 @@ A: Very nearly. GEO, generative engine optimisation, comes from a 2024 research 
 
 ## What is an AI CMO? A plain definition for small business.
 URL: https://www.flowai.co.nz/blog/what-is-an-ai-cmo
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: An AI CMO is software that does the planning half of a chief marketing officer's job. It reads the business and its market, sets priorities, writes the marketing plan, briefs the work and reviews the results each cycle. A human still owns positioning, pricing, claims, spend and anything that reaches a customer.
@@ -9403,7 +9403,7 @@ A: Ask what it reads before it plans, what artefact it produces each week, where
 
 ## SEO for small business in New Zealand: a practical guide.
 URL: https://www.flowai.co.nz/blog/seo-for-small-business-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: SEO for a New Zealand small business starts with Google, which handles about nine in ten NZ searches. Complete and maintain your Google Business Profile, collect recent reviews every week, give each service and each area you cover its own page, and fix the technical basics in Search Console. Most owners can do the first month themselves.
@@ -9571,7 +9571,7 @@ A: For most local NZ businesses, it is the Google Business Profile: the right pr
 
 ## Outbound sales automation for small business: a practical guide for NZ and Australia.
 URL: https://www.flowai.co.nz/blog/outbound-sales-automation
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: Outbound sales automation for a small business means using software and AI to build a target list, research each account, draft short personal emails and send follow-ups on a schedule, while a person approves every first message and handles every reply. In New Zealand and Australia it must also meet spam law on consent, identification and unsubscribing.
@@ -9755,7 +9755,7 @@ A: With a system in place, two to three hours a week covers a small programme: a
 
 ## How much does a marketing agency cost in NZ?
 URL: https://www.flowai.co.nz/blog/marketing-agency-cost-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: Most New Zealand marketing agencies charge NZD 95 to 200 an hour. Monthly retainers run about NZD 500 to 1,500 for one channel, NZD 1,500 to 4,000 for several, and NZD 4,000 to 10,000 or more for full service, plus GST and ad spend. From NZD 1,000 a month, an agency has room to do one channel properly.
@@ -9937,7 +9937,7 @@ A: A good cost per enquiry is one well below what an enquiry is worth to you. Wo
 
 ## Marketing agency alternatives for NZ small business.
 URL: https://www.flowai.co.nz/blog/marketing-agency-alternatives-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: The main alternatives to a marketing agency in New Zealand are doing it yourself with AI tools, a freelancer at NZD 50 to 150 an hour, a fractional marketing manager from about NZD 1,200 a month, a specialist package, an AI-led service, or an in-house hire on NZD 55,000 to 150,000 a year.
@@ -10069,7 +10069,7 @@ A: Check your notice period first. Published NZ terms range from one month's not
 
 ## How to get your business mentioned by ChatGPT.
 URL: https://www.flowai.co.nz/blog/how-to-get-mentioned-by-chatgpt
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: There is no form to submit your business to ChatGPT. ChatGPT, Perplexity, Google AI Mode and Copilot build answers from the open web and their search partners, so you get mentioned and recommended by being easy to find and confirm: crawlable pages that answer buyer questions, consistent business details, recent reviews, and mentions on sites the assistants already trust.
@@ -10233,7 +10233,7 @@ A: That is a business choice, and OpenAI treats its two crawlers separately. GPT
 
 ## What is a fractional marketing manager, and does your NZ business need one?
 URL: https://www.flowai.co.nz/blog/fractional-marketing-manager-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: A fractional marketing manager is an experienced marketer who works for your business part time, usually one or two days a week, owning the plan and the results without a full-time salary. Robert Walters' 2026 guide puts Auckland contract marketing managers at NZD 70 to 105 an hour, roughly NZD 2,450 to 3,700 a month for one day a week.
@@ -10403,7 +10403,7 @@ A: It is worth it when the business has a working offer, some marketing spend al
 
 ## Fractional CMO vs AI CMO: which does a small business in Australia or New Zealand need?
 URL: https://www.flowai.co.nz/blog/fractional-cmo-vs-ai-cmo
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: A fractional CMO is a senior marketer working part time, costing about NZD 4,000 to 10,000 a month in New Zealand and AUD 6,000 to 18,000 in Australia. An AI CMO is software that plans and often produces the work for far less. Choose the person for judgment and accountability, the software for weekly execution, or combine them.
@@ -10555,7 +10555,7 @@ A: Robert Walters' 2026 salary guide puts an Auckland CMO at NZD 230,000 to 300,
 
 ## Do you need an AI marketing agency in NZ?
 URL: https://www.flowai.co.nz/blog/do-you-need-an-ai-marketing-agency-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
 Short answer: You need an AI marketing agency when marketing must run every week across more than one channel and nobody inside the business has the hours to run it. Check that the agency runs real AI systems you can see and keep. If you have the time or only one channel, a freelancer or AI tools may serve you better.
@@ -10713,7 +10713,7 @@ A: The best AEO agency for a small business is one that shows its own work being
 
 ## Content marketing for small business in NZ: what to publish and how often.
 URL: https://www.flowai.co.nz/blog/content-marketing-small-business-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: Content marketing for a New Zealand small business means publishing useful answers to the questions your customers already ask, on a schedule you can keep. Write one solid piece a fortnight, cut it into social posts, an email and FAQ entries, and check enquiries monthly. Two to four hours a week is enough to start.
@@ -10901,7 +10901,7 @@ A: Hire help when you know what you want published and lack the hours to produce
 
 ## How to build an AI marketing strategy for a small business.
 URL: https://www.flowai.co.nz/blog/ai-marketing-strategy-small-business
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: Build an AI marketing strategy in five steps: write your positioning and the questions customers ask, hand one or two marketing jobs to AI first, set rules for what a person approves, choose two numbers to measure, and run it for 90 days. Keep it to one page and review it monthly.
@@ -11069,7 +11069,7 @@ A: Keep a named person on the claim and the prices, on anything sent to an indiv
 
 ## AI marketing examples for small business: ten, one per marketing job.
 URL: https://www.flowai.co.nz/blog/ai-marketing-examples
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: Ten practical AI marketing examples for a small business, one per marketing job: a positioning file, AI search answer pages, a weekly guide, one social channel, researched outbound, quote follow-up, a launch kit, review replies, a weekly ad check and a one-screen report. In each, AI drafts the work and a named person approves it.
@@ -11269,7 +11269,7 @@ A: Using AI to research and draft is legal; the message itself must follow the U
 
 ## AI marketing automation for small business: what to set up first.
 URL: https://www.flowai.co.nz/blog/ai-marketing-automation-small-business
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: AI marketing automation is software that runs marketing steps on triggers, such as a welcome email after a sign-up, with AI writing, sorting and personalising the content inside each step. A small business should start with six: a welcome sequence, enquiry follow-up, quote follow-up, review requests, abandoned bookings or carts, and re-engagement.
@@ -11417,7 +11417,7 @@ A: Usually three: one place that holds contacts and sends email, one booking or 
 
 ## Marketing agency vs freelancer vs in-house hire: which suits your NZ business?
 URL: https://www.flowai.co.nz/blog/agency-vs-freelancer-vs-in-house
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: A freelancer is usually cheapest for New Zealand small businesses at NZD 50 to 150 an hour. An agency retainer costs NZD 1,500 to 10,000 a month for more than one channel, and an in-house marketer costs about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Ongoing workload decides which fits.
@@ -11557,7 +11557,7 @@ A: From 1 April 2026 the default employer KiwiSaver contribution is 3.5% of gros
 
 ## AEO vs SEO vs GEO: what is the difference?
 URL: https://www.flowai.co.nz/blog/aeo-vs-seo-vs-geo
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: SEO gets your pages ranked in search results. AEO gets your business quoted or recommended inside the answers AI tools write. GEO is the research term for the same goal in generative AI engines such as ChatGPT and Perplexity. In practice AEO and GEO overlap almost completely, and both rest on good SEO.
@@ -11703,7 +11703,7 @@ A: The first round of each costs mostly owner time. Many AEO tasks, such as allo
 
 ## The AEO checklist for small business (2026).
 URL: https://www.flowai.co.nz/blog/aeo-checklist
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: An AEO checklist for a small business covers six areas: open your site to AI crawlers, publish consistent facts about the business, write pages that answer customer questions directly, earn reviews and mentions elsewhere, add accurate structured data, and track what AI engines say about you. Most owners can work through it in a week.
@@ -11867,7 +11867,7 @@ A: Yes. Flow AI's free AI crawler access check tests fourteen AI crawlers agains
 
 ## What is an AI marketing agent? A definition for small business.
 URL: https://www.flowai.co.nz/blog/what-is-an-ai-marketing-agent
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-09-10
 
 Short answer: An AI marketing agent is software that reads your business, decides what marketing to do next, produces the work across several channels and ships it under a human's review. A tool waits to be prompted one task at a time. An agent holds a goal, chooses its next task and reports what changed.
@@ -12051,7 +12051,7 @@ A: It is safe when three limits are set before anything runs: a named human appr
 
 ## AI marketing transformation for small business: the 90-day roadmap
 URL: https://www.flowai.co.nz/blog/ai-marketing-transformation-small-business
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-02
 
 Short answer: AI marketing transformation for a small business is the move from marketing done in spare hours to marketing run by systems, one job at a time. A practical 90-day path fixes positioning and measurement first, then search and content, then social and outbound, with a human approving everything that reaches a customer.
@@ -12235,7 +12235,7 @@ A: AI should never decide what the business claims, approve a price, publish a c
 
 ## AI marketing statistics for Australia and New Zealand, 2026
 URL: https://www.flowai.co.nz/blog/ai-marketing-statistics-australia-new-zealand
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-09-10
 
 Short answer: Around half of small and medium businesses in Australia and New Zealand now use AI in some form, but far fewer use it to run marketing work end to end. This page collects 62 figures on adoption, marketing use, AI search and time saved, each linked to its primary source and free to quote with attribution.
@@ -12472,7 +12472,7 @@ Last verified 10 September 2026. Every source below was opened and read before t
 
 ## How much does AI marketing cost in Australia and New Zealand? (2026)
 URL: https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-09-10
 
 Short answer: In 2026, AI marketing for a small business costs USD 20 to 99 a month per tool if you do the work yourself, NZD 60 to 150 an hour from a freelancer, NZD 1,500 to 10,000 a month from an agency, or NZD 90,000 to 130,000 a year for an in-house hire. AI marketing agents sit between the tool and the agency.
@@ -12661,7 +12661,7 @@ A: Expect setup fees of AUD 500 to 3,000, reporting fees of AUD 150 to 400 a mon
 
 ## AI marketing for small business in NZ: the complete guide.
 URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz
-Author: Amber Lan, Flow AI
+Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-08
 
 Short answer: AI marketing for a New Zealand small business covers four systems: SEO so Google finds you, answer engine optimisation so ChatGPT and AI search quote you, a content engine that publishes every week, and outbound follow-up that never forgets. Most businesses start with one system, prove it, then add the next.
@@ -12850,5 +12850,4 @@ Q: Do I still need SEO if I am doing AEO?
 A: Yes. Answer engine optimisation builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 Q: Can one person really run all of this?
 A: Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
-
 <!-- blog-full:end -->

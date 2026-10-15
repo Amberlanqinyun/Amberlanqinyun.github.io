@@ -1,6 +1,6 @@
-# Flow AI (flowai.co.nz) · Amber Lan · AI marketing engineer · Auckland, New Zealand
+# Amber Lan · AI marketing engineer · Auckland, New Zealand (flowai.co.nz)
 
-> Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI is also Amber Lan's open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. She takes selected contract builds with teams and is open to senior roles.
+> Amber Lan is an AI marketing engineer in Auckland who provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. This site is also Amber Lan's open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. She takes selected contract builds with teams, under the trading name Flow AI, and is open to senior roles.
 
 Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
@@ -9,7 +9,7 @@ Key facts:
 - Work with Amber: contract builds for teams that want an AI marketing system built with them, covering AI search and answer engine optimisation, a content engine, outbound and measurement. Each build starts with a written scope and is priced per project. The team keeps running the system after a documented handover.
 - Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland, across New Zealand and in Australia (Sydney, Melbourne, Brisbane). The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
-- Founder: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
+- Who: Amber Lan, AI marketing engineer. Flow AI is her trading name. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
