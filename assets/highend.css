@@ -584,3 +584,107 @@ html.fdot-run { overflow-anchor: none; }
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(255, 226, 173, 0.22);
   color: var(--fg, #faf8f3); line-height: 1; letter-spacing: -0.01em; vertical-align: 0.02em;
 }
+
+/* ---- Taste pass (16 Oct 2026) ---------------------------------------------
+   One card language, quiet labels, and a little more variety in the page's
+   rhythm. Colours do not move. Everything below overrides what sits above,
+   so this block can be read, or removed, as one change. */
+
+/* One panel: a single hairline on the core, lit along the top edge. The
+   second ring and the tray around the demo go, so cards stop reading as
+   thick grey frames. Containers share one radius; tiles inside stay tighter. */
+:root {
+  --ring: 0 0 0 1px var(--core-line);
+  --radius-lg: var(--r-lg);
+  --fill-from: rgba(250, 248, 243, 0.5);
+}
+.bezel { padding: 0; border: 0; background: transparent; box-shadow: var(--ambient); }
+.bezel > * { border-radius: var(--r-lg); }
+.demo__win { border-radius: var(--r-lg); }
+.dgrid { border: 1px solid var(--core-line); border-radius: var(--r-lg); background: var(--core); box-shadow: var(--highlight); }
+.dgrid li:hover { background: rgba(250, 248, 243, 0.03); }
+
+/* Section labels: plain sentence case, the way About already sets them.
+   Only the hero keeps a small pill, and it reads in sentence case too. */
+.stack > .eyebrow {
+  display: block; padding: 0; border: 0; border-radius: 0;
+  background: none; box-shadow: none;
+  color: var(--soft);
+  font-size: 0.9375rem; font-weight: 450; letter-spacing: 0.005em; text-transform: none;
+  line-height: 1.4; text-align: inherit;
+}
+.stack > .eyebrow + h1, .stack > .eyebrow + h2 { margin-top: var(--s-4); }
+.hero .stack > .eyebrow {
+  display: inline-flex; padding: 0.45rem 0.95rem;
+  border: 1px solid var(--core-line); border-radius: var(--pill);
+  background: var(--shell); box-shadow: var(--highlight);
+  font-size: 0.8125rem;
+}
+.hero .stack > .eyebrow + h1 { margin-top: var(--s-6); }
+
+/* The system grid: every row is in the offer, so the ticks said nothing.
+   The last row closes up, so no empty cell is left hanging. */
+.dgrid .vlabel svg { display: none; }
+@media (min-width: 1081px) {
+  .dgrid li:last-child:nth-child(3n + 2) { grid-column: span 2; }
+  .dgrid li:last-child:nth-child(3n + 1) { grid-column: span 3; }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  .dgrid li:last-child:nth-child(2n + 1) { grid-column: span 2; }
+}
+
+/* Home rhythm, break one: the four numbers sit in a band of their own,
+   a shade up from the ground, with hairlines between them. */
+#value { position: relative; isolation: isolate; }
+#value::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, transparent, rgba(250, 248, 243, 0.022) 18%, rgba(250, 248, 243, 0.022) 82%, transparent);
+  border-block: 1px solid var(--hair);
+  pointer-events: none;
+}
+#value .value-grid { gap: 0; }
+#value .value-grid .stat { padding: var(--s-2) var(--s-6) var(--s-2); border-top: 0; border-left: 1px solid var(--hair); }
+#value .value-grid .stat:first-child { padding-left: 0; border-left: 0; }
+@media (max-width: 900px) {
+  #value .value-grid { gap: var(--s-7) 0; }
+  #value .value-grid .stat:nth-child(odd) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 540px) {
+  #value .value-grid .stat { padding: var(--s-6) 0 0; border-left: 0; border-top: 1px solid var(--hair); }
+  #value .value-grid .stat:first-child { padding-top: 0; border-top: 0; }
+}
+
+/* Home rhythm, break two: proof is one list, not cards, a row and a box. */
+.proof-list { list-style: none; margin: var(--space-block) 0 0; padding: 0; text-align: left; border-top: 1px solid var(--hair); }
+.proof-row {
+  display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) auto;
+  gap: var(--s-5) var(--s-7); align-items: baseline;
+  padding: var(--s-6) 0; border-bottom: 1px solid var(--hair);
+  color: inherit; text-decoration: none;
+  transition: background-color 320ms var(--ease-out);
+}
+.proof-row__kind { color: var(--soft); font-size: var(--t-small); }
+.proof-row__body h3 { margin: 0; font-size: var(--h3); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; }
+.proof-row__body p { margin: var(--s-3) 0 0; max-width: 56ch; color: var(--muted); }
+.proof-row > .text-link { white-space: nowrap; }
+.proof-row:hover .text-link { border-color: var(--fg); }
+@media (prefers-reduced-motion: no-preference) {
+  .proof-row:hover .arrow-link::after { transform: translateX(3px); }
+}
+.proof-list + .install { margin-top: var(--space-tight); }
+@media (max-width: 720px) {
+  .proof-row { grid-template-columns: 1fr; gap: var(--s-3); }
+}
+
+/* Phones: longer hero copy reads from the left edge, the way people read. */
+@media (max-width: 640px) {
+  .hero .stack { text-align: left; }
+  .hero .stack > .lead { margin-inline: 0; }
+  .hero .stack > .eyebrow { display: block; padding: 0; border: 0; background: none; box-shadow: none; font-size: 0.875rem; }
+  .hero .stack > .eyebrow + h1 { margin-top: var(--s-4); }
+  .hero .stack .cta-row { justify-content: flex-start; align-items: flex-start; }
+  .hero .stack .fdot--hero { margin-left: -6px; }
+  .hero .stack .svc-answer { margin-inline: 0; }
+  .hero .stack .svc-places { justify-content: flex-start; }
+  .profile__text .cta-row { align-items: flex-start; }
+}
