@@ -40,6 +40,7 @@ Site structure:
 - /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
 - /skills/: Flow AI skill library with 126 inspectable AI agent skills: 16 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and two editing skills: Humanizer by Siqi Chen for stripping AI writing tells out of prose, and 说人话 (Shuorenhua) by MrGeDiao for Chinese-first editing that keeps every fact. Every entry names its author and links to source.
+- /skills/#anz-marketing-skills: ANZ marketing skills, six open-source Claude Code skills for marketing in New Zealand and Australia: local SEO, email and SMS compliance, ad claims, NZ and Australian English with te reo Māori, the marketing calendar, and Auckland local marketing. MIT licensed, built in Auckland. Source and plugin install: https://github.com/Amberlanqinyun/anz-marketing-skills
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
 - /skills/audit-content/SKILL.md: public pre-publication workflow for checking links, statistics, source attributions, and brand claims.
@@ -1395,6 +1396,40 @@ How it works · Read, install, run
 Flow reads your business, then builds the agent with the most to gain alongside your team in one week. After that it runs monthly, and a marketing engineer reviews every send.
 
 Work with meExplore the five sprints
+
+The film · One minute
+
+## See the whole system in a minute.
+
+Follow one run from positioning to the monthly report: Flow Intelligence briefs ten agents, they do the work, and you approve what ships. The film is silent, so it plays anywhere.
+
+### Read the words in the film
+
+- Introducing Flow AI.
+
+- Let’s build the AI agents that run your marketing.
+
+- It starts with your positioning.
+
+- Ten agents. One engineer.
+
+- Be the answer when people ask AI.
+
+- One idea becomes a month of content.
+
+- The right hundred buyers, reached personally.
+
+- Every enquiry tracked to its source.
+
+- Agents produce. You decide.
+
+- 10 hours back every week.
+
+- Marketing that compounds.
+
+- Work with me at flowai.co.nz.
+
+The business and buyers in the film are illustrative. The 10 hours is measured in production.
 
 The three steps
 
@@ -11071,4 +11106,5 @@ Q: Do I still need SEO if I am doing AEO?
 A: Yes. Answer engine optimisation builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 Q: Can one person really run all of this?
 A: Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
+
 <!-- blog-full:end -->
