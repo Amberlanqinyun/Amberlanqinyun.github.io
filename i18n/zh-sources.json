@@ -19,9 +19,17 @@
     "source": "src/blog/ai-agency-vs-ai-consultant-nz.html",
     "sha": "349540f8e290"
   },
+  "src/zh/blog/ai-agent-development-cost-nz.html": {
+    "source": "src/blog/ai-agent-development-cost-nz.html",
+    "sha": "f333bc9013be"
+  },
   "src/zh/blog/ai-agents-for-marketing.html": {
     "source": "src/blog/ai-agents-for-marketing.html",
     "sha": "57cda749661a"
+  },
+  "src/zh/blog/ai-consultant-rates-nz-australia.html": {
+    "source": "src/blog/ai-consultant-rates-nz-australia.html",
+    "sha": "0669f793cb07"
   },
   "src/zh/blog/ai-for-marketers.html": {
     "source": "src/blog/ai-for-marketers.html",
@@ -75,6 +83,14 @@
     "source": "src/blog/ai-marketing-transformation-small-business.html",
     "sha": "d6da02def982"
   },
+  "src/zh/blog/claude-code-for-marketing-agencies.html": {
+    "source": "src/blog/claude-code-for-marketing-agencies.html",
+    "sha": "a41df95b6ec0"
+  },
+  "src/zh/blog/claude-vs-chatgpt-business-cost-nz.html": {
+    "source": "src/blog/claude-vs-chatgpt-business-cost-nz.html",
+    "sha": "00116a48dda1"
+  },
   "src/zh/blog/content-marketing-small-business-nz.html": {
     "source": "src/blog/content-marketing-small-business-nz.html",
     "sha": "df1ac874fef7"
@@ -107,6 +123,10 @@
     "source": "src/blog/how-to-get-mentioned-by-chatgpt.html",
     "sha": "e1cd5e6c188f"
   },
+  "src/zh/blog/how-to-hire-an-ai-agent-developer.html": {
+    "source": "src/blog/how-to-hire-an-ai-agent-developer.html",
+    "sha": "1fb561411ada"
+  },
   "src/zh/blog/marketing-agency-alternatives-nz.html": {
     "source": "src/blog/marketing-agency-alternatives-nz.html",
     "sha": "61a2464f9e9a"
@@ -122,6 +142,10 @@
   "src/zh/blog/marketing-engineer-jobs-nz-australia-2026.html": {
     "source": "src/blog/marketing-engineer-jobs-nz-australia-2026.html",
     "sha": "1a44b38ba150"
+  },
+  "src/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code.html": {
+    "source": "src/blog/n8n-vs-zapier-vs-make-vs-claude-code.html",
+    "sha": "7f6527494019"
   },
   "src/zh/blog/outbound-sales-automation.html": {
     "source": "src/blog/outbound-sales-automation.html",
@@ -167,21 +191,37 @@
     "source": "about.html",
     "sha": "2cd14ed1f0ee"
   },
+  "zh/ai-marketing-services/ai-agent-development.html": {
+    "source": "ai-marketing-services/ai-agent-development.html",
+    "sha": "ac54b32f0b28"
+  },
+  "zh/ai-marketing-services/ai-automation-consultant.html": {
+    "source": "ai-marketing-services/ai-automation-consultant.html",
+    "sha": "7d5b3353fe57"
+  },
   "zh/ai-marketing-services/auckland.html": {
     "source": "ai-marketing-services/auckland.html",
-    "sha": "ce4262ce7e42"
+    "sha": "0b3b75c88078"
   },
   "zh/ai-marketing-services/australia.html": {
     "source": "ai-marketing-services/australia.html",
-    "sha": "91a5fbfc4dcf"
+    "sha": "37050fb4b8c1"
+  },
+  "zh/ai-marketing-services/claude-code-consultant.html": {
+    "source": "ai-marketing-services/claude-code-consultant.html",
+    "sha": "8db836afd600"
   },
   "zh/ai-marketing-services/index.html": {
     "source": "ai-marketing-services/index.html",
-    "sha": "49a69c7ba294"
+    "sha": "9d0e1f71cd08"
+  },
+  "zh/ai-marketing-services/marketing-automation-consultant.html": {
+    "source": "ai-marketing-services/marketing-automation-consultant.html",
+    "sha": "f2ed6871e26e"
   },
   "zh/ai-marketing-services/new-zealand.html": {
     "source": "ai-marketing-services/new-zealand.html",
-    "sha": "1157c7ceb070"
+    "sha": "261f91775d97"
   },
   "zh/cases.html": {
     "source": "cases.html",
@@ -213,7 +253,7 @@
   },
   "zh/sprints/ai-search.html": {
     "source": "sprints/ai-search.html",
-    "sha": "2265be57f841"
+    "sha": "4632e768693d"
   },
   "zh/sprints/analytics.html": {
     "source": "sprints/analytics.html",
@@ -229,7 +269,7 @@
   },
   "zh/sprints/outbound.html": {
     "source": "sprints/outbound.html",
-    "sha": "4c03ef44080f"
+    "sha": "faedfffa9c33"
   },
   "zh/sprints/positioning.html": {
     "source": "sprints/positioning.html",

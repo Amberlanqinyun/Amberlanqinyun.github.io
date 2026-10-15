@@ -1,0 +1,121 @@
+<!--meta
+{
+  "slug": "claude-code-for-marketing-agencies",
+  "title": "Claude Code for marketing agencies: what to build first, and how to keep it safe.",
+  "seoTitle": "Claude Code for Marketing Agencies: What to Build First",
+  "description": "How a marketing agency in NZ or Australia can use Claude Code: the first five workflows, skills and MCP, client data separation, review gates and cost.",
+  "schemaDescription": "A practitioner guide for New Zealand and Australian marketing agencies adopting Claude Code: what it is, which repeatable client work suits it, the first five workflows to build in order, lane files, skills and MCP connectors in plain terms, keeping each client's data separate, review gates, the cost model, what to measure and when to bring in a Claude Code consultant.",
+  "standfirst": "Claude Code lets an agency turn its repeatable client work into written instructions and skills that an agent runs while your people approve the results. <b>Here is what to build first, in order, and how to keep every client's data in its own place.</b>",
+  "shortAnswer": "Start with a brief file for each client, then build research packs, first drafts, an SEO and AEO audit and monthly reporting, in that order. Keep each client in its own folder with its own connectors, put a person on review before the client sees anything, and use a commercial plan so client data stays out of model training.",
+  "topic": "agent",
+  "pillar": false,
+  "format": "Guide",
+  "published": "2026-10-16",
+  "modified": "2026-10-16",
+  "keywords": ["claude code for marketing agency", "claude code for marketing", "claude code consultant", "claude code for business", "claude for business", "claude code skills for marketing", "ai agents for agencies", "claude code marketing agency nz"],
+  "definedTerm": {"name": "Claude Code for marketing agencies", "alternateName": ["Claude Code for marketing", "Claude Code for agencies"], "description": "Claude Code for a marketing agency is a setup in which each client's work lives in its own folder of written instructions, skills and connectors that an AI agent works through, while the agency's people review and approve everything the client sees."},
+  "related": ["running-marketing-on-claude-code", "ai-agents-for-marketing", "how-to-hire-an-ai-agent-developer", "what-is-an-ai-marketing-agent"],
+  "faq": [
+    {"q": "What is Claude Code used for in a marketing agency?", "a": "Agencies use Claude Code for repeatable client work: turning discovery notes into a client brief, building research packs, drafting content against the brief, auditing sites for search and AI answers, and writing the monthly report. The agent does the research and the first draft. A person on the agency team reviews each piece before the client sees it, and the client approves anything that is published or sent."},
+    {"q": "Is Claude Code safe to use with client data?", "a": "It can be, with the right plan and setup. Anthropic's documentation says it does not train generative models on code or prompts sent to Claude Code under commercial terms, which cover Team, Enterprise and API use. Keep each client in a separate folder with its own connectors, deny access to sensitive files, and run a privacy impact assessment before client personal information goes near any AI tool."},
+    {"q": "Do agency staff need to code to use Claude Code?", "a": "Most of the setup is plain English: instruction files, client briefs and skill files that describe a procedure step by step. Staff need to be comfortable working in folders and reading what the agent changed. Code matters later, for reporting pipelines, rendering graphics or automated checks, and Claude Code can write much of it, but someone should be able to read it."},
+    {"q": "How much does Claude Code cost for an agency?", "a": "On Claude Team and Enterprise plans, Claude Code usage draws from each member's seat allowance, which is shared with Claude chat. On the API it is billed per token. Anthropic's documentation reports enterprise software teams averaging about US$150 to 250 per developer per month. Marketing use differs, so run a small pilot and measure before rolling it out to every account."},
+    {"q": "What are Claude Code skills for marketing?", "a": "A skill is a folder with a SKILL.md file that describes a procedure, such as writing a brief, auditing a page for AI answers or building a monthly report. Claude Code uses a skill when its description matches the task, or when you call it by name. Project skills can be committed to git, so everyone in the agency runs the same version of each procedure."},
+    {"q": "When should an agency bring in a Claude Code consultant?", "a": "Bring one in when the first workflows run but the setup is starting to strain: instruction files that contradict each other, connectors that need write access, several staff who need one shared skills library, or client contracts that require a documented data setup. A good consultant builds on your own accounts, documents everything and leaves your team able to run and change it."}
+  ]
+}
+-->
+<h2>What is Claude Code, and why do agencies use it?</h2>
+<p>Claude Code is Anthropic's agentic tool that works inside a project folder: it reads files, edits them, runs commands and connects to other tools. Agencies use it because client work repeats. A brief, a research pack or a monthly report follows the same steps each time, so the steps can be written down once and run by an agent.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic's Claude Code overview describes it as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools, available in the terminal, IDE, desktop app and browser</a>. It was built for software teams. For an agency, the codebase is the client work: briefs, voice rules, research, drafts and the checks that run on them.</p>
+<blockquote>Claude Code for a marketing agency is a setup in which each client's work lives in its own folder of written instructions, skills and connectors that an AI agent works through, while the agency's people review and approve everything the client sees.</blockquote>
+<p>I run the whole marketing function of an AI startup on Claude Code, alone, and my <a class="go" href="/blog/running-marketing-on-claude-code">working notes on running marketing on Claude Code</a> cover that setup in detail. An agency has the same building blocks with one extra job: keeping each client's work and data apart. If agents are new to you, start with the <a class="go" href="/blog/what-is-an-ai-marketing-agent">definition of an AI marketing agent</a>.</p>
+
+<h2>Which client work suits Claude Code?</h2>
+<p>Repeatable work with a clear finished state suits it best: client briefs, research, first drafts, reporting and SEO or AEO audits. In each case the agent gathers and drafts, and a person decides. Work that depends on a relationship, such as pitching, negotiating or handling a client complaint, stays with your people.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Client work</th><th>What the agent does</th><th>Who approves</th></tr></thead>
+<tbody>
+<tr><td>Client brief</td><td>Turns discovery notes and the client's site into a draft brief</td><td>Account lead, then the client</td></tr>
+<tr><td>Research</td><td>Collects competitor pages, search results and reviews into a sourced pack</td><td>Strategist</td></tr>
+<tr><td>First drafts</td><td>Drafts posts, articles and emails against the brief and voice rules</td><td>Editor, then the client</td></tr>
+<tr><td>SEO and AEO audit</td><td>Checks pages, structured data and AI crawler access, drafts the fixes</td><td>SEO lead</td></tr>
+<tr><td>Monthly reporting</td><td>Pulls the numbers and drafts the commentary</td><td>Account manager</td></tr>
+</tbody>
+</table></div>
+<p>Clients pay for the right-hand column. The <a class="go" href="/blog/ai-for-marketers">guide to AI for marketers</a> covers the same split from an individual marketer's side.</p>
+
+<h2>What are the first five workflows to build, in order?</h2>
+<p>Build in order of risk: work that stays inside the agency first, work that reaches clients next, and work that needs access to client accounts last. A sensible order is the client brief, the research pack, first drafts, the SEO and AEO audit, then monthly reporting. Run each one cleanly for a few weeks before starting the next.</p>
+<ol>
+<li><b>The client brief.</b> One file per client: positioning, audience, voice rules, claims the client can and cannot make, examples of approved work, and who signs off what. Every later workflow reads it first, so it repays the most care.</li>
+<li><b>The research pack.</b> Competitor pages, the questions buyers ask, the current answers in search and AI assistants, and customer reviews, summarised with a link for every claim. Claude Code can run several research questions in parallel through subagents and return only the summaries.</li>
+<li><b>First drafts against the brief.</b> Articles, social posts and emails drafted from the brief and the research pack. Each draft passes a voice check and a source check before an editor reads it. A one-source-in, many-drafts-out version of this is often called a <a class="go" href="/glossary/#content-engine">content engine</a>.</li>
+<li><b>The SEO and AEO audit.</b> A repeatable check of a client's pages, structured data and AI crawler access, plus a fixed set of buyer questions tested in AI assistants for <a class="go" href="/glossary/#answer-engine-optimisation-aeo">answer engine optimisation</a>. The output is a list of fixes your team prioritises.</li>
+<li><b>Monthly reporting.</b> The agent reads analytics and ad platforms through connectors, drafts the numbers and the commentary, and the account manager rewrites the parts that need judgement. It comes last because it needs access to client accounts.</li>
+</ol>
+<p>The <a class="go" href="/blog/ai-agents-for-marketing">guide to AI agents for marketing</a> covers the same sequencing question for an in-house team.</p>
+
+<h2>Lane files, skills and connectors: what are they?</h2>
+<p>A lane file is a plain text instruction file, named CLAUDE.md, that tells the agent how one area of work runs. A skill is a written procedure the agent loads when a task matches it. A connector links the agent to a tool such as an analytics platform or a project board through the Model Context Protocol, usually called MCP.</p>
+<h3>Lane files</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Anthropic's memory documentation says CLAUDE.md files above the working directory load at launch, files in subdirectories load on demand, and each file should target under 200 lines</a>. In my setup each lane (content, social, search, outbound, events, reporting) has its own CLAUDE.md written like a job description: what the lane owns, what it reads, what finished work looks like and what needs approval. An agency can do the same per service line, with one more layer per client.</p>
+<h3>Skills</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic's skills documentation says Claude uses a skill when it is relevant, or when you invoke it by name, and that project skills in .claude/skills can be committed so the whole team gets them</a>. For an agency, that means one version of "how we write a brief" or "how we audit a page" across every account manager, with a history of each change in git. My rule: anything I do twice by hand becomes a skill.</p>
+<h3>Connectors</h3>
+<p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources, and tells users to verify they trust each server before connecting it because servers that fetch external content carry prompt injection risk</a>. Start every connector read-only. Where an agent can write, let it write drafts, never finished work.</p>
+
+<h2>How do you keep each client's data separate?</h2>
+<p>Give every client its own folder, ideally its own git repository, and start each session inside it. Keep agency-wide rules in a parent folder with no client details, add each client's connectors only to that client's project, block sensitive files, and use a commercial plan so client data stays out of model training.</p>
+<p>Claude Code's own behaviour makes this layout work:</p>
+<ul>
+<li><b>Working folder.</b> <a class="go" href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Anthropic's permissions documentation says file reads run without approval inside the working directory and any added directories</a>, so a session started in one client's folder works on that client by default. Avoid adding a second client's folder to the same session.</li>
+<li><b>Shared rules.</b> Because CLAUDE.md files above the working folder load at launch, an agency-wide file in the parent folder reaches every client. Put voice standards and sign-off rules there, never client names, results or data.</li>
+<li><b>Memory.</b> Claude Code keeps automatic notes per git repository, according to the memory documentation, so one repository per client keeps those notes apart too.</li>
+<li><b>Connectors.</b> The MCP documentation lists three scopes: local and project scope load only in the current project, while user scope loads in every project on the machine. Add client connectors at local or project scope only.</li>
+<li><b>Sensitive files.</b> The permissions documentation shows deny rules such as Read(./secrets/**) to stop the agent reading a file or folder. Use one for customer exports and contracts.</li>
+</ul>
+<p>The plan matters as much as the folders. <a class="go" href="https://code.claude.com/docs/en/data-usage" target="_blank" rel="noopener">Anthropic's data usage documentation says it does not train generative models on code or prompts sent to Claude Code under commercial terms (Team, Enterprise and API), while Free, Pro and Max accounts are used for training when that setting is on, and that local session transcripts are stored in plaintext for 30 days by default</a>. Client work belongs on a commercial plan, on encrypted laptops, and the client contract should record which tools see its data.</p>
+<p>Privacy law follows the client's customers. In New Zealand, <a class="go" href="https://www.privacy.org.nz/resources-and-learning/a-z-topics/ai/" target="_blank" rel="noopener">the Privacy Commissioner expects a privacy impact assessment before AI tools are used, updated regularly</a>. In Australia, <a class="go" href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" target="_blank" rel="noopener">the OAIC's 2024 guidance recommends that organisations do not enter personal information into publicly available generative AI tools</a>. Most of the workflows above need no customer personal information at all, which is the simplest protection.</p>
+
+<h2>Where do the review gates go?</h2>
+<p>Put a gate before each change of audience: after the agent drafts and before an editor reads, after the editor approves and before the client sees, and after the client approves and before anything is published or sent. Automated checks sit at the first gate. People own the other two, and the agent never publishes or sends on its own.</p>
+<ol>
+<li><b>Automated checks.</b> Voice rules, banned claims and a source check on every number, run before a person reads the draft. Drafts that fail are rewritten against the lines that failed.</li>
+<li><b>Editor approval.</b> A named person reads the full draft against the client brief.</li>
+<li><b>Client approval.</b> The client signs off anything published or sent under its name. This is the <a class="go" href="/glossary/#human-in-the-loop">human in the loop</a> in its plainest form.</li>
+</ol>
+<p>Some rules should be enforced by the tool. <a class="go" href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">The permissions documentation says rules are evaluated deny first, then ask, then allow</a>, so a deny rule on a publishing command holds even if someone adds a broad allow later. The memory documentation adds that Claude treats CLAUDE.md as context, not enforced configuration, and points to hooks to block an action every time. Australian guidance makes the same point about oversight: <a class="go" href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-foundations" target="_blank" rel="noopener">the National AI Centre says a person should oversee an AI system in a way that matches how much autonomy it has and how high the stakes are</a>.</p>
+<p>One lesson from my own setup: once agents draft faster than people review, approved work queues behind unread work. Reviewing in batches at set times keeps it moving.</p>
+
+<h2>What does Claude Code cost an agency?</h2>
+<p>Agencies usually pay through Claude Team or Enterprise seats, where Claude Code draws on each member's seat allowance, or through the API, billed per token. Anthropic publishes average figures for software teams only, so price an agency rollout from a small pilot, with your own usage measured from the start.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/costs" target="_blank" rel="noopener">Anthropic's cost documentation says Team and Enterprise usage draws from a per-seat allowance shared with Claude chat, and reports an average of about US$13 per developer per active day and US$150 to 250 per developer per month across enterprise deployments</a>. Those are coding figures. Marketing sessions read and write prose, and long sessions cost more because the whole conversation is sent with every request, so clear sessions between unrelated client tasks.</p>
+<p>For seat prices in New Zealand dollars, the guide comparing <a class="go" href="/blog/claude-vs-chatgpt-business-cost-nz">Claude for business and ChatGPT Business costs in NZ</a> sets out each plan. Add reviewer time to the seat cost when you compare it with the hours a workflow saves.</p>
+
+<h2>What should an agency measure?</h2>
+<p>Measure the work, per workflow, before and after: hours from brief to first draft, how much editors change in each draft, revision rounds with the client, how often drafts fail a review gate, and cost per deliverable including reviewer time. Record a baseline for a month first, or the comparison will rest on memory.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Measure</th><th>What it tells you</th><th>Where to get it</th></tr></thead>
+<tbody>
+<tr><td>Hours from brief to first draft</td><td>Whether the workflow saves time</td><td>Time tracking, or timestamps on the files</td></tr>
+<tr><td>Editor changes per draft</td><td>Whether the brief and voice rules are good enough</td><td>Git history of the draft</td></tr>
+<tr><td>Client revision rounds</td><td>Whether quality reached the client</td><td>Your approval tool</td></tr>
+<tr><td>Gate failure rate</td><td>Which checks catch problems, and which skills need work</td><td>Logs from the automated checks</td></tr>
+<tr><td>Cost per deliverable</td><td>Whether the economics hold</td><td>Seat or token spend plus reviewer hours</td></tr>
+</tbody>
+</table></div>
+<p>A falling number of editor changes is usually the earliest sign that a client brief is working.</p>
+
+<h2>When should you bring in a Claude Code consultant?</h2>
+<p>Bring in a Claude Code consultant when the first workflows run but the setup starts to strain: instruction files that contradict each other, connectors that need write access, several staff who need one shared skills library, or client contracts that require a documented data setup. Before that point, building the first two workflows yourselves teaches the most.</p>
+<p>A good consultant builds on your accounts, writes everything down, and leaves your team able to run and change the setup without them. Ask the same questions you would ask an <a class="go" href="/blog/how-to-hire-an-ai-agent-developer">AI agent developer</a>: show me it running, show me the tests, who owns the files, and what does the handover include. The <a class="go" href="/skills/">public skill library</a> is a fair way to judge anyone's method before a call, including mine.</p>
+
+<h2>Where Flow AI fits</h2>
+<p>Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For agencies, the <a class="go" href="/ai-marketing-services/claude-code-consultant">Claude Code consultant service</a> sets up lane files, a skills library, connectors, review gates and one workspace per client, on your accounts.</p>
+<p>Each build starts with a written scope and is priced per project, and your team owns every file at the end. Companies hiring a marketing engineer or GTM engineer can reach Amber through <a class="go" href="/about#hire">the hiring page</a>.</p>
+
+<h2>The short version</h2>
+<p>Write a brief for each client, then build research, drafts, audits and reporting in that order, one workflow at a time. Keep each client in its own folder and repository with its own connectors, on a commercial plan, and put a person at every gate before work reaches the client or the public.</p>
+<p>Measure hours, edits and revision rounds from a baseline, and bring in help when the setup outgrows the people running it.</p>
+<p>If you are setting this up for an agency, <a class="go" href="/contact">talk to Amber</a>.</p>

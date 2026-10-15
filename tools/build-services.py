@@ -5,7 +5,11 @@
     /ai-marketing-services/new-zealand
     /ai-marketing-services/australia
     /ai-marketing-services/auckland
-    (and the same four under /zh/)
+    /ai-marketing-services/ai-automation-consultant        service pages by the job a buyer needs done
+    /ai-marketing-services/ai-agent-development
+    /ai-marketing-services/marketing-automation-consultant
+    /ai-marketing-services/claude-code-consultant
+    (and the same eight under /zh/)
 
 Edit the PAGES data below, then run:
     python3 tools/build-services.py && python3 tools/build-llms-full.py && python3 scripts/i18n.py
@@ -358,6 +362,365 @@ PAGES = [
     ),
 ]
 
+# Service pages by the job a buyer needs done (added 2026-10-16 from the hire-intent keyword gap).
+# Each one lists the other three under "Guides to help you choose well", and the hub and place pages list all four.
+SERVICE_PAGES = {
+    "en": [
+        ("AI automation consultant", "/ai-marketing-services/ai-automation-consultant", "Turn the marketing and sales work your team repeats into AI workflows."),
+        ("AI agent development", "/ai-marketing-services/ai-agent-development", "Custom AI agents for marketing and sales, built on your accounts."),
+        ("Marketing automation consultant", "/ai-marketing-services/marketing-automation-consultant", "HubSpot and CRM workflows, follow-up and reporting, automated with AI."),
+        ("Claude Code consultant", "/ai-marketing-services/claude-code-consultant", "A Claude Code setup for your marketing team, with skills and review gates."),
+    ],
+    "zh": [
+        ("AI 自动化顾问", "/ai-marketing-services/ai-automation-consultant", "把团队每周重复的营销和销售工作，变成 AI 工作流。"),
+        ("AI 智能体开发", "/ai-marketing-services/ai-agent-development", "为营销和销售定制 AI 智能体，建在你自己的账号上。"),
+        ("营销自动化顾问", "/ai-marketing-services/marketing-automation-consultant", "HubSpot 和 CRM 工作流、跟进和报告，用 AI 自动化。"),
+        ("Claude Code 顾问", "/ai-marketing-services/claude-code-consultant", "为你的营销团队搭建 Claude Code，配好技能库和审核关口。"),
+    ],
+}
+
+
+def _others(lang, slug):
+    return [x for x in SERVICE_PAGES[lang] if not x[1].endswith("/" + slug)]
+
+
+ALSO = {lang: {s: SERVICE_PAGES[lang] for s in ("", "new-zealand", "australia", "auckland")} for lang in ("en", "zh")}
+
+HUB_PLACES = {
+    "en": [("Auckland", "/ai-marketing-services/auckland", "Meet in person and run the build workshop on site."),
+           ("New Zealand", "/ai-marketing-services/new-zealand", "Privacy Act 2020, spam law and what Kiwi buyers search.")],
+    "zh": [("奥克兰", "/ai-marketing-services/auckland", "可以见面，在你的办公室开搭建工作坊。"),
+           ("新西兰", "/ai-marketing-services/new-zealand", "《2020 年隐私法》、垃圾邮件法，以及新西兰买家怎么搜索。")],
+}
+
+PAGES += [
+    dict(
+        slug="ai-automation-consultant", area=[AKL, NZ, AU], updated="2026-10-16",
+        en=dict(
+            title="AI Automation Consultant in Auckland, NZ | Flow AI",
+            description="AI automation consultant in Auckland: map the repetitive marketing and sales work, automate it with AI agents your team approves, and keep every workflow.",
+            eyebrow="AI automation consulting · Auckland and New Zealand",
+            h1="AI automation consultant in Auckland.",
+            service_type="AI automation consulting",
+            answer="Amber Lan is an AI automation consultant and AI marketing engineer in Auckland. Through Flow AI she maps the marketing and sales tasks that take your team hours each week, automates them with AI agents and tools such as HubSpot, n8n and Zapier, and hands every workflow over with documentation.",
+            lead="Let's turn the work your team repeats every week into AI workflows your people review and keep.",
+            services_eyebrow="Where we start", services_h2="What we automate first.",
+            services_lead="Together we begin with the task that costs the most hours, then add the next once the first runs well.",
+            services_link="Explore what we automate",
+            services=[
+                ("Lead follow-up", "New enquiries researched, routed to the right person and answered with a first draft for approval.", "/sprints/outbound"),
+                ("Content production", "Briefs to drafts to scheduled posts in your voice, with your team signing off.", "/sprints/content-engine"),
+                ("CRM upkeep", "Records enriched, duplicates flagged and pipeline stages kept current in the CRM you already use.", "/sprints/outbound"),
+                ("Outbound research", "The right accounts found and researched before anyone writes a message.", "/sprints/outbound"),
+                ("AI search upkeep", "Service pages, schema and business details kept accurate for Google and AI assistants.", "/sprints/ai-search"),
+                ("Reporting", "One weekly read on what moved, pulled from your analytics and CRM.", "/sprints/analytics"),
+            ],
+            local=("Built on the tools you already run.", "Every automation lives in your accounts, documented so your team can change it.", [
+                ("Your stack", 'HubSpot, n8n, Zapier, Google Analytics and Claude Code are part of the everyday working stack. <a class="text-link" href="/about">Meet Amber</a>.'),
+                ("Review points", "The written scope names where a person approves, so every message to a customer is checked first."),
+                ("Privacy", 'Each workflow reads only the data the scope allows, in line with the Privacy Act 2020. <a class="text-link" href="/blog/ai-marketing-privacy-law-nz-australia">AI marketing and privacy law</a>.'),
+                ("In person", "Auckland teams can run the mapping workshop at their office, and everywhere else it runs on a call."),
+                ("Choosing well", '<a class="text-link" href="/blog/ai-agency-vs-ai-consultant-nz">AI agency, AI automation agency or AI consultant</a> compares the options side by side.'),
+                ("Pricing", "Quoted in NZD, plus GST, once the written scope is agreed."),
+            ]),
+            places=HUB_PLACES["en"],
+            guides=["ai-agency-vs-ai-consultant-nz", "ai-consultant-rates-nz-australia", "ai-agent-development-cost-nz", "ai-marketing-automation-small-business", "ai-marketing-scope-of-work", "first-month-of-an-ai-marketing-build"],
+            also=_others("en", "ai-automation-consultant"),
+            faq=[
+                ("What does an AI automation consultant do?", "An AI automation consultant finds the repetitive work in a business, decides which parts AI can draft or move safely, and builds the workflows that do it, with a person approving anything that reaches a customer. At Flow AI that work centres on marketing and sales: enquiries, content, CRM upkeep, outbound research and reporting."),
+                ("Is Flow AI an AI automation agency?", "Flow AI does the work people look for when they search for an AI automation agency in Auckland. The model is a partnership. One engineer maps the work with your team, builds the automations on your accounts and hands them over with documentation, so the workflows stay in your business."),
+                ("Which tools do you build with?", "Usually the ones you already pay for. The working stack includes HubSpot, n8n, Zapier, Google Analytics, Google Tag Manager and Claude Code with MCP connectors. The written scope names each tool, what it may read and who owns the account."),
+                ("How much does an AI automation consultant cost in NZ?", "Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, the Flow AI guides to AI consultant rates and AI agent development costs set out sourced ranges for New Zealand and Australia."),
+                ("Can we meet in person in Auckland?", "Yes. Flow AI is based in Auckland, so the mapping workshop and the handover can happen at your office. Between sessions the build runs on your own accounts, and your team reviews as it goes."),
+                ("How do I start?", "Share a few lines about the work that takes your team the most hours each week. Amber replies personally, and together you shape a written scope as the first step."),
+            ],
+        ),
+        zh=dict(
+            title="奥克兰 AI 自动化顾问 | Flow AI",
+            description="奥克兰的 AI 自动化顾问：梳理重复的营销和销售工作，用团队审核的 AI 智能体自动化，每个工作流都归你所有。",
+            eyebrow="AI 自动化咨询 · 奥克兰和新西兰",
+            h1="奥克兰的 AI 自动化顾问。",
+            service_type="AI 自动化咨询",
+            answer="Amber Lan 是奥克兰的 AI 自动化顾问和 AI 营销工程师。她通过 Flow AI 梳理团队每周花大量时间的营销和销售任务，用 AI 智能体以及 HubSpot、n8n、Zapier 等工具把它们自动化，再附上文档，把每个工作流交接给你。",
+            lead="一起把团队每周重复的工作，变成由你的人审核、长期拥有的 AI 工作流。",
+            services_eyebrow="从哪里开始", services_h2="先自动化什么。",
+            services_lead="我们一起从最花时间的任务开始，第一个运行稳定后，再加下一个。",
+            services_link="看看我们自动化什么",
+            services=[
+                ("线索跟进", "新的咨询先做背景研究，分给合适的人，并起草第一封回复供审核。", "/sprints/outbound"),
+                ("内容生产", "从简报到稿件再到排期发布，用你的语调写成，由团队签字确认。", "/sprints/content-engine"),
+                ("CRM 维护", "在你已经在用的 CRM 里补全记录、标出重复、保持销售阶段准确。", "/sprints/outbound"),
+                ("外联研究", "在任何人写消息之前，先找准目标客户并做好研究。", "/sprints/outbound"),
+                ("AI 搜索维护", "服务页面、结构化数据和商家信息保持准确，方便 Google 和 AI 助手读取。", "/sprints/ai-search"),
+                ("报告", "每周一份简报，汇总分析工具和 CRM 里的变化。", "/sprints/analytics"),
+            ],
+            local=("建在你已经在用的工具上。", "每个自动化都在你的账号里，附有文档，团队可以自己修改。", [
+                ("工具栈", 'HubSpot、n8n、Zapier、Google Analytics 和 Claude Code 都是日常使用的工具。<a class="text-link" href="/about">认识 Amber</a>。'),
+                ("审核环节", "书面范围写清楚由谁批准，每条发给客户的消息都先经过检查。"),
+                ("隐私", '每个工作流只读取范围允许的数据，符合《2020 年隐私法》。<a class="text-link" href="/blog/ai-marketing-privacy-law-nz-australia">AI 营销与隐私法</a>。'),
+                ("当面合作", "奥克兰的团队可以在办公室开梳理工作坊，其他地方通过线上通话进行。"),
+                ("如何选择", '<a class="text-link" href="/blog/ai-agency-vs-ai-consultant-nz">AI 代理机构、AI 自动化代理机构还是 AI 顾问</a>，逐项对比。'),
+                ("报价", "书面范围确定后，以新西兰元报价，另加 GST。"),
+            ]),
+            places=HUB_PLACES["zh"],
+            guides=None,
+            also=_others("zh", "ai-automation-consultant"),
+            faq=[
+                ("AI 自动化顾问做什么？", "AI 自动化顾问找出企业里重复的工作，判断哪些部分可以安全地交给 AI 起草或流转，再搭建完成这些工作的工作流，任何触达客户的内容都由人批准。在 Flow AI，这些工作集中在营销和销售：咨询、内容、CRM 维护、外联研究和报告。"),
+                ("Flow AI 是 AI 自动化代理机构吗？", "人们在奥克兰搜索 AI 自动化代理机构时想要的工作，Flow AI 都做。合作模式是伙伴关系：一位工程师和你的团队一起梳理工作，在你的账号上搭建自动化，写好文档后交接，工作流长期留在你的公司里。"),
+                ("你们用什么工具搭建？", "通常就是你已经在付费使用的工具。日常工具栈包括 HubSpot、n8n、Zapier、Google Analytics、Google 跟踪代码管理器，以及配有 MCP 连接器的 Claude Code。书面范围会写明每个工具、它能读取什么，以及账号归谁。"),
+                ("在新西兰请 AI 自动化顾问要花多少钱？", "Flow AI 在书面范围确定后按项目报价，以新西兰元计，另加 GST。想了解市场行情，Flow AI 关于 AI 顾问费率和 AI 智能体开发成本的指南，整理了新西兰和澳大利亚有出处的价格区间。"),
+                ("可以在奥克兰见面吗？", "可以。Flow AI 就在奥克兰，梳理工作坊和交接都可以在你的办公室进行。两次见面之间，搭建在你自己的账号上进行，你的团队边做边审核。"),
+                ("怎么开始？", "简单介绍团队每周最花时间的工作。Amber 会亲自回复，第一步是你们一起确定一份书面范围说明。"),
+            ],
+        ),
+    ),
+    dict(
+        slug="ai-agent-development", area=[NZ, AU], updated="2026-10-16",
+        en=dict(
+            title="AI Agent Development for NZ and Australian Teams | Flow AI",
+            description="Custom AI agent development for NZ and Australian teams: marketing and sales agents built on your accounts, with review points, documentation and full ownership.",
+            eyebrow="AI agent development · New Zealand and Australia",
+            h1="AI agent development for marketing and sales teams.",
+            service_type="AI agent development",
+            answer="Flow AI develops custom AI agents for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer and AI agent developer in Auckland, builds agents for search, content, outbound and reporting on your own accounts, with a named person approving their work, then hands every agent, prompt and file to your team.",
+            lead="Let's design the agents your team will rely on, and build them so your people can run and extend them.",
+            services_eyebrow="Agents we build", services_h2="Agents we can build together.",
+            services_lead="Each agent has one job, clear inputs and a person on your team who approves its output.",
+            services_link="Explore the agents",
+            services=[
+                ("Search agent", "Technical SEO through to answer engine optimisation, so Google ranks you and AI assistants cite you.", "/sprints/ai-search"),
+                ("Content agent", "A month of drafts in your voice, approved by your team before anything ships.", "/sprints/content-engine"),
+                ("Outbound agent", "The right accounts researched, with first messages drafted for a person to send.", "/sprints/outbound"),
+                ("Measurement agent", "Tracking wired properly, so every enquiry traces to a source.", "/sprints/analytics"),
+                ("Reporting agent", "One short weekly read on what shipped and what comes next.", "/sprints/analytics"),
+                ("Custom agent", "An agent for a job specific to your business, scoped from the hours it gives back.", "/contact"),
+            ],
+            local=("How each agent is built.", "The same engineering standard on every agent, whatever its job.", [
+                ("Written brief", "Each agent starts from a brief: its job, the data it may read, the tools it may use and where a person reviews."),
+                ("Review points", "A named person on your team approves anything an agent sends to a customer, and the scope records who reviews what."),
+                ("Your accounts", "Agents run on your accounts and connectors, so your business controls every login and can end access at any time."),
+                ("Open method", 'The skills behind the agents are public. <a class="text-link" href="/skills/">Explore 126 open-source skills</a>.'),
+                ("Hiring well", '<a class="text-link" href="/blog/how-to-hire-an-ai-agent-developer">How to hire an AI agent developer</a> lists the questions to ask any provider.'),
+                ("Pricing", "Quoted per project once the written scope is agreed."),
+            ]),
+            places=HUB_PLACES["en"],
+            guides=["ai-agent-development-cost-nz", "how-to-hire-an-ai-agent-developer", "ai-agents-for-marketing", "what-is-an-ai-marketing-agent", "ai-marketing-scope-of-work", "ai-marketing-privacy-law-nz-australia"],
+            also=_others("en", "ai-agent-development"),
+            faq=[
+                ("What is an AI agent developer?", "An AI agent developer designs and builds software agents that use a language model to carry out a job, such as researching accounts or drafting content, with access to specific tools and data. The work covers the brief, data access, guardrails, review points, monitoring and documentation as well as the prompts."),
+                ("What kind of AI agents does Flow AI build?", "Agents for marketing and sales work: AI search and SEO, content drafting in your voice, outbound research and first drafts, measurement and weekly reporting. Each agent has one job and a named reviewer on your team, and custom agents are scoped from the hours they give back."),
+                ("Who owns the agents after the build?", "You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Flow AI."),
+                ("How much does AI agent development cost?", "Flow AI prices each build per project once the written scope is agreed. The Flow AI guide to AI agent development costs in New Zealand breaks the cost into sourced parts: people time, model usage, platform subscriptions and ongoing upkeep."),
+                ("Do you work with businesses in Australia?", "Yes. Flow AI is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles."),
+                ("How do I start?", "Share the job you would most like an agent to take on. Amber replies personally, and together you shape a written scope as the first step."),
+            ],
+        ),
+        zh=dict(
+            title="面向新西兰和澳大利亚团队的 AI 智能体开发 | Flow AI",
+            description="面向新西兰和澳大利亚团队的定制 AI 智能体开发：营销和销售智能体建在你的账号上，配有审核环节和文档，完全归你所有。",
+            eyebrow="AI 智能体开发 · 新西兰和澳大利亚",
+            h1="为营销和销售团队开发 AI 智能体。",
+            service_type="AI 智能体开发",
+            answer="Flow AI 为新西兰和澳大利亚的企业开发定制 AI 智能体。奥克兰的 AI 营销工程师和 AI 智能体开发者 Amber Lan，在你自己的账号上搭建负责搜索、内容、主动外联和报告的智能体，由一位指定的人审核它们的工作，然后把每个智能体、提示词和文件交给你的团队。",
+            lead="一起设计团队会长期依赖的智能体，并让你的人能够自己运行和扩展。",
+            services_eyebrow="我们搭建的智能体", services_h2="可以一起搭建的智能体。",
+            services_lead="每个智能体只做一件事，输入清楚，并由你团队里的一个人审核产出。",
+            services_link="看看有哪些智能体",
+            services=[
+                ("搜索智能体", "从技术 SEO 到答案引擎优化，让 Google 给你排名，也让 AI 助手引用你。", "/sprints/ai-search"),
+                ("内容智能体", "一个月的稿件，用你的语调写成，团队审核通过后才发布。", "/sprints/content-engine"),
+                ("外联智能体", "研究目标客户，起草第一条消息，由人来发送。", "/sprints/outbound"),
+                ("效果衡量智能体", "把追踪接好，每一条咨询都能追溯到来源。", "/sprints/analytics"),
+                ("报告智能体", "每周一份简短报告：做了什么，下一步做什么。", "/sprints/analytics"),
+                ("定制智能体", "为你的业务专门做一件事的智能体，按它能省下的时间来确定范围。", "/contact"),
+            ],
+            local=("每个智能体怎样搭建。", "不管负责什么，每个智能体都按同样的工程标准搭建。", [
+                ("书面简报", "每个智能体都从一份简报开始：它的任务、能读取的数据、能用的工具，以及由谁审核。"),
+                ("审核环节", "智能体发给客户的任何内容，都由你团队里一位指定的人批准，范围说明里写清楚谁审核什么。"),
+                ("你的账号", "智能体运行在你的账号和连接器上，每个登录都由你的公司掌控，随时可以收回权限。"),
+                ("公开方法", '智能体背后的技能都是公开的。<a class="text-link" href="/skills/">浏览 126 个开源技能</a>。'),
+                ("如何招人", '<a class="text-link" href="/blog/how-to-hire-an-ai-agent-developer">如何聘请 AI 智能体开发者</a>，列出了该问任何服务商的问题。'),
+                ("报价", "书面范围确定后，按项目报价。"),
+            ]),
+            places=HUB_PLACES["zh"],
+            guides=None,
+            also=_others("zh", "ai-agent-development"),
+            faq=[
+                ("什么是 AI 智能体开发者？", "AI 智能体开发者设计并搭建软件智能体，让它们借助大语言模型完成一项工作，例如研究目标客户或起草内容，并只接入指定的工具和数据。工作内容除了提示词，还包括简报、数据权限、防护规则、审核环节、监控和文档。"),
+                ("Flow AI 搭建哪些 AI 智能体？", "负责营销和销售工作的智能体：AI 搜索和 SEO、用你的语调起草内容、外联研究和初稿、效果衡量和每周报告。每个智能体只做一件事，由你团队里的指定人员审核；定制智能体按它能省下的时间来确定范围。"),
+                ("搭建完成后，智能体归谁？", "归你。每个智能体、提示词、工作流和文档都建在你的账号上，并附书面说明交接，你的团队可以自己运行、修改或扩展，不需要依赖 Flow AI。"),
+                ("AI 智能体开发要花多少钱？", "Flow AI 在书面范围确定后按项目报价。Flow AI 关于新西兰 AI 智能体开发成本的指南，把成本拆成有出处的几部分：人工时间、模型用量、平台订阅和后续维护。"),
+                ("你们和澳大利亚的企业合作吗？", "合作。Flow AI 位于奥克兰，服务新西兰和澳大利亚两地的企业。项目远程进行，在你自己的账号上搭建，通话时间兼顾两地时区。澳大利亚的项目遵守《2003 年垃圾邮件法》和澳大利亚隐私原则。"),
+                ("怎么开始？", "说说你最想交给智能体的那项工作。Amber 会亲自回复，第一步是你们一起确定一份书面范围说明。"),
+            ],
+        ),
+    ),
+    dict(
+        slug="marketing-automation-consultant", area=[NZ, AU], updated="2026-10-16",
+        en=dict(
+            title="Marketing Automation Consultant in NZ | Flow AI, Auckland",
+            description="Marketing automation consultant in NZ: HubSpot and CRM workflows, lead follow-up and reporting automated with AI, built with your team and handed over.",
+            eyebrow="Marketing automation · New Zealand and Australia",
+            h1="Marketing automation consultant in New Zealand.",
+            service_type="Marketing automation consulting",
+            answer="Flow AI is a marketing automation practice in Auckland for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer who has architected HubSpot from scratch, builds the workflows that follow up leads, keep the CRM current, produce content and report results, with AI agents drafting and your team approving.",
+            lead="Let's connect your CRM, email and content into one system your team trusts and keeps improving.",
+            services_eyebrow="What the system covers", services_h2="What we automate together.",
+            services_lead="We start where leads slow down, then extend the system one workflow at a time.",
+            services_link="Explore what we automate",
+            services=[
+                ("Lead capture and routing", "Forms and enquiries tracked into the CRM with their source, and routed to the right owner.", "/sprints/analytics"),
+                ("Follow-up sequences", "Consent-based emails and tasks, with AI drafting and a person approving.", "/sprints/outbound"),
+                ("CRM upkeep", "Enrichment, duplicate checks and pipeline stages kept current.", "/sprints/outbound"),
+                ("Content workflows", "Brief to draft to publish, in your voice, across your channels.", "/sprints/content-engine"),
+                ("Attribution", "Every enquiry traced to its source, so spend follows results.", "/sprints/analytics"),
+                ("Reporting", "One short weekly read from your CRM and analytics.", "/sprints/analytics"),
+            ],
+            local=("Built on the platforms you already use.", "Automations live in your accounts and follow New Zealand and Australian rules.", [
+                ("HubSpot and CRM", "HubSpot, Apollo and HeyReach are part of the everyday stack, with n8n and Zapier connecting the rest of your tools."),
+                ("Email law", "Every sequence follows the Unsolicited Electronic Messages Act 2007 in New Zealand and the Spam Act 2003 in Australia: consent, clear identification and a working unsubscribe."),
+                ("Privacy", 'Workflows read only the data the scope allows, in line with the Privacy Act 2020. <a class="text-link" href="/blog/ai-marketing-privacy-law-nz-australia">AI marketing and privacy law</a>.'),
+                ("Tool choice", '<a class="text-link" href="/blog/n8n-vs-zapier-vs-make-vs-claude-code">n8n, Zapier, Make or Claude Code</a> compares the automation tools side by side.'),
+                ("Where to start", '<a class="text-link" href="/blog/ai-marketing-automation-small-business">AI marketing automation for small business</a> sets out the six automations to run first.'),
+                ("Pricing", "Quoted in NZD, plus GST, once the written scope is agreed."),
+            ]),
+            places=HUB_PLACES["en"],
+            guides=["ai-marketing-automation-small-business", "n8n-vs-zapier-vs-make-vs-claude-code", "outbound-sales-automation", "ai-agency-vs-ai-consultant-nz", "ai-marketing-privacy-law-nz-australia", "ai-marketing-scope-of-work"],
+            also=_others("en", "marketing-automation-consultant"),
+            faq=[
+                ("What does a marketing automation consultant do?", "A marketing automation consultant designs and builds the workflows that move leads and content through a business without manual handling: capturing enquiries, routing them, sending consent-based follow-up, keeping the CRM current and reporting results. With AI added, agents draft the messages and summaries while people approve what reaches customers."),
+                ("Do you work with HubSpot?", "Yes. Amber has architected HubSpot from scratch and works with it alongside Apollo, HeyReach, n8n and Zapier. If your business runs a different CRM, the written scope sets out how the workflows connect to it before the build begins."),
+                ("Marketing automation or AI agents: which do I need?", "Most teams benefit from both. Automation moves data and triggers steps on a schedule, and AI agents handle the drafting and research inside those steps. The build starts with the simplest automation that closes the gap, and adds an agent where drafting or research takes the most time."),
+                ("Does the automation follow NZ spam law?", "Yes. Every commercial email follows the Unsolicited Electronic Messages Act 2007: consent, clear identification of the sender and a working unsubscribe. Australian contacts follow the Spam Act 2003. A person on your team approves the first message to every new contact."),
+                ("How much does marketing automation consulting cost?", "Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. Platform subscriptions are paid directly by your business, and the Flow AI tool comparison sets out what n8n, Zapier and Make charge."),
+                ("How do I start?", "Share a few lines about where leads or content slow down in your business. Amber replies personally, and together you shape a written scope as the first step."),
+            ],
+        ),
+        zh=dict(
+            title="新西兰营销自动化顾问 | Flow AI，奥克兰",
+            description="新西兰的营销自动化顾问：HubSpot 和 CRM 工作流、线索跟进和报告，用 AI 自动化，与你的团队一起搭建并交接。",
+            eyebrow="营销自动化 · 新西兰和澳大利亚",
+            h1="新西兰的营销自动化顾问。",
+            service_type="营销自动化咨询",
+            answer="Flow AI 是一家奥克兰的营销自动化工作室，服务新西兰和澳大利亚的企业。曾从零搭建 HubSpot 架构的 AI 营销工程师 Amber Lan，负责搭建跟进线索、维护 CRM、生产内容和报告结果的工作流，由 AI 智能体起草，你的团队批准。",
+            lead="一起把你的 CRM、邮件和内容连成一套系统，让团队信得过，也能不断改进。",
+            services_eyebrow="系统包括什么", services_h2="我们一起自动化的工作。",
+            services_lead="从线索停滞的地方开始，再一次一个工作流地扩展系统。",
+            services_link="看看我们自动化什么",
+            services=[
+                ("线索获取与分配", "表单和咨询连同来源记录进 CRM，再分给合适的负责人。", "/sprints/analytics"),
+                ("跟进序列", "基于同意的邮件和任务，由 AI 起草，人来批准。", "/sprints/outbound"),
+                ("CRM 维护", "补全信息、检查重复、保持销售阶段准确。", "/sprints/outbound"),
+                ("内容工作流", "从简报到稿件再到发布，用你的语调覆盖各个渠道。", "/sprints/content-engine"),
+                ("归因", "每一条咨询都能追溯到来源，预算跟着效果走。", "/sprints/analytics"),
+                ("报告", "每周一份来自 CRM 和分析工具的简短报告。", "/sprints/analytics"),
+            ],
+            local=("建在你已经在用的平台上。", "自动化都在你的账号里，遵守新西兰和澳大利亚的规则。", [
+                ("HubSpot 和 CRM", "HubSpot、Apollo 和 HeyReach 都是日常使用的工具，n8n 和 Zapier 负责连接你的其他工具。"),
+                ("邮件法规", "每个序列都遵守新西兰《2007 年未经请求电子信息法》和澳大利亚《2003 年垃圾邮件法》：取得同意、清楚表明身份、能正常退订。"),
+                ("隐私", '工作流只读取范围允许的数据，符合《2020 年隐私法》。<a class="text-link" href="/blog/ai-marketing-privacy-law-nz-australia">AI 营销与隐私法</a>。'),
+                ("工具选择", '<a class="text-link" href="/blog/n8n-vs-zapier-vs-make-vs-claude-code">n8n、Zapier、Make 还是 Claude Code</a>，逐项对比自动化工具。'),
+                ("从哪里开始", '<a class="text-link" href="/blog/ai-marketing-automation-small-business">小企业的 AI 营销自动化</a>，列出最先要做的六个自动化。'),
+                ("报价", "书面范围确定后，以新西兰元报价，另加 GST。"),
+            ]),
+            places=HUB_PLACES["zh"],
+            guides=None,
+            also=_others("zh", "marketing-automation-consultant"),
+            faq=[
+                ("营销自动化顾问做什么？", "营销自动化顾问设计并搭建工作流，让线索和内容在企业里流转，不用人工搬运：获取咨询、分配负责人、发送基于同意的跟进、保持 CRM 准确，以及报告结果。加入 AI 之后，智能体负责起草消息和摘要，人来批准触达客户的内容。"),
+                ("你们用 HubSpot 吗？", "用。Amber 曾从零搭建 HubSpot 架构，日常和 Apollo、HeyReach、n8n、Zapier 一起使用。如果你的公司用的是其他 CRM，书面范围会在开工前写清楚工作流怎样接入。"),
+                ("我需要营销自动化，还是 AI 智能体？", "大多数团队两者都用得上。自动化按计划搬运数据、触发步骤，AI 智能体负责这些步骤里的起草和研究。搭建先从能补上缺口的最简单自动化开始，再在起草或研究最花时间的地方加上智能体。"),
+                ("自动化遵守新西兰的垃圾邮件法吗？", "遵守。每封商业邮件都符合《2007 年未经请求电子信息法》：取得同意、清楚表明发件人身份、能正常退订。澳大利亚的联系人遵守《2003 年垃圾邮件法》。每个新联系人的第一封邮件，都由你团队里的人批准。"),
+                ("营销自动化咨询要花多少钱？", "Flow AI 在书面范围确定后按项目报价，以新西兰元计，另加 GST。平台订阅费由你的公司直接支付，Flow AI 的工具对比指南列出了 n8n、Zapier 和 Make 的收费。"),
+                ("怎么开始？", "简单说说你的公司里，线索或内容在哪里卡住。Amber 会亲自回复，第一步是你们一起确定一份书面范围说明。"),
+            ],
+        ),
+    ),
+    dict(
+        slug="claude-code-consultant", area=[NZ, AU], updated="2026-10-16",
+        en=dict(
+            title="Claude Code Consultant for Marketing Teams, NZ | Flow AI",
+            description="Claude Code consultant in Auckland: set up Claude Code for your marketing team with skills, connectors and review gates, built on your accounts and handed over.",
+            eyebrow="Claude Code consulting · New Zealand and Australia",
+            h1="Claude Code consultant for marketing teams.",
+            service_type="Claude Code consulting",
+            answer="Flow AI sets up Claude Code for marketing teams in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, runs a whole marketing function on Claude Code and builds the same structure with your team: instruction files for each area of work, a skills library, connectors to your tools and review gates, then hands it over.",
+            lead="Let's give your team a Claude Code setup it trusts, shaped around the work you already do every week.",
+            services_eyebrow="What the setup includes", services_h2="Every piece, built with your team.",
+            services_lead="Each part is a file your team can read, change and keep.",
+            services_link="Explore the setup",
+            services=[
+                ("Lane files", "One instruction file per area of work, so every session starts with the right context.", "/blog/running-marketing-on-claude-code"),
+                ("Skills library", "Repeatable jobs written as skills your team runs on demand.", "/skills/"),
+                ("Connectors", "MCP connectors to the tools you already use, with read and write access set in the scope.", "/blog/running-marketing-on-claude-code"),
+                ("Review gates", "Checks for voice, facts and claims before anything ships.", "/sprints/"),
+                ("Client separation", "For agencies, one workspace per client, so each client's data stays with its account.", "/blog/claude-code-for-marketing-agencies"),
+                ("Team handover", "Working sessions with your people until they run and extend it with confidence.", "/sprints/"),
+            ],
+            local=("Built from a system in daily use.", "The setup comes from running a full marketing function on Claude Code every week.", [
+                ("Working notes", '<a class="text-link" href="/blog/running-marketing-on-claude-code">How a whole marketing function runs on Claude Code</a>, written up in full.'),
+                ("Open source", '<a class="text-link" href="/skills/">126 inspectable skills</a>, sixteen built by Flow AI, every one linked to its source.'),
+                ("Plans and seats", '<a class="text-link" href="/blog/claude-vs-chatgpt-business-cost-nz">Claude for business or ChatGPT Business</a> sets out what each costs a New Zealand team.'),
+                ("Agencies", '<a class="text-link" href="/blog/claude-code-for-marketing-agencies">Claude Code for marketing agencies</a> covers what to build first.'),
+                ("Hiring", 'Companies hiring a marketing engineer can <a class="text-link" href="/about#hire">talk to Amber about a role</a>.'),
+                ("Pricing", "Quoted per project once the written scope is agreed."),
+            ]),
+            places=HUB_PLACES["en"],
+            guides=["running-marketing-on-claude-code", "claude-code-for-marketing-agencies", "claude-vs-chatgpt-business-cost-nz", "n8n-vs-zapier-vs-make-vs-claude-code", "what-is-a-marketing-engineer", "ai-agents-for-marketing"],
+            also=_others("en", "claude-code-consultant"),
+            faq=[
+                ("What does a Claude Code consultant do for a marketing team?", "A Claude Code consultant sets up Claude Code so a team can run repeatable marketing work through it safely: instruction files that hold context, skills for recurring jobs, connectors to the team's tools and review gates before anything ships. The consultant then works alongside the team until they run and extend it themselves."),
+                ("Do we need to be technical to use Claude Code?", "Some comfort with files and a terminal helps. Skills and lane files are plain written instructions, so most of the system reads like a well-kept playbook, and the handover sessions cover the commands your team will use every day."),
+                ("Is Claude Code a good fit for a marketing agency?", "It suits agencies with repeatable client work such as research, briefs, drafts, reporting and SEO or AEO audits. The key design choice is client separation: one workspace and one set of connectors per client, so each client's data stays with its account. The Flow AI guide for agencies covers the first workflows to build."),
+                ("Which Claude plan does our team need?", "That depends on team size and how heavily you use it, since Anthropic's plans differ in usage limits and admin controls. The Flow AI guide comparing Claude for business and ChatGPT Business sets out current prices for a New Zealand team."),
+                ("Who owns the setup?", "You do. Every lane file, skill and connector setting lives in your accounts and repository, documented so your team can change or extend it without Flow AI."),
+                ("How do I start?", "Share a few lines about the marketing work your team repeats most. Amber replies personally, and together you shape a written scope as the first step."),
+            ],
+        ),
+        zh=dict(
+            title="营销团队的 Claude Code 顾问，新西兰 | Flow AI",
+            description="奥克兰的 Claude Code 顾问：为你的营销团队搭建 Claude Code，配好技能库、连接器和审核关口，建在你的账号上并交接给你。",
+            eyebrow="Claude Code 咨询 · 新西兰和澳大利亚",
+            h1="营销团队的 Claude Code 顾问。",
+            service_type="Claude Code 咨询",
+            answer="Flow AI 为新西兰和澳大利亚的营销团队搭建 Claude Code。奥克兰的 AI 营销工程师 Amber Lan 自己用 Claude Code 运行完整的营销职能，并和你的团队一起搭建同样的结构：每个工作领域一份指令文件、一个技能库、连接你工具的连接器，以及审核关口，然后交接给你。",
+            lead="一起为团队搭建一套信得过的 Claude Code，围绕你们每周本来就在做的工作。",
+            services_eyebrow="搭建包括什么", services_h2="每一部分，都和团队一起搭建。",
+            services_lead="每一部分都是团队能读、能改、能长期保留的文件。",
+            services_link="看看搭建内容",
+            services=[
+                ("工作领域文件", "每个工作领域一份指令文件，每次开始都带着正确的背景。", "/blog/running-marketing-on-claude-code"),
+                ("技能库", "把重复的工作写成技能，团队随时调用。", "/skills/"),
+                ("连接器", "用 MCP 连接你已经在用的工具，读写权限在范围里写清楚。", "/blog/running-marketing-on-claude-code"),
+                ("审核关口", "发布之前检查语调、事实和对外主张。", "/sprints/"),
+                ("客户隔离", "对代理机构来说，每个客户一个工作区，客户数据各自留在自己的账号里。", "/blog/claude-code-for-marketing-agencies"),
+                ("团队交接", "和你的团队一起实操，直到他们能从容运行和扩展。", "/sprints/"),
+            ],
+            local=("来自每天都在用的系统。", "这套搭建来自每周用 Claude Code 运行完整营销职能的实践。", [
+                ("工作笔记", '<a class="text-link" href="/blog/running-marketing-on-claude-code">如何用 Claude Code 运行完整的营销职能</a>，完整记录。'),
+                ("开源", '<a class="text-link" href="/skills/">126 个可检查的技能</a>，其中 16 个由 Flow AI 搭建，每一个都链接到源码。'),
+                ("套餐和席位", '<a class="text-link" href="/blog/claude-vs-chatgpt-business-cost-nz">Claude 商用方案还是 ChatGPT Business</a>，列出新西兰团队各要花多少钱。'),
+                ("代理机构", '<a class="text-link" href="/blog/claude-code-for-marketing-agencies">营销代理机构的 Claude Code</a>，讲先搭建什么。'),
+                ("招聘", '正在招聘营销工程师的公司，可以<a class="text-link" href="/about#hire">和 Amber 聊聊职位</a>。'),
+                ("报价", "书面范围确定后，按项目报价。"),
+            ]),
+            places=HUB_PLACES["zh"],
+            guides=None,
+            also=_others("zh", "claude-code-consultant"),
+            faq=[
+                ("Claude Code 顾问能为营销团队做什么？", "Claude Code 顾问负责搭建 Claude Code，让团队能安全地用它运行重复的营销工作：保存背景的指令文件、处理固定任务的技能、连接团队工具的连接器，以及发布前的审核关口。之后顾问和团队一起实操，直到他们能自己运行和扩展。"),
+                ("用 Claude Code 需要懂技术吗？", "熟悉文件和终端会有帮助。技能和工作领域文件都是用文字写成的说明，整套系统读起来像一本整理得很好的工作手册，交接时会讲清楚团队每天要用的命令。"),
+                ("Claude Code 适合营销代理机构吗？", "适合有大量重复客户工作的代理机构，例如研究、简报、初稿、报告，以及 SEO 或 AEO 审查。最关键的设计是客户隔离：每个客户一个工作区、一套连接器，客户数据各自留在自己的账号里。Flow AI 写给代理机构的指南，讲了最先要搭建的工作流。"),
+                ("我们的团队需要哪个 Claude 套餐？", "这取决于团队人数和使用强度，Anthropic 的各个套餐在用量上限和管理功能上有所不同。Flow AI 对比 Claude 商用方案和 ChatGPT Business 的指南，列出了新西兰团队的最新价格。"),
+                ("搭建完成后归谁？", "归你。每个工作领域文件、技能和连接器设置都在你的账号和代码仓库里，附有文档，你的团队可以自己修改或扩展，不需要依赖 Flow AI。"),
+                ("怎么开始？", "简单说说团队最常重复的营销工作。Amber 会亲自回复，第一步是你们一起确定一份书面范围说明。"),
+            ],
+        ),
+    ),
+]
+
+
 GUIDE_TITLES = {"en": {}, "zh": {}}  # filled from src/blog and src/zh/blog meta at run time
 
 
@@ -383,17 +746,17 @@ def schema(page, lang, d):
         crumbs.append((d["h1"].rstrip("。."), url))
     svc = {
         "@type": "Service", "@id": url + "#service", "name": d["h1"].rstrip("。."),
-        "serviceType": "AI marketing services", "description": d["answer"],
+        "serviceType": d.get("service_type", "AI marketing services"), "description": d["answer"],
         "provider": [{"@id": f"{SITE}/#flowai"}, {"@id": f"{SITE}/#amber"}],
         "areaServed": page["area"], "url": url,
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": UI[lang]["crumb_hub"], "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "description": t}}
-            for n, t, _ in SERVICES[lang]]},
+            for n, t, _ in (d.get("services") or SERVICES[lang])]},
         "offers": {"@type": "Offer", "description": "书面范围确定后按项目报价。附交接文档，所有智能体归客户所有。" if lang == "zh" else "Priced per project after a written scope. Documented handover; the client owns every agent."},
     }
     return {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": d["title"], "description": d["description"],
-         "inLanguage": UI[lang]["lang"], "dateModified": UPDATED, "about": {"@id": url + "#service"},
+         "inLanguage": UI[lang]["lang"], "dateModified": page.get("updated", UPDATED), "about": {"@id": url + "#service"},
          "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".svc-answer"]}},
         svc,
         {"@type": "FAQPage", "mainEntity": [
@@ -464,7 +827,7 @@ def render(page, lang):
     places = " &middot; ".join(f'<a class="text-link arrow-link" href="{pre(u)}">{esc(n)}</a>' for n, u, _ in d["places"])
     services = "".join(
         f'<li><span class="vlabel">{i + 1:02d}{CHECK}</span><b><a class="text-link" href="{pre(u)}">{esc(n)}</a></b><p>{esc(t)}</p></li>'
-        for i, (n, t, u) in enumerate(SERVICES[lang]))
+        for i, (n, t, u) in enumerate(d.get("services") or SERVICES[lang]))
     steps = "\n".join(
         f'          <div class="step"><span class="small">0{i + 1}</span><h3>{esc(n)}</h3><p>{esc(t)}</p></div>'
         for i, (n, t) in enumerate(STEPS[lang]))
@@ -494,6 +857,8 @@ def render(page, lang):
         t = GUIDE_TITLES[lang].get(s) or GUIDE_TITLES["en"].get(s)
         if t:
             g_items.append(f'            <li><b>{"指南" if zh else "Guide"}</b><span><a class="text-link" href="{pre("/blog/" + s)}">{esc(t)}</a></span></li>')
+    for n, u, t in d.get("also") or ALSO[lang].get(page["slug"], []):
+        g_items.append(f'            <li><b>{"服务" if zh else "Service"}</b><span><a class="text-link" href="{pre(u)}">{esc(n)}</a>: {esc(t)}</span></li>')
     for n, u, t in d["places"]:
         g_items.append(f'            <li><b>{"地区" if zh else "Place"}</b><span><a class="text-link" href="{pre(u)}">{esc(n)}</a>: {esc(t)}</span></li>')
     faq = "\n".join(f"""          <details>
@@ -510,7 +875,7 @@ def render(page, lang):
           <p class="lead">{esc(d['lead'])}</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="{pre('/contact')}">{esc(ui['cta'])}</a>
-            <a class="text-link" href="#services">{"看看智能体负责什么" if zh else "Explore what the agents run"}</a>
+            <a class="text-link" href="#services">{d.get('services_link') or ("看看智能体负责什么" if zh else "Explore what the agents run")}</a>
           </div>
           <p class="svc-answer">{esc(d['answer'])}</p>
           <p class="svc-places small">{places}</p>
@@ -521,11 +886,11 @@ def render(page, lang):
     <section id="services" class="centered" aria-labelledby="services-title">
       <div class="wrap">
         <div class="stack">
-          <p class="eyebrow">{esc(ui['services_eyebrow'])}</p>
-          <h2 id="services-title">{esc(ui['services_h2'])}</h2>
-          <p class="lead">{esc(ui['services_lead'])}</p>
+          <p class="eyebrow">{esc(d.get('services_eyebrow', ui['services_eyebrow']))}</p>
+          <h2 id="services-title">{esc(d.get('services_h2', ui['services_h2']))}</h2>
+          <p class="lead">{esc(d.get('services_lead', ui['services_lead']))}</p>
         </div>
-        <ul class="dgrid reveal" aria-label="{esc(ui['services_h2'])}">{services}</ul>
+        <ul class="dgrid reveal" aria-label="{esc(d.get('services_h2', ui['services_h2']))}">{services}</ul>
       </div>
     </section>
 
