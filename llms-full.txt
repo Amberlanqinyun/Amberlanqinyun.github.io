@@ -5,7 +5,7 @@
 Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
 Key facts:
-- AI marketing services (New Zealand and Australia): https://www.flowai.co.nz/ai-marketing-services/ , with pages for New Zealand (/ai-marketing-services/new-zealand), Australia (/ai-marketing-services/australia) and Auckland (/ai-marketing-services/auckland). Services: positioning, AI search and SEO, content, social, outbound, conversion, launches, paid media checks, community, measurement and reporting, one AI agent each.
+- AI marketing services (New Zealand and Australia): https://www.flowai.co.nz/ai-marketing-services/ , with pages for New Zealand (/ai-marketing-services/new-zealand), Australia (/ai-marketing-services/australia) and Auckland (/ai-marketing-services/auckland), plus service pages by job: AI automation consultant (/ai-marketing-services/ai-automation-consultant), AI agent development (/ai-marketing-services/ai-agent-development), marketing automation consultant (/ai-marketing-services/marketing-automation-consultant) and Claude Code consultant (/ai-marketing-services/claude-code-consultant). Services: positioning, AI search and SEO, content, social, outbound, conversion, launches, paid media checks, community, measurement and reporting, one AI agent each.
 - Work with Amber: contract builds for teams that want an AI marketing system built with them, covering AI search and answer engine optimisation, a content engine, outbound and measurement. Each build starts with a written scope and is priced per project. The team keeps running the system after a documented handover.
 - Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland, across New Zealand and in Australia (Sydney, Melbourne, Brisbane). The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
@@ -26,6 +26,10 @@ Full text of every page, for direct AI consumption and accurate citation: https:
 
 Site structure:
 - /ai-marketing-services/: AI marketing services for New Zealand and Australian businesses: the agent team as services, how a build runs (written scope, build with your team, handover), proof, FAQ. Country and city pages: /ai-marketing-services/new-zealand, /ai-marketing-services/australia, /ai-marketing-services/auckland.
+- /ai-marketing-services/ai-automation-consultant: AI automation consultant in Auckland: marketing and sales tasks mapped and automated with AI agents, HubSpot, n8n and Zapier, then handed over.
+- /ai-marketing-services/ai-agent-development: AI agent development for NZ and Australian marketing and sales teams: search, content, outbound, measurement, reporting and custom agents built on the client's accounts.
+- /ai-marketing-services/marketing-automation-consultant: Marketing automation consultant in New Zealand: HubSpot and CRM workflows, consent-based follow-up, attribution and reporting, under NZ and Australian spam law.
+- /ai-marketing-services/claude-code-consultant: Claude Code consultant for marketing teams: lane files, skills library, MCP connectors, review gates and client separation for agencies.
 - / (landing): what Flow AI builds, an illustrative demo, the systems, free tools and FAQ. Two routes: work with Amber on a build, or talk about a role.
 - /work: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
 - /cases: evidence library of working marketing systems, open source tools, and human-centred product builds, with honest project status and direct repository links.
@@ -59,14 +63,18 @@ Site structure:
   - /blog/agency-vs-freelancer-vs-in-house: A freelancer is usually cheapest for New Zealand small businesses at NZD 50 to 150 an hour. An agency retainer costs NZD 1,500 to 10,000 a month for more than one channel, and an in-house marketer costs about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Ongoing workload decides which fits.
   - /blog/ai-advisory-pilot-nz: New Zealand's AI Advisory Pilot is a government grant, delivered through the Regional Business Partner Network, that pays up to 50% of eligible costs for expert AI help: up to $2,500 towards an AI roadmap and up to $12,500 towards implementation. Businesses need an NZBN and fewer than 50 full-time employees. It is open until 30 June 2027.
   - /blog/ai-agency-vs-ai-consultant-nz: Choose an AI marketing agency when you want marketing produced and run for you, an AI automation agency when a specific process wastes hours every week, and an AI consultant when you need a plan before you buy anything. If you have staff with time, an in-house person plus an outside engineer can cost less than all three.
+  - /blog/ai-agent-development-cost-nz: Most of an AI agent's cost is people time. At the NZD 130 to 180 an hour Robert Walters lists for Auckland AI engineer contractors in 2026, a one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. Model and platform fees for a small agent can stay under NZD 100 a month.
+  - /blog/ai-consultant-rates-nz-australia: AI consultants in Auckland charge about NZD 140 to 190 an hour on contract in 2026, according to Robert Walters, or roughly NZD 1,120 to 1,520 for an eight-hour day. In Australia, Hays puts AI engineer contractors at AUD 900 to 1,200 a day. Published fixed prices for small-business workshops and assessments start at NZD 795 plus GST.
   - /blog/ai-marketing-providers-australia: In October 2026, Australian AI marketing services came from five kinds of provider: AI-native agencies such as Flowterra Labs, established agencies adding AI such as Yoghurt Digital, AI search specialists such as Prosperity Media, automation firms such as Bolder Digital, and remote build-and-handover practices. Few publish prices, so compare what each shows and what you keep.
   - /blog/ai-marketing-providers-new-zealand: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Flow AI.
   - /blog/ai-marketing-scope-of-work: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Writing each point down now keeps both sides aligned later.
   - /blog/ai-marketing-services-vs-tools: Buy AI marketing tools when someone in the business has three or more hours a week and the skill to run one or two channels. Hire an AI marketing service when several channels must run and nobody has the time. Choose a build and handover when a team member has some hours and you want systems you own.
+  - /blog/claude-vs-chatgpt-business-cost-nz: On their official pricing pages on 16 October 2026, Claude's Team plan and ChatGPT Business both cost US$20 per user per month billed annually, or US$25 billed monthly, with a two seat minimum. A 10 person team pays US$200 to US$250 a month before GST. Setup and staff training usually cost more than the seats.
   - /blog/do-you-need-an-ai-marketing-agency-nz: You need an AI marketing agency when marketing must run every week across more than one channel and nobody inside the business has the hours to run it. Check that the agency runs real AI systems you can see and keep. If you have the time or only one channel, a freelancer or AI tools may serve you better.
   - /blog/fractional-cmo-vs-ai-cmo: A fractional CMO is a senior marketer working part time, costing about NZD 4,000 to 10,000 a month in New Zealand and AUD 6,000 to 18,000 in Australia. An AI CMO is software that plans and often produces the work for far less. Choose the person for judgment and accountability, the software for weekly execution, or combine them.
   - /blog/fractional-marketing-manager-nz: A fractional marketing manager is an experienced marketer who works for your business part time, usually one or two days a week, owning the plan and the results without a full-time salary. Robert Walters' 2026 guide puts Auckland contract marketing managers at NZD 70 to 105 an hour, roughly NZD 2,450 to 3,700 a month for one day a week.
   - /blog/how-to-choose-an-ai-marketing-provider: Choose an AI marketing provider by asking for a run of its system on a real business, then asking who reviews the work, who owns the agents, accounts and data, how it meets the NZ or Australian Privacy Act, what it measures, what it costs in writing, and how you leave. Score each answer and pick the provider that shows the most.
+  - /blog/how-to-hire-an-ai-agent-developer: Hire an AI agent developer by asking to see an agent they built running with its tests and logs, checking how they limit what the agent can read and do, and signing a contract that puts the code, prompts, accounts and data in your name, meets the Privacy Act and includes a written handover.
   - /blog/marketing-agency-alternatives-nz: The main alternatives to a marketing agency in New Zealand are doing it yourself with AI tools, a freelancer at NZD 50 to 150 an hour, a fractional marketing manager from about NZD 1,200 a month, a specialist package, an AI-led service, or an in-house hire on NZD 55,000 to 150,000 a year.
   - /blog/marketing-agency-cost-australia: Most Australian businesses pay a marketing agency AUD 2,000 to 6,000 a month in 2026. One channel such as SEO starts at about AUD 1,200 to 2,500, multi-channel growth work runs AUD 6,000 to 15,000, and agency hourly rates sit between AUD 80 and 350. Quotes usually exclude 10% GST and ad spend.
   - /blog/marketing-agency-cost-nz: Most New Zealand marketing agencies charge NZD 95 to 200 an hour. Monthly retainers run about NZD 500 to 1,500 for one channel, NZD 1,500 to 4,000 for several, and NZD 4,000 to 10,000 or more for full service, plus GST and ad spend. From NZD 1,000 a month, an agency has room to do one channel properly.
@@ -75,6 +83,8 @@ Site structure:
   - /blog/what-is-an-ai-marketing-agent [pillar]: An AI marketing agent is software that reads your business, decides what marketing to do next, produces the work across several channels and ships it under a human's review. A tool waits to be prompted one task at a time. An agent holds a goal, chooses its next task and reports what changed.
   - /blog/ai-agents-for-marketing: Build a positioning brief first, because every marketing agent is briefed from it. Then build the agent for the gap that costs you most, usually search or outbound for a 5 to 50 person business. Install one agent at a time, give it narrow data access, put a human review before anything reaches a customer, and measure enquiries.
   - /blog/ai-marketing-automation-small-business: AI marketing automation is software that runs marketing steps on triggers, such as a welcome email after a sign-up, with AI writing, sorting and personalising the content inside each step. A small business should start with six: a welcome sequence, enquiry follow-up, quote follow-up, review requests, abandoned bookings or carts, and re-engagement.
+  - /blog/claude-code-for-marketing-agencies: Start with a brief file for each client, then build research packs, first drafts, an SEO and AEO audit and monthly reporting, in that order. Keep each client in its own folder with its own connectors, put a person on review before the client sees anything, and use a commercial plan so client data stays out of model training.
+  - /blog/n8n-vs-zapier-vs-make-vs-claude-code: Choose Zapier when non-technical staff need simple app-to-app automations quickly. Choose Make for visual multi-step scenarios at a lower entry price. Choose n8n when someone technical wants self-hosting or high volumes billed per run. Choose Claude Code when the work needs judgement, such as drafting a weekly report, and someone is comfortable working with files.
   - /blog/running-marketing-on-claude-code: You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.
   - /blog/what-is-a-marketing-engineer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content and reporting, and keeps the judgement over what ships. A GTM engineer builds the systems that feed sales: prospect lists, enrichment, sequencing and CRM automation. Either way, a real one can show you a running system.
   - /blog/what-is-an-ai-cmo: An AI CMO is software that does the planning half of a chief marketing officer's job. It reads the business and its market, sets priorities, writes the marketing plan, briefs the work and reviews the results each cycle. A human still owns positioning, pricing, claims, spend and anything that reaches a customer.
@@ -792,6 +802,14 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 - GuideWhat is an AI marketing agent? A definition for small business.
 
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
+
 - PlaceNew Zealand: Privacy Act 2020, spam law and what Kiwi buyers search.
 
 - PlaceAustralia: Spam Act and privacy rules, AUD, and working across the Tasman.
@@ -977,6 +995,14 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 - GuideAI marketing and privacy law in NZ and Australia: what your provider must do with your data.
 
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
+
 - PlaceAuckland: Meet in person and run the build workshop on site.
 
 - PlaceAustralia: For businesses that also sell across the Tasman.
@@ -1159,6 +1185,14 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 - GuideFractional CMO vs AI CMO: which does a small business in Australia or New Zealand need?
 
 - GuideAI marketing and privacy law in NZ and Australia: what your provider must do with your data.
+
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
 
 - PlaceNew Zealand: For businesses that also sell into New Zealand.
 
@@ -1343,6 +1377,14 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 - GuideContent marketing for small business in NZ: what to publish and how often.
 
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
+
 - PlaceNew Zealand: The same service for the rest of New Zealand.
 
 - PlaceAustralia: For businesses that also sell across the Tasman.
@@ -1372,6 +1414,682 @@ Yes, across New Zealand and Australia. Auckland businesses can meet in person, a
 ### How do I start?
 
 Share a few lines through the contact form. Amber replies personally, often with an invitation to meet in Auckland, and together you shape a written scope as the first step.
+
+## Let's build your agent team together.
+
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
+
+Work with meExplore how it works
+
+The form takes a minute. I read every message myself and reply within two working days.
+
+---
+
+## AI Automation Consultant in Auckland, NZ | Flow AI
+
+Source URL: https://www.flowai.co.nz/ai-marketing-services/ai-automation-consultant
+Type: Service
+Author: Amber Lan (Flow AI)
+Last updated: 2026-10-16
+
+AI automation consulting · Auckland and New Zealand
+
+# AI automation consultant in Auckland.
+
+Let's turn the work your team repeats every week into AI workflows your people review and keep.
+
+Work with meExplore what we automate
+
+Amber Lan is an AI automation consultant and AI marketing engineer in Auckland. Through Flow AI she maps the marketing and sales tasks that take your team hours each week, automates them with AI agents and tools such as HubSpot, n8n and Zapier, and hands every workflow over with documentation.
+
+Auckland · New Zealand
+
+Where we start
+
+## What we automate first.
+
+Together we begin with the task that costs the most hours, then add the next once the first runs well.
+
+- 01Lead follow-up
+
+New enquiries researched, routed to the right person and answered with a first draft for approval.
+
+- 02Content production
+
+Briefs to drafts to scheduled posts in your voice, with your team signing off.
+
+- 03CRM upkeep
+
+Records enriched, duplicates flagged and pipeline stages kept current in the CRM you already use.
+
+- 04Outbound research
+
+The right accounts found and researched before anyone writes a message.
+
+- 05AI search upkeep
+
+Service pages, schema and business details kept accurate for Google and AI assistants.
+
+- 06Reporting
+
+One weekly read on what moved, pulled from your analytics and CRM.
+
+How a build runs
+
+## Built together with your team, then yours to keep.
+
+01
+
+### Scope
+
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
+
+02
+
+### Build
+
+I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+
+03
+
+### Hand over
+
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
+
+## Built on the tools you already run.
+
+Every automation lives in your accounts, documented so your team can change it.
+
+- Your stackHubSpot, n8n, Zapier, Google Analytics and Claude Code are part of the everyday working stack. Meet Amber.
+
+- Review pointsThe written scope names where a person approves, so every message to a customer is checked first.
+
+- PrivacyEach workflow reads only the data the scope allows, in line with the Privacy Act 2020. AI marketing and privacy law.
+
+- In personAuckland teams can run the mapping workshop at their office, and everywhere else it runs on a call.
+
+- Choosing wellAI agency, AI automation agency or AI consultant compares the options side by side.
+
+- PricingQuoted in NZD, plus GST, once the written scope is agreed.
+
+Explore the work
+
+## Every system is public.
+
+The systems behind this practice are public, so you can judge the craft before we begin.
+
+- Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
+
+- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+
+- TemplatesFree agent templates, ready to run on your own site today.
+
+- MethodHow the agent team works, with a public checklist for every sprint.
+
+## How pricing works.
+
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+
+## When an agency is the better fit.
+
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+
+## Guides to help you choose well.
+
+- GuideAI agency, AI automation agency or AI consultant: which does an NZ business need?
+
+- GuideAI consultant rates in New Zealand and Australia (2026): hourly, daily and project pricing.
+
+- GuideHow much does AI agent development cost in New Zealand? (2026, NZD)
+
+- GuideAI marketing automation for small business: what to set up first.
+
+- GuideWhat should an AI marketing scope of work include?
+
+- GuideWhat happens in the first month of an AI marketing build? A week-by-week guide.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
+
+- PlaceAuckland: Meet in person and run the build workshop on site.
+
+- PlaceNew Zealand: Privacy Act 2020, spam law and what Kiwi buyers search.
+
+## Questions.
+
+### What does an AI automation consultant do?
+
+An AI automation consultant finds the repetitive work in a business, decides which parts AI can draft or move safely, and builds the workflows that do it, with a person approving anything that reaches a customer. At Flow AI that work centres on marketing and sales: enquiries, content, CRM upkeep, outbound research and reporting.
+
+### Is Flow AI an AI automation agency?
+
+Flow AI does the work people look for when they search for an AI automation agency in Auckland. The model is a partnership. One engineer maps the work with your team, builds the automations on your accounts and hands them over with documentation, so the workflows stay in your business.
+
+### Which tools do you build with?
+
+Usually the ones you already pay for. The working stack includes HubSpot, n8n, Zapier, Google Analytics, Google Tag Manager and Claude Code with MCP connectors. The written scope names each tool, what it may read and who owns the account.
+
+### How much does an AI automation consultant cost in NZ?
+
+Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, the Flow AI guides to AI consultant rates and AI agent development costs set out sourced ranges for New Zealand and Australia.
+
+### Can we meet in person in Auckland?
+
+Yes. Flow AI is based in Auckland, so the mapping workshop and the handover can happen at your office. Between sessions the build runs on your own accounts, and your team reviews as it goes.
+
+### How do I start?
+
+Share a few lines about the work that takes your team the most hours each week. Amber replies personally, and together you shape a written scope as the first step.
+
+## Let's build your agent team together.
+
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
+
+Work with meExplore how it works
+
+The form takes a minute. I read every message myself and reply within two working days.
+
+---
+
+## AI Agent Development for NZ and Australian Teams | Flow AI
+
+Source URL: https://www.flowai.co.nz/ai-marketing-services/ai-agent-development
+Type: Service
+Author: Amber Lan (Flow AI)
+Last updated: 2026-10-16
+
+AI agent development · New Zealand and Australia
+
+# AI agent development for marketing and sales teams.
+
+Let's design the agents your team will rely on, and build them so your people can run and extend them.
+
+Work with meExplore the agents
+
+Flow AI develops custom AI agents for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer and AI agent developer in Auckland, builds agents for search, content, outbound and reporting on your own accounts, with a named person approving their work, then hands every agent, prompt and file to your team.
+
+Auckland · New Zealand
+
+Agents we build
+
+## Agents we can build together.
+
+Each agent has one job, clear inputs and a person on your team who approves its output.
+
+- 01Search agent
+
+Technical SEO through to answer engine optimisation, so Google ranks you and AI assistants cite you.
+
+- 02Content agent
+
+A month of drafts in your voice, approved by your team before anything ships.
+
+- 03Outbound agent
+
+The right accounts researched, with first messages drafted for a person to send.
+
+- 04Measurement agent
+
+Tracking wired properly, so every enquiry traces to a source.
+
+- 05Reporting agent
+
+One short weekly read on what shipped and what comes next.
+
+- 06Custom agent
+
+An agent for a job specific to your business, scoped from the hours it gives back.
+
+How a build runs
+
+## Built together with your team, then yours to keep.
+
+01
+
+### Scope
+
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
+
+02
+
+### Build
+
+I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+
+03
+
+### Hand over
+
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
+
+## How each agent is built.
+
+The same engineering standard on every agent, whatever its job.
+
+- Written briefEach agent starts from a brief: its job, the data it may read, the tools it may use and where a person reviews.
+
+- Review pointsA named person on your team approves anything an agent sends to a customer, and the scope records who reviews what.
+
+- Your accountsAgents run on your accounts and connectors, so your business controls every login and can end access at any time.
+
+- Open methodThe skills behind the agents are public. Explore 126 open-source skills.
+
+- Hiring wellHow to hire an AI agent developer lists the questions to ask any provider.
+
+- PricingQuoted per project once the written scope is agreed.
+
+Explore the work
+
+## Every system is public.
+
+The systems behind this practice are public, so you can judge the craft before we begin.
+
+- Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
+
+- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+
+- TemplatesFree agent templates, ready to run on your own site today.
+
+- MethodHow the agent team works, with a public checklist for every sprint.
+
+## How pricing works.
+
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+
+## When an agency is the better fit.
+
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+
+## Guides to help you choose well.
+
+- GuideHow much does AI agent development cost in New Zealand? (2026, NZD)
+
+- GuideHow to hire an AI agent developer: questions to ask, red flags and what you should own.
+
+- GuideAI agents for marketing: which to build first, and how.
+
+- GuideWhat is an AI marketing agent? A definition for small business.
+
+- GuideWhat should an AI marketing scope of work include?
+
+- GuideAI marketing and privacy law in NZ and Australia: what your provider must do with your data.
+
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
+
+- PlaceAuckland: Meet in person and run the build workshop on site.
+
+- PlaceNew Zealand: Privacy Act 2020, spam law and what Kiwi buyers search.
+
+## Questions.
+
+### What is an AI agent developer?
+
+An AI agent developer designs and builds software agents that use a language model to carry out a job, such as researching accounts or drafting content, with access to specific tools and data. The work covers the brief, data access, guardrails, review points, monitoring and documentation as well as the prompts.
+
+### What kind of AI agents does Flow AI build?
+
+Agents for marketing and sales work: AI search and SEO, content drafting in your voice, outbound research and first drafts, measurement and weekly reporting. Each agent has one job and a named reviewer on your team, and custom agents are scoped from the hours they give back.
+
+### Who owns the agents after the build?
+
+You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Flow AI.
+
+### How much does AI agent development cost?
+
+Flow AI prices each build per project once the written scope is agreed. The Flow AI guide to AI agent development costs in New Zealand breaks the cost into sourced parts: people time, model usage, platform subscriptions and ongoing upkeep.
+
+### Do you work with businesses in Australia?
+
+Yes. Flow AI is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles.
+
+### How do I start?
+
+Share the job you would most like an agent to take on. Amber replies personally, and together you shape a written scope as the first step.
+
+## Let's build your agent team together.
+
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
+
+Work with meExplore how it works
+
+The form takes a minute. I read every message myself and reply within two working days.
+
+---
+
+## Marketing Automation Consultant in NZ | Flow AI, Auckland
+
+Source URL: https://www.flowai.co.nz/ai-marketing-services/marketing-automation-consultant
+Type: Service
+Author: Amber Lan (Flow AI)
+Last updated: 2026-10-16
+
+Marketing automation · New Zealand and Australia
+
+# Marketing automation consultant in New Zealand.
+
+Let's connect your CRM, email and content into one system your team trusts and keeps improving.
+
+Work with meExplore what we automate
+
+Flow AI is a marketing automation practice in Auckland for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer who has architected HubSpot from scratch, builds the workflows that follow up leads, keep the CRM current, produce content and report results, with AI agents drafting and your team approving.
+
+Auckland · New Zealand
+
+What the system covers
+
+## What we automate together.
+
+We start where leads slow down, then extend the system one workflow at a time.
+
+- 01Lead capture and routing
+
+Forms and enquiries tracked into the CRM with their source, and routed to the right owner.
+
+- 02Follow-up sequences
+
+Consent-based emails and tasks, with AI drafting and a person approving.
+
+- 03CRM upkeep
+
+Enrichment, duplicate checks and pipeline stages kept current.
+
+- 04Content workflows
+
+Brief to draft to publish, in your voice, across your channels.
+
+- 05Attribution
+
+Every enquiry traced to its source, so spend follows results.
+
+- 06Reporting
+
+One short weekly read from your CRM and analytics.
+
+How a build runs
+
+## Built together with your team, then yours to keep.
+
+01
+
+### Scope
+
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
+
+02
+
+### Build
+
+I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+
+03
+
+### Hand over
+
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
+
+## Built on the platforms you already use.
+
+Automations live in your accounts and follow New Zealand and Australian rules.
+
+- HubSpot and CRMHubSpot, Apollo and HeyReach are part of the everyday stack, with n8n and Zapier connecting the rest of your tools.
+
+- Email lawEvery sequence follows the Unsolicited Electronic Messages Act 2007 in New Zealand and the Spam Act 2003 in Australia: consent, clear identification and a working unsubscribe.
+
+- PrivacyWorkflows read only the data the scope allows, in line with the Privacy Act 2020. AI marketing and privacy law.
+
+- Tool choicen8n, Zapier, Make or Claude Code compares the automation tools side by side.
+
+- Where to startAI marketing automation for small business sets out the six automations to run first.
+
+- PricingQuoted in NZD, plus GST, once the written scope is agreed.
+
+Explore the work
+
+## Every system is public.
+
+The systems behind this practice are public, so you can judge the craft before we begin.
+
+- Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
+
+- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+
+- TemplatesFree agent templates, ready to run on your own site today.
+
+- MethodHow the agent team works, with a public checklist for every sprint.
+
+## How pricing works.
+
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+
+## When an agency is the better fit.
+
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+
+## Guides to help you choose well.
+
+- GuideAI marketing automation for small business: what to set up first.
+
+- Guiden8n, Zapier, Make or Claude Code: which automation tool suits a small business?
+
+- GuideOutbound sales automation for small business: a practical guide for NZ and Australia.
+
+- GuideAI agency, AI automation agency or AI consultant: which does an NZ business need?
+
+- GuideAI marketing and privacy law in NZ and Australia: what your provider must do with your data.
+
+- GuideWhat should an AI marketing scope of work include?
+
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceClaude Code consultant: A Claude Code setup for your marketing team, with skills and review gates.
+
+- PlaceAuckland: Meet in person and run the build workshop on site.
+
+- PlaceNew Zealand: Privacy Act 2020, spam law and what Kiwi buyers search.
+
+## Questions.
+
+### What does a marketing automation consultant do?
+
+A marketing automation consultant designs and builds the workflows that move leads and content through a business without manual handling: capturing enquiries, routing them, sending consent-based follow-up, keeping the CRM current and reporting results. With AI added, agents draft the messages and summaries while people approve what reaches customers.
+
+### Do you work with HubSpot?
+
+Yes. Amber has architected HubSpot from scratch and works with it alongside Apollo, HeyReach, n8n and Zapier. If your business runs a different CRM, the written scope sets out how the workflows connect to it before the build begins.
+
+### Marketing automation or AI agents: which do I need?
+
+Most teams benefit from both. Automation moves data and triggers steps on a schedule, and AI agents handle the drafting and research inside those steps. The build starts with the simplest automation that closes the gap, and adds an agent where drafting or research takes the most time.
+
+### Does the automation follow NZ spam law?
+
+Yes. Every commercial email follows the Unsolicited Electronic Messages Act 2007: consent, clear identification of the sender and a working unsubscribe. Australian contacts follow the Spam Act 2003. A person on your team approves the first message to every new contact.
+
+### How much does marketing automation consulting cost?
+
+Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. Platform subscriptions are paid directly by your business, and the Flow AI tool comparison sets out what n8n, Zapier and Make charge.
+
+### How do I start?
+
+Share a few lines about where leads or content slow down in your business. Amber replies personally, and together you shape a written scope as the first step.
+
+## Let's build your agent team together.
+
+Tell me about your business and the marketing gap you most want to close. We begin by shaping a written scope together.
+
+Work with meExplore how it works
+
+The form takes a minute. I read every message myself and reply within two working days.
+
+---
+
+## Claude Code Consultant for Marketing Teams, NZ | Flow AI
+
+Source URL: https://www.flowai.co.nz/ai-marketing-services/claude-code-consultant
+Type: Service
+Author: Amber Lan (Flow AI)
+Last updated: 2026-10-16
+
+Claude Code consulting · New Zealand and Australia
+
+# Claude Code consultant for marketing teams.
+
+Let's give your team a Claude Code setup it trusts, shaped around the work you already do every week.
+
+Work with meExplore the setup
+
+Flow AI sets up Claude Code for marketing teams in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, runs a whole marketing function on Claude Code and builds the same structure with your team: instruction files for each area of work, a skills library, connectors to your tools and review gates, then hands it over.
+
+Auckland · New Zealand
+
+What the setup includes
+
+## Every piece, built with your team.
+
+Each part is a file your team can read, change and keep.
+
+- 01Lane files
+
+One instruction file per area of work, so every session starts with the right context.
+
+- 02Skills library
+
+Repeatable jobs written as skills your team runs on demand.
+
+- 03Connectors
+
+MCP connectors to the tools you already use, with read and write access set in the scope.
+
+- 04Review gates
+
+Checks for voice, facts and claims before anything ships.
+
+- 05Client separation
+
+For agencies, one workspace per client, so each client's data stays with its account.
+
+- 06Team handover
+
+Working sessions with your people until they run and extend it with confidence.
+
+How a build runs
+
+## Built together with your team, then yours to keep.
+
+01
+
+### Scope
+
+Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope.
+
+02
+
+### Build
+
+I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+
+03
+
+### Hand over
+
+A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it.
+
+## Built from a system in daily use.
+
+The setup comes from running a full marketing function on Claude Code every week.
+
+- Working notesHow a whole marketing function runs on Claude Code, written up in full.
+
+- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+
+- Plans and seatsClaude for business or ChatGPT Business sets out what each costs a New Zealand team.
+
+- AgenciesClaude Code for marketing agencies covers what to build first.
+
+- HiringCompanies hiring a marketing engineer can talk to Amber about a role.
+
+- PricingQuoted per project once the written scope is agreed.
+
+Explore the work
+
+## Every system is public.
+
+The systems behind this practice are public, so you can judge the craft before we begin.
+
+- Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
+
+- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+
+- TemplatesFree agent templates, ready to run on your own site today.
+
+- MethodHow the agent team works, with a public checklist for every sprint.
+
+## How pricing works.
+
+Each build is priced per project once the written scope is agreed, so the investment matches what your business needs. For market context, the cost guide sets out sourced ranges for tools, freelancers, agencies and hires in New Zealand and Australia.
+
+## When an agency is the better fit.
+
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+
+## Guides to help you choose well.
+
+- GuideHow do you run a whole marketing function on Claude Code?
+
+- GuideClaude Code for marketing agencies: what to build first, and how to keep it safe.
+
+- GuideClaude for business or ChatGPT Business: what does each cost a New Zealand team in 2026?
+
+- Guiden8n, Zapier, Make or Claude Code: which automation tool suits a small business?
+
+- GuideWhat is a marketing engineer, and how is it different from a GTM engineer?
+
+- GuideAI agents for marketing: which to build first, and how.
+
+- ServiceAI automation consultant: Turn the marketing and sales work your team repeats into AI workflows.
+
+- ServiceAI agent development: Custom AI agents for marketing and sales, built on your accounts.
+
+- ServiceMarketing automation consultant: HubSpot and CRM workflows, follow-up and reporting, automated with AI.
+
+- PlaceAuckland: Meet in person and run the build workshop on site.
+
+- PlaceNew Zealand: Privacy Act 2020, spam law and what Kiwi buyers search.
+
+## Questions.
+
+### What does a Claude Code consultant do for a marketing team?
+
+A Claude Code consultant sets up Claude Code so a team can run repeatable marketing work through it safely: instruction files that hold context, skills for recurring jobs, connectors to the team's tools and review gates before anything ships. The consultant then works alongside the team until they run and extend it themselves.
+
+### Do we need to be technical to use Claude Code?
+
+Some comfort with files and a terminal helps. Skills and lane files are plain written instructions, so most of the system reads like a well-kept playbook, and the handover sessions cover the commands your team will use every day.
+
+### Is Claude Code a good fit for a marketing agency?
+
+It suits agencies with repeatable client work such as research, briefs, drafts, reporting and SEO or AEO audits. The key design choice is client separation: one workspace and one set of connectors per client, so each client's data stays with its account. The Flow AI guide for agencies covers the first workflows to build.
+
+### Which Claude plan does our team need?
+
+That depends on team size and how heavily you use it, since Anthropic's plans differ in usage limits and admin controls. The Flow AI guide comparing Claude for business and ChatGPT Business sets out current prices for a New Zealand team.
+
+### Who owns the setup?
+
+You do. Every lane file, skill and connector setting lives in your accounts and repository, documented so your team can change or extend it without Flow AI.
+
+### How do I start?
+
+Share a few lines about the marketing work your team repeats most. Amber replies personally, and together you shape a written scope as the first step.
 
 ## Let's build your agent team together.
 
@@ -1877,7 +2595,7 @@ A short form. I reply personally.
 
 ---
 
-## AI-Search Sprint · fixed scope · Flow AI
+## AI SEO and AEO Services: the AI Search Sprint | Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/ai-search
 Type: Sprint
@@ -2111,7 +2829,7 @@ A short form. I reply personally.
 
 ---
 
-## Outbound Sprint · fixed scope · Flow AI
+## AI Lead Generation and LinkedIn Outreach: the Outbound Sprint | Flow AI
 
 Source URL: https://www.flowai.co.nz/sprints/outbound
 Type: Sprint
@@ -4525,6 +5243,1032 @@ AI-search optimisation helps AI assistants such as ChatGPT, Claude and Perplexit
 # Guides (full text)
 
 <!-- blog-full:start -->
+## n8n, Zapier, Make or Claude Code: which automation tool suits a small business?
+URL: https://www.flowai.co.nz/blog/n8n-vs-zapier-vs-make-vs-claude-code
+Author: Amber Lan, Flow AI
+Updated: 2026-10-16
+
+Short answer: Choose Zapier when non-technical staff need simple app-to-app automations quickly. Choose Make for visual multi-step scenarios at a lower entry price. Choose n8n when someone technical wants self-hosting or high volumes billed per run. Choose Claude Code when the work needs judgement, such as drafting a weekly report, and someone is comfortable working with files.
+
+What are n8n, Zapier, Make and Claude Code?
+
+A workflow automation tool is software that runs a fixed sequence of steps across your apps when a trigger fires, such as a new form entry going into your CRM. Zapier, Make and n8n are workflow automation tools. Claude Code is an agent: you give it instructions and it writes and runs the work.
+
+The three workflow tools differ mostly in how they are built and billed. Zapier connects a very large catalogue of apps with a step-by-step builder; its pricing page describes Zapier MCP as connecting AI assistants to about 9,000 integrations. Make gives you a visual canvas of modules called a scenario. n8n has a similar editor, runs on its cloud or your own server, and suits technical users who want code steps.
+
+Claude Code comes from a different direction. Anthropic's documentation describes Claude Code as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools, and says it can connect to tools such as Google Drive, Jira and Slack through MCP. For a marketing team, the codebase can be a folder of briefs, voice rules and scripts. The pillar guide on what an AI marketing agent is explains the difference between an agent and a fixed automation in more depth.
+
+How does each tool charge?
+
+Each tool counts usage differently. Zapier counts tasks, and every step and connector call uses them. Make counts credits, mostly one per action. n8n counts executions, one per full workflow run regardless of steps. Claude Code comes with a Claude subscription and draws on that plan's usage limits, with extra usage available at API rates.
+
+The unit matters more than the headline price. Take a ten step workflow that runs 500 times a month:
+
+Zapier's pricing page says every step in a Zap and every external connector call uses tasks, with rates that vary by AI model tier, code runtime and connector type, and that one Zapier MCP tool call uses two tasks. That workflow could use thousands of tasks a month.
+
+Make's pricing page says most actions consume one credit, and that a scenario can use anywhere from two credits to thousands in a single run. Routers and error handlers use no credits.
+
+n8n's pricing page defines an execution as a single run of your entire workflow, whatever the number of steps or the amount of data. That workflow uses 500 executions.
+
+Anthropic's pricing page says Claude Code is included in all paid plans and shares the same usage limits as the rest of the plan. Heavy use can move to pay-as-you-go API credits.
+
+Seats differ too. n8n says all its plans include unlimited users and workflows. Zapier keeps shared Zaps, shared app connections and SAML SSO for its Team plan. Claude is priced per seat.
+
+What does each tool cost for a small business?
+
+Entry prices, checked on 16 October 2026, run from free tiers to about US$20 a month. Zapier Professional starts at US$19.99 billed yearly, Make's paid plans start at US$9, n8n Cloud starts at €20 billed annually, and a Claude Team seat is US$20 billed annually. Most prices are in USD or EUR, so NZD costs move with exchange rates.
+
+ToolFree optionEntry paid planNext step up
+
+Zapier100 tasks a month, two-step ZapsProfessional from US$19.99 a month billed yearly (US$29.99 monthly), 750 tasksTeam from US$69 a month billed yearly for 2,000 tasks (US$103.50 monthly)
+
+Make1,000 credits a monthCore from $9 a month, from 10,000 creditsPro from $16, Teams from $29, each from 10,000 credits
+
+n8nCommunity edition, self-hostedStarter €20 a month billed annually, 2,500 executionsPro €50 a month billed annually, 10,000 executions
+
+Claude CodeNone (needs a paid Claude plan)Claude Pro, US$20 a month billed monthly in US pricingTeam Standard seat, US$20 a month billed annually (US$25 monthly)
+
+Sources: Zapier's pricing page lists Professional from $19.99 a month at 750 tasks billed yearly and Team from 2,000 tasks for $69 a month, in USD, with NZD and AUD among its billing currencies. Make's own comparison page lists Core at $9, Pro at $16 and Team at $29 a month, each starting at 10,000 credits; Make's pricing page did not display plan prices when checked and does not say on that page whether those figures are monthly or annual, so confirm at checkout. n8n's pricing page lists Starter at €20 and Pro at €50 a month billed annually, with annual billing saving 17%, and Business at €667 a month for self-hosted teams. Anthropic's help centre lists Team Standard seats at $20 a month billed annually and $25 monthly, as US prices excluding tax.
+
+Add GST where it applies. For the full cost of a Claude or ChatGPT workspace for 5, 10 and 20 people, see what Claude and ChatGPT business plans cost a New Zealand team.
+
+Where does each tool win?
+
+Zapier wins on breadth and speed for non-technical staff. Make wins when a visual, multi-branch workflow needs to run often at a low entry price. n8n wins on cost per run at volume and on self-hosting. Claude Code wins when the job needs judgement, such as reading several sources and drafting something a person then reviews.
+
+In practice:
+
+Zapier suits an office manager who wants each new website enquiry to land in the CRM and trigger a reply, set up in an afternoon.
+
+Make suits an operations person who likes to see the whole flow on one canvas, with routers that send different records down different paths.
+
+n8n suits a business with a developer or technical marketer, where workflows call internal systems or run thousands of times a month.
+
+Claude Code suits recurring marketing work that changes each time: a weekly performance summary written from several exports, first drafts from a brief, or research on a list of accounts.
+
+Many small businesses end up with two: one workflow tool for instant triggers between apps, and an agent for the work that needs reading and writing. The guide to AI marketing automation for small business lists the six automations most businesses should set up first, whichever tool runs them.
+
+Where does your data live, and can you self-host?
+
+Only n8n can be fully self-hosted on servers you choose. Zapier stores data in the United States. Make lets you choose a US or EU data centre when you create the organisation. n8n Cloud stores data in Germany. Claude Code works on files on your machine and sends prompts to Anthropic, or a cloud provider you configure, for processing.
+
+The vendors' own pages: Zapier's security page says Zapier stores data on Amazon Web Services in the United States. Make's help centre says each organisation can choose a US or EU data centre, and the location cannot be changed after the organisation is created. n8n's pricing FAQ says hosted plans store data in the EU on servers in Frankfurt, and self-hosted data sits wherever you host n8n.
+
+Self-hosting has terms and a cost. n8n's licence FAQ says that if workflows are only created or modified by you or people in your organisation, you can use the Community licence for free, and that hosting n8n as a service for clients to build workflows is not allowed under it. n8n calls this licence fair-code and source-available. Its documentation also says self-hosting requires technical expertise, and that maintenance is your responsibility.
+
+For New Zealand businesses, the Office of the Privacy Commissioner says that in most circumstances you remain responsible for personal information you put in the cloud, wherever the servers are. List the customer fields each workflow touches before you build it.
+
+How do n8n, Zapier, Make and Claude Code compare?
+
+The four tools run from easiest to most flexible. Zapier is quickest for a non-technical person, Make adds visual control, n8n adds self-hosting and code, and Claude Code swaps fixed rules for an agent that follows written instructions. The table covers what matters to a 5 to 50 person business.
+
+ZapierMaken8nClaude Code
+
+What it isWorkflow automation, step builderWorkflow automation, visual canvasWorkflow automation, visual editor with code stepsAgent that reads files, writes and runs work
+
+Billing unitTasksCreditsWorkflow executionsClaude plan seat and usage limits
+
+UsersShared users on Team and EnterpriseBy planUnlimited on all plansPer seat
+
+Self-hostingNoNoYesRuns on your machine or in Anthropic's cloud
+
+Data locationUnited StatesUS or EU, chosen onceFrankfurt on cloud, or your own serverYour files locally; prompts processed by Anthropic or your configured cloud provider
+
+Skill neededLowLow to mediumMedium to highMedium: comfort with files and instructions
+
+Best atFast app-to-app triggersBranching flows at low costHigh volume, internal systems, controlWork that needs judgement and writing
+
+Watch forTask use climbing on multi-step ZapsCredits expiring at the end of the termServer upkeep and updates if self-hostedOutput varies run to run, so it needs review
+
+The credit expiry note comes from Make's pricing FAQ, which says credits expire at the end of the term. Every tool here changes its plans often, so recheck prices on the day you buy.
+
+Which tool suits your team?
+
+Match the tool to the person who will own it. A non-technical owner or office manager should start with Zapier. An operations-minded person who enjoys building should try Make. A team with a developer, or with strict data needs, should look at n8n. A marketer comfortable with files who wants drafting and reporting done should look at Claude Code.
+
+Your teamStart withWhy
+
+Owner-run, no technical staff, a few simple automationsZapier free or ProfessionalFastest to set up, widest app catalogue
+
+An operations person who likes building, moderate volumeMakeVisual control at a lower entry price
+
+A developer or technical marketer, high volume or sensitive datan8n, cloud or self-hostedBilled per run, self-hosting, code steps
+
+Marketing team with recurring writing, research and reportingClaude Code, plus a workflow tool for triggersThe agent handles judgement; the workflow tool handles instant hand-offs
+
+Nobody has hours to learn any of themA consultant or a build with handoverSee the next section
+
+The guide on running a whole marketing function on Claude Code shows the agent route in detail, including what broke.
+
+When should you hire an n8n, Zapier or Make consultant?
+
+Hire a consultant when an automation touches customer data or payments, or must keep running across several systems without anyone watching, and nobody on the team has the hours to learn the tool. Do it yourself when the workflow is simple and low risk, and someone on the team will own and maintain it.
+
+Each vendor publishes a directory to start from. Zapier's directory lists Zapier Solution Partners with tier labels, ratings and reviews. Make's Partner Directory describes its partners as certified Make experts, ranked Platinum, Gold and Silver. n8n's Expert Partners page says the programme is a closed pilot, with a directory of pilot partners.
+
+Whoever you hire, ask for these in writing:
+
+A scope listing each workflow, its trigger, the apps it touches and the customer data it handles.
+
+Accounts, connections and API keys in your company's name, never the consultant's.
+
+Error alerts that go to a named person in your business.
+
+Documentation a new staff member could follow, plus a recorded walkthrough.
+
+A fixed price for the build, and a separate, optional price for maintenance.
+
+The comparison of AI agencies, AI automation agencies and AI consultants covers how to vet providers more broadly, and the page on hiring a marketing automation consultant explains what a scoped automation build includes.
+
+What does maintenance cost?
+
+Every automation needs upkeep. Apps change their connections, logins expire, usage grows past the plan and the person who built it leaves. Budget a few hours a month to check runs and fix errors, and expect the subscription to rise as volume grows. Self-hosted n8n adds server updates and backups to that list.
+
+Know what happens at your limit before you hit it. Zapier's pricing page says that if you reach your task limit you are switched to pay-as-you-go unless you turn it off or move up a tier. Make's pricing FAQ says scenarios stop running until credits are added again. Either behaviour can surprise a busy team.
+
+Claude Code needs a different kind of upkeep. Its instructions and skills drift as your business changes, and its output varies between runs, so a person reviews anything that reaches a customer. Rules that must hold every time belong in automated checks. A monthly routine covers most of it:
+
+Review failed runs and error alerts, and fix the cause.
+
+Check usage against the plan and the month before.
+
+Reconnect any expired app connections.
+
+Read a sample of agent output against your marketing automation rules and voice guide.
+
+Update the documentation when a workflow changes.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber's own stack is Claude Code, and Flow AI is not a partner of n8n, Zapier or Make.
+
+If the agent route fits your team, the page on working with a Claude Code consultant explains how a build runs; each starts with a written scope and is priced per project. The skill library and free agent templates are open to inspect first. Companies hiring can reach Amber through the hiring page.
+
+The short version
+
+Zapier is the quickest start for non-technical staff, Make gives visual control at a lower entry price, n8n gives per-run billing and self-hosting for technical teams, and Claude Code handles marketing work that needs judgement. Pick the one the person who will own it can run.
+
+Before you buy, price your real workflows in the tool's own billing unit. After you buy, keep every account in your company's name and set aside time each month for upkeep.
+
+To work out which route fits your team, talk to Amber.
+
+Q: Is n8n cheaper than Zapier?
+A: Often, at higher volumes. n8n bills per workflow execution, one full run regardless of how many steps it has, and its Community edition is free to self-host for internal use. Zapier bills per task, and every step and connector call uses tasks. For a few simple two-step automations, Zapier's free and entry plans can cost less in money and in setup time.
+Q: How much does it cost to use Zapier?
+A: Zapier's pricing page on 16 October 2026 listed a free plan with 100 tasks a month, Professional from US$19.99 a month billed yearly or US$29.99 monthly, and Team from US$69 a month billed yearly for 2,000 tasks. The price rises with the monthly task tier you choose, and Zapier offers billing in NZD and AUD.
+Q: Is n8n open source?
+A: n8n describes its licence as fair-code, under its Sustainable Use License, and source-available. Its documentation says that if workflows are only created or modified by you or people in your organisation, you can use the self-hosted Community edition for free. Hosting n8n as a service for clients to build their own workflows needs a commercial licence.
+Q: What are companies like Zapier?
+A: The closest alternatives are Make, which bills in credits for each action and has a visual scenario builder, and n8n, which bills per workflow run and can be self-hosted. Agent tools such as Claude Code sit in a different category: they write and run the work from instructions, which suits tasks that need judgement more than fixed rules.
+Q: Can Claude Code replace Zapier for a small business?
+A: For some jobs. Claude Code can connect to tools through MCP, run on a schedule in the cloud and handle work that needs judgement, such as drafting a report from several sources. For instant app-to-app triggers, such as a new form entry going straight into a CRM, a workflow tool is usually simpler to run and hand over.
+Q: When should I hire an n8n, Zapier or Make consultant?
+A: Hire one when an automation touches customer data or money, or must keep running across several systems without your attention, and nobody on the team has time to learn the tool. Ask for a written scope, accounts in your name, documentation and error alerts. All three vendors publish partner directories you can start from.
+
+## How to hire an AI agent developer: questions to ask, red flags and what you should own.
+URL: https://www.flowai.co.nz/blog/how-to-hire-an-ai-agent-developer
+Author: Amber Lan, Flow AI
+Updated: 2026-10-16
+
+Short answer: Hire an AI agent developer by asking to see an agent they built running with its tests and logs, checking how they limit what the agent can read and do, and signing a contract that puts the code, prompts, accounts and data in your name, meets the Privacy Act and includes a written handover.
+
+What does an AI agent developer do?
+
+An AI agent developer designs, builds and maintains software agents that use a large language model to carry out multi-step work with your tools and data. The job covers prompts and code, plus the tests, limits, monitoring and documentation that let a business trust an agent near customers and money.
+
+An AI agent developer is an engineer who builds AI agents: software that uses a large language model to plan and complete multi-step tasks with a business's tools and data, inside limits the business sets, with tests and monitoring that show it works.
+
+Typical marketing agents research accounts, draft first messages, audit a website for AI answers, or write the weekly report. The glossary entry on agentic AI covers the wider term, and the guide to AI marketing agents shows how agents fit into one system.
+
+You will be competing with employers for these people. A SEEK New Zealand search for AI agent developer jobs in October 2026 returned AI engineer, AI developer and contract AI automation roles across the country.
+
+AI agent developer, AI engineer or AI developer: what is the difference?
+
+The titles overlap, and job ads use them loosely. AI developer is the broadest label, for anyone writing software that uses AI. An AI engineer usually builds and deploys models or AI features inside a product. An AI agent developer specialises in agents that take actions in business tools, so the work leans toward integrations, permissions and review steps.
+
+Salary guides use the engineer titles. Robert Walters' 2026 salary guide for Australia and New Zealand lists AI engineer and AI consultant roles for Auckland, and separate generative AI engineer and machine learning engineer roles for New South Wales. None of its tables uses the title AI agent developer, so hire against the work you need done.
+
+Title in the adUsual focusAsk them to show you
+
+AI developerAny software that calls an AI modelSomething they shipped that is still in use
+
+AI engineer or machine learning engineerModels, data pipelines and AI features inside a productHow they tested a model before release
+
+AI agent developerAgents that read business data and act in business toolsAn agent running, with its test set, its limits and its logs
+
+Marketing engineerMarketing systems, often built from agents, run alongside a teamA marketing job the system now does every week
+
+Freelancer, agency, in-house hire or contract engineer: which fits?
+
+A freelancer suits one well-defined agent. An AI agent development company suits several agents across teams, with more people to call when something breaks. An in-house hire suits a business that will build agents for years. A contract engineer suits a fixed build with a handover, usually billed by the hour through a recruiter.
+
+Robert Walters' 2026 guide puts an Auckland AI engineer at NZD 130,000 to 150,000 base salary, or NZD 130 to 180 an hour on contract, and a New South Wales AI engineer at AUD 150,000 to 170,000 or more before superannuation. SEEK's advertised average for a New Zealand software engineer in information and communication technology was NZD 115,265 in October 2026, across 648 openings. In New Zealand, add employer KiwiSaver, which Inland Revenue confirms rose from 3% to 3.5% on 1 April 2026.
+
+Freelancers and agencies that build AI agents rarely publish rates, and this guide found no survey of them to verify, so ask for a written quote per agent.
+
+RouteBest forHow it is pricedCheck before you sign
+
+FreelancerOne agent with a clear jobFixed quote per agent, or hourlyAccounts in your name, documentation, cover during leave
+
+AI agent development companySeveral agents, ongoing supportPer project, often with monthly supportWho does the work, any subcontracting, where data goes
+
+In-house hireYears of agent workNZD 130,000 to 150,000 base in Auckland (Robert Walters 2026), plus KiwiSaverA senior person who can review their work
+
+Contract engineerA fixed build with a handoverNZD 130 to 180 an hour in Auckland (Robert Walters 2026)IP assignment, written handover, access removed at the end
+
+The AI marketing cost guide for Australia and New Zealand sets these figures against retainers and tools, and agency vs freelancer vs in-house covers the trade-offs.
+
+Which skills should an AI agent developer show you?
+
+Look for five skills beyond prompt writing: evaluation, guardrails, data access design, monitoring and documentation. Each one leaves an artefact you can inspect, such as a test set, a permissions list, a run log or a runbook. A developer who has these skills can open examples during the first call.
+
+Evaluation
+
+An agent needs a test set: real inputs with the outputs a good result should contain, run before every change. MBIE's voluntary Responsible AI Guidance for Businesses, published July 2025, says AI systems should be tested often and actively monitored, and advises setting success metrics and thresholds to evaluate against.
+
+Guardrails
+
+Guardrails decide what the agent may do alone. Drafting is usually fine; sending, publishing, spending and deleting should wait for a person, known as human in the loop. Agents that read emails or web pages take in text written by strangers, and the OWASP Gen AI Security Project ranks prompt injection first in its 2025 Top 10 for large language model applications. Ask how the developer stops a hostile email from steering the agent.
+
+Data access design
+
+Good developers give each agent the least access that does the job: read-only first, named fields rather than whole databases, a separate service account where possible. Ask for the list of systems each agent can read and write.
+
+Monitoring
+
+An agent that worked in testing can drift once it meets live data. Australia's National AI Centre, in its Guidance for AI adoption, tells organisations to monitor AI systems after deployment to detect changes in performance and behaviour. In practice: a log of every run, an alert on failure, and a weekly sample a person reads.
+
+Documentation
+
+Each agent should have a one-page brief (its job, inputs, tools, limits and reviewer), a runbook for when it breaks, a list of the accounts and keys it uses, and a change log.
+
+What should you ask before you hire?
+
+Ask questions that have the candidate show working examples. Eight questions cover the ground: a live run, the test set, the limits, the data, failure handling, monitoring, ownership and handover. Put the same questions to every candidate, in writing where you can, and score the answers on the table further down.
+
+Can you show me an agent you built, running on real work? Input, steps, output and review, live or recorded.
+
+What is in its test set, and when do you run it? Good answers name the awkward cases and run tests before every change.
+
+What can the agent do without a person? Look for a written list, with anything customer-facing behind a review.
+
+Which of our systems will it read and write, and where is the data stored? Ask for the country and provider of each tool, including the model.
+
+What happens when it fails? Expect alerts, a safe fallback and a person who gets told.
+
+How will we know it still works in three months? Logs, a metric with a threshold, a regular sample review.
+
+Who owns the code, prompts, test sets and documentation? Your business, in writing.
+
+What does the handover include? A list, a walkthrough and a defined support period.
+
+Australia's National AI Centre agrees: if you are buying an AI system, its guidance says to ask the developer or supplier to show proof that it has been properly tested. The guide on how to choose an AI marketing provider applies the same test to agencies.
+
+What are the red flags?
+
+The clearest red flags are a developer with no running agent to show, no test set, agents built on the developer's own accounts or API keys, requests for broad access to save time, promises that an agent needs no human review, and vague answers about where your customer data goes. Two of these usually justify looking elsewhere.
+
+A slide deck or a tool demo in place of an agent they built
+
+The model account, automation platform or code repository in the developer's name
+
+An agent that sends, publishes or spends with nobody reviewing
+
+A contract silent on IP, or one that licenses the work back to you
+
+Gartner warned in June 2025 about "agent washing", estimating that only about 130 of the thousands of agentic AI vendors are real, and predicted over 40% of agentic AI projects will be cancelled by the end of 2027. A running agent with tests settles the question faster than any title.
+
+How do you score candidates side by side?
+
+Score each candidate from 0 to 3 on six criteria, multiply by the weight, and add the results. The weights favour what is hardest to fix after you sign: a working agent, evaluation, limits on access and clear ownership. Compare price only between candidates who pass those first four.
+
+CriterionWeightScores 3 whenScores 0 when
+
+Running agent (question 1)3Showed a real run with input, steps, output and reviewSlides or a tool demo only
+
+Evaluation and monitoring (2, 5, 6)3Test set, alerts, a metric with a thresholdNo tests, no logs
+
+Guardrails and data access (3, 4)3Written limits, least access, storage namedWants full access, data location unknown
+
+Ownership and handover (7, 8)3Everything assigned to you, written handover listWork stays with the developer
+
+Documentation2Brief, runbook and change log for a past agentNothing written
+
+Price and fit1Written quote, works with your team's toolsNo written price
+
+The maximum is 45. A candidate under 27 needs a strong reason to stay on the list.
+
+What must the contract say about IP, accounts and data?
+
+The contract should assign you the code, prompts, test sets and documentation, require every account, API key and connector to sit in your name, set which data the agents may read and where it is stored, and describe the handover. Default copyright rules differ between New Zealand and Australia, so write ownership down either way.
+
+Intellectual property
+
+In New Zealand, section 21 of the Copyright Act 1994 makes a person who commissions and pays for a computer program its first owner, subject to any agreement to the contrary. That list names computer programs but not written works in general, so assign prompts, instruction files and documentation to your business in the contract too, and treat this as a practical reading of the Act to confirm with a lawyer. In Australia the default runs the other way: IP Australia says IP created by a contractor is the property of the contractor unless otherwise stated in the contract. If the developer reuses their own libraries, get a permanent licence to anything your agents depend on.
+
+Accounts and keys
+
+The AI model account, automation platform, hosting and code repository should belong to your business and bill your card, with the developer added as a user and API keys created in your accounts. When the engagement ends, you remove their access and the agents keep running.
+
+Data handling in New Zealand
+
+The Privacy Act 2020 applies to any business handling personal information, and agents that read a CRM or an inbox handle plenty. The Privacy Commissioner's information privacy principles cover storage and security (IPP 5), limits on retention (IPP 9) and disclosure outside New Zealand (IPP 12), and the Commissioner expects a privacy impact assessment before AI tools are used, updated regularly. Agents that enrich lead lists also fall under IPP3A, in force since 1 May 2026, on telling people about indirect collection.
+
+Data handling in Australia
+
+The OAIC's summary of the Australian Privacy Principles says APP 8 sets the steps before personal information is disclosed overseas, and APP 11 requires reasonable steps to protect it from misuse, loss and unauthorised access. The OAIC defines a small business as one with annual turnover of A$3 million or less, and most of those sit outside the Act, though health providers and some others are covered regardless. The privacy law guide for NZ and Australia goes deeper.
+
+What does a good handover and exit look like?
+
+A good handover leaves your team able to run, change and switch off every agent without calling the developer. That means the repository in your organisation, a runbook per agent, the test set, a list of accounts and keys, a recorded walkthrough, and a defined period of support. Agree all of it in the scope, before work starts.
+
+Code, prompts, instruction files and test sets in a repository your business owns
+
+A runbook per agent: how to pause it, who to call, how to roll back a change
+
+A list of every account, key and connector, with the owner of each
+
+A recorded walkthrough with the person who will run the agents
+
+A support period with a response time, priced in the original quote
+
+On exit: developer access removed, keys rotated, and the developer's copies of your data deleted
+
+The last item matters under IPP 9 as well as for security. Record the list and the exit terms in a written AI marketing scope of work.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. The AI agent development service sets out how a build runs on your accounts, with a named person on your team approving each agent's work.
+
+The free agent templates and the public skill library show the method before a call. Each build starts with a written scope and is priced per project. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
+
+The short version
+
+Hire an AI agent developer on evidence: an agent running on real work, a test set, written limits on what it can touch, monitoring you can read, and documentation another developer could pick up. Score every candidate on the same table, and compare price only among those who pass the first four rows.
+
+Then put ownership in writing: code, prompts, tests, accounts and data in your name, privacy duties and the handover agreed before the build begins.
+
+To put Flow AI through the same questions, talk to Amber.
+
+Q: How much does it cost to hire an AI agent developer in New Zealand?
+A: Robert Walters' 2026 salary guide puts Auckland AI engineers at NZD 130,000 to 150,000 base salary and NZD 130 to 180 an hour on contract. Employers add KiwiSaver at 3.5% from 1 April 2026. Freelancers and agencies rarely publish rates, so ask for a written quote per agent based on a scope that names its job, its data and its review step.
+Q: What is the difference between an AI engineer and an AI agent developer?
+A: An AI engineer usually builds and deploys models or AI features inside a product. An AI agent developer builds agents that act in business tools, such as a CRM, a website or an inbox, so the work centres on integrations, permissions, review steps and monitoring. The titles overlap in job ads, so judge candidates on agents they can show you running.
+Q: Should I hire an AI agent freelancer or an AI agent development company?
+A: Hire a freelancer for one agent with a clear job and a short build. Choose an AI agent development company when you need several agents across teams, cover during holidays, or ongoing support. Either way, ask who does the work, keep every account in your name, and get documentation good enough that another developer could take over.
+Q: What questions should I ask an AI agent developer?
+A: Ask them to show an agent running on real work, then ask for its test set, the limits on what it can do, the data it reads and where that data is stored, what happens when it fails, how it is monitored, who owns the code and prompts, and what the handover includes. Ask every candidate the same questions and score the answers.
+Q: Who owns the code and prompts an AI agent developer builds?
+A: It depends on the country and the contract. Under section 21 of New Zealand's Copyright Act 1994, whoever commissions and pays for a computer program is its first owner unless an agreement says otherwise. IP Australia says IP created by a contractor belongs to the contractor unless the contract states otherwise. Assign the code, prompts, tests and documentation to your business in writing, and confirm that practical reading with a lawyer.
+Q: Does the Privacy Act apply to AI agents built for my business?
+A: In New Zealand, yes: the Privacy Act 2020 covers any business handling personal information, including data an agent reads or stores, and the Privacy Commissioner expects a privacy impact assessment before AI tools are used. In Australia, the Privacy Act generally applies to businesses with annual turnover above A$3 million, plus some smaller ones such as health providers.
+
+## Claude for business or ChatGPT Business: what does each cost a New Zealand team in 2026?
+URL: https://www.flowai.co.nz/blog/claude-vs-chatgpt-business-cost-nz
+Author: Amber Lan, Flow AI
+Updated: 2026-10-16
+
+Short answer: On their official pricing pages on 16 October 2026, Claude's Team plan and ChatGPT Business both cost US$20 per user per month billed annually, or US$25 billed monthly, with a two seat minimum. A 10 person team pays US$200 to US$250 a month before GST. Setup and staff training usually cost more than the seats.
+
+What do Claude and ChatGPT business plans cost in 2026?
+
+Claude's Team plan and ChatGPT Business have the same list price. A Standard seat costs US$20 per user per month billed annually, or US$25 billed monthly, and both plans need at least two seats. Each also sells a Premium seat with about five times the usage at US$100 annually or US$125 monthly.
+
+The figures come from each vendor's own pages, checked on 16 October 2026. Anthropic's help centre lists Team Standard seats at $20 per member per month billed annually and $25 billed monthly, says these are prices for US customers excluding tax, and sets the plan at two to 150 seats. OpenAI's help centre lists ChatGPT Business Standard seats at US$20 billed annually and US$25 billed monthly, with a two seat minimum, and notes that ChatGPT Team was renamed ChatGPT Business on 29 August 2025.
+
+New Zealand visitors see local figures. OpenAI's pricing page, viewed from New Zealand, showed ChatGPT Business at NZ$33 per user per month billed annually and NZ$41 billed monthly, without saying whether GST is included. Anthropic's pricing page, viewed from New Zealand, showed Team Standard at $40 a seat billed annually and $50 monthly, with the note "Prices include 15% GST" and no currency code. Exchange rates move, so the NZD price of a USD plan moves with them.
+
+What does a business plan give you that a personal plan does not?
+
+A business AI plan is a paid workspace from an AI vendor that gives each staff member a seat under one company account, with central billing, admin controls and business data terms that exclude your content from model training by default. Personal plans bill one person, and the training setting is the user's to manage.
+
+That last point matters most for a business. On Anthropic's personal Pro and Max plans, the pricing page lists model training as opt-out. On the Team plan it lists "None by default". OpenAI's comparison table makes the same split: content on individual plans can be used for training with an opt-out available, while Business content is not used. A business plan also gives you an owner and admins who add and remove people from one company account, which keeps access tidy when staff change.
+
+For a sole trader, a personal plan with training switched off can be enough. Once two or more people share client information, the business plan is the safer default.
+
+What does each plan include?
+
+Both plans include chat, file analysis, connectors to common work tools, single sign-on and a coding agent: Claude Code on the Team plan and Codex on ChatGPT Business. Claude Team adds pooled API credits each month. ChatGPT Business adds image generation. Enterprise tiers on both sides add SCIM provisioning, role-based access, audit logs and custom retention.
+
+Claude TeamChatGPT Business
+
+Standard seat (annual / monthly)US$20 / US$25 per seat a monthUS$20 / US$25 per user a month
+
+Premium seat (annual / monthly)US$100 / US$125, five times Standard usageUS$100 / US$125, five times Standard usage
+
+Seats2 to 1502 or more
+
+Coding agentClaude Code includedCodex included
+
+ConnectorsConnectors with admin controls, Microsoft 365, enterprise searchMicrosoft 365, Google Drive, Slack, GitHub, Linear, Figma and more
+
+Admin and sign-inCentral billing, SSO, usage analyticsCentral billing, SAML SSO, MFA, usage analytics and spend controls
+
+Training on your contentNone by defaultNone by default
+
+API usageUp to US$500 a month in pooled API creditsBilled separately
+
+PaymentCardCard
+
+Sources for the table: Anthropic's pricing page lists Claude Code, SSO, connector admin controls, no model training by default and up to $500 a month in pooled API credits on the Team plan, and OpenAI's Business overview says a Business subscription does not include API usage. Both plans set usage limits per seat, and both let you buy more on top: Anthropic through usage credits at API rates, OpenAI through workspace credits.
+
+Enterprise is a different purchase. Anthropic lists self-serve Claude Enterprise at US$20 per seat per month billed annually with a 20 seat minimum, plus usage billed at API rates. ChatGPT Enterprise is priced through sales. For a 5 to 50 person business, the Team and Business plans are the realistic starting point.
+
+What does each plan cost for a 5, 10 or 20 person team?
+
+On Standard seats, a 5 person team pays US$100 a month on annual billing or US$125 on monthly billing, a 10 person team US$200 or US$250, and a 20 person team US$400 or US$500. The numbers are identical for Claude Team and ChatGPT Business. Add GST where it applies, and convert at the day's exchange rate.
+
+Team sizeAnnual billing, per monthAnnual billing, per yearMonthly billing, per month
+
+5 people, Standard seatsUS$100US$1,200US$125
+
+10 people, Standard seatsUS$200US$2,400US$250
+
+20 people, Standard seatsUS$400US$4,800US$500
+
+20 people, 18 Standard and 2 PremiumUS$560US$6,720US$700
+
+The table multiplies the official seat prices above. It applies to both vendors because their list prices match. Viewed from New Zealand, the local prices work out differently:
+
+ChatGPT Business at NZ$33 annual or NZ$41 monthly: NZ$165 or NZ$205 a month for 5 people, NZ$330 or NZ$410 for 10, NZ$660 or NZ$820 for 20.
+
+Claude Team at $40 annual or $50 monthly, GST included: $200 or $250 a month for 5 people, $400 or $500 for 10, $800 or $1,000 for 20.
+
+The two local figures are hard to compare directly, because Anthropic's NZ page states that GST is included and OpenAI's NZ page does not say. Check the total at checkout for your own account, and ask your accountant how GST on an offshore subscription applies to your business.
+
+One trap for small teams: Claude's self-serve Enterprise plan has a 20 seat minimum, so a five person business choosing it would pay for 20 seats, US$400 a month billed annually, before any usage. The AI marketing cost guide for Australia and New Zealand sets these subscriptions against freelancer, agency and hiring costs.
+
+Should you pay monthly or annually?
+
+Pay monthly for the first month or two, while you learn who uses the tool every week, then move to annual billing for the seats you are sure of. Annual billing cuts the Standard seat price from US$25 to US$20 on both plans, a 20% saving, but you commit the seat count for the year.
+
+The rules on changing seats differ. OpenAI's billing article says seats added on an annual ChatGPT Business plan stay committed through the end of the term, reductions take effect at the next billing cycle, and you are charged for every seat whether or not it is assigned. Anthropic's pricing table lists adding seats mid-term on Team, with card payment only. Neither self-serve plan offers invoicing; that sits with the Enterprise tiers.
+
+A sensible pattern for a 10 person business: buy monthly seats for the four or five people who will use the tool daily, run a four to six week trial, then add seats and switch to annual once usage settles.
+
+Which plan suits which job?
+
+Pick by the work your team does most. For drafting and research, both are strong, so trial each on your own material for a week. For scripted work across files and connected tools, compare Claude Code and Codex directly. For image creation inside the same workspace, ChatGPT Business includes it.
+
+Main jobWhat to look at
+
+Writing, editing and researchBoth plans. Trial each with your own briefs and judge the drafts side by side.
+
+Recurring marketing or operations work run from filesClaude Code on Team, or Codex on Business. Test with one real weekly job.
+
+Images and graphics in the chat workspaceChatGPT Business lists image generation. Anthropic's Team page does not list it.
+
+Building on the API as wellClaude Team includes pooled API credits each month. ChatGPT Business bills API usage separately.
+
+Heavy daily usersA Premium seat for those people only. Both plans let you mix seat types.
+
+Data stored in AustraliaOpenAI lists Australia among data residency regions for eligible Enterprise customers. Ask either vendor before committing.
+
+The data residency point comes from OpenAI's business data page, which says eligible ChatGPT Enterprise, Edu and API customers can store content at rest in regions including Australia. OpenAI's own pricing table marks data residency as unavailable on Business.
+
+Some teams run both. A common split gives everyone one tool for daily drafting and buys a second plan for the one or two people doing scripted or technical work. If your marketing runs from files and connected tools, the notes on running a marketing function on Claude Code show what that setup looks like week to week.
+
+Is your data used for training, and what does the NZ Privacy Act expect?
+
+Both vendors say business plan content is excluded from model training by default. That covers the vendor's side. Under the Privacy Act 2020, your business remains responsible for any personal information staff put into either tool, so you still need rules on what goes in and who can use it.
+
+On the vendor side, OpenAI's business data page says it does not use data from ChatGPT Business or Enterprise, including inputs or outputs, for training by default. Anthropic's privacy centre says it will not use inputs or outputs from its commercial products for training by default, that feedback such as a thumbs rating can be used, and that Team and Enterprise owners can turn rating off. If you want nothing used, switch that setting off on day one.
+
+On your side, the Office of the Privacy Commissioner says the Privacy Act applies to everyone using AI tools in New Zealand, recommends a privacy impact assessment before you start, and advises that if in doubt you do not use AI tools to handle personal information. The same office says that in most circumstances you remain responsible for personal information you put in the cloud. Customers notice, too: the Commissioner's 2026 privacy survey of 1,245 New Zealanders, run in March and April 2026, found 82% want more say in how their information is collected and used.
+
+A short policy covers most of it: which client data may go into the tool, which may not, who reviews AI output before it reaches a customer, and who owns the workspace settings. The guide to AI marketing and privacy law in NZ and Australia covers the Australian rules and the contract questions to ask.
+
+Why do setup and adoption cost more than the seats?
+
+For a 10 person team, US$200 to US$250 a month is small next to the hours it takes to make the tool useful. Someone has to set up the workspace, connect the right tools, write the shared instructions and templates, train staff and check the output. Those hours decide whether the seats pay back.
+
+Skills are the gap. KPMG and the University of Melbourne's 2025 global study, surveyed over summer 2024-25, found only 24% of New Zealanders have formal or informal training in AI, and 51% of New Zealand employees have relied on AI output at work without evaluating its accuracy. A paid seat in untrained hands produces generic work and unchecked mistakes.
+
+A first month that tends to work:
+
+Pick one plan, buy monthly seats for the daily users, and switch off feedback rating if you want no content used for training.
+
+Write a one-page brief the whole team shares: your business, your customers, your tone, and what never goes into the tool.
+
+Turn two or three repeated jobs into saved instructions or templates, such as a proposal first draft or a weekly report.
+
+Connect one work tool, read-only first, and check what the assistant can see.
+
+Agree a human in the loop rule: a named person reviews anything that reaches a customer.
+
+After four to six weeks, count who uses it weekly, then set the seat count and move to annual billing.
+
+The free agent templates give you starting instructions to adapt, and the comparison of AI marketing tools and AI marketing services helps if you are deciding how much of the setup to do yourself.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber runs her own work on Claude Code, so judge both plans on your own trial.
+
+If you choose Claude and want the setup done properly, the page on working with a Claude Code consultant explains how a build runs. Each build starts with a written scope and is priced per project. Companies hiring can reach Amber through the hiring page.
+
+The short version
+
+Claude Team and ChatGPT Business both list US$20 per user per month on annual billing and US$25 monthly, with a two seat minimum and a Premium seat at five times the usage. A 10 person team pays US$200 to US$250 a month before GST and exchange rate movement.
+
+Choose by the work your team does, start monthly, switch feedback rating off if you want no content used, and spend your effort on setup and training, where most of the value sits.
+
+To plan the setup for your team, talk to Amber.
+
+Q: How much does Claude for business cost per user?
+A: Anthropic's Team plan costs US$20 per seat per month billed annually or US$25 billed monthly for a Standard seat, and US$100 or US$125 for a Premium seat with five times the usage. Anthropic's help centre says these are US customer prices excluding tax. Viewed from New Zealand on 16 October 2026, the page showed $40 and $50 for Standard with GST included.
+Q: How much does ChatGPT Business cost per month?
+A: OpenAI's help centre lists ChatGPT Business Standard seats at US$20 per user per month billed annually or US$25 billed monthly, with a two seat minimum. Premium seats are US$100 or US$125. Viewed from New Zealand on 16 October 2026, OpenAI's pricing page showed NZ$33 per user per month billed annually and NZ$41 billed monthly.
+Q: Is Claude or ChatGPT cheaper for a small business?
+A: At list price neither is cheaper. Both charge US$20 per Standard seat per month on annual billing and US$25 on monthly billing, and both offer a Premium seat at US$100 or US$125. The difference sits in what each includes for your kind of work, and in the hours it takes to set the workspace up and train your team.
+Q: Is there a minimum number of users for Claude Team or ChatGPT Business?
+A: Both need at least two seats. Anthropic's Team plan covers 2 to 150 seats. ChatGPT Business needs at least two Standard or Premium seats in total. Claude's self-serve Enterprise plan has a 20 seat minimum, so a five person business would pay for 20 seats plus usage if it chose Enterprise.
+Q: Does Claude or ChatGPT train on my business data?
+A: By default, neither vendor trains its models on business plan content, according to each vendor's own privacy pages. Anthropic notes that feedback a user submits, such as a thumbs rating, can be used for training, and Team plan owners can switch rating off. Under the NZ Privacy Act 2020 your business stays responsible for personal information you put into either tool.
+Q: Should a small team pay monthly or annually?
+A: Start on monthly billing for a trial of a month or two, then move to annual once you know who uses the tool every week. Annual billing saves 20% on both plans. On ChatGPT Business, seats added on an annual plan stay committed until the term ends, so commit only the seat count you are sure of.
+
+## Claude Code for marketing agencies: what to build first, and how to keep it safe.
+URL: https://www.flowai.co.nz/blog/claude-code-for-marketing-agencies
+Author: Amber Lan, Flow AI
+Updated: 2026-10-16
+
+Short answer: Start with a brief file for each client, then build research packs, first drafts, an SEO and AEO audit and monthly reporting, in that order. Keep each client in its own folder with its own connectors, put a person on review before the client sees anything, and use a commercial plan so client data stays out of model training.
+
+What is Claude Code, and why do agencies use it?
+
+Claude Code is Anthropic's agentic tool that works inside a project folder: it reads files, edits them, runs commands and connects to other tools. Agencies use it because client work repeats. A brief, a research pack or a monthly report follows the same steps each time, so the steps can be written down once and run by an agent.
+
+Anthropic's Claude Code overview describes it as an agentic coding tool that reads your codebase, edits files, runs commands and integrates with your development tools, available in the terminal, IDE, desktop app and browser. It was built for software teams. For an agency, the codebase is the client work: briefs, voice rules, research, drafts and the checks that run on them.
+
+Claude Code for a marketing agency is a setup in which each client's work lives in its own folder of written instructions, skills and connectors that an AI agent works through, while the agency's people review and approve everything the client sees.
+
+I run the whole marketing function of an AI startup on Claude Code, alone, and my working notes on running marketing on Claude Code cover that setup in detail. An agency has the same building blocks with one extra job: keeping each client's work and data apart. If agents are new to you, start with the definition of an AI marketing agent.
+
+Which client work suits Claude Code?
+
+Repeatable work with a clear finished state suits it best: client briefs, research, first drafts, reporting and SEO or AEO audits. In each case the agent gathers and drafts, and a person decides. Work that depends on a relationship, such as pitching, negotiating or handling a client complaint, stays with your people.
+
+Client workWhat the agent doesWho approves
+
+Client briefTurns discovery notes and the client's site into a draft briefAccount lead, then the client
+
+ResearchCollects competitor pages, search results and reviews into a sourced packStrategist
+
+First draftsDrafts posts, articles and emails against the brief and voice rulesEditor, then the client
+
+SEO and AEO auditChecks pages, structured data and AI crawler access, drafts the fixesSEO lead
+
+Monthly reportingPulls the numbers and drafts the commentaryAccount manager
+
+Clients pay for the right-hand column. The guide to AI for marketers covers the same split from an individual marketer's side.
+
+What are the first five workflows to build, in order?
+
+Build in order of risk: work that stays inside the agency first, work that reaches clients next, and work that needs access to client accounts last. A sensible order is the client brief, the research pack, first drafts, the SEO and AEO audit, then monthly reporting. Run each one cleanly for a few weeks before starting the next.
+
+The client brief. One file per client: positioning, audience, voice rules, claims the client can and cannot make, examples of approved work, and who signs off what. Every later workflow reads it first, so it repays the most care.
+
+The research pack. Competitor pages, the questions buyers ask, the current answers in search and AI assistants, and customer reviews, summarised with a link for every claim. Claude Code can run several research questions in parallel through subagents and return only the summaries.
+
+First drafts against the brief. Articles, social posts and emails drafted from the brief and the research pack. Each draft passes a voice check and a source check before an editor reads it. A one-source-in, many-drafts-out version of this is often called a content engine.
+
+The SEO and AEO audit. A repeatable check of a client's pages, structured data and AI crawler access, plus a fixed set of buyer questions tested in AI assistants for answer engine optimisation. The output is a list of fixes your team prioritises.
+
+Monthly reporting. The agent reads analytics and ad platforms through connectors, drafts the numbers and the commentary, and the account manager rewrites the parts that need judgement. It comes last because it needs access to client accounts.
+
+The guide to AI agents for marketing covers the same sequencing question for an in-house team.
+
+Lane files, skills and connectors: what are they?
+
+A lane file is a plain text instruction file, named CLAUDE.md, that tells the agent how one area of work runs. A skill is a written procedure the agent loads when a task matches it. A connector links the agent to a tool such as an analytics platform or a project board through the Model Context Protocol, usually called MCP.
+
+Lane files
+
+Anthropic's memory documentation says CLAUDE.md files above the working directory load at launch, files in subdirectories load on demand, and each file should target under 200 lines. In my setup each lane (content, social, search, outbound, events, reporting) has its own CLAUDE.md written like a job description: what the lane owns, what it reads, what finished work looks like and what needs approval. An agency can do the same per service line, with one more layer per client.
+
+Skills
+
+Anthropic's skills documentation says Claude uses a skill when it is relevant, or when you invoke it by name, and that project skills in .claude/skills can be committed so the whole team gets them. For an agency, that means one version of "how we write a brief" or "how we audit a page" across every account manager, with a history of each change in git. My rule: anything I do twice by hand becomes a skill.
+
+Connectors
+
+Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources, and tells users to verify they trust each server before connecting it because servers that fetch external content carry prompt injection risk. Start every connector read-only. Where an agent can write, let it write drafts, never finished work.
+
+How do you keep each client's data separate?
+
+Give every client its own folder, ideally its own git repository, and start each session inside it. Keep agency-wide rules in a parent folder with no client details, add each client's connectors only to that client's project, block sensitive files, and use a commercial plan so client data stays out of model training.
+
+Claude Code's own behaviour makes this layout work:
+
+Working folder. Anthropic's permissions documentation says file reads run without approval inside the working directory and any added directories, so a session started in one client's folder works on that client by default. Avoid adding a second client's folder to the same session.
+
+Shared rules. Because CLAUDE.md files above the working folder load at launch, an agency-wide file in the parent folder reaches every client. Put voice standards and sign-off rules there, never client names, results or data.
+
+Memory. Claude Code keeps automatic notes per git repository, according to the memory documentation, so one repository per client keeps those notes apart too.
+
+Connectors. The MCP documentation lists three scopes: local and project scope load only in the current project, while user scope loads in every project on the machine. Add client connectors at local or project scope only.
+
+Sensitive files. The permissions documentation shows deny rules such as Read(./secrets/**) to stop the agent reading a file or folder. Use one for customer exports and contracts.
+
+The plan matters as much as the folders. Anthropic's data usage documentation says it does not train generative models on code or prompts sent to Claude Code under commercial terms (Team, Enterprise and API), while Free, Pro and Max accounts are used for training when that setting is on, and that local session transcripts are stored in plaintext for 30 days by default. Client work belongs on a commercial plan, on encrypted laptops, and the client contract should record which tools see its data.
+
+Privacy law follows the client's customers. In New Zealand, the Privacy Commissioner expects a privacy impact assessment before AI tools are used, updated regularly. In Australia, the OAIC's 2024 guidance recommends that organisations do not enter personal information into publicly available generative AI tools. Most of the workflows above need no customer personal information at all, which is the simplest protection.
+
+Where do the review gates go?
+
+Put a gate before each change of audience: after the agent drafts and before an editor reads, after the editor approves and before the client sees, and after the client approves and before anything is published or sent. Automated checks sit at the first gate. People own the other two, and the agent never publishes or sends on its own.
+
+Automated checks. Voice rules, banned claims and a source check on every number, run before a person reads the draft. Drafts that fail are rewritten against the lines that failed.
+
+Editor approval. A named person reads the full draft against the client brief.
+
+Client approval. The client signs off anything published or sent under its name. This is the human in the loop in its plainest form.
+
+Some rules should be enforced by the tool. The permissions documentation says rules are evaluated deny first, then ask, then allow, so a deny rule on a publishing command holds even if someone adds a broad allow later. The memory documentation adds that Claude treats CLAUDE.md as context, not enforced configuration, and points to hooks to block an action every time. Australian guidance makes the same point about oversight: the National AI Centre says a person should oversee an AI system in a way that matches how much autonomy it has and how high the stakes are.
+
+One lesson from my own setup: once agents draft faster than people review, approved work queues behind unread work. Reviewing in batches at set times keeps it moving.
+
+What does Claude Code cost an agency?
+
+Agencies usually pay through Claude Team or Enterprise seats, where Claude Code draws on each member's seat allowance, or through the API, billed per token. Anthropic publishes average figures for software teams only, so price an agency rollout from a small pilot, with your own usage measured from the start.
+
+Anthropic's cost documentation says Team and Enterprise usage draws from a per-seat allowance shared with Claude chat, and reports an average of about US$13 per developer per active day and US$150 to 250 per developer per month across enterprise deployments. Those are coding figures. Marketing sessions read and write prose, and long sessions cost more because the whole conversation is sent with every request, so clear sessions between unrelated client tasks.
+
+For seat prices in New Zealand dollars, the guide comparing Claude for business and ChatGPT Business costs in NZ sets out each plan. Add reviewer time to the seat cost when you compare it with the hours a workflow saves.
+
+What should an agency measure?
+
+Measure the work, per workflow, before and after: hours from brief to first draft, how much editors change in each draft, revision rounds with the client, how often drafts fail a review gate, and cost per deliverable including reviewer time. Record a baseline for a month first, or the comparison will rest on memory.
+
+MeasureWhat it tells youWhere to get it
+
+Hours from brief to first draftWhether the workflow saves timeTime tracking, or timestamps on the files
+
+Editor changes per draftWhether the brief and voice rules are good enoughGit history of the draft
+
+Client revision roundsWhether quality reached the clientYour approval tool
+
+Gate failure rateWhich checks catch problems, and which skills need workLogs from the automated checks
+
+Cost per deliverableWhether the economics holdSeat or token spend plus reviewer hours
+
+A falling number of editor changes is usually the earliest sign that a client brief is working.
+
+When should you bring in a Claude Code consultant?
+
+Bring in a Claude Code consultant when the first workflows run but the setup starts to strain: instruction files that contradict each other, connectors that need write access, several staff who need one shared skills library, or client contracts that require a documented data setup. Before that point, building the first two workflows yourselves teaches the most.
+
+A good consultant builds on your accounts, writes everything down, and leaves your team able to run and change the setup without them. Ask the same questions you would ask an AI agent developer: show me it running, show me the tests, who owns the files, and what does the handover include. The public skill library is a fair way to judge anyone's method before a call, including mine.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For agencies, the Claude Code consultant service sets up lane files, a skills library, connectors, review gates and one workspace per client, on your accounts.
+
+Each build starts with a written scope and is priced per project, and your team owns every file at the end. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
+
+The short version
+
+Write a brief for each client, then build research, drafts, audits and reporting in that order, one workflow at a time. Keep each client in its own folder and repository with its own connectors, on a commercial plan, and put a person at every gate before work reaches the client or the public.
+
+Measure hours, edits and revision rounds from a baseline, and bring in help when the setup outgrows the people running it.
+
+If you are setting this up for an agency, talk to Amber.
+
+Q: What is Claude Code used for in a marketing agency?
+A: Agencies use Claude Code for repeatable client work: turning discovery notes into a client brief, building research packs, drafting content against the brief, auditing sites for search and AI answers, and writing the monthly report. The agent does the research and the first draft. A person on the agency team reviews each piece before the client sees it, and the client approves anything that is published or sent.
+Q: Is Claude Code safe to use with client data?
+A: It can be, with the right plan and setup. Anthropic's documentation says it does not train generative models on code or prompts sent to Claude Code under commercial terms, which cover Team, Enterprise and API use. Keep each client in a separate folder with its own connectors, deny access to sensitive files, and run a privacy impact assessment before client personal information goes near any AI tool.
+Q: Do agency staff need to code to use Claude Code?
+A: Most of the setup is plain English: instruction files, client briefs and skill files that describe a procedure step by step. Staff need to be comfortable working in folders and reading what the agent changed. Code matters later, for reporting pipelines, rendering graphics or automated checks, and Claude Code can write much of it, but someone should be able to read it.
+Q: How much does Claude Code cost for an agency?
+A: On Claude Team and Enterprise plans, Claude Code usage draws from each member's seat allowance, which is shared with Claude chat. On the API it is billed per token. Anthropic's documentation reports enterprise software teams averaging about US$150 to 250 per developer per month. Marketing use differs, so run a small pilot and measure before rolling it out to every account.
+Q: What are Claude Code skills for marketing?
+A: A skill is a folder with a SKILL.md file that describes a procedure, such as writing a brief, auditing a page for AI answers or building a monthly report. Claude Code uses a skill when its description matches the task, or when you call it by name. Project skills can be committed to git, so everyone in the agency runs the same version of each procedure.
+Q: When should an agency bring in a Claude Code consultant?
+A: Bring one in when the first workflows run but the setup is starting to strain: instruction files that contradict each other, connectors that need write access, several staff who need one shared skills library, or client contracts that require a documented data setup. A good consultant builds on your own accounts, documents everything and leaves your team able to run and change it.
+
+## AI consultant rates in New Zealand and Australia (2026): hourly, daily and project pricing.
+URL: https://www.flowai.co.nz/blog/ai-consultant-rates-nz-australia
+Author: Amber Lan, Flow AI
+Updated: 2026-10-16
+
+Short answer: AI consultants in Auckland charge about NZD 140 to 190 an hour on contract in 2026, according to Robert Walters, or roughly NZD 1,120 to 1,520 for an eight-hour day. In Australia, Hays puts AI engineer contractors at AUD 900 to 1,200 a day. Published fixed prices for small-business workshops and assessments start at NZD 795 plus GST.
+
+What does an AI consultant cost in New Zealand and Australia?
+
+An AI consultant in Auckland costs about NZD 140 to 190 an hour on contract in 2026, according to Robert Walters, which is roughly NZD 1,120 to 1,520 for an eight-hour day. Australian recruiter data for AI engineers runs AUD 900 to 1,200 a day. Providers that publish small-business packages start at a few hundred dollars for a workshop.
+
+An AI consultant is an outside adviser who helps a business decide where AI fits, chooses the tools, plans or builds the first systems, and trains staff to use them safely.
+
+Few AI consultants publish their rates. This guide uses recruiter salary guides for what the hours are worth and published price pages from named New Zealand and Australian providers, each labelled as one provider's price. It also covers the government programmes that change the net cost in both countries. Every figure links to the page it came from, and the AI marketing cost guide for Australia and New Zealand sets these rates against agencies, freelancers and hires.
+
+How do AI consultants charge: hourly, day rate, fixed project or retainer?
+
+AI consultants charge in four ways. An hourly rate suits short advice and fixes, and a day rate suits workshops and on-site discovery. A fixed project fee suits a defined deliverable such as an assessment or a first build, and a retainer suits ongoing support. Many consultants use more than one.
+
+Pricing modelHow it worksBest forRisk for the buyerWhat to ask for
+
+HourlyBilled for hours workedAdvice, reviews of a plan, small fixesThe total is open-endedA written estimate or a cap
+
+Day rateBilled per day; agree how many hours a day meansWorkshops, on-site discovery, short sprintsDays can stretchThe number of days and what each day produces
+
+Fixed projectOne price for a defined deliverableAssessments, roadmaps, a first automationChanges outside the scope are charged separatelyWhat is out of scope, and the rate for changes
+
+RetainerA monthly fee for a set number of hours or a support levelOngoing advice, monitoring, staff questionsPaying for hours you do not useWhether hours roll over, and the notice period
+
+To compare across models, convert everything to an effective hourly rate: divide a fixed fee or retainer by the hours the consultant expects to spend. Ask for that hour estimate in writing. A NZD 5,000 project that takes 25 hours works out at NZD 200 an hour, and the same fee over 40 hours is NZD 125.
+
+What do the different types of AI consultant do?
+
+AI consultants split into four types by the work they do. Strategy consultants find where AI fits and write the plan. Implementation consultants set up tools and change processes. Automation consultants build workflows and agents, and trainers teach staff to use AI safely. Many small providers do two or more, so ask which work you are paying for.
+
+TypeWhat they deliverUsual pricing modelWhat you should hold at the end
+
+StrategyOpportunity assessment, roadmap, tool choice, AI use policyFixed projectA written plan with owners and dates
+
+ImplementationTool setup, process changes, connections to existing systems, change supportDay rate or fixed projectConfigured tools and documented processes
+
+Automation and agentsWorkflows and AI agents connected to your systemsFixed build fee plus monthly supportWorkflows, prompts and documentation in your own accounts
+
+TrainingWorkshops, playbooks, prompt libraries, follow-up supportDay rate or per sessionTrained staff and reference material
+
+The split shows up in recruiter data too. Robert Walters lists an AI consultant and an AI engineer as separate roles in Auckland, with the consultant's contract rate a little higher. If most of the work is building, the guide to AI agent development costs in New Zealand breaks a build into people time, model usage, platform fees and upkeep. The guide to AI agencies and AI consultants in NZ covers when an agency suits better than a consultant.
+
+What do AI consultants charge in New Zealand?
+
+In Auckland, Robert Walters' 2026 salary guide lists AI consultant contract rates of NZD 140 to 190 an hour, averaging NZD 165, and permanent AI consultants at NZD 140,000 to 180,000 a year. Published small-business prices are rarer: one Auckland provider lists a two to four hour AI workshop at NZD 795 plus GST.
+
+Robert Walters' 2026 Salary Guide lists Auckland AI consultants at NZD 140 to 190 an hour on contract, with the average easing from NZD 175 in 2025 to NZD 165 in 2026, and AI engineers at NZD 130 to 180 an hour. For comparison, the same guide lists Auckland business analysts at NZD 100 to 120 an hour and project managers at NZD 120 to 130. At eight hours a day, the AI consultant range is about NZD 1,120 to 1,520 a day. The guide draws on more than 5,500 survey responses and over 100,000 advertised roles across Australia and New Zealand.
+
+Those are rates for contractors placed by a recruiter, mostly into larger organisations. Independent consultants who sell to small businesses set their own prices, and most quote after a call. A few publish them. The Marketing Guy, based in Takapuna, lists an in-person AI Opportunity Workshop of two to four hours at NZD 795 plus GST, with its follow-on programme priced on application. EZ-AI, an Auckland provider, lists automation builds at NZD 500 to 5,000 plus GST and AI assistants and agents at NZD 3,000 to 12,000 plus GST, with small jobs billed hourly at a rate agreed upfront. Each of these is one provider's published price.
+
+A permanent hire is the other route. At NZD 140,000 to 180,000 a year for an AI consultant in Auckland, plus employer KiwiSaver, which Inland Revenue confirms rose to a default 3.5% on 1 April 2026, it makes sense for a business with a year of AI work queued up. For most small businesses, a defined project is the sensible first step.
+
+What do AI consultants charge in Australia?
+
+Australian recruiter data puts AI engineer contractors at AUD 900 to 1,200 a day, according to Hays, and permanent AI engineers at AUD 145,000 to 200,000 or more. Published small-business prices include a AUD 990 plus GST opportunity assessment in Sydney and half-day workshops from AUD 3,500. Free government-funded support is also available through AI Adopt Centres.
+
+Hays' April 2026 release puts Australian AI engineers at AUD 900 to 1,200 a day on contract and AUD 145,000 to 200,000 or more permanent, drawing on its Tech Talent Explorer research updated in December 2025. Robert Walters' 2026 guide lists Queensland AI engineer contracts at AUD 90 to 110 an hour and permanent New South Wales AI engineers at AUD 150,000 to 170,000 or more, and its New South Wales tables exclude superannuation. At the Reserve Bank of New Zealand's 15 October 2026 rate of AUD 0.81 per NZD, Hays' day range is about NZD 1,120 to 1,490, close to the Auckland AI consultant range.
+
+Some Australian providers publish small-business packages on their own pages:
+
+Complete AI in Sydney lists an AI Opportunity Assessment at AUD 990 plus GST, a 30-day AI Kickstart at AUD 5,000 plus GST and a four-hour on-site training session for up to 15 people at AUD 4,900 plus GST.
+
+Prompted.au in Byron Bay lists a two-week AI Opportunity Audit from AUD 4,950 plus GST and half-day workshops from AUD 3,500, with automation work scoped per build.
+
+Each is one provider's published price, useful as a reference point. Before paying for a first assessment, check the free option. The National AI Centre said in August 2026 that AI Adopt Centres offer free support to eligible Australian organisations, including one-on-one consultations through SMEC AI for businesses in all industries.
+
+What does an AI consultant cost for a small business?
+
+For a 5 to 50 person business, a sensible first engagement is a fixed-price assessment or workshop, followed by one implementation project. Published ANZ prices for that first step run from NZD 795 to about AUD 5,000 plus GST. In New Zealand, the AI Advisory Pilot can co-fund up to half the cost through an approved provider.
+
+The business.govt.nz page says the AI Advisory Pilot covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and up to NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, open until 30 June 2027. A roadmap costing NZD 5,000 could therefore cost the business NZD 2,500 if the application succeeds and the provider is one the pilot accepts. The same page says the pilot does not fund work completed before funding approval. The guide to New Zealand's AI Advisory Pilot covers eligibility, exclusions and how to apply through a Regional Business Partner Network growth advisor. Flow AI is not an approved provider for the pilot, so its work cannot be funded through it.
+
+A simple budget sequence for a small business:
+
+Pick one process that wastes the most hours each week, and write down how it runs today.
+
+Buy a fixed-price assessment or workshop focused on that process, and check whether a grant or free centre can cover it.
+
+Fund one implementation project with a written scope, a measurable outcome and accounts in your name.
+
+Add training once the first change is live, so staff learn on a system they already use.
+
+Good consulting output is concrete: a short written plan with owners and dates, a list of approved tools, a privacy check, and one working change. If the work touches customer data, New Zealand's Privacy Commissioner recommends a privacy impact assessment before you start using AI tools, updated regularly, and a consultant should help you write it.
+
+How do you compare AI consultant quotes?
+
+Compare AI consultant quotes on the effective hourly rate, the deliverables you will hold at the end, who does the work and the GST basis. Convert every fixed fee to hours, list what each quote leaves out, and add GST to any plus-GST figure if your business is not registered: 15% in New Zealand, 10% in Australia.
+
+Example quote (invented numbers)Total (excl. GST)Hours estimatedEffective hourly rateWhat you hold at the end
+
+Consultant A: fixed-price assessmentNZD 4,00020NZD 200Written roadmap and tool list
+
+Consultant B: three days at NZD 1,300NZD 3,90024About NZD 163Workshop, roadmap and one automation set up
+
+Consultant C: three-month advisory retainer at NZD 1,500NZD 4,50030NZD 150Monthly advice calls, no build
+
+The numbers are made up to show the method. Consultant C has the lowest hourly rate and leaves nothing working. Consultant B costs less in total than C and leaves a working automation, which makes it the stronger first buy here. The GST rates come from Inland Revenue, which states GST is charged at 15%, and the ATO, which sets GST at 10% with registration required from AUD 75,000 of GST turnover.
+
+What should you ask an AI consultant before you sign?
+
+Ask what you will hold at the end, who does the work, how hours and changes are billed, how customer data is handled and what working example you can see. A consultant who builds lasting capability answers these in writing within a week. Vague answers on ownership or data are the clearest reason to keep looking.
+
+What exactly will I have at the end, and in whose accounts? Plans, workflows, prompts and documentation should sit in your business's name.
+
+Who does the work? Ask whether any part is subcontracted, and where those people are based.
+
+How many hours does this quote assume? Then ask for the rate for changes outside the scope.
+
+Which AI tools will touch customer data? Ask where each one stores it and whether the consultant will help with a privacy impact assessment.
+
+Can I see a working example? A live or recorded run, with the human in the loop step visible, says more than a slide deck.
+
+Are you an approved AI Advisory Pilot provider? In Australia, ask whether an AI Adopt Centre could cover the first step for free.
+
+Is the price plus GST? Get it in writing so you compare like with like.
+
+Red flags include guaranteed savings or revenue, no written scope, a long retainer before you have seen any deliverable, and results quoted with no client you can contact. The guide to choosing an AI marketing provider has a longer question list.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI is not an approved AI Advisory Pilot provider, so the pilot cannot co-fund its work.
+
+Teams contract a build, which starts with a written scope and is priced per project. The AI automation consultant page explains what gets automated first, and the free agent templates show the kind of system a build leaves behind. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through the hiring page.
+
+The short version
+
+AI consultants in Auckland charge about NZD 140 to 190 an hour on contract, or about NZD 1,120 to 1,520 a day, by Robert Walters' 2026 figures. Australian AI engineer contractors run AUD 900 to 1,200 a day by Hays' data. Published small-business packages in both countries start from a few hundred dollars for a workshop.
+
+Convert every quote to an effective hourly rate, check what you will hold at the end, and look at the AI Advisory Pilot in New Zealand or an AI Adopt Centre in Australia before you pay full price for a first assessment.
+
+To scope a first automation with a written price, talk to Amber.
+
+Q: What is the hourly rate for an AI consultant in New Zealand?
+A: Robert Walters' 2026 salary guide lists AI consultants on contract in Auckland at NZD 140 to 190 an hour, with an average of NZD 165, down from an average of NZD 175 in 2025. Those are recruiter-placed contract rates. Independent consultants selling to small businesses set their own rates, and few publish them, so ask each one for an hourly rate and an hour estimate in writing.
+Q: How much does an AI consultant cost in Australia?
+A: Hays' April 2026 data puts Australian AI engineer contractors at AUD 900 to 1,200 a day, and Robert Walters lists Queensland AI engineers at AUD 90 to 110 an hour. Some providers publish small-business packages: Complete AI in Sydney lists an AI Opportunity Assessment at AUD 990 plus GST. Check the AI Adopt Centres first, because the National AI Centre says they offer free support to eligible organisations.
+Q: Is a day rate or a fixed price better for AI consulting?
+A: A fixed price works better when the deliverable can be written down in advance, such as an assessment, a roadmap or one automation, because you know the total before you start. A day rate suits discovery workshops and work whose scope only becomes clear on site. In both cases ask for the hours assumed, so you can compare quotes on an effective hourly rate.
+Q: What does an AI implementation consultant cost?
+A: Implementation is mostly people time, so it follows contract rates: Robert Walters lists Auckland AI consultants at NZD 140 to 190 an hour and AI engineers at NZD 130 to 180 in 2026. One Auckland provider, EZ-AI, publishes automation builds at NZD 500 to 5,000 plus GST and AI assistants or agents at NZD 3,000 to 12,000 plus GST. Software subscriptions and upkeep are extra.
+Q: Can a government grant pay for an AI consultant in New Zealand?
+A: Yes, through the AI Advisory Pilot, delivered by the Regional Business Partner Network. It covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, until 30 June 2027. Ask your growth advisor which providers are approved for the pilot before you commit. Flow AI is not an approved provider.
+Q: What should an AI consultant deliver for a small business?
+A: A written plan that names the processes to change first, who owns each step and when it starts, plus a list of approved tools and a privacy check for any tool that touches customer data. The best engagements also leave at least one working change your staff already use, built in your accounts and documented so someone else can maintain it.
+
+## How much does AI agent development cost in New Zealand? (2026, NZD)
+URL: https://www.flowai.co.nz/blog/ai-agent-development-cost-nz
+Author: Amber Lan, Flow AI
+Updated: 2026-10-16
+
+Short answer: Most of an AI agent's cost is people time. At the NZD 130 to 180 an hour Robert Walters lists for Auckland AI engineer contractors in 2026, a one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. Model and platform fees for a small agent can stay under NZD 100 a month.
+
+What does AI agent development cost in New Zealand in 2026?
+
+AI agent development in New Zealand costs the build hours plus a smaller monthly bill to run the agent. Auckland AI engineer contractors charge NZD 130 to 180 an hour in 2026, so a one-workflow agent that takes three to five days lands at about NZD 3,100 to 7,200 before GST, with running costs on top.
+
+AI agent development is the work of building software that uses a language model to plan and carry out a multi-step task across your systems, with a person approving the steps that matter.
+
+A single total hides what you are paying for, so this guide builds the cost from four parts you can check, each linked to its source. The worked example near the end is an illustration built from those parts: use it to check a quote. The glossary entry on agentic AI and the guide to AI marketing agents explain what an agent does.
+
+What are the four parts of an AI agent's cost?
+
+An AI agent's cost has four parts: the people time to scope, build and test it, the language model usage it consumes on every run, the automation platform or server it runs on, and the hours each month to monitor, fix and change it. People time is usually the largest part, at the build stage and afterwards.
+
+PartWhat it pays forHow it is billedWhere the price comes from
+
+People timeScoping, building, testing, documentation, handoverHourly or day rate, or a fixed project feeRecruiter salary guides; provider quotes
+
+Model usageThe model reading and writing on each runPer million tokens, in US dollarsAnthropic and OpenAI API price pages
+
+PlatformThe workflow tool or server the agent runs onMonthly or annual subscription, priced by runs, tasks or creditsn8n, Zapier and Make price pages
+
+UpkeepMonitoring, fixes, small changesHours each month, or a support feeContract rates; provider quotes
+
+Software you already pay for, such as your CRM, sits outside these four.
+
+What do AI developers and AI engineers charge in New Zealand?
+
+New Zealand AI engineers on contract charge about NZD 130 to 180 an hour in Auckland, according to Robert Walters' 2026 salary guide, and general developers NZD 100 to 145. A permanent AI engineer in Auckland earns NZD 130,000 to 150,000 a year before KiwiSaver. Providers who sell a finished build set their own rates.
+
+Robert Walters' 2026 Salary Guide lists Auckland contract rates of NZD 130 to 180 an hour for an AI engineer (average NZD 155), NZD 100 to 145 for a developer and NZD 125 to 155 for an integration engineer. The guide draws on more than 5,500 survey responses and over 100,000 advertised roles. These are rates for recruiter-placed contractors. An agency or independent builder sets its own price, so use the range to judge how many hours a quote implies.
+
+To hire instead, Robert Walters lists permanent Auckland AI engineers at NZD 130,000 to 150,000 in 2026, and SEEK's October 2026 data puts the average advertised salary for a software developer in information and communication technology at NZD 117,451. An employer adds KiwiSaver, which Inland Revenue confirms rose to a default rate of 3.5% on 1 April 2026. Hiring suits a business that will build agents all year; for one or two, contracted hours cost far less.
+
+Australian contract figures sit in a similar range once converted. Hays' April 2026 release puts Australian AI engineers at AUD 145,000 to 200,000 or more a year permanent and AUD 900 to 1,200 a day on contract, from its Tech Talent Explorer research updated in December 2025. SEEK's October 2026 data puts the average advertised software developer salary in Australian ICT at AUD 131,242. The guide to AI consultant rates covers advisory work.
+
+Few New Zealand builders publish prices. One that does is EZ-AI, an Auckland provider whose pricing page lists AI assistants and agents at NZD 3,000 to 12,000 plus GST over three to six weeks, and hosting, monitoring and support from NZD 99 a month. That is one provider's published price.
+
+What do model usage and automation platforms cost?
+
+Model usage is billed per million tokens in US dollars and is often the smallest line on the bill. Anthropic lists Claude Sonnet 5.5 at USD 2 per million input tokens and USD 10 per million output tokens. Automation platforms charge a monthly fee by runs or tasks, from about NZD 40 a month for n8n's entry cloud plan.
+
+A token is a small chunk of text. Each run, you pay for the tokens the agent reads and writes. As of 16 October 2026, Anthropic's pricing page, which states all prices in USD, lists Claude Haiku 5.5 at USD 0.10 in and USD 0.50 out per million tokens, Sonnet 5.5 at USD 2 and 10, and Opus 5.5 at USD 4 and 20, with a 50% discount for batch processing. OpenAI's API pricing page lists gpt-6.1-sol at $2 per million input tokens and $10 per million output tokens, and gpt-6-luna at $0.10 and $0.50.
+
+An agent that runs 1,000 times a month, reading 4,000 tokens and writing 800 each time, costs about USD 16 a month on Sonnet 5.5, or under USD 1 on Haiku 5.5. At the Reserve Bank of New Zealand's 15 October 2026 rates of USD 0.56, EUR 0.50 and AUD 0.81 per NZD, USD 16 is about NZD 28.
+
+Platform and planPublished priceIncluded each month
+
+n8n Cloud StarterEUR 20 a month, billed annually (about NZD 40)2,500 workflow executions
+
+n8n Cloud ProEUR 50 a month, billed annually (about NZD 100)10,000 executions
+
+n8n Cloud BusinessEUR 667 a month, billed annually (about NZD 1,330)40,000 executions
+
+n8n Community EditionFree edition, self-hosted; you pay for the serverWhatever your server handles
+
+Zapier ProfessionalUSD 19.99 a month billed annually, or USD 29.99 monthly750 tasks
+
+Zapier ProfessionalUSD 49 a month billed annually, or USD 73.50 monthly (about NZD 87 to 131)2,000 tasks
+
+Make FreeNo charge1,000 credits
+
+The units differ. n8n's pricing page counts an execution as one run of a whole workflow, however many steps it has. Zapier counts a task each time it completes a unit of work, sets prices in USD and converts at the exchange rate when you pay. Make bills in credits, where most actions use one credit, and its Free plan includes 1,000 credits a month. A ten-step agent that runs 1,000 times is 1,000 n8n executions and up to about 10,000 Zapier tasks or Make credits. Make's paid prices did not display when checked. n8n's documentation says you can stay on the free Community edition indefinitely, swapping a subscription for server costs and upkeep.
+
+What might a small, medium and large AI agent cost? A worked example
+
+Built from the published components above, a one-workflow agent works out at about NZD 3,100 to 7,200 to build and NZD 330 to 790 a month to run. A CRM-connected agent lands near NZD 10,400 to 21,600 and NZD 820 to 1,740 a month. The day counts and volumes are assumptions.
+
+Illustration onlyBuild days (assumed)Build costModel usage a monthPlatform a monthUpkeep a month (assumed hours)Running cost a month
+
+Small: drafts enquiry replies for approval3 to 5NZD 3,120 to 7,200About NZD 30 (USD 16)n8n Starter, about NZD 402 to 4 hours, NZD 260 to 720About NZD 330 to 790
+
+Medium: qualifies leads against the CRM and drafts follow-ups10 to 15NZD 10,400 to 21,600About NZD 200 (USD 110)n8n Pro, about NZD 1004 to 8 hours, NZD 520 to 1,440About NZD 820 to 1,740
+
+Large: several connected agents with reporting20 to 30NZD 20,800 to 43,200About NZD 1,110 (USD 620)n8n Business, about NZD 1,3308 to 16 hours, NZD 1,040 to 2,880About NZD 3,480 to 5,320
+
+Method: build and upkeep hours at eight hours a day and Robert Walters' Auckland AI engineer range of NZD 130 to 180 an hour. Model usage is Sonnet 5.5 at list price for 1,000, 5,000 and 20,000 runs a month (4,000, 6,000 and 8,000 tokens in; 800, 1,000 and 1,500 out). Platforms are n8n's annual-billed cloud plans. All figures use the Reserve Bank's 15 October 2026 rates and exclude GST.
+
+Build hours dominate the first-year cost at every size, and upkeep dominates the monthly bill for small and medium agents. A cheaper model saves tens of dollars a month; a clear scope can save days. The guide to an AI marketing scope of work lists what a good scope covers.
+
+What pushes the cost of an AI agent up or down?
+
+The number of systems the agent connects to, the state of your data and how much of its output a person must check drive most of the cost. An agent that reads one inbox and drafts replies for approval is quick to build. One that writes to your CRM, accounting software and calendar needs far more testing.
+
+Integrations. Each connected system adds build and test time, and can change later.
+
+Drafting versus acting. An agent that drafts for a person to approve is cheaper to build safely than one that sends, books or updates records on its own.
+
+Data quality. Duplicates and missing records add cleaning work.
+
+The review step. A human in the loop who approves anything sent or spent adds a little build time and catches errors before customers see them.
+
+Privacy work. New Zealand's Privacy Commissioner recommends a privacy impact assessment before you start using AI tools, updated regularly.
+
+Model choice. On Anthropic's price list, Opus 5.5 costs 40 times as much per input token as Haiku 5.5, so match the model to the task.
+
+A working manual process. A task your team already does the same way each time is quicker to copy.
+
+Setup fee or monthly fee: what should each cover, and what should you own?
+
+A setup fee should cover scoping, the build, testing, documentation and a handover session. A monthly fee should cover monitoring, fixes when a connected tool changes and a set number of hours for changes. At the end you should own the accounts, workflows, prompts, documentation and data, with every subscription billed in your business's name.
+
+Ask how many hours the monthly fee includes, and put model and platform subscriptions on your own card so you see usage at cost. At handover you should hold:
+
+The platform account (n8n, Zapier or Make) and the model API account, both in your business's name
+
+An export of every workflow, plus the prompts and instructions the agent follows
+
+Written documentation of what the agent reads, what it writes and who to call when it breaks
+
+The test cases, so a different builder can make changes safely
+
+Your data, exportable at any time
+
+EZ-AI's pricing page says there is no lock-in and that the code and the cloud account belong to the client. Ask for the same clause in your contract. For agents inside marketing workflows, see the glossary entry on marketing automation and the guide to AI marketing automation for small business.
+
+What are the red flags in an AI agent quote?
+
+The clearest red flags are a single lump sum with no breakdown, model usage bundled into a flat fee with no usage report, accounts set up in the provider's name, and no review step anywhere in the design. Each one hides cost or risk.
+
+One total with no split between build hours, platform, model usage and upkeep
+
+Model or platform costs marked up, or bundled so you cannot see usage
+
+No testing plan, and no step where a person approves outputs that reach customers
+
+Claims that the agent will run fully on its own from day one
+
+A long minimum term before you have seen the agent run on your own data
+
+Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls, and estimates only about 130 of the thousands of agentic AI vendors are real. A written scope with a measurable outcome answers the value question, and visible costs plus a review step answer the other two. The guide to AI agencies and AI consultants in NZ has more vetting questions.
+
+How does GST apply to AI agent development?
+
+A New Zealand builder registered for GST adds 15% to its quote. For overseas software, Inland Revenue's rules mean a supplier treats you as unregistered until you state you are GST registered or give your GST number or NZBN, so add it to every account. Businesses that are not registered should add 15% to any plus-GST price before comparing.
+
+Inland Revenue's GST page states that GST is charged at a rate of 15%. IRD's guidance for overseas businesses, updated 12 September 2026, says a supplier of remote services need not register for GST if it only sells to New Zealand businesses that are already GST registered, and must treat customers as unregistered unless they state they are registered or provide a GST number or NZBN. Enter your GST number in each account's billing settings, and confirm the treatment with your accountant.
+
+In Australia, the ATO's How GST works page, updated 14 September 2026, sets GST at 10% and requires registration once GST turnover reaches AUD 75,000.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every agent runs on your own accounts.
+
+Teams contract a build, which starts with a written scope and is priced per project. The AI agent development page lists the agents Flow AI builds, and the sprints page shows what a build covers. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through the hiring page.
+
+The short version
+
+An AI agent's cost is mostly people time. At Auckland contract rates of NZD 130 to 180 an hour, a one-workflow agent costs about NZD 3,100 to 7,200 to build, and a CRM-connected agent about NZD 10,400 to 21,600. Model and platform fees run about NZD 70 to 300 a month; upkeep hours cost more.
+
+Ask for a quote split into the four parts, keep every account in your name, and add GST where it applies. The AI marketing cost guide for Australia and New Zealand compares agents with agencies, freelancers and hires, and the marketing agency cost guide covers retainers.
+
+To scope an agent against these numbers, talk to Amber.
+
+Q: How much does it cost to build an AI agent?
+A: Most of the cost is the builder's time. Robert Walters' 2026 salary guide lists Auckland AI engineer contractors at NZD 130 to 180 an hour, so a simple one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. An agent connected to several systems can take two to three weeks. Running costs then add model usage, a platform subscription and a few hours of upkeep each month.
+Q: How much does it cost to hire an AI developer in New Zealand?
+A: On contract, Robert Walters' 2026 salary guide lists Auckland AI engineers at NZD 130 to 180 an hour and developers at NZD 100 to 145. As a permanent hire, an Auckland AI engineer earns NZD 130,000 to 150,000 a year before employer KiwiSaver, which rose to 3.5% in April 2026. SEEK's October 2026 average for an advertised software developer role in ICT was NZD 117,451.
+Q: What does it cost each month to run an AI agent?
+A: Running costs have three parts: model usage, the automation platform and upkeep hours. A small agent running 1,000 times a month on Claude Sonnet 5.5 uses about USD 16 of model time, and n8n's Starter cloud plan is EUR 20 a month billed annually. In this guide's worked example, upkeep is the largest line: two to four hours a month at contract rates adds NZD 260 to 720.
+Q: Is n8n, Zapier or Make cheaper for an AI agent?
+A: It depends on how many steps your agent has. n8n's cloud plans count one execution per workflow run regardless of steps, from EUR 20 a month billed annually for 2,500 executions. Zapier counts a task for each completed action, from USD 19.99 a month billed annually for 750 tasks. Make bills in credits, with most actions using one credit. For multi-step agents that run often, per-run pricing tends to cost less.
+Q: Do I pay GST on AI software bought from overseas?
+A: If your business is GST registered, Inland Revenue's guidance means an overseas supplier of remote services treats you as unregistered unless you say you are registered or give your GST number or NZBN, so add your GST number to each platform's billing settings. A New Zealand builder registered for GST adds 15% to its quote. Businesses that are not registered should add 15% to any plus-GST price.
+Q: Should I hire an AI developer or contract an AI agent build?
+A: Contract a build when you need one or two agents and someone in your team can own them afterwards. Hire when you plan to build and change agents every month, because a permanent AI engineer in Auckland costs NZD 130,000 to 150,000 a year before KiwiSaver by Robert Walters' 2026 figures. Either way, insist on documentation and accounts in your name so the work outlives the person who built it.
+
 ## What do AI marketing services include? A buyer's checklist.
 URL: https://www.flowai.co.nz/blog/what-do-ai-marketing-services-include
 Author: Amber Lan, Flow AI

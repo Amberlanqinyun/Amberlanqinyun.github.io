@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>n8n、Zapier、Make 与 Claude Code 对比：小企业怎么选 | Flow AI</title>
+<meta name="description" content="为新西兰和澳大利亚小企业对比 n8n、Zapier、Make 和 Claude Code：官方页面上的价格、数据存放位置、日常维护，以及各自适合谁。">
+<meta name="author" content="Amber Lan">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/blog/n8n-vs-zapier-vs-make-vs-claude-code">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/blog/n8n-vs-zapier-vs-make-vs-claude-code">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="n8n、Zapier、Make 与 Claude Code 对比：小企业怎么选 | Flow AI">
+<meta property="og:description" content="为新西兰和澳大利亚小企业对比 n8n、Zapier、Make 和 Claude Code：官方页面上的价格、数据存放位置、日常维护，以及各自适合谁。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Flow AI">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-10-16T00:00:00+13:00">
+<meta property="article:modified_time" content="2026-10-16T00:00:00+13:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code#article",
+      "headline": "n8n、Zapier、Make 还是 Claude Code：哪个自动化工具适合小企业？",
+      "description": "一份写给新西兰和澳大利亚小企业的对比指南，帮助在 n8n、Zapier、Make 和 Claude Code 之间选择工作流自动化工具。计费模式和入门价格于2026年10月16日在各供应商官方页面核对，内容涵盖每个工具的优势场景、数据存放位置与自托管、一张对比表、按团队类型的选择指引、什么时候该请 n8n、Zapier 或 Make 顾问，以及持续的维护成本。",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "inLanguage": "zh-Hans",
+      "articleSection": "AI 营销智能体",
+      "wordCount": 4735,
+      "timeRequired": "PT13M",
+      "image": "https://www.flowai.co.nz/blog/figures/n8n-vs-zapier-vs-make-vs-claude-code.svg",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#flowai"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/zh/blog/#blog"
+      },
+      "mainEntityOfPage": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".short-answer__text",
+          ".article-hero h1"
+        ]
+      },
+      "keywords": "n8n 和 Zapier 对比, n8n 和 Make 对比, Zapier 和 Make 哪个好, n8n 自动化费用, Zapier 多少钱, 类似 Zapier 的工具, Zapier 替代品, n8n 顾问, Zapier 顾问, Make 自动化专家, AI 工作流自动化, Claude Code 业务自动化, n8n vs zapier, n8n vs make, zapier vs make",
+      "about": {
+        "@id": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code#definedterm"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code#definedterm",
+      "name": "工作流自动化工具（Workflow automation tool）",
+      "description": "工作流自动化工具是这样一种软件：当触发条件出现时，它在你的各个应用之间运行一串固定的步骤，例如把新的表单提交添加到 CRM 并发送回复，这样重复的行政工作就不必由人在系统之间来回复制数据。",
+      "url": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code",
+      "inDefinedTermSet": {
+        "@id": "https://www.flowai.co.nz/zh/glossary/#terms"
+      },
+      "alternateName": [
+        "Workflow automation tool",
+        "automation platform",
+        "no-code automation tool",
+        "自动化平台",
+        "无代码自动化工具"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "n8n 比 Zapier 便宜吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "用量较大时往往是。n8n 按工作流执行次数计费，一次完整运行算一次，不论包含多少步骤，它的 Community 版可以免费自托管供内部使用。Zapier 按任务（task）计费，每个步骤和每次连接器调用都会消耗任务。如果只是几个简单的两步自动化，Zapier 的免费和入门套餐在花费和设置时间上都可能更省。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "用 Zapier 要花多少钱？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026年10月16日，Zapier 价格页列出：免费套餐每月 100 个任务；Professional 按年付费每月 US$19.99 起，按月付费 US$29.99；Team 按年付费每月 US$69 起，含 2,000 个任务。价格随你选择的每月任务档位上升，Zapier 也支持用 NZD 和 AUD 付款。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "n8n 是开源的吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n8n 把自己的许可称为 fair-code，采用其 Sustainable Use License，属于源代码可见（source-available）。它的文档说明，如果工作流只由你或你所在组织的人创建或修改，就可以免费使用自托管的 Community 版。把 n8n 作为服务托管给客户、让他们构建自己的工作流，则需要商业许可。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "有哪些类似 Zapier 的工具？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "最接近的替代品是 Make 和 n8n。Make 按每个操作消耗的额度（credit）计费，提供可视化的场景编辑器；n8n 按工作流运行次数计费，可以自托管。Claude Code 这类智能体工具属于另一个类别：它们根据指令编写并执行工作，更适合需要判断而不是固定规则的任务。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "小企业可以用 Claude Code 替代 Zapier 吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "部分工作可以。Claude Code 可以通过 MCP 连接工具，在云端按计划运行，处理需要判断的工作，比如根据多个来源起草一份报告。至于即时的应用间触发，比如新的表单提交直接进入 CRM，工作流工具通常更容易运行，也更容易交接。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么时候该请 n8n、Zapier 或 Make 顾问？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当一项自动化涉及客户数据或资金，或者必须在多个系统之间持续运行而无需你照看，团队里又没人有时间学这个工具时，就请一位顾问。要求对方提供书面范围说明、登记在你名下的账户、文档和错误提醒。三家供应商都公开了合作伙伴名录，可以从那里开始找。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Flow AI",
+          "item": "https://www.flowai.co.nz/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "指南",
+          "item": "https://www.flowai.co.nz/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI 营销智能体",
+          "item": "https://www.flowai.co.nz/zh/blog/?topic=agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "n8n、Zapier、Make 还是 Claude Code：哪个自动化工具适合小企业？",
+          "item": "https://www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=6">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#article">跳到指南正文</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/zh/" aria-label="Flow AI 首页">
+      <img class="site-header__brand-mark" src="/assets/flowai-mark.svg" width="24" height="24" alt="" aria-hidden="true">
+      <span class="site-header__brand-text">Flow <span class="wm-chip">AI</span></span>
+    </a>
+    <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/ai-marketing-services/">服务</a>
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/blog/" aria-current="page">指南</a>
+      <a href="/zh/about">关于我</a>
+      <span class="lang-switch" role="group" aria-label="语言"><a href="/blog/n8n-vs-zapier-vs-make-vs-claude-code" lang="en" hreflang="en" data-lang="en">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh" aria-current="true">中文</a></span>
+      <a class="site-header__cta" href="/zh/contact">与我合作</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero article-hero centered" aria-labelledby="article-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow"><a href="/zh/blog/">指南</a><span aria-hidden="true"> / </span><a href="/zh/blog/?topic=agent">AI 营销智能体</a></p>
+        <h1 id="article-title">n8n、Zapier、Make 还是 Claude Code：哪个自动化工具适合小企业？</h1>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">简短回答</p>
+          <p class="short-answer__text">如果不懂技术的员工需要快速搭好简单的应用间自动化，选 Zapier。如果想用更低的入门价格做可视化的多步骤场景，选 Make。如果有懂技术的人想自托管，或者需要按运行次数计费来处理大量任务，选 n8n。如果工作需要判断，比如起草每周报告，而且有人习惯和文件打交道，选 Claude Code。</p>
+        </aside>
+        <p class="lead">Zapier、Make 和 n8n 会在你的某个应用里发生特定事件时，运行固定的工作流。Claude Code 是一个智能体，自己编写并执行工作。<b>这份指南比较每个工具怎么收费、你的数据存放在哪里，再把每个工具匹配给最能用好它的那类团队。</b></p>
+        <p class="byline small"><span><a href="/zh/about">Amber Lan</a>，AI 营销工程师</span><span aria-hidden="true">·</span><span>更新于 <time datetime="2026-10-16">2026年10月16日</time></span><span aria-hidden="true">·</span><span>13 分钟阅读</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body" id="article" aria-label="指南正文">
+    <div class="wrap article-grid">
+      <nav class="toc" aria-label="目录">
+        <details class="toc__box" open>
+          <summary class="toc__label">目录 <span class="toc__left" data-minutes-left></span></summary>
+          <div class="toc__progress" aria-hidden="true"><span data-progress></span></div>
+          <ol class="toc__list">
+<li><a href="#what-are-n8n-zapier-make-and-claude-code" data-toc="what-are-n8n-zapier-make-and-claude-code"><span class="toc-num">01</span><span>n8n、Zapier、Make 和 Claude Code 分别是什么？</span></a></li>
+<li><a href="#how-does-each-tool-charge" data-toc="how-does-each-tool-charge"><span class="toc-num">02</span><span>每个工具怎么收费？</span></a></li>
+<li><a href="#what-does-each-tool-cost-for-a-small-business" data-toc="what-does-each-tool-cost-for-a-small-business"><span class="toc-num">03</span><span>对小企业来说，每个工具要花多少钱？</span></a></li>
+<li><a href="#where-does-each-tool-win" data-toc="where-does-each-tool-win"><span class="toc-num">04</span><span>每个工具的优势在哪里？</span></a></li>
+<li><a href="#where-does-your-data-live-and-can-you-self-host" data-toc="where-does-your-data-live-and-can-you-self-host"><span class="toc-num">05</span><span>你的数据存放在哪里？能自托管吗？</span></a></li>
+<li><a href="#how-do-n8n-zapier-make-and-claude-code-compare" data-toc="how-do-n8n-zapier-make-and-claude-code-compare"><span class="toc-num">06</span><span>n8n、Zapier、Make 和 Claude Code 如何比较？</span></a></li>
+<li><a href="#which-tool-suits-your-team" data-toc="which-tool-suits-your-team"><span class="toc-num">07</span><span>哪个工具适合你的团队？</span></a></li>
+<li><a href="#when-should-you-hire-an-n8n-zapier-or-make-consultant" data-toc="when-should-you-hire-an-n8n-zapier-or-make-consultant"><span class="toc-num">08</span><span>什么时候该请 n8n、Zapier 或 Make 顾问？</span></a></li>
+<li><a href="#what-does-maintenance-cost" data-toc="what-does-maintenance-cost"><span class="toc-num">09</span><span>维护要花多少钱？</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">10</span><span>Flow AI 的角色</span></a></li>
+<li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">11</span><span>简短版本</span></a></li>
+<li><a href="#faq" data-toc="faq"><span class="toc-num">12</span><span>企业主常问的问题</span></a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <div class="article-main">
+        <figure class="article-figure"><img src="/blog/figures/n8n-vs-zapier-vs-make-vs-claude-code.svg" width="960" height="540" alt=""></figure>
+        <article class="prose">
+<h2 id="what-are-n8n-zapier-make-and-claude-code"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">n8n、Zapier、Make 和 Claude Code 分别是什么？</span></h2>
+<p>工作流自动化工具是这样一种软件：当触发条件出现时，它在你的各个应用之间运行一串固定的步骤，比如把新的表单提交送进 CRM。Zapier、Make 和 n8n 都是工作流自动化工具。Claude Code 是一个智能体：你给它指令，它来编写并执行工作。</p>
+<p>三个工作流工具的区别主要在于构建方式和计费方式。Zapier 用逐步搭建的编辑器连接一个非常庞大的应用目录；<a class="go" href="https://zapier.com/pricing" target="_blank" rel="noopener">它的价格页介绍，Zapier MCP 可以把 AI 助手连接到约 9,000 个集成</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。Make 给你一块可视化画布，上面由模块组成的流程称为场景（scenario）。n8n 的编辑器与之类似，可以运行在它的云端或你自己的服务器上，适合想加入代码步骤的技术用户。</p>
+<p>Claude Code 来自另一个方向。<a class="go" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 的文档把 Claude Code 描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成，还说明它可以通过 MCP 连接 Google Drive、Jira 和 Slack 等工具</a><sup class="fn"><a href="#source-2" aria-label="来源 2">2</a></sup>。对营销团队来说，这个代码库可以是一个装着简报、语调规则和脚本的文件夹。<a class="go" href="/zh/blog/what-is-an-ai-marketing-agent">什么是 AI 营销智能体</a>这篇核心指南更深入地解释了智能体和固定自动化的区别。</p>
+
+<h2 id="how-does-each-tool-charge"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">每个工具怎么收费？</span></h2>
+<p>每个工具计算用量的方式不同。Zapier 计任务，每个步骤和每次连接器调用都会消耗任务。Make 计额度，大多数操作消耗一个。n8n 计执行次数，一次完整的工作流运行算一次，不论有多少步骤。Claude Code 随 Claude 订阅提供，消耗该方案的用量上限，超出部分可以按 API 费率额外购买。</p>
+<p>计费单位比标价更重要。以一个每月运行 500 次的十步工作流为例：</p>
+<ul>
+<li><a class="go" href="https://zapier.com/pricing" target="_blank" rel="noopener">Zapier 的价格页说明，Zap 里的每个步骤和每次外部连接器调用都会消耗任务，消耗量因 AI 模型档位、代码运行时和连接器类型而异，一次 Zapier MCP 工具调用消耗两个任务</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。这个工作流每月可能消耗数千个任务。</li>
+<li><a class="go" href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make 的价格页说明，大多数操作消耗一个额度，一个场景单次运行可能消耗两个到数千个额度不等</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>。路由器（router）和错误处理器不消耗额度。</li>
+<li><a class="go" href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n 的价格页把一次执行定义为整个工作流的一次运行，不论步骤数量或数据量多少</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>。这个工作流消耗 500 次执行。</li>
+<li><a class="go" href="https://claude.com/pricing" target="_blank" rel="noopener">Anthropic 的价格页说明，所有付费方案都包含 Claude Code，并与方案中的其他功能共用同样的用量上限</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>。用量大时，可以改用按量付费的 API 额度。</li>
+</ul>
+<p>席位规则也不一样。<a class="go" href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n 表示所有套餐都包含不限数量的用户和工作流</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>。Zapier 把共享 Zap、共享应用连接和 SAML SSO 留给 Team 套餐。Claude 按席位定价。</p>
+
+<h2 id="what-does-each-tool-cost-for-a-small-business"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">对小企业来说，每个工具要花多少钱？</span></h2>
+<p>2026年10月16日核对的入门价格，从免费档到每月约 US$20 不等。Zapier Professional 按年付费 US$19.99 起，Make 的付费套餐 US$9 起，n8n Cloud 按年付费 €20 起，Claude Team 席位按年付费 US$20。大多数价格以美元或欧元计，所以折合成新西兰元的成本随汇率浮动。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>工具</th><th>免费选项</th><th>入门付费套餐</th><th>再上一档</th></tr></thead>
+<tbody>
+<tr><td>Zapier</td><td>每月 100 个任务，两步 Zap</td><td>Professional 按年付费每月 US$19.99 起（按月付费 US$29.99），750 个任务</td><td>Team 按年付费每月 US$69 起，含 2,000 个任务（按月付费 US$103.50）</td></tr>
+<tr><td>Make</td><td>每月 1,000 个额度</td><td>Core 每月 $9 起，10,000 个额度起</td><td>Pro $16 起，Teams $29 起，均为 10,000 个额度起</td></tr>
+<tr><td>n8n</td><td>Community 版，自托管</td><td>Starter 按年付费每月 €20，2,500 次执行</td><td>Pro 按年付费每月 €50，10,000 次执行</td></tr>
+<tr><td>Claude Code</td><td>无（需要付费的 Claude 方案）</td><td>Claude Pro，美国定价下按月付费每月 US$20</td><td>Team Standard 席位，按年付费每月 US$20（按月付费 US$25）</td></tr>
+</tbody>
+</table></div>
+<p>来源：<a class="go" href="https://zapier.com/pricing" target="_blank" rel="noopener">Zapier 的价格页列出 Professional 按年付费每月 $19.99 起，含 750 个任务，Team 每月 $69 起，含 2,000 个任务，以美元计价，可选的付款币种包括 NZD 和 AUD</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。<a class="go" href="https://www.make.com/compare/make-vs-zapier" target="_blank" rel="noopener">Make 自己的对比页列出 Core 每月 $9，Pro $16，Team $29，均从 10,000 个额度起</a><sup class="fn"><a href="#source-6" aria-label="来源 6">6</a></sup>；核对时 Make 的价格页没有显示套餐价格，那个页面上也没有说明这些数字是按月还是按年计，请在结账时确认。<a class="go" href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n 的价格页列出 Starter 按年付费每月 €20，Pro 每月 €50，按年付费可省 17%，面向自托管团队的 Business 为每月 €667</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>。<a class="go" href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan" target="_blank" rel="noopener">Anthropic 帮助中心列出 Team Standard 席位按年付费每月 $20，按月付费 $25，为不含税的美国价格</a><sup class="fn"><a href="#source-7" aria-label="来源 7">7</a></sup>。</p>
+<p>适用时加上 GST。关于 5 人、10 人和 20 人的 Claude 或 ChatGPT 工作空间的完整成本，请看<a class="go" href="/zh/blog/claude-vs-chatgpt-business-cost-nz">Claude 和 ChatGPT 商用方案在新西兰团队要花多少钱</a>。</p>
+
+<h2 id="where-does-each-tool-win"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">每个工具的优势在哪里？</span></h2>
+<p>Zapier 的优势是覆盖面广，让不懂技术的员工也能快速上手。Make 的优势在于，以较低的入门价格频繁运行可视化的多分支工作流。n8n 的优势是在大用量时单次运行成本低，而且可以自托管。Claude Code 的优势在于需要判断的工作，比如读取多个来源，起草一份之后由人审核的内容。</p>
+<p>放到实际工作里：</p>
+<ul>
+<li>Zapier 适合这样的办公室经理：希望每条新的网站咨询都进入 CRM 并触发一条回复，一个下午就能设置好。</li>
+<li>Make 适合喜欢在一块画布上看清整个流程的运营人员，可以用路由器把不同的记录送往不同的路径。</li>
+<li>n8n 适合有开发人员或技术型营销人员的企业，工作流需要调用内部系统，或每月运行数千次。</li>
+<li>Claude Code 适合每次都有变化的周期性营销工作：根据多份导出数据撰写每周表现总结，根据简报起草初稿，或者对一份客户名单做调研。</li>
+</ul>
+<p>很多小企业最后会用两个：一个工作流工具负责应用之间的即时触发，一个智能体负责需要阅读和写作的工作。<a class="go" href="/zh/blog/ai-marketing-automation-small-business">小企业 AI 营销自动化</a>指南列出了大多数企业最先该设置的六项自动化，无论由哪个工具来运行。</p>
+
+<h2 id="where-does-your-data-live-and-can-you-self-host"><span class="sec-num" aria-hidden="true">05</span><span class="sec-title">你的数据存放在哪里？能自托管吗？</span></h2>
+<p>只有 n8n 可以完全自托管在你选择的服务器上。Zapier 把数据存放在美国。Make 让你在创建组织时选择美国或欧盟的数据中心。n8n Cloud 把数据存放在德国。Claude Code 处理你电脑上的文件，并把提示词发送给 Anthropic，或你配置的云服务商来处理。</p>
+<p>各供应商自己的页面：<a class="go" href="https://zapier.com/security-compliance" target="_blank" rel="noopener">Zapier 的安全页面说明，Zapier 把数据存放在美国的亚马逊云服务（Amazon Web Services）上</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>。<a class="go" href="https://help.make.com/organizations" target="_blank" rel="noopener">Make 帮助中心说明，每个组织可以选择美国或欧盟的数据中心，组织创建后位置无法更改</a><sup class="fn"><a href="#source-9" aria-label="来源 9">9</a></sup>。<a class="go" href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n 的价格常见问题说明，托管套餐把数据存放在欧盟法兰克福的服务器上，自托管的数据则在你托管 n8n 的地方</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>。</p>
+<p>自托管有条款，也有成本。<a class="go" href="https://docs.n8n.io/n8n-community-license/community-license/license-faq.md" target="_blank" rel="noopener">n8n 的许可常见问题说明，如果工作流只由你或你所在组织的人创建或修改，就可以免费使用 Community 许可，但这一许可不允许把 n8n 作为服务托管给客户来构建工作流</a><sup class="fn"><a href="#source-10" aria-label="来源 10">10</a></sup>。n8n 把这一许可称为 fair-code 和源代码可见（source-available）。<a class="go" href="https://docs.n8n.io/choose-how-to-use-n8n.md" target="_blank" rel="noopener">它的文档还说明，自托管需要技术专长，维护由你自己负责</a><sup class="fn"><a href="#source-11" aria-label="来源 11">11</a></sup>。</p>
+<p>对新西兰企业来说，<a class="go" href="https://www.privacy.org.nz/responsibilities/disclosing-personal-information-outside-new-zealand/" target="_blank" rel="noopener">新西兰隐私专员办公室表示，在大多数情况下，你放到云端的个人信息仍由你负责</a><sup class="fn"><a href="#source-12" aria-label="来源 12">12</a></sup>，无论服务器在哪里。在搭建每个工作流之前，先列出它会涉及的客户字段。</p>
+
+<h2 id="how-do-n8n-zapier-make-and-claude-code-compare"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">n8n、Zapier、Make 和 Claude Code 如何比较？</span></h2>
+<p>这四个工具从最易上手排到最灵活。Zapier 对不懂技术的人来说最快，Make 增加了可视化控制，n8n 增加了自托管和代码，Claude Code 则用一个按书面指令工作的智能体取代固定规则。下表涵盖了对 5 到 50 人企业重要的方面。</p>
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>Zapier</th><th>Make</th><th>n8n</th><th>Claude Code</th></tr></thead>
+<tbody>
+<tr><td>是什么</td><td>工作流自动化，逐步编辑器</td><td>工作流自动化，可视化画布</td><td>工作流自动化，可视化编辑器加代码步骤</td><td>读取文件、编写并执行工作的智能体</td></tr>
+<tr><td>计费单位</td><td>任务</td><td>额度</td><td>工作流执行次数</td><td>Claude 方案席位和用量上限</td></tr>
+<tr><td>用户</td><td>Team 和 Enterprise 支持共享用户</td><td>按套餐而定</td><td>所有套餐不限用户</td><td>按席位</td></tr>
+<tr><td>自托管</td><td>不支持</td><td>不支持</td><td>支持</td><td>在你的电脑上或 Anthropic 的云端运行</td></tr>
+<tr><td>数据存放位置</td><td>美国</td><td>美国或欧盟，只能选一次</td><td>云端在法兰克福，或你自己的服务器</td><td>文件在本地；提示词由 Anthropic 或你配置的云服务商处理</td></tr>
+<tr><td>所需技能</td><td>低</td><td>低到中</td><td>中到高</td><td>中：习惯处理文件和指令</td></tr>
+<tr><td>最擅长</td><td>快速的应用间触发</td><td>低成本的分支流程</td><td>大用量、内部系统、可控性</td><td>需要判断和写作的工作</td></tr>
+<tr><td>留意</td><td>多步骤 Zap 的任务消耗攀升</td><td>额度在期限结束时过期</td><td>自托管时的服务器维护和更新</td><td>每次运行的产出不同，需要审核</td></tr>
+</tbody>
+</table></div>
+<p>额度过期这一点来自<a class="go" href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make 的价格常见问题，其中说明额度在期限结束时过期</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>。这里的每个工具都经常调整套餐，所以购买当天请重新核对价格。</p>
+
+<h2 id="which-tool-suits-your-team"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">哪个工具适合你的团队？</span></h2>
+<p>按将来负责它的那个人来匹配工具。不懂技术的企业主或办公室经理，应该从 Zapier 开始。喜欢动手搭建、有运营思维的人，应该试试 Make。有开发人员或数据要求严格的团队，应该看看 n8n。习惯和文件打交道、希望把起草和报告交出去的营销人员，应该看看 Claude Code。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>你的团队</th><th>从哪个开始</th><th>原因</th></tr></thead>
+<tbody>
+<tr><td>企业主自己经营，没有技术人员，只需几项简单自动化</td><td>Zapier 免费版或 Professional</td><td>设置最快，应用目录最广</td></tr>
+<tr><td>有一位喜欢搭建的运营人员，用量中等</td><td>Make</td><td>以更低的入门价格获得可视化控制</td></tr>
+<tr><td>有开发人员或技术型营销人员，用量大或数据敏感</td><td>n8n，云端或自托管</td><td>按运行次数计费，可自托管，支持代码步骤</td></tr>
+<tr><td>营销团队有周期性的写作、调研和报告工作</td><td>Claude Code，加一个负责触发的工作流工具</td><td>智能体负责判断，工作流工具负责即时交接</td></tr>
+<tr><td>没人有时间学其中任何一个</td><td>请顾问，或选择搭建加交接</td><td>见下一节</td></tr>
+</tbody>
+</table></div>
+<p><a class="go" href="/zh/blog/running-marketing-on-claude-code">用 Claude Code 运转整个营销职能</a>这份指南详细展示了智能体路线，也包括出过问题的地方。</p>
+
+<h2 id="when-should-you-hire-an-n8n-zapier-or-make-consultant"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">什么时候该请 n8n、Zapier 或 Make 顾问？</span></h2>
+<p>当一项自动化涉及客户数据或付款，或者必须在多个系统之间持续运行、没人盯着，而团队里又没人有时间学这个工具时，就请一位顾问。如果工作流简单、风险低，团队里也有人会负责并维护它，就自己来做。</p>
+<p>每家供应商都公开了一份名录，可以从那里开始。<a class="go" href="https://zapier.com/partnerdirectory" target="_blank" rel="noopener">Zapier 的名录列出了 Zapier 解决方案合作伙伴（Solution Partners），附有等级标签、评分和评价</a><sup class="fn"><a href="#source-13" aria-label="来源 13">13</a></sup>。<a class="go" href="https://www.make.com/en/partners-directory" target="_blank" rel="noopener">Make 的合作伙伴名录把合作伙伴介绍为经过认证的 Make 专家，分为白金、金牌和银牌三个等级</a><sup class="fn"><a href="#source-14" aria-label="来源 14">14</a></sup>。<a class="go" href="https://n8n.io/expert-partners/" target="_blank" rel="noopener">n8n 的专家合作伙伴页面说明，这个计划是一个封闭试点，并附有试点合作伙伴名录</a><sup class="fn"><a href="#source-15" aria-label="来源 15">15</a></sup>。</p>
+<p>无论请谁，都要求对方书面提供以下内容：</p>
+<ol>
+<li>一份范围说明，列出每个工作流、它的触发条件、涉及的应用和处理的客户数据。</li>
+<li>账户、连接和 API 密钥都登记在你公司名下，绝不放在顾问名下。</li>
+<li>错误提醒发送给你企业里一位指定的人。</li>
+<li>一位新员工也能照着操作的文档，外加一段录制好的操作讲解。</li>
+<li>搭建的固定价格，以及另行报价、可选的维护价格。</li>
+</ol>
+<p><a class="go" href="/zh/blog/ai-agency-vs-ai-consultant-nz">AI 代理机构、AI 自动化代理机构与 AI 顾问</a>的对比更全面地讲了如何评估服务商，聘请<a class="go" href="/zh/ai-marketing-services/marketing-automation-consultant">营销自动化顾问</a>的页面则介绍了一个范围明确的自动化搭建项目包含什么。</p>
+
+<h2 id="what-does-maintenance-cost"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">维护要花多少钱？</span></h2>
+<p>每项自动化都需要维护。应用会更改连接方式，登录会过期，用量会超出套餐，搭建它的人也会离开。每月留出几个小时检查运行情况、修复错误，并预计订阅费会随着用量增长而上升。自托管的 n8n 还要在这份清单上加上服务器更新和备份。</p>
+<p>在碰到上限之前，先弄清楚到时会发生什么。<a class="go" href="https://zapier.com/pricing" target="_blank" rel="noopener">Zapier 的价格页说明，任务用量达到上限后，你会被切换到按量付费，除非你关闭这一选项或升级档位</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>。<a class="go" href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make 的价格常见问题说明，场景会停止运行，直到重新添加额度</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>。这两种情况都可能让忙碌的团队措手不及。</p>
+<p>Claude Code 需要的是另一种维护。它的指令和技能会随着业务变化而逐渐过时，每次运行的产出也不同，所以任何到达客户的内容都要由人审核。每次都必须遵守的规则，应当放进自动检查里。一套每月例行流程就能覆盖大部分工作：</p>
+<ul>
+<li>复查失败的运行和错误提醒，修复根本原因。</li>
+<li>对照套餐和上个月，检查用量。</li>
+<li>重新连接任何已过期的应用连接。</li>
+<li>抽读一部分智能体产出，对照你的<a class="go" href="/zh/glossary/#marketing-automation">营销自动化</a>规则和语调指南检查。</li>
+<li>工作流有变化时，更新文档。</li>
+</ul>
+
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">10</span><span class="sec-title">Flow AI 的角色</span></h2>
+<p>Flow AI 为新西兰和澳大利亚的企业提供 AI 营销服务。Amber Lan 是奥克兰的 AI 营销工程师，她和你的团队一起搭建负责搜索、内容、主动外联和报告的 AI 智能体，然后交接给你。Amber 自己用的是 Claude Code，Flow AI 不是 n8n、Zapier 或 Make 的合作伙伴。</p>
+<p>如果智能体路线适合你的团队，与 <a class="go" href="/zh/ai-marketing-services/claude-code-consultant">Claude Code 顾问</a>合作的页面介绍了搭建项目如何进行；每个项目都从一份书面范围说明开始，按项目报价。<a class="go" href="/zh/skills/">技能库</a>和<a class="go" href="/zh/templates/">免费智能体模板</a>都可以先打开查看。正在招聘的公司，可以通过<a class="go" href="/zh/about#hire">招聘页面</a>联系 Amber。</p>
+
+<h2 id="the-short-version"><span class="sec-num" aria-hidden="true">11</span><span class="sec-title">简短版本</span></h2>
+<p>Zapier 是不懂技术的员工最快的起点，Make 以更低的入门价格提供可视化控制，n8n 为技术团队提供按运行次数计费和自托管，Claude Code 负责需要判断的营销工作。选择将来负责它的那个人能运行起来的那一个。</p>
+<p>购买之前，用工具自己的计费单位为你真实的工作流算一下价格。购买之后，把每个账户都登记在你公司名下，并每月留出时间做维护。</p>
+<p>想弄清楚哪条路线适合你的团队，可以<a class="go" href="/zh/contact">和 Amber 聊聊</a>。</p>
+        </article>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span class="sec-num" aria-hidden="true">12</span><span class="sec-title">企业主常问的问题</span></h2>
+  <div class="faq__list">
+<details class="faq__item" open><summary><h3>n8n 比 Zapier 便宜吗？</h3></summary><p>用量较大时往往是。n8n 按工作流执行次数计费，一次完整运行算一次，不论包含多少步骤，它的 Community 版可以免费自托管供内部使用。Zapier 按任务（task）计费，每个步骤和每次连接器调用都会消耗任务。如果只是几个简单的两步自动化，Zapier 的免费和入门套餐在花费和设置时间上都可能更省。</p></details>
+<details class="faq__item"><summary><h3>用 Zapier 要花多少钱？</h3></summary><p>2026年10月16日，Zapier 价格页列出：免费套餐每月 100 个任务；Professional 按年付费每月 US$19.99 起，按月付费 US$29.99；Team 按年付费每月 US$69 起，含 2,000 个任务。价格随你选择的每月任务档位上升，Zapier 也支持用 NZD 和 AUD 付款。</p></details>
+<details class="faq__item"><summary><h3>n8n 是开源的吗？</h3></summary><p>n8n 把自己的许可称为 fair-code，采用其 Sustainable Use License，属于源代码可见（source-available）。它的文档说明，如果工作流只由你或你所在组织的人创建或修改，就可以免费使用自托管的 Community 版。把 n8n 作为服务托管给客户、让他们构建自己的工作流，则需要商业许可。</p></details>
+<details class="faq__item"><summary><h3>有哪些类似 Zapier 的工具？</h3></summary><p>最接近的替代品是 Make 和 n8n。Make 按每个操作消耗的额度（credit）计费，提供可视化的场景编辑器；n8n 按工作流运行次数计费，可以自托管。Claude Code 这类智能体工具属于另一个类别：它们根据指令编写并执行工作，更适合需要判断而不是固定规则的任务。</p></details>
+<details class="faq__item"><summary><h3>小企业可以用 Claude Code 替代 Zapier 吗？</h3></summary><p>部分工作可以。Claude Code 可以通过 MCP 连接工具，在云端按计划运行，处理需要判断的工作，比如根据多个来源起草一份报告。至于即时的应用间触发，比如新的表单提交直接进入 CRM，工作流工具通常更容易运行，也更容易交接。</p></details>
+<details class="faq__item"><summary><h3>什么时候该请 n8n、Zapier 或 Make 顾问？</h3></summary><p>当一项自动化涉及客户数据或资金，或者必须在多个系统之间持续运行而无需你照看，团队里又没人有时间学这个工具时，就请一位顾问。要求对方提供书面范围说明、登记在你名下的账户、文档和错误提醒。三家供应商都公开了合作伙伴名录，可以从那里开始找。</p></details>
+  </div>
+</section>
+        <aside class="author-box" aria-label="关于作者">
+          <p class="author-box__label">作者</p>
+          <p class="author-box__name"><a href="/zh/about">Amber Lan</a></p>
+          <p>AI 营销工程师，Flow AI 创始人，常驻新西兰奥克兰。她用自己搭建的智能体系统运行完整的营销职能，并把这些系统公开在 <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a> 上。Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。</p>
+        </aside>
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title" class="sources__title">资料来源</h2>
+  <p class="sources__note">每个数据都附有一手来源链接，最近核对：2026年10月16日。</p>
+  <ol class="sources__list">
+<li id="source-1"><a href="https://zapier.com/pricing" target="_blank" rel="noopener">它的价格页介绍，Zapier MCP 可以把 AI 助手连接到约 9,000 个集成</a> <span class="src-host">zapier.com</span></li>
+<li id="source-2"><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Anthropic 的文档把 Claude Code 描述为一款智能体编程工具，能读取代码库、编辑文件、运行命令，并与开发工具集成，还说明它可以通过 MCP 连接 Google Drive、Jira 和 Slack 等工具</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-3"><a href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make 的价格页说明，大多数操作消耗一个额度，一个场景单次运行可能消耗两个到数千个额度不等</a> <span class="src-host">make.com</span></li>
+<li id="source-4"><a href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n 的价格页把一次执行定义为整个工作流的一次运行，不论步骤数量或数据量多少</a> <span class="src-host">n8n.io</span></li>
+<li id="source-5"><a href="https://claude.com/pricing" target="_blank" rel="noopener">Anthropic 的价格页说明，所有付费方案都包含 Claude Code，并与方案中的其他功能共用同样的用量上限</a> <span class="src-host">claude.com</span></li>
+<li id="source-6"><a href="https://www.make.com/compare/make-vs-zapier" target="_blank" rel="noopener">Make 自己的对比页列出 Core 每月 $9，Pro $16，Team $29，均从 10,000 个额度起</a> <span class="src-host">make.com</span></li>
+<li id="source-7"><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan" target="_blank" rel="noopener">Anthropic 帮助中心列出 Team Standard 席位按年付费每月 $20，按月付费 $25，为不含税的美国价格</a> <span class="src-host">support.claude.com</span></li>
+<li id="source-8"><a href="https://zapier.com/security-compliance" target="_blank" rel="noopener">Zapier 的安全页面说明，Zapier 把数据存放在美国的亚马逊云服务（Amazon Web Services）上</a> <span class="src-host">zapier.com</span></li>
+<li id="source-9"><a href="https://help.make.com/organizations" target="_blank" rel="noopener">Make 帮助中心说明，每个组织可以选择美国或欧盟的数据中心，组织创建后位置无法更改</a> <span class="src-host">help.make.com</span></li>
+<li id="source-10"><a href="https://docs.n8n.io/n8n-community-license/community-license/license-faq.md" target="_blank" rel="noopener">n8n 的许可常见问题说明，如果工作流只由你或你所在组织的人创建或修改，就可以免费使用 Community 许可，但这一许可不允许把 n8n 作为服务托管给客户来构建工作流</a> <span class="src-host">docs.n8n.io</span></li>
+<li id="source-11"><a href="https://docs.n8n.io/choose-how-to-use-n8n.md" target="_blank" rel="noopener">它的文档还说明，自托管需要技术专长，维护由你自己负责</a> <span class="src-host">docs.n8n.io</span></li>
+<li id="source-12"><a href="https://www.privacy.org.nz/responsibilities/disclosing-personal-information-outside-new-zealand/" target="_blank" rel="noopener">新西兰隐私专员办公室表示，在大多数情况下，你放到云端的个人信息仍由你负责</a> <span class="src-host">privacy.org.nz</span></li>
+<li id="source-13"><a href="https://zapier.com/partnerdirectory" target="_blank" rel="noopener">Zapier 的名录列出了 Zapier 解决方案合作伙伴（Solution Partners），附有等级标签、评分和评价</a> <span class="src-host">zapier.com</span></li>
+<li id="source-14"><a href="https://www.make.com/en/partners-directory" target="_blank" rel="noopener">Make 的合作伙伴名录把合作伙伴介绍为经过认证的 Make 专家，分为白金、金牌和银牌三个等级</a> <span class="src-host">make.com</span></li>
+<li id="source-15"><a href="https://n8n.io/expert-partners/" target="_blank" rel="noopener">n8n 的专家合作伙伴页面说明，这个计划是一个封闭试点，并附有试点合作伙伴名录</a> <span class="src-host">n8n.io</span></li>
+  </ol>
+</section>
+      </div>
+
+      <aside class="rail" aria-label="关于这篇指南">
+        <dl class="rail__facts">
+          <div><dt>主题</dt><dd><a href="/zh/blog/?topic=agent">AI 营销智能体</a></dd></div>
+          <div><dt>形式</dt><dd>指南</dd></div>
+          <div><dt>更新于</dt><dd>2026年10月16日</dd></div>
+          <div><dt>阅读时间</dt><dd>13 分钟</dd></div>
+        </dl>
+        <button class="share-button" type="button" data-share data-share-title="n8n、Zapier、Make 还是 Claude Code：哪个自动化工具适合小企业？" data-share-text="为新西兰和澳大利亚小企业对比 n8n、Zapier、Make 和 Claude Code：官方页面上的价格、数据存放位置、日常维护，以及各自适合谁。" data-share-url="/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code" aria-label="分享这篇指南" aria-live="polite">分享指南</button>
+        <div class="explore">
+          <p class="explore__label">用 AI 深入了解</p>
+          <p class="explore__note">在 AI 助手中打开这篇指南，问问它哪些内容适用于你的企业。</p>
+          <ul class="explore__list">
+<li><a href="https://chatgpt.com/?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Flow%20AI%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">ChatGPT<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://claude.ai/new?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Flow%20AI%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">Claude<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://www.perplexity.ai/search?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Flow%20AI%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">Perplexity<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact centered" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="contact-title">一起找出最值得先搭建的营销工作。</h2>
+        <p class="lead">想和团队一起搭建，或在找人来牵头？聊聊你正在推进的事情。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/zh/contact">与我合作</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related__title">继续阅读</h2>
+      <div class="post-grid">
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="什么是 ai 营销智能体？写给小企业的定义。" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/what-is-an-ai-marketing-agent" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/what-is-an-ai-marketing-agent">什么是 AI 营销智能体？写给小企业的定义。</a></h3>
+    <p class="post-card__desc">AI 营销智能体在人工审核下规划、产出并发布营销工作。这是一份写给小企业的定义，并说明它和营销自动化、ChatGPT 有什么区别。</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-02" data-title="小企业的 ai 营销自动化：先从哪几项开始。" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/ai-marketing-automation-small-business" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-marketing-automation-small-business.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/ai-marketing-automation-small-business">小企业的 AI 营销自动化：先从哪几项开始。</a></h3>
+    <p class="post-card__desc">讲清营销自动化本身能做什么、AI 带来了哪些补充、小企业最先该上线的六项自动化，以及新西兰和澳大利亚在同意授权与隐私方面的规定。</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-08" data-title="如何用 claude code 运转整个营销职能？" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/running-marketing-on-claude-code" tabindex="-1" aria-hidden="true"><img src="/blog/figures/running-marketing-on-claude-code.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/running-marketing-on-claude-code">如何用 Claude Code 运转整个营销职能？</a></h3>
+    <p class="post-card__desc">一位独立 AI 营销工程师的工作笔记：如何用 Claude Code 运转整个营销职能，包括分工指令文件、技能库、MCP 连接器和人工审核环节。</p>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/zh/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI 营销工程师，奥克兰</p>
+        <p class="site-footer__note">我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。</p>
+        <a class="site-footer__cta" href="/zh/contact">与我合作</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/ai-marketing-services/">服务</a>
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/work">作品</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/templates/">免费模板</a>
+      <a href="/zh/about">关于我</a>
+      <a href="/zh/manifesto">宣言</a>
+      <a href="/zh/dot">这颗点</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Flow AI 首页"><img class="site-footer__mark" src="/assets/flowai-mark.svg" width="18" height="18" alt="" aria-hidden="true"><span class="site-footer__wm">Flow <span class="wm-chip">AI</span></span></a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="给 Amber Lan 发邮件" title="邮件"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

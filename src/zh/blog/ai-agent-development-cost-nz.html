@@ -1,0 +1,131 @@
+<!--meta
+{
+  "slug": "ai-agent-development-cost-nz",
+  "title": "在新西兰开发一个 AI 智能体要花多少钱？（2026，纽币）",
+  "seoTitle": "新西兰 AI 智能体开发费用：2026年纽币价格 | Flow AI",
+  "description": "2026年在新西兰搭建和运行一个 AI 智能体要花多少钱：依据有来源的新西兰合同费率、官方模型和平台价格、日常维护和 GST 逐项计算。",
+  "schemaDescription": "一份 2026年新西兰 AI 智能体开发成本指南，由四个可以核实的部分构成：新西兰和澳大利亚开发人员与 AI 工程师的合同费率和薪资、官方模型 API 价格、自动化平台订阅费，以及持续的维护。指南包含三种规模智能体的计算示例，并说明哪些因素推高或压低成本、设置费和月费、项目结束时你应该拥有什么、报价中的危险信号，以及 GST 如何适用。",
+  "standfirst": "这个问题的大多数答案，来自海外开发公司用美元报出的一个总价。<b>这份指南用你自己可以核实的部分来计算 AI 智能体的成本，以纽币列出，每个价格都链接到它背后的页面。</b>",
+  "shortAnswer": "AI 智能体的成本大部分是人的时间。按 Robert Walters 列出的 2026年奥克兰 AI 工程师合同费率每小时 NZD 130 到 180 计算，一个需要三到五天的单一工作流智能体，搭建费用约为 NZD 3,100 到 7,200。小型智能体的模型和平台费用可以控制在每月 NZD 100 以内。",
+  "topic": "costs",
+  "pillar": false,
+  "format": "指南",
+  "published": "2026-10-16",
+  "modified": "2026-10-16",
+  "keywords": ["AI 智能体开发费用", "新西兰 AI 智能体开发费用", "搭建 AI 智能体 成本", "开发一个 AI 智能体要多少钱", "聘请 AI 开发人员 费用", "AI 自动化服务 价格", "AI 工作流自动化 价格", "AI 智能体开发 报价", "定制 AI 智能体开发 费用"],
+  "definedTerm": {"name": "AI 智能体开发", "alternateName": ["定制 AI 智能体开发", "AI 智能体搭建", "AI agent development"], "description": "AI 智能体开发，是搭建一种软件：它借助语言模型，在你的各个系统之间规划并执行多步骤任务，关键步骤由人批准。"},
+  "related": ["ai-consultant-rates-nz-australia", "ai-marketing-cost-australia-new-zealand", "ai-agency-vs-ai-consultant-nz", "ai-marketing-automation-small-business"],
+  "faq": [
+    {"q": "开发一个 AI 智能体要花多少钱？", "a": "大部分成本是搭建者的时间。Robert Walters 的 2026年薪酬指南列出奥克兰 AI 工程师合同费率为每小时 NZD 130 到 180，所以一个需要三到五天的简单单一工作流智能体，搭建费用约为 NZD 3,100 到 7,200。连接多个系统的智能体可能需要两到三周。之后的运行成本还包括模型用量、平台订阅费，以及每月几个小时的维护。"},
+    {"q": "在新西兰聘请一位 AI 开发人员要花多少钱？", "a": "合同制方面，Robert Walters 的 2026年薪酬指南列出奥克兰 AI 工程师每小时 NZD 130 到 180，开发人员每小时 NZD 100 到 145。如果是正式招聘，奥克兰 AI 工程师年薪为 NZD 130,000 到 150,000，这还没算雇主 KiwiSaver，而雇主 KiwiSaver 缴费比例已在 2026年4月提高到 3.5%。SEEK 2026年10月的数据显示，ICT 行业软件开发岗位的招聘广告平均薪资为 NZD 117,451。"},
+    {"q": "运行一个 AI 智能体每月要花多少钱？", "a": "运行成本由三部分构成：模型用量、自动化平台和维护工时。一个每月在 Claude Sonnet 5.5 上运行 1,000 次的小型智能体，模型费用约为 USD 16；n8n 的 Starter 云端方案按年付费为每月 EUR 20。在本指南的计算示例中，维护是最大的一项：每月两到四小时，按合同费率计算，要再加 NZD 260 到 720。"},
+    {"q": "做 AI 智能体，n8n、Zapier 和 Make 哪个更便宜？", "a": "取决于你的智能体有多少个步骤。n8n 的云端方案每运行一次工作流算一次执行，无论有多少步骤，按年付费每月 EUR 20 起，含 2,500 次执行。Zapier 每完成一个动作算一个任务（task），按年付费每月 USD 19.99 起，含 750 个任务。Make 按额度（credit）计费，大多数动作消耗一个额度。对于经常运行的多步骤智能体，按运行次数计价往往更省钱。"},
+    {"q": "从海外购买 AI 软件，需要付 GST 吗？", "a": "如果你的企业已注册 GST，按照新西兰税务局（Inland Revenue）的指引，海外远程服务供应商会把你当作未注册客户，除非你声明自己已注册，或提供 GST 号码或 NZBN，所以请把 GST 号码填进每个平台的账单设置。已注册 GST 的新西兰搭建者会在报价上加 15%。未注册的企业，应在任何不含 GST 的价格上再加 15%。"},
+    {"q": "应该招一位 AI 开发人员，还是外包一次 AI 智能体搭建？", "a": "如果你只需要一两个智能体，而且团队里有人能在之后负责它们，就外包搭建。如果你打算每个月都搭建和修改智能体，就招人，因为按 Robert Walters 的 2026年数据，奥克兰一位正式 AI 工程师每年要 NZD 130,000 到 150,000，这还没算 KiwiSaver。无论选哪种方式，都要坚持留下文档，并让所有账户登记在你的名下，这样搭建者离开之后，工作成果依然可用。"}
+  ]
+}
+-->
+<h2>2026年在新西兰开发 AI 智能体要花多少钱？</h2>
+<p>在新西兰，AI 智能体开发的成本是搭建工时，再加上一笔较小的、用于运行智能体的月度账单。2026年，奥克兰 AI 工程师合同工每小时收费 NZD 130 到 180，所以一个需要三到五天的单一工作流智能体，费用约为 NZD 3,100 到 7,200（不含 GST），运行成本另计。</p>
+<blockquote>AI 智能体开发，是搭建一种软件：它借助语言模型，在你的各个系统之间规划并执行多步骤任务，关键步骤由人批准。</blockquote>
+<p>一个总价会把你实际买到的东西藏起来，所以这份指南用四个可以核实的部分来计算成本，每一部分都链接到来源。文末附近的计算示例，是用这些部分搭出来的示意，可以拿它来核对报价。术语表中的<a class="go" href="/glossary/#agentic-ai">智能体 AI</a>词条和<a class="go" href="/blog/what-is-an-ai-marketing-agent.html">AI 营销智能体指南</a>解释了智能体是做什么的。</p>
+
+<h2>AI 智能体的成本由哪四部分构成？</h2>
+<p>AI 智能体的成本有四个部分：界定范围、搭建和测试所需的人的时间；每次运行消耗的语言模型用量；智能体运行所在的自动化平台或服务器；以及每个月用于监控、修复和修改的工时。无论在搭建阶段还是之后，人的时间通常都是最大的一块。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>组成部分</th><th>买到的是什么</th><th>计费方式</th><th>价格来源</th></tr></thead>
+<tbody>
+<tr><td><b>人的时间</b></td><td>界定范围、搭建、测试、文档、交接</td><td>按小时或按天计费，或收取固定项目费</td><td>招聘机构薪酬指南；服务商报价</td></tr>
+<tr><td><b>模型用量</b></td><td>每次运行时模型的读取和生成</td><td>按每百万 token 计费，以美元计价</td><td>Anthropic 和 OpenAI 的 API 价格页面</td></tr>
+<tr><td><b>平台</b></td><td>智能体运行所在的工作流工具或服务器</td><td>按月或按年订阅，按运行次数、任务数或额度定价</td><td>n8n、Zapier 和 Make 的价格页面</td></tr>
+<tr><td><b>维护</b></td><td>监控、修复、小改动</td><td>每月工时，或支持服务费</td><td>合同费率；服务商报价</td></tr>
+</tbody>
+</table></div>
+<p>你已经在付费使用的软件，比如 CRM，不在这四部分之内。</p>
+
+<h2>新西兰的 AI 开发人员和 AI 工程师收费多少？</h2>
+<p>根据 Robert Walters 的 2026年薪酬指南，奥克兰合同制 AI 工程师每小时收费约 NZD 130 到 180，一般开发人员 NZD 100 到 145。奥克兰一位正式 AI 工程师年薪为 NZD 130,000 到 150,000，这还没算 KiwiSaver。出售整套搭建成果的服务商，会自行定价。</p>
+<p><a class="go" href="https://www.robertwalters.co.nz/content/dam/robert-walters-redesign/country/new-zealand/files/salary-survey/salary-guide-2026.pdf" target="_blank" rel="noopener">Robert Walters 的 2026年薪酬指南列出奥克兰的合同费率：AI 工程师每小时 NZD 130 到 180（平均 NZD 155），开发人员 NZD 100 到 145，集成工程师 NZD 125 到 155</a>。这份指南基于超过 5,500 份调查回复和超过 100,000 个招聘广告岗位。这些是招聘机构安排的合同工费率。代理机构或独立搭建者会自行定价，所以可以用这个区间来判断一份报价隐含了多少工时。</p>
+<p>如果改为招聘，Robert Walters 列出 2026年奥克兰正式 AI 工程师年薪为 NZD 130,000 到 150,000，<a class="go" href="https://nz.seek.com/career-advice/role/software-developer/salary" target="_blank" rel="noopener">SEEK 2026年10月的数据显示，信息与通信技术（ICT）行业软件开发人员的招聘广告平均薪资为 NZD 117,451</a>。雇主还要加上 <a class="go" href="https://www.ird.govt.nz/kiwisaver-changes" target="_blank" rel="noopener">KiwiSaver，新西兰税务局（Inland Revenue）确认其默认缴费比例已于 2026年4月1日提高到 3.5%</a>。招聘适合一年到头都在搭建智能体的企业；如果只需要一两个，外包工时的花费要低得多。</p>
+<p>换算之后，澳大利亚的合同数字也处在相近的区间。<a class="go" href="https://www.hays.com.au/press-release/content/ai-elevates-human-expertise" target="_blank" rel="noopener">Hays 2026年4月的新闻稿显示，澳大利亚 AI 工程师正式岗位年薪为 AUD 145,000 到 200,000 或更高，合同制每天 AUD 900 到 1,200</a>，数据来自其 2025年12月更新的 Tech Talent Explorer 研究。<a class="go" href="https://au.seek.com/career-advice/role/software-developer/salary" target="_blank" rel="noopener">SEEK 2026年10月的数据显示，澳大利亚 ICT 行业软件开发人员的招聘广告平均薪资为 AUD 131,242</a>。<a class="go" href="/blog/ai-consultant-rates-nz-australia.html">AI 顾问收费指南</a>讲的是咨询类工作。</p>
+<p>公开价格的新西兰搭建者很少。其中一家是 <a class="go" href="https://www.ez-ai.nz/pricing" target="_blank" rel="noopener">奥克兰服务商 EZ-AI，其价格页面列出 AI 助手和智能体为 NZD 3,000 到 12,000（不含 GST），周期三到六周，托管、监控和支持每月 NZD 99 起</a>。这是一家服务商公开的价格。</p>
+
+<h2>模型用量和自动化平台要花多少钱？</h2>
+<p>模型用量按每百万 token 计费，以美元计价，往往是账单上最小的一项。Anthropic 列出 Claude Sonnet 5.5 每百万输入 token USD 2，每百万输出 token USD 10。自动化平台按运行次数或任务数收取月费，n8n 的入门云端方案约每月 NZD 40 起。</p>
+<p>token 是一小段文本。每次运行，你都要为智能体读取和写出的 token 付费。截至 2026年10月16日，<a class="go" href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener">Anthropic 的价格页面（所有价格均以美元标示）列出：Claude Haiku 5.5 每百万 token 输入 USD 0.10、输出 USD 0.50，Sonnet 5.5 分别为 USD 2 和 10，Opus 5.5 分别为 USD 4 和 20，批处理可享 50% 折扣</a>。<a class="go" href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener">OpenAI 的 API 价格页面列出 gpt-6.1-sol 每百万输入 token $2、每百万输出 token $10，gpt-6-luna 分别为 $0.10 和 $0.50</a>。</p>
+<p>一个每月运行 1,000 次、每次读取 4,000 个 token 并写出 800 个 token 的智能体，在 Sonnet 5.5 上每月约花 USD 16，在 Haiku 5.5 上不到 USD 1。按<a class="go" href="https://www.rbnz.govt.nz/statistics/series/exchange-and-interest-rates/exchange-rates-and-the-trade-weighted-index" target="_blank" rel="noopener">新西兰储备银行（Reserve Bank of New Zealand）2026年10月15日的汇率，每 1 纽币兑 USD 0.56、EUR 0.50 和 AUD 0.81</a>，USD 16 约合 NZD 28。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>平台和方案</th><th>公开价格</th><th>每月包含</th></tr></thead>
+<tbody>
+<tr><td>n8n Cloud Starter</td><td>每月 EUR 20，按年付费（约 NZD 40）</td><td>2,500 次工作流执行</td></tr>
+<tr><td>n8n Cloud Pro</td><td>每月 EUR 50，按年付费（约 NZD 100）</td><td>10,000 次执行</td></tr>
+<tr><td>n8n Cloud Business</td><td>每月 EUR 667，按年付费（约 NZD 1,330）</td><td>40,000 次执行</td></tr>
+<tr><td>n8n Community Edition</td><td>免费版本，自行托管；你需要支付服务器费用</td><td>取决于你的服务器能承载多少</td></tr>
+<tr><td>Zapier Professional</td><td>按年付费每月 USD 19.99，或按月付费 USD 29.99</td><td>750 个任务</td></tr>
+<tr><td>Zapier Professional</td><td>按年付费每月 USD 49，或按月付费 USD 73.50（约 NZD 87 到 131）</td><td>2,000 个任务</td></tr>
+<tr><td>Make Free</td><td>免费</td><td>1,000 个额度</td></tr>
+</tbody>
+</table></div>
+<p>各家的计量单位不同。<a class="go" href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n 的价格页面把一次执行定义为整个工作流运行一次，无论它有多少个步骤</a>。<a class="go" href="https://zapier.com/pricing" target="_blank" rel="noopener">Zapier 每完成一个工作单元就算一个任务，以美元定价，付款时按汇率换算</a>。<a class="go" href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make 按额度计费，大多数动作消耗一个额度，免费方案每月包含 1,000 个额度</a>。一个十步骤、运行 1,000 次的智能体，在 n8n 上是 1,000 次执行，在 Zapier 或 Make 上则最多约 10,000 个任务或额度。核查时，Make 的付费方案价格没有显示出来。<a class="go" href="https://docs.n8n.io/hosting/community-edition-features/" target="_blank" rel="noopener">n8n 的文档说明，你可以一直使用免费的 Community 版本</a>，用服务器费用和维护工作替代订阅费。</p>
+
+<h2>小型、中型和大型 AI 智能体可能要花多少钱？一个计算示例</h2>
+<p>根据上文公开的各个组成部分计算，一个单一工作流智能体的搭建费用约为 NZD 3,100 到 7,200，运行费用每月 NZD 330 到 790。一个连接 CRM 的智能体，搭建约 NZD 10,400 到 21,600，每月运行 NZD 820 到 1,740。其中的天数和用量均为假设。</p>
+<div class="tablewrap"><table>
+<thead><tr><th>仅作示意</th><th>搭建天数（假设）</th><th>搭建费用</th><th>每月模型用量</th><th>每月平台费用</th><th>每月维护（假设工时）</th><th>每月运行成本</th></tr></thead>
+<tbody>
+<tr><td><b>小型：</b>起草咨询回复，交由人审批</td><td>3 到 5</td><td>NZD 3,120 到 7,200</td><td>约 NZD 30（USD 16）</td><td>n8n Starter，约 NZD 40</td><td>2 到 4 小时，NZD 260 到 720</td><td>约 NZD 330 到 790</td></tr>
+<tr><td><b>中型：</b>对照 CRM 筛选潜在客户，并起草跟进内容</td><td>10 到 15</td><td>NZD 10,400 到 21,600</td><td>约 NZD 200（USD 110）</td><td>n8n Pro，约 NZD 100</td><td>4 到 8 小时，NZD 520 到 1,440</td><td>约 NZD 820 到 1,740</td></tr>
+<tr><td><b>大型：</b>多个相互连接的智能体，附带报告</td><td>20 到 30</td><td>NZD 20,800 到 43,200</td><td>约 NZD 1,110（USD 620）</td><td>n8n Business，约 NZD 1,330</td><td>8 到 16 小时，NZD 1,040 到 2,880</td><td>约 NZD 3,480 到 5,320</td></tr>
+</tbody>
+</table></div>
+<p>计算方法：搭建和维护工时按每天八小时计，费率采用 Robert Walters 列出的奥克兰 AI 工程师区间，每小时 NZD 130 到 180。模型用量按 Sonnet 5.5 标价计算，每月分别运行 1,000、5,000 和 20,000 次（输入 4,000、6,000 和 8,000 个 token；输出 800、1,000 和 1,500 个 token）。平台采用 n8n 按年付费的云端方案。所有数字均采用新西兰储备银行 2026年10月15日的汇率，且不含 GST。</p>
+<p>无论哪种规模，第一年的成本都以搭建工时为主；小型和中型智能体的月度账单则以维护为主。换一个更便宜的模型，每月省下的是几十元；一份清晰的范围说明，能省下好几天。<a class="go" href="/blog/ai-marketing-scope-of-work.html">AI 营销工作范围说明指南</a>列出了一份好的范围说明应该涵盖哪些内容。</p>
+
+<h2>哪些因素会推高或压低 AI 智能体的成本？</h2>
+<p>智能体要连接多少个系统、你的数据处于什么状态，以及它的产出有多少需要人来检查，决定了大部分成本。一个读取单个收件箱、起草回复交由人审批的智能体，很快就能搭好。一个要写入你的 CRM、会计软件和日历的智能体，则需要多得多的测试。</p>
+<ul>
+<li><b>集成。</b>每接入一个系统，都会增加搭建和测试时间，而且这个系统日后还可能变动。</li>
+<li><b>起草还是执行。</b>只起草、交由人审批的智能体，要安全地搭建起来，成本低于自行发送、预约或更新记录的智能体。</li>
+<li><b>数据质量。</b>重复记录和缺失记录会增加清理工作。</li>
+<li><b>审核环节。</b>设置<a class="go" href="/glossary/#human-in-the-loop">人工把关（human in the loop）</a>，由人批准任何发送出去或要花钱的操作，会略微增加搭建时间，同时能在客户看到之前拦下错误。</li>
+<li><b>隐私工作。</b><a class="go" href="https://www.privacy.org.nz/resources-and-learning/a-z-topics/ai/" target="_blank" rel="noopener">新西兰隐私专员（Privacy Commissioner）建议在开始使用 AI 工具之前先做隐私影响评估，并定期更新</a>。</li>
+<li><b>模型选择。</b>在 Anthropic 的价目表上，Opus 5.5 每个输入 token 的价格是 Haiku 5.5 的 40 倍，所以要让模型和任务相匹配。</li>
+<li><b>一套行之有效的手工流程。</b>团队每次都用同样方式完成的任务，复制起来更快。</li>
+</ul>
+
+<h2>设置费还是月费：各自应该涵盖什么，你应该拥有什么？</h2>
+<p>设置费应该涵盖范围界定、搭建、测试、文档和一次交接会。月费应该涵盖监控、已连接工具发生变化时的修复，以及固定数量的修改工时。项目结束时，你应该拥有账户、工作流、提示词、文档和数据，每一项订阅都以你企业的名义计费。</p>
+<p>问清楚月费包含多少工时，并把模型和平台订阅绑定在你自己的卡上，这样你看到的用量就是成本价。交接时，你应该拿到：</p>
+<ul>
+<li>平台账户（n8n、Zapier 或 Make）和模型 API 账户，都登记在你企业的名下</li>
+<li>每个工作流的导出文件，以及智能体遵循的提示词和指令</li>
+<li>书面文档，写明智能体读取什么、写入什么，以及出问题时该找谁</li>
+<li>测试用例，这样换一位搭建者也能安全地做修改</li>
+<li>你的数据，随时可以导出</li>
+</ul>
+<p><a class="go" href="https://www.ez-ai.nz/pricing" target="_blank" rel="noopener">EZ-AI 的价格页面写明不绑定客户，代码和云端账户归客户所有</a>。请在你的合同里写入同样的条款。如果智能体用在营销工作流里，可以看看术语表中的<a class="go" href="/glossary/#marketing-automation">营销自动化</a>词条，以及<a class="go" href="/blog/ai-marketing-automation-small-business.html">小企业 AI 营销自动化指南</a>。</p>
+
+<h2>AI 智能体报价中有哪些危险信号？</h2>
+<p>最明显的危险信号是：只给一个总价、没有明细；模型用量被打包进固定费用、没有用量报告；账户以服务商的名义开设；整个设计里没有任何审核环节。每一项都在掩盖成本或风险。</p>
+<ul>
+<li>只有一个总价，没有拆分搭建工时、平台、模型用量和维护</li>
+<li>模型或平台费用被加价，或者被打包到你看不到用量</li>
+<li>没有测试计划，也没有任何环节由人批准会触达客户的产出</li>
+<li>声称智能体从第一天起就能完全自行运行</li>
+<li>在你看到智能体用你自己的数据跑起来之前，就要求签很长的最短合约期</li>
+</ul>
+<p><a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner 预测，到 2027 年底，超过 40% 的智能体 AI 项目将因成本不断上升、商业价值不明确或风险控制不足而被取消，并估计在数以千计的智能体 AI 供应商中，真正名副其实的只有约 130 家</a>。一份带有可衡量成果的书面范围说明，回答了价值的问题；看得见的成本加上审核环节，回答了另外两个问题。<a class="go" href="/blog/ai-agency-vs-ai-consultant-nz.html">新西兰 AI 代理机构与 AI 顾问指南</a>里有更多筛选服务商的问题。</p>
+
+<h2>GST 如何适用于 AI 智能体开发？</h2>
+<p>已注册 GST 的新西兰搭建者会在报价上加 15%。对于海外软件，按照新西兰税务局的规定，供应商会把你当作未注册客户，直到你声明已注册 GST，或提供 GST 号码或 NZBN，所以请把它填进每一个账户。未注册的企业，在比较之前应在任何不含 GST 的价格上加 15%。</p>
+<p><a class="go" href="https://www.ird.govt.nz/gst" target="_blank" rel="noopener">新西兰税务局的 GST 页面写明，GST 税率为 15%</a>。<a class="go" href="https://www.ird.govt.nz/gst/gst-for-overseas-businesses/supplying-remote-services-into-new-zealand" target="_blank" rel="noopener">IRD 面向海外企业的指引（更新于 2026年9月12日）指出，如果远程服务供应商只向已注册 GST 的新西兰企业销售，就无需注册 GST；除非客户声明自己已注册，或提供 GST 号码或 NZBN，否则供应商必须把客户视为未注册</a>。请在每个账户的账单设置里填入你的 GST 号码，并和你的会计师确认具体处理方式。</p>
+<p>在澳大利亚，<a class="go" href="https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/how-gst-works" target="_blank" rel="noopener">澳大利亚税务局（ATO）的 How GST works 页面（更新于 2026年9月14日）规定 GST 税率为 10%，GST 营业额达到 AUD 75,000 时必须注册</a>。</p>
+
+<h2>Flow AI 的位置</h2>
+<p>Flow AI 为新西兰和澳大利亚的企业提供 AI 营销服务。Amber Lan 是奥克兰的 AI 营销工程师，她和你的团队一起搭建负责搜索、内容、主动外联和报告的 AI 智能体，然后交接给你。每个智能体都运行在你自己的账户里。</p>
+<p>团队可以委托一次搭建，从一份书面范围说明开始，按项目计价。<a class="go" href="/ai-marketing-services/ai-agent-development">AI 智能体开发页面</a>列出了 Flow AI 搭建的智能体，<a class="go" href="/sprints/">冲刺页面</a>展示了一次搭建涵盖哪些内容。正在招聘资深营销工程师或 GTM 工程师的公司，可以通过<a class="go" href="/about.html#hire">招聘页面</a>联系 Amber。</p>
+
+<h2>简要总结</h2>
+<p>AI 智能体的成本主要是人的时间。按奥克兰每小时 NZD 130 到 180 的合同费率，一个单一工作流智能体的搭建费用约为 NZD 3,100 到 7,200，一个连接 CRM 的智能体约为 NZD 10,400 到 21,600。模型和平台费用每月约 NZD 70 到 300；维护工时的花费更高。</p>
+<p>请服务商按这四部分拆分报价，把每个账户都留在你的名下，并在适用时加上 GST。<a class="go" href="/blog/ai-marketing-cost-australia-new-zealand.html">澳大利亚和新西兰 AI 营销成本指南</a>把智能体和代理机构、自由职业者及招聘放在一起比较，<a class="go" href="/blog/marketing-agency-cost-nz.html">营销代理机构费用指南</a>讲的是月度服务费。</p>
+<p>想对照这些数字为一个智能体界定范围，<a class="go" href="/contact.html">和 Amber 聊聊</a>。</p>

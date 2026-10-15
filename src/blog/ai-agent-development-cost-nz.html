@@ -1,0 +1,131 @@
+<!--meta
+{
+  "slug": "ai-agent-development-cost-nz",
+  "title": "How much does AI agent development cost in New Zealand? (2026, NZD)",
+  "seoTitle": "AI Agent Development Cost NZ: 2026 Prices in NZD | Flow AI",
+  "description": "What an AI agent costs to build and run in New Zealand in 2026, built from sourced NZ contract rates, official model and platform prices, upkeep and GST.",
+  "schemaDescription": "A 2026 guide to the cost of AI agent development in New Zealand, built from four verifiable components: NZ and Australian contract rates and salaries for developers and AI engineers, official model API prices, automation platform subscriptions and ongoing upkeep. It includes a worked example for three sizes of agent, what drives cost up or down, setup and monthly fees, what you should own at the end, red flags in quotes and how GST applies.",
+  "standfirst": "Most answers to this question come from offshore development shops quoting one total in US dollars. <b>This guide builds the cost of an AI agent from parts you can check yourself, in NZD, with a link to the page behind every price.</b>",
+  "shortAnswer": "Most of an AI agent's cost is people time. At the NZD 130 to 180 an hour Robert Walters lists for Auckland AI engineer contractors in 2026, a one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. Model and platform fees for a small agent can stay under NZD 100 a month.",
+  "topic": "costs",
+  "pillar": false,
+  "format": "Guide",
+  "published": "2026-10-16",
+  "modified": "2026-10-16",
+  "keywords": ["ai agent development cost", "ai agent development cost nz", "building an ai agent cost", "how much does it cost to build an ai agent", "cost to hire ai developer", "ai automation services pricing", "ai workflow automation price", "ai agent development price", "custom ai agent development cost"],
+  "definedTerm": {"name": "AI agent development", "alternateName": ["custom AI agent development", "AI agent build"], "description": "AI agent development is the work of building software that uses a language model to plan and carry out a multi-step task across your systems, with a person approving the steps that matter."},
+  "related": ["ai-consultant-rates-nz-australia", "ai-marketing-cost-australia-new-zealand", "ai-agency-vs-ai-consultant-nz", "ai-marketing-automation-small-business"],
+  "faq": [
+    {"q": "How much does it cost to build an AI agent?", "a": "Most of the cost is the builder's time. Robert Walters' 2026 salary guide lists Auckland AI engineer contractors at NZD 130 to 180 an hour, so a simple one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. An agent connected to several systems can take two to three weeks. Running costs then add model usage, a platform subscription and a few hours of upkeep each month."},
+    {"q": "How much does it cost to hire an AI developer in New Zealand?", "a": "On contract, Robert Walters' 2026 salary guide lists Auckland AI engineers at NZD 130 to 180 an hour and developers at NZD 100 to 145. As a permanent hire, an Auckland AI engineer earns NZD 130,000 to 150,000 a year before employer KiwiSaver, which rose to 3.5% in April 2026. SEEK's October 2026 average for an advertised software developer role in ICT was NZD 117,451."},
+    {"q": "What does it cost each month to run an AI agent?", "a": "Running costs have three parts: model usage, the automation platform and upkeep hours. A small agent running 1,000 times a month on Claude Sonnet 5.5 uses about USD 16 of model time, and n8n's Starter cloud plan is EUR 20 a month billed annually. In this guide's worked example, upkeep is the largest line: two to four hours a month at contract rates adds NZD 260 to 720."},
+    {"q": "Is n8n, Zapier or Make cheaper for an AI agent?", "a": "It depends on how many steps your agent has. n8n's cloud plans count one execution per workflow run regardless of steps, from EUR 20 a month billed annually for 2,500 executions. Zapier counts a task for each completed action, from USD 19.99 a month billed annually for 750 tasks. Make bills in credits, with most actions using one credit. For multi-step agents that run often, per-run pricing tends to cost less."},
+    {"q": "Do I pay GST on AI software bought from overseas?", "a": "If your business is GST registered, Inland Revenue's guidance means an overseas supplier of remote services treats you as unregistered unless you say you are registered or give your GST number or NZBN, so add your GST number to each platform's billing settings. A New Zealand builder registered for GST adds 15% to its quote. Businesses that are not registered should add 15% to any plus-GST price."},
+    {"q": "Should I hire an AI developer or contract an AI agent build?", "a": "Contract a build when you need one or two agents and someone in your team can own them afterwards. Hire when you plan to build and change agents every month, because a permanent AI engineer in Auckland costs NZD 130,000 to 150,000 a year before KiwiSaver by Robert Walters' 2026 figures. Either way, insist on documentation and accounts in your name so the work outlives the person who built it."}
+  ]
+}
+-->
+<h2>What does AI agent development cost in New Zealand in 2026?</h2>
+<p>AI agent development in New Zealand costs the build hours plus a smaller monthly bill to run the agent. Auckland AI engineer contractors charge NZD 130 to 180 an hour in 2026, so a one-workflow agent that takes three to five days lands at about NZD 3,100 to 7,200 before GST, with running costs on top.</p>
+<blockquote>AI agent development is the work of building software that uses a language model to plan and carry out a multi-step task across your systems, with a person approving the steps that matter.</blockquote>
+<p>A single total hides what you are paying for, so this guide builds the cost from four parts you can check, each linked to its source. The worked example near the end is an illustration built from those parts: use it to check a quote. The glossary entry on <a class="go" href="/glossary/#agentic-ai">agentic AI</a> and the <a class="go" href="/blog/what-is-an-ai-marketing-agent.html">guide to AI marketing agents</a> explain what an agent does.</p>
+
+<h2>What are the four parts of an AI agent's cost?</h2>
+<p>An AI agent's cost has four parts: the people time to scope, build and test it, the language model usage it consumes on every run, the automation platform or server it runs on, and the hours each month to monitor, fix and change it. People time is usually the largest part, at the build stage and afterwards.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Part</th><th>What it pays for</th><th>How it is billed</th><th>Where the price comes from</th></tr></thead>
+<tbody>
+<tr><td><b>People time</b></td><td>Scoping, building, testing, documentation, handover</td><td>Hourly or day rate, or a fixed project fee</td><td>Recruiter salary guides; provider quotes</td></tr>
+<tr><td><b>Model usage</b></td><td>The model reading and writing on each run</td><td>Per million tokens, in US dollars</td><td>Anthropic and OpenAI API price pages</td></tr>
+<tr><td><b>Platform</b></td><td>The workflow tool or server the agent runs on</td><td>Monthly or annual subscription, priced by runs, tasks or credits</td><td>n8n, Zapier and Make price pages</td></tr>
+<tr><td><b>Upkeep</b></td><td>Monitoring, fixes, small changes</td><td>Hours each month, or a support fee</td><td>Contract rates; provider quotes</td></tr>
+</tbody>
+</table></div>
+<p>Software you already pay for, such as your CRM, sits outside these four.</p>
+
+<h2>What do AI developers and AI engineers charge in New Zealand?</h2>
+<p>New Zealand AI engineers on contract charge about NZD 130 to 180 an hour in Auckland, according to Robert Walters' 2026 salary guide, and general developers NZD 100 to 145. A permanent AI engineer in Auckland earns NZD 130,000 to 150,000 a year before KiwiSaver. Providers who sell a finished build set their own rates.</p>
+<p><a class="go" href="https://www.robertwalters.co.nz/content/dam/robert-walters-redesign/country/new-zealand/files/salary-survey/salary-guide-2026.pdf" target="_blank" rel="noopener">Robert Walters' 2026 Salary Guide lists Auckland contract rates of NZD 130 to 180 an hour for an AI engineer (average NZD 155), NZD 100 to 145 for a developer and NZD 125 to 155 for an integration engineer</a>. The guide draws on more than 5,500 survey responses and over 100,000 advertised roles. These are rates for recruiter-placed contractors. An agency or independent builder sets its own price, so use the range to judge how many hours a quote implies.</p>
+<p>To hire instead, Robert Walters lists permanent Auckland AI engineers at NZD 130,000 to 150,000 in 2026, and <a class="go" href="https://nz.seek.com/career-advice/role/software-developer/salary" target="_blank" rel="noopener">SEEK's October 2026 data puts the average advertised salary for a software developer in information and communication technology at NZD 117,451</a>. An employer adds <a class="go" href="https://www.ird.govt.nz/kiwisaver-changes" target="_blank" rel="noopener">KiwiSaver, which Inland Revenue confirms rose to a default rate of 3.5% on 1 April 2026</a>. Hiring suits a business that will build agents all year; for one or two, contracted hours cost far less.</p>
+<p>Australian contract figures sit in a similar range once converted. <a class="go" href="https://www.hays.com.au/press-release/content/ai-elevates-human-expertise" target="_blank" rel="noopener">Hays' April 2026 release puts Australian AI engineers at AUD 145,000 to 200,000 or more a year permanent and AUD 900 to 1,200 a day on contract</a>, from its Tech Talent Explorer research updated in December 2025. <a class="go" href="https://au.seek.com/career-advice/role/software-developer/salary" target="_blank" rel="noopener">SEEK's October 2026 data puts the average advertised software developer salary in Australian ICT at AUD 131,242</a>. The <a class="go" href="/blog/ai-consultant-rates-nz-australia.html">guide to AI consultant rates</a> covers advisory work.</p>
+<p>Few New Zealand builders publish prices. One that does is <a class="go" href="https://www.ez-ai.nz/pricing" target="_blank" rel="noopener">EZ-AI, an Auckland provider whose pricing page lists AI assistants and agents at NZD 3,000 to 12,000 plus GST over three to six weeks, and hosting, monitoring and support from NZD 99 a month</a>. That is one provider's published price.</p>
+
+<h2>What do model usage and automation platforms cost?</h2>
+<p>Model usage is billed per million tokens in US dollars and is often the smallest line on the bill. Anthropic lists Claude Sonnet 5.5 at USD 2 per million input tokens and USD 10 per million output tokens. Automation platforms charge a monthly fee by runs or tasks, from about NZD 40 a month for n8n's entry cloud plan.</p>
+<p>A token is a small chunk of text. Each run, you pay for the tokens the agent reads and writes. As of 16 October 2026, <a class="go" href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener">Anthropic's pricing page, which states all prices in USD, lists Claude Haiku 5.5 at USD 0.10 in and USD 0.50 out per million tokens, Sonnet 5.5 at USD 2 and 10, and Opus 5.5 at USD 4 and 20, with a 50% discount for batch processing</a>. <a class="go" href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener">OpenAI's API pricing page lists gpt-6.1-sol at $2 per million input tokens and $10 per million output tokens, and gpt-6-luna at $0.10 and $0.50</a>.</p>
+<p>An agent that runs 1,000 times a month, reading 4,000 tokens and writing 800 each time, costs about USD 16 a month on Sonnet 5.5, or under USD 1 on Haiku 5.5. At <a class="go" href="https://www.rbnz.govt.nz/statistics/series/exchange-and-interest-rates/exchange-rates-and-the-trade-weighted-index" target="_blank" rel="noopener">the Reserve Bank of New Zealand's 15 October 2026 rates of USD 0.56, EUR 0.50 and AUD 0.81 per NZD</a>, USD 16 is about NZD 28.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Platform and plan</th><th>Published price</th><th>Included each month</th></tr></thead>
+<tbody>
+<tr><td>n8n Cloud Starter</td><td>EUR 20 a month, billed annually (about NZD 40)</td><td>2,500 workflow executions</td></tr>
+<tr><td>n8n Cloud Pro</td><td>EUR 50 a month, billed annually (about NZD 100)</td><td>10,000 executions</td></tr>
+<tr><td>n8n Cloud Business</td><td>EUR 667 a month, billed annually (about NZD 1,330)</td><td>40,000 executions</td></tr>
+<tr><td>n8n Community Edition</td><td>Free edition, self-hosted; you pay for the server</td><td>Whatever your server handles</td></tr>
+<tr><td>Zapier Professional</td><td>USD 19.99 a month billed annually, or USD 29.99 monthly</td><td>750 tasks</td></tr>
+<tr><td>Zapier Professional</td><td>USD 49 a month billed annually, or USD 73.50 monthly (about NZD 87 to 131)</td><td>2,000 tasks</td></tr>
+<tr><td>Make Free</td><td>No charge</td><td>1,000 credits</td></tr>
+</tbody>
+</table></div>
+<p>The units differ. <a class="go" href="https://n8n.io/pricing/" target="_blank" rel="noopener">n8n's pricing page counts an execution as one run of a whole workflow, however many steps it has</a>. <a class="go" href="https://zapier.com/pricing" target="_blank" rel="noopener">Zapier counts a task each time it completes a unit of work, sets prices in USD and converts at the exchange rate when you pay</a>. <a class="go" href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make bills in credits, where most actions use one credit, and its Free plan includes 1,000 credits a month</a>. A ten-step agent that runs 1,000 times is 1,000 n8n executions and up to about 10,000 Zapier tasks or Make credits. Make's paid prices did not display when checked. <a class="go" href="https://docs.n8n.io/hosting/community-edition-features/" target="_blank" rel="noopener">n8n's documentation says you can stay on the free Community edition indefinitely</a>, swapping a subscription for server costs and upkeep.</p>
+
+<h2>What might a small, medium and large AI agent cost? A worked example</h2>
+<p>Built from the published components above, a one-workflow agent works out at about NZD 3,100 to 7,200 to build and NZD 330 to 790 a month to run. A CRM-connected agent lands near NZD 10,400 to 21,600 and NZD 820 to 1,740 a month. The day counts and volumes are assumptions.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Illustration only</th><th>Build days (assumed)</th><th>Build cost</th><th>Model usage a month</th><th>Platform a month</th><th>Upkeep a month (assumed hours)</th><th>Running cost a month</th></tr></thead>
+<tbody>
+<tr><td><b>Small:</b> drafts enquiry replies for approval</td><td>3 to 5</td><td>NZD 3,120 to 7,200</td><td>About NZD 30 (USD 16)</td><td>n8n Starter, about NZD 40</td><td>2 to 4 hours, NZD 260 to 720</td><td>About NZD 330 to 790</td></tr>
+<tr><td><b>Medium:</b> qualifies leads against the CRM and drafts follow-ups</td><td>10 to 15</td><td>NZD 10,400 to 21,600</td><td>About NZD 200 (USD 110)</td><td>n8n Pro, about NZD 100</td><td>4 to 8 hours, NZD 520 to 1,440</td><td>About NZD 820 to 1,740</td></tr>
+<tr><td><b>Large:</b> several connected agents with reporting</td><td>20 to 30</td><td>NZD 20,800 to 43,200</td><td>About NZD 1,110 (USD 620)</td><td>n8n Business, about NZD 1,330</td><td>8 to 16 hours, NZD 1,040 to 2,880</td><td>About NZD 3,480 to 5,320</td></tr>
+</tbody>
+</table></div>
+<p>Method: build and upkeep hours at eight hours a day and Robert Walters' Auckland AI engineer range of NZD 130 to 180 an hour. Model usage is Sonnet 5.5 at list price for 1,000, 5,000 and 20,000 runs a month (4,000, 6,000 and 8,000 tokens in; 800, 1,000 and 1,500 out). Platforms are n8n's annual-billed cloud plans. All figures use the Reserve Bank's 15 October 2026 rates and exclude GST.</p>
+<p>Build hours dominate the first-year cost at every size, and upkeep dominates the monthly bill for small and medium agents. A cheaper model saves tens of dollars a month; a clear scope can save days. The <a class="go" href="/blog/ai-marketing-scope-of-work.html">guide to an AI marketing scope of work</a> lists what a good scope covers.</p>
+
+<h2>What pushes the cost of an AI agent up or down?</h2>
+<p>The number of systems the agent connects to, the state of your data and how much of its output a person must check drive most of the cost. An agent that reads one inbox and drafts replies for approval is quick to build. One that writes to your CRM, accounting software and calendar needs far more testing.</p>
+<ul>
+<li><b>Integrations.</b> Each connected system adds build and test time, and can change later.</li>
+<li><b>Drafting versus acting.</b> An agent that drafts for a person to approve is cheaper to build safely than one that sends, books or updates records on its own.</li>
+<li><b>Data quality.</b> Duplicates and missing records add cleaning work.</li>
+<li><b>The review step.</b> A <a class="go" href="/glossary/#human-in-the-loop">human in the loop</a> who approves anything sent or spent adds a little build time and catches errors before customers see them.</li>
+<li><b>Privacy work.</b> <a class="go" href="https://www.privacy.org.nz/resources-and-learning/a-z-topics/ai/" target="_blank" rel="noopener">New Zealand's Privacy Commissioner recommends a privacy impact assessment before you start using AI tools, updated regularly</a>.</li>
+<li><b>Model choice.</b> On Anthropic's price list, Opus 5.5 costs 40 times as much per input token as Haiku 5.5, so match the model to the task.</li>
+<li><b>A working manual process.</b> A task your team already does the same way each time is quicker to copy.</li>
+</ul>
+
+<h2>Setup fee or monthly fee: what should each cover, and what should you own?</h2>
+<p>A setup fee should cover scoping, the build, testing, documentation and a handover session. A monthly fee should cover monitoring, fixes when a connected tool changes and a set number of hours for changes. At the end you should own the accounts, workflows, prompts, documentation and data, with every subscription billed in your business's name.</p>
+<p>Ask how many hours the monthly fee includes, and put model and platform subscriptions on your own card so you see usage at cost. At handover you should hold:</p>
+<ul>
+<li>The platform account (n8n, Zapier or Make) and the model API account, both in your business's name</li>
+<li>An export of every workflow, plus the prompts and instructions the agent follows</li>
+<li>Written documentation of what the agent reads, what it writes and who to call when it breaks</li>
+<li>The test cases, so a different builder can make changes safely</li>
+<li>Your data, exportable at any time</li>
+</ul>
+<p><a class="go" href="https://www.ez-ai.nz/pricing" target="_blank" rel="noopener">EZ-AI's pricing page says there is no lock-in and that the code and the cloud account belong to the client</a>. Ask for the same clause in your contract. For agents inside marketing workflows, see the glossary entry on <a class="go" href="/glossary/#marketing-automation">marketing automation</a> and the <a class="go" href="/blog/ai-marketing-automation-small-business.html">guide to AI marketing automation for small business</a>.</p>
+
+<h2>What are the red flags in an AI agent quote?</h2>
+<p>The clearest red flags are a single lump sum with no breakdown, model usage bundled into a flat fee with no usage report, accounts set up in the provider's name, and no review step anywhere in the design. Each one hides cost or risk.</p>
+<ul>
+<li>One total with no split between build hours, platform, model usage and upkeep</li>
+<li>Model or platform costs marked up, or bundled so you cannot see usage</li>
+<li>No testing plan, and no step where a person approves outputs that reach customers</li>
+<li>Claims that the agent will run fully on its own from day one</li>
+<li>A long minimum term before you have seen the agent run on your own data</li>
+</ul>
+<p><a class="go" href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls, and estimates only about 130 of the thousands of agentic AI vendors are real</a>. A written scope with a measurable outcome answers the value question, and visible costs plus a review step answer the other two. The <a class="go" href="/blog/ai-agency-vs-ai-consultant-nz.html">guide to AI agencies and AI consultants in NZ</a> has more vetting questions.</p>
+
+<h2>How does GST apply to AI agent development?</h2>
+<p>A New Zealand builder registered for GST adds 15% to its quote. For overseas software, Inland Revenue's rules mean a supplier treats you as unregistered until you state you are GST registered or give your GST number or NZBN, so add it to every account. Businesses that are not registered should add 15% to any plus-GST price before comparing.</p>
+<p><a class="go" href="https://www.ird.govt.nz/gst" target="_blank" rel="noopener">Inland Revenue's GST page states that GST is charged at a rate of 15%</a>. <a class="go" href="https://www.ird.govt.nz/gst/gst-for-overseas-businesses/supplying-remote-services-into-new-zealand" target="_blank" rel="noopener">IRD's guidance for overseas businesses, updated 12 September 2026, says a supplier of remote services need not register for GST if it only sells to New Zealand businesses that are already GST registered, and must treat customers as unregistered unless they state they are registered or provide a GST number or NZBN</a>. Enter your GST number in each account's billing settings, and confirm the treatment with your accountant.</p>
+<p>In Australia, <a class="go" href="https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/how-gst-works" target="_blank" rel="noopener">the ATO's How GST works page, updated 14 September 2026, sets GST at 10% and requires registration once GST turnover reaches AUD 75,000</a>.</p>
+
+<h2>Where Flow AI fits</h2>
+<p>Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every agent runs on your own accounts.</p>
+<p>Teams contract a build, which starts with a written scope and is priced per project. The <a class="go" href="/ai-marketing-services/ai-agent-development">AI agent development page</a> lists the agents Flow AI builds, and the <a class="go" href="/sprints/">sprints page</a> shows what a build covers. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through <a class="go" href="/about.html#hire">the hiring page</a>.</p>
+
+<h2>The short version</h2>
+<p>An AI agent's cost is mostly people time. At Auckland contract rates of NZD 130 to 180 an hour, a one-workflow agent costs about NZD 3,100 to 7,200 to build, and a CRM-connected agent about NZD 10,400 to 21,600. Model and platform fees run about NZD 70 to 300 a month; upkeep hours cost more.</p>
+<p>Ask for a quote split into the four parts, keep every account in your name, and add GST where it applies. The <a class="go" href="/blog/ai-marketing-cost-australia-new-zealand.html">AI marketing cost guide for Australia and New Zealand</a> compares agents with agencies, freelancers and hires, and the <a class="go" href="/blog/marketing-agency-cost-nz.html">marketing agency cost guide</a> covers retainers.</p>
+<p>To scope an agent against these numbers, <a class="go" href="/contact.html">talk to Amber</a>.</p>
