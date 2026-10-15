@@ -818,6 +818,57 @@
       ]
     },
     {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://www.flowai.co.nz/zh/skills/#anz-marketing-skills",
+      "name": "ANZ marketing skills",
+      "description": "六个开源的 Claude Code 技能，服务新西兰和澳大利亚的营销工作：本地 SEO、邮件与短信合规、广告声明审查、新西兰与澳洲英语及毛利语、营销日历，以及奥克兰本地营销。",
+      "url": "https://www.flowai.co.nz/zh/skills/#anz-marketing-skills",
+      "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-local-seo",
+          "url": "https://www.flowai.co.nz/zh/skills/#nz-au-local-seo",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-local-seo/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-email-sms-compliance",
+          "url": "https://www.flowai.co.nz/zh/skills/#nz-au-email-sms-compliance",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-email-sms-compliance/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-ad-claims-check",
+          "url": "https://www.flowai.co.nz/zh/skills/#nz-au-ad-claims-check",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-ad-claims-check/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-spelling-te-reo",
+          "url": "https://www.flowai.co.nz/zh/skills/#nz-au-spelling-te-reo",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-spelling-te-reo/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-marketing-calendar",
+          "url": "https://www.flowai.co.nz/zh/skills/#nz-au-marketing-calendar",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-marketing-calendar/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "auckland-local-marketing",
+          "url": "https://www.flowai.co.nz/zh/skills/#auckland-local-marketing",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/auckland-local-marketing/SKILL.md"
+        }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -1003,7 +1054,7 @@
     .empty-state b { display: block; margin-bottom: 0.4rem; color: var(--fg); font-size: 1.1rem; font-weight: 600; }
 
     /* This page reveals with its own observer: is-visible must beat site.css's is-hidden */
-    .reveal.is-hidden.is-visible { opacity: 1; transform: none; }
+    .reveal.is-hidden.is-visible { opacity: 1; transform: none; filter: none; }
 
     @media (max-width: 900px) {
       .skill-card { grid-template-columns: 1fr; }
@@ -1074,6 +1125,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <code>npx skills add Amberlanqinyun/geo-seo-claude</code>
           <button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude" aria-label="复制 GEO 套件安装命令">复制</button>
           <p class="small">建议从 GEO 套件开始：1 个总控技能，外加 11 个专项技能。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="centered" id="anz-marketing-skills" aria-labelledby="anz-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <p class="eyebrow">ANZ 营销技能包</p>
+          <h2 id="anz-title">面向新西兰和澳大利亚的营销技能。</h2>
+          <p class="lead">六个开源技能，把本地营销人每天都在用的知识交给 Claude Code：这里的人怎么搜索，邮件和广告法规有哪些要求，两国各自怎么拼写，一年里的营销节点落在哪里。在奥克兰开发，欢迎你提交 pull request，一起把它做得更好。</p>
+        </div>
+
+        <div class="skill-bottom reveal" aria-label="ANZ 营销技能包安装命令" style="max-width:44rem; margin-top:clamp(2rem, 4vw, 3rem); text-align:left">
+          <p class="small" style="margin:0">作为 Claude Code 插件，一次装好全部六个技能：</p>
+          <div class="command"><code>/plugin marketplace add Amberlanqinyun/anz-marketing-skills</code><button class="copy-button" type="button" data-copy="/plugin marketplace add Amberlanqinyun/anz-marketing-skills" aria-label="复制插件市场添加命令">复制</button></div>
+          <div class="command"><code>/plugin install anz-marketing@anz-marketing-skills</code><button class="copy-button" type="button" data-copy="/plugin install anz-marketing@anz-marketing-skills" aria-label="复制插件安装命令">复制</button></div>
+          <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills" target="_blank" rel="noopener">打开代码仓库 ↗</a><span>MIT 许可，事实均经官方来源核实</span></div>
+        </div>
+
+        <div class="skills-grid" style="text-align:left; margin-top:clamp(2.5rem, 5vw, 3.5rem)">
+          <article class="skill-card reveal" id="nz-au-local-seo">
+            <div>
+              <div class="skill-meta"><span>nz-au-local-seo</span><span>Flow AI</span></div>
+              <h3>新西兰与澳洲本地 SEO</h3>
+              <p class="skill-description">为 google.co.nz 和 google.com.au 规划本地搜索，涵盖 Google 商家资料、NZBN 或 ABN 信息、hreflang 和城区页面。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-local-seo/SKILL.md" target="_blank" rel="noopener">查看源码 ↗</a><span>本地搜索</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-email-sms-compliance">
+            <div>
+              <div class="skill-meta"><span>nz-au-email-sms-compliance</span><span>Flow AI</span></div>
+              <h3>邮件与短信合规</h3>
+              <p class="skill-description">对照新西兰《2007 年非应邀电子信息法》、澳大利亚《2003 年垃圾信息法》和两国隐私法，检查邮件、短信和即时消息营销。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-email-sms-compliance/SKILL.md" target="_blank" rel="noopener">查看源码 ↗</a><span>同意与退订</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-ad-claims-check">
+            <div>
+              <div class="skill-meta"><span>nz-au-ad-claims-check</span><span>Flow AI</span></div>
+              <h3>广告声明审查</h3>
+              <p class="skill-description">对照新西兰《公平交易法》、澳大利亚消费者法和两国广告准则审查广告、落地页和社交帖子，并给出保留卖点的合规改写。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-ad-claims-check/SKILL.md" target="_blank" rel="noopener">查看源码 ↗</a><span>声明与证据</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-spelling-te-reo">
+            <div>
+              <div class="skill-meta"><span>nz-au-spelling-te-reo</span><span>Flow AI</span></div>
+              <h3>新西兰与澳洲英语，以及毛利语</h3>
+              <p class="skill-description">把文案改写成地道的新西兰或澳大利亚英语，价格含 GST，毛利语（te reo Māori）拼写准确，长音符号一个不落。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-spelling-te-reo/SKILL.md" target="_blank" rel="noopener">查看源码 ↗</a><span>本地文案</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-marketing-calendar">
+            <div>
+              <div class="skill-meta"><span>nz-au-marketing-calendar</span><span>Flow AI</span></div>
+              <h3>新西兰与澳洲营销日历</h3>
+              <p class="skill-description">围绕公众假期、Matariki（毛利新年）、财年结束、南半球的夏天和学校学期，排出一份带日期的营销日历。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-marketing-calendar/SKILL.md" target="_blank" rel="noopener">查看源码 ↗</a><span>带日期的活动计划</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="auckland-local-marketing">
+            <div>
+              <div class="skill-meta"><span>auckland-local-marketing</span><span>Flow AI</span></div>
+              <h3>奥克兰本地营销</h3>
+              <p class="skill-description">按城区规划奥克兰营销，涵盖 Neighbourly、本地社群，以及面向奥克兰华人的小红书和微信。</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/auckland-local-marketing/SKILL.md" target="_blank" rel="noopener">查看源码 ↗</a><span>本地渠道</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -2734,7 +2865,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
     (function () {
-      var cards = Array.prototype.slice.call(document.querySelectorAll('.skill-card'));
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#skills-grid .skill-card'));
       var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
       var search = document.getElementById('skill-search');
       var count = document.getElementById('result-count');

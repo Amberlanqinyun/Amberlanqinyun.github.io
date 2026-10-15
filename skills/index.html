@@ -818,6 +818,57 @@
       ]
     },
     {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://www.flowai.co.nz/skills/#anz-marketing-skills",
+      "name": "ANZ marketing skills",
+      "description": "Six open-source Claude Code skills for marketing in New Zealand and Australia: local SEO, email and SMS compliance, ad claims, NZ and Australian English with te reo Māori, the marketing calendar, and Auckland local marketing.",
+      "url": "https://www.flowai.co.nz/skills/#anz-marketing-skills",
+      "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-local-seo",
+          "url": "https://www.flowai.co.nz/skills/#nz-au-local-seo",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-local-seo/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-email-sms-compliance",
+          "url": "https://www.flowai.co.nz/skills/#nz-au-email-sms-compliance",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-email-sms-compliance/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-ad-claims-check",
+          "url": "https://www.flowai.co.nz/skills/#nz-au-ad-claims-check",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-ad-claims-check/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-spelling-te-reo",
+          "url": "https://www.flowai.co.nz/skills/#nz-au-spelling-te-reo",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-spelling-te-reo/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nz-au-marketing-calendar",
+          "url": "https://www.flowai.co.nz/skills/#nz-au-marketing-calendar",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-marketing-calendar/SKILL.md"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "auckland-local-marketing",
+          "url": "https://www.flowai.co.nz/skills/#auckland-local-marketing",
+          "codeRepository": "https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/auckland-local-marketing/SKILL.md"
+        }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -1003,7 +1054,7 @@
     .empty-state b { display: block; margin-bottom: 0.4rem; color: var(--fg); font-size: 1.1rem; font-weight: 600; }
 
     /* This page reveals with its own observer: is-visible must beat site.css's is-hidden */
-    .reveal.is-hidden.is-visible { opacity: 1; transform: none; }
+    .reveal.is-hidden.is-visible { opacity: 1; transform: none; filter: none; }
 
     @media (max-width: 900px) {
       .skill-card { grid-template-columns: 1fr; }
@@ -1074,6 +1125,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <code>npx skills add Amberlanqinyun/geo-seo-claude</code>
           <button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude" aria-label="Copy GEO suite install command">Copy</button>
           <p class="small">Start with the GEO suite: one operator plus 11 specialist skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="centered" id="anz-marketing-skills" aria-labelledby="anz-title">
+      <div class="wrap">
+        <div class="stack reveal">
+          <p class="eyebrow">ANZ marketing skills</p>
+          <h2 id="anz-title">Marketing skills for New Zealand and Australia.</h2>
+          <p class="lead">Six open-source skills that give Claude Code the local knowledge a marketer here uses every day: how people search, what email and advertising law asks of you, how each country spells, and when the year turns. Built in Auckland and open to your pull requests.</p>
+        </div>
+
+        <div class="skill-bottom reveal" aria-label="ANZ marketing skills install commands" style="max-width:44rem; margin-top:clamp(2rem, 4vw, 3rem); text-align:left">
+          <p class="small" style="margin:0">Install all six as a Claude Code plugin:</p>
+          <div class="command"><code>/plugin marketplace add Amberlanqinyun/anz-marketing-skills</code><button class="copy-button" type="button" data-copy="/plugin marketplace add Amberlanqinyun/anz-marketing-skills" aria-label="Copy the marketplace command">Copy</button></div>
+          <div class="command"><code>/plugin install anz-marketing@anz-marketing-skills</code><button class="copy-button" type="button" data-copy="/plugin install anz-marketing@anz-marketing-skills" aria-label="Copy the plugin install command">Copy</button></div>
+          <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills" target="_blank" rel="noopener">Open the repository ↗</a><span>MIT licence, facts checked on official sources</span></div>
+        </div>
+
+        <div class="skills-grid" style="text-align:left; margin-top:clamp(2.5rem, 5vw, 3.5rem)">
+          <article class="skill-card reveal" id="nz-au-local-seo">
+            <div>
+              <div class="skill-meta"><span>nz-au-local-seo</span><span>Flow AI</span></div>
+              <h3>NZ and Australia local SEO</h3>
+              <p class="skill-description">Plans local search for google.co.nz and google.com.au, from Google Business Profile and NZBN or ABN details to hreflang and suburb pages.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-local-seo/SKILL.md" target="_blank" rel="noopener">Inspect source ↗</a><span>Local search</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-email-sms-compliance">
+            <div>
+              <div class="skill-meta"><span>nz-au-email-sms-compliance</span><span>Flow AI</span></div>
+              <h3>Email and SMS compliance</h3>
+              <p class="skill-description">Checks email, SMS and messaging campaigns against the NZ Unsolicited Electronic Messages Act 2007, the Australian Spam Act 2003 and both Privacy Acts.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-email-sms-compliance/SKILL.md" target="_blank" rel="noopener">Inspect source ↗</a><span>Consent and unsubscribe</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-ad-claims-check">
+            <div>
+              <div class="skill-meta"><span>nz-au-ad-claims-check</span><span>Flow AI</span></div>
+              <h3>Ad claims check</h3>
+              <p class="skill-description">Reviews ads, landing pages and social posts against the NZ Fair Trading Act, the Australian Consumer Law and both advertising codes, then suggests a compliant rewrite that keeps the selling point.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-ad-claims-check/SKILL.md" target="_blank" rel="noopener">Inspect source ↗</a><span>Claims and evidence</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-spelling-te-reo">
+            <div>
+              <div class="skill-meta"><span>nz-au-spelling-te-reo</span><span>Flow AI</span></div>
+              <h3>NZ and Australian English, and te reo Māori</h3>
+              <p class="skill-description">Localises copy into NZ or Australian English, with GST-inclusive prices and te reo Māori spelled correctly, macrons included.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-spelling-te-reo/SKILL.md" target="_blank" rel="noopener">Inspect source ↗</a><span>Local copy</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="nz-au-marketing-calendar">
+            <div>
+              <div class="skill-meta"><span>nz-au-marketing-calendar</span><span>Flow AI</span></div>
+              <h3>NZ and Australia marketing calendar</h3>
+              <p class="skill-description">Builds a campaign calendar around public holidays, Matariki, the end of the financial year, the southern summer and school terms.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/nz-au-marketing-calendar/SKILL.md" target="_blank" rel="noopener">Inspect source ↗</a><span>Dated campaign plan</span></div>
+            </div>
+          </article>
+          <article class="skill-card reveal" id="auckland-local-marketing">
+            <div>
+              <div class="skill-meta"><span>auckland-local-marketing</span><span>Flow AI</span></div>
+              <h3>Auckland local marketing</h3>
+              <p class="skill-description">Plans Auckland marketing suburb by suburb, with Neighbourly and local groups, plus Xiaohongshu and WeChat for Chinese-speaking Aucklanders.</p>
+            </div>
+            <div class="skill-bottom">
+              <div class="skill-links"><a class="source-link" href="https://github.com/Amberlanqinyun/anz-marketing-skills/blob/main/skills/auckland-local-marketing/SKILL.md" target="_blank" rel="noopener">Inspect source ↗</a><span>Local channels</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -2734,7 +2865,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
     (function () {
-      var cards = Array.prototype.slice.call(document.querySelectorAll('.skill-card'));
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#skills-grid .skill-card'));
       var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
       var search = document.getElementById('skill-search');
       var count = document.getElementById('result-count');
