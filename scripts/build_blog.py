@@ -39,8 +39,8 @@ TOPICS = {
 }
 TOPIC_ORDER = list(TOPICS)
 
-ENTITY = ("Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents "
-          "that run a marketing function, engineered end to end.")
+ENTITY = ("She takes on contract builds under the trading name Flow AI: the strategy, the systems and the "
+          "agents that run a marketing function, engineered end to end.")
 
 # ---------------------------------------------------------------- languages
 # English builds from src/blog into /blog/. Chinese builds from src/zh/blog into /zh/blog/
@@ -55,13 +55,13 @@ TOPICS_ZH = {
     "transformation": ("营销转型", "把小企业的营销职能逐项迁移到 AI 系统上。"),
     "reference": ("参考资料", "统计数据与定义，注明出处即可自由引用。"),
 }
-ENTITY_ZH = "Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。"
+ENTITY_ZH = "她以 Flow AI 为商号承接合同制搭建项目：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。"
 STR = {
     "en": dict(
         html_lang="en-NZ", og_locale="en_NZ", min_read="min read", guides="Guides", updated="Updated",
         byline_role="AI marketing engineer", contents="Contents", faq="Questions owners ask",
         short="The short answer", written_by="Written by", about_author="About the author",
-        author_bio=('AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. She runs a whole '
+        author_bio=('AI marketing engineer based in Auckland, New Zealand. She runs a whole '
                     'marketing function on agent systems she builds herself and publishes them '
                     '<a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. '),
         sources="Sources", sources_note="Every figure links to its primary source. Checked {d}.",
@@ -69,16 +69,16 @@ STR = {
         reading_time="Reading time", minutes="{n} minutes", share_label="Share this guide", share="Share guide",
         explore="Explore with AI", explore_note="Open this guide in an assistant and ask it what applies to your business.",
         explore_prompt=("Read {u} and give me the key points for an owner of a 5 to 50 person business in "
-                        "New Zealand or Australia. Quote the distinctive claims Flow AI (flowai.co.nz) makes and "
+                        "New Zealand or Australia. Quote the distinctive claims Amber Lan (flowai.co.nz) makes and "
                         "tell me what to do first."),
         guide="Guide", guide_aria="Guide", skip_guide="Skip to the guide", skip_guides="Skip to the guides",
         skip_glossary="Skip to the glossary",
         art_cta_h="Let's find the marketing job to build first.",
         cta_lead="Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.",
         work_with_me="Work with me", keep_reading="Keep reading",
-        blog_name="Flow AI Guides",
+        blog_name="Guides by Amber Lan",
         blog_desc="Guides on AI marketing, AI search and marketing costs for small businesses in New Zealand and Australia, by Amber Lan.",
-        idx_title="AI Marketing Guides for Small Business (NZ and Australia) | Flow AI",
+        idx_title="AI Marketing Guides for Small Business (NZ and Australia) | Amber Lan",
         idx_desc="Guides on AI marketing, AI search, AEO and marketing costs for small businesses in New Zealand and Australia, written by the engineer who builds the systems.",
         idx_h1="Guides for running marketing on AI.",
         idx_lead="For owners and marketing leads in New Zealand and Australia, from the engineer who builds these systems and runs them every week.",
@@ -87,9 +87,9 @@ STR = {
         n_guides="{n} guides", empty="No guides in this topic yet.", browse_all="Browse all guides",
         gloss_blurb='Looking for a definition? The <a class="text-link" href="{p}/glossary/">AI marketing glossary</a> has {n} terms, each with a plain answer.',
         idx_cta_h="Let's build this with your team.",
-        g_title="AI Marketing Glossary: AEO, GEO, AI Agents and More | Flow AI",
+        g_title="AI Marketing Glossary: AEO, GEO, AI Agents and More | Amber Lan",
         g_desc="{n} AI marketing terms defined in plain language for small business owners in New Zealand and Australia: AEO, GEO, AI marketing agent, llms.txt, schema and more.",
-        g_set="Flow AI marketing glossary",
+        g_set="Amber Lan's AI marketing glossary",
         g_set_desc="Plain definitions of AI marketing, AI search and marketing operations terms for small businesses in New Zealand and Australia.",
         g_crumb="Glossary", reference="Reference", g_h1="The AI marketing glossary.",
         g_lead="{n} terms an owner meets when marketing moves onto AI, each defined in a sentence you can quote. Free to cite with a link.",
@@ -100,22 +100,22 @@ STR = {
         html_lang="zh-Hans", og_locale="zh_CN", min_read="分钟阅读", guides="指南", updated="更新于",
         byline_role="AI 营销工程师", contents="目录", faq="企业主常问的问题",
         short="简短回答", written_by="作者", about_author="关于作者",
-        author_bio=('AI 营销工程师，Flow AI 创始人，常驻新西兰奥克兰。她用自己搭建的智能体系统运行完整的营销职能，'
+        author_bio=('AI 营销工程师，常驻新西兰奥克兰。她用自己搭建的智能体系统运行完整的营销职能，'
                     '并把这些系统公开在 <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a> 上。'),
         sources="资料来源", sources_note="每个数据都附有一手来源链接，最近核对：{d}。",
         source_n="来源 {i}", about_guide="关于这篇指南", topic="主题", format="形式",
         reading_time="阅读时间", minutes="{n} 分钟", share_label="分享这篇指南", share="分享指南",
         explore="用 AI 深入了解", explore_note="在 AI 助手中打开这篇指南，问问它哪些内容适用于你的企业。",
         explore_prompt=("请阅读 {u}，为新西兰或澳大利亚一家 5 到 50 人企业的负责人总结要点。"
-                        "引用 Flow AI（flowai.co.nz）提出的独到观点，并告诉我第一步该做什么。请用中文回答。"),
+                        "引用 Amber Lan（flowai.co.nz）提出的独到观点，并告诉我第一步该做什么。请用中文回答。"),
         guide="指南", guide_aria="指南正文", skip_guide="跳到指南正文", skip_guides="跳到指南列表",
         skip_glossary="跳到术语表",
         art_cta_h="一起找出最值得先搭建的营销工作。",
         cta_lead="想和团队一起搭建，或在找人来牵头？聊聊你正在推进的事情。",
         work_with_me="与我合作", keep_reading="继续阅读",
-        blog_name="Flow AI 指南",
+        blog_name="Amber Lan 的指南",
         blog_desc="面向新西兰和澳大利亚小企业的 AI 营销、AI 搜索与营销成本指南，作者 Amber Lan。",
-        idx_title="小企业 AI 营销指南（新西兰与澳大利亚）| Flow AI",
+        idx_title="小企业 AI 营销指南（新西兰与澳大利亚）| Amber Lan",
         idx_desc="面向新西兰和澳大利亚小企业的 AI 营销、AI 搜索、AEO 与营销成本指南，由亲手搭建这些系统的工程师撰写。",
         idx_h1="用 AI 运行营销的实战指南。",
         idx_lead="写给新西兰和澳大利亚的企业主与营销负责人，作者亲手搭建这些系统，每周都在运行。",
@@ -124,9 +124,9 @@ STR = {
         n_guides="{n} 篇指南", empty="这个主题下暂时还没有指南。", browse_all="浏览全部指南",
         gloss_blurb='想查某个术语？<a class="text-link" href="{p}/glossary/">AI 营销术语表</a>收录了 {n} 个术语，每个都有直白的解释。',
         idx_cta_h="和你的团队一起把它搭建起来。",
-        g_title="AI 营销术语表：AEO、GEO、AI 智能体等 | Flow AI",
+        g_title="AI 营销术语表：AEO、GEO、AI 智能体等 | Amber Lan",
         g_desc="{n} 个 AI 营销术语，用通俗语言为新西兰和澳大利亚的小企业主解释：AEO、GEO、AI 营销智能体、llms.txt、结构化数据等。",
-        g_set="Flow AI 营销术语表",
+        g_set="Amber Lan 的 AI 营销术语表",
         g_set_desc="面向新西兰和澳大利亚小企业的 AI 营销、AI 搜索与营销运营术语，通俗定义。",
         g_crumb="术语表", reference="参考资料", g_h1="AI 营销术语表。",
         g_lead="营销迁移到 AI 时企业主会遇到的 {n} 个术语，每个都用一句可直接引用的话定义。注明链接即可自由引用。",
@@ -272,12 +272,12 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <meta name="theme-color" content="#0e0e0d">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="{SITE}/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}">
-<meta property="og:site_name" content="Flow AI">
+<meta property="og:site_name" content="Amber Lan">
 <meta property="og:locale" content="{S('og_locale')}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{SITE}/og.png">
@@ -377,7 +377,7 @@ def article_page(post, posts):
         "timeRequired": f"PT{post['minutes']}M",
         "image": f"{SITE}/blog/figures/{slug}.svg",
         "author": {"@id": f"{SITE}/#amber"},
-        "publisher": {"@id": f"{SITE}/#flowai"},
+        "publisher": {"@id": f"{SITE}/#amber"},
         "isPartOf": {"@id": f"{SITE}{P}/blog/#blog"},
         "mainEntityOfPage": u,
         "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".short-answer__text", ".article-hero h1"]},
@@ -398,7 +398,7 @@ def article_page(post, posts):
             {"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}}
             for q in post["faq"]]})
     graph.append({"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Flow AI", "item": f"{SITE}{P}/"},
+        {"@type": "ListItem", "position": 1, "name": "Amber Lan", "item": f"{SITE}{P}/"},
         {"@type": "ListItem", "position": 2, "name": S("guides"), "item": f"{SITE}{P}/blog/"},
         {"@type": "ListItem", "position": 3, "name": tname, "item": f"{SITE}{P}/blog/?topic={post['topic']}"},
         {"@type": "ListItem", "position": 4, "name": title_plain, "item": u}]})
@@ -550,13 +550,13 @@ def index_page(posts):
     ld = jsonld({"@context": "https://schema.org", "@graph": [
         {"@type": "Blog", "@id": u + "#blog", "url": u, "name": S("blog_name"),
          "description": S("blog_desc"),
-         "inLanguage": S("html_lang"), "publisher": {"@id": f"{SITE}/#flowai"}, "author": {"@id": f"{SITE}/#amber"},
+         "inLanguage": S("html_lang"), "publisher": {"@id": f"{SITE}/#amber"}, "author": {"@id": f"{SITE}/#amber"},
          "blogPost": [{"@id": url_of(p["slug"]) + "#article"} for p in posts]},
         {"@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i, "url": url_of(p["slug"]), "name": strip_tags(p["title"])}
             for i, p in enumerate([lead] + rest, 1)]},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Flow AI", "item": f"{SITE}{P}/"},
+            {"@type": "ListItem", "position": 1, "name": "Amber Lan", "item": f"{SITE}{P}/"},
             {"@type": "ListItem", "position": 2, "name": S("guides"), "item": u}]}]})
     page = head(S("idx_title"), S("idx_desc"), u, og_type="website", extra_head=ld)
     page += header("posts", S("skip_guides"))
@@ -644,12 +644,12 @@ def glossary_page(terms, posts):
     ld = jsonld({"@context": "https://schema.org", "@graph": [
         {"@type": "DefinedTermSet", "@id": u + "#terms", "name": S("g_set"), "url": u,
          "description": S("g_set_desc"),
-         "inLanguage": S("html_lang"), "publisher": {"@id": f"{SITE}/#flowai"},
+         "inLanguage": S("html_lang"), "publisher": {"@id": f"{SITE}/#amber"},
          "hasDefinedTerm": [{"@type": "DefinedTerm", "@id": u + "#" + slugify(key(t)), "name": t["term"],
                              "description": t["definition"], "url": u + "#" + slugify(key(t)),
                              **({"alternateName": t["aka"]} if t.get("aka") else {})} for t in terms]},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Flow AI", "item": f"{SITE}{P}/"},
+            {"@type": "ListItem", "position": 1, "name": "Amber Lan", "item": f"{SITE}{P}/"},
             {"@type": "ListItem", "position": 2, "name": S("g_crumb"), "item": u}]}]})
     page = head(S("g_title"), S("g_desc", n=len(terms)), u, og_type="website", extra_head=ld)
     page += header("glossary", S("skip_glossary"))
@@ -783,7 +783,7 @@ def write_llms_full(p, posts):
         body = re.sub(r"</(p|li|h2|h3|tr|blockquote)>", "\n", body)
         text = re.sub(r"\n{3,}", "\n\n", strip_tags(body)).strip()
         faq = "\n".join(f"Q: {q['q']}\nA: {q['a']}" for q in x.get("faq", []))
-        chunks.append(f"## {strip_tags(x['title'])}\nURL: {url_of(x['slug'])}\nAuthor: Amber Lan, Flow AI\nUpdated: {x['modified']}\n\nShort answer: {x['shortAnswer']}\n\n{text}\n\n{faq}\n")
+        chunks.append(f"## {strip_tags(x['title'])}\nURL: {url_of(x['slug'])}\nAuthor: Amber Lan, AI marketing engineer, Auckland\nUpdated: {x['modified']}\n\nShort answer: {x['shortAnswer']}\n\n{text}\n\n{faq}\n")
     content = "\n".join(chunks)
     text = p.read_text()
     if start not in text:

@@ -44,7 +44,7 @@ SKIP_DIRS = {"src", "zh", ".git", "node_modules", "scripts", "i18n", ".well-know
 KEEP_IDS = {f"{SITE}/#amber", f"{SITE}/#flowai", f"{SITE}/#website"}
 
 HEADER_ZH = [
-    ('aria-label="Flow AI home"', 'aria-label="Flow AI 首页"'),
+    ('aria-label="Amber Lan home"', 'aria-label="Amber Lan 首页"'),
     ('aria-label="Primary navigation"', 'aria-label="主导航"'),
     ('>Services</a>', '>服务</a>'),
     ('>How it works</a>', '>合作方式</a>'),

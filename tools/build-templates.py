@@ -196,13 +196,13 @@ def head(title, description, path, schema, og_type="website"):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="theme-color" content="#0e0e0d">
-<link rel="alternate" type="application/atom+xml" title="Flow AI · Amber Lan" href="{SITE}/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
 <link rel="canonical" href="{url}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
-<meta property="og:site_name" content="Flow AI">
+<meta property="og:site_name" content="Amber Lan">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE}/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -332,7 +332,7 @@ def gallery():
   </section>
 </main>
 """
-    page = head("Free agent templates | Flow AI", "Free agent templates from Flow AI. Pick one and it runs on your site, reviewed by a marketing engineer, within two working days. Or install it yourself in Claude Code.", "/templates/", schema) + body + foot()
+    page = head("Free agent templates | Amber Lan", "Free agent templates from Flow AI. Pick one and it runs on your site, reviewed by a marketing engineer, within two working days. Or install it yourself in Claude Code.", "/templates/", schema) + body + foot()
     (ROOT / "templates").mkdir(exist_ok=True)
     (ROOT / "templates/index.html").write_text(page)
 
@@ -387,7 +387,7 @@ def template_page(t):
              "name": t["name"], "description": t["lead"], "codeRepository": t["repo"],
              "license": "https://opensource.org/licenses/MIT", "isAccessibleForFree": True,
              "author": {"@type": "Person", "@id": f"{SITE}/#amber", "name": "Amber Lan"},
-             "publisher": {"@type": "Organization", "@id": f"{SITE}/#flowai", "name": "Flow AI"},
+             "publisher": {"@type": "Person", "@id": f"{SITE}/#amber", "name": "Amber Lan"},
              "dateModified": UPDATED},
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Agent templates", "item": f"{SITE}/templates/"},
@@ -514,7 +514,7 @@ def template_page(t):
 def privacy():
     schema = {"@context": "https://schema.org", "@type": "WebPage", "@id": f"{SITE}/privacy",
               "name": "Privacy policy", "dateModified": "2026-10-06",
-              "publisher": {"@type": "Organization", "@id": f"{SITE}/#flowai", "name": "Flow AI"}}
+              "publisher": {"@type": "Person", "@id": f"{SITE}/#amber", "name": "Amber Lan"}}
     mail = '<a class="text-link" href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a>'
     def ext(href, label):
         return f'<a class="text-link" href="{href}" target="_blank" rel="noopener">{label}</a>'
@@ -595,7 +595,7 @@ def privacy():
   </section>
 </main>
 """
-    page = head("Privacy policy | Flow AI", "How flowai.co.nz collects, uses and protects your information, who helps run the site, and how to see, correct or delete it under the NZ Privacy Act 2020.", "/privacy", schema) + body + foot()
+    page = head("Privacy policy | Amber Lan", "How flowai.co.nz collects, uses and protects your information, who helps run the site, and how to see, correct or delete it under the NZ Privacy Act 2020.", "/privacy", schema) + body + foot()
     (ROOT / "privacy.html").write_text(page)
 
 if __name__ == "__main__":
