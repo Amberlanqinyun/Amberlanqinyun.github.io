@@ -100,13 +100,15 @@
     }(t0));
   }
   var band = document.querySelector('.receipts');
+  /* The real numbers stay in place until the band is about to scroll in, so
+     a screenshot, a print or a reader who never scrolls never sees a zero.
+     The count starts just below the fold and lands as the band arrives. */
   if (band && io && !reduced) {
-    counters.forEach(function (c) { c.textContent = '0'; });
     new IntersectionObserver(function (entries, obs) {
       if (!entries[0].isIntersecting) return;
       counters.forEach(countUp);
       obs.disconnect();
-    }, { threshold: 0.35 }).observe(band);
+    }, { threshold: 0, rootMargin: '0px 0px 12% 0px' }).observe(band);
   }
 
   /* receipts band: mark live for the bars, even when counters are skipped */

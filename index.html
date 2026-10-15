@@ -237,10 +237,10 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=6">
+<link rel="stylesheet" href="/assets/highend.css?v=7">
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
-<script src="/assets/dot.js?v=6" defer></script>
+<script src="/assets/dot.js?v=7" defer></script>
 </head>
 
 <body>
@@ -447,25 +447,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="proof-title">Explore the work in the open.</h2>
             <p class="lead">Start with the systems, and judge the strategy by what they build.</p>
         </div>
-        <div class="grid grid-2 reveal" style="text-align:left">
-          <a class="proof-card proof-text" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener">
-            <h3>geo-seo-claude</h3>
-            <p>The toolkit Flow AI runs on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.</p>
-            <span class="text-link">Open on GitHub</span>
-          </a>
-          <a class="proof-card proof-text" href="/work/content-engine">
-            <h3>Content engine</h3>
-            <p>One source becomes a month of on-voice content for every channel.</p>
-            <span class="text-link">Read the case</span>
-          </a>
-        </div>
-        <div class="proof-case reveal" style="text-align:left">
-          <div>
-            <h3>Three demand engines. One pipeline.</h3>
-            <p class="small" style="margin-top:0.5rem">An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.</p>
-          </div>
-          <a class="text-link" href="/work/enterprise-gtm">Read the case</a>
-        </div>
+        <ol class="proof-list reveal">
+          <li><a class="proof-row" href="https://github.com/Amberlanqinyun/geo-seo-claude" target="_blank" rel="noopener"><span class="proof-row__kind">Open source</span><div class="proof-row__body"><h3>geo-seo-claude</h3><p>The toolkit Flow AI runs on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.</p></div><span class="text-link arrow-link">Open on GitHub</span></a></li>
+          <li><a class="proof-row" href="/work/content-engine"><span class="proof-row__kind">Open source</span><div class="proof-row__body"><h3>Content engine</h3><p>One source becomes a month of on-voice content for every channel.</p></div><span class="text-link arrow-link">Read the case</span></a></li>
+          <li><a class="proof-row" href="/work/enterprise-gtm"><span class="proof-row__kind">Case study</span><div class="proof-row__body"><h3>Three demand engines. One pipeline.</h3><p>An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.</p></div><span class="text-link arrow-link">Read the case</span></a></li>
+        </ol>
         <div class="install reveal">
           <code>npx skills add Amberlanqinyun/geo-seo-claude</code>
           <button class="copy-button" type="button" data-copy="npx skills add Amberlanqinyun/geo-seo-claude" aria-label="Copy the GEO toolkit install command">Copy</button>

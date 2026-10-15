@@ -473,6 +473,8 @@ window.FlowDot = (function () {
       var incl = ov.querySelector('.demo__run-incl'), inclRows = Array.prototype.slice.call(incl.querySelectorAll('.demo__run-card'));
       var capEl = ov.querySelector('.demo__run-cap'), barEl = ov.querySelector('.demo__run-bar b');
       var run = F.mount(rsvg, { role: 'flow', r: 11, dy: 2 });
+      /* The first frame is never empty: the ask and its caption are on screen before the run starts. */
+      m1.classList.add('is-on'); capEl.textContent = S.caps[0];
       /* the page it reads: six hairlines to the right of the core, one lit at a time */
       var lines = sel('g', { opacity: 0 }); rsvg.insertBefore(lines, rsvg.firstChild);
       var lineEls = [];
