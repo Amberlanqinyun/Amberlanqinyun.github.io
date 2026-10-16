@@ -707,3 +707,70 @@
 .qa summary::after { content: "+"; color: var(--accent); transition: transform 250ms var(--ease); }
 .qa[open] summary::after { transform: rotate(45deg); }
 @media (max-width: 960px) { .cv--min .role-panel { grid-template-columns: 1fr; } }
+
+/* ---- Airy pass (16 Oct 2026) ----------------------------------------------
+   Fewer small things, more room around each one. The tool logos now live in
+   the Capabilities expander and the "Before this" line is gone from the hero;
+   the rest is spacing and quieter labels. Prefixed with main.cv so it wins
+   over claude.css and highend.css, which load after this file. */
+
+/* Rhythm: more air between sections and between a heading and its content */
+main.cv section.sec { padding-block: clamp(6rem, 11vw, 9rem) clamp(3.5rem, 6vw, 5rem); }
+main.cv .min-head + * { margin-top: clamp(3rem, 5.5vw, 4.5rem); }
+main.cv .more { margin-top: var(--s-7); }
+
+/* Hero: name, one quiet role line, the intro and the buttons */
+main.cv .cv-hero .profile__text h1 { margin-top: var(--s-6); max-width: 15ch; }
+main.cv .cv-hero h1 span { margin-top: 0.4em; max-width: 22ch; font-size: 0.42em; letter-spacing: -0.02em; line-height: 1.2; }
+main.cv .cv-hero .profile__text .lead { margin-top: var(--s-7); }
+main.cv .cv-hero .profile__text .cta-row { margin-top: var(--s-8); }
+
+/* Results: a clear break from the hero, taller rows */
+main.cv .cv-proof { padding-top: clamp(3rem, 6vw, 5rem); }
+main.cv .p3 { padding-block: var(--s-8); }
+main.cv .p3__what { margin-top: var(--s-4); }
+
+/* What I do: three plain columns of links, no boxes and no pills */
+main.cv .map { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8); }
+main.cv .map__col { padding: var(--s-5) 0 0; border: 0; border-top: 1px solid var(--hair); border-radius: 0; background: none; }
+main.cv .map__group { margin-bottom: var(--s-5); color: var(--soft); font-size: 0.9375rem; letter-spacing: 0.005em; text-transform: none; }
+main.cv .map ul { display: grid; gap: var(--s-4); }
+main.cv .map li button {
+  padding: 0; border: 0; border-radius: 0; background: none;
+  color: var(--fg); font-size: 1.125rem; letter-spacing: -0.01em; white-space: normal; text-align: left;
+  transition: color 200ms var(--ease);
+}
+main.cv .map li button:hover, main.cv .map li button:focus-visible { background: none; color: var(--accent); }
+main.cv .loop { margin-top: clamp(3rem, 5vw, 4rem); }
+
+/* Career: more room inside the role card; focus areas read as one line */
+main.cv .cvc__panels { margin-top: var(--s-7); padding: clamp(2rem, 4vw, 3rem); }
+main.cv .role-panel .cvchips { display: block; }
+main.cv .role-panel .cvchips li { display: inline-block; padding: 0; border: 0; border-radius: 0; color: var(--muted); font-size: 15px; line-height: 1.7; white-space: nowrap; }
+main.cv .role-panel .cvchips li:not(:last-child)::after { content: "\00B7"; margin: 0 0.55rem; color: var(--soft); }
+
+/* Selected work: roomier cards, sentence-case tags */
+main.cv .work3 { gap: var(--s-5); }
+main.cv .w3 { gap: var(--s-4); min-height: 14rem; padding: var(--s-7) var(--s-6); }
+main.cv .w3__tag { font-size: 0.875rem; letter-spacing: 0.005em; text-transform: none; }
+
+/* The tool logos, now inside the Capabilities expander */
+main.cv .more__body .logos { margin-top: 0; padding: 0; border: 0; }
+main.cv .more__body .logos .hero-proof { justify-content: flex-start; gap: var(--s-4) var(--s-6); padding: 0; }
+
+@media (max-width: 960px) {
+  main.cv .map { grid-template-columns: 1fr; gap: var(--s-7); }
+  main.cv .work3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  main.cv section.sec { padding-block: clamp(4.5rem, 16vw, 6rem) clamp(2.5rem, 8vw, 3.5rem); }
+  /* Results as compact rows: the number on the left, what it means on the right */
+  main.cv .p3 {
+    grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr); column-gap: var(--s-5); row-gap: 0.2rem;
+    align-items: baseline; padding: var(--s-5) 0;
+  }
+  main.cv .p3__n { grid-row: span 2; font-size: 2rem; white-space: nowrap; }
+  main.cv .p3__what { margin-top: 0; font-size: 15px; }
+  main.cv .cv-hero .profile__photo { aspect-ratio: 3 / 2; }
+  main.cv .w3 { min-height: 0; padding: var(--s-6) var(--s-5); }
+}
