@@ -688,3 +688,44 @@ html.fdot-run { overflow-anchor: none; }
   .hero .stack .svc-places { justify-content: flex-start; }
   .profile__text .cta-row { align-items: flex-start; }
 }
+
+/* ---- Glass pass (16 Oct 2026) ----------------------------------------------
+   Every amber mark is the same glass as the buttons, the wordmark chip and
+   the orb: an amber tint, light along the top edge, a warm pool at the foot.
+   Unlit cells and tracks are clear glass, not flat grey. */
+:root {
+  --glass-amber:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.06) 48%, rgba(255, 255, 255, 0) 60%),
+    radial-gradient(120% 140% at 50% 120%, rgba(255, 214, 140, 0.75), rgba(228, 164, 60, 0) 65%),
+    rgba(228, 164, 60, 0.62);
+  --glass-amber-edge: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(255, 226, 173, 0.25);
+  --glass-amber-glow: 0 0 14px -2px rgba(228, 164, 60, 0.55);
+  --glass-clear:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015) 55%),
+    rgba(250, 248, 243, 0.03);
+  --glass-clear-edge: inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 0 0 1px rgba(250, 248, 243, 0.05);
+  --glass-grey:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.05) 55%),
+    rgba(250, 248, 243, 0.2);
+}
+
+/* Hours back, with receipts: lit hours are glass beads, the rest clear glass. */
+.hours i { background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
+.hours i.on { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+.js .fig:not(.is-in) .hours i.on { background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
+.stat .hours:not(.hours--wide) { gap: 4px; }
+.hours--wide i.on { box-shadow: var(--glass-amber-edge), 0 0 8px -2px rgba(228, 164, 60, 0.6); }
+
+/* Bars: a clear glass tube, filled with grey or amber glass. */
+.bar__track { height: 12px; background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
+.bar__fill { background: var(--glass-grey); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+.bar.is-us .bar__fill { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+.bar__range { background: repeating-linear-gradient(135deg, rgba(250, 248, 243, 0.28) 0 2px, transparent 2px 6px), var(--glass-clear); }
+
+/* The band itself reads as one sheet of glass, lit along its top edge. */
+#value::after {
+  background:
+    radial-gradient(60% 80% at 15% 0%, rgba(228, 164, 60, 0.06), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(250, 248, 243, 0.015) 30%, rgba(250, 248, 243, 0.015) 80%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
