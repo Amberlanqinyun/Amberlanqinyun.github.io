@@ -80,18 +80,18 @@ window.FlowDot = (function () {
 
   /* Eye types, drawn at the origin. Googly eyes share one size everywhere: a 7-unit
      white and a 3.3-unit pupil. Line eyes share one stroke. */
-  var EYE_R = 7, PUPIL_R = 3.3, LINE_W = 2.8, MOUTH_W = 2.4;
+  var EYE_R = 6.4, PUPIL_R = 4, LINE_W = 2, MOUTH_W = 2;
   var STYLES = {
-    googly: { label: 'Googly', note: 'A white eye and a glossy pupil that rolls inside it, with a little weight. The default for open eyes.' },
-    calm:   { label: 'Calm arcs', note: 'Closed and content. For agents that work quietly.', d: 'M-5.5 -1.5Q0 4.5 5.5 -1.5' },
-    happy:  { label: 'Happy arcs', note: 'Eyes smiling. Every face wears them when a run is done.', d: 'M-5.5 2Q0 -5.5 5.5 2' },
+    googly: { label: 'Open', note: 'A white eye with a big round pupil, no shine. It opens when something holds its attention.' },
+    calm:   { label: 'Calm arcs', note: 'Closed and content. For agents that work quietly.', d: 'M-4.8 -1.9Q0 4.4 4.8 -1.9' },
+    happy:  { label: 'Happy arcs', note: 'Eyes smiling. Every face wears them when a run is done.', d: 'M-4.8 1.9Q0 -4.4 4.8 1.9' },
     flat:   { label: 'Flat line', note: 'Unhurried and certain. Positioning wears it.', d: 'M-4.5 0H4.5' },
-    sleepy: { label: 'Sleepy', note: 'After ten at night in Auckland.', d: 'M-5 -.5Q0 3.5 5 -.5' },
+    sleepy: { label: 'Sleepy', note: 'After ten at night in Auckland.', d: 'M-4.8 -.6Q0 2.6 4.8 -.6' },
     lens:   { label: 'Lens', note: 'A ring of glass around one googly eye. AI search reads through it.' }
   };
   var MOUTHS = {
-    smile: 'M-6 -2Q0 4 6 -2', small: 'M-4.5 -1Q0 2.4 4.5 -1', wide: 'M-8 -3Q0 5 8 -3', side: 'M-3 0Q2 2 7 -2',
-    flat: 'M-4 0H4', grin: 'M-12 -4Q0 9 12 -4', wobble: 'M-7 0Q-3.5 -3 0 0Q3.5 3 7 0', o: 'o'
+    smile: 'M-6.6 -1.4C-4 3.2 2.6 3.6 5.6 -.2Q6.6 -1.4 6 -2.8', small: 'M-4.6 -.8C-2.4 2.2 2 2.4 4 -.2Q4.8 -1.1 4.3 -2.1', wide: 'M-8 -2.4C-5 3.8 3.6 4.4 7.2 -.6Q8.2 -1.8 7.6 -3.2', side: 'M-3 0Q2 2 7 -2',
+    flat: 'M-4 0H4', grin: 'M-9.5 -3C-6 5 5 5.6 8.8 -1Q9.9 -2.4 9.2 -4', wobble: 'M-7 0Q-3.5 -3 0 0Q3.5 3 7 0', o: 'o'
   };
   /* Each agent: a body, its eyes (left, right), its resting mouth. The ten match the
      ten agents on /sprints/; positioning is Flow Intelligence's own job. Older keys stay
@@ -122,6 +122,37 @@ window.FlowDot = (function () {
   function spring(st, target, k, d, dt) { var a = (target - st.x) * k - st.v * d; st.v += a * dt; st.x += st.v * dt; }
 
   var dots = [], running = false;
+  /* Soft bodies. Each outline is sampled once into points; every frame the points ripple
+     slowly along their normals, the bottom sags a little the way something runny settles,
+     the side the eyes look toward bulges, and a nod or a change of state sets the whole
+     body jiggling like jelly before it settles. Reduced motion keeps the drawn shape. */
+  var OUTLINES = {}, FLUID_N = 40;
+  function outline(name, geo) {
+    if (OUTLINES[name]) return OUTLINES[name];
+    try {
+      var L = geo.getTotalLength(); if (!L) return null;
+      var pts = [], cx = 0, cy = 0, i;
+      for (i = 0; i < FLUID_N; i++) { var q = geo.getPointAtLength(L * i / FLUID_N); pts.push([q.x, q.y]); cx += q.x; cy += q.y; }
+      cx /= FLUID_N; cy /= FLUID_N;
+      var area = 0; for (i = 0; i < FLUID_N; i++) { var a = pts[i], b = pts[(i + 1) % FLUID_N]; area += a[0] * b[1] - b[0] * a[1]; }
+      var sgn = area > 0 ? 1 : -1, R = 0, out = [];
+      for (i = 0; i < FLUID_N; i++) {
+        var pv = pts[(i + FLUID_N - 1) % FLUID_N], nx = pts[(i + 1) % FLUID_N], tx = nx[0] - pv[0], ty = nx[1] - pv[1], tl = Math.hypot(tx, ty) || 1;
+        var ox = pts[i][0] - cx, oy = pts[i][1] - cy; R = Math.max(R, Math.hypot(ox, oy));
+        out.push({ x: pts[i][0], y: pts[i][1], nx: sgn * ty / tl, ny: -sgn * tx / tl, th: Math.atan2(oy, ox), dy: oy });
+      }
+      return (OUTLINES[name] = { pts: out, cx: cx, cy: cy, R: R });
+    } catch (e) { return null; }
+  }
+  function smoothPath(P) {
+    var n = P.length, d = 'M' + P[0][0].toFixed(2) + ' ' + P[0][1].toFixed(2);
+    for (var i = 0; i < n; i++) {
+      var p0 = P[(i + n - 1) % n], p1 = P[i], p2 = P[(i + 1) % n], p3 = P[(i + 2) % n];
+      d += 'C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(2) + ' ' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(2) + ' ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(2) + ' ' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(2) + ' ' + p2[0].toFixed(2) + ' ' + p2[1].toFixed(2);
+    }
+    return d + 'Z';
+  }
+
   function Dot(svg, o) {
     o = o || {}; defs();
     this.svg = svg; this.role = o.role || 'flow'; this.id = 'fd' + (++uid);
@@ -139,9 +170,10 @@ window.FlowDot = (function () {
     var sh = this.sh, gid = this.id + '-g';
 
     /* geometry once, used by every layer */
-    var lib = el('defs', {}); var geo = el('path', { id: gid, d: sh.d }); if (sh.tf) geo.setAttribute('transform', sh.tf); lib.appendChild(geo);
+    var lib = el('defs', {}); var geo = el('path', { id: gid, d: sh.d }); if (sh.tf) geo.setAttribute('transform', sh.tf); lib.appendChild(geo); this.geo = geo;
     var clip = el('clipPath', { id: this.id + '-c' }); var cu = el('use', { href: '#' + gid }); clip.appendChild(cu); lib.appendChild(clip);
     svg.appendChild(lib);
+    this.fluid = o.fluid !== false && !reduced ? outline(def.shape, geo) : null;
 
     this.halo = el('circle', { cx: this.cx, cy: this.cy, r: this.r * 2.1, fill: 'url(#flowdot-halo)', opacity: this.glow ? 1 : 0 });
     this.gooG = el('g', {}); if (o.goo) this.gooG.setAttribute('filter', 'url(#flowdot-goo)');
@@ -199,7 +231,8 @@ window.FlowDot = (function () {
     this.tiltS = { x: 0, v: 0 };
     this.target = [0, 0]; this.hold = null; this.t = Math.random() * 10; this.nextSac = 1 + Math.random() * 2; this.nextBlink = 2 + Math.random() * 3;
     this.nodAt = -1; this.lidAt = -1; this.mood = 'idle'; this.sized = this.material !== 'auto';
-    if (!this.sized) { var w0 = svg.getBoundingClientRect().width; if (w0 > 0) { this.sized = true; this.solid = w0 < 56; } }
+    this.small = false; this.open = { x: 0, v: 0 };
+    if (!this.sized) { var w0 = svg.getBoundingClientRect().width; if (w0 > 0) { this.sized = true; this.small = w0 < 56; this.solid = this.small; } }
     this.applyMaterial();
     this.set(o.state || 'idle');
     dots.push(this); start();
@@ -217,7 +250,7 @@ window.FlowDot = (function () {
   /* Draw both eyes and the mouth for the current mood. */
   Dot.prototype.drawFace = function () {
     var m = MOODS[this.mood] || MOODS.idle, self = this, sh = this.sh, night = !!m.night;
-    var line = night ? CREAM : this.line;
+    var line = night ? CREAM : this.line, lw = LINE_W * (this.small ? 1.5 : 1);
     this.parts = [];
     [0, 1].forEach(function (i) {
       var g = self.E[i]; while (g.firstChild) g.removeChild(g.firstChild);
@@ -225,24 +258,22 @@ window.FlowDot = (function () {
       if (type === 'googly' || type === 'lens') {
         var lid = el('clipPath', { id: self.id + '-l' + i }); p.lidRect = el('rect', { x: -EYE_R - 2, y: -EYE_R - 2, width: EYE_R * 2 + 4, height: EYE_R * 2 + 4 }); lid.appendChild(p.lidRect); g.appendChild(lid);
         var inner = el('g', { 'clip-path': 'url(#' + self.id + '-l' + i + ')' });
-        inner.appendChild(el('ellipse', { cx: 0, cy: 1.1, rx: EYE_R * 0.92, ry: EYE_R * 0.8, fill: '#000', opacity: 0.32, filter: 'url(#flowdot-soft)' }));
-        inner.appendChild(el('circle', { r: EYE_R, fill: 'url(#flowdot-white)' }));
-        p.pupil = el('circle', { r: PUPIL_R, fill: 'url(#flowdot-pupil)' }); inner.appendChild(p.pupil);
-        inner.appendChild(el('circle', { cx: -2.4, cy: -2.6, r: 1.5, fill: '#fff' }));
+        inner.appendChild(el('circle', { r: EYE_R, fill: '#fffdf8' }));
+        p.pupil = el('circle', { r: PUPIL_R, fill: INK }); inner.appendChild(p.pupil);
         g.appendChild(inner);
-        p.shut = el('path', { d: STYLES.calm.d, fill: 'none', stroke: line, 'stroke-width': LINE_W, 'stroke-linecap': 'round', opacity: 0 }); g.appendChild(p.shut);
+        p.shut = el('path', { d: STYLES.calm.d, fill: 'none', stroke: line, 'stroke-width': lw, 'stroke-linecap': 'round', opacity: 0 }); g.appendChild(p.shut);
         if (type === 'lens') g.appendChild(el('circle', { r: EYE_R + 2.8, fill: 'none', stroke: self.line === INK ? INK : 'rgba(250,248,243,.75)', 'stroke-width': 1.8, opacity: 0.85 }));
         if (night) inner.setAttribute('opacity', 0.9);
       } else {
         var d = (STYLES[type] || STYLES.calm).d;
-        g.appendChild(el('path', { d: d, fill: 'none', stroke: line, 'stroke-width': LINE_W, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+        g.appendChild(el('path', { d: d, fill: 'none', stroke: line, 'stroke-width': lw, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
       }
       self.parts.push(p);
     });
     var mg = this.mouthG; while (mg.firstChild) mg.removeChild(mg.firstChild);
     var mk = this.role === 'flow' ? m.mouth : ((this.mood === 'done' || this.mood === 'error' || this.mood === 'work') ? m.mouth : this.def.mouth);
-    if (MOUTHS[mk] === 'o') mg.appendChild(el('circle', { r: 3.2, fill: 'none', stroke: line, 'stroke-width': MOUTH_W }));
-    else mg.appendChild(el('path', { d: MOUTHS[mk] || MOUTHS.smile, fill: 'none', stroke: line, 'stroke-width': MOUTH_W, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+    if (MOUTHS[mk] === 'o') mg.appendChild(el('circle', { r: 3, fill: 'none', stroke: line, 'stroke-width': lw }));
+    else mg.appendChild(el('path', { d: MOUTHS[mk] || MOUTHS.smile, fill: 'none', stroke: line, 'stroke-width': lw, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
     return this;
   };
 
@@ -299,7 +330,7 @@ window.FlowDot = (function () {
   Dot.prototype.blink = function (twice) { if (!reduced) { this.lidAt = performance.now(); this.lidTwice = !!twice; } return this; };
 
   Dot.prototype.step = function (dt, w) {
-    if (!this.sized && w > 0) { this.sized = true; var small = w < 56; if (small !== this.solid) { this.solid = small; this.applyMaterial(); this.drawFace(); } }
+    if (!this.sized && w > 0) { this.sized = true; var small = w < 56; if (small !== this.small || small !== this.solid) { this.small = small; this.solid = small; this.applyMaterial(); this.drawFace(); } }
     var m = MOODS[this.mood] || MOODS.idle, r = this.r, k = this.k; this.t += dt;
     var tgt;
     if (this.hold) tgt = this.hold;
@@ -317,6 +348,19 @@ window.FlowDot = (function () {
     else { spring(this.gaze.x, tgt[0], 140, 18, dt); spring(this.gaze.y, tgt[1], 140, 18, dt); }
     var gx = Math.max(-1, Math.min(1, this.gaze.x.x)), gy = Math.max(-1, Math.min(1, this.gaze.y.x));
     spring(this.tiltS, gx * 5 + m.tilt + this.curious * 8, 40, 10, dt);
+    if (this.fluid) {
+      var F = this.fluid, t = this.t, busy = m.rate > 3 ? 1.5 : 1;
+      var jig = Math.min(2.2, Math.abs(this.wob.x) * 0.35 + Math.abs(this.tiltS.v) * 0.02 + (this.nodAt >= 0 ? 0.8 : 0));
+      var amp = (1.15 + jig * 1.6) * busy, sag = 2.2, lean = 2.6, P = [];
+      for (var fi = 0; fi < F.pts.length; fi++) {
+        var fp = F.pts[fi], th = fp.th;
+        var ripple = Math.sin(t * 1.1 + th * 2 + 0.7) * 0.6 + Math.sin(t * 1.7 - th * 3 + 2.1) * 0.4 + Math.sin(t * 6.5 + th * 4) * 0.25 * jig;
+        var down = Math.max(0, fp.dy / F.R), toward = Math.max(0, fp.nx * gx + fp.ny * gy);
+        var push = ripple * amp + lean * toward * toward;
+        P.push([fp.x + fp.nx * push + fp.nx * down * down * 0.6, fp.y + fp.ny * push + sag * down * down * down]);
+      }
+      this.geo.setAttribute('d', smoothPath(P));
+    }
     spring(this.wob, 0, 90, 7, dt);
     var breathe = reduced ? 0 : Math.sin(this.t * m.rate) * m.breath;
     var wobble = reduced ? 0 : this.wob.x * 0.05;
@@ -341,7 +385,9 @@ window.FlowDot = (function () {
         if (T > (this.lidTwice ? 0.54 : 0.28)) { this.lidAt = -1; lid = 1; }
       }
     }
-    lid = Math.max(0, Math.min(lid * nodLid, 1));
+    var attend = this.curious || this.hold || m.look || m.scan || m.daze || this.mood === 'review' ? 1 : 0;
+    if (reduced) this.open.x = attend; else spring(this.open, attend, 120, 16, dt);
+    lid = Math.max(0, Math.min(lid * nodLid * Math.max(0, Math.min(1, this.open.x)), 1));
     if (gy > 0) lid *= 1 - gy * 0.12;
     var kc = m.k * (1 + this.curious * 0.06);
     var kk = [kc * (1 - Math.max(0, gx) * 0.06 + Math.max(0, -gx) * 0.03), kc * (1 - Math.max(0, -gx) * 0.06 + Math.max(0, gx) * 0.03)];
