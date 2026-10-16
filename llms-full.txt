@@ -1,6 +1,6 @@
-# Amber Lan · AI marketing engineer · Auckland, New Zealand (flowai.co.nz)
+# Amber Lan · AI marketing engineer · AI marketing for New Zealand and Australia (flowai.co.nz)
 
-> Amber Lan is an AI marketing engineer in Auckland who provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. This site is also Amber Lan's open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. She takes selected contract builds with teams, under the trading name Flow AI, and is open to senior roles.
+> Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the AI agents that run marketing for businesses in New Zealand and Australia (search, content, outbound and reporting) with your team, then hands them over. Flow AI is the trading name she uses for contract builds. This site is also her open portfolio: the AI agent systems that run a marketing function, built and documented in public. She is open to senior marketing engineer and GTM engineer roles, remote from anywhere.
 
 Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
@@ -361,7 +361,7 @@ Written by
 
 Amber Lan
 
-AI marketing engineer and founder of Flow AI, based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them on GitHub. Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end.
+AI marketing engineer based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them on GitHub. She takes on contract builds under the trading name Flow AI: the strategy, the systems and the agents that run a marketing function, engineered end to end.
 
 ## Sources
 
@@ -431,7 +431,7 @@ AI for marketers, in practice: hand AI the research, drafts, repurposing and fol
 
 ---
 
-## Amber Lan | AI Marketing Services in NZ and Australia
+## Amber Lan | AI Marketing Engineer, NZ and Australia
 
 Source URL: https://www.flowai.co.nz/
 Type: Page
@@ -611,23 +611,31 @@ Proof
 
 Start with the systems, and judge the strategy by what they build.
 
+- Open source
+
 ### geo-seo-claude
 
 The toolkit Flow AI runs on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.
 
-Open on GitHub
+- Open on GitHub
+
+- Open source
 
 ### Content engine
 
 One source becomes a month of on-voice content for every channel.
 
-Read the case
+- Read the case
+
+- Case study
 
 ### Three demand engines. One pipeline.
 
 An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.
 
-Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
+- Read the case
+
+npx skills add Amberlanqinyun/geo-seo-claudeCopy
 
 Open source and open to inspect, one of 126 skills in the library.
 
@@ -675,7 +683,7 @@ Work with meHiring? Let's talk
 
 ---
 
-## AI Marketing Services for NZ and Australian Businesses | Amber Lan
+## AI Marketing Services for NZ and Australia | Amber Lan
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/
 Type: Service
@@ -852,7 +860,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Marketing Services in New Zealand | Flow AI, Auckland
+## AI Marketing Services NZ | Amber Lan, AI Marketing Engineer
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/new-zealand
 Type: Service
@@ -1043,7 +1051,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Marketing Services for Australian Businesses | Amber Lan
+## AI Marketing Services Australia | Amber Lan, AI Marketing Engineer
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/australia
 Type: Service
@@ -1234,7 +1242,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## AI Marketing Services in Auckland | Amber Lan
+## AI Marketing Services Auckland | Amber Lan, AI Marketing Engineer
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/auckland
 Type: Service
@@ -1763,7 +1771,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## Marketing Automation Consultant in NZ | Flow AI, Auckland
+## Marketing Automation Consultant NZ | Amber Lan, Auckland
 
 Source URL: https://www.flowai.co.nz/ai-marketing-services/marketing-automation-consultant
 Type: Service
@@ -2101,7 +2109,7 @@ The form takes a minute. I read every message myself and reply within two workin
 
 ---
 
-## How It Works: Your Marketing Team, One Agent a Week | Amber Lan
+## How It Works: One AI Marketing Agent a Week | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/
 Type: Page
@@ -2477,7 +2485,7 @@ Work with meExplore the engine in production
 
 ---
 
-## Positioning Sprint · fixed scope · Flow AI
+## Brand Positioning Sprint, NZ and Australia | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/positioning
 Type: Sprint
@@ -2711,7 +2719,7 @@ A short form. I reply personally.
 
 ---
 
-## Content Engine Sprint · fixed scope · Flow AI
+## AI Content Engine Sprint, NZ and Australia | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/content-engine
 Type: Sprint
@@ -2829,7 +2837,7 @@ A short form. I reply personally.
 
 ---
 
-## AI Lead Generation and LinkedIn Outreach: the Outbound Sprint | Amber Lan
+## AI Lead Generation and LinkedIn Outreach, NZ and AU | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/outbound
 Type: Sprint
@@ -2947,7 +2955,7 @@ A short form. I reply personally.
 
 ---
 
-## Analytics Sprint · fixed scope · Flow AI
+## Marketing Analytics Sprint, NZ and Australia | Amber Lan
 
 Source URL: https://www.flowai.co.nz/sprints/analytics
 Type: Sprint
@@ -3077,7 +3085,7 @@ A short form. I reply personally.
 
 ---
 
-## Three demand engines, one pipeline | Amber Lan
+## AI GTM Case Study: Three Demand Engines, One Pipeline | Amber Lan
 
 Source URL: https://www.flowai.co.nz/work/enterprise-gtm
 Type: Case study
@@ -3181,7 +3189,7 @@ Work with me
 
 ---
 
-## Content engine with a codified voice gate | Amber Lan
+## AI Content Engine With a Brand Voice Gate | Amber Lan
 
 Source URL: https://www.flowai.co.nz/work/content-engine
 Type: Case study
@@ -3285,7 +3293,7 @@ Work with me
 
 ---
 
-## An SEO toolkit built for AI citations | Amber Lan
+## AI SEO Toolkit Built for AI Citations | Amber Lan
 
 Source URL: https://www.flowai.co.nz/work/geo-seo-toolkit
 Type: Case study
@@ -3385,7 +3393,7 @@ Work with me
 
 ---
 
-## Amber Lan, AI Marketing Engineer and GTM Engineer, Auckland (Remote)
+## About Amber Lan, AI Marketing Engineer in Auckland, NZ
 
 Source URL: https://www.flowai.co.nz/about
 Type: Page
@@ -3398,65 +3406,11 @@ Now: running marketing solo at Novamind Labs in Auckland
 
 I'm Amber Lan, an AI marketing engineer in Auckland, New Zealand. I run a whole marketing function, strategy and execution, on AI agents I build.
 
-Work with meGet my CV
-
-Before this: Ipiphany AISime MotorsRockfort MarketsDFS GroupBarfoot & Thompson
-
-+40%Paid media performanceSime Motors+150%Organic traffic in 12 monthsRockfort Markets1 personRunning the whole marketing functionNovamind Labs, Auckland
+Work with meGet my CV+40%Paid media performanceSime Motors+150%Organic traffic in 12 monthsRockfort Markets1 personRunning the whole marketing functionNovamind Labs, Auckland
 
 ### All results, and how
 
 +40%Paid media performancebeforeafterSime Motors−30%Cost per acquisitionbeforeafterSime Motors+150%Organic traffic in 12 monthsbeforeafterRockfort Markets70%+Less content production effortbeforeafterIpiphany AI1Marketing function, run solo8 lanes, 1 person · since April 2026126Open-source skills16 mine, the rest credited · open the library
-
-- Claude
-
-- MMCP
-
-- Python
-
-- TypeScript
-
-- React
-
-- Next.js
-
-- HubSpot
-
-- AApollo
-
-- HHeyReach
-
-- n8n
-
-- Zapier
-
-- Google Analytics
-
-- Tag Manager
-
-- BigQuery
-
-- Google Ads
-
-- Meta Ads
-
-- LinkedIn Ads
-
-- Figma
-
-- Webflow
-
-- Canva
-
-- Notion
-
-- PPlaywright
-
-- FFmpeg
-
-- Vercel
-
-- GitHub
 
 What I do
 
@@ -3866,6 +3820,58 @@ Google Analytics 4, Advanced SEO, Data Science Foundations.
 
 Download the CV (PDF)
 
+### Tools I build with
+
+- Claude
+
+- MMCP
+
+- Python
+
+- TypeScript
+
+- React
+
+- Next.js
+
+- HubSpot
+
+- AApollo
+
+- HHeyReach
+
+- n8n
+
+- Zapier
+
+- Google Analytics
+
+- Tag Manager
+
+- BigQuery
+
+- Google Ads
+
+- Meta Ads
+
+- LinkedIn Ads
+
+- Figma
+
+- Webflow
+
+- Canva
+
+- Notion
+
+- PPlaywright
+
+- FFmpeg
+
+- Vercel
+
+- GitHub
+
 ### How I work
 
 ### Report what happened.
@@ -4036,7 +4042,7 @@ Yes, she is open to conversations about senior marketing engineer, GTM engineer 
 
 ---
 
-## The Flow AI manifesto | Marketing finally has its engineering layer
+## Marketing Finally Has Its Engineering Layer | Amber Lan
 
 Source URL: https://www.flowai.co.nz/manifesto
 Type: Page
@@ -4238,7 +4244,7 @@ Work with meExplore how it works
 
 ---
 
-## Free agent templates | Amber Lan
+## Free AI Agent Templates for Marketing | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/
 Type: Page
@@ -4345,7 +4351,7 @@ Work with meExplore how it works
 
 ---
 
-## Brand DNA researcher | Free Flow AI agent template
+## Brand DNA researcher: Free AI Agent Template | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/brand-dna
 Type: Template
@@ -4436,7 +4442,7 @@ Work with meInstall Flow Intelligence as a one-week positioning sprint
 
 ---
 
-## Full GEO audit | Free Flow AI agent template
+## Full GEO audit: Free AI Agent Template | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/geo-audit
 Type: Template
@@ -4527,7 +4533,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 ---
 
-## AI crawler access check | Free Flow AI agent template
+## AI crawler access check: Free AI Agent Template | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/ai-crawler-check
 Type: Template
@@ -4742,7 +4748,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 ---
 
-## AI citability scorer | Free Flow AI agent template
+## AI citability scorer: Free AI Agent Template | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/ai-citability
 Type: Template
@@ -4831,7 +4837,7 @@ Work with meInstall the search agent as a one-week AI-search sprint
 
 ---
 
-## Content evidence auditor | Free Flow AI agent template
+## Content evidence auditor: Free AI Agent Template | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/content-evidence-audit
 Type: Template
@@ -4922,7 +4928,7 @@ Work with meInstall the content agent as a one-week content engine sprint
 
 ---
 
-## Reddit opportunity researcher | Free Flow AI agent template
+## Reddit opportunity researcher: Free AI Agent Template | Amber Lan
 
 Source URL: https://www.flowai.co.nz/templates/reddit-opportunities
 Type: Template
@@ -5164,7 +5170,7 @@ Questions about privacy? Email amber.lan.growth.digital@gmail.com.
 
 ---
 
-## Work with Amber Lan | AI Marketing Engineer, Auckland NZ
+## Work with Amber Lan | AI Marketing Engineer, NZ and Australia
 
 Source URL: https://www.flowai.co.nz/contact
 Type: Page
@@ -12850,4 +12856,5 @@ Q: Do I still need SEO if I am doing AEO?
 A: Yes. Answer engine optimisation builds on SEO rather than replacing it. AI assistants read the same web Google crawls, and many draw on search indexes directly. A site that is technically healthy, fast, and clearly structured is the starting condition for both. AEO adds the layer that makes content quotable and machine-readable.
 Q: Can one person really run all of this?
 A: Yes, if the systems are built first. One person cannot hand-write a month of content and research fifty prospects a week. One person can absolutely review what systems produce and make the judgment calls. That is the entire design principle: machines do production, the human does strategy and quality control.
+
 <!-- blog-full:end -->

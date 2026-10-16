@@ -33,7 +33,7 @@
   },
   "src/zh/blog/ai-for-marketers.html": {
     "source": "src/blog/ai-for-marketers.html",
-    "sha": "a6451d6e70ec"
+    "sha": "aa1772a492e0"
   },
   "src/zh/blog/ai-marketing-automation-small-business.html": {
     "source": "src/blog/ai-marketing-automation-small-business.html",
@@ -49,7 +49,7 @@
   },
   "src/zh/blog/ai-marketing-for-small-business-nz.html": {
     "source": "src/blog/ai-marketing-for-small-business-nz.html",
-    "sha": "df6a48bd2214"
+    "sha": "2f4d07127803"
   },
   "src/zh/blog/ai-marketing-privacy-law-nz-australia.html": {
     "source": "src/blog/ai-marketing-privacy-law-nz-australia.html",
@@ -57,7 +57,7 @@
   },
   "src/zh/blog/ai-marketing-providers-australia.html": {
     "source": "src/blog/ai-marketing-providers-australia.html",
-    "sha": "5296155449b1"
+    "sha": "7f3bda5b2d69"
   },
   "src/zh/blog/ai-marketing-providers-new-zealand.html": {
     "source": "src/blog/ai-marketing-providers-new-zealand.html",
@@ -73,7 +73,7 @@
   },
   "src/zh/blog/ai-marketing-statistics-australia-new-zealand.html": {
     "source": "src/blog/ai-marketing-statistics-australia-new-zealand.html",
-    "sha": "eb8d455596cf"
+    "sha": "410225490211"
   },
   "src/zh/blog/ai-marketing-strategy-small-business.html": {
     "source": "src/blog/ai-marketing-strategy-small-business.html",
@@ -125,7 +125,7 @@
   },
   "src/zh/blog/how-to-hire-an-ai-agent-developer.html": {
     "source": "src/blog/how-to-hire-an-ai-agent-developer.html",
-    "sha": "1fb561411ada"
+    "sha": "4205af979af2"
   },
   "src/zh/blog/marketing-agency-alternatives-nz.html": {
     "source": "src/blog/marketing-agency-alternatives-nz.html",
@@ -133,7 +133,7 @@
   },
   "src/zh/blog/marketing-agency-cost-australia.html": {
     "source": "src/blog/marketing-agency-cost-australia.html",
-    "sha": "d76fb6509b5f"
+    "sha": "490316fc3ce1"
   },
   "src/zh/blog/marketing-agency-cost-nz.html": {
     "source": "src/blog/marketing-agency-cost-nz.html",
@@ -141,7 +141,7 @@
   },
   "src/zh/blog/marketing-engineer-jobs-nz-australia-2026.html": {
     "source": "src/blog/marketing-engineer-jobs-nz-australia-2026.html",
-    "sha": "1a44b38ba150"
+    "sha": "bb60663c9aca"
   },
   "src/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code.html": {
     "source": "src/blog/n8n-vs-zapier-vs-make-vs-claude-code.html",
@@ -173,7 +173,7 @@
   },
   "src/zh/blog/what-is-an-ai-marketing-agent.html": {
     "source": "src/blog/what-is-an-ai-marketing-agent.html",
-    "sha": "acf7ad59bffd"
+    "sha": "3384f27b2524"
   },
   "src/zh/blog/what-is-answer-engine-optimisation.html": {
     "source": "src/blog/what-is-answer-engine-optimisation.html",
@@ -189,7 +189,7 @@
   },
   "zh/about.html": {
     "source": "about.html",
-    "sha": "06d498268bef"
+    "sha": "1fd124916c7f"
   },
   "zh/ai-marketing-services/ai-agent-development.html": {
     "source": "ai-marketing-services/ai-agent-development.html",
@@ -201,11 +201,11 @@
   },
   "zh/ai-marketing-services/auckland.html": {
     "source": "ai-marketing-services/auckland.html",
-    "sha": "2d50bc1ec468"
+    "sha": "f7b314694093"
   },
   "zh/ai-marketing-services/australia.html": {
     "source": "ai-marketing-services/australia.html",
-    "sha": "d4aeff478717"
+    "sha": "a8322b660712"
   },
   "zh/ai-marketing-services/claude-code-consultant.html": {
     "source": "ai-marketing-services/claude-code-consultant.html",
@@ -213,15 +213,15 @@
   },
   "zh/ai-marketing-services/index.html": {
     "source": "ai-marketing-services/index.html",
-    "sha": "53c71723af98"
+    "sha": "27922a0678c1"
   },
   "zh/ai-marketing-services/marketing-automation-consultant.html": {
     "source": "ai-marketing-services/marketing-automation-consultant.html",
-    "sha": "1cb7af0e9d72"
+    "sha": "0f15302e0b27"
   },
   "zh/ai-marketing-services/new-zealand.html": {
     "source": "ai-marketing-services/new-zealand.html",
-    "sha": "0fc9f4d96ad4"
+    "sha": "161564f45f64"
   },
   "zh/cases.html": {
     "source": "cases.html",
@@ -229,7 +229,7 @@
   },
   "zh/contact.html": {
     "source": "contact.html",
-    "sha": "9fdc5d762421"
+    "sha": "a90ac2daf48c"
   },
   "zh/dot.html": {
     "source": "dot.html",
@@ -237,11 +237,11 @@
   },
   "zh/index.html": {
     "source": "index.html",
-    "sha": "6d93c2e0df23"
+    "sha": "c10de0612316"
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
-    "sha": "6cea1243d8ab"
+    "sha": "9320ab86e044"
   },
   "zh/privacy.html": {
     "source": "privacy.html",
@@ -257,51 +257,51 @@
   },
   "zh/sprints/analytics.html": {
     "source": "sprints/analytics.html",
-    "sha": "afd3f8ea16a8"
+    "sha": "967a3659354a"
   },
   "zh/sprints/content-engine.html": {
     "source": "sprints/content-engine.html",
-    "sha": "9811f2016bf0"
+    "sha": "22b1b08059af"
   },
   "zh/sprints/index.html": {
     "source": "sprints/index.html",
-    "sha": "e335538ca5f2"
+    "sha": "c1c4facfe878"
   },
   "zh/sprints/outbound.html": {
     "source": "sprints/outbound.html",
-    "sha": "ab5d32c37631"
+    "sha": "6fa1bc3e076e"
   },
   "zh/sprints/positioning.html": {
     "source": "sprints/positioning.html",
-    "sha": "d6e7b072a8f2"
+    "sha": "e3d4491f73f0"
   },
   "zh/templates/ai-citability.html": {
     "source": "templates/ai-citability.html",
-    "sha": "8054d602a5d5"
+    "sha": "790cee968de3"
   },
   "zh/templates/ai-crawler-check.html": {
     "source": "templates/ai-crawler-check.html",
-    "sha": "c35f54f7dfd5"
+    "sha": "57fc8777556c"
   },
   "zh/templates/brand-dna.html": {
     "source": "templates/brand-dna.html",
-    "sha": "3dc6224215c8"
+    "sha": "2defaf1050f2"
   },
   "zh/templates/content-evidence-audit.html": {
     "source": "templates/content-evidence-audit.html",
-    "sha": "e707616c2586"
+    "sha": "f811f0bc7824"
   },
   "zh/templates/geo-audit.html": {
     "source": "templates/geo-audit.html",
-    "sha": "c57f1585f878"
+    "sha": "2c7f404abec0"
   },
   "zh/templates/index.html": {
     "source": "templates/index.html",
-    "sha": "d385ac78383e"
+    "sha": "dfc54e188ca4"
   },
   "zh/templates/reddit-opportunities.html": {
     "source": "templates/reddit-opportunities.html",
-    "sha": "53f3ce19a78c"
+    "sha": "76743396125b"
   },
   "zh/tools/benchmark.html": {
     "source": "tools/benchmark.html",
@@ -317,22 +317,22 @@
   },
   "zh/work.html": {
     "source": "work.html",
-    "sha": "c88299a074a8"
+    "sha": "c4d9cb3de49b"
   },
   "zh/work/content-engine.html": {
     "source": "work/content-engine.html",
-    "sha": "6cba0bfc7c85"
+    "sha": "7d8df7a9dd70"
   },
   "zh/work/enterprise-gtm.html": {
     "source": "work/enterprise-gtm.html",
-    "sha": "7fe383114c37"
+    "sha": "a3ab2bfe6fce"
   },
   "zh/work/geo-seo-toolkit.html": {
     "source": "work/geo-seo-toolkit.html",
-    "sha": "b1090c1a7c74"
+    "sha": "23ccf13052c9"
   },
   "zh/work/six-month-marketing-function.html": {
     "source": "work/six-month-marketing-function.html",
-    "sha": "4bf584cbca5a"
+    "sha": "994981f0a9be"
   }
 }
