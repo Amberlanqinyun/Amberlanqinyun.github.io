@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Flow AI editorial diagrams, generated in the flowai-mono brand system.
+Amber Lan editorial diagrams, generated in the flowai-mono brand system.
 
 Two inks on the Warm Ink substrate: Cream carries structure, type and rules
 through density changes; Amber carries exactly one accent event per image.
@@ -85,7 +85,7 @@ def system_map(systems, claim_label, boxes=None):
     # the angular span it was tuned against.
     RADII = [548, 392, 236]
     SPANS = [(214, 252), (206, 262), (198, 250)]
-    s = [head("Flow AI system map",
+    s = [head("System map",
               "Three outcomes with the marketing systems that sit underneath each one, "
               "arranged as three arcs around a single pipeline.")]
 
@@ -145,7 +145,7 @@ def pillar(systems, index):
     RADII = [542, 396, 250]
     SPAN = (196, 264)
     g = systems[index]
-    s = [head(f"Flow AI — {g['name']}", g["line"])]
+    s = [head(f"Amber Lan — {g['name']}", g["line"])]
 
     s.append(label(96, 156, g["name"], size=15))
     s.append(txt(96, 268, g["head"][0], 66, weight=600, track=-0.03))

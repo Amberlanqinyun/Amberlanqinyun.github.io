@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Flow AI">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Amber Lan">
   <defs>
     <radialGradient id="c" cx="50%" cy="60%" r="56%"><stop offset="0" stop-color="#fbe0a8"/><stop offset=".5" stop-color="#f1bb5a"/><stop offset=".85" stop-color="#df9c36"/><stop offset="1" stop-color="#c47f27"/></radialGradient>
     <linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".32" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#ffe2ad" stop-opacity=".35"/></linearGradient>

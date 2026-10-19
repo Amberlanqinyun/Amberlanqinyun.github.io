@@ -127,7 +127,7 @@
           "name": "Is there a free tool to check AI crawler access?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Flow AI's free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free."
+            "text": "Yes. Amber Lan's free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free."
           }
         }
       ]
@@ -225,7 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="#structured-data-items-17-and-18" data-toc="structured-data-items-17-and-18"><span class="toc-num">06</span><span>Structured data (items 17 and 18)</span></a></li>
 <li><a href="#measurement-items-19-and-20" data-toc="measurement-items-19-and-20"><span class="toc-num">07</span><span>Measurement (items 19 and 20)</span></a></li>
 <li><a href="#is-llms-txt-worth-adding" data-toc="is-llms-txt-worth-adding"><span class="toc-num">08</span><span>Is llms.txt worth adding?</span></a></li>
-<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">09</span><span>Where Flow AI fits</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">09</span><span>Where Amber Lan fits</span></a></li>
 <li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">10</span><span>The short version</span></a></li>
 <li><a href="#faq" data-toc="faq"><span class="toc-num">11</span><span>Questions owners ask</span></a></li>
           </ol>
@@ -254,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 id="access-for-ai-crawlers-items-1-to-4"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">Access for AI crawlers (items 1 to 4)</span></h2>
 <p>Access comes first because every later item depends on it. An AI engine answers from pages it has fetched, either through its own crawler or through a search index such as Google's or Bing's. If robots.txt, a firewall or JavaScript rendering stops those crawlers, nothing else on this list can help.</p>
 <h3>1. Allow the AI search crawlers in robots.txt</h3>
-<p>Open yourdomain.co.nz/robots.txt and look for rules that block OAI-SearchBot and ChatGPT-User (ChatGPT), PerplexityBot (Perplexity), Claude-SearchBot and Claude-User (Claude), Googlebot and Bingbot. A line such as "User-agent: * Disallow: /" blocks all of them. Training crawlers (GPTBot, ClaudeBot, Google-Extended) are a separate choice, and blocking them does not stop the search crawlers when each is named on its own line. Flow AI's free <a class="go" href="/templates/ai-crawler-check">AI crawler access check</a> tests fourteen <a class="go" href="/glossary/#ai-crawler">AI crawlers</a> at once.</p>
+<p>Open yourdomain.co.nz/robots.txt and look for rules that block OAI-SearchBot and ChatGPT-User (ChatGPT), PerplexityBot (Perplexity), Claude-SearchBot and Claude-User (Claude), Googlebot and Bingbot. A line such as "User-agent: * Disallow: /" blocks all of them. Training crawlers (GPTBot, ClaudeBot, Google-Extended) are a separate choice, and blocking them does not stop the search crawlers when each is named on its own line. Amber Lan's free <a class="go" href="/templates/ai-crawler-check">AI crawler access check</a> tests fourteen <a class="go" href="/glossary/#ai-crawler">AI crawlers</a> at once.</p>
 <h3>2. Check your host and security settings</h3>
 <p>Some hosts, CDNs and security plugins offer settings that block AI bots, and on some plans these are switched on by default. Look in your Cloudflare, Wix, Squarespace or WordPress security settings for anything labelled AI bots, AI crawlers or bot fight mode. Also ask your web person whether any page sends a "noindex" meta tag or an X-Robots-Tag header by mistake.</p>
 <h3>3. Make sure your text is in the HTML</h3>
@@ -311,10 +311,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="is-llms-txt-worth-adding"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">Is llms.txt worth adding?</span></h2>
 <p>An llms.txt file is an optional extra, and it belongs after the twenty items above. It is a plain text file at the root of your site that lists your most useful pages for AI systems. It takes ten minutes to write, but no major AI provider has said it uses llms.txt to choose what to cite.</p>
-<p>The usage data is thin. <a class="go" href="https://ahrefs.com/blog/llmstxt-study/" target="_blank" rel="noopener">Ahrefs' June 2026 study of 137,210 domains found 28% publish a valid llms.txt file, yet 97% of those files received zero requests in a month</a><sup class="fn"><a href="#source-10" aria-label="Source 10">10</a></sup>, and AI retrieval bots made only 1.1% of the requests that did arrive. Ahrefs' sample skews to sites with analytics installed, so it is not a random sample of the web. Flow AI publishes one because it costs nothing to maintain. Add one if you like, and expect nothing from it yet. The <a class="go" href="/glossary/#llms-txt">glossary entry for llms.txt</a> explains the format.</p>
+<p>The usage data is thin. <a class="go" href="https://ahrefs.com/blog/llmstxt-study/" target="_blank" rel="noopener">Ahrefs' June 2026 study of 137,210 domains found 28% publish a valid llms.txt file, yet 97% of those files received zero requests in a month</a><sup class="fn"><a href="#source-10" aria-label="Source 10">10</a></sup>, and AI retrieval bots made only 1.1% of the requests that did arrive. Ahrefs' sample skews to sites with analytics installed, so it is not a random sample of the web. Amber Lan publishes one because it costs nothing to maintain. Add one if you like, and expect nothing from it yet. The <a class="go" href="/glossary/#llms-txt">glossary entry for llms.txt</a> explains the format.</p>
 
-<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">Where Flow AI fits</span></h2>
-<p>Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope works through this checklist on your site and names the first system to install, which for many businesses is the <a class="go" href="/sprints/ai-search">AI search sprint</a>.</p>
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">Where Amber Lan fits</span></h2>
+<p>Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope works through this checklist on your site and names the first system to install, which for many businesses is the <a class="go" href="/sprints/ai-search">AI search sprint</a>.</p>
 <p>Prefer to do it yourself? The <a class="go" href="/templates/">free agent templates</a> include the AI crawler access check, an AI citability scorer and a full GEO audit, and the open-source GEO skills are in the <a class="go" href="/skills/#geo">skill library</a>.</p>
 
 <h2 id="the-short-version"><span class="sec-num" aria-hidden="true">10</span><span class="sec-title">The short version</span></h2>
@@ -331,13 +331,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <details class="faq__item"><summary><h3>Should I block GPTBot and other AI training crawlers?</h3></summary><p>That is a separate decision from AEO. Training crawlers such as GPTBot and Google-Extended collect content to train models, while search crawlers such as OAI-SearchBot fetch pages to answer questions live. Many businesses allow the search crawlers and make their own choice on training. Blocking a training crawler does not stop the matching search crawler, as long as robots.txt names them separately.</p></details>
 <details class="faq__item"><summary><h3>Does schema markup help with AI search?</h3></summary><p>Google says no special schema is needed to appear in AI Overviews or AI Mode. Schema still earns rich results in Google and states your business facts in a form any machine can read without guessing, so it is worth adding for your organisation, location and products. Keep it accurate and matched to what the page says, because wrong schema does more harm than none.</p></details>
 <details class="faq__item"><summary><h3>How often should I repeat the AEO checklist?</h3></summary><p>Run the access checks every quarter and after any website rebuild, host change or new security plugin, because those are the moments crawlers get blocked by accident. Repeat the prompt log monthly. Review the fact sheet whenever prices, hours or services change, and refresh your most important pages at least twice a year so the dates and figures stay current.</p></details>
-<details class="faq__item"><summary><h3>Is there a free tool to check AI crawler access?</h3></summary><p>Yes. Flow AI&#x27;s free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free.</p></details>
+<details class="faq__item"><summary><h3>Is there a free tool to check AI crawler access?</h3></summary><p>Yes. Amber Lan&#x27;s free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free.</p></details>
   </div>
 </section>
         <aside class="author-box" aria-label="About the author">
           <p class="author-box__label">Written by</p>
           <p class="author-box__name"><a href="/about">Amber Lan</a></p>
-          <p>AI marketing engineer based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. She takes on contract builds under the trading name Flow AI: the strategy, the systems and the agents that run a marketing function, engineered end to end.</p>
+          <p>AI marketing engineer based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. She takes on contract builds: the strategy, the systems and the agents that run a marketing function, engineered end to end.</p>
         </aside>
 
 <section class="sources" aria-labelledby="sources-title">

@@ -1,4 +1,4 @@
-# Flow AI · Simplified Chinese (简体中文) style guide
+# Amber Lan · Simplified Chinese (简体中文) style guide
 
 The Chinese site lives under `/zh/`. It is the same site, written natively in Simplified Chinese for
 mainland, Singapore, Malaysia, Taiwan-reading and New Zealand/Australia Chinese-speaking founders,
@@ -12,7 +12,7 @@ in Chinese first. Never word-for-word translation.
 - Natural business Chinese: 书面但不僵硬. Short clear sentences. Translate meaning and intent, then
   check it still says exactly what the English says. Never add facts, numbers, clients or claims.
 - Keep the page's grammatical person: About is first person (我). Elsewhere keep what the English uses
-  (Flow AI / 我 / 你). Address the reader as 你 (not 您) for a warm peer tone; 您 only inside a formal
+  (Amber Lan / 我 / 你). Address the reader as 你 (not 您) for a warm peer tone; 您 only inside a formal
   email template or form confirmation if the English is formal.
 - No 小红书 style: no emoji, no 宝子/家人们, no 干货, no exclamation marks (！ or !).
 
@@ -41,10 +41,10 @@ in Chinese first. Never word-for-word translation.
 
 | English | 简体中文 |
 |---|---|
-| Flow AI, Flow Intelligence, the Flow Engine | keep in English: Flow AI, Flow Intelligence, Flow Engine |
+| Flow Intelligence, the Flow Engine | keep in English: Flow Intelligence, Flow Engine (the system names; the practice itself is Amber Lan since 2026-10-20, never Flow AI) |
 | Amber Lan | Amber Lan |
 | AI-readiness benchmark (/tools/benchmark) | AI 就绪度基准测评 (approved by Amber 2026-10-09). A research or lab benchmark stays 基准测试. |
-| AI marketing transformation practice | AI 营销转型工作室 (approved by Amber 2026-10-08). The entity line is always: Flow AI 是一家 AI 营销转型工作室：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。 |
+| AI marketing transformation practice | retired 2026-10-20. The entity line is always: Amber Lan 是奥克兰的 AI 营销工程师：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。 |
 | AI marketing engineer | AI 营销工程师 |
 | marketing engineer | 营销工程师 |
 | GTM engineer | GTM 工程师 |

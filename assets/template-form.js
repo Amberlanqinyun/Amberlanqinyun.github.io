@@ -1,4 +1,4 @@
-/* Flow AI agent templates: the "run it on my site" form and the copy button.
+/* Amber Lan's agent templates: the "run it on my site" form and the copy button.
 
    A template page carries one form marked [data-template-form] with the
    template's id and name on it. Submitting sends the request to Amber's
@@ -116,8 +116,8 @@
           _template: 'table',
           _captcha: 'false',
           _autoresponse: ZH
-            ? '感谢你让 Flow AI 在 ' + s + ' 上运行这个模板。每一份结果都会先由 Amber 审核再发出，你会在两个工作日内收到。如有任何疑问，直接回复这封邮件即可。'
-            : 'Thanks for asking Flow AI to run the ' + name + ' on ' + s + '. Amber reviews every result before it is sent, and yours will reach you within two working days. If anything is unclear, just reply to this email.',
+            ? '感谢你让 Amber Lan 在 ' + s + ' 上运行这个模板。每一份结果都会先由 Amber 审核再发出，你会在两个工作日内收到。如有任何疑问，直接回复这封邮件即可。'
+            : 'Thanks for asking Amber Lan to run the ' + name + ' on ' + s + '. Amber reviews every result before it is sent, and yours will reach you within two working days. If anything is unclear, just reply to this email.',
           language: ZH ? 'zh' : 'en',
           template: name,
           template_id: id,
@@ -133,8 +133,8 @@
         form.reset();
         button.textContent = ZH ? '请求已发送' : 'Request sent';
         show('ok', ZH
-          ? '<b>已加入运行队列。</b>Flow AI 会在 ' + s.replace(/</g, '&lt;') + ' 上运行这个模板，Amber 审核后，结果会在两个工作日内发到你的邮箱。'
-          : '<b>Your run is queued.</b> Flow AI runs the ' + name + ' on ' + s.replace(/</g, '&lt;') + ', Amber reviews it, and the result reaches you within two working days.');
+          ? '<b>已加入运行队列。</b>Amber Lan 会在 ' + s.replace(/</g, '&lt;') + ' 上运行这个模板，Amber 审核后，结果会在两个工作日内发到你的邮箱。'
+          : '<b>Your run is queued.</b> Amber Lan runs the ' + name + ' on ' + s.replace(/</g, '&lt;') + ', Amber reviews it, and the result reaches you within two working days.');
       }).catch(function () {
         button.disabled = false;
         button.textContent = label;

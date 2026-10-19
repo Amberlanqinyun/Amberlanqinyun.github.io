@@ -1,4 +1,4 @@
-/* Flow AI guides: index filters (state in the address) and the article contents rail. */
+/* Amber Lan's guides: index filters (state in the address) and the article contents rail. */
 (function () {
   'use strict';
   var ZH = /^zh/.test(document.documentElement.lang);

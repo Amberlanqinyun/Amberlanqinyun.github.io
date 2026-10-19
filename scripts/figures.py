@@ -1,4 +1,4 @@
-"""Geometric pattern figures for the Flow AI guides.
+"""Geometric pattern figures for Amber Lan's guides.
 
 A library of flat shapes (rings, zigzags, dot grids, stripes, arches, chevrons,
 crosses, confetti) in cream on Warm Ink, with Amber as the one accent ink.

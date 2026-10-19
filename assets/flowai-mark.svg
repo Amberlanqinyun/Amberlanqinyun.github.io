@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Flow AI">
-  <!-- The Flow AI mark: the family. Flow Intelligence in front, one agent from each team
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Amber Lan">
+  <!-- The mark: the family. Flow Intelligence in front, one agent from each team
        behind it (Get found, Get leads, Keep customers), all in the same glass. -->
   <defs>
     <radialGradient id="fm-tint" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#f2b64f" stop-opacity=".62"/><stop offset=".72" stop-color="#e8a83e" stop-opacity=".46"/><stop offset="1" stop-color="#d4922f" stop-opacity=".78"/></radialGradient>

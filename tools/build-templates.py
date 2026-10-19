@@ -49,7 +49,7 @@ AGENTS = {
     "community": ("Community agent", "/contact", "Ask about running the community agent every month"),
 }
 
-REVIEW = ("A marketing engineer reviews it", "Amber checks the result on every Flow AI run before it reaches you.")
+REVIEW = ("A marketing engineer reviews it", "Amber checks the result on every run before it reaches you.")
 
 SAMPLE_CRAWLERS = [
     ("GPTBot", "OpenAI", "1", "Allowed", "Named in robots.txt"),
@@ -283,7 +283,7 @@ def gallery():
       <div class="stack">
         <p class="eyebrow">Agent templates · free</p>
         <h1 id="templates-title" data-words>Put an agent to work on your site.</h1>
-        <p class="lead">Pick a template and Flow AI runs it on your site. Amber reviews every result, and it reaches you within two working days. Each one is open source, so your team can also run it in-house.</p>
+        <p class="lead">Pick a template and Amber Lan runs it on your site. Amber reviews every result, and it reaches you within two working days. Each one is open source, so your team can also run it in-house.</p>
       </div>
       <div class="tpl-grid reveal">
 {chr(10).join(cards)}
@@ -296,7 +296,7 @@ def gallery():
       <div class="stack reveal">
         <p class="eyebrow">How a run works</p>
         <h2 id="how-title">One agent, then a person's review.</h2>
-        <p class="lead">Each template is one Flow AI agent with one fixed job. Tell it where to look. A person checks the result before you see it.</p>
+        <p class="lead">Each template is one agent with one fixed job. Tell it where to look. A person checks the result before you see it.</p>
       </div>
       <div class="grid grid-3 reveal" style="text-align:left">
         <div class="step">
@@ -408,8 +408,8 @@ def template_page(t):
       <div class="run">
         <div class="run__path">
           <p class="eyebrow">Free · reviewed by a person</p>
-          <h2>Run it with Flow AI</h2>
-          <p>Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.</p>
+          <h2>Run it with Amber Lan</h2>
+          <p>Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.</p>
           <form data-template-form data-template-id="{t['slug']}" data-template-name="{esc(t['name'])}" novalidate>
             <div class="field">
               <label for="tpl-email">Your email</label>
@@ -534,7 +534,7 @@ def privacy():
         ("Free tools", "What you enter in the decision map, pricing model and benchmark", "To save your progress", "Your own browser only"),
     ]
     sections = [
-        ("who", "Who we are", f"<p>Flow AI is run by Amber Lan, an AI marketing engineer based in Auckland, New Zealand. Amber is responsible for the information collected on flowai.co.nz. For anything about your information, email {mail}.</p>"),
+        ("who", "Who we are", f"<p>This site is run by Amber Lan, an AI marketing engineer based in Auckland, New Zealand. Amber is responsible for the information collected on flowai.co.nz. For anything about your information, email {mail}.</p>"),
         ("collect", "What we collect and why", "<p>We collect only what helps us reply to you, do the work you ask for, and run the site. The table above lists each source.</p><p>We do not ask for payment details, government identifiers or sensitive information on this site. Please leave it out of messages, too.</p>"),
         ("cookies", "Cookies and measurement", "<p>The site loads Google Tag Manager, which can run Google measurement tags such as Google Analytics. These can set cookies to count visits and see which pages are used. We also record simple on-page actions, such as which sprint tab is opened or a toolkit being downloaded.</p><p>We never pass what you type into a form to measurement tools. To opt out, you can block cookies in your browser or use " + ext("https://tools.google.com/dlpage/gaoptout", "Google's opt-out add-on") + ".</p>"),
         ("tools", "The free tools", "<p>The decision map, pricing model and AI-readiness benchmark run in your browser. What you enter is saved in your browser's local storage so you can come back to it. It is never sent to us. Clearing your browser data removes it.</p>"),

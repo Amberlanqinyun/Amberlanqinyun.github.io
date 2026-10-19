@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Flow AI bilingual layer: English at /, Simplified Chinese at /zh/.
+"""Amber Lan bilingual layer: English at /, Simplified Chinese at /zh/.
 
 Run from the repo root after any page or generator change:
 
@@ -332,7 +332,7 @@ def update_sitemap():
 
 # ---------------------------------------------------------------- reports
 
-ALLOW = re.compile(r"Flow AI|Flow Intelligence|Flow Engine|Amber Lan|Claude Code|GitHub|LinkedIn|ChatGPT")
+ALLOW = re.compile(r"Amber Lan|Flow Intelligence|Flow Engine|Amber Lan|Claude Code|GitHub|LinkedIn|ChatGPT")
 
 
 def untranslated(zrel):

@@ -1,26 +1,26 @@
 # Amber Lan · AI marketing engineer · AI marketing for New Zealand and Australia (flowai.co.nz)
 
-> Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the AI agents that run marketing for businesses in New Zealand and Australia (search, content, outbound and reporting) with your team, then hands them over. Flow AI is the trading name she uses for contract builds. This site is also her open portfolio: the AI agent systems that run a marketing function, built and documented in public. She is open to senior marketing engineer and GTM engineer roles, remote from anywhere.
+> Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the AI agents that run marketing for businesses in New Zealand and Australia (search, content, outbound and reporting) with your team, then hands them over. This site is also her open portfolio: the AI agent systems that run a marketing function, built and documented in public. She is open to senior marketing engineer and GTM engineer roles, remote from anywhere.
 
-Note: Flow AI (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
+Note: this site (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
 Key facts:
 - AI marketing services (New Zealand and Australia): https://www.flowai.co.nz/ai-marketing-services/ , with pages for New Zealand (/ai-marketing-services/new-zealand), Australia (/ai-marketing-services/australia) and Auckland (/ai-marketing-services/auckland), plus service pages by job: AI automation consultant (/ai-marketing-services/ai-automation-consultant), AI agent development (/ai-marketing-services/ai-agent-development), marketing automation consultant (/ai-marketing-services/marketing-automation-consultant) and Claude Code consultant (/ai-marketing-services/claude-code-consultant). Services: positioning, AI search and SEO, content, social, outbound, conversion, launches, paid media checks, community, measurement and reporting, one AI agent each.
 - Work with Amber: contract builds for teams that want an AI marketing system built with them, covering AI search and answer engine optimisation, a content engine, outbound and measurement. Each build starts with a written scope and is priced per project. The team keeps running the system after a documented handover.
 - Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland, across New Zealand and in Australia (Sydney, Melbourne, Brisbane). The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
-- Who: Amber Lan, AI marketing engineer. Flow AI is her trading name. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
+- Who: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
 - Contact: amber.lan.growth.digital@gmail.com
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
-About Amber Lan (the person behind Flow AI):
-- Who: Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, and the founder of Flow AI. Over ten years across every part of marketing, and three years building the AI agent systems that run it.
+About Amber Lan:
+- Who: Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand. Over ten years across every part of marketing, and three years building the AI agent systems that run it.
 - Now: runs the marketing function of an AI startup on an agent stack she built herself; the system does the production, she does the judgment.
 - Builds: a content engine with a codified brand voice and quality gate, an answer engine optimisation toolkit (geo-seo-claude), outbound with a human takeover rule, and measurement wired to real numbers. 126 published skills, open source.
 - Languages: English and Mandarin (native).
 - Roles: marketing engineer, GTM engineer, AI marketing engineer, growth engineer, RevOps / marketing ops engineer. Open to conversations about senior roles, remote from anywhere (based in Auckland, NZT). Contact: amber.lan.growth.digital@gmail.com or https://www.linkedin.com/in/amberlan/
 - Profile: https://www.flowai.co.nz/about · GitHub https://github.com/Amberlanqinyun · LinkedIn https://www.linkedin.com/in/amberlan/
-- Entity string: Flow AI (flowai.co.nz) · Amber Lan, AI marketing engineer · Auckland, New Zealand
+- Entity string: Amber Lan · AI marketing engineer · Auckland, New Zealand (flowai.co.nz)
 
 Full text of every page, for direct AI consumption and accurate citation: https://www.flowai.co.nz/llms-full.txt
 
@@ -30,7 +30,7 @@ Site structure:
 - /ai-marketing-services/ai-agent-development: AI agent development for NZ and Australian marketing and sales teams: search, content, outbound, measurement, reporting and custom agents built on the client's accounts.
 - /ai-marketing-services/marketing-automation-consultant: Marketing automation consultant in New Zealand: HubSpot and CRM workflows, consent-based follow-up, attribution and reporting, under NZ and Australian spam law.
 - /ai-marketing-services/claude-code-consultant: Claude Code consultant for marketing teams: lane files, skills library, MCP connectors, review gates and client separation for agencies.
-- / (landing): what Flow AI builds, an illustrative demo, the systems, free tools and FAQ. Two routes: work with Amber on a build, or talk about a role.
+- / (landing): what Amber Lan builds, an illustrative demo, the systems, free tools and FAQ. Two routes: work with Amber on a build, or talk about a role.
 - /work: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
 - /cases: evidence library of working marketing systems, open source tools, and human-centred product builds, with honest project status and direct repository links.
 - /work/enterprise-gtm: case study, three demand engines feeding one pipeline for an enterprise AI platform launch.
@@ -40,10 +40,10 @@ Site structure:
 - /contact: contact form. Choose a contract build, a full-time role or something else; Amber Lan replies personally within two working days.
 - /about: About Amber Lan, every shipped system linked to its public GitHub repository.
 - /dot: the dot, the character behind Flow Intelligence. A luminous amber core with two eyes (the agents are solid cream dots), its seven states, twelve eye styles, a 23-second run of one job told by the character, the motion spec and the open-source engine assets/dot.js. Chinese at /zh/dot.
-- /manifesto: The Flow AI manifesto. Every other function built an engineering layer; Flow Intelligence is marketing's, run by one engineer.
-- /templates/: Free agent templates. Each runs one Flow AI agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
+- /manifesto: The manifesto. Every other function built an engineering layer; Flow Intelligence is marketing's, run by one engineer.
+- /templates/: Free agent templates. Each runs one agent on a visitor's site, reviewed by a marketing engineer, or installs in Claude Code (Brand DNA researcher, Full GEO audit, AI crawler access check, AI citability scorer, Content evidence auditor, Reddit opportunity researcher).
 - /sprints/: five of the eleven marketing systems, each installable in a week, one per station of the marketing line (positioning, AI search, content engine, outbound, analytics), each with a public deliverables checklist.
-- /skills/: Flow AI skill library with 126 inspectable AI agent skills: 16 built by Flow AI for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and two editing skills: Humanizer by Siqi Chen for stripping AI writing tells out of prose, and 说人话 (Shuorenhua) by MrGeDiao for Chinese-first editing that keeps every fact. Every entry names its author and links to source.
+- /skills/: Amber Lan's skill library with 126 inspectable AI agent skills: 16 built by Amber Lan for research, GEO, SEO, content operations, reporting, and product systems, plus curated MIT-licensed libraries: 41 growth playbooks by Iris Wei of Gingiris (launch, growth, community, open source, ASO), 50 marketing skills by Corey Haines (conversion, copywriting, paid media, analytics, sales), 17 social media skills by Charlie Hills (LinkedIn posts, hooks, carousels, reels, profile, analytics), and two editing skills: Humanizer by Siqi Chen for stripping AI writing tells out of prose, and 说人话 (Shuorenhua) by MrGeDiao for Chinese-first editing that keeps every fact. Every entry names its author and links to source.
 - /skills/#anz-marketing-skills: ANZ marketing skills, six open-source Claude Code skills for marketing in New Zealand and Australia: local SEO, email and SMS compliance, ad claims, NZ and Australian English with te reo Māori, the marketing calendar, and Auckland local marketing. MIT licensed, built in Auckland. Source and plugin install: https://github.com/Amberlanqinyun/anz-marketing-skills
 - /skills/research-brand/SKILL.md: portable public workflow that turns a company URL into an evidence-backed Brand DNA brief.
 - /skills/reddit-opportunity-research/SKILL.md: public research workflow for finding useful, no-spam participation and content opportunities in public Reddit discussions.
@@ -66,7 +66,7 @@ Site structure:
   - /blog/ai-agent-development-cost-nz: Most of an AI agent's cost is people time. At the NZD 130 to 180 an hour Robert Walters lists for Auckland AI engineer contractors in 2026, a one-workflow agent taking three to five days costs about NZD 3,100 to 7,200 to build. Model and platform fees for a small agent can stay under NZD 100 a month.
   - /blog/ai-consultant-rates-nz-australia: AI consultants in Auckland charge about NZD 140 to 190 an hour on contract in 2026, according to Robert Walters, or roughly NZD 1,120 to 1,520 for an eight-hour day. In Australia, Hays puts AI engineer contractors at AUD 900 to 1,200 a day. Published fixed prices for small-business workshops and assessments start at NZD 795 plus GST.
   - /blog/ai-marketing-providers-australia: In October 2026, Australian AI marketing services came from five kinds of provider: AI-native agencies such as Flowterra Labs, established agencies adding AI such as Yoghurt Digital, AI search specialists such as Prosperity Media, automation firms such as Bolder Digital, and remote build-and-handover practices. Few publish prices, so compare what each shows and what you keep.
-  - /blog/ai-marketing-providers-new-zealand: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Flow AI.
+  - /blog/ai-marketing-providers-new-zealand: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Amber Lan.
   - /blog/ai-marketing-scope-of-work: An AI marketing scope of work should state the business outcome and how it is measured, which agents and systems will be built, what data they can access, where a person reviews the work, the deliverables and who owns them, how handover and exit work, and the price with GST shown. Writing each point down now keeps both sides aligned later.
   - /blog/ai-marketing-services-vs-tools: Buy AI marketing tools when someone in the business has three or more hours a week and the skill to run one or two channels. Hire an AI marketing service when several channels must run and nobody has the time. Choose a build and handover when a team member has some hours and you want systems you own.
   - /blog/claude-vs-chatgpt-business-cost-nz: On their official pricing pages on 16 October 2026, Claude's Team plan and ChatGPT Business both cost US$20 per user per month billed annually, or US$25 billed monthly, with a two seat minimum. A 10 person team pays US$200 to US$250 a month before GST. Setup and staff training usually cost more than the seats.
@@ -105,27 +105,27 @@ Site structure:
 - /tools/benchmark: free 2-minute AI-readiness benchmark for businesses. No email required.
 - /tools/pricing: free interactive pricing model (Lerner rule, economic value to the customer).
 - /tools/decision-map: free marketing decision map toolkit. List your marketing decisions, score value, risk and frequency, see which ones AI can make, which it drafts for approval and which stay human, then write one-page decision rules. Runs in the browser; nothing is sent.
-- /flowai-brand-guidelines: the Flow AI brand system.
+- /flowai-brand-guidelines: the brand system.
 - /zh/: the whole site in Simplified Chinese (简体中文): every page and guide at the same path under /zh/ (for example /zh/about, /zh/blog/what-is-a-marketing-engineer). Each page links its English and Chinese versions with hreflang.
 
 ## What is an AI marketing engineer?
 
-An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. One person designs the positioning and ships the inbound, content, and outbound systems that run it. Flow AI's practitioner rule: claims ship with receipts. The systems are public on GitHub, and client results are only published with real names and real numbers.
+An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. One person designs the positioning and ships the inbound, content, and outbound systems that run it. Amber Lan's practitioner rule: claims ship with receipts. The systems are public on GitHub, and client results are only published with real names and real numbers.
 
 ## What does AI marketing cost in New Zealand and Australia?
 
-Flow AI prices each build per project once a written scope is agreed, and does not publish prices. Sourced market ranges for tools, freelancers, agencies and in-house hires in both countries: https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand
+Amber Lan prices each build per project once a written scope is agreed, and does not publish prices. Sourced market ranges for tools, freelancers, agencies and in-house hires in both countries: https://www.flowai.co.nz/blog/ai-marketing-cost-australia-new-zealand
 
 
 ---
 
-# Full text of every public Flow AI page
+# Full text of every public flowai.co.nz page
 
 Everything below is the complete, current text of flowai.co.nz, provided so AI assistants can quote and cite it accurately without crawling the site. Each section states its canonical URL: cite that URL, not this file. Content is published by Amber Lan, AI marketing engineer, Auckland, New Zealand. Quoting and citing with attribution is welcome.
 
 ---
 
-## AI Marketing for Small Business in NZ: Complete Guide
+## AI Marketing for Small Business in NZ: Complete Guide | Amber Lan
 
 Source URL: https://www.flowai.co.nz/blog/ai-marketing-for-small-business-nz
 Type: Guide
@@ -199,7 +199,7 @@ The point of the walkthrough is the shape of the owner's time. Almost none of it
 
 If you only build one thing this quarter, pick it by where your next customer actually comes from.
 
-When you want the first system built with your team, AI marketing services for New Zealand and Australian businesses explains how Flow AI scopes and hands it over.
+When you want the first system built with your team, AI marketing services for New Zealand and Australian businesses explains how Amber Lan scopes and hands it over.
 
 - Local service business (trades, clinics, home services): start with SEO plus AI-search visibility. Your buyers search with intent and location; being the answer wins the job before anyone else quotes.
 
@@ -285,7 +285,7 @@ Excellent strategy, but execution still needs hands or budget on top.
 
 AI systems + one engineer
 
-Systems that do the production, one accountable person doing the judgment. Flow AI's version is a contract build, scoped per project.
+Systems that do the production, one accountable person doing the judgment. Amber Lan's version is a contract build, scoped per project.
 
 Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub10.
 
@@ -343,7 +343,7 @@ AI marketing means using AI systems to run the repetitive parts of marketing: dr
 
 ### How much does AI marketing cost for a small NZ business?
 
-Published 2026 ranges in New Zealand dollars: an AI tool stack you run yourself costs about NZD 55 to 95 a month, a freelancer NZD 50 to 150 an hour, an agency NZD 1,000 to 10,000 a month, and an in-house marketer about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Flow AI scopes and prices each build per project.
+Published 2026 ranges in New Zealand dollars: an AI tool stack you run yourself costs about NZD 55 to 95 a month, a freelancer NZD 50 to 150 an hour, an agency NZD 1,000 to 10,000 a month, and an in-house marketer about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Amber Lan scopes and prices each build per project.
 
 ### Can I put customer details into ChatGPT or Claude under New Zealand privacy law?
 
@@ -361,7 +361,7 @@ Written by
 
 Amber Lan
 
-AI marketing engineer based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them on GitHub. She takes on contract builds under the trading name Flow AI: the strategy, the systems and the agents that run a marketing function, engineered end to end.
+AI marketing engineer based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them on GitHub. She takes on contract builds: the strategy, the systems and the agents that run a marketing function, engineered end to end.
 
 ## Sources
 
@@ -621,7 +621,7 @@ Instead of an agency
 
 ## Partner with the engineer who builds it.
 
-Flow AI builds the systems with your team, and the engineer who built them checks every send.
+I build the systems with your team, and I check every send myself.
 
 A marketing agency
 
@@ -669,23 +669,17 @@ Proof
 
 Start with the systems, and judge the strategy by what they build.
 
-- Open source
-
 ### geo-seo-claude
 
-The toolkit Flow AI runs on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.
+The toolkit I run on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.
 
-- Open on GitHub
-
-- Open source
+Open on GitHub
 
 ### Content engine
 
 One source becomes a month of on-voice content for every channel.
 
-- Read the case
-
-- Case study
+Read the case
 
 ### Three demand engines. One pipeline.
 
@@ -701,7 +695,7 @@ Manifesto
 
 ## Marketing finally has its engineering layer.
 
-Every other function built one. Marketing kept hiring. Now Flow Intelligence holds your positioning and briefs ten agents from it.
+Every other function built one. Marketing kept hiring. Now Flow Intelligence, the system I built, holds your positioning and briefs ten agents from it.
 
 Read the manifesto
 
@@ -711,11 +705,11 @@ The questions people ask before they write to me.
 
 ### Who is Amber Lan?
 
-Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the agents that run a marketing function, starting from strategy, with ten years in marketing and three building agents behind her. She builds each system with the team that will run it, and the work is open to inspect. Her contract builds run under the trading name Flow AI.
+Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the agents that run a marketing function, starting from strategy, with ten years in marketing and three building agents behind her. She builds each system with the team that will run it, and the work is open to inspect. Her contract builds run.
 
-### How is Flow AI different from a marketing agency?
+### How is this different from hiring an agency?
 
-Flow AI builds engineered systems with your team, led by one marketing engineer who reviews every send. An agency bills monthly for people: an account manager, a strategist, a writer and a media buyer. You agree the scope together up front, and everything Flow AI builds is documented and open to inspect.
+I build the systems with your team and review every send myself. An agency bills monthly for people: an account manager, a strategist, a writer and a media buyer. We agree the scope up front, and everything I build is documented and open to inspect.
 
 ### How does a contract build start?
 
@@ -729,21 +723,21 @@ Each build is priced per project, from the written scope we agree first, so you 
 
 A marketing engineer reviews every send before it reaches a customer. Agents produce the work, and a person decides what ships. That review lets a small team run this much marketing and stand behind every send.
 
-### Where does Flow AI work?
+### Where do you work?
 
-Flow AI is based in Auckland and provides AI marketing services for businesses across New Zealand and Australia. Auckland teams can meet in person; everywhere else the build runs remotely on your own accounts. Its published research covers both markets, with sourced pricing and adoption statistics.
+I'm based in Auckland and work with businesses across New Zealand and Australia. Auckland teams can meet in person; everywhere else the build runs remotely on your own accounts. My published research covers both markets, with sourced pricing and adoption statistics.
 
-### Is Flow AI an AI marketing agency?
+### Is this an AI marketing agency?
 
-Flow AI covers what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and one marketing engineer reviews every send. It works as a contract build with your team, and everything built is documented and handed over. Explore the AI marketing services
+I cover what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and I review every send. It works as a contract build with your team, and everything built is documented and handed over. Explore the AI marketing services
 
 ### What is AI marketing transformation?
 
-AI marketing transformation rebuilds a marketing function around AI agents. Agents take the recurring production: research, first drafts, scheduling, tracking and follow-up. People keep the judgement. Flow AI installs one agent per one-week sprint, and the whole Flow Engine then runs monthly.
+AI marketing transformation rebuilds a marketing function around AI agents. Agents take the recurring production: research, first drafts, scheduling, tracking and follow-up. People keep the judgement. I install one agent per one-week sprint, and the whole Flow Engine then runs monthly.
 
-### Does Flow AI help marketers use AI?
+### Do you help marketers use AI?
 
-Yes. Marketing leads use Flow AI to put AI agents to work in their own team. The agents take production, and the marketer keeps strategy and review. Every system is documented at handover, and the open-source skill library shows how each agent works.
+Yes. Marketing leads bring me in to put AI agents to work in their own team. The agents take production, and the marketer keeps strategy and review. Every system is documented at handover, and the open-source skill library shows how each agent works.
 
 ## Build it with your team, or hire for it.
 
@@ -768,7 +762,7 @@ Let's build your marketing team together, one AI agent at a time, and hand it to
 
 Work with meExplore what the agents run
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Each build starts with a written scope, and your team keeps every agent.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Each build starts with a written scope, and your team keeps every agent.
 
 New Zealand · Australia · Auckland
 
@@ -852,7 +846,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -864,7 +858,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -898,23 +892,23 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 ### What are AI marketing services?
 
-AI marketing services are marketing work delivered through AI systems, such as agents for search, content, outbound and reporting, with people setting direction and approving what reaches customers. Some providers run the systems for you on a retainer. Flow AI builds them with your team and hands them over, so you own them.
+AI marketing services are marketing work delivered through AI systems, such as agents for search, content, outbound and reporting, with people setting direction and approving what reaches customers. Some providers run the systems for you on a retainer. Amber Lan builds them with your team and hands them over, so you own them.
 
-### Is Flow AI an AI marketing agency?
+### Is Amber Lan an AI marketing agency?
 
-Flow AI does the work people look for when they search for an AI marketing agency: AI search, content, social, outbound and reporting. The model is a partnership. One marketing engineer builds the agents with your team, documents them and hands them over, so the system stays with your business for good.
+Amber Lan does the work people look for when they search for an AI marketing agency: AI search, content, social, outbound and reporting. The model is a partnership. One marketing engineer builds the agents with your team, documents them and hands them over, so the system stays with your business for good.
 
 ### Do you work with businesses in Australia?
 
-Yes. Flow AI is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles.
+Yes. Amber Lan is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles.
 
 ### How much do AI marketing services cost?
 
-Flow AI prices each build per project once a written scope is agreed. Market ranges for AI tools, freelancers, agencies and in-house hires in New Zealand and Australia are set out, with sources, in the Flow AI cost guide.
+Amber Lan prices each build per project once a written scope is agreed. Market ranges for AI tools, freelancers, agencies and in-house hires in New Zealand and Australia are set out, with sources, in Amber Lan's cost guide.
 
 ### Who owns the agents after the build?
 
-You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Flow AI.
+You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Amber Lan.
 
 ### Where does a person review the work?
 
@@ -945,7 +939,7 @@ Let's give your New Zealand business marketing that runs every week, on systems 
 
 Work with meExplore what the agents run
 
-Flow AI provides AI marketing services for businesses across New Zealand, from Auckland. Amber Lan, an AI marketing engineer, builds the AI agents that run search, content, outbound and reporting with your team, under the Privacy Act 2020 and the Unsolicited Electronic Messages Act, then hands them over.
+Amber Lan provides AI marketing services for businesses across New Zealand, from Auckland. Amber Lan, an AI marketing engineer, builds the AI agents that run search, content, outbound and reporting with your team, under the Privacy Act 2020 and the Unsolicited Electronic Messages Act, then hands them over.
 
 Auckland · Australia
 
@@ -1045,7 +1039,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -1057,7 +1051,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -1089,11 +1083,11 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 ### Who offers AI marketing services in New Zealand?
 
-Providers range from established digital agencies that added AI services to AI-native agencies, automation consultants, AI search specialists and build-and-handover practices such as Flow AI. The Flow AI guide to New Zealand providers lists them by type, using each provider's own public pages, with Flow AI disclosed as the publisher.
+Providers range from established digital agencies that added AI services to AI-native agencies, automation consultants, AI search specialists and build-and-handover practices such as Amber Lan. Amber Lan's guide to New Zealand providers lists them by type, using each provider's own public pages, with Amber Lan disclosed as the publisher.
 
 ### Do you work with businesses outside Auckland?
 
-Yes. Flow AI works with businesses anywhere in New Zealand. Builds run remotely on your own accounts, and Auckland businesses can also meet in person for the scoping workshop.
+Yes. Amber Lan works with businesses anywhere in New Zealand. Builds run remotely on your own accounts, and Auckland businesses can also meet in person for the scoping workshop.
 
 ### Is my customer data safe with AI marketing agents?
 
@@ -1101,11 +1095,11 @@ The written scope names exactly what each agent may read, and customer data stay
 
 ### What do AI marketing services cost in New Zealand?
 
-Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, the Flow AI cost guide sets out sourced New Zealand ranges: agency retainers, freelancer rates, in-house salaries and AI tools.
+Amber Lan prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, Amber Lan's cost guide sets out sourced New Zealand ranges: agency retainers, freelancer rates, in-house salaries and AI tools.
 
 ### How is this different from a New Zealand marketing agency?
 
-An agency usually runs marketing for you on a monthly retainer. Flow AI builds the AI agents that run it with your team and hands them over, so the system, the prompts and the know-how stay inside your business.
+An agency usually runs marketing for you on a monthly retainer. Amber Lan builds the AI agents that run it with your team and hands them over, so the system, the prompts and the know-how stay inside your business.
 
 ### How do I start?
 
@@ -1136,7 +1130,7 @@ Let's build marketing that runs every week for your Australian business, from Sy
 
 Work with meExplore what the agents run
 
-Flow AI provides AI marketing services for Australian businesses, working remotely from Auckland. Amber Lan, an AI marketing engineer, builds the AI agents that run search, content, outbound and reporting with your team, under the Spam Act 2003 and the Australian Privacy Principles, then hands them over.
+Amber Lan provides AI marketing services for Australian businesses, working remotely from Auckland. Amber Lan, an AI marketing engineer, builds the AI agents that run search, content, outbound and reporting with your team, under the Spam Act 2003 and the Australian Privacy Principles, then hands them over.
 
 New Zealand · All services
 
@@ -1236,7 +1230,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -1248,7 +1242,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -1280,11 +1274,11 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 ### Can a New Zealand provider deliver AI marketing services in Australia?
 
-Yes. The agents are built on your own accounts and tools, so the work does not depend on location. Flow AI works with Australian businesses remotely, schedules calls across the two time zones and follows Australian rules on spam and privacy.
+Yes. The agents are built on your own accounts and tools, so the work does not depend on location. Amber Lan works with Australian businesses remotely, schedules calls across the two time zones and follows Australian rules on spam and privacy.
 
 ### Who offers AI marketing services in Australia?
 
-Australian businesses can choose from AI-native agencies, established agencies adding AI, automation consultancies, AI search specialists and build-and-handover practices. The Flow AI guide to Australian providers lists them by type from their own public pages, with Flow AI disclosed as the publisher.
+Australian businesses can choose from AI-native agencies, established agencies adding AI, automation consultancies, AI search specialists and build-and-handover practices. Amber Lan's guide to Australian providers lists them by type from their own public pages, with Amber Lan disclosed as the publisher.
 
 ### Do you work with businesses in Sydney and Melbourne?
 
@@ -1296,7 +1290,7 @@ Yes. Every commercial message the outbound agent drafts must meet the Spam Act 2
 
 ### Do you charge in Australian dollars?
 
-The currency is agreed in the written scope for each build, alongside the price. For Australian market context, the Flow AI cost guides set out sourced ranges for agencies, freelancers and hires.
+The currency is agreed in the written scope for each build, alongside the price. For Australian market context, Amber Lan's cost guides set out sourced ranges for agencies, freelancers and hires.
 
 ### How do I start?
 
@@ -1327,7 +1321,7 @@ Let's sit down together in Auckland and build marketing that runs every week on 
 
 Work with meExplore what the agents run
 
-Flow AI is an Auckland practice providing AI marketing services to Auckland businesses. Amber Lan, an AI marketing engineer based in Auckland, meets your team in person, then builds the AI agents that run search, content, outbound and reporting with you and hands them over.
+Amber Lan is an Auckland practice providing AI marketing services to Auckland businesses. Amber Lan, an AI marketing engineer based in Auckland, meets your team in person, then builds the AI agents that run search, content, outbound and reporting with you and hands them over.
 
 New Zealand · Australia
 
@@ -1427,7 +1421,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -1439,7 +1433,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -1471,11 +1465,11 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 ### Can we meet in person in Auckland?
 
-Yes. Flow AI is based in Auckland, so the scoping workshop and the handover can happen at your office. The build itself runs on your own accounts between sessions, with your team reviewing as it goes.
+Yes. Amber Lan is based in Auckland, so the scoping workshop and the handover can happen at your office. The build itself runs on your own accounts between sessions, with your team reviewing as it goes.
 
 ### What are the top AI marketing services in Auckland?
 
-The right choice depends on the work you most want done, since Auckland has no independent ranking yet. Based in Auckland you will find Growin in Glenfield, an AI-native agency; established agencies that added AI, including Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, Net Branding and NiKa Consulting; AI search specialists Pead and The Optimisers; and Flow AI, where an AI marketing engineer builds the agents with your team and hands them over. The Flow AI guide to New Zealand providers describes each one from its own public pages, with Flow AI disclosed as the publisher.
+The right choice depends on the work you most want done, since Auckland has no independent ranking yet. Based in Auckland you will find Growin in Glenfield, an AI-native agency; established agencies that added AI, including Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, Net Branding and NiKa Consulting; AI search specialists Pead and The Optimisers; and Amber Lan, where an AI marketing engineer builds the agents with your team and hands them over. Amber Lan's guide to New Zealand providers describes each one from its own public pages, with Amber Lan disclosed as the publisher.
 
 ### Can you help my Auckland business show up on Google Maps?
 
@@ -1483,7 +1477,7 @@ Yes. The search agent sets up and maintains your Google Business Profile, keeps 
 
 ### How do I get my Auckland business recommended by ChatGPT?
 
-Make your business easy to find and confirm: clear service pages, consistent details on your site and directories, recent genuine reviews, and mentions on sites the assistants already trust. The Flow AI guide for Auckland businesses walks through it step by step.
+Make your business easy to find and confirm: clear service pages, consistent details on your site and directories, recent genuine reviews, and mentions on sites the assistants already trust. Amber Lan's guide for Auckland businesses walks through it step by step.
 
 ### Do you work with businesses outside Auckland?
 
@@ -1518,7 +1512,7 @@ Let's turn the work your team repeats every week into AI workflows your people r
 
 Work with meExplore what we automate
 
-Amber Lan is an AI automation consultant and AI marketing engineer in Auckland. Through Flow AI she maps the marketing and sales tasks that take your team hours each week, automates them with AI agents and tools such as HubSpot, n8n and Zapier, and hands every workflow over with documentation.
+Amber Lan is an AI automation consultant and AI marketing engineer in Auckland. She maps the marketing and sales tasks that take your team hours each week, automates them with AI agents and tools such as HubSpot, n8n and Zapier, and hands every workflow over with documentation.
 
 Auckland · New Zealand
 
@@ -1598,7 +1592,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -1610,7 +1604,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -1640,11 +1634,11 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 ### What does an AI automation consultant do?
 
-An AI automation consultant finds the repetitive work in a business, decides which parts AI can draft or move safely, and builds the workflows that do it, with a person approving anything that reaches a customer. At Flow AI that work centres on marketing and sales: enquiries, content, CRM upkeep, outbound research and reporting.
+An AI automation consultant finds the repetitive work in a business, decides which parts AI can draft or move safely, and builds the workflows that do it, with a person approving anything that reaches a customer. For Amber Lan that work centres on marketing and sales: enquiries, content, CRM upkeep, outbound research and reporting.
 
-### Is Flow AI an AI automation agency?
+### Is Amber Lan an AI automation agency?
 
-Flow AI does the work people look for when they search for an AI automation agency in Auckland. The model is a partnership. One engineer maps the work with your team, builds the automations on your accounts and hands them over with documentation, so the workflows stay in your business.
+Amber Lan does the work people look for when they search for an AI automation agency in Auckland. The model is a partnership. One engineer maps the work with your team, builds the automations on your accounts and hands them over with documentation, so the workflows stay in your business.
 
 ### Which tools do you build with?
 
@@ -1652,11 +1646,11 @@ Usually the ones you already pay for. The working stack includes HubSpot, n8n, Z
 
 ### How much does an AI automation consultant cost in NZ?
 
-Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, the Flow AI guides to AI consultant rates and AI agent development costs set out sourced ranges for New Zealand and Australia.
+Amber Lan prices each build per project, in NZD plus GST, once the written scope is agreed. For market context, Amber Lan's guides to AI consultant rates and AI agent development costs set out sourced ranges for New Zealand and Australia.
 
 ### Can we meet in person in Auckland?
 
-Yes. Flow AI is based in Auckland, so the mapping workshop and the handover can happen at your office. Between sessions the build runs on your own accounts, and your team reviews as it goes.
+Yes. Amber Lan is based in Auckland, so the mapping workshop and the handover can happen at your office. Between sessions the build runs on your own accounts, and your team reviews as it goes.
 
 ### How do I start?
 
@@ -1687,7 +1681,7 @@ Let's design the agents your team will rely on, and build them so your people ca
 
 Work with meExplore the agents
 
-Flow AI develops custom AI agents for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer and AI agent developer in Auckland, builds agents for search, content, outbound and reporting on your own accounts, with a named person approving their work, then hands every agent, prompt and file to your team.
+Amber Lan develops custom AI agents for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer and AI agent developer in Auckland, builds agents for search, content, outbound and reporting on your own accounts, with a named person approving their work, then hands every agent, prompt and file to your team.
 
 Auckland · New Zealand
 
@@ -1767,7 +1761,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -1779,7 +1773,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -1811,21 +1805,21 @@ Large paid media budgets and production-heavy brand campaigns belong with a full
 
 An AI agent developer designs and builds software agents that use a language model to carry out a job, such as researching accounts or drafting content, with access to specific tools and data. The work covers the brief, data access, guardrails, review points, monitoring and documentation as well as the prompts.
 
-### What kind of AI agents does Flow AI build?
+### What kind of AI agents does Amber Lan build?
 
 Agents for marketing and sales work: AI search and SEO, content drafting in your voice, outbound research and first drafts, measurement and weekly reporting. Each agent has one job and a named reviewer on your team, and custom agents are scoped from the hours they give back.
 
 ### Who owns the agents after the build?
 
-You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Flow AI.
+You do. Every agent, prompt, workflow and document is built on your accounts and handed over with written instructions, so your team can run, change or extend the system without Amber Lan.
 
 ### How much does AI agent development cost?
 
-Flow AI prices each build per project once the written scope is agreed. The Flow AI guide to AI agent development costs in New Zealand breaks the cost into sourced parts: people time, model usage, platform subscriptions and ongoing upkeep.
+Amber Lan prices each build per project once the written scope is agreed. Amber Lan's guide to AI agent development costs in New Zealand breaks the cost into sourced parts: people time, model usage, platform subscriptions and ongoing upkeep.
 
 ### Do you work with businesses in Australia?
 
-Yes. Flow AI is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles.
+Yes. Amber Lan is based in Auckland and works with businesses across New Zealand and Australia. Builds run remotely on your own accounts, with calls scheduled across the two time zones, and Australian work follows the Spam Act 2003 and the Australian Privacy Principles.
 
 ### How do I start?
 
@@ -1856,7 +1850,7 @@ Let's connect your CRM, email and content into one system your team trusts and k
 
 Work with meExplore what we automate
 
-Flow AI is a marketing automation practice in Auckland for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer who has architected HubSpot from scratch, builds the workflows that follow up leads, keep the CRM current, produce content and report results, with AI agents drafting and your team approving.
+Amber Lan is a marketing automation practice in Auckland for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer who has architected HubSpot from scratch, builds the workflows that follow up leads, keep the CRM current, produce content and report results, with AI agents drafting and your team approving.
 
 Auckland · New Zealand
 
@@ -1936,7 +1930,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -1948,7 +1942,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -1994,7 +1988,7 @@ Yes. Every commercial email follows the Unsolicited Electronic Messages Act 2007
 
 ### How much does marketing automation consulting cost?
 
-Flow AI prices each build per project, in NZD plus GST, once the written scope is agreed. Platform subscriptions are paid directly by your business, and the Flow AI tool comparison sets out what n8n, Zapier and Make charge.
+Amber Lan prices each build per project, in NZD plus GST, once the written scope is agreed. Platform subscriptions are paid directly by your business, and Amber Lan's tool comparison sets out what n8n, Zapier and Make charge.
 
 ### How do I start?
 
@@ -2025,7 +2019,7 @@ Let's give your team a Claude Code setup it trusts, shaped around the work you a
 
 Work with meExplore the setup
 
-Flow AI sets up Claude Code for marketing teams in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, runs a whole marketing function on Claude Code and builds the same structure with your team: instruction files for each area of work, a skills library, connectors to your tools and review gates, then hands it over.
+Amber Lan sets up Claude Code for marketing teams in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, runs a whole marketing function on Claude Code and builds the same structure with your team: instruction files for each area of work, a skills library, connectors to your tools and review gates, then hands it over.
 
 Auckland · New Zealand
 
@@ -2087,7 +2081,7 @@ The setup comes from running a full marketing function on Claude Code every week
 
 - Working notesHow a whole marketing function runs on Claude Code, written up in full.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - Plans and seatsClaude for business or ChatGPT Business sets out what each costs a New Zealand team.
 
@@ -2105,7 +2099,7 @@ The systems behind this practice are public, so you can judge the craft before w
 
 - Case studySix months of one operator running a whole marketing function on AI agents, phase by phase.
 
-- Open source126 inspectable skills, sixteen built by Flow AI, every one linked to its source.
+- Open source126 inspectable skills, sixteen built by Amber Lan, every one linked to its source.
 
 - TemplatesFree agent templates, ready to run on your own site today.
 
@@ -2117,7 +2111,7 @@ Each build is priced per project once the written scope is agreed, so the invest
 
 ## When an agency is the better fit.
 
-Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Flow AI is the partner for marketing that runs every week on systems your team owns and grows.
+Large paid media budgets and production-heavy brand campaigns belong with a full-service agency. Amber Lan is the partner for marketing that runs every week on systems your team owns and grows.
 
 ## Guides to help you choose well.
 
@@ -2155,15 +2149,15 @@ Some comfort with files and a terminal helps. Skills and lane files are plain wr
 
 ### Is Claude Code a good fit for a marketing agency?
 
-It suits agencies with repeatable client work such as research, briefs, drafts, reporting and SEO or AEO audits. The key design choice is client separation: one workspace and one set of connectors per client, so each client's data stays with its account. The Flow AI guide for agencies covers the first workflows to build.
+It suits agencies with repeatable client work such as research, briefs, drafts, reporting and SEO or AEO audits. The key design choice is client separation: one workspace and one set of connectors per client, so each client's data stays with its account. Amber Lan's guide for agencies covers the first workflows to build.
 
 ### Which Claude plan does our team need?
 
-That depends on team size and how heavily you use it, since Anthropic's plans differ in usage limits and admin controls. The Flow AI guide comparing Claude for business and ChatGPT Business sets out current prices for a New Zealand team.
+That depends on team size and how heavily you use it, since Anthropic's plans differ in usage limits and admin controls. Amber Lan's guide comparing Claude for business and ChatGPT Business sets out current prices for a New Zealand team.
 
 ### Who owns the setup?
 
-You do. Every lane file, skill and connector setting lives in your accounts and repository, documented so your team can change or extend it without Flow AI.
+You do. Every lane file, skill and connector setting lives in your accounts and repository, documented so your team can change or extend it without Amber Lan.
 
 ### How do I start?
 
@@ -2201,7 +2195,7 @@ Follow one run from positioning to the monthly report: Flow Intelligence briefs 
 
 ### Read the words in the film
 
-- Introducing Flow AI.
+- Introducing Amber Lan.
 
 - Let’s build the AI agents that run your marketing.
 
@@ -3433,7 +3427,7 @@ The proof is recursive: this website runs the toolkit's own playbook.
 
 ### Live proof
 
-flowai.co.nz allows all nine AI crawlers, serves llms.txt at the root and under .well-known, carries JSON-LD on every page, and structures answers for extraction. The Flow AI retainer applies the same toolkit to client sites.
+flowai.co.nz allows all nine AI crawlers, serves llms.txt at the root and under .well-known, carries JSON-LD on every page, and structures answers for extraction. Amber Lan applies the same toolkit on client sites.
 
 ### Evidence
 
@@ -4088,7 +4082,7 @@ LinkedInGitHubEmail
 
 ### Who is Amber Lan?
 
-Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, who takes on contract builds under the trading name Flow AI. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of Novamind Labs, an AI startup, on an agent stack she built herself.
+Amber Lan is an AI marketing engineer and GTM engineer based in Auckland, New Zealand, who takes on contract builds. She has over ten years across every part of marketing and three years building the AI agent systems that run it. She runs the marketing function of Novamind Labs, an AI startup, on an agent stack she built herself.
 
 ### What does Amber Lan build?
 
@@ -4100,7 +4094,7 @@ Auckland, New Zealand. She works with businesses worldwide, in English and Manda
 
 ### How do you work with Amber Lan?
 
-Two ways. Teams contract a build through Flow AI: a written scope, then a fixed-scope build their team keeps running. Companies hiring for a senior marketing engineer or GTM engineer role can reach out directly.
+Two ways. Teams contract a build through Amber Lan: a written scope, then a fixed-scope build their team keeps running. Companies hiring for a senior marketing engineer or GTM engineer role can reach out directly.
 
 ### Does Amber Lan build with Claude Code?
 
@@ -4120,7 +4114,7 @@ Author: Amber Lan, AI marketing engineer, Auckland
 Published: 2026-10-01
 Last updated: 2026-10-01
 
-The Flow AI manifesto
+The manifesto
 
 # Marketing finally has its engineering layer.
 
@@ -4244,7 +4238,7 @@ The lineYou hold
 
 The work a marketer was hired for, and the part that stays human.
 
-Flow AI grew from three years running this split, solo, as an AI company's whole marketing team. In production, the agents buy back about 30 team-hours a week.
+This way of working grew from three years running this split, solo, as an AI company's whole marketing team. In production, the agents buy back about 30 team-hours a week.
 
 What becomes possible
 
@@ -4325,7 +4319,7 @@ Agent templates · free
 
 # Put an agent to work on your site.
 
-Pick a template and Flow AI runs it on your site. Amber reviews every result, and it reaches you within two working days. Each one is open source, so your team can also run it in-house.
+Pick a template and Amber Lan runs it on your site. Amber reviews every result, and it reaches you within two working days. Each one is open source, so your team can also run it in-house.
 
 Flow Intelligence
 
@@ -4391,7 +4385,7 @@ How a run works
 
 ## One agent, then a person's review.
 
-Each template is one Flow AI agent with one fixed job. Tell it where to look. A person checks the result before you see it.
+Each template is one agent with one fixed job. Tell it where to look. A person checks the result before you see it.
 
 01
 
@@ -4436,9 +4430,9 @@ Give it your site address. It writes the brief every other agent works from: pos
 
 Free · reviewed by a person
 
-## Run it with Flow AI
+## Run it with Amber Lan
 
-Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.
+Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.
 
 Your emailYour siteRun it on my site
 
@@ -4466,7 +4460,7 @@ How it runs
 
 - 04Write the briefOne self-contained Brand DNA file. It marks anything not public as not found and lists every source with the date it was read.
 
-- 05A marketing engineer reviews itAmber checks the result on every Flow AI run before it reaches you.
+- 05A marketing engineer reviews itAmber checks the result on every run before it reaches you.
 
 In and out
 
@@ -4527,9 +4521,9 @@ Measure how visible your site is to ChatGPT, Claude, Perplexity and Google's AI 
 
 Free · reviewed by a person
 
-## Run it with Flow AI
+## Run it with Amber Lan
 
-Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.
+Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.
 
 Your emailYour siteRun it on my site
 
@@ -4559,7 +4553,7 @@ How it runs
 
 - 05Plan the monthA 30-day action plan, one theme a week.
 
-- 06A marketing engineer reviews itAmber checks the result on every Flow AI run before it reaches you.
+- 06A marketing engineer reviews itAmber checks the result on every run before it reaches you.
 
 In and out
 
@@ -4618,9 +4612,9 @@ Confirm which AI systems can read your site. It tests fourteen AI crawlers again
 
 Free · reviewed by a person
 
-## Run it with Flow AI
+## Run it with Amber Lan
 
-Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.
+Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.
 
 Your emailYour siteRun it on my site
 
@@ -4650,7 +4644,7 @@ How it runs
 
 - 05Check renderingWhether your content needs JavaScript to appear, which many AI crawlers do not run.
 
-- 06A marketing engineer reviews itAmber checks the result on every Flow AI run before it reaches you.
+- 06A marketing engineer reviews itAmber checks the result on every run before it reaches you.
 
 In and out
 
@@ -4833,9 +4827,9 @@ Scores one page, block by block, on how likely AI assistants are to quote it. Th
 
 Free · reviewed by a person
 
-## Run it with Flow AI
+## Run it with Amber Lan
 
-Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.
+Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.
 
 Your emailPage to scoreScore my page
 
@@ -4865,7 +4859,7 @@ How it runs
 
 - 05Rewrite the weakestSpecific rewrites for the lowest-scoring blocks, written answer-first.
 
-- 06A marketing engineer reviews itAmber checks the result on every Flow AI run before it reaches you.
+- 06A marketing engineer reviews itAmber checks the result on every run before it reaches you.
 
 In and out
 
@@ -4922,9 +4916,9 @@ Publish with confidence. It checks every link, statistic, source and company cla
 
 Free · reviewed by a person
 
-## Run it with Flow AI
+## Run it with Amber Lan
 
-Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.
+Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.
 
 Your emailPage or draft linkCheck my page
 
@@ -4954,7 +4948,7 @@ How it runs
 
 - 05Check your own claimsIt checks metrics and features against your Brand DNA, and dates and numbers against each other.
 
-- 06A marketing engineer reviews itAmber checks the result on every Flow AI run before it reaches you.
+- 06A marketing engineer reviews itAmber checks the result on every run before it reaches you.
 
 In and out
 
@@ -5013,9 +5007,9 @@ Find the Reddit threads where your business can help and the communities worth j
 
 Free · reviewed by a person
 
-## Run it with Flow AI
+## Run it with Amber Lan
 
-Flow AI runs this agent on your site and Amber reviews the result, which reaches your inbox within two working days.
+Amber Lan runs this agent on your site and reviews the result, which reaches your inbox within two working days.
 
 Your emailYour siteRun it on my site
 
@@ -5045,7 +5039,7 @@ How it runs
 
 - 05Turn it into demandThe searches and AI prompts buyers are likely making, and the content worth creating for them.
 
-- 06A marketing engineer reviews itAmber checks the result on every Flow AI run before it reaches you.
+- 06A marketing engineer reviews itAmber checks the result on every run before it reaches you.
 
 In and out
 
@@ -5180,7 +5174,7 @@ Your own browser only
 
 ## Who we are
 
-Flow AI is run by Amber Lan, an AI marketing engineer based in Auckland, New Zealand. Amber is responsible for the information collected on flowai.co.nz. For anything about your information, email amber.lan.growth.digital@gmail.com.
+This site is run by Amber Lan, an AI marketing engineer based in Auckland, New Zealand. Amber is responsible for the information collected on flowai.co.nz. For anything about your information, email amber.lan.growth.digital@gmail.com.
 
 ## What we collect and why
 
@@ -5296,21 +5290,21 @@ Take your time. Everything here is free to read, numbers included.
 
 An AI marketing engineer connects go-to-market strategy to the systems that run it. The work spans positioning, search visibility, content operations, outbound automation and measurement.
 
-### How is Flow AI different from a marketing agency?
+### How is Amber Lan different from a marketing agency?
 
 You work side by side with the person who writes the strategy and builds the systems, with no account manager in between. Your team keeps the systems running after launch.
 
 ### How quickly can the first system go live?
 
-Flow AI sends the written scope within a few days of your first conversation, and a typical build goes live in its first week.
+Amber Lan sends the written scope within a few days of your first conversation, and a typical build goes live in its first week.
 
-### Who is Flow AI for?
+### Who is Amber Lan for?
 
-Flow AI is for teams that want an AI marketing system built with them, from early-stage startups to in-house marketing teams. For companies hiring, the same work is Amber Lan's portfolio.
+Amber Lan is for teams that want an AI marketing system built with them, from early-stage startups to in-house marketing teams. For companies hiring, the same work is Amber Lan's portfolio.
 
 ### What does AI marketing cost in Australia and New Zealand?
 
-Flow AI scopes and prices each build per project. A typical build is a fixed-scope week, and your team keeps running the system after handover.
+Amber Lan scopes and prices each build per project. A typical build is a fixed-scope week, and your team keeps running the system after handover.
 
 ### What is AI-search optimisation?
 
@@ -5445,11 +5439,11 @@ Start from the questions your team asks, then wire one source at a time. List th
 
 The same pattern sits behind most AI agents for marketing: read access first, written rules, and a person who approves. If the idea of an AI marketing agent is new, start there. Reporting is a natural lane for marketing automation, because the work repeats every month and the rules rarely change.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. If you are looking for a marketing automation consultant to build a report like this on your own tools, that page explains how a build works.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. If you are looking for a marketing automation consultant to build a report like this on your own tools, that page explains how a build works.
 
-Teams can contract a build, which starts with a written scope and is priced per project. If you are hiring for a marketing engineer or GTM engineer role, I am open to conversations about senior roles. The skills I build in the open are in the Flow AI skill library.
+Teams can contract a build, which starts with a written scope and is priced per project. If you are hiring for a marketing engineer or GTM engineer role, I am open to conversations about senior roles. The skills I build in the open are in Amber Lan's skill library.
 
 The short version
 
@@ -5628,9 +5622,9 @@ Read a sample of agent output against your marketing automation rules and voice 
 
 Update the documentation when a workflow changes.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber's own stack is Claude Code, and Flow AI is not a partner of n8n, Zapier or Make.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber's own stack is Claude Code, and Amber Lan is not a partner of n8n, Zapier or Make.
 
 If the agent route fits your team, the page on working with a Claude Code consultant explains how a build runs; each starts with a written scope and is priced per project. The skill library and free agent templates are open to inspect first. Companies hiring can reach Amber through the hiring page.
 
@@ -5829,9 +5823,9 @@ On exit: developer access removed, keys rotated, and the developer's copies of y
 
 The last item matters under IPP 9 as well as for security. Record the list and the exit terms in a written AI marketing scope of work.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. The AI agent development service sets out how a build runs on your accounts, with a named person on your team approving each agent's work.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. The AI agent development service sets out how a build runs on your accounts, with a named person on your team approving each agent's work.
 
 The free agent templates and the public skill library show the method before a call. Each build starts with a written scope and is priced per project. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
 
@@ -5841,7 +5835,7 @@ Hire an AI agent developer on evidence: an agent running on real work, a test se
 
 Then put ownership in writing: code, prompts, tests, accounts and data in your name, privacy duties and the handover agreed before the build begins.
 
-To put Flow AI through the same questions, talk to Amber.
+To put her through the same questions, talk to Amber.
 
 Q: How much does it cost to hire an AI agent developer in New Zealand?
 A: Robert Walters' 2026 salary guide puts Auckland AI engineers at NZD 130,000 to 150,000 base salary and NZD 130 to 180 an hour on contract. Employers add KiwiSaver at 3.5% from 1 April 2026. Freelancers and agencies rarely publish rates, so ask for a written quote per agent based on a scope that names its job, its data and its review step.
@@ -5996,9 +5990,9 @@ After four to six weeks, count who uses it weekly, then set the seat count and m
 
 The free agent templates give you starting instructions to adapt, and the comparison of AI marketing tools and AI marketing services helps if you are deciding how much of the setup to do yourself.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber runs her own work on Claude Code, so judge both plans on your own trial.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber runs her own work on Claude Code, so judge both plans on your own trial.
 
 If you choose Claude and want the setup done properly, the page on working with a Claude Code consultant explains how a build runs. Each build starts with a written scope and is priced per project. Companies hiring can reach Amber through the hiring page.
 
@@ -6159,9 +6153,9 @@ Bring in a Claude Code consultant when the first workflows run but the setup sta
 
 A good consultant builds on your accounts, writes everything down, and leaves your team able to run and change the setup without them. Ask the same questions you would ask an AI agent developer: show me it running, show me the tests, who owns the files, and what does the handover include. The public skill library is a fair way to judge anyone's method before a call, including mine.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For agencies, the Claude Code consultant service sets up lane files, a skills library, connectors, review gates and one workspace per client, on your accounts.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For agencies, the Claude Code consultant service sets up lane files, a skills library, connectors, review gates and one workspace per client, on your accounts.
 
 Each build starts with a written scope and is priced per project, and your team owns every file at the end. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
 
@@ -6264,7 +6258,7 @@ For a 5 to 50 person business, a sensible first engagement is a fixed-price asse
 Diagram, read as a list: Pick one process (the one wasting most hours) leads to Assessment or workshop. Assessment or workshop (fixed price, on that process) leads to One implementation project. One implementation project (written scope, your accounts) leads to Add training. Add training (once the first change is live). Grant or free centre (NZ pilot, Australian Adopt Centres) leads to Assessment or workshop.
 The first spend is a fixed-price assessment on the one process that wastes the most hours. Check whether a grant or free centre can cover it, and add training once the first change is live.
 
-The business.govt.nz page says the AI Advisory Pilot covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and up to NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, open until 30 June 2027. A roadmap costing NZD 5,000 could therefore cost the business NZD 2,500 if the application succeeds and the provider is one the pilot accepts. The same page says the pilot does not fund work completed before funding approval. The guide to New Zealand's AI Advisory Pilot covers eligibility, exclusions and how to apply through a Regional Business Partner Network growth advisor. Flow AI is not an approved provider for the pilot, so its work cannot be funded through it.
+The business.govt.nz page says the AI Advisory Pilot covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and up to NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, open until 30 June 2027. A roadmap costing NZD 5,000 could therefore cost the business NZD 2,500 if the application succeeds and the provider is one the pilot accepts. The same page says the pilot does not fund work completed before funding approval. The guide to New Zealand's AI Advisory Pilot covers eligibility, exclusions and how to apply through a Regional Business Partner Network growth advisor. Amber Lan is not an approved provider for the pilot, so her work cannot be funded through it.
 
 A simple budget sequence for a small business:
 
@@ -6312,9 +6306,9 @@ Is the price plus GST? Get it in writing so you compare like with like.
 
 Red flags include guaranteed savings or revenue, no written scope, a long retainer before you have seen any deliverable, and results quoted with no client you can contact. The guide to choosing an AI marketing provider has a longer question list.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI is not an approved AI Advisory Pilot provider, so the pilot cannot co-fund its work.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber Lan is not an approved AI Advisory Pilot provider, so the pilot cannot co-fund her work.
 
 Teams contract a build, which starts with a written scope and is priced per project. The AI automation consultant page explains what gets automated first, and the free agent templates show the kind of system a build leaves behind. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through the hiring page.
 
@@ -6335,7 +6329,7 @@ A: A fixed price works better when the deliverable can be written down in advanc
 Q: What does an AI implementation consultant cost?
 A: Implementation is mostly people time, so it follows contract rates: Robert Walters lists Auckland AI consultants at NZD 140 to 190 an hour and AI engineers at NZD 130 to 180 in 2026. One Auckland provider, EZ-AI, publishes automation builds at NZD 500 to 5,000 plus GST and AI assistants or agents at NZD 3,000 to 12,000 plus GST. Software subscriptions and upkeep are extra.
 Q: Can a government grant pay for an AI consultant in New Zealand?
-A: Yes, through the AI Advisory Pilot, delivered by the Regional Business Partner Network. It covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, until 30 June 2027. Ask your growth advisor which providers are approved for the pilot before you commit. Flow AI is not an approved provider.
+A: Yes, through the AI Advisory Pilot, delivered by the Regional Business Partner Network. It covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, until 30 June 2027. Ask your growth advisor which providers are approved for the pilot before you commit. Amber Lan is not an approved provider.
 Q: What should an AI consultant deliver for a small business?
 A: A written plan that names the processes to change first, who owns each step and when it starts, plus a list of approved tools and a privacy check for any tool that touches customer data. The best engagements also leave at least one working change your staff already use, built in your accounts and documented so someone else can maintain it.
 
@@ -6487,11 +6481,11 @@ Inland Revenue's GST page states that GST is charged at a rate of 15%. IRD's gui
 
 In Australia, the ATO's How GST works page, updated 14 September 2026, sets GST at 10% and requires registration once GST turnover reaches AUD 75,000.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every agent runs on your own accounts.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every agent runs on your own accounts.
 
-Teams contract a build, which starts with a written scope and is priced per project. The AI agent development page lists the agents Flow AI builds, and the sprints page shows what a build covers. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through the hiring page.
+Teams contract a build, which starts with a written scope and is priced per project. The AI agent development page lists the agents Amber Lan builds, and the sprints page shows what a build covers. Companies hiring a senior marketing engineer or GTM engineer can reach Amber through the hiring page.
 
 The short version
 
@@ -6672,9 +6666,9 @@ PrivacyHow the work meets the NZ Privacy Act 2020 or the Australian Privacy Act"
 
 The guide to choosing an AI marketing provider turns these items into twelve questions and a scoring table, and the AI marketing scope of work guide shows how to write the scope itself. For a NZ and Australian overview of the options, explore the AI marketing services hub for both countries.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. On the delivery table above, that is the build and handover model.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. On the delivery table above, that is the build and handover model.
 
 Flow Intelligence handles positioning, and ten agents cover the service lines listed on this page, installed on your own accounts. Each build starts with a written scope and is priced per project. It ends with a documented handover, and from there your team owns it and keeps it running. You can explore the systems in the open: the skill library, free agent templates, and a case study of a six-month marketing function. Companies hiring a marketing engineer can reach Amber at the hiring page.
 
@@ -6837,9 +6831,9 @@ Recalculate after three months with real numbers and keep whichever option wins.
 
 A worked example with invented numbers: an agency at AUD 3,500 a month plus AUD 2,000 ad spend and three of your hours at AUD 100 costs AUD 5,800. If it brings 25 enquiries, each costs AUD 232. If an average job is worth AUD 4,000 and you win one in four, each enquiry is worth AUD 1,000, and the spend pays for itself. The glossary entry on cost per enquiry gives the definition. Ask too who does the work each week, and confirm the ad accounts and analytics sit in your business's name.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
 
 That is a different purchase from a retainer: each build starts with a written scope and a per-project price, and ends with a documented handover, so your team owns and runs the system you build together. Agencies remain the right answer for large paid media budgets and brand campaigns. The skill library behind the builds is public, so you can explore it before the first conversation.
 
@@ -7004,9 +6998,9 @@ For a small business, the best choice is usually the provider that does the fewe
 
 Agencies with media buying teams remain the right answer for large paid media budgets and brand campaigns. For a business whose main gap is being found in search and AI answers, keeping content going and following up on enquiries, a focused AI marketing agency for small business, or a build your own team runs, usually fits better. If you are comparing options in New Zealand, the page on AI marketing services in New Zealand sets out what is available locally; Australian readers can start from AI marketing services for Australian businesses.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Flow AI welcomes the same twelve questions as any provider on your list.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Amber Lan welcomes the same twelve questions as any provider on your list.
 
 Its systems are public in the skill library and the free agent templates, so you can answer most of questions 1 and 2 before a call. Each build starts with a written scope and is priced per project. It ends with a documented handover, and from there your team owns it and keeps it running. Companies hiring a marketing engineer or GTM engineer can reach Amber through the hiring page.
 
@@ -7016,7 +7010,7 @@ Choose an AI marketing provider by what it will show you: a working system, a na
 
 Keep the first engagement small and short, on one or two service lines, and expand once the numbers move.
 
-To put Flow AI through the twelve questions, talk to Amber.
+To put her through the twelve questions, talk to Amber.
 
 Q: What is the best AI marketing agency for a small business?
 A: The best AI marketing agency for a small business is one that shows its system running on a real business, names the person who reviews your work, keeps every account and file in your name, reports enquiries and cost per enquiry, and puts its price and exit terms in writing. Size and awards matter less than what it will show you before you sign.
@@ -7150,9 +7144,9 @@ Write prompts the way an Auckland customer would: "who is a good physio in Mt Al
 
 The guide to answer engine optimisation explains the wider practice, and the AEO checklist ranks every item by effort if you want to go further than local.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For a local business, its search agent covers the website side of this guide. The AI search sprint lists its deliverables.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. For a local business, its search agent covers the website side of this guide. The AI search sprint lists its deliverables.
 
 Each build starts with a written scope and a per-project price, and your team owns what you build together. If you would like to meet in person, the page on AI marketing in Auckland explains how local work runs. Companies hiring for a marketing engineer role are welcome to reach Amber through the hiring page.
 
@@ -7193,7 +7187,7 @@ Each week ends with one output: a scope, a working agent, a measured run and a h
 
 An AI marketing build is a fixed project in which a provider sets up AI agents to run specific marketing jobs inside your business, starting from a written scope and ending with a documented handover. An AI marketing agent is the software doing one of those jobs, such as keeping your site visible in AI search or drafting a month of content, with a person reviewing what it produces.
 
-This guide describes how a good first month runs in general, whichever provider you choose, with Flow AI's process as one example near the end. If you are still deciding what to buy, the guide to what AI marketing services include covers the menu, and the wider path is in the guide to AI marketing transformation for small business.
+This guide describes how a good first month runs in general, whichever provider you choose, with Amber Lan's process as one example near the end. If you are still deciding what to buy, the guide to what AI marketing services include covers the menu, and the wider path is in the guide to AI marketing transformation for small business.
 
 What should you have ready before week one?
 
@@ -7278,11 +7272,11 @@ Plenty of AI projects stall. Gartner predicted in June 2025 that over 40% of age
 
 The cure for both is the same: one agent, a clear measure, a tested review step and a real handover. Relationships also fail when the provider never learns the business. Setup's 2025 Marketing Relationship Survey, a small and mostly US sample of about 100 responses, found 44% of clients who ended an agency relationship said the agency did not understand their business. Week one exists to prevent that. The guide to choosing an AI marketing provider lists the questions to ask before you start.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Its process follows the shape above, compressed: each sprint builds one agent in a week.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Its process follows the shape above, compressed: each sprint builds one agent in a week.
 
-The first step is a written scope agreed inside week one. Each sprint runs Monday to Friday with six fixed deliverables and a documented handover, and a marketing engineer reviews every send. Builds are priced per project, and your team keeps the agent. The overview of Flow AI's marketing services has the detail, and companies hiring can reach Amber at the hiring page.
+The first step is a written scope agreed inside week one. Each sprint runs Monday to Friday with six fixed deliverables and a documented handover, and a marketing engineer reviews every send. Builds are priced per project, and your team keeps the agent. The overview of Amber Lan's marketing services has the detail, and companies hiring can reach Amber at the hiring page.
 
 The short version
 
@@ -7433,9 +7427,9 @@ Review after 90 days and move work toward whichever route is producing enquiries
 
 For Auckland businesses that want to talk this through face to face, the page on AI marketing in Auckland covers local options, and the AI marketing services overview for NZ and Australia covers the wider picture.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. In this guide's terms, that is the build and handover route.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. In this guide's terms, that is the build and handover route.
 
 Each build starts with a written scope and is priced per project. It ends with a documented handover, and from there your team owns it and keeps it running. If you prefer tools for now, the free agent templates and the skill library are open to use. Companies hiring a marketing engineer can reach Amber through the hiring page.
 
@@ -7582,9 +7576,9 @@ No baseline, so nobody can tell at the end whether anything improved.
 
 The guide to choosing an AI marketing provider turns these into questions to ask on the first call, and the guide to what AI marketing services include helps you check the scope covers the right work.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every build starts with a written scope like the one above.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Every build starts with a written scope like the one above.
 
 Once you agree that scope together, the build is priced per project and ends with a documented handover that leaves the systems in your hands. The page on AI marketing services for NZ and Australian businesses explains how a build runs. Companies hiring a marketing engineer can reach Amber through the hiring page.
 
@@ -7614,11 +7608,11 @@ URL: https://www.flowai.co.nz/blog/ai-marketing-providers-new-zealand
 Author: Amber Lan, AI marketing engineer, Auckland
 Updated: 2026-10-13
 
-Short answer: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Flow AI.
+Short answer: AI marketing services in New Zealand come from five kinds of provider: AI-native agencies such as Growin, established digital agencies that added AI such as Net Branding and Web Genius, AI search specialists such as The Optimisers and Pead, build-and-train firms such as AI Marketing NZ and King Tide, and marketing engineers, including this guide's publisher, Amber Lan.
 
-How did Flow AI compile this list of NZ AI marketing providers?
+How did Amber Lan compile this list of NZ AI marketing providers?
 
-This list includes every provider that passed three tests: it runs a public website, its own pages offer AI marketing services to New Zealand businesses, and it shows public evidence of delivery. Flow AI read each provider's pages in October 2026 and refreshes the list every quarter, with the next refresh due in January 2027.
+This list includes every provider that passed three tests: it runs a public website, its own pages offer AI marketing services to New Zealand businesses, and it shows public evidence of delivery. Amber Lan read each provider's pages in October 2026 and refreshes the list every quarter, with the next refresh due in January 2027.
 
 A public website the provider runs, live when checked.
 
@@ -7626,7 +7620,7 @@ AI marketing services for NZ businesses, named on its own pages.
 
 Public evidence of delivery: case pages, named clients or testimonials, or published work.
 
-Names came from search results, directories and NZ trade press. Of seventeen third-party providers checked, twelve passed. Flow AI will check the other five again at the next refresh; most lacked a working site or case page of their own. Every description below uses only the provider's own pages.
+Names came from search results, directories and NZ trade press. Of seventeen third-party providers checked, twelve passed. Amber Lan will check the other five again at the next refresh; most lacked a working site or case page of their own. Every description below uses only the provider's own pages.
 
 This guide leaves prices out because few providers publish them: a June 2026 Digital Nomads HQ audit of 411 service lines across 140 Australian agencies found 78% publish no pricing. The guide to AI marketing costs in Australia and New Zealand covers price ranges.
 
@@ -7634,7 +7628,7 @@ People check what AI tools tell them: BrightLocal's March 2026 analysis of 455 U
 
 Which providers offer AI marketing services in New Zealand?
 
-Thirteen providers met the criteria in October 2026: twelve third-party providers and Flow AI, the publisher. They fall into five types. The table lists each one alphabetically within its type, with its city, what its own pages list and how it delivers the work, and the sections below describe each in more detail.
+Thirteen providers met the criteria in October 2026: twelve third-party providers and Amber Lan, the publisher. They fall into five types. The table lists each one alphabetically within its type, with its city, what its own pages list and how it delivers the work, and the sections below describe each in more detail.
 
 An AI marketing provider is a business that sells marketing work in which AI systems carry a real share of the production, analysis or customer contact, with people setting direction and reviewing the output.
 
@@ -7664,7 +7658,7 @@ Enterprise DNAAutomation and consultingNZ and Australia (no city stated)AI advis
 
 King TideAutomation and build-and-trainKihikihi, WaikatoAI stack, CRM follow-up, content engine, custom assistantsTrains your team to run it, or runs it
 
-Flow AI (publisher)Marketing engineerAucklandA positioning system plus ten marketing agentsScoped build, documented handover
+Amber Lan (publisher)Marketing engineerAucklandA positioning system plus ten marketing agentsScoped build, documented handover
 
 Which AI-native agencies serve New Zealand businesses?
 
@@ -7736,11 +7730,11 @@ King Tide's AI marketing integration page describes designing a business's AI st
 
 Where do marketing engineers fit?
 
-A marketing engineer builds the AI systems that run a company's marketing, works on them with the client's team and hands them over documented, so the team owns and runs them afterwards. Flow AI, which publishes this guide, sits in this category. This guide holds it to the same three criteria and describes it in the same plain terms as everyone else.
+A marketing engineer builds the AI systems that run a company's marketing, works on them with the client's team and hands them over documented, so the team owns and runs them afterwards. Amber Lan, who publishes this guide, sits in this category. This guide holds it to the same three criteria and describes it in the same plain terms as everyone else.
 
-Flow AI (publisher of this guide)
+Amber Lan (publisher of this guide)
 
-Flow AI's pages list builds for New Zealand and Australian businesses: Flow Intelligence, a positioning system, plus ten agents covering search, content, social, outbound, conversion, launch, paid, community, measurement and reporting. Its published work is a public library of 126 marketing skills and a set of free agent templates. Each build starts with a written scope and a per-project price, and ends with a documented handover. The marketing engineer guide explains the role.
+Amber Lan's pages list builds for New Zealand and Australian businesses: Flow Intelligence, a positioning system, plus ten agents covering search, content, social, outbound, conversion, launch, paid, community, measurement and reporting. Its published work is a public library of 126 marketing skills and a set of free agent templates. Each build starts with a written scope and a per-project price, and ends with a documented handover. The marketing engineer guide explains the role.
 
 How do the directories rank AI marketing agencies?
 
@@ -7775,9 +7769,9 @@ Large media budgets or brand campaigns: an established agency, where buying powe
 
 With a shortlist in hand, the twelve questions for choosing an AI marketing provider test each one, and the checklist of what AI marketing services include compares scopes line by line. Auckland owners can also explore AI marketing builds in Auckland.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. It is a natural fit for teams that want to own and run their marketing systems.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. It is a natural fit for teams that want to own and run their marketing systems.
 
 For large media buying or brand campaigns, an agency from the lists above is the better fit. Companies hiring a senior marketing engineer or GTM engineer are welcome to reach Amber through the hiring page.
 
@@ -7790,17 +7784,17 @@ Start with the job and pick the type that does it. Then test a shortlist from th
 To work through which type fits your business together, talk to Amber.
 
 Q: What are the best AI marketing services in New Zealand?
-A: The best fit depends on the job you need done, since New Zealand has no independent ranking of AI marketing services. Providers whose own pages lead with AI search include The Optimisers and Pead. Growin runs lead generation on its own AI engine. Net Branding, NiKa Consulting and Web Genius add AI to full agency services. AI Marketing NZ, King Tide and Flow AI build systems your team keeps.
+A: The best fit depends on the job you need done, since New Zealand has no independent ranking of AI marketing services. Providers whose own pages lead with AI search include The Optimisers and Pead. Growin runs lead generation on its own AI engine. Net Branding, NiKa Consulting and Web Genius add AI to full agency services. AI Marketing NZ, King Tide and Amber Lan build systems your team keeps.
 Q: Is there an independent list of AI marketing agencies in NZ?
-A: As of October 2026, the NZ lists in search results were either agency blog posts, which tend to include their publisher, or directories that sell visibility next to earned rankings. Flow AI publishes this guide and shares that interest, so the guide states its criteria, lists Flow AI in its own category with a disclosure, ranks nobody and returns to every provider's pages each quarter.
+A: As of October 2026, the NZ lists in search results were either agency blog posts, which tend to include their publisher, or directories that sell visibility next to earned rankings. Amber Lan publishes this guide and shares that interest, so the guide states its criteria, lists Amber Lan in her own category with a disclosure, ranks nobody and returns to every provider's pages each quarter.
 Q: Do agencies pay to appear on Clutch or DesignRush?
 A: Some do. Clutch's help centre says its directory pages are sorted by sponsorship first and then by Clutch rank, while its Leaders Matrices use Clutch rank alone. DesignRush says sponsored listings pay for a place above organic positions and labels each one as a paid placement. Semrush Agency Partners lists only agencies with a paid Semrush plan, an Agency Growth Kit subscription and two passed exams.
 Q: Who offers AI SEO or AEO in New Zealand?
 A: On pages read in October 2026, The Optimisers and Pead lead with GEO and AEO work. Net Branding, NiKa Consulting, Kiwi Web Design, LocaliQ NZ and Web Genius offer AI search alongside SEO, and DevCommX sells AEO programmes to B2B companies in Auckland. Before you sign, ask each one which customer questions it will test in AI answers before and after the work.
 Q: Are there AI marketing agencies in Auckland?
-A: Yes. Most providers on this list are based in Auckland: Growin in Glenfield, Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, plus Net Branding, NiKa Consulting, Pead, The Optimisers and Flow AI. Outside Auckland, Web Genius is on the Kāpiti Coast and King Tide is in the Waikato, while AI Marketing NZ works as a network of specialists across the country.
+A: Yes. Most providers on this list are based in Auckland: Growin in Glenfield, Kiwi Web Design in Grey Lynn, LocaliQ NZ in the CBD, plus Net Branding, NiKa Consulting, Pead, The Optimisers and Amber Lan. Outside Auckland, Web Genius is on the Kāpiti Coast and King Tide is in the Waikato, while AI Marketing NZ works as a network of specialists across the country.
 Q: How can a provider be added to this list?
-A: Any provider that meets the three criteria, which are a public website, AI marketing services offered to New Zealand businesses and public evidence of delivery, is welcome to request a review through the Flow AI contact page. Corrections to any description are welcome the same way. Flow AI reads every provider's pages again each quarter, and the next refresh is due in January 2027.
+A: Any provider that meets the three criteria, which are a public website, AI marketing services offered to New Zealand businesses and public evidence of delivery, is welcome to request a review through the contact page. Corrections to any description are welcome the same way. Amber Lan reads every provider's pages again each quarter, and the next refresh is due in January 2027.
 
 ## Who offers AI marketing services in Australia in 2026?
 URL: https://www.flowai.co.nz/blog/ai-marketing-providers-australia
@@ -7809,7 +7803,7 @@ Updated: 2026-10-13
 
 Short answer: In October 2026, Australian AI marketing services came from five kinds of provider: AI-native agencies such as Flowterra Labs, established agencies adding AI such as Yoghurt Digital, AI search specialists such as Prosperity Media, automation firms such as Bolder Digital, and remote build-and-handover practices. Few publish prices, so compare what each shows and what you keep.
 
-How did Flow AI build this list?
+How did Amber Lan build this list?
 
 This list includes a provider only when it meets three published criteria, checked against its own website in October 2026. Each entry describes what the provider says it does, with a link to the page. The guide groups providers by type without ranking them, and refreshes the list every quarter.
 
@@ -7819,15 +7813,15 @@ AI marketing services offered to Australian businesses, stated on that site.
 
 Public evidence of delivery: named clients, case studies, testimonials or reviews.
 
-Prices appear only where a provider publishes them, with the date read. Claims quoted are the providers' own; Flow AI has not independently verified them. Flow AI left out names from other lists when their own pages could not be read or showed no AI marketing service or delivery evidence.
+Prices appear only where a provider publishes them, with the date read. Claims quoted are the providers' own; Amber Lan has not independently verified them. Amber Lan left out names from other lists when their own pages could not be read or showed no AI marketing service or delivery evidence.
 
 An AI marketing provider is any business that sells marketing work in which AI systems do a meaningful share of the research, production, follow-up or reporting, whether it calls itself an agency, a consultancy, a software company or a sole practitioner.
 
-Flow AI publishes this page and sits in its own category, and it describes itself with the same restraint as everyone else.
+Amber Lan publishes this page and sits in her own category, described with the same restraint as everyone else.
 
 Which providers offer AI marketing services in Australia?
 
-In October 2026, eleven providers met the criteria, plus Flow AI as the publisher. They are based in Sydney, Melbourne, Brisbane and Launceston, plus one consultant working remotely from overseas. Each type sells something different, so read the type before the name. The table summarises what each lists on its own site.
+In October 2026, eleven providers met the criteria, plus Amber Lan as the publisher. They are based in Sydney, Melbourne, Brisbane and Launceston, plus one consultant working remotely from overseas. Each type sells something different, so read the type before the name. The table summarises what each lists on its own site.
 
 ProviderTypeCityWhat they listHow they deliver
 
@@ -7853,7 +7847,7 @@ Robotic MarketerAI software and consultingMelbourne and Sydney numbersAI strateg
 
 Lilach BullockBuild-and-handover consultantRemote, overseasLead follow-up, client emails, onboarding, reporting automationsTwelve-week remote build
 
-Flow AI (publisher)Build and handoverAuckland, remote to AustraliaAI agents for search, content, outbound and reportingWritten scope, priced per project, documented handover
+Amber Lan (publisher)Build and handoverAuckland, remote to AustraliaAI agents for search, content, outbound and reportingWritten scope, priced per project, documented handover
 
 Demand is broad: the National AI Centre's SME AI Pulse found AI adoption among Australian SMEs rebounded to 44% in February 2026, with content generation used by 54% of adopters (400+ SME decision-makers a month, December 2025 to February 2026).
 
@@ -7948,9 +7942,9 @@ Prices are rarely public. Digital Nomads HQ's June 2026 audit of 411 service lin
 
 In the first meeting, ask to see a system running on a real business, with the human review step, and ask which accounts, agents and data stay in your name if you leave. For large paid media budgets and brand campaigns, a full-service agency remains the right call. The twelve questions for choosing an AI marketing provider turn this into a scoring sheet, and the New Zealand edition of this list uses the same criteria.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI publishes this page and sits in its own category, as an Auckland build-and-handover practice working with Australian businesses remotely. Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
+Amber Lan publishes this page and sits in her own category, as an Auckland build-and-handover practice working with Australian businesses remotely. Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
 
 Each build starts with a written scope and a per-project price, and ends with a documented handover, so your team owns and keeps running what you build together. You can explore the systems in the skill library, the free agent templates and the six-month marketing function case study. Australian teams can find more on the AI marketing services page for Australian businesses, and companies hiring are welcome to reach Amber about marketing engineer roles.
 
@@ -7958,12 +7952,12 @@ The short version
 
 Australian AI marketing services come from AI-native agencies, established agencies adding AI, AI search specialists, automation firms and remote build-and-handover practices. Eleven providers in Sydney, Melbourne, Brisbane, Launceston and overseas met this page's criteria in October 2026, and only one published prices on its own site.
 
-Pick the type that matches the job and check each name on its own pages. Before you sign, get the scope and price in writing. A provider's own evidence tells you more than its position on a list. The next refresh is due in January 2027, and you can explore the full set of AI marketing services Flow AI builds on the hub page.
+Pick the type that matches the job and check each name on its own pages. Before you sign, get the scope and price in writing. A provider's own evidence tells you more than its position on a list. The next refresh is due in January 2027, and you can explore the full set of AI marketing services Amber Lan builds on the hub page.
 
 To work through which type fits your business together, talk to Amber.
 
 Q: Who offers AI marketing services in Australia?
-A: In October 2026, providers meeting this guide's criteria included the AI-native agencies Flowterra Labs (Sydney), AiMRed (Melbourne) and Due North (Brisbane); the established agencies Yoghurt Digital and Marketing Eye; the AI search specialists Prosperity Media, Optimising and Webmasters Group; the automation firms Bolder Digital and Robotic Marketer; and remote build-and-handover practices including Lilach Bullock and Flow AI, which publishes the list.
+A: In October 2026, providers meeting this guide's criteria included the AI-native agencies Flowterra Labs (Sydney), AiMRed (Melbourne) and Due North (Brisbane); the established agencies Yoghurt Digital and Marketing Eye; the AI search specialists Prosperity Media, Optimising and Webmasters Group; the automation firms Bolder Digital and Robotic Marketer; and remote build-and-handover practices including Lilach Bullock and Amber Lan, which publishes the list.
 Q: What is the best AI marketing service for a small business in Australia?
 A: The best fit depends on the job you need done. To be mentioned in ChatGPT and Google's AI answers, start with an AI search specialist. To capture enquiries after hours, or to own systems your team keeps running, explore an automation firm or a build-and-handover practice. Whichever type you choose, ask to see a system running and get the scope and price in writing.
 Q: How much do AI marketing services cost in Australia?
@@ -7973,7 +7967,7 @@ A: Many widely shared lists are published by companies that rank themselves, suc
 Q: Can an overseas provider run AI marketing for an Australian business?
 A: Yes, and several do, working remotely from New Zealand and further afield. Australian rules still apply to the messages and the data. The Spam Act 2003 requires consent, sender identification and an unsubscribe honoured within five working days, and covered businesses must meet the Australian Privacy Principles. Your business stays responsible for consent even when a provider sends on its behalf.
 Q: How was this list compiled and how often is it updated?
-A: Flow AI included providers that had a public website, offered AI marketing services to Australian businesses and showed public evidence of delivery such as named clients, case studies or reviews. Each entry draws on the provider's own pages, read in October 2026, with prices only where published. Flow AI, the publisher, sits in its own category. The list refreshes quarterly, next in January 2027.
+A: Amber Lan included providers that had a public website, offered AI marketing services to Australian businesses and showed public evidence of delivery such as named clients, case studies or reviews. Each entry draws on the provider's own pages, read in October 2026, with prices only where published. Amber Lan, the publisher, sits in her own category. The list refreshes quarterly, next in January 2027.
 
 ## AI marketing and privacy law in NZ and Australia: what your provider must do with your data.
 URL: https://www.flowai.co.nz/blog/ai-marketing-privacy-law-nz-australia
@@ -8103,9 +8097,9 @@ The OAIC confirms the statutory tort for serious invasions of privacy commenced 
 
 The Attorney-General's Department opened consultation on the exposure draft Privacy Amendment (Personal Data Protection) Bill 2026 on 31 August 2026, with submissions closing 18 September, and says it remains subject to further consideration by government. The draft proposes a controller and processor split, with an exception for processors acting on a controller's behalf, and a rewritten APP 7 that requires a simple opt-out on direct marketing. Plan on current law until it passes.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
+Amber Lan, an AI marketing engineer in Auckland, provides AI marketing services for businesses in New Zealand and Australia. She builds the AI agents that run search, content, outbound and reporting with your team, then hands them over.
 
 Each build starts with a written scope, which is the natural place to agree what data each agent may touch, and ends with a documented handover so your team owns and runs the system. The agent templates are public, so you can read how an agent is instructed before you share anything. Companies hiring a marketing engineer are welcome to reach Amber about roles.
 
@@ -8268,9 +8262,9 @@ Start with the writing, then add machinery one lane at a time. Write the brief e
 
 For the order in which to add lanes, the guide to AI agents for marketing suggests starting with the gap that costs most, usually search or outbound. Search now includes answer engine optimisation, so assistants such as ChatGPT can describe the business correctly.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. The Flow AI skill library lists 126 skills you can inspect before running them: 16 I built, and the rest credited to their authors.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. I build these systems in the open. Amber Lan's skill library lists 126 skills you can inspect before running them: 16 I built, and the rest credited to their authors.
 
 Teams can contract a build, which starts with a written scope. If you are hiring for a marketing engineer or AI deployment role, I am open to conversations about senior roles, remote from anywhere.
 
@@ -8468,9 +8462,9 @@ Every number on this page went through the same check. A figure that could not b
 
 For wider AI adoption figures in both countries, see the AI marketing statistics for Australia and New Zealand. Definitions of agentic AI and answer engine optimisation are in the glossary.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is an AI marketing engineer in Auckland who builds those systems and keeps the judgement over what they send. The skill library is public, so you can inspect the work first.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is an AI marketing engineer in Auckland who builds those systems and keeps the judgement over what they send. The skill library is public, so you can inspect the work first.
 
 Hiring managers and recruiters with a senior marketing engineer or GTM engineer role can talk to Amber about the role. Teams that want a system built, scoped in writing first, can talk to Amber.
 
@@ -8485,7 +8479,7 @@ A: On the available counts, GTM engineer is the larger title. Bloomberry, a vend
 Q: Do AI skills raise pay in New Zealand marketing?
 A: There is no verified New Zealand figure for an AI pay premium in marketing roles. Hays reported average technology pay rises of 3.8% in its FY26/27 Salary Guide, and Talent International gives indicative estimates of around NZ$195,000 to NZ$196,000 for senior AI roles such as agent architect. Both describe technology roles, so treat them as signals for the build half of a marketing engineer's job.
 Q: Can I quote the figures on this page?
-A: Yes. The figures are free to quote with attribution to Amber Lan, Flow AI (flowai.co.nz), October 2026. Please also link the original source named next to each number, since SEEK, Hays and the other publishers own their data. Each figure was opened at its source on 8 October 2026, and the methodology section lists what could not be confirmed.
+A: Yes. The figures are free to quote with attribution to Amber Lan (flowai.co.nz), October 2026. Please also link the original source named next to each number, since SEEK, Hays and the other publishers own their data. Each figure was opened at its source on 8 October 2026, and the methodology section lists what could not be confirmed.
 
 ## How does New Zealand's AI Advisory Pilot fund AI for small businesses?
 URL: https://www.flowai.co.nz/blog/ai-advisory-pilot-nz
@@ -8660,13 +8654,13 @@ Ask every provider to confirm which programme they are approved for, the AI Advi
 
 Some providers have announced their status publicly. The Icehouse announced on 22 January 2026 that it had been selected as an approved service provider for the RBPN AI Advisory Pilot, working with Harnex on the technical side. Ask your growth advisor for the current list. The guide to AI agencies and AI consultants in NZ covers how advisers and builders differ.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Flow AI is not an approved provider for the AI Advisory Pilot and is not a registered RBPN service provider, so work with Flow AI cannot be funded through either programme.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is not an approved provider for the AI Advisory Pilot and is not a registered RBPN service provider, so work with Amber Lan cannot be funded through either programme.
 
-For work outside the pilot, AI marketing in New Zealand with Flow AI explains how a contract build runs.
+For work outside the pilot, AI marketing in New Zealand with Amber Lan explains how a contract build runs.
 
-Amber Lan is an AI marketing engineer in Auckland who builds marketing systems on a business's own accounts. Flow AI can give a second read of a roadmap another provider wrote, or take on a contract build outside both funds. The skill library is public.
+Amber Lan is an AI marketing engineer in Auckland who builds marketing systems on a business's own accounts. Amber Lan can give a second read of a roadmap another provider wrote, or take on a contract build outside both funds. The skill library is public.
 
 The short version
 
@@ -8869,9 +8863,9 @@ A full-time hire makes sense when several systems run and someone senior can sig
 
 Either way, every system and prompt should live on accounts the business owns.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is an AI marketing engineer in Auckland who builds those systems and reviews everything they send. The skill library is public, so you can inspect the work before you talk to anyone.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan is an AI marketing engineer in Auckland who builds those systems and reviews everything they send. The skill library is public, so you can inspect the work before you talk to anyone.
 
 For teams, the written scope names the first system to install. For recruiters and hiring teams with a marketing engineer or GTM engineer role, Amber is open to conversations about senior roles, remote from anywhere.
 
@@ -8976,7 +8970,7 @@ Week 3: add the review gate and a second job. Write the checklist a draft must p
 
 Week 4: measure and decide. Count hours saved, the share of drafts that shipped with light edits, and errors caught at review. Keep the jobs that saved time without raising errors, drop the rest, and note any job that repeats so reliably it could run on a schedule as an agent.
 
-Flow AI's free agent templates include starting files for the Week 1 inputs. If you want the month to sit inside a wider plan, the AI marketing strategy guide fits all of this on one page, which also covers how to use AI for marketing strategy work without letting it write your choices.
+Amber Lan's free agent templates include starting files for the Week 1 inputs. If you want the month to sit inside a wider plan, the AI marketing strategy guide fits all of this on one page, which also covers how to use AI for marketing strategy work without letting it write your choices.
 
 How do you keep AI-written marketing on brand and accurate?
 
@@ -9032,9 +9026,9 @@ Enquiries and cost per enquiryCRM or form source, divided into spend and hoursWh
 
 The last row is the one owners care about. The glossary defines cost per enquiry, and it is worth counting your own time in it at a fair hourly rate, since time is the main thing AI changes.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan builds and runs these systems herself and runs a whole marketing function on them, with a person reviewing everything before it ships.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Amber Lan builds and runs these systems herself and runs a whole marketing function on them, with a person reviewing everything before it ships.
 
 The starting point is a written scope, a written plan that names the first system to install and why. The free agent templates are there if you would rather start on your own.
 
@@ -9214,9 +9208,9 @@ The caution is earned. In the same June 2025 release, Gartner estimates only abo
 
 For the planning role that sits above the agents, the guide to the AI CMO applies the same questions to products that claim to run the whole function.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the ten agents in this guide from one positioning brief, installs them one at a time as week-long sprints, and a marketing engineer reviews every send before it reaches a customer.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the ten agents in this guide from one positioning brief, installs them one at a time as week-long sprints, and a marketing engineer reviews every send before it reaches a customer.
 
 To build them together with your team, the services page explains how each agent becomes a service.
 
@@ -9375,11 +9369,11 @@ This guide found no published survey that counts or ranks AI agencies in Aucklan
 
 For Australian readers the shape is the same, with one legal difference: the OAIC's 2024 guidance recommends that organisations do not enter personal information into publicly available generative AI tools, and the OAIC says the Australian Privacy Act generally applies to businesses with annual turnover above A$3 million, plus some smaller ones such as health providers. The guide to marketing agency alternatives prices the non-agency routes for both countries.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is the engineered version of the fourth column: AI agents plus one marketing engineer, Amber Lan, who builds the systems on your accounts, documents them and reviews the work before it ships.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is the engineered version of the fourth column: AI agents plus one marketing engineer, Amber Lan, who builds the systems on your accounts, documents them and reviews the work before it ships.
 
-The Flow AI service page for New Zealand businesses sets out the agent team and how a build runs under New Zealand rules.
+Amber Lan's service page for New Zealand businesses sets out the agent team and how a build runs under New Zealand rules.
 
 The skill library shows the systems openly. It starts with a written scope that names the first system to install. Each build is scoped and priced per project. The sprints page lists what each install covers.
 
@@ -9515,7 +9509,7 @@ A small business can cover most of AEO without a developer by working through fi
 Diagram, read as a list: Let the crawlers in (robots.txt and your host) leads to Write down the facts. Write down the facts (matched on every listing) leads to Answer the questions, Add structured data. Answer the questions (a short answer opens each page) leads to Earn proof elsewhere. Earn proof elsewhere (reviews, listings, local news) leads to Add structured data. Add structured data (the same facts, for machines).
 Each step depends on the one before it, so work through them in order. Structured data comes last because it repeats the facts written down in step two.
 
-Let the crawlers in. Check robots.txt allows OAI-SearchBot, PerplexityBot, Googlebot and Bingbot, and that your host is not blocking AI crawlers. Flow AI's free AI crawler access check tests fourteen AI crawlers against robots.txt, page tags and server headers.
+Let the crawlers in. Check robots.txt allows OAI-SearchBot, PerplexityBot, Googlebot and Bingbot, and that your host is not blocking AI crawlers. Amber Lan's free AI crawler access check tests fourteen AI crawlers against robots.txt, page tags and server headers.
 
 Write down the facts. One page stating the name, services, area, hours, credentials and typical prices, matched exactly on your Google Business Profile, Bing Places and directories.
 
@@ -9547,11 +9541,11 @@ The local AI habit is growing fastest where the data exists. BrightLocal's Local
 
 The local groundwork (Google Business Profile, reviews, suburb pages, NZ directories) is covered in SEO for small business in New Zealand. For the wider picture of AI across a marketing function, start with the guide to AI marketing for small business in NZ.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Search and AI search is often the first system it installs, through the AI search sprint, and the written scope names whether that is the right first step for your business.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Search and AI search is often the first system it installs, through the AI search sprint, and the written scope names whether that is the right first step for your business.
 
-The tools behind the work are public. The free agent templates include the AI crawler access check and a full GEO audit, and the open-source GEO skills sit in the Flow AI skill library for anyone who wants to install and run them on their own site.
+The tools behind the work are public. The free agent templates include the AI crawler access check and a full GEO audit, and the open-source GEO skills sit in Amber Lan's skill library for anyone who wants to install and run them on their own site.
 
 The short version
 
@@ -9568,7 +9562,7 @@ A: It works for local businesses, and the local version is simpler. When someone
 Q: How long does answer engine optimisation take to work?
 A: The access fixes, such as unblocking AI crawlers and getting indexed in Bing, can show up within weeks once the engines recrawl your site. Mentions on other sites and a body of answer-first pages take months, as they do in SEO. Run the same prompts in ChatGPT, Perplexity and Google each month and compare, because single answers vary from run to run.
 Q: How much does AEO cost a small business?
-A: The first round costs mostly time. Checking robots.txt, claiming Bing Places, rewriting page openings and asking for reviews need no software. Free tools cover the checks: Google Search Console, Bing Webmaster Tools, Google's Rich Results Test and Flow AI's free AI crawler access check. Paid AI visibility trackers exist, but a monthly manual prompt log is enough for a business of 5 to 50 staff to start.
+A: The first round costs mostly time. Checking robots.txt, claiming Bing Places, rewriting page openings and asking for reviews need no software. Free tools cover the checks: Google Search Console, Bing Webmaster Tools, Google's Rich Results Test and Amber Lan's free AI crawler access check. Paid AI visibility trackers exist, but a monthly manual prompt log is enough for a business of 5 to 50 staff to start.
 Q: Do I need an llms.txt file for AEO?
 A: It is optional. No major AI provider has said it uses llms.txt to choose sources, and Ahrefs' 2026 study of 137,210 domains found 97% of published llms.txt files received zero requests in a month. It takes ten minutes to add, so it does no harm, but it belongs at the end of the list, after crawler access, facts, answer pages and reviews.
 Q: Is AEO the same as GEO?
@@ -9694,9 +9688,9 @@ Wait if the business does not yet know who buys from it and why. A planner canno
 
 Go ahead if marketing stalls every time the business gets busy, if decisions get made on gut feel because nobody has time to read the analytics, or if a freelancer or agency is producing work without a plan behind it. The free AI-readiness benchmark gives a quick read on which of these applies, with no email required.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It builds the planning and the production as installable systems that stay on the business's own domain and accounts, and a human reviews everything before it ships.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It builds the planning and the production as installable systems that stay on the business's own domain and accounts, and a human reviews everything before it ships.
 
 The method is public. The skill library holds 126 inspectable skills, and the written scope names the first system to install and why, before any money changes hands.
 
@@ -9863,9 +9857,9 @@ Week 4: locations, listings and a baseline. Add a location page for each area yo
 
 From month two, add one useful page a month, keep the review routine going and compare the numbers against your baseline each month. If you want an outside read on where to start, the free AI-readiness benchmark takes a few minutes and needs no email.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For search, that means the Business Profile routine, review requests, service pages and monthly tracking in this guide, installed on your own site and accounts so they keep running when you are busy.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For search, that means the Business Profile routine, review requests, service pages and monthly tracking in this guide, installed on your own site and accounts so they keep running when you are busy.
 
 Auckland businesses are welcome to meet in person: explore AI marketing services in Auckland.
 
@@ -10030,7 +10024,7 @@ This is the human in the loop principle applied to sales. It is a common gap: Au
 
   
 
-LinkedIn deserves its own note. LinkedIn's User Agreement (section 8.2) prohibits bots or other unauthorised automated methods to add contacts or send messages. Use AI to research and draft, and send LinkedIn notes yourself. For finding where your buyers talk in public, Flow AI's free Reddit opportunity research skill maps relevant threads and the language people use, which also gives your emails better first lines.
+LinkedIn deserves its own note. LinkedIn's User Agreement (section 8.2) prohibits bots or other unauthorised automated methods to add contacts or send messages. Use AI to research and draft, and send LinkedIn notes yourself. For finding where your buyers talk in public, Amber Lan's free Reddit opportunity research skill maps relevant threads and the language people use, which also gives your emails better first lines.
 
 What should you measure?
 
@@ -10051,15 +10045,15 @@ Measure meetings booked and the replies that lead to them first, then the bounce
 
   
 
-Review monthly. If a segment produces no positive replies after a hundred contacts, change the list before you change the copy. A starting set of outbound workflows is in Flow AI's free agent templates.
+Review monthly. If a segment produces no positive replies after a hundred contacts, change the list before you change the copy. A starting set of outbound workflows is in Amber Lan's free agent templates.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For outbound, that means setting up the list, research, drafting and sequencing system on your own accounts, with the consent record and the human review step built in from the first send.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For outbound, that means setting up the list, research, drafting and sequencing system on your own accounts, with the consent record and the human review step built in from the first send.
 
 Australian teams can read how the same build follows the Spam Act on the page for Australian businesses.
 
-It starts with a written scope, which names the first system worth installing. If outbound is that system, a contract build sets it up with your team. The skills behind it are public in the Flow AI skill library, and the start-here guide to AI marketing for NZ small business shows how outbound connects to the rest.
+It starts with a written scope, which names the first system worth installing. If outbound is that system, a contract build sets it up with your team. The skills behind it are public in Amber Lan's skill library, and the start-here guide to AI marketing for NZ small business shows how outbound connects to the rest.
 
 The short version
 
@@ -10240,9 +10234,9 @@ Red flags worth walking away from include a guaranteed ranking or a guaranteed n
 
 Survey data backs up asking hard questions early. Setup's 2025 Marketing Relationship Survey, a small sample of about 100 mostly US responses, found 61% of clients who ended an agency relationship cited dissatisfaction with value, up from 36% in 2024, and 44% said the agency did not understand their business. The same survey found clients who chose an agency through word of mouth were more often satisfied (82%) than those who found one through search (70%). Ask peers in your industry who they use.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
 
 On price that sits below a multi-channel retainer, and the trade-off should be clear before you compare. Amber Lan builds and runs the systems herself, so you get one practitioner and AI agents doing the production, with no account team or media-buying department, and ad spend stays separate as it would with any agency. The sprints and the skill library are public, so you can judge what gets installed before you talk to anyone.
 
@@ -10348,7 +10342,7 @@ AI-led marketing services
 
 An AI-led marketing service installs software systems and AI agents that do the production work of marketing, with a person reviewing what goes out. Published New Zealand examples cost about NZD 500 to 1,000 a month plus a setup fee. They suit a business where someone can spend an hour or so a week approving work.
 
-The category is new, and scopes vary widely. As of October 2026, Growin, a NZ AI marketing agency, lists a Launch package at NZD 1,500 setup plus NZD 500 a month and a Foundation package at NZD 4,000 one-off, plus GST, scoped around ads and lead intake. Flow AI's contract builds are described further down.
+The category is new, and scopes vary widely. As of October 2026, Growin, a NZ AI marketing agency, lists a Launch package at NZD 1,500 setup plus NZD 500 a month and a Foundation package at NZD 4,000 one-off, plus GST, scoped around ads and lead intake. Amber Lan's contract builds are described further down.
 
 Before you buy any of them, ask four things. Which work does software do and which does a person check? Who approves anything published under your business name? Do you own the accounts, content and data? How do you leave, and what do you keep? A service that shows its working before you pay is easier to judge than one that only describes outcomes. The definition of an AI marketing agent explains what the software side should do.
 
@@ -10373,11 +10367,11 @@ Several channels at once, a sales team waiting on leads and NZD 4,000 or more a 
 
 Then compare your shortlist on cost per enquiry: the total monthly cost, including ad spend and a value for your own hours, divided by the genuine enquiries it produces. After three months, recalculate with real numbers and keep the option that wins.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
 
-The full list of Flow AI services shows which agent covers which part of marketing.
+The full list of Amber Lan's services shows which agent covers which part of marketing.
 
 It is one of the AI-led options, and it suits a business with someone who can review work weekly. Amber Lan builds and runs the systems herself, so there is no account team, and ad spend is separate. To see where you stand first, the free AI-readiness benchmark needs no email.
 
@@ -10545,9 +10539,9 @@ Referral visits: in Google Analytics, check traffic from chatgpt.com, perplexity
 
 Answers vary between runs, so look for a trend across two or three months before deciding anything works. If you want to see how this differs from classic search work, the comparison of AEO, SEO and GEO lays out what each one measures, and the guide to SEO for small business in NZ covers the Google side.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For AI search, that means the test prompts, listing fixes, page rewrites and monthly tracking above, installed as a system on your own site and accounts. The AI search sprint describes exactly what gets installed.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For AI search, that means the test prompts, listing fixes, page rewrites and monthly tracking above, installed as a system on your own site and accounts. The AI search sprint describes exactly what gets installed.
 
 It starts with a written scope that names the first system to install, which for many local businesses is this one. You can also do every step here yourself: nothing in this guide needs a paid tool.
 
@@ -10718,9 +10712,9 @@ What do we keep if we stop? Plans, accounts, reports and logins should belong to
 
 What is the notice period? Packaged services often run month to month, while Maestro describes fractional CMO engagements of 6 to 12 months.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It covers the production and reporting side that a fractional manager directs, with Amber Lan building and reviewing the systems herself. It can sit under a fractional manager or come before one.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It covers the production and reporting side that a fractional manager directs, with Amber Lan building and reviewing the systems herself. It can sit under a fractional manager or come before one.
 
 It starts with a written scope that names the first system to install. Each build is scoped and priced per project. The sprints page lists what each one installs.
 
@@ -10798,7 +10792,7 @@ What does an AI CMO cost?
 
 An AI CMO costs a monthly fee plus the owner's review time. No independent survey prices AI CMOs in New Zealand or Australia yet, so the honest guide is published price pages. The few that publish prices charge a setup fee and then hundreds to low thousands a month, well below a fractional CMO.
 
-Published NZD examples are rare. Growin, a New Zealand AI marketing agency, publishes an NZD 1,500 setup and NZD 500 a month package plus GST, scoped to ads and lead intake. Flow AI scopes and prices each build per project. The wider market is in the AI marketing cost guide for Australia and New Zealand.
+Published NZD examples are rare. Growin, a New Zealand AI marketing agency, publishes an NZD 1,500 setup and NZD 500 a month package plus GST, scoped to ads and lead intake. Amber Lan scopes and prices each build per project. The wider market is in the AI marketing cost guide for Australia and New Zealand.
 
 The invoice is only part of the cost. Count four things:
 
@@ -10873,9 +10867,9 @@ For a fractional CMO, ask who will produce the work and what that costs, how man
 
 For an AI CMO, ask what it reads before planning, what it produces each week and where the human approves. Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027, and estimates only about 130 of the thousands of agentic AI vendors are real. Smaller organisations are also slower to scale agents: McKinsey's State of AI 2026, surveyed mid 2026, found 22% of respondents at smaller organisations scaling AI agents, flat on the year. A short paid trial with a written report at the end is the safest way to buy.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It sits on the AI side of this comparison, with the planning and the production built as systems on the business's own accounts and a human approving everything that ships.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It sits on the AI side of this comparison, with the planning and the production built as systems on the business's own accounts and a human approving everything that ships.
 
 It can work alongside a fractional CMO where a business has one. The written scope names the first system to install. Each build is scoped and priced per project. The sprints page lists what each install covers.
 
@@ -11032,9 +11026,9 @@ Small budget. King Tide's guide advises against hiring anyone below NZD 1,000 to
 
 The free AI-readiness benchmark shows where your business sits, with no email needed. The guide to marketing agency alternatives in NZ prices each of these routes.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is closest to the last row of the comparison table. Amber Lan builds the systems, they run on your own accounts, and she reviews the work before it ships. The skill library shows the systems openly.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It is closest to the last row of the comparison table. Amber Lan builds the systems, they run on your own accounts, and she reviews the work before it ships. The skill library shows the systems openly.
 
 When you are ready to build it together, AI marketing services in New Zealand sets out what each agent runs and how a build unfolds.
 
@@ -11132,7 +11126,7 @@ The best questions are already in your business: in enquiry emails, quote reques
 
 Start with a shared document and ask everyone who talks to customers to add one question a week, in the customer's words. After a month you will usually have thirty or forty, and the same ten will repeat. Those ten are your first ten pieces.
 
-Then look outside. Type the start of a question into Google and note the suggestions. Read the "People also ask" box. Search Reddit and local Facebook groups for your category; Flow AI publishes a free Reddit opportunity research skill that does this methodically and returns the real language people use. Ask ChatGPT what it would recommend in your category and town, and note what it says about you and your competitors.
+Then look outside. Type the start of a question into Google and note the suggestions. Read the "People also ask" box. Search Reddit and local Facebook groups for your category; Amber Lan publishes a free Reddit opportunity research skill that does this methodically and returns the real language people use. Ask ChatGPT what it would recommend in your category and town, and note what it says about you and your competitors.
 
 That last check matters more each year. BrightLocal's 2026 Local Consumer Review Survey of 1,002 US consumers found 45% now use AI tools such as ChatGPT for local recommendations, up from 6%, and SparkToro found 68.01% of US Google searches ended without a click in January to April 2026. Both are US figures, and the direction is the same here: more of the answer is read on the search or AI page itself, a pattern called zero-click search. Clear, quotable answers on your own pages are what those systems pick up. The guide to answer engine optimisation covers how.
 
@@ -11176,7 +11170,7 @@ This is the step that makes content affordable for a small team. Here is the seq
 
   Update your Google Business Profile. Post a short version with a link, so the answer appears where local searchers look.
 
-The AI marketing examples for small business show this pattern alongside nine other marketing jobs, and Flow AI's free agent templates include a starting point for it.
+The AI marketing examples for small business show this pattern alongside nine other marketing jobs, and Amber Lan's free agent templates include a starting point for it.
 
 How to build a content engine that runs every week
 
@@ -11228,11 +11222,11 @@ Plenty of businesses publish content without knowing whether it works. In CMI's 
 
 At the end of each month, note what to repeat and what to drop. If a topic brings enquiries, write the next question in the same area. If a format has had no response for three months, stop it and put the hour somewhere else.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For content, that means installing the weekly engine above on your own accounts, with the question list, the drafting skills and the review step already set up, and you approving everything before it goes out.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For content, that means installing the weekly engine above on your own accounts, with the question list, the drafting skills and the review step already set up, and you approving everything before it goes out.
 
-It starts with a written scope, which names the first system worth installing for your business. If content is that system, a contract build sets it up with your team. The skills it runs on are public in the Flow AI skill library.
+It starts with a written scope, which names the first system worth installing for your business. If content is that system, a contract build sets it up with your team. The skills it runs on are public in Amber Lan's skill library.
 
 The short version
 
@@ -11399,9 +11393,9 @@ Days 61 to 90: add one job from the second or third wave, such as outbound once 
 
 The AI marketing transformation guide sets out the same 90 days department by department. For the jobs themselves, the guide to content marketing for small business in NZ and the guide to outbound sales automation go deeper.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope is a written version of steps one and two for your business: the claim, where marketing is losing, and the first system to install.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope is a written version of steps one and two for your business: the claim, where marketing is losing, and the first system to install.
 
 To check readiness on your own first, the free AI-readiness benchmark takes no email, and the free agent templates are open to anyone building the first jobs themselves.
 
@@ -11439,7 +11433,7 @@ A good AI marketing example is one marketing job that an AI system runs every we
 
 Owners want examples closer to home than the global brands on most lists: Xero's May 2026 research on New Zealand small businesses found 43% want real-world case studies of AI and 47% want practical training.
 
-So here are ten worked examples, one per marketing job, each with the situation, what the AI system does, where the human approves and what to measure. The businesses are illustrations, invented to make the mechanics concrete. They are not Flow AI clients, and no example claims a result.
+So here are ten worked examples, one per marketing job, each with the situation, what the AI system does, where the human approves and what to measure. The businesses are illustrations, invented to make the mechanics concrete. They are not clients, and no example claims a result.
 
 An AI marketing system, in this guide, is a set of written instructions, data connections and review steps that lets AI run one marketing job on a schedule, with a human in the loop before anything ships. The 90-day AI marketing transformation roadmap sets the order of installs.
 
@@ -11602,9 +11596,9 @@ Approval is where many businesses are still thin. The National AI Centre found a
 
 The legal exposure stays with the business whoever drafted the words: the Commerce Commission lists Fair Trading Act maximum fines of $200,000 for an individual and $600,000 for a business, per offence. AI will happily write a guarantee the business never offered, so claims and prices sit on every approval list above. The guide to building an AI marketing strategy for a small business turns these rules into a one-page plan.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Each example above is a marketing job Flow AI installs as a system on the business's own accounts, with a person approving before anything ships.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. Each example above is a marketing job Amber Lan installs as a system on the business's own accounts, with a person approving before anything ships.
 
 It starts with a written scope, a written plan naming the first system to install and why. The methods are public: the skill library and the free agent templates can be read or run by anyone.
 
@@ -11622,7 +11616,7 @@ Q: Do these AI marketing examples need expensive software?
 A: No. Each example runs on tools most small businesses already pay for or can get cheaply: a general AI assistant, the website, Google Business Profile, an email account, a scheduler and a spreadsheet or CRM. The expensive part is the setup: writing the instructions, connecting the data and agreeing who approves what. Once that exists, the weekly running cost is mostly a person's review time.
 Q: How much time does a person need to spend reviewing AI marketing work?
 A: Plan for a few hours a week when two or three examples are running, mostly in short sittings. Review is fastest when the AI system works from a written positioning file and a tone guide, because the reader checks facts rather than rewriting. Outbound emails and review replies take the most attention, since both reach a named person, so batch them into one daily or weekly slot.
-Q: Are the businesses in these examples real Flow AI clients?
+Q: Are the businesses in these examples real clients?
 A: No. The plumbing firm, the accounting practice and the other businesses on this page are illustrations, invented to show how each marketing job works at small business scale. None of them is a client and no example claims a result. The statistics quoted alongside them come from named surveys and reports, each linked to the original source so you can check the sample and the date.
 Q: Can AI reply to Google reviews for my business?
 A: AI can draft the reply, and a person should post it. A good system reads the review, uses its specifics, matches the business's tone and flags complaints for the owner. BrightLocal's 2026 survey found 89% of US consumers expect owners to respond and half are put off by templated replies, so a draft that is reviewed and personalised beats both silence and an automatic stock answer.
@@ -11753,9 +11747,9 @@ Set a baseline before switching anything on: how many enquiries a month, how man
 
 When a number does not move, look at the message before the rule. A follow-up that arrives at the right time with the wrong offer is a writing problem, and that is the part AI helps with most. The free agent templates include starting points for these sequences.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For automation, that means the six sequences above built on the business's own accounts, drafted by agents, approved by a person and reviewed against the numbers each month.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. For automation, that means the six sequences above built on the business's own accounts, drafted by agents, approved by a person and reviewed against the numbers each month.
 
 The written scope names which automation to install first and which tools the business already owns can run it, so nothing new is bought until it is needed.
 
@@ -11896,9 +11890,9 @@ Many small businesses end up with a mix, and it often works well. The usual patt
 
 A hybrid works when roles are written down. Decide who owns the plan, who owns each channel, and who reports the monthly numbers. Keep every account in your business's name so a change of supplier costs weeks, and your history stays put. The trap is paying two parties to do the same job, so check overlaps whenever you add one.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. A written scope names the first system to build, and each build is priced per project.
 
 It works as a fourth option, and on price it sits between a freelancer and a multi-channel agency. Amber Lan builds and runs the systems herself, with AI agents doing production and a person in your business approving what goes out, so it suits a team with someone who can review weekly. The public skill library shows what the systems do.
 
@@ -12024,7 +12018,7 @@ LocalBusiness and Organization schemaRich resultsOptional for Google AI; makes f
 
 Monthly AI prompt logNoYes
 
-The tasks that sit only on the AI side are short: Bing indexing, AI crawler rules and the prompt log. They take an afternoon between them. Flow AI's free AI crawler access check covers the crawler rules, and the AEO checklist lists every task in order.
+The tasks that sit only on the AI side are short: Bing indexing, AI crawler rules and the prompt log. They take an afternoon between them. Amber Lan's free AI crawler access check covers the crawler rules, and the AEO checklist lists every task in order.
 
 Which should a small business prioritise first?
 
@@ -12045,9 +12039,9 @@ New business with no rankingsIndexing in both consoles, a clear About page, AI c
 
 Buying-intent searches are where AI answers increasingly appear. Semrush's study of more than 10 million US desktop keywords found commercial, transactional and navigational queries made up 42.8% of AI Overview triggers by October 2025, when in January informational queries had made up 91.3% of them. For a business that sells, that is the reason to start now. InternetNZ's late 2025 survey of 1,003 New Zealand adults found 55% had used AI in search engines in the past year, so the habit is already local.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It treats SEO, AEO and GEO as one search system, installed through the AI search sprint, and the written scope names which part to fix first on your site.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It treats SEO, AEO and GEO as one search system, installed through the AI search sprint, and the written scope names which part to fix first on your site.
 
 The tools are public. The free agent templates include the AI crawler check and a full GEO audit, and the open-source GEO skills are in the skill library for anyone who prefers to run them in-house.
 
@@ -12108,7 +12102,7 @@ Access comes first because every later item depends on it. An AI engine answers 
 
 1. Allow the AI search crawlers in robots.txt
 
-Open yourdomain.co.nz/robots.txt and look for rules that block OAI-SearchBot and ChatGPT-User (ChatGPT), PerplexityBot (Perplexity), Claude-SearchBot and Claude-User (Claude), Googlebot and Bingbot. A line such as "User-agent: * Disallow: /" blocks all of them. Training crawlers (GPTBot, ClaudeBot, Google-Extended) are a separate choice, and blocking them does not stop the search crawlers when each is named on its own line. Flow AI's free AI crawler access check tests fourteen AI crawlers at once.
+Open yourdomain.co.nz/robots.txt and look for rules that block OAI-SearchBot and ChatGPT-User (ChatGPT), PerplexityBot (Perplexity), Claude-SearchBot and Claude-User (Claude), Googlebot and Bingbot. A line such as "User-agent: * Disallow: /" blocks all of them. Training crawlers (GPTBot, ClaudeBot, Google-Extended) are a separate choice, and blocking them does not stop the search crawlers when each is named on its own line. Amber Lan's free AI crawler access check tests fourteen AI crawlers at once.
 
 2. Check your host and security settings
 
@@ -12210,11 +12204,11 @@ Is llms.txt worth adding?
 
 An llms.txt file is an optional extra, and it belongs after the twenty items above. It is a plain text file at the root of your site that lists your most useful pages for AI systems. It takes ten minutes to write, but no major AI provider has said it uses llms.txt to choose what to cite.
 
-The usage data is thin. Ahrefs' June 2026 study of 137,210 domains found 28% publish a valid llms.txt file, yet 97% of those files received zero requests in a month, and AI retrieval bots made only 1.1% of the requests that did arrive. Ahrefs' sample skews to sites with analytics installed, so it is not a random sample of the web. Flow AI publishes one because it costs nothing to maintain. Add one if you like, and expect nothing from it yet. The glossary entry for llms.txt explains the format.
+The usage data is thin. Ahrefs' June 2026 study of 137,210 domains found 28% publish a valid llms.txt file, yet 97% of those files received zero requests in a month, and AI retrieval bots made only 1.1% of the requests that did arrive. Ahrefs' sample skews to sites with analytics installed, so it is not a random sample of the web. Amber Lan publishes one because it costs nothing to maintain. Add one if you like, and expect nothing from it yet. The glossary entry for llms.txt explains the format.
 
-Where Flow AI fits
+Where Amber Lan fits
 
-Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope works through this checklist on your site and names the first system to install, which for many businesses is the AI search sprint.
+Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. The written scope works through this checklist on your site and names the first system to install, which for many businesses is the AI search sprint.
 
 Prefer to do it yourself? The free agent templates include the AI crawler access check, an AI citability scorer and a full GEO audit, and the open-source GEO skills are in the skill library.
 
@@ -12237,7 +12231,7 @@ A: Google says no special schema is needed to appear in AI Overviews or AI Mode.
 Q: How often should I repeat the AEO checklist?
 A: Run the access checks every quarter and after any website rebuild, host change or new security plugin, because those are the moments crawlers get blocked by accident. Repeat the prompt log monthly. Review the fact sheet whenever prices, hours or services change, and refresh your most important pages at least twice a year so the dates and figures stay current.
 Q: Is there a free tool to check AI crawler access?
-A: Yes. Flow AI's free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free.
+A: Yes. Amber Lan's free AI crawler access check tests fourteen AI crawlers against your robots.txt, page tags and server headers and gives the fix for any that are blocked. You can also read your robots.txt directly at yourdomain.co.nz/robots.txt, and check indexing in Google Search Console and Bing Webmaster Tools, both free.
 
 ## What is an AI marketing agent? A definition for small business.
 URL: https://www.flowai.co.nz/blog/what-is-an-ai-marketing-agent
@@ -12325,7 +12319,7 @@ Nothing reaches a customer until a person has reviewed it, and that review feeds
 
       
     
-    Nobody needs all ten in month one, and the order matters more than the count: positioning before content, content before social, tracking before paid. Flow AI's installable departments follow that order, with search and AI search the usual first install.
+    Nobody needs all ten in month one, and the order matters more than the count: positioning before content, content before social, tracking before paid. Amber Lan's installable departments follow that order, with search and AI search the usual first install.
 
     AI marketing agent vs marketing automation vs ChatGPT vs an agency
 
@@ -12390,16 +12384,16 @@ Nothing reaches a customer until a person has reviewed it, and that review feeds
 
       What is in the monthly report? Enquiries, sources, cost per enquiry, what shipped and what to stop. Follower counts are not a report.
 
-      Who built it, and do they do the work? Ask what the builder has shipped for a business your size. Flow AI's open skill library is one form of that answer.
+      Who built it, and do they do the work? Ask what the builder has shipped for a business your size. Amber Lan's open skill library is one form of that answer.
 
       What happens in month three? The honest answer involves a plateau and a decision about the next department, not a straight line up.
 
     
     The free AI-readiness benchmark names the department to fix first.
 
-    Where Flow AI fits in this category
+    Where Amber Lan fits in this category
 
-    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It was built by a marketing engineer rather than assembled by a platform team, and it runs the eleven departments above as installable systems that stay on the business's own domain and accounts. A human reviews everything before it ships, which is a design rule rather than a plan setting.
+    Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It was built by a marketing engineer rather than assembled by a platform team, and it runs the eleven departments above as installable systems that stay on the business's own domain and accounts. A human reviews everything before it ships, which is a design rule rather than a plan setting.
 
     To build these agents together with your team, explore the AI marketing services page.
 
@@ -12473,7 +12467,7 @@ Ninety days covers three monthly cycles. At day 90, two departments ship weekly 
     This is the phase businesses skip, and skipping it is why month two produces generic output. An AI system inherits whatever the business can articulate. If nobody has written down the claim, the proof and the prices, the system invents plausible substitutes and the owner spends two months editing them out.
 
     
-      Positioning. One page: what the business does, who for, what it claims, what it will not claim, and the three proof points behind the claim. This becomes the source file every other department reads. Flow AI runs it as the positioning sprint.
+      Positioning. One page: what the business does, who for, what it claims, what it will not claim, and the three proof points behind the claim. This becomes the source file every other department reads. Amber Lan runs it as the positioning sprint.
 
       Measurement. Pick two numbers, usually qualified enquiries and cost per enquiry, and make sure they are tracked. Fix the analytics before the marketing, or phase three has nothing to judge. The analytics sprint covers the setup.
 
@@ -12495,7 +12489,7 @@ Ninety days covers three monthly cycles. At day 90, two departments ship weekly 
     Two is the limit. A business with no marketing department cannot absorb six new weekly review loops at once, and the failure mode is not bad output but abandoned output.
 
     
-      Search and AI search. The first install. Fix the technical basics, publish the pages that answer what buyers type and ask, and add the structure AI engines need to quote the site. Flow AI runs this as the AI-search sprint. SparkToro measured 68.01% of Google searches ending without a click across January to April 2026, up from 60.45% in 2024, so being quoted in the answer now beats being tenth in the list.
+      Search and AI search. The first install. Fix the technical basics, publish the pages that answer what buyers type and ask, and add the structure AI engines need to quote the site. Amber Lan runs this as the AI-search sprint. SparkToro measured 68.01% of Google searches ending without a click across January to April 2026, up from 60.45% in 2024, so being quoted in the answer now beats being tenth in the list.
 
       Content. The second install. One guide or comparison a week, written against the positioning file from phase one, each answering a question a buyer asks out loud. The content engine sprint covers the cadence and the review step.
 
@@ -12520,7 +12514,7 @@ Each month's output feeds the next. Guides give outbound something to link to, a
     Compounding is a specific mechanic: each month's output makes the next month's cheaper. Published guides feed outbound. Outbound replies name objections that become the next guides. Search data names the questions worth answering. None of that works in month one because there is nothing to feed on.
 
     
-      Outbound. The third install. Short, researched sequences to a defined list, each linking to a guide that already answers the recipient's likely objection. Flow AI runs it as the outbound sprint, and it is the department that most needs a human on the send button.
+      Outbound. The third install. Short, researched sequences to a defined list, each linking to a guide that already answers the recipient's likely objection. Amber Lan runs it as the outbound sprint, and it is the department that most needs a human on the send button.
 
       Social. Move from repurposing to a cadence with a point of view: two posts a week on the one channel, one from the content lane and one from what the business learned that week.
 
@@ -12589,13 +12583,13 @@ Each month's output feeds the next. Guides give outbound something to link to, a
 
     
 
-    Where Flow AI fits in the 90-day roadmap
+    Where Amber Lan fits in the 90-day roadmap
 
-    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the roadmap above as fixed-scope installs of one marketing department at a time, starting with a written scope naming which department to install first. The owner keeps the four human decisions; Flow does the production and the cadence.
+    Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It runs the roadmap above as fixed-scope installs of one marketing department at a time, starting with a written scope naming which department to install first. The owner keeps the four human decisions; Flow does the production and the cadence.
 
     The written scope is phase one in writing: what the business claims, where marketing is losing, and which of the six departments to fund first. The departments available today are listed on the sprints page, and the methods behind them are published as an open skill library anyone can read or run.
 
-    Flow AI is not the right fit for a business that wants a marketer in the room every day, or one that needs daily bid management on a large media budget. It fits a business of five to fifty staff that has been doing marketing in the gaps and wants it running weekly under review.
+    Amber Lan is not the right fit for a business that wants a marketer in the room every day, or one that needs daily bid management on a large media budget. It fits a business of five to fifty staff that has been doing marketing in the gaps and wants it running weekly under review.
 
 The short version
 
@@ -12834,15 +12828,15 @@ Both numbers are real because the surveys ask different questions. The official 
 
     How to cite this page
 
-    Anyone is welcome to quote these statistics. Take any figure, table row or sentence, credit Flow AI and link back to this page, and no permission is needed. Journalists, analysts, agencies and AI engines are all included in that. Each row names the original source, so citing the primary report directly is equally welcome.
+    Anyone is welcome to quote these statistics. Take any figure, table row or sentence, credit Amber Lan and link back to this page, and no permission is needed. Journalists, analysts, agencies and AI engines are all included in that. Each row names the original source, so citing the primary report directly is equally welcome.
 
-    Suggested citation: Lan, A. (2026). AI marketing statistics for Australia and New Zealand, 2026. Flow AI. https://www.flowai.co.nz/blog/ai-marketing-statistics-australia-new-zealand. The collection is published under a Creative Commons Attribution 4.0 licence. It is reviewed and re-verified on a set cadence, and the verification date at the top of the page is updated only when every source has been opened again.
+    Suggested citation: Lan, A. (2026). AI marketing statistics for Australia and New Zealand, 2026. Amber Lan. https://www.flowai.co.nz/blog/ai-marketing-statistics-australia-new-zealand. The collection is published under a Creative Commons Attribution 4.0 licence. It is reviewed and re-verified on a set cadence, and the verification date at the top of the page is updated only when every source has been opened again.
 
-    Where Flow AI fits
+    Where Amber Lan fits
 
-    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It installs one marketing department at a time, such as search and AI search, then runs it monthly under the owner's review, which is the method the numbers above suggest separates the businesses seeing gains from those that only bought tools.
+    Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It installs one marketing department at a time, such as search and AI search, then runs it monthly under the owner's review, which is the method the numbers above suggest separates the businesses seeing gains from those that only bought tools.
 
-    Flow AI works with businesses on both sides of the Tasman: in New Zealand and for Australian businesses.
+    Amber Lan works with businesses on both sides of the Tasman: in New Zealand and for Australian businesses.
 
     For the wider picture of what AI marketing includes and where to start, the guide to AI marketing for small business covers the departments in order.
 
@@ -12958,7 +12952,7 @@ Why AI marketing pricing is hard to compare
 
     The third shape is an agency that runs AI inside a retainer. Marketix Digital's AI SEO pricing guide puts small businesses at AUD 800 to 2,000 a month, mid-sized companies at AUD 2,000 to 6,000, and a one-off AI SEO audit at AUD 1,000 to 3,500. It also notes that about 20% of such a budget goes to tools, with the rest split between content and strategy.
 
-    What the agent buys that a tool does not is the plan and the cadence: the work is scoped, scheduled and shipped without the owner having to start it each week. What it buys that an agency does not is a price set by the department installed rather than by the hours consumed. What it does not buy is a person in the room; the owner still reviews and decides. Flow AI's installable sprints are one example of this model, with search and AI search as the most common first department.
+    What the agent buys that a tool does not is the plan and the cadence: the work is scoped, scheduled and shipped without the owner having to start it each week. What it buys that an agency does not is a price set by the department installed rather than by the hours consumed. What it does not buy is a person in the room; the owner still reviews and decides. Amber Lan's installable sprints are one example of this model, with search and AI search as the most common first department.
 
     Option 4: a marketing agency retainer
 
@@ -13019,15 +13013,15 @@ The cheapest working setup changes with size. From 20 staff, marketing needs a f
 
     Marketing now needs a full-time owner inside the company, so hire the lead. Then equip that person with an agent or an AI-led agency rather than a conventional retainer, because the production hours are the part worth automating. A lead at SEEK's advertised averages plus an agent costs less than a lead plus a full-service retainer of AUD 3,000 to 8,000 or NZD 4,000 to 10,000 a month, and ships more.
 
-    Where Flow AI fits in this comparison
+    Where Amber Lan fits in this comparison
 
-    Flow AI is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It works as a fixed-scope install of one marketing department, such as search and AI search or content, then a monthly run in which Flow produces the work and the owner reviews it. Current figures come with the written scope.
+    Amber Lan is an AI marketing transformation practice: the strategy, the systems and the agents that run a marketing function, engineered end to end. It works as a fixed-scope install of one marketing department, such as search and AI search or content, then a monthly run in which Flow produces the work and the owner reviews it. Current figures come with the written scope.
 
-    To explore what the agents cover, read Flow AI's AI marketing services; Australian businesses are welcome to start from the page for Australia.
+    To explore what the agents cover, read Amber Lan's AI marketing services; Australian businesses are welcome to start from the page for Australia.
 
     The scope is a written plan on the business, produced before any money changes hands, and it names which department to install first and why. It sits in the agent row of the table above: priced by the department and the month, not by the hour, with the owner keeping the decisions. The five departments available today are listed on the sprints page.
 
-    Flow AI is not the right choice for a business that wants a person in the room every day, or for one with a large media budget that needs daily bid management. It is the right choice for a business of 5 to 50 staff that has been doing marketing in the gaps and wants it to run weekly under review.
+    Amber Lan is not the right choice for a business that wants a person in the room every day, or for one with a large media budget that needs daily bid management. It is the right choice for a business of 5 to 50 staff that has been doing marketing in the gaps and wants it to run weekly under review.
 
 The short version
 
@@ -13120,7 +13114,7 @@ Why AI changes the marketing math for NZ small businesses
     Diagram, read as a list: Your next customer (where they actually come from) leads to SEO and AI search, Outbound, Content engine, Analytics and follow-up. SEO and AI search (local service business). Outbound (B2B with a defined buyer). Content engine (expertise business). Analytics and follow-up (traffic that does not convert).
 Pick the first system by where your next customer comes from. Each kind of business has its own starting point, and the last row fixes the leak before paying for more visibility.
 
-    When you want the first system built with your team, AI marketing services for New Zealand and Australian businesses explains how Flow AI scopes and hands it over.
+    When you want the first system built with your team, AI marketing services for New Zealand and Australian businesses explains how Amber Lan scopes and hands it over.
 
     
       Local service business (trades, clinics, home services): start with SEO plus AI-search visibility. Your buyers search with intent and location; being the answer wins the job before anyone else quotes.
@@ -13173,7 +13167,7 @@ Pick the first system by where your next customer comes from. Each kind of busin
 
         Fractional marketerSenior judgment, a day or two a week.Excellent strategy, but execution still needs hands or budget on top.
 
-        AI systems + one engineerSystems that do the production, one accountable person doing the judgment. Flow AI's version is a contract build, scoped per project.Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub.
+        AI systems + one engineerSystems that do the production, one accountable person doing the judgment. Amber Lan's version is a contract build, scoped per project.Depth of a team's output at one person's price. The trade-off is trust: the model only works if the operator shows receipts, which is why mine are public on GitHub.
 
       
     
@@ -13238,7 +13232,7 @@ This is the order that compounds. Each stage builds on the one before it, and on
 Q: What is AI marketing for a small business?
 A: AI marketing means using AI systems to run the repetitive parts of marketing: drafting content, keeping SEO and AI-search visibility healthy, researching and contacting prospects, and reporting. The owner keeps the judgment calls; the systems do the production. Done well, one person can run what used to need a team.
 Q: How much does AI marketing cost for a small NZ business?
-A: Published 2026 ranges in New Zealand dollars: an AI tool stack you run yourself costs about NZD 55 to 95 a month, a freelancer NZD 50 to 150 an hour, an agency NZD 1,000 to 10,000 a month, and an in-house marketer about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Flow AI scopes and prices each build per project.
+A: Published 2026 ranges in New Zealand dollars: an AI tool stack you run yourself costs about NZD 55 to 95 a month, a freelancer NZD 50 to 150 an hour, an agency NZD 1,000 to 10,000 a month, and an in-house marketer about NZD 76,000 to 167,000 a year once KiwiSaver and overheads are added. Amber Lan scopes and prices each build per project.
 Q: Can I put customer details into ChatGPT or Claude under New Zealand privacy law?
 A: Treat it as a privacy decision. The Privacy Act 2020 applies to AI tools, and the Privacy Commissioner advises against using AI tools for personal information when in doubt. Remove names and contact details before pasting, switch off model training on your content where the vendor offers that setting, and record which tools hold which data in a short privacy impact assessment.
 Q: Do I still need SEO if I am doing AEO?

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Flow AI blog engine.
+"""Amber Lan blog engine.
 
 Sources live in src/blog/<slug>.html: a JSON meta block in an HTML comment,
 then the article body (h2, h3, p, ul, ol, table, blockquote). The FAQ lives in
@@ -40,7 +40,7 @@ TOPICS = {
 }
 TOPIC_ORDER = list(TOPICS)
 
-ENTITY = ("She takes on contract builds under the trading name Flow AI: the strategy, the systems and the "
+ENTITY = ("She takes on contract builds: the strategy, the systems and the "
           "agents that run a marketing function, engineered end to end.")
 
 # ---------------------------------------------------------------- languages
@@ -56,7 +56,7 @@ TOPICS_ZH = {
     "transformation": ("营销转型", "把小企业的营销职能逐项迁移到 AI 系统上。"),
     "reference": ("参考资料", "统计数据与定义，注明出处即可自由引用。"),
 }
-ENTITY_ZH = "她以 Flow AI 为商号承接合同制搭建项目：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。"
+ENTITY_ZH = "她以 Amber Lan 为商号承接合同制搭建项目：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。"
 STR = {
     "en": dict(
         html_lang="en-NZ", og_locale="en_NZ", min_read="min read", guides="Guides", updated="Updated",

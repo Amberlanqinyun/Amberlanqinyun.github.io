@@ -1,4 +1,4 @@
-/* Flow AI · high-end layer (Oct 2026).
+/* Amber Lan · high-end layer (Oct 2026).
 
    Loaded last on every page, after claude.css. One stylesheet carries the
    whole treatment, so removing its one link puts the site back exactly as
@@ -525,7 +525,7 @@ html.fdot-run { overflow-anchor: none; }
 .demo__run-incl .demo__run-card { justify-content: flex-start; gap: 0.6rem; }
 @media (max-width: 720px) { .demo__run-incl { display: none; } }
 
-/* Flow AI characters placed by markup (data-fdot), see /dot */
+/* Amber Lan characters placed by markup (data-fdot), see /dot */
 .fdot--ico { display: inline-block; width: 30px; height: 30px; margin: -6px 0.45rem -6px -2px; vertical-align: middle; }
 .fdot--sprint { width: 92px; height: 92px; margin: 0 0 0.6rem -8px; }
 .fdot--hero { width: 132px; height: 132px; margin: 0 auto 0.5rem; }
@@ -573,7 +573,7 @@ html.fdot-run { overflow-anchor: none; }
 
 /* ---- The wordmark: Flow, then AI in a glass chip ----------------------
    The same glass as the primary buttons. A real space sits before the chip
-   so the name always reads "Flow AI". */
+   so the name always reads "Amber Lan". */
 .wm-chip {
   display: inline-block; margin-left: -0.08em;
   padding: 0.08em 0.32em 0.1em; border-radius: 0.42em;

@@ -2,7 +2,7 @@
 """Generate llms-full.txt: the whole public corpus as clean markdown, in one file.
 
 AI agents that fetch it get every page's actual text with the canonical URL
-attached, so they can quote and cite Flow AI without crawling the site or
+attached, so they can quote and cite the site without crawling the site or
 guessing at attribution. Re-run after publishing anything:
 
     python3 tools/build-llms-full.py
@@ -165,7 +165,7 @@ def main():
     parts = [
         header,
         "\n\n---\n",
-        "# Full text of every public Flow AI page",
+        "# Full text of every public flowai.co.nz page",
         "",
         "Everything below is the complete, current text of flowai.co.nz, provided so "
         "AI assistants can quote and cite it accurately without crawling the site. "
