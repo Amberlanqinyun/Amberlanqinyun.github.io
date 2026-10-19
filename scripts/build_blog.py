@@ -8,6 +8,7 @@ the meta, never in the body. This script writes:
   blog/<slug>.html        article pages
   blog/index.html         the guide index with topic filters
   blog/figures/<slug>.svg one line drawing per article
+  in-body flowcharts      <figure class="flow" data-flow="id"></figure> drawn from src/flows/<slug>.json (scripts/flows.py)
   glossary/index.html     from src/glossary.json
   sitemap.xml, feed.xml, llms.txt, .well-known/llms.txt (blog sections only)
 
@@ -244,6 +245,7 @@ def process_body(post):
     else:
         words = len(text.split())
         minutes = math.ceil(words / 230)
+    body = expand_flows(body, post["slug"], LANG, ROOT)  # after the word count: diagram labels are not reading time
     post.update(html_body=body, toc=toc, sources=sources, words=words, minutes=max(3, minutes))
 
 
@@ -251,6 +253,7 @@ def process_body(post):
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from figures import figure_svg  # noqa: E402
+from flows import expand as expand_flows  # noqa: E402
 
 
 # ---------------------------------------------------------------- page chrome
@@ -286,7 +289,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-footer.css?v=2">
 <link rel="stylesheet" href="/assets/motion.css">
-<link rel="stylesheet" href="/assets/blog.css?v=2">
+<link rel="stylesheet" href="/assets/blog.css?v=3">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/share.js" defer></script>
 <script src="/assets/blog.js" defer></script>
@@ -779,6 +782,8 @@ def write_llms_full(p, posts):
     chunks = []
     for x in posts:
         body = re.sub(r"<sup class=\"fn\">.*?</sup>", "", x["html_body"])
+        body = re.sub(r"<svg\b.*?</svg>", "", body, flags=re.S)  # flowcharts keep their text version and caption
+        body = re.sub(r"</(figcaption)>", "\n", body)
         body = re.sub(r'<span class="sec-num"[^>]*>\d+</span>', "", body)
         body = re.sub(r"</(p|li|h2|h3|tr|blockquote)>", "\n", body)
         text = re.sub(r"\n{3,}", "\n\n", strip_tags(body)).strip()

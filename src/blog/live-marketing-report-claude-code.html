@@ -65,6 +65,7 @@
 
 <h2>How does the report get its numbers?</h2>
 <p>It reads numbers two ways. Tools with a connector Claude can use are queried live each time someone opens the page, which covers the CRM and the social scheduler. Tools without one are pulled by small scripts every morning into daily files, which covers Google Analytics and the LinkedIn outreach tool. The page reads both and treats them the same.</p>
+<figure class="flow" data-flow="report-flow"></figure>
 <p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol</a>. Live queries use each reader's own access, so a teammate without CRM access sees a gap, never someone else's data.</p>
 <p>For Google Analytics, a script calls the <a class="go" href="https://developers.google.com/analytics/devguides/reporting/data/v1" target="_blank" rel="noopener">Google Analytics Data API, which Google describes as programmatic access to the same report data as the Analytics interface</a>. The outreach tool connects over its own MCP server, and the script that reads it is allowed to call only the read tools: overall stats, campaigns, accounts and conversations. Anything that could send a message or change a campaign is refused in code, so the report can never act on the outreach tool, however it is prompted.</p>
 
@@ -75,6 +76,7 @@
 
 <h2>How does a date picker compare periods fairly?</h2>
 <p>Compare every range with the period of the same length just before it, and make the comparison explicit. Last week compares with the week before. A calendar month compares with the previous month. Year to date compares with the same dates last year. The picker shows the exact comparison dates, so nobody has to guess what "vs before" means.</p>
+<figure class="flow" data-flow="comparison"></figure>
 <p>Three details made the comparisons honest:</p>
 <ol>
   <li><b>Stop at the last full day.</b> Analytics and outreach numbers arrive each morning. A range that runs to today would compare a half-empty day with a full one, so those ranges stop at yesterday and the comparison is cut to the same number of days.</li>

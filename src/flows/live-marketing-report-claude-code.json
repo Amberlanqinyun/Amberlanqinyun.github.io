@@ -1,0 +1,27 @@
+{
+  "report-flow": {
+    "caption": {"en": "Two ways in, one page out. Tools with a connector are read live, the rest arrive as daily files, and nothing reaches the team until a person approves it.", "zh": "两条输入，一个页面。有连接器的工具实时读取，其余的以每日文件送达；在人批准之前，任何内容都不会发给团队。"},
+    "cols": 4,
+    "nodes": [
+      {"id": "live", "col": 0, "row": 0, "kind": "source", "label": {"en": "CRM and social scheduler", "zh": "CRM 和社媒排期工具"}, "note": {"en": "read live", "zh": "实时读取"}},
+      {"id": "pulled", "col": 0, "row": 1, "kind": "source", "label": {"en": "Analytics and outreach tool", "zh": "网站分析和外联工具"}, "note": {"en": "no live connector", "zh": "没有实时连接器"}},
+      {"id": "files", "col": 1, "row": 1, "label": {"en": "Daily files", "zh": "每日文件"}, "note": {"en": "pulled each morning", "zh": "每天早上拉取"}},
+      {"id": "page", "col": 2, "row": 0, "span": 2, "kind": "out", "label": {"en": "The report page", "zh": "报告页面"}, "note": {"en": "any date range, every number linked to its source", "zh": "任意时段，每个数字都链接到来源"}},
+      {"id": "review", "col": 3, "row": 0, "kind": "human", "label": {"en": "A person reviews", "zh": "由人审核"}, "note": {"en": "notes and Slack draft", "zh": "当月记录和 Slack 草稿"}},
+      {"id": "shared", "col": 3, "row": 1, "label": {"en": "Shared with the team", "zh": "分享给团队"}}
+    ],
+    "edges": [["live", "page"], ["pulled", "files"], ["files", "page"], ["page", "review"], ["review", "shared", {"en": "on a yes", "zh": "批准后"}]]
+  },
+  "comparison": {
+    "caption": {"en": "Each range is compared with the stretch of the same length just before it. A range that runs to today stops at the last full day, and so does its comparison.", "zh": "每个时段都和紧挨着的、长度相同的上一段对比。截至今天的时段停在最后一个完整的日子，对比时段也一样。"},
+    "cols": 3,
+    "nodes": [
+      {"id": "pick", "col": 0, "row": 0, "label": {"en": "Pick a range", "zh": "选择时段"}, "note": {"en": "quick range or custom dates", "zh": "快捷时段或自定义日期"}},
+      {"id": "cap", "col": 1, "row": 0, "label": {"en": "Stop at yesterday", "zh": "停在昨天"}, "note": {"en": "if the range runs to today", "zh": "如果时段截至今天"}},
+      {"id": "prev", "col": 2, "row": 0, "label": {"en": "Find the period before", "zh": "找到上一时段"}, "note": {"en": "same number of days", "zh": "天数相同"}},
+      {"id": "count", "col": 2, "row": 1, "label": {"en": "Count each visitor once", "zh": "每位访客只算一次"}, "note": {"en": "per range, from Analytics", "zh": "按时段，从 Analytics 获取"}},
+      {"id": "show", "col": 1, "row": 1, "kind": "out", "label": {"en": "Show both, with the dates", "zh": "并列显示，并写明日期"}}
+    ],
+    "edges": [["pick", "cap"], ["cap", "prev"], ["prev", "count"], ["count", "show"]]
+  }
+}

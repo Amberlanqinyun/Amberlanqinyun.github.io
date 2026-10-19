@@ -5285,6 +5285,9 @@ How does the report get its numbers?
 
 It reads numbers two ways. Tools with a connector Claude can use are queried live each time someone opens the page, which covers the CRM and the social scheduler. Tools without one are pulled by small scripts every morning into daily files, which covers Google Analytics and the LinkedIn outreach tool. The page reads both and treats them the same.
 
+Diagram, read as a list: CRM and social scheduler (read live) leads to The report page. Analytics and outreach tool (no live connector) leads to Daily files. Daily files (pulled each morning) leads to The report page. The report page (any date range, every number linked to its source) leads to A person reviews. A person reviews (notes and Slack draft) leads to Shared with the team. Shared with the team.
+Two ways in, one page out. Tools with a connector are read live, the rest arrive as daily files, and nothing reaches the team until a person approves it. The amber box is the step where a person decides.
+
 Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol. Live queries use each reader's own access, so a teammate without CRM access sees a gap, never someone else's data.
 
 For Google Analytics, a script calls the Google Analytics Data API, which Google describes as programmatic access to the same report data as the Analytics interface. The outreach tool connects over its own MCP server, and the script that reads it is allowed to call only the read tools: overall stats, campaigns, accounts and conversations. Anything that could send a message or change a campaign is refused in code, so the report can never act on the outreach tool, however it is prompted.
@@ -5300,6 +5303,9 @@ Google's OAuth guide for desktop apps says the user consents in the system brows
 How does a date picker compare periods fairly?
 
 Compare every range with the period of the same length just before it, and make the comparison explicit. Last week compares with the week before. A calendar month compares with the previous month. Year to date compares with the same dates last year. The picker shows the exact comparison dates, so nobody has to guess what "vs before" means.
+
+Diagram, read as a list: Pick a range (quick range or custom dates) leads to Stop at yesterday. Stop at yesterday (if the range runs to today) leads to Find the period before. Find the period before (same number of days) leads to Count each visitor once. Count each visitor once (per range, from Analytics) leads to Show both, with the dates. Show both, with the dates.
+Each range is compared with the stretch of the same length just before it. A range that runs to today stops at the last full day, and so does its comparison.
 
 Three details made the comparisons honest:
 
@@ -8013,6 +8019,9 @@ How is the setup organised?
 
 The setup has four layers. Each lane of work has its own instruction file that reads like a job description. A skills library holds every repeated procedure, versioned in git. Connectors link the agent to the tools marketing already uses. Scheduled tasks start the recurring work, and subagents take research off the main thread.
 
+Diagram, read as a list: Lane instruction files (one CLAUDE.md per lane) leads to Claude Code session. Skills library (versioned in git) leads to Claude Code session. Connectors (MCP, read access first) leads to Claude Code session. Scheduled tasks (recurring briefs) leads to Claude Code session. Claude Code session (researches and drafts, with subagents for research) leads to Drafts in a review queue. Drafts in a review queue leads to Amber decides what ships. Amber decides what ships.
+Four layers feed one Claude Code session. The agents research and draft, and everything lands in a review queue before it ships. The amber box is the step where a person decides.
+
 One instruction file per lane
 
 Claude Code reads files called CLAUDE.md as standing instructions. Anthropic's memory documentation says CLAUDE.md files above the working directory load at launch, while files in subdirectories load when Claude works on files there. That behaviour suits a marketing department well. The top folder holds the rules every lane shares, such as the voice rules and who signs off what. Each lane folder (content, social, search, outbound, events, reporting) holds its own CLAUDE.md, written as a job description: what the lane owns, which inputs it reads, what finished work looks like, and what needs my approval.
@@ -8038,6 +8047,9 @@ Anthropic's subagents documentation says each subagent runs in its own context w
 How does a draft get from agent to published?
 
 Agents produce and a person decides. Every draft passes automated checks before I see it, from the voice rules to a source check on every number and claim. Prose then gets a humaniser pass. After that I read it. Nothing sends or publishes without my approval, and outbound hands every reply to a person.
+
+Diagram, read as a list: Agent draft leads to Voice audit. Voice audit (line by line) leads to Claim check. Claim check (against the register) leads to Evidence audit. Evidence audit (every link and number) leads to Humaniser pass. Humaniser pass leads to My read. My read leads to Published. Published.
+Each check catches something the next one cannot, so the order stays fixed. A person reads last and presses publish. The amber box is the step where a person decides.
 
 The order matters, because each check catches something the next one cannot:
 

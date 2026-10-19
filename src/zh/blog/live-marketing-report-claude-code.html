@@ -65,6 +65,7 @@
 
 <h2>报告的数字从哪里来？</h2>
 <p>它用两种方式取数。Claude 能直接使用连接器的工具，每次有人打开页面时实时查询，CRM 和社媒排期工具就是这样。没有连接器的工具，由几个小脚本每天早上拉取成每日文件，Google Analytics 和 LinkedIn 外联工具就是这样。页面同时读取这两类数据，处理方式完全一样。</p>
+<figure class="flow" data-flow="report-flow"></figure>
 <p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过 Model Context Protocol 连接数百种外部工具和数据源</a>。实时查询使用每位读者自己的权限，所以没有 CRM 权限的同事看到的是空缺，绝不会看到别人的数据。</p>
 <p>Google Analytics 由一个脚本调用 <a class="go" href="https://developers.google.com/analytics/devguides/reporting/data/v1" target="_blank" rel="noopener">Google Analytics Data API，Google 把它描述为以编程方式访问与 Analytics 界面相同的报告数据</a>。外联工具通过它自己的 MCP 服务器连接，读取它的脚本只允许调用只读工具：总体统计、活动、账号和对话。任何可能发送消息或修改活动的调用都在代码里被拒绝，所以无论怎么提示，报告都不可能在外联工具里执行操作。</p>
 
@@ -75,6 +76,7 @@
 
 <h2>日期选择器怎样公平地对比不同时段？</h2>
 <p>每个时段都和紧挨着的、长度相同的上一个时段对比，并且把对比对象写清楚。上周对比再上一周。一个自然月对比上一个月。年初至今对比去年同期。选择器会显示具体的对比日期，没有人需要去猜“对比之前”指的是什么。</p>
+<figure class="flow" data-flow="comparison"></figure>
 <p>有三个细节让对比变得诚实：</p>
 <ol>
   <li><b>停在最后一个完整的日子。</b>网站分析和外联数字每天早上才更新。截至今天的时段，会拿只有半天数据的今天去和完整的一天对比，所以这类时段停在昨天，对比时段也截成相同的天数。</li>
