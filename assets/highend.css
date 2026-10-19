@@ -874,3 +874,56 @@ html.fdot-run { overflow-anchor: none; }
   .hero .stack > .hero-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
   .hero-facts li + li::before { display: none; }
 }
+
+/* ---- First-job offer (20 Oct 2026, mock) ------------------------------------
+   The offer is one job, the button is the plan, and the form lives on the page. */
+.hero .stack > .cta-note { max-width: 46ch; margin: var(--s-4) auto 0; color: var(--soft); font-size: var(--t-small); line-height: 1.5; }
+.hero .stack > .cta-note + .hero-facts { margin-top: var(--s-7); }
+
+.jobs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: var(--space-block); }
+.job {
+  display: flex; flex-direction: column; gap: var(--s-4);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  border: 1px solid var(--core-line); border-radius: var(--r-lg); background: var(--core); box-shadow: var(--highlight);
+  color: inherit; text-decoration: none; border-bottom-width: 1px;
+  transition: background-color 320ms var(--ease-out), transform 560ms var(--ease-spring);
+}
+.job:hover { background: #151513; transform: translateY(-2px); }
+.job__who { margin: 0; color: var(--soft); font-size: var(--t-small); }
+.job h3 { margin: 0; max-width: 24ch; color: var(--fg); font-size: clamp(1.35rem, 1.9vw, 1.8rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.18; text-wrap: balance; }
+.job__week { margin: 0; color: var(--muted); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
+.job__week b { color: var(--fg); font-weight: 500; }
+.job__receipt { margin: 0; padding-top: var(--s-3); border-top: 1px solid var(--hair); color: var(--soft); font-size: var(--t-small); line-height: 1.5; }
+.job .text-link { margin-top: auto; align-self: flex-start; padding-top: var(--s-2); }
+.job:hover .text-link { border-color: var(--fg); }
+.more-jobs { margin-top: var(--s-7); border-top: 1px solid var(--hair); }
+.more-jobs > summary { list-style: none; cursor: pointer; padding: var(--s-5) 0; color: var(--muted); font-size: var(--t-body); display: flex; align-items: center; gap: var(--s-4); }
+.more-jobs > summary::-webkit-details-marker { display: none; }
+.more-jobs > summary::after { content: "+"; margin-left: auto; flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--core-line); color: var(--soft); font-weight: 300; transition: transform 220ms var(--ease-out); }
+.more-jobs[open] > summary::after { transform: rotate(45deg); }
+.more-jobs .outcomes { margin-top: var(--s-4); }
+@media (max-width: 900px) { .jobs { grid-template-columns: 1fr; } }
+
+.plan-form { max-width: 40rem; margin: var(--space-block) auto 0; text-align: left; display: grid; gap: var(--s-5); }
+.plan-form .field { display: grid; gap: var(--s-2); }
+.plan-form label { color: var(--fg); font-size: var(--t-label); font-weight: 500; }
+.plan-form label span { color: var(--soft); font-weight: 400; }
+.plan-form input, .plan-form textarea {
+  width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--core-line); border-radius: var(--r-md);
+  background: var(--core); color: var(--fg); font: inherit; font-size: var(--t-body); box-shadow: var(--highlight);
+}
+.plan-form input:focus, .plan-form textarea:focus { outline: none; border-color: var(--hair-strong); }
+.plan-form input::placeholder, .plan-form textarea::placeholder { color: var(--soft); }
+.plan-form textarea { min-height: 120px; resize: vertical; }
+.plan-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+.plan-form .hp { position: absolute; left: -9999px; }
+.plan-form__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4) var(--s-6); margin-top: var(--s-2); }
+.plan-form__note { margin: 0; }
+.plan-form .form-status { color: var(--muted); font-size: var(--t-small); }
+@media (max-width: 540px) { .plan-form__row { grid-template-columns: 1fr; } }
+
+.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; display: none; padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom)); background: rgba(14, 14, 13, 0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--hair); transform: translateY(110%); transition: transform 420ms var(--ease-spring); }
+.sticky-cta .btn { width: 100%; justify-content: space-between; }
+@media (max-width: 640px) { .sticky-cta { display: block; } .sticky-cta.is-on { transform: none; } }
+
+.pillars.steps-split .steps__n { white-space: nowrap; }
