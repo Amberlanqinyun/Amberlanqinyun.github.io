@@ -269,8 +269,9 @@ def gallery():
         cards.append(card(t, anchor))
     schema = {
         "@context": "https://schema.org", "@type": "CollectionPage",
-        "@id": f"{SITE}/templates/", "name": "Flow AI agent templates",
-        "description": "Free agent templates from Flow AI. Run one on your site, reviewed by a marketing engineer, or install it in Claude Code.",
+        "@id": f"{SITE}/templates/", "name": "Free AI agent templates by Amber Lan",
+        "description": "Free AI agent templates from Amber Lan, an AI marketing engineer in Auckland. Run one on your site, reviewed by Amber, or install it in Claude Code.",
+        "publisher": {"@type": "Person", "@id": f"{SITE}/#amber", "name": "Amber Lan"},
         "dateModified": UPDATED,
         "mainEntity": {"@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/templates/{t['slug']}", "name": t["name"]}
@@ -332,7 +333,7 @@ def gallery():
   </section>
 </main>
 """
-    page = head("Free agent templates | Amber Lan", "Free agent templates from Flow AI. Pick one and it runs on your site, reviewed by a marketing engineer, within two working days. Or install it yourself in Claude Code.", "/templates/", schema) + body + foot()
+    page = head("Free AI Agent Templates for Marketing | Amber Lan", "Free AI agent templates from Amber Lan, an AI marketing engineer in Auckland. One runs on your site within two working days, or install it in Claude Code.", "/templates/", schema) + body + foot()
     (ROOT / "templates").mkdir(exist_ok=True)
     (ROOT / "templates/index.html").write_text(page)
 
@@ -505,8 +506,8 @@ def template_page(t):
   </section>
 </main>
 """
-    title = f"{t['name']} | Free Flow AI agent template"
-    desc = f"{t['card']} Run it with a marketing engineer, or install it in Claude Code."
+    title = f"{t['name']}: Free AI Agent Template | Amber Lan"
+    desc = f"{t['card']} Run it with Amber Lan, or install it in Claude Code."
     page = head(title, desc, f"/templates/{t['slug']}", schema, og_type="article") + body + foot()
     (ROOT / f"templates/{t['slug']}.html").write_text(page)
 

@@ -1,187 +1,183 @@
 {
   "src/zh/blog/aeo-checklist.html": {
     "source": "src/blog/aeo-checklist.html",
-    "sha": "6c33521d5f49"
+    "sha": "200c61ba6290"
   },
   "src/zh/blog/aeo-vs-seo-vs-geo.html": {
     "source": "src/blog/aeo-vs-seo-vs-geo.html",
-    "sha": "be018f8bffed"
+    "sha": "0cf77ac5a49e"
   },
   "src/zh/blog/agency-vs-freelancer-vs-in-house.html": {
     "source": "src/blog/agency-vs-freelancer-vs-in-house.html",
-    "sha": "98eab593d4ec"
+    "sha": "1158008bff8a"
   },
   "src/zh/blog/ai-advisory-pilot-nz.html": {
     "source": "src/blog/ai-advisory-pilot-nz.html",
-    "sha": "a284499220cf"
+    "sha": "22c97f14b33d"
   },
   "src/zh/blog/ai-agency-vs-ai-consultant-nz.html": {
     "source": "src/blog/ai-agency-vs-ai-consultant-nz.html",
-    "sha": "7bfbdfab9f52"
+    "sha": "0f7dd9273819"
   },
   "src/zh/blog/ai-agent-development-cost-nz.html": {
     "source": "src/blog/ai-agent-development-cost-nz.html",
-    "sha": "7650f75c21e3"
+    "sha": "a9eea3479082"
   },
   "src/zh/blog/ai-agents-for-marketing.html": {
     "source": "src/blog/ai-agents-for-marketing.html",
-    "sha": "200439dca7f8"
+    "sha": "c55107f48009"
   },
   "src/zh/blog/ai-consultant-rates-nz-australia.html": {
     "source": "src/blog/ai-consultant-rates-nz-australia.html",
-    "sha": "e58f1ffe3c78"
+    "sha": "0669f793cb07"
   },
   "src/zh/blog/ai-for-marketers.html": {
     "source": "src/blog/ai-for-marketers.html",
-    "sha": "bee3b7f7446f"
+    "sha": "aa1772a492e0"
   },
   "src/zh/blog/ai-marketing-automation-small-business.html": {
     "source": "src/blog/ai-marketing-automation-small-business.html",
-    "sha": "3ce2b01bcb98"
+    "sha": "02c7145d5594"
   },
   "src/zh/blog/ai-marketing-cost-australia-new-zealand.html": {
     "source": "src/blog/ai-marketing-cost-australia-new-zealand.html",
-    "sha": "975de5c743b2"
+    "sha": "fba2031dda1f"
   },
   "src/zh/blog/ai-marketing-examples.html": {
     "source": "src/blog/ai-marketing-examples.html",
-    "sha": "44d59445eca0"
+    "sha": "2c14d13cb505"
   },
   "src/zh/blog/ai-marketing-for-small-business-nz.html": {
     "source": "src/blog/ai-marketing-for-small-business-nz.html",
-    "sha": "cd347538e9be"
+    "sha": "2f4d07127803"
   },
   "src/zh/blog/ai-marketing-privacy-law-nz-australia.html": {
     "source": "src/blog/ai-marketing-privacy-law-nz-australia.html",
-    "sha": "372f50aeddf9"
+    "sha": "47146aa21b19"
   },
   "src/zh/blog/ai-marketing-providers-australia.html": {
     "source": "src/blog/ai-marketing-providers-australia.html",
-    "sha": "0fcc4c89d87e"
+    "sha": "7f3bda5b2d69"
   },
   "src/zh/blog/ai-marketing-providers-new-zealand.html": {
     "source": "src/blog/ai-marketing-providers-new-zealand.html",
-    "sha": "66af0747c2df"
+    "sha": "f551685c6a77"
   },
   "src/zh/blog/ai-marketing-scope-of-work.html": {
     "source": "src/blog/ai-marketing-scope-of-work.html",
-    "sha": "5dfc3e4aa3c8"
+    "sha": "d0ca776c5b03"
   },
   "src/zh/blog/ai-marketing-services-vs-tools.html": {
     "source": "src/blog/ai-marketing-services-vs-tools.html",
-    "sha": "4cb087187c27"
+    "sha": "5dc9fcd04286"
   },
   "src/zh/blog/ai-marketing-statistics-australia-new-zealand.html": {
     "source": "src/blog/ai-marketing-statistics-australia-new-zealand.html",
-    "sha": "40e7d3cbd1a3"
+    "sha": "410225490211"
   },
   "src/zh/blog/ai-marketing-strategy-small-business.html": {
     "source": "src/blog/ai-marketing-strategy-small-business.html",
-    "sha": "61411818d1d1"
+    "sha": "944287f616a2"
   },
   "src/zh/blog/ai-marketing-transformation-small-business.html": {
     "source": "src/blog/ai-marketing-transformation-small-business.html",
-    "sha": "2d99dcc38dd3"
+    "sha": "d6da02def982"
   },
   "src/zh/blog/claude-code-for-marketing-agencies.html": {
     "source": "src/blog/claude-code-for-marketing-agencies.html",
-    "sha": "1e22ae12c381"
+    "sha": "a41df95b6ec0"
   },
   "src/zh/blog/claude-vs-chatgpt-business-cost-nz.html": {
     "source": "src/blog/claude-vs-chatgpt-business-cost-nz.html",
-    "sha": "5c73e89b9fa8"
+    "sha": "00116a48dda1"
   },
   "src/zh/blog/content-marketing-small-business-nz.html": {
     "source": "src/blog/content-marketing-small-business-nz.html",
-    "sha": "be858842be32"
+    "sha": "df1ac874fef7"
   },
   "src/zh/blog/do-you-need-an-ai-marketing-agency-nz.html": {
     "source": "src/blog/do-you-need-an-ai-marketing-agency-nz.html",
-    "sha": "544f7c3598ff"
+    "sha": "f579fd28ebab"
   },
   "src/zh/blog/first-month-of-an-ai-marketing-build.html": {
     "source": "src/blog/first-month-of-an-ai-marketing-build.html",
-    "sha": "8054a6813a6d"
+    "sha": "40d1f0453e60"
   },
   "src/zh/blog/fractional-cmo-vs-ai-cmo.html": {
     "source": "src/blog/fractional-cmo-vs-ai-cmo.html",
-    "sha": "1b21eae8f528"
+    "sha": "f74c6c95843d"
   },
   "src/zh/blog/fractional-marketing-manager-nz.html": {
     "source": "src/blog/fractional-marketing-manager-nz.html",
-    "sha": "20e9fe35f4cd"
+    "sha": "7cd7cf3d18bc"
   },
   "src/zh/blog/get-recommended-by-chatgpt-auckland.html": {
     "source": "src/blog/get-recommended-by-chatgpt-auckland.html",
-    "sha": "133eed00bc1b"
+    "sha": "cd2be232856a"
   },
   "src/zh/blog/how-to-choose-an-ai-marketing-provider.html": {
     "source": "src/blog/how-to-choose-an-ai-marketing-provider.html",
-    "sha": "d79cad72c63a"
+    "sha": "22503800c204"
   },
   "src/zh/blog/how-to-get-mentioned-by-chatgpt.html": {
     "source": "src/blog/how-to-get-mentioned-by-chatgpt.html",
-    "sha": "8ec4f4eb27bd"
+    "sha": "b75b1eb5ed7c"
   },
   "src/zh/blog/how-to-hire-an-ai-agent-developer.html": {
     "source": "src/blog/how-to-hire-an-ai-agent-developer.html",
-    "sha": "ea8edc09f8e9"
-  },
-  "src/zh/blog/live-marketing-report-claude-code.html": {
-    "source": "src/blog/live-marketing-report-claude-code.html",
-    "sha": "f35e0845aa36"
+    "sha": "4205af979af2"
   },
   "src/zh/blog/marketing-agency-alternatives-nz.html": {
     "source": "src/blog/marketing-agency-alternatives-nz.html",
-    "sha": "79cab7c03266"
+    "sha": "61a2464f9e9a"
   },
   "src/zh/blog/marketing-agency-cost-australia.html": {
     "source": "src/blog/marketing-agency-cost-australia.html",
-    "sha": "3f67ef8a093e"
+    "sha": "490316fc3ce1"
   },
   "src/zh/blog/marketing-agency-cost-nz.html": {
     "source": "src/blog/marketing-agency-cost-nz.html",
-    "sha": "0a3f5e2d2dde"
+    "sha": "6fb8f4ee26b6"
   },
   "src/zh/blog/marketing-engineer-jobs-nz-australia-2026.html": {
     "source": "src/blog/marketing-engineer-jobs-nz-australia-2026.html",
-    "sha": "ac17b4e7dfc8"
+    "sha": "bb60663c9aca"
   },
   "src/zh/blog/n8n-vs-zapier-vs-make-vs-claude-code.html": {
     "source": "src/blog/n8n-vs-zapier-vs-make-vs-claude-code.html",
-    "sha": "1132f62a07ec"
+    "sha": "7f6527494019"
   },
   "src/zh/blog/outbound-sales-automation.html": {
     "source": "src/blog/outbound-sales-automation.html",
-    "sha": "fa08701ba4a1"
+    "sha": "8de8457d2ae5"
   },
   "src/zh/blog/running-marketing-on-claude-code.html": {
     "source": "src/blog/running-marketing-on-claude-code.html",
-    "sha": "b69a4e07be1e"
+    "sha": "855ed900681b"
   },
   "src/zh/blog/seo-for-small-business-nz.html": {
     "source": "src/blog/seo-for-small-business-nz.html",
-    "sha": "d0069ec9e2f8"
+    "sha": "8b25f91ad348"
   },
   "src/zh/blog/what-do-ai-marketing-services-include.html": {
     "source": "src/blog/what-do-ai-marketing-services-include.html",
-    "sha": "d107db651e71"
+    "sha": "10314a1f04b5"
   },
   "src/zh/blog/what-is-a-marketing-engineer.html": {
     "source": "src/blog/what-is-a-marketing-engineer.html",
-    "sha": "4acacca41ca3"
+    "sha": "2ad99251d3bc"
   },
   "src/zh/blog/what-is-an-ai-cmo.html": {
     "source": "src/blog/what-is-an-ai-cmo.html",
-    "sha": "665b00b7548d"
+    "sha": "8fa7422e4204"
   },
   "src/zh/blog/what-is-an-ai-marketing-agent.html": {
     "source": "src/blog/what-is-an-ai-marketing-agent.html",
-    "sha": "576be1dfce56"
+    "sha": "3384f27b2524"
   },
   "src/zh/blog/what-is-answer-engine-optimisation.html": {
     "source": "src/blog/what-is-answer-engine-optimisation.html",
-    "sha": "aea41b50a3d7"
+    "sha": "664ae7058d13"
   },
   "src/zh/glossary.json": {
     "source": "src/glossary.json",
@@ -193,7 +189,7 @@
   },
   "zh/about.html": {
     "source": "about.html",
-    "sha": "06d498268bef"
+    "sha": "1fd124916c7f"
   },
   "zh/ai-marketing-services/ai-agent-development.html": {
     "source": "ai-marketing-services/ai-agent-development.html",
@@ -205,11 +201,11 @@
   },
   "zh/ai-marketing-services/auckland.html": {
     "source": "ai-marketing-services/auckland.html",
-    "sha": "2d50bc1ec468"
+    "sha": "f7b314694093"
   },
   "zh/ai-marketing-services/australia.html": {
     "source": "ai-marketing-services/australia.html",
-    "sha": "d4aeff478717"
+    "sha": "a8322b660712"
   },
   "zh/ai-marketing-services/claude-code-consultant.html": {
     "source": "ai-marketing-services/claude-code-consultant.html",
@@ -217,15 +213,15 @@
   },
   "zh/ai-marketing-services/index.html": {
     "source": "ai-marketing-services/index.html",
-    "sha": "53c71723af98"
+    "sha": "27922a0678c1"
   },
   "zh/ai-marketing-services/marketing-automation-consultant.html": {
     "source": "ai-marketing-services/marketing-automation-consultant.html",
-    "sha": "1cb7af0e9d72"
+    "sha": "0f15302e0b27"
   },
   "zh/ai-marketing-services/new-zealand.html": {
     "source": "ai-marketing-services/new-zealand.html",
-    "sha": "0fc9f4d96ad4"
+    "sha": "161564f45f64"
   },
   "zh/cases.html": {
     "source": "cases.html",
@@ -233,7 +229,7 @@
   },
   "zh/contact.html": {
     "source": "contact.html",
-    "sha": "9fdc5d762421"
+    "sha": "a90ac2daf48c"
   },
   "zh/dot.html": {
     "source": "dot.html",
@@ -241,11 +237,11 @@
   },
   "zh/index.html": {
     "source": "index.html",
-    "sha": "fb8bbf075e24"
+    "sha": "c10de0612316"
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
-    "sha": "6cea1243d8ab"
+    "sha": "9320ab86e044"
   },
   "zh/privacy.html": {
     "source": "privacy.html",
@@ -261,51 +257,51 @@
   },
   "zh/sprints/analytics.html": {
     "source": "sprints/analytics.html",
-    "sha": "afd3f8ea16a8"
+    "sha": "967a3659354a"
   },
   "zh/sprints/content-engine.html": {
     "source": "sprints/content-engine.html",
-    "sha": "9811f2016bf0"
+    "sha": "22b1b08059af"
   },
   "zh/sprints/index.html": {
     "source": "sprints/index.html",
-    "sha": "5b8c11fdf474"
+    "sha": "c1c4facfe878"
   },
   "zh/sprints/outbound.html": {
     "source": "sprints/outbound.html",
-    "sha": "ab5d32c37631"
+    "sha": "6fa1bc3e076e"
   },
   "zh/sprints/positioning.html": {
     "source": "sprints/positioning.html",
-    "sha": "d6e7b072a8f2"
+    "sha": "e3d4491f73f0"
   },
   "zh/templates/ai-citability.html": {
     "source": "templates/ai-citability.html",
-    "sha": "8054d602a5d5"
+    "sha": "790cee968de3"
   },
   "zh/templates/ai-crawler-check.html": {
     "source": "templates/ai-crawler-check.html",
-    "sha": "c35f54f7dfd5"
+    "sha": "57fc8777556c"
   },
   "zh/templates/brand-dna.html": {
     "source": "templates/brand-dna.html",
-    "sha": "3dc6224215c8"
+    "sha": "2defaf1050f2"
   },
   "zh/templates/content-evidence-audit.html": {
     "source": "templates/content-evidence-audit.html",
-    "sha": "e707616c2586"
+    "sha": "f811f0bc7824"
   },
   "zh/templates/geo-audit.html": {
     "source": "templates/geo-audit.html",
-    "sha": "c57f1585f878"
+    "sha": "2c7f404abec0"
   },
   "zh/templates/index.html": {
     "source": "templates/index.html",
-    "sha": "d385ac78383e"
+    "sha": "dfc54e188ca4"
   },
   "zh/templates/reddit-opportunities.html": {
     "source": "templates/reddit-opportunities.html",
-    "sha": "53f3ce19a78c"
+    "sha": "76743396125b"
   },
   "zh/tools/benchmark.html": {
     "source": "tools/benchmark.html",
@@ -321,22 +317,22 @@
   },
   "zh/work.html": {
     "source": "work.html",
-    "sha": "c88299a074a8"
+    "sha": "c4d9cb3de49b"
   },
   "zh/work/content-engine.html": {
     "source": "work/content-engine.html",
-    "sha": "6cba0bfc7c85"
+    "sha": "7d8df7a9dd70"
   },
   "zh/work/enterprise-gtm.html": {
     "source": "work/enterprise-gtm.html",
-    "sha": "7fe383114c37"
+    "sha": "a3ab2bfe6fce"
   },
   "zh/work/geo-seo-toolkit.html": {
     "source": "work/geo-seo-toolkit.html",
-    "sha": "b1090c1a7c74"
+    "sha": "23ccf13052c9"
   },
   "zh/work/six-month-marketing-function.html": {
     "source": "work/six-month-marketing-function.html",
-    "sha": "4bf584cbca5a"
+    "sha": "994981f0a9be"
   }
 }
