@@ -1,0 +1,235 @@
+{
+  "setup": {
+    "caption": {
+      "en": "Four layers feed one Claude Code session. The agents research and draft, and everything lands in a review queue before it ships.",
+      "zh": "四层输入汇入同一个 Claude Code 会话。智能体负责调研和起草，所有产出先进入审核队列，再决定是否上线。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "lanes",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Lane instruction files",
+          "zh": "工作线指令文件"
+        },
+        "note": {
+          "en": "one CLAUDE.md per lane",
+          "zh": "每条线一份 CLAUDE.md"
+        }
+      },
+      {
+        "id": "skills",
+        "col": 0,
+        "row": 1,
+        "label": {
+          "en": "Skills library",
+          "zh": "技能库"
+        },
+        "note": {
+          "en": "versioned in git",
+          "zh": "在 git 里做版本管理"
+        }
+      },
+      {
+        "id": "mcp",
+        "col": 0,
+        "row": 2,
+        "label": {
+          "en": "Connectors",
+          "zh": "连接器"
+        },
+        "note": {
+          "en": "MCP, read access first",
+          "zh": "MCP，先只读"
+        }
+      },
+      {
+        "id": "sched",
+        "col": 0,
+        "row": 3,
+        "label": {
+          "en": "Scheduled tasks",
+          "zh": "定时任务"
+        },
+        "note": {
+          "en": "recurring briefs",
+          "zh": "周期性简报"
+        }
+      },
+      {
+        "id": "session",
+        "col": 1,
+        "row": 0,
+        "span": 4,
+        "label": {
+          "en": "Claude Code session",
+          "zh": "Claude Code 会话"
+        },
+        "note": {
+          "en": "researches and drafts, with subagents for research",
+          "zh": "调研和起草，调研交给子智能体"
+        }
+      },
+      {
+        "id": "queue",
+        "col": 2,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Drafts in a review queue",
+          "zh": "审核队列中的草稿"
+        }
+      },
+      {
+        "id": "amber",
+        "col": 2,
+        "row": 2,
+        "kind": "human",
+        "label": {
+          "en": "Amber decides what ships",
+          "zh": "由 Amber 决定上线内容"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "lanes",
+        "session"
+      ],
+      [
+        "skills",
+        "session"
+      ],
+      [
+        "mcp",
+        "session"
+      ],
+      [
+        "sched",
+        "session"
+      ],
+      [
+        "session",
+        "queue"
+      ],
+      [
+        "queue",
+        "amber"
+      ]
+    ]
+  },
+  "review": {
+    "caption": {
+      "en": "Each check catches something the next one cannot, so the order stays fixed. A person reads last and presses publish.",
+      "zh": "每道检查都能发现下一道发现不了的问题，所以顺序固定不变。最后由人通读，并按下发布键。"
+    },
+    "cols": 4,
+    "nodes": [
+      {
+        "id": "draft",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Agent draft",
+          "zh": "智能体草稿"
+        }
+      },
+      {
+        "id": "voice",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Voice audit",
+          "zh": "语调审核"
+        },
+        "note": {
+          "en": "line by line",
+          "zh": "逐行检查"
+        }
+      },
+      {
+        "id": "claim",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Claim check",
+          "zh": "论断检查"
+        },
+        "note": {
+          "en": "against the register",
+          "zh": "对照论断登记册"
+        }
+      },
+      {
+        "id": "evidence",
+        "col": 3,
+        "row": 0,
+        "label": {
+          "en": "Evidence audit",
+          "zh": "证据审核"
+        },
+        "note": {
+          "en": "every link and number",
+          "zh": "每个链接和数字"
+        }
+      },
+      {
+        "id": "human",
+        "col": 3,
+        "row": 1,
+        "label": {
+          "en": "Humaniser pass",
+          "zh": "去 AI 味处理"
+        }
+      },
+      {
+        "id": "read",
+        "col": 2,
+        "row": 1,
+        "kind": "human",
+        "label": {
+          "en": "My read",
+          "zh": "我来通读"
+        }
+      },
+      {
+        "id": "live",
+        "col": 1,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Published",
+          "zh": "发布"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "draft",
+        "voice"
+      ],
+      [
+        "voice",
+        "claim"
+      ],
+      [
+        "claim",
+        "evidence"
+      ],
+      [
+        "evidence",
+        "human"
+      ],
+      [
+        "human",
+        "read"
+      ],
+      [
+        "read",
+        "live"
+      ]
+    ]
+  }
+}

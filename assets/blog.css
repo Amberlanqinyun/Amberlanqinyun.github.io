@@ -316,3 +316,20 @@
   .faq > h2 { font-size: 1.5rem; }
   .related__title { margin-bottom: var(--s-6); }
 }
+
+/* ---------- Flowcharts inside guides (scripts/flows.py). Cream on Warm Ink, amber only for the step a person decides. ---------- */
+.flow { margin: var(--s-7) 0; }
+.flow svg { display: block; width: 100%; height: auto; overflow: visible; }
+.flow .flow__narrow { display: none; max-width: 22rem; }
+@media (max-width: 640px) { .flow .flow__wide { display: none; } .flow .flow__narrow { display: block; } }
+.flow figcaption { margin-top: 1rem; font-size: var(--t-small, .875rem); line-height: 1.5; color: rgba(250, 248, 243, .56); max-width: 60ch; }
+.flow__legend { display: block; margin-top: .25rem; color: rgba(228, 164, 60, .8); }
+.fl-box { fill: rgba(250, 248, 243, .035); stroke: rgba(250, 248, 243, .22); stroke-width: 1.2; }
+.fl-box.source { stroke-dasharray: 5 4; }
+.fl-box.out { fill: rgba(250, 248, 243, .085); stroke: rgba(250, 248, 243, .34); }
+.fl-box.human { fill: rgba(228, 164, 60, .09); stroke: #e4a43c; }
+.fl-label { fill: rgba(250, 248, 243, .92); font-family: var(--font); font-size: 14.5px; font-weight: 560; }
+.fl-note { fill: rgba(250, 248, 243, .56); font-family: var(--font); font-size: 12px; font-weight: 450; }
+.fl-elabel { fill: rgba(250, 248, 243, .56); font-family: var(--font); font-size: 11.5px; }
+.fl-edge { fill: none; stroke: rgba(250, 248, 243, .4); stroke-width: 1.3; stroke-linejoin: round; }
+.fl-head { fill: none; stroke: rgba(250, 248, 243, .55); stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
