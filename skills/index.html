@@ -876,12 +876,12 @@
           "name": "What is an AI agent skill?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An AI agent skill is a reusable SKILL.md file that gives a compatible agent specialised instructions, workflows, and quality checks for a defined job."
+            "text": "An AI agent skill is a reusable SKILL.md file that gives a compatible agent specialised instructions, workflows, references, and quality checks for a defined job."
           }
         },
         {
           "@type": "Question",
-          "name": "Who builds the skills in this library?",
+          "name": "Who builds these skills?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sixteen skills are built and maintained by Amber Lan at Amber Lan. Forty-one are growth playbooks by Iris Wei of Gingiris, fifty are marketing skills by Corey Haines, seventeen are social media skills by Charlie Hills, and two are editing skills: Humanizer by Siqi Chen and 说人话 (Shuorenhua) by MrGeDiao. All the curated ones are MIT licensed and install from their authors' own repositories. Every entry names its author."
@@ -892,12 +892,20 @@
           "name": "Can I inspect a skill before installing it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Every skill in the Amber Lan library links directly to its public source on GitHub."
+            "text": "Yes. Every entry links directly to its public source on GitHub. Read the instructions, dependencies, and scripts before you add it to an agent."
           }
         },
         {
           "@type": "Question",
-          "name": "Are all Amber Lan skills portable?",
+          "name": "Will these work in every AI agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They use the SKILL.md format. Exact installation and tool support depend on the agent and CLI you use. The GEO suite is currently documented for Claude Code."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are all listed skills equally portable?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Portability varies. Amber Lan's research and audit skills are portable and self-contained. The GEO suite and Latticework brief are designed to be installed. The content engine depends on its documented brand files and local workflow. The Gingiris playbooks are self-contained SKILL.md files installed from their own repositories."
