@@ -1,0 +1,93 @@
+{
+ "common-pattern": {
+  "caption": {
+   "en": "Every example follows the same pattern. Whatever the job, a named person approves anything that reaches a customer or moves money before it goes out, and one number then decides whether the job continues.",
+   "zh": "每个案例都遵循同一个模式。无论哪项工作，凡是触达客户或涉及资金的内容，都要先由一位指定的人审批再发出；之后由一个数字决定这项工作是否继续。"
+  },
+  "cols": 3,
+  "nodes": [
+   {
+    "id": "positioning",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "label": {
+     "en": "Positioning file",
+     "zh": "定位文件"
+    },
+    "note": {
+     "en": "the other nine read it",
+     "zh": "其他九个案例都以它为依据"
+    }
+   },
+   {
+    "id": "draft",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "AI system drafts",
+     "zh": "AI 系统起草"
+    },
+    "note": {
+     "en": "one job, every week",
+     "zh": "一项工作，每周运行"
+    }
+   },
+   {
+    "id": "approve",
+    "col": 2,
+    "row": 0,
+    "kind": "human",
+    "label": {
+     "en": "Named person approves",
+     "zh": "指定的人审批"
+    },
+    "note": {
+     "en": "anything reaching customers or money",
+     "zh": "凡是触达客户或涉及资金的内容"
+    }
+   },
+   {
+    "id": "ships",
+    "col": 2,
+    "row": 1,
+    "label": {
+     "en": "Work goes out",
+     "zh": "内容发出"
+    }
+   },
+   {
+    "id": "number",
+    "col": 1,
+    "row": 1,
+    "kind": "out",
+    "label": {
+     "en": "One number",
+     "zh": "一个数字"
+    },
+    "note": {
+     "en": "decides if the job continues",
+     "zh": "决定这项工作是否继续"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "positioning",
+    "draft"
+   ],
+   [
+    "draft",
+    "approve"
+   ],
+   [
+    "approve",
+    "ships"
+   ],
+   [
+    "ships",
+    "number"
+   ]
+  ]
+ }
+}

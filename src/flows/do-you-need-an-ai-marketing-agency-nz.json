@@ -1,0 +1,94 @@
+{
+  "five-checks": {
+    "caption": {
+      "en": "All five checks fit in one meeting. An agency with real systems can show each one on screen within minutes, and a label usually leads back to a capability deck.",
+      "zh": "五项检查一次会议就能做完。有真实系统的机构，几分钟内就能在屏幕上逐项展示；只有标签的机构，通常会拿出一份能力介绍材料。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "run",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Show me it running",
+          "zh": "给我看它在运行"
+        },
+        "note": {
+          "en": "what it read, made, who approved",
+          "zh": "读了什么、产出什么、谁批准"
+        }
+      },
+      {
+        "id": "price",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Show me the pricing logic",
+          "zh": "给我看定价逻辑"
+        },
+        "note": {
+          "en": "output and scope, or hours",
+          "zh": "按产出和范围，还是按工时"
+        }
+      },
+      {
+        "id": "human",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Show me where the human sits",
+          "zh": "给我看人在哪个环节"
+        },
+        "note": {
+          "en": "approval before publishing or spend",
+          "zh": "发布和花费之前要有人批准"
+        }
+      },
+      {
+        "id": "keep",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Show me what I keep",
+          "zh": "给我看我能留下什么"
+        },
+        "note": {
+          "en": "everything on your accounts",
+          "zh": "一切都在你的账户里"
+        }
+      },
+      {
+        "id": "report",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Show me the report",
+          "zh": "给我看报告"
+        },
+        "note": {
+          "en": "enquiries, sources, cost per enquiry",
+          "zh": "咨询量、来源和单次咨询成本"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "run",
+        "price"
+      ],
+      [
+        "price",
+        "human"
+      ],
+      [
+        "human",
+        "keep"
+      ],
+      [
+        "keep",
+        "report"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+ "offshore-test": {
+  "caption": {
+   "en": "Two tests for the same arrangement. In New Zealand the question is whether the vendor uses your data for its own purposes, and in Australia it is whether a binding contract keeps you in effective control.",
+   "zh": "同一种安排，两套检验。在新西兰，关键是供应商是否把你的数据用于它自己的目的；在澳大利亚，关键是有约束力的合同能否让你保持有效控制。"
+  },
+  "cols": 3,
+  "nodes": [
+   {
+    "id": "data",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "span": 4,
+    "label": {
+     "en": "Data processed offshore",
+     "zh": "数据在海外处理"
+    },
+    "note": {
+     "en": "most AI models run abroad",
+     "zh": "大多数 AI 模型在境外运行"
+    }
+   },
+   {
+    "id": "nz",
+    "col": 1,
+    "row": 0,
+    "span": 2,
+    "label": {
+     "en": "New Zealand test",
+     "zh": "新西兰的检验"
+    },
+    "note": {
+     "en": "does the vendor use it for itself?",
+     "zh": "供应商是否用于自身目的？"
+    }
+   },
+   {
+    "id": "nzno",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Not a disclosure",
+     "zh": "不构成披露"
+    },
+    "note": {
+     "en": "processing only for you",
+     "zh": "只替你处理"
+    }
+   },
+   {
+    "id": "nzyes",
+    "col": 2,
+    "row": 1,
+    "label": {
+     "en": "IPP 12 applies",
+     "zh": "适用 IPP 12"
+    },
+    "note": {
+     "en": "comparable safeguards or authorisation",
+     "zh": "需要相当的保护或当事人授权"
+    }
+   },
+   {
+    "id": "au",
+    "col": 1,
+    "row": 2,
+    "span": 2,
+    "label": {
+     "en": "Australia test",
+     "zh": "澳大利亚的检验"
+    },
+    "note": {
+     "en": "binding contract, effective control?",
+     "zh": "有约束力的合同，保持有效控制？"
+    }
+   },
+   {
+    "id": "auyes",
+    "col": 2,
+    "row": 2,
+    "label": {
+     "en": "Counts as a use",
+     "zh": "算作使用"
+    },
+    "note": {
+     "en": "under APP 8",
+     "zh": "依据 APP 8"
+    }
+   },
+   {
+    "id": "auno",
+    "col": 2,
+    "row": 3,
+    "label": {
+     "en": "A disclosure",
+     "zh": "构成披露"
+    },
+    "note": {
+     "en": "you answer for their breaches",
+     "zh": "你为接收方的违规负责"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "data",
+    "nz"
+   ],
+   [
+    "data",
+    "au"
+   ],
+   [
+    "nz",
+    "nzno",
+    {
+     "en": "no",
+     "zh": "否"
+    }
+   ],
+   [
+    "nz",
+    "nzyes",
+    {
+     "en": "yes",
+     "zh": "是"
+    }
+   ],
+   [
+    "au",
+    "auyes",
+    {
+     "en": "yes",
+     "zh": "是"
+    }
+   ],
+   [
+    "au",
+    "auno",
+    {
+     "en": "no",
+     "zh": "否"
+    }
+   ]
+  ]
+ }
+}

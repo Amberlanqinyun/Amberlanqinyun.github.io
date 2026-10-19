@@ -1,0 +1,14 @@
+{
+  "choose-model": {
+    "caption": {"en": "Match the model to the shape of the work. Budget sets the floor, and below about NZD 1,000 a month outside help rarely has room to work.", "zh": "按工作的形态选模式。预算决定下限：每月低于 NZD 1,000 左右时，外部帮助很少有施展的空间。"},
+    "cols": 2,
+    "nodes": [
+      {"id": "work", "col": 0, "row": 0, "span": 4, "kind": "source", "label": {"en": "The work you have", "zh": "你手上的工作"}, "note": {"en": "and the budget behind it", "zh": "以及可用的预算"}},
+      {"id": "diy", "col": 1, "row": 0, "label": {"en": "Do it yourself", "zh": "借助工具自己做"}, "note": {"en": "under about NZD 1,000 a month", "zh": "每月预算低于 NZD 1,000 左右"}},
+      {"id": "free", "col": 1, "row": 1, "label": {"en": "Freelancer", "zh": "自由职业者"}, "note": {"en": "a defined job with an end point", "zh": "有终点的明确工作"}},
+      {"id": "agency", "col": 1, "row": 2, "label": {"en": "Agency", "zh": "代理机构"}, "note": {"en": "several channels to coordinate", "zh": "需要协调的多个渠道"}},
+      {"id": "hire", "col": 1, "row": 3, "label": {"en": "In-house hire", "zh": "内部招聘"}, "note": {"en": "steady weekly work, and a manager", "zh": "稳定的每周工作量，且有人管理"}}
+    ],
+    "edges": [["work", "diy"], ["work", "free"], ["work", "agency"], ["work", "hire"]]
+  }
+}

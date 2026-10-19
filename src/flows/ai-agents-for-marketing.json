@@ -1,0 +1,25 @@
+{
+  "first-agent": {
+    "caption": {"en": "Every agent reads the positioning brief, so the brief comes first. The gap that costs the most picks the first agent, and measurement goes in before the second month so that agent can be judged.", "zh": "每个智能体都会先读定位简报，所以简报最先写。损失最大的缺口决定第一个智能体；数据衡量要在第二个月之前接好，这样才能评估它。"},
+    "cols": 3,
+    "nodes": [
+      {"id": "brief", "col": 0, "row": 0, "span": 3, "label": {"en": "Positioning brief", "zh": "定位简报"}, "note": {"en": "who you sell to, what proves it", "zh": "你卖给谁，用什么证明"}},
+      {"id": "search", "col": 1, "row": 0, "label": {"en": "Search agent", "zh": "搜索智能体"}, "note": {"en": "buyers search, you rarely appear", "zh": "买家会搜索，你很少出现"}},
+      {"id": "outbound", "col": 1, "row": 1, "label": {"en": "Outbound agent", "zh": "外联智能体"}, "note": {"en": "named buyers, referral pipeline", "zh": "具名客户，靠转介绍"}},
+      {"id": "conversion", "col": 1, "row": 2, "label": {"en": "Conversion agent", "zh": "转化智能体"}, "note": {"en": "traffic without enquiries", "zh": "有流量却没有咨询"}},
+      {"id": "measure", "col": 2, "row": 0, "span": 3, "label": {"en": "Measurement", "zh": "数据衡量"}, "note": {"en": "before the second month", "zh": "在第二个月之前接好"}}
+    ],
+    "edges": [["brief", "search"], ["brief", "outbound"], ["brief", "conversion"], ["search", "measure"], ["outbound", "measure"], ["conversion", "measure"]]
+  },
+  "weekly-loop": {
+    "caption": {"en": "A named person reviews the week's work in one sitting. Approved work ships, and the reasons for any rejection go into the brief for the next cycle.", "zh": "一位指定的人集中一次审核本周的工作。批准的内容上线，退回的理由写进简报，进入下一轮循环。"},
+    "cols": 2,
+    "nodes": [
+      {"id": "read", "col": 0, "row": 0, "label": {"en": "Read and plan", "zh": "读取并起草计划"}, "note": {"en": "Monday: last week's numbers and notes", "zh": "周一：上周的数据和审核意见"}},
+      {"id": "produce", "col": 1, "row": 0, "label": {"en": "Produce the work", "zh": "产出本周工作"}, "note": {"en": "Tuesday to Wednesday", "zh": "周二到周三"}},
+      {"id": "review", "col": 1, "row": 1, "kind": "human", "label": {"en": "Review in one sitting", "zh": "集中一次审核"}, "note": {"en": "Thursday: approve or reject", "zh": "周四：批准或附理由退回"}},
+      {"id": "ship", "col": 0, "row": 1, "kind": "out", "label": {"en": "Approved work ships", "zh": "批准的内容上线"}, "note": {"en": "Friday: reasons go into the brief", "zh": "周五：退回理由写进简报"}}
+    ],
+    "edges": [["read", "produce"], ["produce", "review"], ["review", "ship"], ["ship", "read", {"en": "next cycle", "zh": "下一轮"}]]
+  }
+}

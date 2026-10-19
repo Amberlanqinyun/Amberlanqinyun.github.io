@@ -1,0 +1,120 @@
+{
+  "choose": {
+    "caption": {
+      "en": "Four plain answers narrow the field to one or two options. Cost per enquiry decides between them, first on estimates and then on three months of real numbers.",
+      "zh": "四个直白的回答，就能把选择缩小到一两个。最后由单条咨询成本来定：先按估算比较，三个月后再用真实数字重算。"
+    },
+    "cols": 4,
+    "nodes": [
+      {
+        "id": "hours",
+        "col": 0,
+        "row": 0,
+        "kind": "source",
+        "label": {
+          "en": "Hours you can give",
+          "zh": "每周可用的时间"
+        }
+      },
+      {
+        "id": "channels",
+        "col": 0,
+        "row": 1,
+        "kind": "source",
+        "label": {
+          "en": "Channels that bring customers",
+          "zh": "带来客户的渠道"
+        }
+      },
+      {
+        "id": "reviewer",
+        "col": 0,
+        "row": 2,
+        "kind": "source",
+        "label": {
+          "en": "Someone to review work",
+          "zh": "有没有人能审核"
+        }
+      },
+      {
+        "id": "budget",
+        "col": 0,
+        "row": 3,
+        "kind": "source",
+        "label": {
+          "en": "Budget held six months",
+          "zh": "能维持六个月的预算"
+        }
+      },
+      {
+        "id": "shortlist",
+        "col": 1,
+        "row": 0,
+        "span": 4,
+        "label": {
+          "en": "Shortlist one or two",
+          "zh": "选出一两个"
+        },
+        "note": {
+          "en": "from the options table",
+          "zh": "从对比表中挑选"
+        }
+      },
+      {
+        "id": "cpe",
+        "col": 2,
+        "row": 0,
+        "span": 4,
+        "label": {
+          "en": "Compare cost per enquiry",
+          "zh": "按单条咨询成本比较"
+        },
+        "note": {
+          "en": "total cost, your hours included",
+          "zh": "总成本，含你的时间"
+        }
+      },
+      {
+        "id": "keep",
+        "col": 3,
+        "row": 0,
+        "span": 4,
+        "kind": "out",
+        "label": {
+          "en": "Keep the winner",
+          "zh": "留下胜出的选择"
+        },
+        "note": {
+          "en": "recalculated after three months",
+          "zh": "三个月后重新计算"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "hours",
+        "shortlist"
+      ],
+      [
+        "channels",
+        "shortlist"
+      ],
+      [
+        "reviewer",
+        "shortlist"
+      ],
+      [
+        "budget",
+        "shortlist"
+      ],
+      [
+        "shortlist",
+        "cpe"
+      ],
+      [
+        "cpe",
+        "keep"
+      ]
+    ]
+  }
+}

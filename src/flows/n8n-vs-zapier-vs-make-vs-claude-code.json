@@ -1,0 +1,111 @@
+{
+  "tool-choice": {
+    "caption": {
+      "en": "The person who will own the tool decides the pick. When nobody has the hours to learn one, a consultant or a build with handover fills the gap.",
+      "zh": "由谁来负责这个工具，决定了选哪一个。如果没人有时间学，可以请顾问，或者请人搭建后交接。"
+    },
+    "cols": 2,
+    "nodes": [
+      {
+        "id": "owner",
+        "col": 0,
+        "row": 2,
+        "label": {
+          "en": "Who will own it?",
+          "zh": "谁来负责它？"
+        },
+        "note": {
+          "en": "match the tool to that person",
+          "zh": "按这个人来匹配工具"
+        }
+      },
+      {
+        "id": "zapier",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Zapier",
+          "zh": "Zapier"
+        },
+        "note": {
+          "en": "a non-technical owner or office manager",
+          "zh": "不懂技术的企业主或办公室经理"
+        }
+      },
+      {
+        "id": "make",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Make",
+          "zh": "Make"
+        },
+        "note": {
+          "en": "an operations person who likes building",
+          "zh": "喜欢动手搭建的运营人员"
+        }
+      },
+      {
+        "id": "n8n",
+        "col": 1,
+        "row": 2,
+        "label": {
+          "en": "n8n",
+          "zh": "n8n"
+        },
+        "note": {
+          "en": "a developer, or strict data needs",
+          "zh": "有开发人员，或数据要求严格"
+        }
+      },
+      {
+        "id": "claude",
+        "col": 1,
+        "row": 3,
+        "label": {
+          "en": "Claude Code",
+          "zh": "Claude Code"
+        },
+        "note": {
+          "en": "a marketer comfortable with files",
+          "zh": "习惯和文件打交道的营销人员"
+        }
+      },
+      {
+        "id": "help",
+        "col": 1,
+        "row": 4,
+        "label": {
+          "en": "A consultant or build",
+          "zh": "请顾问或搭建加交接"
+        },
+        "note": {
+          "en": "nobody has hours to learn one",
+          "zh": "没人有时间学这些工具"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "owner",
+        "zapier"
+      ],
+      [
+        "owner",
+        "make"
+      ],
+      [
+        "owner",
+        "n8n"
+      ],
+      [
+        "owner",
+        "claude"
+      ],
+      [
+        "owner",
+        "help"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "local-answers": {
+    "caption": {
+      "en": "Assistants build a local answer from web pages, map listings and reviews you can work on. The businesses named are the ones whose details they can find and confirm across several of those sources.",
+      "zh": "助手用你可以着手改进的网页、地图商家信息和客户评论来组织本地答案。被点名的，是那些能在多个来源中找到并核实信息的企业。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "web",
+        "col": 0,
+        "row": 0,
+        "kind": "source",
+        "label": {
+          "en": "Web pages",
+          "zh": "网页"
+        }
+      },
+      {
+        "id": "maps",
+        "col": 0,
+        "row": 1,
+        "kind": "source",
+        "label": {
+          "en": "Map listings",
+          "zh": "地图商家信息"
+        }
+      },
+      {
+        "id": "reviews",
+        "col": 0,
+        "row": 2,
+        "kind": "source",
+        "label": {
+          "en": "Reviews",
+          "zh": "客户评论"
+        }
+      },
+      {
+        "id": "match",
+        "col": 1,
+        "row": 0,
+        "span": 3,
+        "label": {
+          "en": "Assistant searches and matches",
+          "zh": "助手搜索并匹配"
+        },
+        "note": {
+          "en": "fits the request, close by",
+          "zh": "符合请求，离提问者近"
+        }
+      },
+      {
+        "id": "names",
+        "col": 2,
+        "row": 0,
+        "span": 3,
+        "kind": "out",
+        "label": {
+          "en": "A short list of names",
+          "zh": "一份简短名单"
+        },
+        "note": {
+          "en": "four or five, confirmed across sources",
+          "zh": "四五个，经多个来源核实"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "web",
+        "match"
+      ],
+      [
+        "maps",
+        "match"
+      ],
+      [
+        "reviews",
+        "match"
+      ],
+      [
+        "match",
+        "names"
+      ]
+    ]
+  },
+  "thirty-days": {
+    "caption": {
+      "en": "Each week builds on the one before: the profile first, then details that match everywhere, then pages that agree with both. The week four baseline is what each monthly check compares against.",
+      "zh": "每一周都建立在前一周的基础上：先是商家资料，再把各处信息统一，然后写出与两者一致的页面。第四周记录的基准数据，就是之后每月对比的起点。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "w1",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Week 1: Business Profile",
+          "zh": "第一周：商家资料"
+        },
+        "note": {
+          "en": "category, suburbs, review requests",
+          "zh": "类别、服务城区、评论邀请"
+        }
+      },
+      {
+        "id": "w2",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Week 2: matching details",
+          "zh": "第二周：统一企业信息"
+        },
+        "note": {
+          "en": "one NAP format, NZBN included",
+          "zh": "一种 NAP 格式，含 NZBN"
+        }
+      },
+      {
+        "id": "w3",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Week 3: service and area pages",
+          "zh": "第三周：服务页和区域页"
+        },
+        "note": {
+          "en": "answer first, NZD price ranges",
+          "zh": "先给答案，写明 NZD 价格区间"
+        }
+      },
+      {
+        "id": "w4",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Week 4: listings and baseline",
+          "zh": "第四周：目录和基准数据"
+        },
+        "note": {
+          "en": "directories, crawler access, five prompts",
+          "zh": "目录、爬虫权限、五个提示词"
+        }
+      },
+      {
+        "id": "weekly",
+        "col": 1,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Weekly upkeep",
+          "zh": "每周维护"
+        },
+        "note": {
+          "en": "about an hour a week",
+          "zh": "每周大约一小时"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "w1",
+        "w2"
+      ],
+      [
+        "w2",
+        "w3"
+      ],
+      [
+        "w3",
+        "w4"
+      ],
+      [
+        "w4",
+        "weekly"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+ "first-system": {
+  "caption": {
+   "en": "Pick the first system by where your next customer comes from. Each kind of business has its own starting point, and the last row fixes the leak before paying for more visibility.",
+   "zh": "按下一个客户从哪里来，选择第一套系统。每类企业都有自己的起点；最后一行是先补上漏洞，再花钱买更多曝光。"
+  },
+  "cols": 2,
+  "nodes": [
+   {
+    "id": "customer",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "span": 4,
+    "label": {
+     "en": "Your next customer",
+     "zh": "你的下一个客户"
+    },
+    "note": {
+     "en": "where they actually come from",
+     "zh": "实际从哪里来"
+    }
+   },
+   {
+    "id": "local",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "SEO and AI search",
+     "zh": "SEO 加 AI 搜索"
+    },
+    "note": {
+     "en": "local service business",
+     "zh": "本地服务型企业"
+    }
+   },
+   {
+    "id": "b2b",
+    "col": 1,
+    "row": 1,
+    "label": {
+     "en": "Outbound",
+     "zh": "主动外联"
+    },
+    "note": {
+     "en": "B2B with a defined buyer",
+     "zh": "有明确买家的 B2B 企业"
+    }
+   },
+   {
+    "id": "expert",
+    "col": 1,
+    "row": 2,
+    "label": {
+     "en": "Content engine",
+     "zh": "内容引擎"
+    },
+    "note": {
+     "en": "expertise business",
+     "zh": "专业知识型企业"
+    }
+   },
+   {
+    "id": "leak",
+    "col": 1,
+    "row": 3,
+    "label": {
+     "en": "Analytics and follow-up",
+     "zh": "数据分析和跟进"
+    },
+    "note": {
+     "en": "traffic that does not convert",
+     "zh": "有流量但转化不了"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "customer",
+    "local"
+   ],
+   [
+    "customer",
+    "b2b"
+   ],
+   [
+    "customer",
+    "expert"
+   ],
+   [
+    "customer",
+    "leak"
+   ]
+  ]
+ },
+ "starting-order": {
+  "caption": {
+   "en": "This is the order that compounds. Each stage builds on the one before it, and one page of numbers a month tells you which channel pays.",
+   "zh": "这是能让效果逐步叠加的顺序。每个阶段都建立在上一个阶段之上，每月一页数字会告诉你哪个渠道在带来回报。"
+  },
+  "cols": 4,
+  "nodes": [
+   {
+    "id": "stand",
+    "col": 0,
+    "row": 0,
+    "label": {
+     "en": "Find where you stand",
+     "zh": "弄清现在的位置"
+    },
+    "note": {
+     "en": "week 1",
+     "zh": "第 1 周"
+    }
+   },
+   {
+    "id": "basics",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Fix the basics",
+     "zh": "把基础修好"
+    },
+    "note": {
+     "en": "weeks 2 to 4",
+     "zh": "第 2 到 4 周"
+    }
+   },
+   {
+    "id": "cadence",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Build the cadence",
+     "zh": "建立节奏"
+    },
+    "note": {
+     "en": "month 2 and on",
+     "zh": "第 2 个月起"
+    }
+   },
+   {
+    "id": "numbers",
+    "col": 3,
+    "row": 0,
+    "kind": "out",
+    "label": {
+     "en": "One page of numbers",
+     "zh": "每月一页数字"
+    },
+    "note": {
+     "en": "shows which channel pays",
+     "zh": "看出哪个渠道带来回报"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "stand",
+    "basics"
+   ],
+   [
+    "basics",
+    "cadence"
+   ],
+   [
+    "cadence",
+    "numbers"
+   ]
+  ]
+ }
+}

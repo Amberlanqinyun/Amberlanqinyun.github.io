@@ -1,0 +1,111 @@
+{
+ "survey-gap": {
+  "caption": {
+   "en": "Both numbers are real because the surveys ask different questions. The official survey asks about the business as a whole, while the operator survey counts anyone using an AI tool.",
+   "zh": "两个数字都是真实的，因为两份调查问的问题不同。官方调查针对企业整体，经营者调查则把任何使用 AI 工具的情况都算在内。"
+  },
+  "cols": 3,
+  "nodes": [
+   {
+    "id": "abs",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "label": {
+     "en": "ABS official survey",
+     "zh": "ABS 官方调查"
+    },
+    "note": {
+     "en": "about the whole business",
+     "zh": "针对企业整体"
+    }
+   },
+   {
+    "id": "narrow",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Business-wide AI use",
+     "zh": "企业整体的 AI 使用"
+    },
+    "note": {
+     "en": "a narrow question",
+     "zh": "范围很窄的问题"
+    }
+   },
+   {
+    "id": "abs-result",
+    "col": 2,
+    "row": 0,
+    "kind": "out",
+    "label": {
+     "en": "About 11%",
+     "zh": "约 11%"
+    },
+    "note": {
+     "en": "small and micro, 2024-25",
+     "zh": "小微企业，2024-25 年度"
+    }
+   },
+   {
+    "id": "myob",
+    "col": 0,
+    "row": 1,
+    "kind": "source",
+    "label": {
+     "en": "MYOB Business Monitor",
+     "zh": "MYOB 商业监测报告"
+    },
+    "note": {
+     "en": "asks operators",
+     "zh": "询问经营者"
+    }
+   },
+   {
+    "id": "tool",
+    "col": 1,
+    "row": 1,
+    "label": {
+     "en": "Any AI tool use",
+     "zh": "任何 AI 工具使用"
+    },
+    "note": {
+     "en": "even a ChatGPT caption",
+     "zh": "连用 ChatGPT 起草配文也算"
+    }
+   },
+   {
+    "id": "myob-result",
+    "col": 2,
+    "row": 1,
+    "kind": "out",
+    "label": {
+     "en": "40%",
+     "zh": "40%"
+    },
+    "note": {
+     "en": "small and medium, April 2026",
+     "zh": "中小企业，2026年4月"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "abs",
+    "narrow"
+   ],
+   [
+    "narrow",
+    "abs-result"
+   ],
+   [
+    "myob",
+    "tool"
+   ],
+   [
+    "tool",
+    "myob-result"
+   ]
+  ]
+ }
+}

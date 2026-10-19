@@ -1,0 +1,14 @@
+{
+  "first-month": {
+    "caption": {"en": "One step a week, for a few hours on top of normal work. The month ends with a written decision about which jobs to keep.", "zh": "每周一步，在日常工作之外每周只需几个小时。一个月结束时形成一份书面决定，写明保留哪些工作。"},
+    "cols": 4,
+    "nodes": [
+      {"id": "inputs", "col": 0, "row": 0, "label": {"en": "Write the inputs", "zh": "写好输入"}, "note": {"en": "Week 1: positioning, voice, questions", "zh": "第 1 周：定位、语调、问题"}},
+      {"id": "handover", "col": 1, "row": 0, "label": {"en": "Hand over one job", "zh": "交出一项工作"}, "note": {"en": "Week 2: repeats weekly, easy to check", "zh": "第 2 周：重复且易检查"}},
+      {"id": "gate", "col": 2, "row": 0, "label": {"en": "Review gate, second job", "zh": "审核关卡和第二项工作"}, "note": {"en": "Week 3: a checklist and who runs it", "zh": "第 3 周：检查清单和执行人"}},
+      {"id": "decide", "col": 3, "row": 0, "kind": "human", "label": {"en": "Measure and decide", "zh": "衡量并决定"}, "note": {"en": "Week 4: hours, edits, errors", "zh": "第 4 周：工时、修改、错误"}},
+      {"id": "written", "col": 3, "row": 1, "kind": "out", "label": {"en": "A written decision", "zh": "一份书面决定"}, "note": {"en": "keep, drop, or flag for an agent", "zh": "保留、放弃，或记下交给智能体"}}
+    ],
+    "edges": [["inputs", "handover"], ["handover", "gate"], ["gate", "decide"], ["decide", "written"]]
+  }
+}

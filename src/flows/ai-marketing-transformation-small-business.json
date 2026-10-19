@@ -1,0 +1,172 @@
+{
+ "roadmap": {
+  "caption": {
+   "en": "Ninety days covers three monthly cycles. At day 90, two departments ship weekly while a third is in setup, and the numbers tell the owner which one to fund next.",
+   "zh": "90 天是三个月度周期。到第 90 天，两个部门每周交付、第三个在搭建中，数字会告诉企业主下一步该投入哪个部门。"
+  },
+  "cols": 4,
+  "nodes": [
+   {
+    "id": "foundation",
+    "col": 0,
+    "row": 0,
+    "label": {
+     "en": "Foundation",
+     "zh": "打基础"
+    },
+    "note": {
+     "en": "days 1 to 30, inputs only",
+     "zh": "第 1 到 30 天，只做输入"
+    }
+   },
+   {
+    "id": "installs",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "First two installs",
+     "zh": "部署前两个部门"
+    },
+    "note": {
+     "en": "days 31 to 60",
+     "zh": "第 31 到 60 天"
+    }
+   },
+   {
+    "id": "compound",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Compounding",
+     "zh": "让成果复利"
+    },
+    "note": {
+     "en": "days 61 to 90",
+     "zh": "第 61 到 90 天"
+    }
+   },
+   {
+    "id": "next",
+    "col": 3,
+    "row": 0,
+    "kind": "human",
+    "label": {
+     "en": "Owner picks next",
+     "zh": "企业主决定下一步"
+    },
+    "note": {
+     "en": "which department to fund",
+     "zh": "投入哪个部门"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "foundation",
+    "installs"
+   ],
+   [
+    "installs",
+    "compound"
+   ],
+   [
+    "compound",
+    "next"
+   ]
+  ]
+ },
+ "compound-loop": {
+  "caption": {
+   "en": "Each month's output feeds the next. Guides give outbound something to link to, and the objections in replies become the next guides.",
+   "zh": "每个月的产出都在为下个月提供素材。指南让主动外联有内容可链接，回复中的顾虑又成为下一批指南的选题。"
+  },
+  "cols": 3,
+  "nodes": [
+   {
+    "id": "search",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "label": {
+     "en": "Search data",
+     "zh": "搜索数据"
+    },
+    "note": {
+     "en": "names questions worth answering",
+     "zh": "指出值得回答的问题"
+    }
+   },
+   {
+    "id": "guides",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Published guides",
+     "zh": "已发布的指南"
+    }
+   },
+   {
+    "id": "outbound",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Outbound sequences",
+     "zh": "主动外联序列"
+    },
+    "note": {
+     "en": "each links to a guide",
+     "zh": "每条链接到一篇指南"
+    }
+   },
+   {
+    "id": "replies",
+    "col": 2,
+    "row": 1,
+    "label": {
+     "en": "Replies",
+     "zh": "外联回复"
+    },
+    "note": {
+     "en": "name objections",
+     "zh": "提出顾虑"
+    }
+   },
+   {
+    "id": "nextguides",
+    "col": 1,
+    "row": 1,
+    "kind": "out",
+    "label": {
+     "en": "The next guides",
+     "zh": "下一批指南"
+    },
+    "note": {
+     "en": "cheaper each month",
+     "zh": "每月成本更低"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "search",
+    "guides"
+   ],
+   [
+    "guides",
+    "outbound"
+   ],
+   [
+    "outbound",
+    "replies"
+   ],
+   [
+    "replies",
+    "nextguides"
+   ],
+   [
+    "nextguides",
+    "guides"
+   ]
+  ]
+ }
+}

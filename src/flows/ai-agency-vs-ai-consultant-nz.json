@@ -1,0 +1,14 @@
+{
+  "choose-provider": {
+    "caption": {"en": "Three of these call themselves an AI agency, so the job you need done decides which one fits. The fourth route keeps the systems and the skill inside your business.", "zh": "前三种都自称 AI 代理机构，所以选哪一种取决于你需要完成什么工作。第四种方式把系统和技能都留在企业里。"},
+    "cols": 2,
+    "nodes": [
+      {"id": "job", "col": 0, "row": 0, "span": 4, "kind": "source", "label": {"en": "The job you need done", "zh": "你需要完成的工作"}},
+      {"id": "marketing", "col": 1, "row": 0, "label": {"en": "AI marketing agency", "zh": "AI 营销代理机构"}, "note": {"en": "marketing run for you", "zh": "有人替你运营营销"}},
+      {"id": "automation", "col": 1, "row": 1, "label": {"en": "AI automation agency", "zh": "AI 自动化代理机构"}, "note": {"en": "one process that wastes hours", "zh": "某个流程浪费大量工时"}},
+      {"id": "consultant", "col": 1, "row": 2, "label": {"en": "AI consultant", "zh": "AI 顾问"}, "note": {"en": "a plan before you spend", "zh": "花钱之前先要一份计划"}},
+      {"id": "inhouse", "col": 1, "row": 3, "label": {"en": "In-house person plus engineer", "zh": "内部员工加外部工程师"}, "note": {"en": "someone on your team has time", "zh": "团队里有人有时间"}}
+    ],
+    "edges": [["job", "marketing"], ["job", "automation"], ["job", "consultant"], ["job", "inhouse"]]
+  }
+}

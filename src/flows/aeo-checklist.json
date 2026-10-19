@@ -1,0 +1,15 @@
+{
+  "week-order": {
+    "caption": {"en": "Each group depends on the one before it, since an engine cannot quote a page it cannot read. Access and facts take about a day between them, and the rest fill the week.", "zh": "每组任务都建立在前一组之上，因为 AI 引擎无法引用它读不到的页面。爬虫访问和基本信息加起来大约一天，其余几组填满这一周。"},
+    "cols": 3,
+    "nodes": [
+      {"id": "access", "col": 0, "row": 0, "label": {"en": "Access for AI crawlers", "zh": "AI 爬虫访问"}, "note": {"en": "Monday, items 1 to 4", "zh": "周一，第 1 至 4 项"}},
+      {"id": "facts", "col": 1, "row": 0, "label": {"en": "Facts about the business", "zh": "企业基本信息"}, "note": {"en": "Tuesday, items 5 to 8", "zh": "周二，第 5 至 8 项"}},
+      {"id": "pages", "col": 2, "row": 0, "label": {"en": "Pages that answer", "zh": "可直接作答的页面"}, "note": {"en": "Wednesday and Thursday", "zh": "周三和周四"}},
+      {"id": "proof", "col": 2, "row": 1, "label": {"en": "Proof and mentions", "zh": "证据与提及"}, "note": {"en": "Friday morning, then monthly", "zh": "周五上午，之后每月一次"}},
+      {"id": "schema", "col": 1, "row": 1, "label": {"en": "Structured data", "zh": "结构化数据"}, "note": {"en": "Friday afternoon", "zh": "周五下午"}},
+      {"id": "measure", "col": 0, "row": 1, "label": {"en": "Measurement", "zh": "效果衡量"}, "note": {"en": "Friday afternoon", "zh": "周五下午"}}
+    ],
+    "edges": [["access", "facts"], ["facts", "pages"], ["pages", "proof"], ["proof", "schema"], ["schema", "measure"]]
+  }
+}

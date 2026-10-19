@@ -1,0 +1,113 @@
+{
+ "choose-provider": {
+  "caption": {
+   "en": "Start from the job and let it choose the type, then compare names inside that type. A provider's working system and written scope tell you more than its place on a list.",
+   "zh": "从工作出发，由工作决定类型，再在同一类型里比较具体的服务商。服务商实际运行的系统和书面范围说明，比它在名单上的位置更能说明问题。"
+  },
+  "cols": 3,
+  "nodes": [
+   {
+    "id": "job",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "label": {
+     "en": "Name the job",
+     "zh": "明确要做的工作"
+    },
+    "note": {
+     "en": "the work you need done",
+     "zh": "你需要完成什么"
+    }
+   },
+   {
+    "id": "type",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Pick the type",
+     "zh": "选定类型"
+    },
+    "note": {
+     "en": "such as AI search or automation",
+     "zh": "比如 AI 搜索或自动化"
+    }
+   },
+   {
+    "id": "compare",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Compare two or three",
+     "zh": "比较两三家"
+    },
+    "note": {
+     "en": "names inside that type",
+     "zh": "在同一类型里"
+    }
+   },
+   {
+    "id": "running",
+    "col": 2,
+    "row": 1,
+    "label": {
+     "en": "See a system running",
+     "zh": "看系统实际运行"
+    },
+    "note": {
+     "en": "with its human review step",
+     "zh": "包括由人审核的环节"
+    }
+   },
+   {
+    "id": "yours",
+    "col": 1,
+    "row": 1,
+    "label": {
+     "en": "Ask what stays yours",
+     "zh": "问清什么归你"
+    },
+    "note": {
+     "en": "accounts, agents and data",
+     "zh": "账户、智能体和数据"
+    }
+   },
+   {
+    "id": "scope",
+    "col": 0,
+    "row": 1,
+    "kind": "out",
+    "label": {
+     "en": "Scope and price in writing",
+     "zh": "书面范围说明和价格"
+    },
+    "note": {
+     "en": "before you sign",
+     "zh": "签约之前"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "job",
+    "type"
+   ],
+   [
+    "type",
+    "compare"
+   ],
+   [
+    "compare",
+    "running"
+   ],
+   [
+    "running",
+    "yours"
+   ],
+   [
+    "yours",
+    "scope"
+   ]
+  ]
+ }
+}

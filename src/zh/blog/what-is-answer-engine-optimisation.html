@@ -95,6 +95,7 @@
 
 <h2>AI 答案引擎如何决定引用谁？</h2>
 <p>大多数答案引擎会先搜索，再写作。它们把问题拆成更细的查询，从索引中抓取页面，提取回答每一部分的段落，然后写出回答，并引用其中几个来源。一个页面能被引用，是因为引擎能访问它，它直白地回答了那个细分查询，而且来源看起来可信。</p>
+<figure class="flow" data-flow="citation-path"></figure>
 <p>这个拆分步骤通常被称为查询扇出（query fan-out）。问一句“在陶朗加（Tauranga）换热水器该找谁？”，引擎可能会分别搜索更换费用、陶朗加的持牌水管工，以及它找到的那些名字的评价。一个价格页面、一个陶朗加服务页面，再加上近期评价，就能在每一步都给它提供素材。</p>
 <p>在 Google 排名靠前有帮助，但并不决定结果。<a class="go" href="https://ahrefs.com/blog/ai-search-overlap/" target="_blank" rel="noopener">Ahrefs 在 2025 年对 15,000 条提示词的分析发现，ChatGPT、Gemini 和 Copilot 引用的 URL 中，只有 12% 在同一提示词的 Google 搜索中排进前 10</a>（仅看 ChatGPT 为 8%）。在 Google 内部，<a class="go" href="https://ahrefs.com/blog/ai-overview-citations-top-10/" target="_blank" rel="noopener">Ahrefs 2026年3月的更新覆盖了 863,000 个关键词结果，发现 AI 概览引用的页面中，37.9% 在该关键词下排名前 10，31.0% 排在前 100 名之外</a>。Ahrefs 本身销售 SEO 软件，所以请把这些看作一家供应商的数据。不过方向很清楚：引擎引用的段落，远远超出了第一页的范围。</p>
 <p>你自己网站之外的口碑分量很重。<a class="go" href="https://ahrefs.com/blog/ai-overview-brand-correlation/" target="_blank" rel="noopener">Ahrefs 对 75,000 个品牌的相关性研究发现，品牌在网络上被提及与 AI 概览可见度的关联最强（0.664），远高于反向链接（0.218）</a>。相关性证据弱于实验证据，但它符合引擎的行为方式：它们很看重别人怎么评价一家企业。</p>
@@ -134,6 +135,7 @@
 
 <h2>小企业这个月能为 AEO 做些什么？</h2>
 <p>小企业无需开发人员，按顺序处理五个方面，就能完成 AEO 的大部分工作：让 AI 爬虫进来，写清企业的事实信息，建立回答真实问题的页面，在外部积累证明和提及，最后添加结构化数据。每一步都以前一步为基础。</p>
+<figure class="flow" data-flow="aeo-steps"></figure>
 <ol>
 <li><b>让爬虫进来。</b>检查 robots.txt 是否允许 OAI-SearchBot、PerplexityBot、Googlebot 和 Bingbot，并确认你的主机服务商没有屏蔽 AI 爬虫。Flow AI 的免费 <a class="go" href="/templates/ai-crawler-check">AI 爬虫访问检查</a>会对照 robots.txt、页面标签和服务器响应头，测试 14 种 <a class="go" href="/glossary/#ai-crawler">AI 爬虫</a>。</li>
 <li><b>写清事实。</b>用一个页面写明名称、服务、区域、营业时间、资质和常见价格，并与 Google 商家资料、Bing Places 和各类目录上的信息完全一致。</li>

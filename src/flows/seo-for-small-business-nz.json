@@ -1,0 +1,95 @@
+{
+  "first-month": {
+    "caption": {
+      "en": "The heavy lifting happens in the first month, at three to five hours a week. The baseline from week four is what every later month is measured against.",
+      "zh": "主要工作集中在第一个月，每周 3 到 5 小时。第 4 周记录的基线，是之后每个月对照的标准。"
+    },
+    "cols": 4,
+    "nodes": [
+      {
+        "id": "w1",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Accounts and checks",
+          "zh": "账户和检查"
+        },
+        "note": {
+          "en": "week 1: Search Console, Bing",
+          "zh": "第 1 周：Search Console 和 Bing"
+        }
+      },
+      {
+        "id": "w2",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Profile and reviews",
+          "zh": "商家资料和评论"
+        },
+        "note": {
+          "en": "week 2: review requests go out",
+          "zh": "第 2 周：发出评论邀请"
+        }
+      },
+      {
+        "id": "w3",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Service pages",
+          "zh": "服务页"
+        },
+        "note": {
+          "en": "week 3: your top two or three",
+          "zh": "第 3 周：最重要的两三项"
+        }
+      },
+      {
+        "id": "w4",
+        "col": 3,
+        "row": 0,
+        "label": {
+          "en": "Locations and baseline",
+          "zh": "地区页和基线"
+        },
+        "note": {
+          "en": "week 4: record the numbers",
+          "zh": "第 4 周：记录基线数字"
+        }
+      },
+      {
+        "id": "after",
+        "col": 3,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "About an hour a week",
+          "zh": "每周约一小时"
+        },
+        "note": {
+          "en": "from month two, against the baseline",
+          "zh": "从第二个月起，对照基线"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "w1",
+        "w2"
+      ],
+      [
+        "w2",
+        "w3"
+      ],
+      [
+        "w3",
+        "w4"
+      ],
+      [
+        "w4",
+        "after"
+      ]
+    ]
+  }
+}

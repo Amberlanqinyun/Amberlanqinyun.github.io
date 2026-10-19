@@ -1,0 +1,112 @@
+{
+  "hiring-path": {
+    "caption": {
+      "en": "Every candidate answers the same questions and is scored on the same table, which keeps the comparison fair. Ownership and the handover are settled in writing before any build starts.",
+      "zh": "每位候选人回答同样的问题，用同一张表打分，比较才公平。所有权和交接要在搭建开始之前写进书面文件。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "ask",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Same eight questions",
+          "zh": "同样的八个问题"
+        },
+        "note": {
+          "en": "every candidate, in writing",
+          "zh": "问每位候选人，尽量书面"
+        }
+      },
+      {
+        "id": "flags",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Check red flags",
+          "zh": "检查危险信号"
+        },
+        "note": {
+          "en": "reasons to look elsewhere",
+          "zh": "另找他人的理由"
+        }
+      },
+      {
+        "id": "score",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Score side by side",
+          "zh": "并排打分"
+        },
+        "note": {
+          "en": "same weighted table for all",
+          "zh": "所有人用同一张加权表"
+        }
+      },
+      {
+        "id": "price",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Compare price last",
+          "zh": "最后比较价格"
+        },
+        "note": {
+          "en": "only for those who pass",
+          "zh": "只比较过关的候选人"
+        }
+      },
+      {
+        "id": "contract",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Put ownership in writing",
+          "zh": "把所有权写进合同"
+        },
+        "note": {
+          "en": "code, accounts, data in your name",
+          "zh": "代码、账户、数据归你"
+        }
+      },
+      {
+        "id": "handover",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Agree the handover",
+          "zh": "约定交接"
+        },
+        "note": {
+          "en": "before the build begins",
+          "zh": "在搭建开始之前"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "ask",
+        "flags"
+      ],
+      [
+        "flags",
+        "score"
+      ],
+      [
+        "score",
+        "price"
+      ],
+      [
+        "price",
+        "contract"
+      ],
+      [
+        "contract",
+        "handover"
+      ]
+    ]
+  }
+}

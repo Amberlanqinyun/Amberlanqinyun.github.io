@@ -1,0 +1,229 @@
+{
+  "repurpose": {
+    "caption": {
+      "en": "One recorded answer supplies every format. The long version is written first, and each shorter piece is cut from it with its own edit, so none of them needs a fresh idea.",
+      "zh": "一段录下来的回答，足够供应所有形式。先写完整版本，再从中拆出每一种短内容，各自单独修改，所以哪一种都不需要新的点子。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "capture",
+        "col": 0,
+        "row": 0,
+        "span": 5,
+        "kind": "source",
+        "label": {
+          "en": "Capture the source",
+          "zh": "记录源内容"
+        },
+        "note": {
+          "en": "15 to 20 minute recording or notes",
+          "zh": "15 到 20 分钟录音或笔记"
+        }
+      },
+      {
+        "id": "long",
+        "col": 1,
+        "row": 0,
+        "span": 5,
+        "label": {
+          "en": "Write the long version",
+          "zh": "写出完整版本"
+        },
+        "note": {
+          "en": "answer in the first paragraph",
+          "zh": "第一段直接给出答案"
+        }
+      },
+      {
+        "id": "posts",
+        "col": 2,
+        "row": 0,
+        "kind": "out",
+        "label": {
+          "en": "Social posts",
+          "zh": "社交媒体帖子"
+        },
+        "note": {
+          "en": "four or five",
+          "zh": "四五条"
+        }
+      },
+      {
+        "id": "email",
+        "col": 2,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Short email",
+          "zh": "简短邮件"
+        },
+        "note": {
+          "en": "links to the full piece",
+          "zh": "附完整内容链接"
+        }
+      },
+      {
+        "id": "faq",
+        "col": 2,
+        "row": 2,
+        "kind": "out",
+        "label": {
+          "en": "FAQ entries",
+          "zh": "常见问题"
+        },
+        "note": {
+          "en": "two or three on a service page",
+          "zh": "服务页面上加两三组"
+        }
+      },
+      {
+        "id": "video",
+        "col": 2,
+        "row": 3,
+        "kind": "out",
+        "label": {
+          "en": "Short video",
+          "zh": "短视频"
+        },
+        "note": {
+          "en": "30 to 60 seconds",
+          "zh": "30 到 60 秒"
+        }
+      },
+      {
+        "id": "gbp",
+        "col": 2,
+        "row": 4,
+        "kind": "out",
+        "label": {
+          "en": "Business Profile post",
+          "zh": "Google 商家资料动态"
+        },
+        "note": {
+          "en": "short version with a link",
+          "zh": "附链接的简短版本"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "capture",
+        "long"
+      ],
+      [
+        "long",
+        "posts"
+      ],
+      [
+        "long",
+        "email"
+      ],
+      [
+        "long",
+        "faq"
+      ],
+      [
+        "long",
+        "video"
+      ],
+      [
+        "long",
+        "gbp"
+      ]
+    ]
+  },
+  "weekly-engine": {
+    "caption": {
+      "en": "AI does the drafting on Wednesday. Nothing is scheduled until the owner has checked every claim and price on Thursday, and that review step is where quality is won.",
+      "zh": "周三的起草交给 AI。周四企业主核对完每一个论断和价格之前，什么都不会排期发布；质量正是在这道审核环节上决定的。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "mon",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Monday: pick the question",
+          "zh": "周一：选定问题"
+        },
+        "note": {
+          "en": "from the shared list",
+          "zh": "从共享清单中选"
+        }
+      },
+      {
+        "id": "tue",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Tuesday: source notes",
+          "zh": "周二：写源内容笔记"
+        },
+        "note": {
+          "en": "30 to 45 minutes",
+          "zh": "30 到 45 分钟"
+        }
+      },
+      {
+        "id": "wed",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Wednesday: AI drafts",
+          "zh": "周三：AI 起草"
+        },
+        "note": {
+          "en": "long piece and formats",
+          "zh": "长内容和衍生形式"
+        }
+      },
+      {
+        "id": "thu",
+        "col": 2,
+        "row": 1,
+        "kind": "human",
+        "label": {
+          "en": "Thursday: edit and approve",
+          "zh": "周四：修改并批准"
+        },
+        "note": {
+          "en": "check every claim and price",
+          "zh": "核对每个论断和价格"
+        }
+      },
+      {
+        "id": "fri",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Friday: replies and enquiries",
+          "zh": "周五：回复并记录咨询"
+        },
+        "note": {
+          "en": "log what mentions the content",
+          "zh": "记下提到内容的咨询"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "mon",
+        "tue"
+      ],
+      [
+        "tue",
+        "wed"
+      ],
+      [
+        "wed",
+        "thu"
+      ],
+      [
+        "thu",
+        "fri"
+      ]
+    ]
+  }
+}

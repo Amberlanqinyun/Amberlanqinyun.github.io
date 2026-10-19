@@ -1,0 +1,15 @@
+{
+  "apply-steps": {
+    "caption": {"en": "The growth advisor judges whether the pilot fits before you apply. Nothing starts until funding is approved, because work done before approval is not funded.", "zh": "申请之前，由增长顾问判断试点计划是否适合你。资助批准之前不要开始任何工作，因为批准前完成的工作不会获得资助。"},
+    "cols": 3,
+    "nodes": [
+      {"id": "register", "col": 0, "row": 0, "label": {"en": "Register with the RBPN", "zh": "在 RBPN 注册"}, "note": {"en": "link on business.govt.nz", "zh": "business.govt.nz 上的链接"}},
+      {"id": "advisor", "col": 1, "row": 0, "kind": "human", "label": {"en": "Growth advisor checks fit", "zh": "增长顾问确认是否合适"}, "note": {"en": "the jobs you want AI to do", "zh": "你希望 AI 承担的工作"}},
+      {"id": "apply", "col": 2, "row": 0, "label": {"en": "Apply and agree scope", "zh": "提交申请，确定范围"}, "note": {"en": "if the pilot fits", "zh": "如果试点计划合适"}},
+      {"id": "approval", "col": 2, "row": 1, "label": {"en": "Funding approval", "zh": "资助获批"}, "note": {"en": "no work starts before this", "zh": "在此之前不开始任何工作"}},
+      {"id": "roadmap", "col": 1, "row": 1, "label": {"en": "AI roadmap", "zh": "AI 路线图"}, "note": {"en": "stage one, planning", "zh": "第一阶段：规划"}},
+      {"id": "implement", "col": 0, "row": 1, "kind": "out", "label": {"en": "Implementation", "zh": "落地实施"}, "note": {"en": "stage two, into practice", "zh": "第二阶段：落到实处"}}
+    ],
+    "edges": [["register", "advisor"], ["advisor", "apply"], ["apply", "approval"], ["approval", "roadmap"], ["roadmap", "implement"]]
+  }
+}

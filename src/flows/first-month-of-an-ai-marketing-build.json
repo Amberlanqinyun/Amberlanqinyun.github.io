@@ -1,0 +1,189 @@
+{
+  "month": {
+    "caption": {
+      "en": "Each week ends with one output: a scope, a working agent, a measured run and a handover. The fourth week also chooses the next job, so the build continues from evidence.",
+      "zh": "每周结束时都有一项产出：范围说明、能运转的智能体、一次有衡量的运行，以及交接。第四周还会选定下一项工作，让搭建依据实际结果继续推进。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "w1",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Week 1: scope and brief",
+          "zh": "第一周：范围与简报"
+        },
+        "note": {
+          "en": "written, approved before building",
+          "zh": "书面成稿，搭建前批准"
+        }
+      },
+      {
+        "id": "w2",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Week 2: first agent",
+          "zh": "第二周：第一个智能体"
+        },
+        "note": {
+          "en": "a person approves its output",
+          "zh": "由专人审批产出"
+        }
+      },
+      {
+        "id": "w3",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Week 3: run and measure",
+          "zh": "第三周：运行并衡量"
+        },
+        "note": {
+          "en": "against a baseline",
+          "zh": "对照基准数据"
+        }
+      },
+      {
+        "id": "w4",
+        "col": 2,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Week 4: handover",
+          "zh": "第四周：交接"
+        },
+        "note": {
+          "en": "with documentation",
+          "zh": "附完整文档"
+        }
+      },
+      {
+        "id": "next",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Pick the next job",
+          "zh": "选定下一项工作"
+        },
+        "note": {
+          "en": "based on what the month showed",
+          "zh": "依据这个月的结果"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "w1",
+        "w2"
+      ],
+      [
+        "w2",
+        "w3"
+      ],
+      [
+        "w3",
+        "w4"
+      ],
+      [
+        "w4",
+        "next"
+      ]
+    ]
+  },
+  "approvals": {
+    "caption": {
+      "en": "The line sits where a customer would see the work or money would be spent. Below it the agent works on its own, and above it a person who knows the business signs off, including any change to what the agent may do.",
+      "zh": "界线划在客户会看到、或要花钱的地方。界线以下，智能体自行完成；界线以上，由一位了解这家企业的人签字确认，对智能体权限的任何修改也一样。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "work",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Agent output",
+          "zh": "智能体产出"
+        },
+        "note": {
+          "en": "research, drafts, sorting, reports",
+          "zh": "调研、草稿、整理和报告"
+        }
+      },
+      {
+        "id": "check",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Seen by customers?",
+          "zh": "客户会看到吗？"
+        },
+        "note": {
+          "en": "or spends money, or changes rules",
+          "zh": "或要花钱，或改动权限"
+        }
+      },
+      {
+        "id": "person",
+        "col": 2,
+        "row": 0,
+        "kind": "human",
+        "label": {
+          "en": "Person approves",
+          "zh": "由人审批"
+        },
+        "note": {
+          "en": "someone who knows the business",
+          "zh": "了解这家企业的人"
+        }
+      },
+      {
+        "id": "live",
+        "col": 2,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Goes ahead",
+          "zh": "付诸执行"
+        }
+      },
+      {
+        "id": "alone",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Agent carries on alone",
+          "zh": "智能体自行完成"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "work",
+        "check"
+      ],
+      [
+        "check",
+        "person",
+        {
+          "en": "yes",
+          "zh": "是"
+        }
+      ],
+      [
+        "person",
+        "live"
+      ],
+      [
+        "check",
+        "alone",
+        {
+          "en": "no",
+          "zh": "否"
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "citation-path": {
+    "caption": {
+      "en": "A page earns its citation at the passage step: the engine has to reach it, and a sentence or two on it must answer the narrow query plainly.",
+      "zh": "页面能否被引用，取决于提取段落这一步：引擎要能访问它，页面上还要有一两句话直白地回答那个细分查询。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "question",
+        "col": 0,
+        "row": 0,
+        "kind": "source",
+        "label": {
+          "en": "A customer's question",
+          "zh": "客户的问题"
+        }
+      },
+      {
+        "id": "fanout",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Split into narrower queries",
+          "zh": "拆成更细的查询"
+        },
+        "note": {
+          "en": "query fan-out",
+          "zh": "查询扇出"
+        }
+      },
+      {
+        "id": "fetch",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Fetch pages",
+          "zh": "抓取页面"
+        },
+        "note": {
+          "en": "from an index",
+          "zh": "从索引中抓取"
+        }
+      },
+      {
+        "id": "passages",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Pull out passages",
+          "zh": "提取段落"
+        },
+        "note": {
+          "en": "that answer each part",
+          "zh": "回答每一部分的段落"
+        }
+      },
+      {
+        "id": "reply",
+        "col": 1,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Written reply",
+          "zh": "写出回答"
+        },
+        "note": {
+          "en": "cites a handful of sources",
+          "zh": "引用其中几个来源"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "question",
+        "fanout"
+      ],
+      [
+        "fanout",
+        "fetch"
+      ],
+      [
+        "fetch",
+        "passages"
+      ],
+      [
+        "passages",
+        "reply"
+      ]
+    ]
+  },
+  "aeo-steps": {
+    "caption": {
+      "en": "Each step depends on the one before it, so work through them in order. Structured data comes last because it repeats the facts written down in step two.",
+      "zh": "每一步都以前一步为基础，所以要按顺序来。结构化数据放在最后，因为它重复的是第二步写下的事实。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "crawlers",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Let the crawlers in",
+          "zh": "让爬虫进来"
+        },
+        "note": {
+          "en": "robots.txt and your host",
+          "zh": "检查 robots.txt 和主机设置"
+        }
+      },
+      {
+        "id": "facts",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Write down the facts",
+          "zh": "写清事实"
+        },
+        "note": {
+          "en": "matched on every listing",
+          "zh": "与各处商家信息一致"
+        }
+      },
+      {
+        "id": "answer",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Answer the questions",
+          "zh": "回答问题"
+        },
+        "note": {
+          "en": "a short answer opens each page",
+          "zh": "每页开头先给简短回答"
+        }
+      },
+      {
+        "id": "proof",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Earn proof elsewhere",
+          "zh": "在外部积累证明"
+        },
+        "note": {
+          "en": "reviews, listings, local news",
+          "zh": "评价、名录、本地新闻"
+        }
+      },
+      {
+        "id": "schema",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Add structured data",
+          "zh": "添加结构化数据"
+        },
+        "note": {
+          "en": "the same facts, for machines",
+          "zh": "同一套事实，写给机器读"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "crawlers",
+        "facts"
+      ],
+      [
+        "facts",
+        "answer"
+      ],
+      [
+        "answer",
+        "proof"
+      ],
+      [
+        "proof",
+        "schema"
+      ],
+      [
+        "facts",
+        "schema",
+        {
+          "en": "same facts",
+          "zh": "同一套事实"
+        }
+      ]
+    ]
+  }
+}

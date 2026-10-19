@@ -6,7 +6,7 @@
       {"id": "live", "col": 0, "row": 0, "kind": "source", "label": {"en": "CRM and social scheduler", "zh": "CRM 和社媒排期工具"}, "note": {"en": "read live", "zh": "实时读取"}},
       {"id": "pulled", "col": 0, "row": 1, "kind": "source", "label": {"en": "Analytics and outreach tool", "zh": "网站分析和外联工具"}, "note": {"en": "no live connector", "zh": "没有实时连接器"}},
       {"id": "files", "col": 1, "row": 1, "label": {"en": "Daily files", "zh": "每日文件"}, "note": {"en": "pulled each morning", "zh": "每天早上拉取"}},
-      {"id": "page", "col": 2, "row": 0, "span": 2, "kind": "out", "label": {"en": "The report page", "zh": "报告页面"}, "note": {"en": "any date range, every number linked to its source", "zh": "任意时段，每个数字都链接到来源"}},
+      {"id": "page", "col": 2, "row": 0, "span": 2, "kind": "out", "label": {"en": "The report page", "zh": "报告页面"}, "note": {"en": "any date range, every number sourced", "zh": "任意时段，每个数字都链接到来源"}},
       {"id": "review", "col": 3, "row": 0, "kind": "human", "label": {"en": "A person reviews", "zh": "由人审核"}, "note": {"en": "notes and Slack draft", "zh": "当月记录和 Slack 草稿"}},
       {"id": "shared", "col": 3, "row": 1, "label": {"en": "Shared with the team", "zh": "分享给团队"}}
     ],
