@@ -1,0 +1,108 @@
+{
+  "cost-per-enquiry": {
+    "caption": {
+      "en": "Every quote runs through the same steps, so different scopes end up as one number you can compare. After three months, real figures replace the estimates and you keep whichever option wins.",
+      "zh": "每份报价都走同样的步骤，范围不同的报价最终都换算成一个可以比较的数字。三个月后，用真实数字替换估计值，留下胜出的方案。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "total",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Total each option",
+          "zh": "算出每个方案的总成本"
+        },
+        "note": {
+          "en": "fee, ad spend, tools, your hours",
+          "zh": "服务费、广告费、工具和你的工时"
+        }
+      },
+      {
+        "id": "define",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Define an enquiry",
+          "zh": "约定什么算咨询"
+        },
+        "note": {
+          "en": "a call, form or booking",
+          "zh": "电话、表单或预约"
+        }
+      },
+      {
+        "id": "estimate",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Estimate enquiries",
+          "zh": "估计咨询量"
+        },
+        "note": {
+          "en": "agency estimate or your history",
+          "zh": "代理机构估计或你的历史数据"
+        }
+      },
+      {
+        "id": "divide",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Divide cost by enquiries",
+          "zh": "成本除以咨询量"
+        },
+        "note": {
+          "en": "compare with an enquiry's value",
+          "zh": "与一次咨询的价值比较"
+        }
+      },
+      {
+        "id": "recalc",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Recalculate at three months",
+          "zh": "三个月后重新计算"
+        },
+        "note": {
+          "en": "with real numbers",
+          "zh": "用真实数字"
+        }
+      },
+      {
+        "id": "keep",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Keep the winner",
+          "zh": "留下胜出的方案"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "total",
+        "define"
+      ],
+      [
+        "define",
+        "estimate"
+      ],
+      [
+        "estimate",
+        "divide"
+      ],
+      [
+        "divide",
+        "recalc"
+      ],
+      [
+        "recalc",
+        "keep"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "shortlist": {
+    "caption": {
+      "en": "Every provider gets the same brief and the same questions, so the scores compare like with like. Price comes last, and only between providers that pass the first three criteria.",
+      "zh": "每家服务商拿到同一份简报、回答同样的问题，分数才有可比性。价格放在最后，而且只在通过前三项标准的服务商之间比较。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "brief",
+        "col": 0,
+        "row": 0,
+        "kind": "source",
+        "label": {
+          "en": "Same brief to each",
+          "zh": "同一份简报"
+        },
+        "note": {
+          "en": "sent to every provider",
+          "zh": "发给每家服务商"
+        }
+      },
+      {
+        "id": "ask",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Ask the questions",
+          "zh": "逐一提问"
+        },
+        "note": {
+          "en": "system, data, results, exit",
+          "zh": "系统、数据、效果、退出"
+        }
+      },
+      {
+        "id": "flags",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Check red flags",
+          "zh": "检查危险信号"
+        },
+        "note": {
+          "en": "drop entries that show several",
+          "zh": "出现多项就淘汰"
+        }
+      },
+      {
+        "id": "score",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Score six criteria",
+          "zh": "按六项标准打分"
+        },
+        "note": {
+          "en": "0 to 3, times the weight",
+          "zh": "0 到 3 分，乘以权重"
+        }
+      },
+      {
+        "id": "cut",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Drop totals under 25",
+          "zh": "淘汰低于 25 分的"
+        },
+        "note": {
+          "en": "out of a possible 42",
+          "zh": "满分 42 分"
+        }
+      },
+      {
+        "id": "price",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Compare on price",
+          "zh": "比较价格"
+        },
+        "note": {
+          "en": "first three criteria passed",
+          "zh": "前三项标准都过关"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "brief",
+        "ask"
+      ],
+      [
+        "ask",
+        "flags"
+      ],
+      [
+        "flags",
+        "score"
+      ],
+      [
+        "score",
+        "cut"
+      ],
+      [
+        "cut",
+        "price"
+      ]
+    ]
+  }
+}

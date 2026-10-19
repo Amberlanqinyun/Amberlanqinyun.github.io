@@ -1,0 +1,220 @@
+{
+  "target-list": {
+    "caption": {
+      "en": "Automation helps most with finding businesses and verifying addresses. The evidence step is your consent record, and you still choose who makes the list.",
+      "zh": "自动化最能帮上忙的是寻找企业和验证地址。记录证据这一步就是你的同意记录，最终谁上名单仍由你决定。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "describe",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Describe your ideal customer",
+          "zh": "描述理想客户"
+        },
+        "note": {
+          "en": "from your three best clients",
+          "zh": "参照你最好的三个客户"
+        }
+      },
+      {
+        "id": "match",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Find matching businesses",
+          "zh": "找到相匹配的企业"
+        },
+        "note": {
+          "en": "directories, member lists, lost quotes",
+          "zh": "名录、会员名单、没谈成的报价"
+        }
+      },
+      {
+        "id": "person",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Find the right person",
+          "zh": "找到对的人"
+        },
+        "note": {
+          "en": "one named person per business",
+          "zh": "每家企业一位具名联系人"
+        }
+      },
+      {
+        "id": "evidence",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Record the evidence",
+          "zh": "记录证据"
+        },
+        "note": {
+          "en": "where the address was published",
+          "zh": "地址在哪里公开"
+        }
+      },
+      {
+        "id": "verify",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Verify the address",
+          "zh": "验证地址"
+        },
+        "note": {
+          "en": "before anything is sent",
+          "zh": "在发送之前"
+        }
+      },
+      {
+        "id": "list",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Your short list",
+          "zh": "你的短名单"
+        },
+        "note": {
+          "en": "50 to 100 accounts",
+          "zh": "50 到 100 个客户"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "describe",
+        "match"
+      ],
+      [
+        "match",
+        "person"
+      ],
+      [
+        "person",
+        "evidence"
+      ],
+      [
+        "evidence",
+        "verify"
+      ],
+      [
+        "verify",
+        "list"
+      ]
+    ]
+  },
+  "human-review": {
+    "caption": {
+      "en": "The amber steps are where your name is on the line, so a person signs off the list and every first email. Software handles the rest, and every interested reply comes back to you.",
+      "zh": "琥珀色的两步关系到你的名声，所以名单和每封首次邮件都由人签批。其余交给软件，每一条有意向的回复都回到你手上。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "find",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Find matching businesses",
+          "zh": "寻找匹配的企业"
+        },
+        "note": {
+          "en": "software",
+          "zh": "由软件完成"
+        }
+      },
+      {
+        "id": "choose",
+        "col": 1,
+        "row": 0,
+        "kind": "human",
+        "label": {
+          "en": "Choose the list",
+          "zh": "确定名单"
+        },
+        "note": {
+          "en": "a person decides",
+          "zh": "由人决定"
+        }
+      },
+      {
+        "id": "draft",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Research and draft",
+          "zh": "调研和起草"
+        },
+        "note": {
+          "en": "a first line per account",
+          "zh": "为每个客户写开头"
+        }
+      },
+      {
+        "id": "approve",
+        "col": 2,
+        "row": 1,
+        "kind": "human",
+        "label": {
+          "en": "Approve every first email",
+          "zh": "批准每封首次邮件"
+        }
+      },
+      {
+        "id": "follow",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Schedule follow-ups",
+          "zh": "排期跟进邮件"
+        },
+        "note": {
+          "en": "stops when someone replies",
+          "zh": "对方回复即停止"
+        }
+      },
+      {
+        "id": "reply",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Interested replies",
+          "zh": "有意向的回复"
+        },
+        "note": {
+          "en": "answered by you",
+          "zh": "由你亲自回复"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "find",
+        "choose"
+      ],
+      [
+        "choose",
+        "draft"
+      ],
+      [
+        "draft",
+        "approve"
+      ],
+      [
+        "approve",
+        "follow"
+      ],
+      [
+        "follow",
+        "reply"
+      ]
+    ]
+  }
+}

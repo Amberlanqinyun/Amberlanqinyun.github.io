@@ -1,0 +1,120 @@
+{
+  "weekly-loop": {
+    "caption": {
+      "en": "The loop runs every week, and the review step sets the quality of everything that ships. Measurement feeds straight back into next week's brief.",
+      "zh": "这个循环每周运行一次，审核这一步决定了每一项发布内容的质量。衡量结果会直接写进下周的简报。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "brief",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Brief",
+          "zh": "简报"
+        },
+        "note": {
+          "en": "the written positioning file",
+          "zh": "书面定位文件"
+        }
+      },
+      {
+        "id": "research",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Research",
+          "zh": "调研"
+        },
+        "note": {
+          "en": "demand, competitors, AI answers",
+          "zh": "搜索需求、竞争对手、AI 答案"
+        }
+      },
+      {
+        "id": "draft",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Draft",
+          "zh": "起草"
+        },
+        "note": {
+          "en": "pages, posts, emails, reports",
+          "zh": "页面、帖子、邮件、报告"
+        }
+      },
+      {
+        "id": "review",
+        "col": 2,
+        "row": 1,
+        "kind": "human",
+        "label": {
+          "en": "Review",
+          "zh": "审核"
+        },
+        "note": {
+          "en": "a named person approves",
+          "zh": "由指定的人批准或退回"
+        }
+      },
+      {
+        "id": "ship",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Ship",
+          "zh": "发布"
+        },
+        "note": {
+          "en": "from your own accounts",
+          "zh": "从你自己的账户发出"
+        }
+      },
+      {
+        "id": "measure",
+        "col": 0,
+        "row": 1,
+        "label": {
+          "en": "Measure",
+          "zh": "衡量"
+        },
+        "note": {
+          "en": "enquiries, sources, cost of each",
+          "zh": "咨询量、来源和单次成本"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "brief",
+        "research"
+      ],
+      [
+        "research",
+        "draft"
+      ],
+      [
+        "draft",
+        "review"
+      ],
+      [
+        "review",
+        "ship"
+      ],
+      [
+        "ship",
+        "measure"
+      ],
+      [
+        "measure",
+        "brief",
+        {
+          "en": "next week",
+          "zh": "下周"
+        }
+      ]
+    ]
+  }
+}

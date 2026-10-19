@@ -1,0 +1,108 @@
+{
+  "cost-per-enquiry": {
+    "caption": {
+      "en": "Quotes with different scopes become one number per option. The estimates get you started, and the recalculation at three months decides which option stays.",
+      "zh": "范围不同的报价，各自换算成一个数字。估计值让你可以开始比较，三个月后的重新计算决定留下哪个方案。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "total",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Total each option",
+          "zh": "算出每个方案的总成本"
+        },
+        "note": {
+          "en": "fee, ad spend, tools, your hours",
+          "zh": "服务费、广告费、工具和你的工时"
+        }
+      },
+      {
+        "id": "define",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Define an enquiry",
+          "zh": "约定什么算咨询"
+        },
+        "note": {
+          "en": "real prospects, no spam or job seekers",
+          "zh": "真实潜在客户，不含垃圾信息和求职者"
+        }
+      },
+      {
+        "id": "estimate",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Estimate enquiries",
+          "zh": "估计咨询量"
+        },
+        "note": {
+          "en": "provider estimate or your past numbers",
+          "zh": "服务商估计或你的历史数据"
+        }
+      },
+      {
+        "id": "divide",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Divide cost by enquiries",
+          "zh": "成本除以咨询量"
+        },
+        "note": {
+          "en": "against what an enquiry is worth",
+          "zh": "对照一次咨询的价值"
+        }
+      },
+      {
+        "id": "recalc",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Recalculate at three months",
+          "zh": "三个月后重新计算"
+        },
+        "note": {
+          "en": "with real numbers",
+          "zh": "用真实数字"
+        }
+      },
+      {
+        "id": "keep",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Keep the winner",
+          "zh": "留下胜出的方案"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "total",
+        "define"
+      ],
+      [
+        "define",
+        "estimate"
+      ],
+      [
+        "estimate",
+        "divide"
+      ],
+      [
+        "divide",
+        "recalc"
+      ],
+      [
+        "recalc",
+        "keep"
+      ]
+    ]
+  }
+}

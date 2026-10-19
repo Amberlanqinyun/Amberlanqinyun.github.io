@@ -1,0 +1,15 @@
+{
+  "cost-parts": {
+    "caption": {"en": "People time sets the build cost, and the other three parts make up the monthly bill. Ask for a quote split this way so you can check each line.", "zh": "人的时间决定搭建费用，其余三部分构成每月的账单。请服务商按这四部分拆分报价，方便你逐项核对。"},
+    "cols": 2,
+    "nodes": [
+      {"id": "people", "col": 0, "row": 0, "kind": "source", "label": {"en": "People time", "zh": "人的时间"}, "note": {"en": "scoping, building, testing, handover", "zh": "界定范围、搭建、测试、交接"}},
+      {"id": "build", "col": 1, "row": 0, "kind": "out", "label": {"en": "Build cost", "zh": "搭建费用"}},
+      {"id": "model", "col": 0, "row": 1, "kind": "source", "label": {"en": "Model usage", "zh": "模型用量"}, "note": {"en": "per million tokens, in USD", "zh": "按每百万 token 计费，以美元计价"}},
+      {"id": "platform", "col": 0, "row": 2, "kind": "source", "label": {"en": "Platform", "zh": "平台"}, "note": {"en": "subscription by runs or tasks", "zh": "按运行次数或任务数订阅"}},
+      {"id": "upkeep", "col": 0, "row": 3, "kind": "source", "label": {"en": "Upkeep", "zh": "维护"}, "note": {"en": "monitoring and fixes, hours each month", "zh": "监控和修复，按每月工时"}},
+      {"id": "running", "col": 1, "row": 1, "span": 3, "kind": "out", "label": {"en": "Running cost a month", "zh": "每月运行成本"}}
+    ],
+    "edges": [["people", "build"], ["model", "running"], ["platform", "running"], ["upkeep", "running"]]
+  }
+}

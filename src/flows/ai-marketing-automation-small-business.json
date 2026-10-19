@@ -1,0 +1,13 @@
+{
+  "two-halves": {
+    "caption": {"en": "Automation handles delivery and decides when the step runs. AI works inside the step and decides what the message says and which version a contact sees.", "zh": "自动化负责投递，决定这一步什么时候运行。AI 在步骤里工作，决定消息说什么、联系人看到哪个版本。"},
+    "cols": 4,
+    "nodes": [
+      {"id": "trigger", "col": 0, "row": 0, "kind": "source", "label": {"en": "A contact acts", "zh": "联系人有所行动"}, "note": {"en": "signs up, books or goes quiet", "zh": "注册、预约或沉寂"}},
+      {"id": "rule", "col": 1, "row": 0, "label": {"en": "The automation rule", "zh": "自动化规则"}, "note": {"en": "delivery and timing", "zh": "负责投递和时机"}},
+      {"id": "ai", "col": 2, "row": 0, "label": {"en": "AI inside the step", "zh": "步骤里的 AI"}, "note": {"en": "drafts, sorts, personalises", "zh": "起草、分类、个性化"}},
+      {"id": "send", "col": 3, "row": 0, "kind": "out", "label": {"en": "Message or task", "zh": "消息或任务"}}
+    ],
+    "edges": [["trigger", "rule"], ["rule", "ai"], ["ai", "send"]]
+  }
+}

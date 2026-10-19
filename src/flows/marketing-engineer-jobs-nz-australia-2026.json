@@ -1,0 +1,96 @@
+{
+  "source-check": {
+    "caption": {
+      "en": "Every number on this page went through the same check. A figure that could not be confirmed at its source was left out, however often it is quoted elsewhere.",
+      "zh": "本页每个数字都经过同样的核对。无法在原始来源确认的数字一律不收录，无论它在别处被转引过多少次。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "figure",
+        "col": 0,
+        "row": 0,
+        "kind": "source",
+        "label": {
+          "en": "A published figure",
+          "zh": "一项公开数据"
+        },
+        "note": {
+          "en": "often widely repeated",
+          "zh": "常被广泛转引"
+        }
+      },
+      {
+        "id": "open",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Open it at source",
+          "zh": "打开原始来源核对"
+        },
+        "note": {
+          "en": "on 8 October 2026",
+          "zh": "2026年10月8日"
+        }
+      },
+      {
+        "id": "label",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Label what it is",
+          "zh": "标注数据类型"
+        },
+        "note": {
+          "en": "job ads, recruiter or vendor",
+          "zh": "招聘广告、招聘机构或供应商"
+        }
+      },
+      {
+        "id": "used",
+        "col": 2,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Used on this page",
+          "zh": "收录在本页"
+        }
+      },
+      {
+        "id": "dropped",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Left out",
+          "zh": "不予收录"
+        },
+        "note": {
+          "en": "when the source cannot confirm it",
+          "zh": "原始来源无法确认时"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "figure",
+        "open"
+      ],
+      [
+        "open",
+        "label"
+      ],
+      [
+        "label",
+        "used"
+      ],
+      [
+        "open",
+        "dropped",
+        {
+          "en": "not confirmed",
+          "zh": "无法确认"
+        }
+      ]
+    ]
+  }
+}

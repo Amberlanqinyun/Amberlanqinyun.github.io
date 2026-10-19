@@ -1,0 +1,161 @@
+{
+  "review-loop": {
+    "caption": {
+      "en": "Most of the running time goes on the amber step. Each rejection reason is logged and turned into better instructions for the agents' next round.",
+      "zh": "运行系统的时间大多花在琥珀色这一步。每条退回理由都会被记录下来，改写成更好的指令，供智能体下一轮使用。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "agents",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Agents produce drafts",
+          "zh": "智能体产出草稿"
+        }
+      },
+      {
+        "id": "review",
+        "col": 1,
+        "row": 0,
+        "kind": "human",
+        "label": {
+          "en": "Engineer reviews",
+          "zh": "工程师审核"
+        },
+        "note": {
+          "en": "reads what the agents produced",
+          "zh": "阅读智能体的产出"
+        }
+      },
+      {
+        "id": "ships",
+        "col": 2,
+        "row": 0,
+        "kind": "out",
+        "label": {
+          "en": "Approved work ships",
+          "zh": "批准的内容发布"
+        }
+      },
+      {
+        "id": "reason",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Rejection reason logged",
+          "zh": "记录退回理由"
+        }
+      },
+      {
+        "id": "instr",
+        "col": 0,
+        "row": 1,
+        "label": {
+          "en": "Better instructions",
+          "zh": "改进指令"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "agents",
+        "review"
+      ],
+      [
+        "review",
+        "ships"
+      ],
+      [
+        "review",
+        "reason",
+        {
+          "en": "reject",
+          "zh": "退回"
+        }
+      ],
+      [
+        "reason",
+        "instr"
+      ],
+      [
+        "instr",
+        "agents"
+      ]
+    ]
+  },
+  "hire-order": {
+    "caption": {
+      "en": "For most small businesses the permanent hire comes last. The systems come first, on accounts the business owns, and the hire follows once several of them run every week.",
+      "zh": "对大多数小企业来说，招聘全职是最后一步。先在企业自己的账户上把系统搭起来，等好几套系统每周都在运行，再招人。"
+    },
+    "cols": 4,
+    "nodes": [
+      {
+        "id": "buy",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Buy the systems",
+          "zh": "先买系统"
+        },
+        "note": {
+          "en": "built on your own accounts",
+          "zh": "建在自有账户上"
+        }
+      },
+      {
+        "id": "reviewer",
+        "col": 1,
+        "row": 0,
+        "kind": "human",
+        "label": {
+          "en": "Train a reviewer inside",
+          "zh": "培训内部审核人"
+        }
+      },
+      {
+        "id": "running",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Several systems run weekly",
+          "zh": "系统每周运行"
+        },
+        "note": {
+          "en": "and need constant tuning",
+          "zh": "已有好几套，需持续调优"
+        }
+      },
+      {
+        "id": "hire",
+        "col": 3,
+        "row": 0,
+        "kind": "out",
+        "label": {
+          "en": "Hire full time",
+          "zh": "招聘全职"
+        },
+        "note": {
+          "en": "someone senior signs off positioning",
+          "zh": "有资深的人签批定位"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "buy",
+        "reviewer"
+      ],
+      [
+        "reviewer",
+        "running"
+      ],
+      [
+        "running",
+        "hire"
+      ]
+    ]
+  }
+}

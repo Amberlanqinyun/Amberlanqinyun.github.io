@@ -1,0 +1,113 @@
+{
+ "choose-type": {
+  "caption": {
+   "en": "Each situation points to a type of provider. Find the line that describes your business, then build the shortlist from that type.",
+   "zh": "每种情况都对应一类服务商。找到描述你企业的那一行，再从这一类里列出候选名单。"
+  },
+  "cols": 2,
+  "nodes": [
+   {
+    "id": "job",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "span": 5,
+    "label": {
+     "en": "The job you need",
+     "zh": "你要完成的工作"
+    },
+    "note": {
+     "en": "choose the type by it",
+     "zh": "按它选择类型"
+    }
+   },
+   {
+    "id": "agency",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Established or AI-native agency",
+     "zh": "老牌或 AI 原生代理机构"
+    },
+    "note": {
+     "en": "several channels, team at capacity",
+     "zh": "多个渠道，团队已满负荷"
+    }
+   },
+   {
+    "id": "search",
+    "col": 1,
+    "row": 1,
+    "label": {
+     "en": "AI search specialist",
+     "zh": "AI 搜索专业机构"
+    },
+    "note": {
+     "en": "customers research you first",
+     "zh": "客户打电话前先研究你"
+    }
+   },
+   {
+    "id": "train",
+    "col": 1,
+    "row": 2,
+    "label": {
+     "en": "Build-and-train firm",
+     "zh": "搭建与培训型公司"
+    },
+    "note": {
+     "en": "time, with a method to build",
+     "zh": "有时间，方法有待建立"
+    }
+   },
+   {
+    "id": "engineer",
+    "col": 1,
+    "row": 3,
+    "label": {
+     "en": "Marketing engineer",
+     "zh": "营销工程师"
+    },
+    "note": {
+     "en": "systems your team owns and runs",
+     "zh": "团队自己拥有并运行系统"
+    }
+   },
+   {
+    "id": "brand",
+    "col": 1,
+    "row": 4,
+    "label": {
+     "en": "Established agency",
+     "zh": "老牌代理机构"
+    },
+    "note": {
+     "en": "large media or brand campaigns",
+     "zh": "大额媒体预算或品牌活动"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "job",
+    "agency"
+   ],
+   [
+    "job",
+    "search"
+   ],
+   [
+    "job",
+    "train"
+   ],
+   [
+    "job",
+    "engineer"
+   ],
+   [
+    "job",
+    "brand"
+   ]
+  ]
+ }
+}

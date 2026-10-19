@@ -1,0 +1,96 @@
+{
+  "month": {
+    "caption": {
+      "en": "At one day a week, the manager spends the month deciding and checking. The drafts come from a freelancer or agency, which is why production needs its own budget.",
+      "zh": "按每周一天计算，经理这个月的时间都花在决策和检查上。草稿来自自由职业者或代理机构，所以制作需要单独的预算。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "w1",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Week 1: priorities and briefs",
+          "zh": "第一周：重点与简报"
+        },
+        "note": {
+          "en": "agreed with the owner",
+          "zh": "与企业主商定"
+        }
+      },
+      {
+        "id": "sup",
+        "col": 0,
+        "row": 1,
+        "kind": "source",
+        "label": {
+          "en": "Freelancer or agency",
+          "zh": "自由职业者或代理机构"
+        },
+        "note": {
+          "en": "produces the drafts",
+          "zh": "负责制作草稿"
+        }
+      },
+      {
+        "id": "w2",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Week 2: check drafts",
+          "zh": "第二周：检查草稿"
+        },
+        "note": {
+          "en": "plus pages and ad account",
+          "zh": "以及网站页面和广告账户"
+        }
+      },
+      {
+        "id": "w3",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Week 3: approve and schedule",
+          "zh": "第三周：审批并排期"
+        },
+        "note": {
+          "en": "chase late suppliers",
+          "zh": "处理延误的供应商"
+        }
+      },
+      {
+        "id": "w4",
+        "col": 2,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Week 4: monthly report",
+          "zh": "第四周：月度报告"
+        },
+        "note": {
+          "en": "what shipped, cost, what to stop",
+          "zh": "发布内容、花费、该停什么"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "w1",
+        "sup"
+      ],
+      [
+        "sup",
+        "w2"
+      ],
+      [
+        "w2",
+        "w3"
+      ],
+      [
+        "w3",
+        "w4"
+      ]
+    ]
+  }
+}

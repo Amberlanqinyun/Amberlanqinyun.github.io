@@ -1,0 +1,224 @@
+{
+  "six-steps": {
+    "caption": {
+      "en": "The steps run in the order I would take them for a small business. The first check becomes the baseline, and the monthly re-run measures every later step against it.",
+      "zh": "这些步骤按我为小企业做这件事时的顺序排列。第一次检查就是基准，之后每月重跑一次，用来衡量后面每一步的效果。"
+    },
+    "cols": 4,
+    "nodes": [
+      {
+        "id": "s1",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Check the assistants",
+          "zh": "检查 AI 助手"
+        },
+        "note": {
+          "en": "your baseline list",
+          "zh": "建立基准清单"
+        }
+      },
+      {
+        "id": "s2",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Let the crawlers in",
+          "zh": "放行爬虫"
+        },
+        "note": {
+          "en": "robots.txt and Bing",
+          "zh": "robots.txt 和 Bing"
+        }
+      },
+      {
+        "id": "s3",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Write quotable pages",
+          "zh": "写可引用的页面"
+        },
+        "note": {
+          "en": "plain facts near the top",
+          "zh": "开头写明事实"
+        }
+      },
+      {
+        "id": "s4",
+        "col": 3,
+        "row": 0,
+        "label": {
+          "en": "Earn mentions",
+          "zh": "争取被提及"
+        },
+        "note": {
+          "en": "on sites already cited",
+          "zh": "在已被引用的网站上"
+        }
+      },
+      {
+        "id": "s5",
+        "col": 3,
+        "row": 1,
+        "label": {
+          "en": "Match your details",
+          "zh": "统一企业信息"
+        },
+        "note": {
+          "en": "identical everywhere",
+          "zh": "各处完全一致"
+        }
+      },
+      {
+        "id": "s6",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Collect recent reviews",
+          "zh": "积累近期评价"
+        },
+        "note": {
+          "en": "ask every week",
+          "zh": "每周邀请"
+        }
+      },
+      {
+        "id": "rerun",
+        "col": 1,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Re-run prompts monthly",
+          "zh": "每月重跑提示词"
+        },
+        "note": {
+          "en": "against the baseline",
+          "zh": "对照基准"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "s1",
+        "s2"
+      ],
+      [
+        "s2",
+        "s3"
+      ],
+      [
+        "s3",
+        "s4"
+      ],
+      [
+        "s4",
+        "s5"
+      ],
+      [
+        "s5",
+        "s6"
+      ],
+      [
+        "s6",
+        "rerun"
+      ]
+    ]
+  },
+  "chatgpt-search": {
+    "caption": {
+      "en": "ChatGPT reads whatever its search partners return, so your own website is one source among several. Listings, directories, reviews and press mentions feed the same answer.",
+      "zh": "ChatGPT 读的是搜索合作伙伴返回的页面，所以你的网站只是众多来源之一。商家信息、目录、评价和媒体报道，都会进入同一个回答。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "q",
+        "col": 0,
+        "row": 0,
+        "kind": "source",
+        "label": {
+          "en": "A customer's question",
+          "zh": "客户的提问"
+        },
+        "note": {
+          "en": "may carry a general location",
+          "zh": "可能附带大致位置"
+        }
+      },
+      {
+        "id": "rw",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Rewritten queries",
+          "zh": "改写后的查询"
+        },
+        "note": {
+          "en": "targeted searches",
+          "zh": "有针对性的搜索"
+        }
+      },
+      {
+        "id": "partners",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Search partners",
+          "zh": "合作搜索服务商"
+        },
+        "note": {
+          "en": "including Microsoft Bing",
+          "zh": "包括 Microsoft Bing"
+        }
+      },
+      {
+        "id": "pages",
+        "col": 2,
+        "row": 1,
+        "kind": "source",
+        "label": {
+          "en": "Pages that come back",
+          "zh": "返回的页面"
+        },
+        "note": {
+          "en": "your site, listings, reviews, press",
+          "zh": "网站、商家信息、评价、媒体报道"
+        }
+      },
+      {
+        "id": "answer",
+        "col": 1,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Answer with citations",
+          "zh": "附引用的回答"
+        },
+        "note": {
+          "en": "cites some of those pages",
+          "zh": "引用其中部分页面"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "q",
+        "rw"
+      ],
+      [
+        "rw",
+        "partners"
+      ],
+      [
+        "partners",
+        "pages"
+      ],
+      [
+        "pages",
+        "answer"
+      ]
+    ]
+  }
+}

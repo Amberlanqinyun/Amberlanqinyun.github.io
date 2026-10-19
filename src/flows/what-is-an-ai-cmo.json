@@ -1,0 +1,116 @@
+{
+  "weekly-cycle": {
+    "caption": {
+      "en": "The cycle starts again with the review folded in. Steps four and five are where products differ most, so check whether a product stops at the brief or also produces the work.",
+      "zh": "每个周期都带着上一轮复盘的结论重新开始。第四步和第五步是各产品差别最大的地方，所以要看它停在简报，还是也负责产出工作。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "read",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Read",
+          "zh": "读取"
+        },
+        "note": {
+          "en": "site, analytics, reviews, competitors",
+          "zh": "网站、分析数据、评价、竞争对手"
+        }
+      },
+      {
+        "id": "rank",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Rank",
+          "zh": "排序"
+        },
+        "note": {
+          "en": "what to fix first, with reasons",
+          "zh": "先修什么，附理由"
+        }
+      },
+      {
+        "id": "plan",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Plan",
+          "zh": "规划"
+        },
+        "note": {
+          "en": "an owner, deadline and target per item",
+          "zh": "每项都有负责人、截止日期和目标"
+        }
+      },
+      {
+        "id": "brief",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Brief",
+          "zh": "简报"
+        },
+        "note": {
+          "en": "for a person, freelancer or agent",
+          "zh": "给人、自由职业者或智能体"
+        }
+      },
+      {
+        "id": "review",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Review",
+          "zh": "复盘"
+        },
+        "note": {
+          "en": "against the owner's numbers",
+          "zh": "对照企业主关心的数字"
+        }
+      },
+      {
+        "id": "next",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Next month's order",
+          "zh": "下个月的先后顺序"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "read",
+        "rank"
+      ],
+      [
+        "rank",
+        "plan"
+      ],
+      [
+        "plan",
+        "brief"
+      ],
+      [
+        "brief",
+        "review"
+      ],
+      [
+        "review",
+        "next"
+      ],
+      [
+        "next",
+        "read",
+        {
+          "en": "cycle repeats",
+          "zh": "进入下一周期"
+        }
+      ]
+    ]
+  }
+}

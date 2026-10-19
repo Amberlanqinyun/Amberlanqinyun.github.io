@@ -1,0 +1,112 @@
+{
+  "first-month": {
+    "caption": {
+      "en": "The seats are the quick part. Most of the month goes on the brief, the templates, one connected tool and a review rule, and the seat count waits until four to six weeks of real use show who needs one.",
+      "zh": "买席位是最快的一步。这个月的大部分精力花在简报、模板、一个连接好的工具和审核规则上；席位数要等四到六周的实际使用之后，看清谁真正需要再定。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "seats",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Buy monthly seats",
+          "zh": "按月购买席位"
+        },
+        "note": {
+          "en": "daily users first, rating off",
+          "zh": "先给每天使用的人，关闭评分"
+        }
+      },
+      {
+        "id": "brief",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Write a shared brief",
+          "zh": "写一份共用简报"
+        },
+        "note": {
+          "en": "business, customers, tone, what stays out",
+          "zh": "业务、客户、语调，以及什么不能放进去"
+        }
+      },
+      {
+        "id": "templates",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Turn jobs into templates",
+          "zh": "把重复工作做成模板"
+        },
+        "note": {
+          "en": "two or three to start",
+          "zh": "先做两三项"
+        }
+      },
+      {
+        "id": "connect",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Connect one tool",
+          "zh": "连接一个工作工具"
+        },
+        "note": {
+          "en": "read-only first",
+          "zh": "先设为只读"
+        }
+      },
+      {
+        "id": "review",
+        "col": 1,
+        "row": 1,
+        "label": {
+          "en": "Agree a review rule",
+          "zh": "约定审核规则"
+        },
+        "note": {
+          "en": "a named person checks customer work",
+          "zh": "指定一人审核到达客户的内容"
+        }
+      },
+      {
+        "id": "annual",
+        "col": 0,
+        "row": 1,
+        "kind": "out",
+        "label": {
+          "en": "Set seats, then go annual",
+          "zh": "确定席位，转为按年付费"
+        },
+        "note": {
+          "en": "after four to six weeks",
+          "zh": "四到六周之后"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "seats",
+        "brief"
+      ],
+      [
+        "brief",
+        "templates"
+      ],
+      [
+        "templates",
+        "connect"
+      ],
+      [
+        "connect",
+        "review"
+      ],
+      [
+        "review",
+        "annual"
+      ]
+    ]
+  }
+}

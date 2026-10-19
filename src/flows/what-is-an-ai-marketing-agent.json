@@ -1,0 +1,103 @@
+{
+  "agent-loop": {
+    "caption": {
+      "en": "Nothing reaches a customer until a person has reviewed it, and that review feeds the next loop. That is how the second month improves on the first.",
+      "zh": "任何内容在经人审核之前都不会触达客户，而审核意见会带进下一轮循环。第二个月比第一个月更好，靠的就是这一点。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "read",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Read the business",
+          "zh": "读懂企业"
+        },
+        "note": {
+          "en": "site, prices, analytics, competitors",
+          "zh": "官网、价格、分析数据、竞争对手"
+        }
+      },
+      {
+        "id": "plan",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Plan the month",
+          "zh": "规划当月"
+        },
+        "note": {
+          "en": "the most broken job first",
+          "zh": "先处理问题最大的工作"
+        }
+      },
+      {
+        "id": "execute",
+        "col": 2,
+        "row": 0,
+        "label": {
+          "en": "Execute across departments",
+          "zh": "跨部门执行"
+        },
+        "note": {
+          "en": "search, content, social, outbound",
+          "zh": "搜索、内容、社交、主动外联"
+        }
+      },
+      {
+        "id": "report",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Report",
+          "zh": "汇报"
+        },
+        "note": {
+          "en": "what shipped and what moved",
+          "zh": "发布了什么，哪些有变化"
+        }
+      },
+      {
+        "id": "review",
+        "col": 0,
+        "row": 1,
+        "kind": "human",
+        "label": {
+          "en": "A human reviews",
+          "zh": "由人审核"
+        },
+        "note": {
+          "en": "usually under an hour a week",
+          "zh": "通常每周不到一小时"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "read",
+        "plan"
+      ],
+      [
+        "plan",
+        "execute"
+      ],
+      [
+        "execute",
+        "report"
+      ],
+      [
+        "report",
+        "review"
+      ],
+      [
+        "review",
+        "read",
+        {
+          "en": "folded back in",
+          "zh": "带进下一轮"
+        }
+      ]
+    ]
+  }
+}

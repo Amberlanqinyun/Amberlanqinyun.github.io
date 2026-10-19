@@ -1,0 +1,103 @@
+{
+ "combine": {
+  "caption": {
+   "en": "Both routes read from the same positioning file and report into the same numbers. After 90 days, the report shows where to move the work.",
+   "zh": "两条路径依据同一份定位文件，也汇入同一套数字。90 天后，报告会告诉你该把工作移向哪里。"
+  },
+  "cols": 4,
+  "nodes": [
+   {
+    "id": "pos",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "span": 2,
+    "label": {
+     "en": "Positioning file",
+     "zh": "定位文件"
+    },
+    "note": {
+     "en": "one page, same facts for all",
+     "zh": "一页纸，大家依据同样的事实"
+    }
+   },
+   {
+    "id": "own",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Your best channel",
+     "zh": "你最熟悉的渠道"
+    },
+    "note": {
+     "en": "run in house with tools",
+     "zh": "自己用工具来运作"
+    }
+   },
+   {
+    "id": "hand",
+    "col": 1,
+    "row": 1,
+    "label": {
+     "en": "Line you know least",
+     "zh": "你最不了解的服务线"
+    },
+    "note": {
+     "en": "provider, or build and handover",
+     "zh": "交给服务商，或搭建后交接"
+    }
+   },
+   {
+    "id": "report",
+    "col": 2,
+    "row": 0,
+    "span": 2,
+    "label": {
+     "en": "One shared report",
+     "zh": "同一份报告"
+    },
+    "note": {
+     "en": "enquiries, sources, cost per enquiry",
+     "zh": "咨询量、来源和单次咨询成本"
+    }
+   },
+   {
+    "id": "review",
+    "col": 3,
+    "row": 0,
+    "kind": "human",
+    "span": 2,
+    "label": {
+     "en": "Review at 90 days",
+     "zh": "90 天后复盘"
+    },
+    "note": {
+     "en": "move work to what produces enquiries",
+     "zh": "把工作移向带来咨询的路径"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "pos",
+    "own"
+   ],
+   [
+    "pos",
+    "hand"
+   ],
+   [
+    "own",
+    "report"
+   ],
+   [
+    "hand",
+    "report"
+   ],
+   [
+    "report",
+    "review"
+   ]
+  ]
+ }
+}

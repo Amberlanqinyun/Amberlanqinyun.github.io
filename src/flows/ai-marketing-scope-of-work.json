@@ -1,0 +1,79 @@
+{
+ "template-use": {
+  "caption": {
+   "en": "Every provider receives the same ten sections, so the quotes come back answering the same questions. Leave a section blank only when both sides agree in writing.",
+   "zh": "每家服务商收到的都是同样的十个部分，所以报价回答的是同样的问题。只有在双方书面同意时，才把某个部分留空。"
+  },
+  "cols": 4,
+  "nodes": [
+   {
+    "id": "sections",
+    "col": 0,
+    "row": 0,
+    "kind": "source",
+    "label": {
+     "en": "The ten sections",
+     "zh": "十个部分"
+    },
+    "note": {
+     "en": "copied into your document",
+     "zh": "复制到你的文档里"
+    }
+   },
+   {
+    "id": "details",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Your project's details",
+     "zh": "你的项目细节"
+    },
+    "note": {
+     "en": "replace the example wording",
+     "zh": "替换示例措辞"
+    }
+   },
+   {
+    "id": "send",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Sent to each provider",
+     "zh": "发给每家服务商"
+    },
+    "note": {
+     "en": "each quote answers the same questions",
+     "zh": "每份报价回答同样的问题"
+    }
+   },
+   {
+    "id": "compare",
+    "col": 3,
+    "row": 0,
+    "kind": "out",
+    "label": {
+     "en": "Compare line by line",
+     "zh": "逐行比较"
+    },
+    "note": {
+     "en": "quotes you can compare",
+     "zh": "报价变得可以比较"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "sections",
+    "details"
+   ],
+   [
+    "details",
+    "send"
+   ],
+   [
+    "send",
+    "compare"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "budget-sequence": {
+    "caption": {"en": "The first spend is a fixed-price assessment on the one process that wastes the most hours. Check whether a grant or free centre can cover it, and add training once the first change is live.", "zh": "第一笔支出是针对最浪费工时的那个流程，做一次固定价格的评估。先查查补贴或免费中心能否承担，第一项改变上线之后再加入培训。"},
+    "cols": 4,
+    "nodes": [
+      {"id": "process", "col": 0, "row": 0, "label": {"en": "Pick one process", "zh": "挑出一个流程"}, "note": {"en": "the one wasting most hours", "zh": "最浪费工时的那个"}},
+      {"id": "assess", "col": 1, "row": 0, "label": {"en": "Assessment or workshop", "zh": "评估或工作坊"}, "note": {"en": "fixed price, on that process", "zh": "固定价格，针对这个流程"}},
+      {"id": "build", "col": 2, "row": 0, "label": {"en": "One implementation project", "zh": "一个实施项目"}, "note": {"en": "written scope, your accounts", "zh": "书面范围，账户归你"}},
+      {"id": "train", "col": 3, "row": 0, "label": {"en": "Add training", "zh": "加入培训"}, "note": {"en": "once the first change is live", "zh": "第一项改变上线之后"}},
+      {"id": "grant", "col": 1, "row": 1, "kind": "source", "label": {"en": "Grant or free centre", "zh": "补贴或免费中心"}, "note": {"en": "NZ pilot, Australian Adopt Centres", "zh": "新西兰试点计划，澳大利亚 AI 采用中心"}}
+    ],
+    "edges": [["process", "assess"], ["assess", "build"], ["build", "train"], ["grant", "assess", {"en": "may cover it", "zh": "可能承担"}]]
+  }
+}

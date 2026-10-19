@@ -1,0 +1,15 @@
+{
+  "by-size": {
+    "caption": {"en": "The cheapest working setup changes with size. From 20 staff, marketing needs a full-time owner inside the company, and the agent equips that lead.", "zh": "最便宜又能跑起来的组合随企业规模而变。到了 20 人以上，营销需要公司内部有一位全职负责人，智能体则配给这位负责人使用。"},
+    "cols": 2,
+    "nodes": [
+      {"id": "solo", "col": 0, "row": 0, "kind": "source", "label": {"en": "Solo, under 5 staff", "zh": "个人经营者和 5 人以下"}},
+      {"id": "solo-fit", "col": 1, "row": 0, "kind": "out", "label": {"en": "Tools plus one freelancer", "zh": "工具加一位自由职业者"}, "note": {"en": "on the channel that brings customers", "zh": "用在能带来客户的渠道上"}},
+      {"id": "mid", "col": 0, "row": 1, "kind": "source", "label": {"en": "5 to 20 staff", "zh": "5 到 20 人"}},
+      {"id": "mid-fit", "col": 1, "row": 1, "kind": "out", "label": {"en": "AI marketing agent", "zh": "AI 营销智能体"}, "note": {"en": "several channels, less than a salary", "zh": "多个渠道按周运转，低于一份薪水"}},
+      {"id": "large", "col": 0, "row": 2, "kind": "source", "label": {"en": "20 to 50 staff", "zh": "20 到 50 人"}},
+      {"id": "large-fit", "col": 1, "row": 2, "kind": "out", "label": {"en": "A lead plus an agent", "zh": "负责人加智能体"}, "note": {"en": "or an AI-led agency", "zh": "或 AI 驱动的代理机构"}}
+    ],
+    "edges": [["solo", "solo-fit"], ["mid", "mid-fit"], ["large", "large-fit"]]
+  }
+}

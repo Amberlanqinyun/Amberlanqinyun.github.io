@@ -1,0 +1,78 @@
+{
+ "job-waves": {
+  "caption": {
+   "en": "Jobs that repeat weekly and are easy to check go first. Anything that reaches a named person or spends money waits until review habits are in place.",
+   "zh": "每周重复、便于检查的工作先交给 AI。凡是触达具体某个人或者要花钱的工作，都要等审核习惯建立之后再交。"
+  },
+  "cols": 4,
+  "nodes": [
+   {
+    "id": "pos",
+    "col": 0,
+    "row": 0,
+    "kind": "human",
+    "label": {
+     "en": "Positioning draft",
+     "zh": "定位草稿"
+    },
+    "note": {
+     "en": "owner decides every line",
+     "zh": "每一行由企业主定夺"
+    }
+   },
+   {
+    "id": "w1",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "First wave: pick two",
+     "zh": "第一批：选两项"
+    },
+    "note": {
+     "en": "search, content, reviews, measurement",
+     "zh": "搜索、内容、评论、衡量"
+    }
+   },
+   {
+    "id": "w2",
+    "col": 2,
+    "row": 0,
+    "label": {
+     "en": "Second wave",
+     "zh": "第二批"
+    },
+    "note": {
+     "en": "social, growth and conversion",
+     "zh": "社交媒体、增长和转化"
+    }
+   },
+   {
+    "id": "w3",
+    "col": 3,
+    "row": 0,
+    "label": {
+     "en": "Third wave",
+     "zh": "第三批"
+    },
+    "note": {
+     "en": "outbound, paid and data",
+     "zh": "主动外联、付费推广和数据"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "pos",
+    "w1"
+   ],
+   [
+    "w1",
+    "w2"
+   ],
+   [
+    "w2",
+    "w3"
+   ]
+  ]
+ }
+}

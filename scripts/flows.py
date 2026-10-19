@@ -162,6 +162,10 @@ def _wide(spec, lang):
         h = ry[r + sp - 1] + rh[r + sp - 1] - y
         if sp == 1:
             h = rh[r]
+        elif sp >= 3:  # a box across three or more rows keeps its own height, centred; arrows branch to it
+            own = max(sizes[n["id"]][2], 56)
+            if h > own + 40:
+                y, h = y + (h - own) / 2, own
         geo[n["id"]] = (x, y, cw, h)
     H = ry[-1] + rh[-1]
     parts = []
@@ -169,8 +173,11 @@ def _wide(spec, lang):
         ax, ay, aw, ah = geo[e[0]]
         bx, by, bw, bh = geo[e[1]]
         lo, hi = max(ay, by), min(ay + ah, by + bh)
+        # A straight line only when one box's centre lies within the other's height; otherwise an elbow.
+        if lo < hi and not (ay <= by + bh / 2 <= ay + ah or by <= ay + ah / 2 <= by + bh):
+            lo = hi
         if bx > ax + aw - 1 and lo < hi:  # side by side with overlapping heights: straight line
-            y = by + bh / 2 if ay <= by + bh / 2 <= ay + ah else (ay + ah / 2 if by <= ay + ah / 2 <= by + bh else (lo + hi) / 2)
+            y = by + bh / 2 if ay <= by + bh / 2 <= ay + ah else ay + ah / 2
             parts.append(_arrow(ax + aw, y, bx - 2, y))
             mx, my = (ax + aw + bx) / 2, y - 6
         elif bx + bw < ax + 1 and lo < hi:

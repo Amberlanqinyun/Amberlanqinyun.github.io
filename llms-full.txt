@@ -5285,7 +5285,7 @@ How does the report get its numbers?
 
 It reads numbers two ways. Tools with a connector Claude can use are queried live each time someone opens the page, which covers the CRM and the social scheduler. Tools without one are pulled by small scripts every morning into daily files, which covers Google Analytics and the LinkedIn outreach tool. The page reads both and treats them the same.
 
-Diagram, read as a list: CRM and social scheduler (read live) leads to The report page. Analytics and outreach tool (no live connector) leads to Daily files. Daily files (pulled each morning) leads to The report page. The report page (any date range, every number linked to its source) leads to A person reviews. A person reviews (notes and Slack draft) leads to Shared with the team. Shared with the team.
+Diagram, read as a list: CRM and social scheduler (read live) leads to The report page. Analytics and outreach tool (no live connector) leads to Daily files. Daily files (pulled each morning) leads to The report page. The report page (any date range, every number sourced) leads to A person reviews. A person reviews (notes and Slack draft) leads to Shared with the team. Shared with the team.
 Two ways in, one page out. Tools with a connector are read live, the rest arrive as daily files, and nothing reaches the team until a person approves it. The amber box is the step where a person decides.
 
 Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol. Live queries use each reader's own access, so a teammate without CRM access sees a gap, never someone else's data.
@@ -5497,6 +5497,9 @@ Which tool suits your team?
 
 Match the tool to the person who will own it. A non-technical owner or office manager should start with Zapier. An operations-minded person who enjoys building should try Make. A team with a developer, or with strict data needs, should look at n8n. A marketer comfortable with files who wants drafting and reporting done should look at Claude Code.
 
+Diagram, read as a list: Who will own it? (match the tool to that person) leads to Zapier, Make, n8n, Claude Code, A consultant or build. Zapier (a non-technical owner or office manager). Make (an operations person who likes building). n8n (a developer, or strict data needs). Claude Code (a marketer comfortable with files). A consultant or build (nobody has hours to learn one).
+The person who will own the tool decides the pick. When nobody has the hours to learn one, a consultant or a build with handover fills the gap.
+
 Your teamStart withWhy
 
 Owner-run, no technical staff, a few simple automationsZapier free or ProfessionalFastest to set up, widest app catalogue
@@ -5656,6 +5659,9 @@ Each agent should have a one-page brief (its job, inputs, tools, limits and revi
 What should you ask before you hire?
 
 Ask questions that have the candidate show working examples. Eight questions cover the ground: a live run, the test set, the limits, the data, failure handling, monitoring, ownership and handover. Put the same questions to every candidate, in writing where you can, and score the answers on the table further down.
+
+Diagram, read as a list: Same eight questions (every candidate, in writing) leads to Check red flags. Check red flags (reasons to look elsewhere) leads to Score side by side. Score side by side (same weighted table for all) leads to Compare price last. Compare price last (only for those who pass) leads to Put ownership in writing. Put ownership in writing (code, accounts, data in your name) leads to Agree the handover. Agree the handover (before the build begins).
+Every candidate answers the same questions and is scored on the same table, which keeps the comparison fair. Ownership and the handover are settled in writing before any build starts.
 
 Can you show me an agent you built, running on real work? Input, steps, output and review, live or recorded.
 
@@ -5893,6 +5899,9 @@ Why do setup and adoption cost more than the seats?
 
 For a 10 person team, US$200 to US$250 a month is small next to the hours it takes to make the tool useful. Someone has to set up the workspace, connect the right tools, write the shared instructions and templates, train staff and check the output. Those hours decide whether the seats pay back.
 
+Diagram, read as a list: Buy monthly seats (daily users first, rating off) leads to Write a shared brief. Write a shared brief (business, customers, tone, what stays out) leads to Turn jobs into templates. Turn jobs into templates (two or three to start) leads to Connect one tool. Connect one tool (read-only first) leads to Agree a review rule. Agree a review rule (a named person checks customer work) leads to Set seats, then go annual. Set seats, then go annual (after four to six weeks).
+The seats are the quick part. Most of the month goes on the brief, the templates, one connected tool and a review rule, and the seat count waits until four to six weeks of real use show who needs one.
+
 Skills are the gap. KPMG and the University of Melbourne's 2025 global study, surveyed over summer 2024-25, found only 24% of New Zealanders have formal or informal training in AI, and 51% of New Zealand employees have relied on AI output at work without evaluating its accuracy. A paid seat in untrained hands produces generic work and unchecked mistakes.
 
 A first month that tends to work:
@@ -6028,6 +6037,9 @@ Privacy law follows the client's customers. In New Zealand, the Privacy Commissi
 Where do the review gates go?
 
 Put a gate before each change of audience: after the agent drafts and before an editor reads, after the editor approves and before the client sees, and after the client approves and before anything is published or sent. Automated checks sit at the first gate. People own the other two, and the agent never publishes or sends on its own.
+
+Diagram, read as a list: Agent draft leads to Automated checks. Automated checks (voice, banned claims, sources) leads to Editor approval. Editor approval (against the client brief) leads to Client approval. Client approval (anything under its name) leads to Published or sent. Published or sent.
+A gate sits before each change of audience. Automated checks run first, and people own the two gates before work reaches the client or the public. The amber box is the step where a person decides.
 
 Automated checks. Voice rules, banned claims and a source check on every number, run before a person reads the draft. Drafts that fail are rewritten against the lines that failed.
 
@@ -6173,6 +6185,9 @@ What does an AI consultant cost for a small business?
 
 For a 5 to 50 person business, a sensible first engagement is a fixed-price assessment or workshop, followed by one implementation project. Published ANZ prices for that first step run from NZD 795 to about AUD 5,000 plus GST. In New Zealand, the AI Advisory Pilot can co-fund up to half the cost through an approved provider.
 
+Diagram, read as a list: Pick one process (the one wasting most hours) leads to Assessment or workshop. Assessment or workshop (fixed price, on that process) leads to One implementation project. One implementation project (written scope, your accounts) leads to Add training. Add training (once the first change is live). Grant or free centre (NZ pilot, Australian Adopt Centres) leads to Assessment or workshop.
+The first spend is a fixed-price assessment on the one process that wastes the most hours. Check whether a grant or free centre can cover it, and add training once the first change is live.
+
 The business.govt.nz page says the AI Advisory Pilot covers up to 50% of eligible costs, including up to NZD 2,500 for an AI roadmap and up to NZD 12,500 for implementation, for businesses with an NZBN and fewer than 50 full-time employees, open until 30 June 2027. A roadmap costing NZD 5,000 could therefore cost the business NZD 2,500 if the application succeeds and the provider is one the pilot accepts. The same page says the pilot does not fund work completed before funding approval. The guide to New Zealand's AI Advisory Pilot covers eligibility, exclusions and how to apply through a Regional Business Partner Network growth advisor. Flow AI is not an approved provider for the pilot, so its work cannot be funded through it.
 
 A simple budget sequence for a small business:
@@ -6266,6 +6281,9 @@ A single total hides what you are paying for, so this guide builds the cost from
 What are the four parts of an AI agent's cost?
 
 An AI agent's cost has four parts: the people time to scope, build and test it, the language model usage it consumes on every run, the automation platform or server it runs on, and the hours each month to monitor, fix and change it. People time is usually the largest part, at the build stage and afterwards.
+
+Diagram, read as a list: People time (scoping, building, testing, handover) leads to Build cost. Build cost. Model usage (per million tokens, in USD) leads to Running cost a month. Platform (subscription by runs or tasks) leads to Running cost a month. Upkeep (monitoring and fixes, hours each month) leads to Running cost a month. Running cost a month.
+People time sets the build cost, and the other three parts make up the monthly bill. Ask for a quote split this way so you can check each line.
 
 PartWhat it pays forHow it is billedWhere the price comes from
 
@@ -6440,6 +6458,9 @@ This page is the checklist. The guide to whether you need an AI marketing agency
 How does an AI marketing agency work week to week?
 
 An AI marketing agency works in a weekly loop. Its systems read your business, your market and last week's numbers, draft the next piece of work, and pass it to a person for review. Approved work ships, results are measured, and the next round starts from what was learned. The review step sets the quality of everything that ships.
+
+Diagram, read as a list: Brief (the written positioning file) leads to Research. Research (demand, competitors, AI answers) leads to Draft. Draft (pages, posts, emails, reports) leads to Review. Review (a named person approves) leads to Ship. Ship (from your own accounts) leads to Measure. Measure (enquiries, sources, cost of each) leads to Brief.
+The loop runs every week, and the review step sets the quality of everything that ships. Measurement feeds straight back into next week's brief. The amber box is the step where a person decides.
 
 In practice the loop has six steps:
 
@@ -6725,6 +6746,9 @@ How to compare agency quotes on cost per enquiry
 
 Cost per enquiry is total marketing spend in a period divided by the genuine enquiries it produced. It turns quotes with different scopes into one number. Add the fee, ad spend, tools and a value for your own hours, then divide by the enquiries you expect, and check the result against what an enquiry is worth to you.
 
+Diagram, read as a list: Total each option (fee, ad spend, tools, your hours) leads to Define an enquiry. Define an enquiry (a call, form or booking) leads to Estimate enquiries. Estimate enquiries (agency estimate or your history) leads to Divide cost by enquiries. Divide cost by enquiries (compare with an enquiry's value) leads to Recalculate at three months. Recalculate at three months (with real numbers) leads to Keep the winner. Keep the winner.
+Every quote runs through the same steps, so different scopes end up as one number you can compare. After three months, real figures replace the estimates and you keep whichever option wins.
+
 Total the monthly cost of each option: fee, ad spend, setup fees spread over 12 months, tools and your hours at a rate you choose.
 
 Agree what counts as an enquiry: a call, form or booking from a real prospect.
@@ -6879,6 +6903,9 @@ How do you score providers side by side?
 
 Score each provider from 0 to 3 on six criteria, multiply by the weight, and add up. The table puts the most weight on the running system, ownership and review, because those are hardest to fix after you sign. Price matters, but compare it only between providers that pass the first three.
 
+Diagram, read as a list: Same brief to each (sent to every provider) leads to Ask the questions. Ask the questions (system, data, results, exit) leads to Check red flags. Check red flags (drop entries that show several) leads to Score six criteria. Score six criteria (0 to 3, times the weight) leads to Drop totals under 25. Drop totals under 25 (out of a possible 42) leads to Compare on price. Compare on price (first three criteria passed).
+Every provider gets the same brief and the same questions, so the scores compare like with like. Price comes last, and only between providers that pass the first three criteria.
+
 CriterionWeightScores 3 whenScores 0 when
 
 Running system (questions 1, 2)3Showed a real run with inputs, outputs and reviewSlides only
@@ -6938,6 +6965,9 @@ Short answer: Auckland businesses get recommended by ChatGPT and Google Maps whe
 How do ChatGPT and Google Maps choose which Auckland businesses to recommend?
 
 Both look for a business that matches the request and sits close to the person asking, then favour the ones with a good reputation. Google Maps reads that mostly from your Business Profile. ChatGPT, Perplexity and Google AI Mode search the web, map listings and reviews, then name the businesses whose details they can find and confirm across several sources.
+
+Diagram, read as a list: Web pages leads to Assistant searches and matches. Map listings leads to Assistant searches and matches. Reviews leads to Assistant searches and matches. Assistant searches and matches (fits the request, close by) leads to A short list of names. A short list of names (four or five, confirmed across sources).
+Assistants build a local answer from web pages, map listings and reviews you can work on. The businesses named are the ones whose details they can find and confirm across several of those sources.
 
 Local AI search is the way assistants such as ChatGPT, Perplexity and Google AI Mode answer place-based questions by combining web pages, map listings and reviews into a short list of named businesses. A person types "good family lawyer in Henderson" and gets four or five names with a sentence on each, often without seeing a results page at all.
 
@@ -7017,6 +7047,9 @@ A 30-day checklist for Auckland businesses
 
 Thirty days is enough to put the foundations in place. Spend week one on the Business Profile, week two on consistent details and the NZBN, week three on service and area pages, and week four on directories, crawler access and a baseline. Budget three to five hours a week, then about an hour a week to keep it running.
 
+Diagram, read as a list: Week 1: Business Profile (category, suburbs, review requests) leads to Week 2: matching details. Week 2: matching details (one NAP format, NZBN included) leads to Week 3: service and area pages. Week 3: service and area pages (answer first, NZD price ranges) leads to Week 4: listings and baseline. Week 4: listings and baseline (directories, crawler access, five prompts) leads to Weekly upkeep. Weekly upkeep (about an hour a week).
+Each week builds on the one before: the profile first, then details that match everywhere, then pages that agree with both. The week four baseline is what each monthly check compares against.
+
 WeekTaskTimeDone when
 
 1Claim or verify the Google Business Profile, set the primary category, list up to 20 suburbs or areas as service areas, add services, hours and holiday hours2 to 3 hoursEvery section complete, address hidden if you travel to customers
@@ -7078,6 +7111,9 @@ Short answer: A well-run AI marketing build spends week one on a written scope a
 What happens when you hire an AI marketing agency?
 
 In a well-run engagement, the first month turns a conversation into one working system. Week one produces a written scope and a positioning brief. Week two installs the first agent with a person approving its output. Week three runs it and measures it against a baseline. Week four hands it over with documentation and picks the next job.
+
+Diagram, read as a list: Week 1: scope and brief (written, approved before building) leads to Week 2: first agent. Week 2: first agent (a person approves its output) leads to Week 3: run and measure. Week 3: run and measure (against a baseline) leads to Week 4: handover. Week 4: handover (with documentation) leads to Pick the next job. Pick the next job (based on what the month showed).
+Each week ends with one output: a scope, a working agent, a measured run and a handover. The fourth week also chooses the next job, so the build continues from evidence.
 
 An AI marketing build is a fixed project in which a provider sets up AI agents to run specific marketing jobs inside your business, starting from a written scope and ending with a documented handover. An AI marketing agent is the software doing one of those jobs, such as keeping your site visible in AI search or drafting a month of content, with a person reviewing what it produces.
 
@@ -7150,6 +7186,9 @@ BeforeAccess and baselineAccount access, a decision maker, current numbersA list
 Who approves what during the build?
 
 A person who knows the business approves anything a customer will see or that spends money, along with any change to what the agent is allowed to do. The agent can research, draft, sort and report on its own. Writing those boundaries into the scope protects your reputation and keeps the agent useful while it learns your standards.
+
+Diagram, read as a list: Agent output (research, drafts, sorting, reports) leads to Seen by customers?. Seen by customers? (or spends money, or changes rules) leads to Person approves, Agent carries on alone. Person approves (someone who knows the business) leads to Goes ahead. Goes ahead. Agent carries on alone.
+The line sits where a customer would see the work or money would be spent. Below it the agent works on its own, and above it a person who knows the business signs off, including any change to what the agent may do. The amber box is the step where a person decides.
 
 The evidence for keeping a person in the loop is plain. KPMG and the University of Melbourne's 2025 New Zealand snapshot, surveyed over summer 2024-25, found 46% of New Zealand employees had made mistakes in their work due to AI and 51% had relied on AI output without evaluating its accuracy. Customers notice too: Constant Contact's 2026 research with Australian and New Zealand small businesses found 27.6% said customers had raised concerns about data privacy and a lack of human oversight.
 
@@ -7301,6 +7340,9 @@ Can you combine AI marketing tools with a service?
 
 Yes, and many small businesses should. A common split keeps social and email in house with tools while a provider runs the lines that need more skill or steady hours, such as AI search, SEO or outbound. Keep every account in your name so work can move between you and the provider as the business changes.
 
+Diagram, read as a list: Positioning file (one page, same facts for all) leads to Your best channel, Line you know least. Your best channel (run in house with tools) leads to One shared report. Line you know least (provider, or build and handover) leads to One shared report. One shared report (enquiries, sources, cost per enquiry) leads to Review at 90 days. Review at 90 days (move work to what produces enquiries).
+Both routes read from the same positioning file and report into the same numbers. After 90 days, the report shows where to move the work. The amber box is the step where a person decides.
+
 When people search for the best AI marketing services, they often want this mix. A sensible order:
 
 Write a one-page positioning file so every tool and every provider works from the same facts.
@@ -7416,6 +7458,9 @@ For market price ranges across agencies, freelancers and AI tools, explore the g
 An AI marketing scope of work template you can copy
 
 Use the table below as a skeleton. Copy the section names into your own document, replace the example wording with your project's details, and send it to each provider you are considering so every quote answers the same questions. Leave a section blank only if both sides agree, in writing, that it does not apply.
+
+Diagram, read as a list: The ten sections (copied into your document) leads to Your project's details. Your project's details (replace the example wording) leads to Sent to each provider. Sent to each provider (each quote answers the same questions) leads to Compare line by line. Compare line by line (quotes you can compare).
+Every provider receives the same ten sections, so the quotes come back answering the same questions. Leave a section blank only when both sides agree in writing.
 
 SectionWhat to writeExample wording
 
@@ -7639,6 +7684,9 @@ How do you choose between the types?
 
 Choose the type by the job you need done. An established agency suits ongoing search, ads and web work with AI added. An AI-native agency suits one defined outcome run on its system. An AI search specialist suits visibility in AI answers. Build-and-train firms and marketing engineers suit owners who want to keep the systems.
 
+Diagram, read as a list: The job you need (choose the type by it) leads to Established or AI-native agency, AI search specialist, Build-and-train firm, Marketing engineer, Established agency. Established or AI-native agency (several channels, team at capacity). AI search specialist (customers research you first). Build-and-train firm (time, with a method to build). Marketing engineer (systems your team owns and runs). Established agency (large media or brand campaigns).
+Each situation points to a type of provider. Find the line that describes your business, then build the shortlist from that type.
+
 Several channels to run and a team already at capacity: an established or AI-native agency (the guide to whether you need an AI marketing agency tests this).
 
 Customers research you before they call: an AI search specialist.
@@ -7817,6 +7865,9 @@ How do you choose an AI marketing provider in Australia?
 
 Start from the job you need done, then pick the type, then compare two or three names inside it. A business that wants ChatGPT to mention it should talk to an AI search specialist, while one that wants enquiries answered after hours is better served by an automation firm. Then ask each shortlisted provider for a written scope and price.
 
+Diagram, read as a list: Name the job (the work you need done) leads to Pick the type. Pick the type (such as AI search or automation) leads to Compare two or three. Compare two or three (names inside that type) leads to See a system running. See a system running (with its human review step) leads to Ask what stays yours. Ask what stays yours (accounts, agents and data) leads to Scope and price in writing. Scope and price in writing (before you sign).
+Start from the job and let it choose the type, then compare names inside that type. A provider's working system and written scope tell you more than its place on a list.
+
 Prices are rarely public. Digital Nomads HQ's June 2026 audit of 411 service lines across 140 Australian agencies found 78% publish no pricing, with a median SEO entry price of AUD 1,470 a month. In this list only Robotic Marketer publishes prices. The AI marketing cost guide for Australia and New Zealand sets out sourced ranges for tools, freelancers, agencies and hires.
 
 In the first meeting, ask to see a system running on a real business, with the human review step, and ask which accounts, agents and data stay in your name if you leave. For large paid media budgets and brand campaigns, a full-service agency remains the right call. The twelve questions for choosing an AI marketing provider turn this into a scoring sheet, and the New Zealand edition of this list uses the same criteria.
@@ -7900,6 +7951,9 @@ Two habits keep the data small. Give the provider access inside your own systems
 What happens when AI vendors process your data offshore?
 
 Most AI models run on servers outside New Zealand and Australia. In New Zealand, sending data to an overseas provider that only processes it for you is not a disclosure under IPP 12. In Australia, an overseas cloud arrangement can count as a use rather than a disclosure under APP 8, if a contract keeps you in effective control.
+
+Diagram, read as a list: Data processed offshore (most AI models run abroad) leads to New Zealand test, Australia test. New Zealand test (does the vendor use it for itself?) leads to Not a disclosure, IPP 12 applies. Not a disclosure (processing only for you). IPP 12 applies (comparable safeguards or authorisation). Australia test (binding contract, effective control?) leads to Counts as a use, A disclosure. Counts as a use (under APP 8). A disclosure (you answer for their breaches).
+Two tests for the same arrangement. In New Zealand the question is whether the vendor uses your data for its own purposes, and in Australia it is whether a binding contract keeps you in effective control.
 
 The New Zealand position comes from the Privacy Commissioner's IPP 12 guidance, which says using offshore cloud providers or other agents to store or process data is not treated as a disclosure, so long as the agent is not using the information for its own purposes. If an AI vendor uses your inputs for its own purposes, such as training its models, the transfer falls under IPP 12. You then need reasonable grounds to believe the recipient gives comparable safeguards, usually through a contract such as the Commissioner's model clauses, or each person's authorisation after being expressly told their information may not be protected to New Zealand standards.
 
@@ -8323,6 +8377,9 @@ Methodology and caveats
 
 Every figure on this page was opened at its source on 8 October 2026. SEEK figures are job-ad data, and the salary bands are advertised ranges. Hays and Talent International are recruiters, and Bloomberry, Onfire and Profound sell products to this market. Several widely repeated numbers could not be confirmed at source and were left out.
 
+Diagram, read as a list: A published figure (often widely repeated) leads to Open it at source. Open it at source (on 8 October 2026) leads to Label what it is, Left out. Label what it is (job ads, recruiter or vendor) leads to Used on this page. Used on this page. Left out (when the source cannot confirm it).
+Every number on this page went through the same check. A figure that could not be confirmed at its source was left out, however often it is quoted elsewhere.
+
   Vendors. Bloomberry sells job-postings data and Onfire sells GTM software; Profound, which popularised the marketing engineer title, runs a job board for it. Their figures are labelled as vendor data.
 
   Geography. Growth Unhinged's data covers US B2B companies, and Bloomberry does not state its countries. Neither has a New Zealand breakdown.
@@ -8410,6 +8467,9 @@ The pilot excludes AI products or services built to sell, general software or pr
 How do you apply for the AI Advisory Pilot, and when does it close?
 
 You apply by registering your business with the Regional Business Partner Network and speaking with a growth advisor, who will confirm whether the pilot suits what you want to do. Business.govt.nz estimates four to 12 hours of effort. As at 8 October 2026, the official page says the pilot is open until 30 June 2027.
+
+Diagram, read as a list: Register with the RBPN (link on business.govt.nz) leads to Growth advisor checks fit. Growth advisor checks fit (the jobs you want AI to do) leads to Apply and agree scope. Apply and agree scope (if the pilot fits) leads to Funding approval. Funding approval (no work starts before this) leads to AI roadmap. AI roadmap (stage one, planning) leads to Implementation. Implementation (stage two, into practice).
+The growth advisor judges whether the pilot fits before you apply. Nothing starts until funding is approved, because work done before approval is not funded. The amber box is the step where a person decides.
 
   Register with the RBPN using the link on the official AI Advisory Pilot page on business.govt.nz.
 
@@ -8582,6 +8642,9 @@ What does a marketing engineer do in a week?
 
 A marketing engineer's week splits between running the systems already live and building or fixing the next one. Most of the running time goes on review: reading what the agents produced, approving or rejecting it, and turning rejection reasons into better instructions. Building happens in focused blocks once the weekly review is done.
 
+Diagram, read as a list: Agents produce drafts leads to Engineer reviews. Engineer reviews (reads what the agents produced) leads to Approved work ships, Rejection reason logged. Approved work ships. Rejection reason logged leads to Better instructions. Better instructions leads to Agents produce drafts.
+Most of the running time goes on the amber step. Each rejection reason is logged and turned into better instructions for the agents' next round. The amber box is the step where a person decides.
+
 A realistic week for one engineer running a small company's marketing looks like this:
 
   Read last week's numbers: enquiries, pipeline from outbound, which pages AI assistants cited, what each agent shipped.
@@ -8723,6 +8786,9 @@ Does a small business need a marketing engineer?
 
 A business of 5 to 50 people needs what a marketing engineer produces, a set of systems that run the marketing every week, more than it needs the full-time seat. For most, the right first step is buying the systems built on its own accounts, then hiring once several run weekly and need constant tuning.
 
+Diagram, read as a list: Buy the systems (built on your own accounts) leads to Train a reviewer inside. Train a reviewer inside leads to Several systems run weekly. Several systems run weekly (and need constant tuning) leads to Hire full time. Hire full time (someone senior signs off positioning).
+For most small businesses the permanent hire comes last. The systems come first, on accounts the business owns, and the hire follows once several of them run every week. The amber box is the step where a person decides.
+
 A full-time hire makes sense when several systems run and someone senior can sign off positioning. Before that, a part-time engineer or a service can build the first marketing agents and train a person inside to review them. If the question is who plans the work above the agents, the guide to the AI CMO covers that layer.
 
 Either way, every system and prompt should live on accounts the business owns.
@@ -8822,6 +8888,9 @@ Agents are still early in marketing. Salesforce's State of Marketing report (4,4
 A first-30-days plan for using AI in marketing
 
 A good first month for using AI in marketing has four steps, one per week: write the inputs, hand over one production job, add a review gate and a second job, then measure and decide. It needs a few hours a week on top of normal work, and it ends with a written decision about what to keep.
+
+Diagram, read as a list: Write the inputs (Week 1: positioning, voice, questions) leads to Hand over one job. Hand over one job (Week 2: repeats weekly, easy to check) leads to Review gate, second job. Review gate, second job (Week 3: a checklist and who runs it) leads to Measure and decide. Measure and decide (Week 4: hours, edits, errors) leads to A written decision. A written decision (keep, drop, or flag for an agent).
+One step a week, for a few hours on top of normal work. The month ends with a written decision about which jobs to keep. The amber box is the step where a person decides.
 
 Week 1: write the inputs. A one-page positioning file (what you claim, for whom, with what proof), five to ten voice rules, and the twenty questions customers ask most. Log one week of your own time by marketing job so you know where the hours go.
 
@@ -8964,6 +9033,9 @@ Which AI agent should you build first?
 
 Build the positioning brief first, then the agent for the gap that costs the most. The brief is a one-page record of who you sell to, what you claim and what proves it, and every agent reads it before producing anything. Without it, ten agents produce ten slightly different businesses, and review time balloons correcting the drift.
 
+Diagram, read as a list: Positioning brief (who you sell to, what proves it) leads to Search agent, Outbound agent, Conversion agent. Search agent (buyers search, you rarely appear) leads to Measurement. Outbound agent (named buyers, referral pipeline) leads to Measurement. Conversion agent (traffic without enquiries) leads to Measurement. Measurement (before the second month).
+Every agent reads the positioning brief, so the brief comes first. The gap that costs the most picks the first agent, and measurement goes in before the second month so that agent can be judged.
+
 After the brief, the right first agent depends on where the business is losing the most money today. Three questions usually settle it:
 
   Do buyers search for what you sell? If yes, and you rarely appear in Google or in AI answers, the search agent comes first. It also produces the topic list the content agent needs later. The answer engine optimisation work sits here.
@@ -9012,6 +9084,9 @@ A useful rule for a small team: buy where the job is generic, use installed skil
 What a marketing AI agent workflow looks like in a week
 
 A marketing agent workflow runs on a weekly loop: the agent reads what changed, produces the week's work, a person reviews it in one sitting, approved work ships, and the results feed the next cycle. Once the brief is right, the owner's part should settle at under an hour a week per agent.
+
+Diagram, read as a list: Read and plan (Monday: last week's numbers and notes) leads to Produce the work. Produce the work (Tuesday to Wednesday) leads to Review in one sitting. Review in one sitting (Thursday: approve or reject) leads to Approved work ships. Approved work ships (Friday: reasons go into the brief) leads to Read and plan.
+A named person reviews the week's work in one sitting. Approved work ships, and the reasons for any rejection go into the brief for the next cycle. The amber box is the step where a person decides.
 
   Monday: the agent reads last week's numbers and review notes, then drafts the plan.
 
@@ -9102,6 +9177,9 @@ Short answer: Choose an AI marketing agency when you want marketing produced and
 What is the difference between an AI agency, an AI automation agency and an AI consultant?
 
 An AI marketing agency produces and runs your marketing with AI systems. An AI automation agency builds workflows that take repetitive tasks off your staff. An AI consultant advises, plans and trains while your own people do the work. All three call themselves an AI agency, so the job you need done decides which one fits.
+
+Diagram, read as a list: The job you need done leads to AI marketing agency, AI automation agency, AI consultant, In-house person plus engineer. AI marketing agency (marketing run for you). AI automation agency (one process that wastes hours). AI consultant (a plan before you spend). In-house person plus engineer (someone on your team has time).
+Three of these call themselves an AI agency, so the job you need done decides which one fits. The fourth route keeps the systems and the skill inside your business.
 
 An AI agency is an outside provider that builds, runs or advises on AI systems for a business, usually specialising in marketing output, process automation or strategy and training.
 
@@ -9299,6 +9377,9 @@ How do AI answer engines choose what to cite?
 
 Most answer engines search before they write. They split the question into narrower queries, fetch pages from an index, pull out the passages that answer each part, and write a reply citing a handful. A page gets cited when the engine can reach it and it answers the narrow query plainly from a source that looks trustworthy.
 
+Diagram, read as a list: A customer's question leads to Split into narrower queries. Split into narrower queries (query fan-out) leads to Fetch pages. Fetch pages (from an index) leads to Pull out passages. Pull out passages (that answer each part) leads to Written reply. Written reply (cites a handful of sources).
+A page earns its citation at the passage step: the engine has to reach it, and a sentence or two on it must answer the narrow query plainly.
+
 That splitting step is often called query fan-out. Ask "who should I use to replace my hot water cylinder in Tauranga?" and the engine may search separately for replacement costs, licensed plumbers in Tauranga and reviews of the names it finds. A pricing page, a Tauranga service page and recent reviews give it material at each step.
 
 Ranking well in Google helps, but it does not decide the result. Ahrefs' own analysis of 15,000 prompts in 2025 found only 12% of URLs cited by ChatGPT, Gemini and Copilot ranked in Google's top 10 for the same prompt (8% for ChatGPT alone). Inside Google, Ahrefs' March 2026 update, covering 863,000 keyword results, found 37.9% of pages cited in AI Overviews ranked in the top 10 for that keyword, and 31.0% ranked outside the top 100. Ahrefs sells SEO software, so read these as one vendor's data. The direction is clear all the same: engines cite passages from well beyond page one.
@@ -9354,6 +9435,9 @@ The full comparison, with which one to fund first, is in AEO vs SEO vs GEO: what
 What can a small business do about AEO this month?
 
 A small business can cover most of AEO without a developer by working through five areas in order: let the AI crawlers in, write down the facts about the business, build pages that answer real questions, earn proof and mentions elsewhere, then add structured data. Each step depends on the one before.
+
+Diagram, read as a list: Let the crawlers in (robots.txt and your host) leads to Write down the facts. Write down the facts (matched on every listing) leads to Answer the questions, Add structured data. Answer the questions (a short answer opens each page) leads to Earn proof elsewhere. Earn proof elsewhere (reviews, listings, local news) leads to Add structured data. Add structured data (the same facts, for machines).
+Each step depends on the one before it, so work through them in order. Structured data comes last because it repeats the facts written down in step two.
 
 Let the crawlers in. Check robots.txt allows OAI-SearchBot, PerplexityBot, Googlebot and Bingbot, and that your host is not blocking AI crawlers. Flow AI's free AI crawler access check tests fourteen AI crawlers against robots.txt, page tags and server headers.
 
@@ -9434,6 +9518,9 @@ For a business of 5 to 50 staff, the useful way to read the term is by job. A hu
 What does an AI CMO do each week?
 
 An AI CMO works in a cycle. It reads what changed in the business and its market, ranks the marketing problems by likely payoff, writes or updates a plan, turns the plan into briefs for whoever produces the work, and reviews the results against the numbers the owner cares about. Then the cycle repeats with that review folded in.
+
+Diagram, read as a list: Read (site, analytics, reviews, competitors) leads to Rank. Rank (what to fix first, with reasons) leads to Plan. Plan (an owner, deadline and target per item) leads to Brief. Brief (for a person, freelancer or agent) leads to Review. Review (against the owner's numbers) leads to Next month's order. Next month's order leads to Read.
+The cycle starts again with the review folded in. Steps four and five are where products differ most, so check whether a product stops at the brief or also produces the work.
 
 Read. The website, services, prices, past campaigns, analytics, search terms customers use, reviews and the competitors ranking above the business. The quality of everything after this step depends on how much it reads here.
 
@@ -9687,6 +9774,9 @@ A first-month SEO plan for a small business
 
 A realistic first month takes three to five hours a week. Week one covers accounts and technical checks, week two the Business Profile and review routine, week three your most important service pages, and week four location pages, directories and a baseline. After that, the work becomes about an hour a week.
 
+Diagram, read as a list: Accounts and checks (week 1: Search Console, Bing) leads to Profile and reviews. Profile and reviews (week 2: review requests go out) leads to Service pages. Service pages (week 3: your top two or three) leads to Locations and baseline. Locations and baseline (week 4: record the numbers) leads to About an hour a week. About an hour a week (from month two, against the baseline).
+The heavy lifting happens in the first month, at three to five hours a week. The baseline from week four is what every later month is measured against.
+
 Week 1: accounts and checks. Verify Google Search Console and Bing Webmaster Tools, submit the sitemap, review the Pages report, run PageSpeed Insights on the home page and your top service page, and test the site on your phone.
 
 Week 2: Business Profile and reviews. Complete every section of the Google Business Profile, set holiday hours, add ten real photos, claim Bing Places, and send review requests to every customer from the past month.
@@ -9752,6 +9842,9 @@ The Belkins data has good news for this audience. Belkins found businesses with 
 How to build a target list
 
 Build a short list of businesses that match your best existing customers, and write down why each one fits. Fifty to a hundred well-chosen accounts is plenty for a small business. Record where you found each contact's address and why your offer is relevant to their role, because New Zealand spam law depends on both.
+
+Diagram, read as a list: Describe your ideal customer (from your three best clients) leads to Find matching businesses. Find matching businesses (directories, member lists, lost quotes) leads to Find the right person. Find the right person (one named person per business) leads to Record the evidence. Record the evidence (where the address was published) leads to Verify the address. Verify the address (before anything is sent) leads to Your short list. Your short list (50 to 100 accounts).
+Automation helps most with finding businesses and verifying addresses. The evidence step is your consent record, and you still choose who makes the list.
 
   Describe your ideal customer. Look at your three best clients and note industry, size, location, the trigger that made them buy, and the job title of the person who signed.
 
@@ -9838,6 +9931,9 @@ The penalty figures come from section 45 of the New Zealand Act. Enforcement is 
 Where should a human stay in the loop?
 
 A person should approve the target list, read every first email before it is sent, handle every reply, and decide who gets removed. Software can find, research, draft, schedule and track. A small business's name travels further than a large company's, so the review step protects the asset that matters most.
+
+Diagram, read as a list: Find matching businesses (software) leads to Choose the list. Choose the list (a person decides) leads to Research and draft. Research and draft (a first line per account) leads to Approve every first email. Approve every first email leads to Schedule follow-ups. Schedule follow-ups (stops when someone replies) leads to Interested replies. Interested replies (answered by you).
+The amber steps are where your name is on the line, so a person signs off the list and every first email. Software handles the rest, and every interested reply comes back to you. The amber box is the step where a person decides.
 
 This is the human in the loop principle applied to sales. It is a common gap: Australia's National AI Centre found only about half of current SME AI users check AI outputs before they affect customers, in its December 2025 to February 2026 pulse.
 
@@ -10025,6 +10121,9 @@ How to compare agency quotes on cost per enquiry
 
 Cost per enquiry is total marketing spend in a period divided by the number of genuine enquiries it produced. It turns quotes with different scopes into one comparable number. Add the fee, ad spend, tools and a value for your own time, then divide by the enquiries you expect or have measured.
 
+Diagram, read as a list: Total each option (fee, ad spend, tools, your hours) leads to Define an enquiry. Define an enquiry (real prospects, no spam or job seekers) leads to Estimate enquiries. Estimate enquiries (provider estimate or your past numbers) leads to Divide cost by enquiries. Divide cost by enquiries (against what an enquiry is worth) leads to Recalculate at three months. Recalculate at three months (with real numbers) leads to Keep the winner. Keep the winner.
+Quotes with different scopes become one number per option. The estimates get you started, and the recalculation at three months decides which option stays.
+
 Total the monthly cost of each option: fee, ad spend, any setup fee spread over 12 months, tools, and your own hours at an hourly value you choose.
 
 Agree what counts as an enquiry: a call, form or booking from a real prospect. Leave out spam and job seekers.
@@ -10181,6 +10280,9 @@ How to choose the right alternative
 
 Choose by answering four questions: how many hours a week you or a staff member can give marketing, how many channels genuinely bring customers, whether anyone in-house can review work, and what monthly budget you can hold for six months. The answers usually point to one or two options from the table above.
 
+Diagram, read as a list: Hours you can give leads to Shortlist one or two. Channels that bring customers leads to Shortlist one or two. Someone to review work leads to Shortlist one or two. Budget held six months leads to Shortlist one or two. Shortlist one or two (from the options table) leads to Compare cost per enquiry. Compare cost per enquiry (total cost, your hours included) leads to Keep the winner. Keep the winner (recalculated after three months).
+Four plain answers narrow the field to one or two options. Cost per enquiry decides between them, first on estimates and then on three months of real numbers.
+
 Under NZD 1,000 a month and a few hours a week of your own: DIY with tools, plus a freelancer for one defined project.
 
 One channel that clearly matters: a specialist package or a freelancer on that channel.
@@ -10235,6 +10337,9 @@ Can you submit your business to ChatGPT?
 
 You cannot submit a business to ChatGPT, because no submission form, directory or paid listing exists. ChatGPT, Perplexity, Google AI Mode and Copilot assemble each answer from pages they can find on the open web and from their search partners. Your job is to make your business easy for those systems to find and confirm.
 
+Diagram, read as a list: Check the assistants (your baseline list) leads to Let the crawlers in. Let the crawlers in (robots.txt and Bing) leads to Write quotable pages. Write quotable pages (plain facts near the top) leads to Earn mentions. Earn mentions (on sites already cited) leads to Match your details. Match your details (identical everywhere) leads to Collect recent reviews. Collect recent reviews (ask every week) leads to Re-run prompts monthly. Re-run prompts monthly (against the baseline).
+The steps run in the order I would take them for a small business. The first check becomes the baseline, and the monthly re-run measures every later step against it.
+
 This matters more each quarter. OpenAI said at DevDay in September 2026 that its products reach a collective 1.2 billion weekly users, a figure that covers all of its products together. Closer to home, InternetNZ's Internet Insights research, surveying 1,003 New Zealand adults in late 2025, found 53% had used a text-based AI chatbot in the past year and 55% had used AI inside a search engine.
 
 The useful question is what those assistants read when someone asks for a business like yours. The guide to answer engine optimisation covers the theory. This page is the practical version, in the order I would do it for a small business.
@@ -10242,6 +10347,9 @@ The useful question is what those assistants read when someone asks for a busine
 Where does ChatGPT find the businesses it recommends?
 
 When ChatGPT searches the web, it rewrites the question into targeted queries, sends them to partner search providers including Microsoft Bing, and reads the pages that come back. It then writes an answer and cites some of those pages. Your website, your Google and Bing listings, directories, reviews and press mentions are all raw material for that answer.
+
+Diagram, read as a list: A customer's question (may carry a general location) leads to Rewritten queries. Rewritten queries (targeted searches) leads to Search partners. Search partners (including Microsoft Bing) leads to Pages that come back. Pages that come back (your site, listings, reviews, press) leads to Answer with citations. Answer with citations (cites some of those pages).
+ChatGPT reads whatever its search partners return, so your own website is one source among several. Listings, directories, reviews and press mentions feed the same answer.
 
 OpenAI's help page on ChatGPT search says it sends rewritten queries to search partners, names Microsoft among them, and may pass a general location based on your IP address. That last detail means a "near me" prompt from Hamilton gets treated as a Hamilton search.
 
@@ -10416,6 +10524,9 @@ Because the titles blur, compare people on what they will do in a normal week. A
 What does a fractional marketing manager do each month?
 
 In a typical month a fractional marketing manager sets or updates the plan, briefs whoever produces the work, checks it before it goes out, manages the budget and reports what happened. Most small business engagements are one or two days a week, roughly 35 to 70 hours a month, often fixed to the same weekday.
+
+Diagram, read as a list: Week 1: priorities and briefs (agreed with the owner) leads to Freelancer or agency. Freelancer or agency (produces the drafts) leads to Week 2: check drafts. Week 2: check drafts (plus pages and ad account) leads to Week 3: approve and schedule. Week 3: approve and schedule (chase late suppliers) leads to Week 4: monthly report. Week 4: monthly report (what shipped, cost, what to stop).
+At one day a week, the manager spends the month deciding and checking. The drafts come from a freelancer or agency, which is why production needs its own budget.
 
 A realistic month for a 15 person service business, at one day a week, looks like this:
 
@@ -10671,6 +10782,9 @@ When to combine a fractional CMO and an AI CMO
 
 Combine them when the business needs a few senior decisions a month and weekly execution. The fractional CMO sets positioning, priorities and the numbers that matter, then reviews results monthly. The AI CMO or agent turns those decisions into weekly work. The business buys senior hours only for judgment, which keeps the fractional engagement at the strategy-only end.
 
+Diagram, read as a list: Positioning and quarterly plan (fractional CMO, day one) leads to Weekly work and drafts. Weekly work and drafts (AI system breaks down the plan) leads to Owner approves. Owner approves (what ships each week) leads to Monthly report. Monthly report (from the AI system) leads to Fractional CMO reviews. Fractional CMO reviews (changes priorities, cuts what fails) leads to Weekly work and drafts.
+Senior hours go into the plan and the monthly review. The weekly work in between runs on the AI system, with the owner approving what ships, and both sides read from one written record. The amber box is the step where a person decides.
+
 In practice the split looks like this. The fractional CMO spends day one on positioning and a quarterly plan. The AI system reads that plan, breaks it into weekly work, produces drafts and reports. The owner approves what ships each week. Once a month the fractional CMO reads the report, changes the priorities and kills what is not working. With a strategy-only fractional engagement at NZD 4,000 to 6,000 a month, the combined cost stays well under a single senior hire.
 
 This only works if the two share one written record: the positioning, the plan, the briefs and the results in one place both can read. Without that, the fractional CMO plans in a slide deck, the software plans from the website, and the owner gets two plans that disagree.
@@ -10748,6 +10862,9 @@ Most owners asking "what does an AI marketing agency do" have the third or fourt
 How can you tell real AI systems from an AI label?
 
 You can tell real AI systems from a label by asking to see a system run, checking whether the price and speed reflect it, and confirming what you keep if you leave. An agency running real systems can show inputs, outputs and the review step in a few minutes. A label usually leads to a capability deck.
+
+Diagram, read as a list: Show me it running (what it read, made, who approved) leads to Show me the pricing logic. Show me the pricing logic (output and scope, or hours) leads to Show me where the human sits. Show me where the human sits (approval before publishing or spend) leads to Show me what I keep. Show me what I keep (everything on your accounts) leads to Show me the report. Show me the report (enquiries, sources, cost per enquiry).
+All five checks fit in one meeting. An agency with real systems can show each one on screen within minutes, and a label usually leads back to a capability deck.
 
 Five checks that take one meeting:
 
@@ -10964,6 +11081,9 @@ How to turn one source into many formats
 
 Make one substantial piece, then cut it into every other format you need. A 20 minute recorded conversation or a 1,200 word article can supply a website page, four or five social posts, a short email, two or three FAQ entries and a video script. Each format needs its own edit, and none needs a fresh idea.
 
+Diagram, read as a list: Capture the source (15 to 20 minute recording or notes) leads to Write the long version. Write the long version (answer in the first paragraph) leads to Social posts, Short email, FAQ entries, Short video, Business Profile post. Social posts (four or five). Short email (links to the full piece). FAQ entries (two or three on a service page). Short video (30 to 60 seconds). Business Profile post (short version with a link).
+One recorded answer supplies every format. The long version is written first, and each shorter piece is cut from it with its own edit, so none of them needs a fresh idea.
+
 This is the step that makes content affordable for a small team. Here is the sequence I use.
 
   Capture the source. Record yourself answering one customer question for 15 to 20 minutes, or write rough notes. Your real examples, prices and opinions go in here.
@@ -10985,6 +11105,9 @@ The AI marketing examples for small business show this pattern alongside nine ot
 How to build a content engine that runs every week
 
 A content engine is a fixed weekly routine where questions go in, drafts come out, a person approves them, and posts get scheduled, without anyone deciding from scratch what to do each week. AI handles the drafting and reformatting. The owner keeps the question list, the edits, the approvals and the replies.
+
+Diagram, read as a list: Monday: pick the question (from the shared list) leads to Tuesday: source notes. Tuesday: source notes (30 to 45 minutes) leads to Wednesday: AI drafts. Wednesday: AI drafts (long piece and formats) leads to Thursday: edit and approve. Thursday: edit and approve (check every claim and price) leads to Friday: replies and enquiries. Friday: replies and enquiries (log what mentions the content).
+AI does the drafting on Wednesday. Nothing is scheduled until the owner has checked every claim and price on Thursday, and that review step is where quality is won. The amber box is the step where a person decides.
 
 A content engine is the system version of the step list above. A simple weekly rhythm looks like this:
 
@@ -11092,6 +11215,9 @@ The customer questions are the second half. Collect twenty from enquiry emails, 
 Step 2: which marketing jobs should you hand to AI first?
 
 Hand AI the jobs that repeat every week and are easy for a person to check, so a weak draft does little harm. For most small businesses that means search and AI search, content or review replies, once positioning exists. Jobs that reach a named person or spend money come later, when review habits are established.
+
+Diagram, read as a list: Positioning draft (owner decides every line) leads to First wave: pick two. First wave: pick two (search, content, reviews, measurement) leads to Second wave. Second wave (social, growth and conversion) leads to Third wave. Third wave (outbound, paid and data).
+Jobs that repeat weekly and are easy to check go first. Anything that reaches a named person or spends money waits until review habits are in place. The amber box is the step where a person decides.
 
 Content is where most businesses start anyway. The National AI Centre's tracker for December 2025 to February 2026 found content generation and data analytics were the leading uses, each by 54% of Australian SME adopters. That is a sensible first job as long as the positioning file comes before it. The table sorts the ten marketing jobs by when to hand them over, and the ten worked AI marketing examples show each one running.
 
@@ -11393,6 +11519,9 @@ What do all ten examples have in common?
 
 Every example follows the same pattern: the AI system drafts, a named person approves anything that reaches a customer or moves money, and one number decides whether the job continues. The pattern matters more than the tool. Businesses that skip the approval step tend to get caught on a claim about their own prices or services.
 
+Diagram, read as a list: Positioning file (the other nine read it) leads to AI system drafts. AI system drafts (one job, every week) leads to Named person approves. Named person approves (anything reaching customers or money) leads to Work goes out. Work goes out leads to One number. One number (decides if the job continues).
+Every example follows the same pattern. Whatever the job, a named person approves anything that reaches a customer or moves money before it goes out, and one number then decides whether the job continues. The amber box is the step where a person decides.
+
 Approval is where many businesses are still thin. The National AI Centre found about half of current Australian SME AI users check outputs before they affect customers, and around 65% of non-adopters cited distrust of AI decision-making or a preference for human control.
 
 The legal exposure stays with the business whoever drafted the words: the Commerce Commission lists Fair Trading Act maximum fines of $200,000 for an individual and $600,000 for a business, per offence. AI will happily write a guarantee the business never offered, so claims and prices sit on every approval list above. The guide to building an AI marketing strategy for a small business turns these rules into a one-page plan.
@@ -11434,6 +11563,9 @@ Short answer: AI marketing automation is software that runs marketing steps on t
 What is AI marketing automation?
 
 AI marketing automation is software that runs marketing steps on triggers, with AI working inside each step. The trigger is something a contact does, such as signing up, booking or going quiet. The step is a message or a task. AI drafts the message, sorts the contact, picks the version or summarises the reply.
+
+Diagram, read as a list: A contact acts (signs up, books or goes quiet) leads to The automation rule. The automation rule (delivery and timing) leads to AI inside the step. AI inside the step (drafts, sorts, personalises) leads to Message or task. Message or task.
+Automation handles delivery and decides when the step runs. AI works inside the step and decides what the message says and which version a contact sees.
 
 AI marketing automation is software that runs marketing steps a person has designed, triggered by what a contact does, with AI drafting, sorting and personalising the content inside each step.
 
@@ -11667,6 +11799,9 @@ Which model suits which situation?
 
 Match the model to the work. A defined job with an end point suits a freelancer. Several channels that need coordinating suit an agency. Steady weekly work, enough to fill a full-time role, suits a hire once someone can manage that person. Budget sets the floor, and below about NZD 1,000 a month outside help rarely has room to work.
 
+Diagram, read as a list: The work you have (and the budget behind it) leads to Do it yourself, Freelancer, Agency, In-house hire. Do it yourself (under about NZD 1,000 a month). Freelancer (a defined job with an end point). Agency (several channels to coordinate). In-house hire (steady weekly work, and a manager).
+Match the model to the shape of the work. Budget sets the floor, and below about NZD 1,000 a month outside help rarely has room to work.
+
 Nobody owns marketing and the budget is under NZD 1,000 a month: do it yourself with tools, and buy a freelancer for one defined project. King Tide advises not hiring anyone below NZD 1,000 to 1,500 a month.
 
 One channel brings most customers: a freelancer or a specialist agency package on that channel.
@@ -11819,6 +11954,9 @@ Which should a small business prioritise first?
 
 Most small businesses should fix the SEO basics first, then add the AEO tasks that happen off Google, then refine pages with GEO methods. The right mix depends on how customers buy. A local trade lives on Google Maps and reviews. A consultancy whose buyers research for weeks gains more from pages that AI tools can quote.
 
+Diagram, read as a list: How customers buy (sets the mix) leads to Fix SEO basics. Fix SEO basics (shared by all three) leads to AEO tasks off Google. AEO tasks off Google (Bing, crawlers, reviews, mentions) leads to Refine with GEO. Refine with GEO (statistics, quotes, sources).
+Most small businesses work in this order, starting with the SEO basics all three share. How your customers buy sets the right mix.
+
 Type of businessThe first 10 hoursThe next 10 hours
 
 Local service (trades, clinics, salons, hospitality)Google Business Profile, Bing Places, matching details on NZ directories, a review request routineOne page per service and suburb, each opening with a direct answer
@@ -11868,6 +12006,9 @@ Short answer: An AEO checklist for a small business covers six areas: open your 
 How to use this checklist
 
 Work through the six groups in order, one or two a day, and tick each item off when it is done. The order matters: AI engines cannot quote a site they cannot read, and they trust facts that match across the web. The first two groups take about a day between them, and the rest fill the week.
+
+Diagram, read as a list: Access for AI crawlers (Monday, items 1 to 4) leads to Facts about the business. Facts about the business (Tuesday, items 5 to 8) leads to Pages that answer. Pages that answer (Wednesday and Thursday) leads to Proof and mentions. Proof and mentions (Friday morning, then monthly) leads to Structured data. Structured data (Friday afternoon) leads to Measurement. Measurement (Friday afternoon).
+Each group depends on the one before it, since an engine cannot quote a page it cannot read. Access and facts take about a day between them, and the rest fill the week.
 
 The checklist is written for a 5 to 50 person business with a website, a Google Business Profile or the intention of one, and nobody on staff who writes code. Where a task needs a developer, it says so. If the terms are new, start with what answer engine optimisation is, and if you are unsure how AEO relates to the SEO you already do, read AEO vs SEO vs GEO.
 
@@ -12061,6 +12202,9 @@ Why the term needs a small business definition
 
     An AI marketing agent works as a repeating five-step loop: it reads the business, plans the month, executes across departments, reports what happened, and waits for a human review before anything reaches a customer. The loop repeats with that review folded back in, which is what makes the second month better than the first.
 
+    Diagram, read as a list: Read the business (site, prices, analytics, competitors) leads to Plan the month. Plan the month (the most broken job first) leads to Execute across departments. Execute across departments (search, content, social, outbound) leads to Report. Report (what shipped and what moved) leads to A human reviews. A human reviews (usually under an hour a week) leads to Read the business.
+Nothing reaches a customer until a person has reviewed it, and that review feeds the next loop. That is how the second month improves on the first. The amber box is the step where a person decides.
+
     
       It reads the business. The website, services, prices, customer list, analytics, the search terms people already use, and the competitors ranking above it. Most tools skip this, which is why generic AI output reads as generic.
 
@@ -12227,6 +12371,9 @@ Why AI marketing transformation stalls before it starts
 
     AI marketing transformation is the rebuild of a marketing department so AI does the production and a human keeps the judgment. For a small business it takes about 90 days: 30 days on positioning, brand facts and measurement, 30 days installing the first two departments, and 30 days making the output compound.
 
+    Diagram, read as a list: Foundation (days 1 to 30, inputs only) leads to First two installs. First two installs (days 31 to 60) leads to Compounding. Compounding (days 61 to 90) leads to Owner picks next. Owner picks next (which department to fund).
+Ninety days covers three monthly cycles. At day 90, two departments ship weekly while a third is in setup, and the numbers tell the owner which one to fund next. The amber box is the step where a person decides.
+
     AI marketing transformation is the process of moving a marketing department from human production to AI production under human review, one department at a time, so that positioning, search, content, social, outbound and measurement all run on a cadence the owner reviews rather than starts.
 
     Ninety days is not arbitrary. It is three monthly cycles, the shortest span in which a business can see whether the system survives a busy month. Most self-run marketing dies in month three, when a large job lands and the owner stops shipping.
@@ -12290,6 +12437,9 @@ Why AI marketing transformation stalls before it starts
     Phase 3, days 61 to 90: making it compound
 
     Phase three adds the departments that need the first two working, and turns the whole thing into a monthly loop. Outbound goes live because there is now something to point people at, social settles into a cadence, and measurement stops being a report and becomes a monthly decision about what to fund next.
+
+    Diagram, read as a list: Search data (names questions worth answering) leads to Published guides. Published guides leads to Outbound sequences. Outbound sequences (each links to a guide) leads to Replies. Replies (name objections) leads to The next guides. The next guides (cheaper each month) leads to Published guides.
+Each month's output feeds the next. Guides give outbound something to link to, and the objections in replies become the next guides.
 
     Compounding is a specific mechanic: each month's output makes the next month's cheaper. Published guides feed outbound. Outbound replies name objections that become the next guides. Search data names the questions worth answering. None of that works in month one because there is nothing to feed on.
 
@@ -12408,6 +12558,9 @@ Last verified 10 September 2026. Every source below was opened and read before t
     How many small businesses use AI for marketing?
 
     In Australia, 40% of small and medium businesses use AI, according to MYOB's April 2026 Business Monitor, while the Australian Bureau of Statistics recorded AI use at about 11% of small and micro businesses in 2024-25. Marketing is the most common use: Salesforce ranks marketing campaign optimisation first among SMB AI use cases.
+
+    Diagram, read as a list: ABS official survey (about the whole business) leads to Business-wide AI use. Business-wide AI use (a narrow question) leads to About 11%. About 11% (small and micro, 2024-25). MYOB Business Monitor (asks operators) leads to Any AI tool use. Any AI tool use (even a ChatGPT caption) leads to 40%. 40% (small and medium, April 2026).
+Both numbers are real because the surveys ask different questions. The official survey asks about the business as a whole, while the operator survey counts anyone using an AI tool.
 
     The gap between 40% and 11% is not an error. The ABS asks a narrow question about the business as a whole in an official statistical survey; MYOB asks operators whether they use AI tools, which captures a marketer drafting a caption in ChatGPT. Both numbers are real, and a page that quotes only one of them is selling something.
 
@@ -12775,6 +12928,9 @@ Why AI marketing pricing is hard to compare
 
     For a solo operator, tools plus one freelancer is the cheapest working setup. For 5 to 20 staff, an AI marketing agent gives several channels a weekly cadence for less than one salary. For 20 to 50 staff, a marketing lead running an agent or an AI-led agency beats a conventional retainer on cost per shipped piece.
 
+Diagram, read as a list: Solo, under 5 staff leads to Tools plus one freelancer. Tools plus one freelancer (on the channel that brings customers). 5 to 20 staff leads to AI marketing agent. AI marketing agent (several channels, less than a salary). 20 to 50 staff leads to A lead plus an agent. A lead plus an agent (or an AI-led agency).
+The cheapest working setup changes with size. From 20 staff, marketing needs a full-time owner inside the company, and the agent equips that lead.
+
     Solo and under 5 staff
 
     Cash matters more than time until it does not. Start with USD 20 to 99 a month of tools on the one channel that brings customers, and buy a freelancer's hours for the piece that needs a specialist: NZD 60 to 150 or AUD 80 to 200 an hour, scoped tightly. The trigger to move up is the month the owner becomes the reason nothing shipped.
@@ -12885,6 +13041,9 @@ Why AI changes the marketing math for NZ small businesses
 
     If you only build one thing this quarter, pick it by where your next customer actually comes from.
 
+    Diagram, read as a list: Your next customer (where they actually come from) leads to SEO and AI search, Outbound, Content engine, Analytics and follow-up. SEO and AI search (local service business). Outbound (B2B with a defined buyer). Content engine (expertise business). Analytics and follow-up (traffic that does not convert).
+Pick the first system by where your next customer comes from. Each kind of business has its own starting point, and the last row fixes the leak before paying for more visibility.
+
     When you want the first system built with your team, AI marketing services for New Zealand and Australian businesses explains how Flow AI scopes and hands it over.
 
     
@@ -12947,6 +13106,9 @@ Why AI changes the marketing math for NZ small businesses
     A practical starting checklist
 
     You do not need all four systems on day one. This is the order that compounds.
+
+    Diagram, read as a list: Find where you stand (week 1) leads to Fix the basics. Fix the basics (weeks 2 to 4) leads to Build the cadence. Build the cadence (month 2 and on) leads to One page of numbers. One page of numbers (shows which channel pays).
+This is the order that compounds. Each stage builds on the one before it, and one page of numbers a month tells you which channel pays.
 
     Week 1: find out where you stand
 

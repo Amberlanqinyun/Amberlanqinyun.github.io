@@ -1,0 +1,104 @@
+{
+  "combined": {
+    "caption": {
+      "en": "Senior hours go into the plan and the monthly review. The weekly work in between runs on the AI system, with the owner approving what ships, and both sides read from one written record.",
+      "zh": "资深工时花在计划和每月复盘上。中间每周的工作由 AI 系统完成，企业主批准要发布的内容；双方读取的是同一份书面记录。"
+    },
+    "cols": 3,
+    "nodes": [
+      {
+        "id": "plan",
+        "col": 0,
+        "row": 0,
+        "label": {
+          "en": "Positioning and quarterly plan",
+          "zh": "定位与季度计划"
+        },
+        "note": {
+          "en": "fractional CMO, day one",
+          "zh": "兼职 CMO，第一天"
+        }
+      },
+      {
+        "id": "ai",
+        "col": 1,
+        "row": 0,
+        "label": {
+          "en": "Weekly work and drafts",
+          "zh": "每周工作与草稿"
+        },
+        "note": {
+          "en": "AI system breaks down the plan",
+          "zh": "AI 系统拆解计划"
+        }
+      },
+      {
+        "id": "owner",
+        "col": 2,
+        "row": 0,
+        "kind": "human",
+        "label": {
+          "en": "Owner approves",
+          "zh": "企业主批准"
+        },
+        "note": {
+          "en": "what ships each week",
+          "zh": "每周要发布的内容"
+        }
+      },
+      {
+        "id": "report",
+        "col": 2,
+        "row": 1,
+        "label": {
+          "en": "Monthly report",
+          "zh": "月度报告"
+        },
+        "note": {
+          "en": "from the AI system",
+          "zh": "由 AI 系统产出"
+        }
+      },
+      {
+        "id": "review",
+        "col": 1,
+        "row": 1,
+        "kind": "human",
+        "label": {
+          "en": "Fractional CMO reviews",
+          "zh": "兼职 CMO 复盘"
+        },
+        "note": {
+          "en": "changes priorities, cuts what fails",
+          "zh": "调整优先级，砍掉无效事项"
+        }
+      }
+    ],
+    "edges": [
+      [
+        "plan",
+        "ai"
+      ],
+      [
+        "ai",
+        "owner"
+      ],
+      [
+        "owner",
+        "report"
+      ],
+      [
+        "report",
+        "review"
+      ],
+      [
+        "review",
+        "ai",
+        {
+          "en": "new priorities",
+          "zh": "新的优先级"
+        }
+      ]
+    ]
+  }
+}

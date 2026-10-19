@@ -1,0 +1,89 @@
+{
+ "review-gates": {
+  "caption": {
+   "en": "A gate sits before each change of audience. Automated checks run first, and people own the two gates before work reaches the client or the public.",
+   "zh": "每一次受众变化之前都有一道关口。自动检查先跑，送到客户面前和公开之前的两道关口由人负责。"
+  },
+  "cols": 3,
+  "nodes": [
+   {
+    "id": "draft",
+    "col": 0,
+    "row": 0,
+    "label": {
+     "en": "Agent draft",
+     "zh": "智能体草稿"
+    }
+   },
+   {
+    "id": "checks",
+    "col": 1,
+    "row": 0,
+    "label": {
+     "en": "Automated checks",
+     "zh": "自动检查"
+    },
+    "note": {
+     "en": "voice, banned claims, sources",
+     "zh": "语调、禁用论断、数字来源"
+    }
+   },
+   {
+    "id": "editor",
+    "col": 2,
+    "row": 0,
+    "kind": "human",
+    "label": {
+     "en": "Editor approval",
+     "zh": "编辑批准"
+    },
+    "note": {
+     "en": "against the client brief",
+     "zh": "对照客户简报"
+    }
+   },
+   {
+    "id": "client",
+    "col": 2,
+    "row": 1,
+    "kind": "human",
+    "label": {
+     "en": "Client approval",
+     "zh": "客户批准"
+    },
+    "note": {
+     "en": "anything under its name",
+     "zh": "以客户名义发出的内容"
+    }
+   },
+   {
+    "id": "live",
+    "col": 1,
+    "row": 1,
+    "kind": "out",
+    "label": {
+     "en": "Published or sent",
+     "zh": "发布或发送"
+    }
+   }
+  ],
+  "edges": [
+   [
+    "draft",
+    "checks"
+   ],
+   [
+    "checks",
+    "editor"
+   ],
+   [
+    "editor",
+    "client"
+   ],
+   [
+    "client",
+    "live"
+   ]
+  ]
+ }
+}
