@@ -295,7 +295,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <script src="/assets/blog.js" defer></script>
 {extra_head}<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=9">
+<link rel="stylesheet" href="/assets/highend.css?v=10">
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>

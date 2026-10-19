@@ -437,105 +437,59 @@ Source URL: https://www.flowai.co.nz/
 Type: Page
 Author: Amber Lan, AI marketing engineer, Auckland
 
-Amber Lan · AI marketing engineer · Auckland, worldwide
+Amber Lan · AI marketing engineer · Auckland, working across New Zealand and Australia
 
-# Let's build the AI agents that run your marketing.
+# Let's run your marketing on AI agents.
 
-I run a whole marketing function on AI agents. Bring me in to build it with your team, or talk to me about a role.
+I've run a whole marketing function this way since April, on my own. I can build the same with your team, and I check everything before a customer sees it.
 
-Work with meHiring? Let's talk
+Work with me · Hiring? Let's talk
 
-Your business
+10 years in marketing · 3 years building agents · 126 skills on GitHub · Replies within two working days
 
-Flow Intelligence
+What one run looks like
 
-Agents10
+Say you're a plumber in Auckland and you want to come up when someone asks ChatGPT who to call. You type that in. This is what comes back.
 
-Approvals3
+Your business · Flow Intelligence · Agents 10 · Approvals 3 · Reports · Recents: AI search fixes, October content, Outbound lane, September report
 
-Reports
-
-Recents
-
-AI search fixesOctober contentOutbound laneSeptember reportAI search fixesWaiting for your review
+AI search fixes · Waiting for your review
 
 Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.
 
-Ask Flow Intelligence for something↑
+1. You type what you want, in plain words. 2. The agents do the work and save every change as a draft. 3. It only goes live once you've approved it.
 
 An illustrative demo. Pick a run under Recents. Meet the dot, the character behind Flow Intelligence.
 
-Manifesto
+Is this for you?
 
-## Marketing finally has its engineering layer.
+## Which one are you?
 
-Every other function built one. Marketing kept hiring. Now Flow Intelligence holds your positioning and briefs ten agents from it.
+Three kinds of people usually land here. Pick the one that sounds like you.
 
-Read the manifesto
+You run a business in New Zealand or Australia
 
-### A process outlasts a prompt
+### Come up when people ask Google or ChatGPT, and get more enquiries from it.
 
-Flow AI writes your strategy into the agents with your team, so the fiftieth run matches the first.
+We start by writing a scope together, so you know what you're paying for. The first agent goes live in a week, and I check everything it sends before a customer sees it.
 
-### A week with room in it
+Explore the services
 
-AI agents give small business marketers 6 to 7 hours back each week, according to Salesforce research on 4,450 marketers.
+You lead a marketing team
 
-### Judgement stays yours
+### Get a lot more out of a small team, and keep the final say.
 
-Agents produce and a person decides. A reviewer approves every send before a customer sees it, so a small team can run this much with confidence.
+The agents handle the research, first drafts, scheduling and follow-up. Your people decide what goes out. When I hand over, everything is written down so your team can keep it running.
 
-What Flow does
+Read how it works
 
-## From first search to repeat customer.
+You're hiring a senior marketing engineer
 
-Eleven systems serve three outcomes. Let's start where you most want to grow.
+### Hire someone who already runs marketing this way.
 
-### Get found
+I run eight marketing lanes on my own, from strategy to the monthly report. The systems are on GitHub, and my CV is on the About page.
 
-4 systems
-
-Be the answer on Google and inside ChatGPT, Claude and AI Overviews.
-
-- PositioningWho you sell to and what to say, with the budget pointed at both.
-
-- Search and AI searchTechnical SEO through to answer engine optimisation, so assistants cite you.
-
-- ContentOne strong idea becomes a month of content your team only has to approve.
-
-- SocialPosts and threads in your voice, on a calendar that holds.
-
-Explore the AI search sprint
-
-### Get leads
-
-4 systems
-
-Turn attention into enquiries, with a person checking every message.
-
-- OutboundThe right hundred buyers, researched and reached personally.
-
-- Growth and conversionOffers and landing pages, tested and tuned every month.
-
-- LaunchProduct and campaign launches sequenced across every channel.
-
-- PaidAd creative and audiences, with the numbers behind them.
-
-Explore the outbound sprint
-
-### Keep customers
-
-3 systems
-
-Stay close to customers, and see which effort started each conversation.
-
-- CommunityHonest answers on Reddit and in forums, posted while the question is fresh.
-
-- MeasurementTracking wired properly, so next month's budget goes where it worked.
-
-- ReportingOne short monthly read on what shipped and what comes next.
-
-Explore the analytics sprint
+Hiring? Let's talk
 
 Why it pays
 
@@ -543,67 +497,171 @@ Why it pays
 
 Every number here comes with its source attached.
 
-10 hrs
+10
 
 back every week from content creation.
 
-Measured in productionPerson 1Person 2Person 3
+Measured in production
 
-20 hrs
+20
 
 a week saved on outbound, across three people.
 
-Measured in productionOne in-house hire, a month
+Measured in production
 
 < 1 salary
 
 runs several channels. One in-house hire costs AUD 8,700 to 10,800 a month.
 
-Sourced in the cost guideStandard pageOptimised page
+Sourced in the cost guide
 
-up to 40%
+up to 40
 
 more AI-search visibility for optimised pages.
 
 Aggarwal et al., KDD 2024
 
-Time figures come from these systems in production at an enterprise AI company. The six-month case shows the whole machine.
+Time figures come from these systems in production at an enterprise AI company. The six-month case
+
+Amber Lan · AI marketing engineer · Auckland
+
+I've spent ten years in marketing and the last three building agents. Right now I run the whole marketing function at an enterprise AI company this way, which is where the hours above were measured.
+
+More about me
+
+How it works
+
+## Read. Install. Run.
+
+We write the scope first, then put one agent live in a week. From there it runs every month, I check what goes out, and your team keeps everything we built.
+
+Explore the five sprints
+
+### 01
+
+In the first week we write the scope together. It names the gap we close first, the agent that closes it, and what your team keeps running after I hand over.
+
+### 02
+
+We build that first agent with your team, on your own accounts, and it goes live in a week.
+
+### 03
+
+From then on it runs every month. I check every send, and you get a one-page note on what worked and what's next.
+
+What you get
+
+## From first search to repeat customer.
+
+Pick the outcome you want most. The rest can follow, one agent at a time.
+
+### Get found
+
+Be the answer on Google and inside ChatGPT, Claude and AI Overviews.
+
+Positioning
+
+Who you sell to and what to say, with the budget pointed at both.
+
+Search and AI search
+
+Technical SEO through to answer engine optimisation, so assistants cite you.
+
+Content
+
+One strong idea becomes a month of content your team only has to approve.
+
+Social
+
+Posts and threads in your voice, on a calendar that holds.
+
+Explore the AI search sprint
+
+### Get leads
+
+Turn attention into enquiries, with a person checking every message.
+
+Outbound
+
+The right hundred buyers, researched and reached personally.
+
+Growth and conversion
+
+Offers and landing pages, tested and tuned every month.
+
+Launch
+
+Product and campaign launches sequenced across every channel.
+
+Paid
+
+Ad creative and audiences, with the numbers behind them.
+
+Explore the outbound sprint
+
+### Keep customers
+
+Stay close to customers, and see which effort started each conversation.
+
+Community
+
+Honest answers on Reddit and in forums, posted while the question is fresh.
+
+Measurement
+
+Tracking wired properly, so next month's budget goes where it worked.
+
+Reporting
+
+One short monthly read on what shipped and what comes next.
+
+Explore the analytics sprint
 
 Instead of an agency
 
 ## Partner with the engineer who builds it.
 
-Flow AI builds engineered systems with your team, and the engineer behind them reviews every send.
+Flow AI builds the systems with your team, and the engineer who built them checks every send.
 
 A marketing agency
 
-Flow AI
-
 Who does the work
 
-A team you rarely meet, often juniors behind a senior pitchAgents, with the engineer who built them approving every send
+A team you rarely meet, often juniors behind a senior pitch
+
+Agents, with the engineer who built them approving every send
 
 Who you work with
 
-An account managerThe engineer building it with you
+An account manager
+
+The engineer building it with you
 
 Scope
 
-The channels in your retainerEleven marketing systems, built around your business
+The channels in your retainer
+
+Eleven marketing systems, built around your business
 
 Speed to first output
 
-Onboarding, then a strategy deckA written scope before any build starts
+Onboarding, then a strategy deck
+
+A written scope before any build starts
 
 What you can inspect
 
-A monthly reportThe systems themselves, and 126 published skills on GitHub
+A monthly report
+
+The systems themselves, and 126 published skills on GitHub
 
 When it ends
 
-The work stopsYour team keeps the documented systems running
+The work stops
 
-Agencies still win on big paid media and brand campaigns. Compare what each option costs.
+Your team keeps the documented systems running
+
+Agencies still win on big paid media and brand campaigns. Compare what each option costs
 
 Proof
 
@@ -627,13 +685,23 @@ Read the case
 
 An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.
 
-Read the casenpx skills add Amberlanqinyun/geo-seo-claudeCopy
+Read the case
 
-Open source and open to inspect, one of 126 skills in the library.
+npx skills add Amberlanqinyun/geo-seo-claude
 
-Questions
+Open source and open to inspect, one of 126 skills in the library
 
-## Good questions.
+Manifesto
+
+## Marketing finally has its engineering layer.
+
+Every other function built one. Marketing kept hiring. Now Flow Intelligence holds your positioning and briefs ten agents from it.
+
+Read the manifesto
+
+## FAQ
+
+The questions people ask before they write to me.
 
 ### Who is Amber Lan?
 
@@ -647,6 +715,10 @@ Flow AI builds engineered systems with your team, led by one marketing engineer 
 
 Every contract build starts with a written scope: the gap to close first, the system that closes it, and what your team keeps running after handover.
 
+### How is a build priced?
+
+Each build is priced per project, from the written scope we agree first, so you know the cost before anything gets built. Your team keeps every system after handover.
+
 ### Who reviews the work before it goes out?
 
 A marketing engineer reviews every send before it reaches a customer. Agents produce the work, and a person decides what ships. That review lets a small team run this much marketing and stand behind every send.
@@ -657,7 +729,7 @@ Flow AI is based in Auckland and provides AI marketing services for businesses a
 
 ### Is Flow AI an AI marketing agency?
 
-Flow AI covers what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and one marketing engineer reviews every send. It works as a contract build with your team, and everything built is documented and handed over. Explore the AI marketing services.
+Flow AI covers what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and one marketing engineer reviews every send. It works as a contract build with your team, and everything built is documented and handed over. Explore the AI marketing services
 
 ### What is AI marketing transformation?
 
@@ -671,7 +743,7 @@ Yes. Marketing leads use Flow AI to put AI agents to work in their own team. The
 
 Tell me what you are building, or the role you are hiring for. I reply personally within two working days.
 
-Work with meHiring? Let's talk
+Hiring? Let's talk
 
 ---
 
