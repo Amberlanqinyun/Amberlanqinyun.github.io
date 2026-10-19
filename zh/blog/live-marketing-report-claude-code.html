@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>用 Claude Code 做实时营销报告：一线工作笔记</title>
+<meta name="description" content="一位 AI 营销工程师的工作笔记：用 Claude Code 搭一份实时营销报告，带日期选择器、公平的环比对比，以及用大白话写成的渠道总结。">
+<meta name="author" content="Amber Lan">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+<link rel="alternate" type="application/atom+xml" title="Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="用 Claude Code 做实时营销报告：一线工作笔记">
+<meta property="og:description" content="一位 AI 营销工程师的工作笔记：用 Claude Code 搭一份实时营销报告，带日期选择器、公平的环比对比，以及用大白话写成的渠道总结。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Amber Lan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-10-19T00:00:00+13:00">
+<meta property="article:modified_time" content="2026-10-19T00:00:00+13:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code#article",
+      "headline": "如何用 Claude Code 做一份实时营销报告？",
+      "description": "奥克兰 AI 营销工程师 Amber Lan 的工作笔记，记录她如何用 Claude Code 搭建一份实时营销报告：如何从 CRM、社媒排期工具、Google Analytics 和外联工具取数，日期选择器如何公平地对比不同时段，报告如何为每个渠道写出说明，哪些地方出过问题，以及它如何每天早上自动更新。",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "inLanguage": "zh-Hans",
+      "articleSection": "AI 营销智能体",
+      "wordCount": 4267,
+      "timeRequired": "PT11M",
+      "image": "https://www.flowai.co.nz/blog/figures/live-marketing-report-claude-code.svg",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/zh/blog/#blog"
+      },
+      "mainEntityOfPage": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".short-answer__text",
+          ".article-hero h1"
+        ]
+      },
+      "keywords": "实时营销报告, 自动化营销报告, 营销数据看板, 营销报告自动化, Claude Code 营销报告, Looker Studio 替代方案, 营销月报, 营销自动化顾问, live marketing report, marketing dashboard",
+      "about": {
+        "@id": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code#definedterm"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code#definedterm",
+      "name": "实时营销报告（Live marketing report）",
+      "description": "实时营销报告是一个单独的页面：它从营销工作所在的工具里读取当前数字，读者可以选择任意日期范围，页面会把它和上一个时段公平对比，并用简单的句子说明每个渠道的情况，不需要有人每个月手工重做。",
+      "url": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code",
+      "inDefinedTermSet": {
+        "@id": "https://www.flowai.co.nz/zh/glossary/#terms"
+      },
+      "alternateName": [
+        "Live marketing report",
+        "Automated marketing report",
+        "自动化营销报告"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "做一份实时营销报告需要会写代码吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "需要能读懂代码，写的部分没那么多。脚本和页面大多是 Claude Code 和我一起写的，但我必须足够了解每个数据源，才能发现数字不对，比如访客被重复计算，或者一条内容按渠道被数了好几次。判断每个数字代表什么，这是营销工作，也是最花时间的部分。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么不用 Looker Studio 做营销报告？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "如果你的数字大多在 Google 的产品里，Looker Studio 是很好的选择，因为这些连接器是内置的。可一旦 CRM、社媒排期工具和外联工具都需要第三方合作伙伴连接器，每个都有各自的条款和收费方式，事情就变复杂了。而且它只展示数字，不解释数字，每个月还是要有人写总结。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "没有服务账号密钥，怎么接入 Google Analytics？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "使用面向桌面应用的 OAuth 流程，只申请只读权限。媒体资源的所有者在浏览器里登录一次并批准访问，脚本把刷新令牌保存在这台电脑上。2024年5月3日及之后创建的 Google Cloud 组织默认禁止创建服务账号密钥，走这条路就不用请管理员放宽这项安全策略。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "营销报告应该多久更新一次？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "按数据源本身的更新方式来定。CRM 和排期工具的数字可以在每次打开页面时实时读取。网站分析和外联工具的数字最好每天早上拉取一次，等前一天结束后再取。每天拉取也意味着，截至今天的时段会停在昨天，对比才能保持同口径。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "报告能自己发到 Slack 吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "它能起草，在我的设置里它就停在起草这一步。每月1日，一个定时任务会结束上个月的工作：写好当月记录，起草一条简短的 Slack 总结，然后等待。只有我书面批准之后才会发出，因为发给整个团队的报告，就是对团队工作的一份公开表态。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "运行一份实时营销报告要花多少钱？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我的这份用的都是团队已经在付费的工具，再加上 Claude。网站分析、CRM 和排期工具都通过现有账号访问，竞品检查读的是公开网站和网页搜索，没有用付费关键词工具。真正的成本是搭建时间，以及每个月几分钟的审核，它替代了过去花一整天做幻灯片的工作。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Amber Lan",
+          "item": "https://www.flowai.co.nz/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "指南",
+          "item": "https://www.flowai.co.nz/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI 营销智能体",
+          "item": "https://www.flowai.co.nz/zh/blog/?topic=agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "如何用 Claude Code 做一份实时营销报告？",
+          "item": "https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=8">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#article">跳到指南正文</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/zh/" aria-label="Amber Lan 首页">
+      <img class="site-header__brand-mark" src="/assets/flowai-mark.svg" width="24" height="24" alt="" aria-hidden="true">
+      <span class="site-header__brand-text">Amber Lan</span>
+    </a>
+    <nav class="site-header__nav" aria-label="主导航">
+      <a href="/zh/ai-marketing-services/">服务</a>
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/blog/" aria-current="page">指南</a>
+      <a href="/zh/about">关于我</a>
+      <span class="lang-switch" role="group" aria-label="语言"><a href="/blog/live-marketing-report-claude-code" lang="en" hreflang="en" data-lang="en">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/blog/live-marketing-report-claude-code" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh" aria-current="true">中文</a></span>
+      <a class="site-header__cta" href="/zh/contact">与我合作</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero article-hero centered" aria-labelledby="article-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow"><a href="/zh/blog/">指南</a><span aria-hidden="true"> / </span><a href="/zh/blog/?topic=agent">AI 营销智能体</a></p>
+        <h1 id="article-title">如何用 Claude Code 做一份实时营销报告？</h1>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">简短回答</p>
+          <p class="short-answer__text">把 Claude Code 接入存放数字的工具，没有实时连接器的数据每天拉取成文件，再发布一个同时读取两者的页面。给页面加一个日期选择器，让每个时段都和紧挨着的上一个时段对比，并让它用大白话写出每个渠道的情况。任何内容分享出去之前，都由一个人批准。</p>
+        </aside>
+        <p class="lead">我每个月都要汇报整个营销职能的情况，想要一份始终是最新的报告：能看任意一周或一个月，还能自己把数字讲清楚。<b>这份笔记记录了我如何用 Claude Code 把它搭出来，也包括出过问题的部分。</b></p>
+        <p class="byline small"><span><a href="/zh/about">Amber Lan</a>，AI 营销工程师</span><span aria-hidden="true">·</span><span>更新于 <time datetime="2026-10-19">2026年10月19日</time></span><span aria-hidden="true">·</span><span>11 分钟阅读</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body" id="article" aria-label="指南正文">
+    <div class="wrap article-grid">
+      <nav class="toc" aria-label="目录">
+        <details class="toc__box" open>
+          <summary class="toc__label">目录 <span class="toc__left" data-minutes-left></span></summary>
+          <div class="toc__progress" aria-hidden="true"><span data-progress></span></div>
+          <ol class="toc__list">
+<li><a href="#what-is-a-live-marketing-report" data-toc="what-is-a-live-marketing-report"><span class="toc-num">01</span><span>什么是实时营销报告？</span></a></li>
+<li><a href="#why-not-build-it-in-looker-studio" data-toc="why-not-build-it-in-looker-studio"><span class="toc-num">02</span><span>为什么不用 Looker Studio 来做？</span></a></li>
+<li><a href="#how-does-the-report-get-its-numbers" data-toc="how-does-the-report-get-its-numbers"><span class="toc-num">03</span><span>报告的数字从哪里来？</span></a></li>
+<li><a href="#how-do-you-connect-google-analytics-when-keys-are-blocked" data-toc="how-do-you-connect-google-analytics-when-keys-are-blocked"><span class="toc-num">04</span><span>密钥被禁用时，怎么接入 Google Analytics？</span></a></li>
+<li><a href="#how-does-a-date-picker-compare-periods-fairly" data-toc="how-does-a-date-picker-compare-periods-fairly"><span class="toc-num">05</span><span>日期选择器怎样公平地对比不同时段？</span></a></li>
+<li><a href="#how-do-you-write-the-report-so-it-reads-like-marketing-wrote" data-toc="how-do-you-write-the-report-so-it-reads-like-marketing-wrote"><span class="toc-num">06</span><span>怎样让报告读起来像营销团队自己写的？</span></a></li>
+<li><a href="#what-broke-and-what-did-i-change" data-toc="what-broke-and-what-did-i-change"><span class="toc-num">07</span><span>哪些地方出过问题，我改了什么？</span></a></li>
+<li><a href="#how-does-it-keep-running-without-me" data-toc="how-does-it-keep-running-without-me"><span class="toc-num">08</span><span>它怎样在我不在的时候继续运行？</span></a></li>
+<li><a href="#how-do-you-build-one-yourself" data-toc="how-do-you-build-one-yourself"><span class="toc-num">09</span><span>自己怎么做一份？</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">10</span><span>Flow AI 能在哪里帮上忙</span></a></li>
+<li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">11</span><span>简要总结</span></a></li>
+<li><a href="#faq" data-toc="faq"><span class="toc-num">12</span><span>企业主常问的问题</span></a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <div class="article-main">
+        <figure class="article-figure"><img src="/blog/figures/live-marketing-report-claude-code.svg" width="960" height="540" alt=""></figure>
+        <article class="prose">
+<h2 id="what-is-a-live-marketing-report"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">什么是实时营销报告？</span></h2>
+<p>实时营销报告是一个单独的页面：它从营销工作所在的工具里读取当前数字，读者可以选择任意日期范围，页面会把它和上一个时段公平对比，并用简单的句子说明每个渠道的情况。没有人需要每个月手工重做它。负责营销的人审核之后，再决定分享哪些内容。</p>
+<p>我一个人负责所在 AI 初创公司的全部营销工作，用的是 Claude Code 和我自己搭建的智能体。<a class="go" href="/zh/blog/running-marketing-on-claude-code">用 Claude Code 运转营销的工作笔记</a>介绍了整套系统。这份报告是其中一条工作线：LinkedIn 上的主动外联、CRM 里的邮件跟进、网站、社媒发布、我们发布的内容、一个轻量的竞品检查，以及当月的已完成和下一步，全部放在一个页面上。</p>
+<p>在这之前，月报要花一整天截图、复制粘贴到幻灯片里，等有人看的时候已经过时了。新的报告始终是最新的，能回答关于任意一周的问题，还会自己写出说明的初稿。</p>
+
+<h2 id="why-not-build-it-in-looker-studio"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">为什么不用 Looker Studio 来做？</span></h2>
+<p>如果数字都在 Google 的产品里，Looker Studio 很好用，因为这些连接器是内置的。我的数字大多在别处：CRM、社媒排期工具和 LinkedIn 外联工具。每一个都需要第三方连接器，而且看板做好之后，每个月仍然要有人手工写总结。</p>
+<p><a class="go" href="https://developers.google.com/data-studio/connector/pscc-requirements" target="_blank" rel="noopener">Google 的合作伙伴连接器要求规定，每个第三方连接器都要声明自己的收费类型和服务条款</a><sup class="fn"><a href="#source-1" aria-label="来源 1">1</a></sup>，所以费用和数据处理方式因供应商而异。只接一个数据源没问题。接四个，就要在开始做报告之前先管理一堆订阅。</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>问题</th><th>Looker Studio 看板</th><th>用 Claude Code 搭的报告</th></tr></thead>
+  <tbody>
+    <tr><td><b>Google Analytics</b></td><td>内置连接器</td><td>每天通过 Analytics Data API 拉取</td></tr>
+    <tr><td><b>CRM、排期工具、外联工具</b></td><td>第三方连接器，各有各的条款</td><td>通过 MCP 连接器实时查询，或用脚本每天拉取</td></tr>
+    <tr><td><b>日期范围</b></td><td>日期选择器和对比功能很完善</td><td>照着做：快捷时段、自定义日期、上一时段</td></tr>
+    <tr><td><b>数字背后的说明</b></td><td>每个月由人来写</td><td>按渠道起草成句子，由人审核</td></tr>
+    <tr><td><b>修改</b></td><td>在编辑器里拖拽</td><td>用自然语言提出，再检查预览</td></tr>
+  </tbody>
+</table></div>
+<p>我照搬了 Looker Studio 里大家最喜欢的部分，也就是右侧带快捷时段的日期选择器，其余部分都围绕团队常问的问题来搭。</p>
+
+<h2 id="how-does-the-report-get-its-numbers"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">报告的数字从哪里来？</span></h2>
+<p>它用两种方式取数。Claude 能直接使用连接器的工具，每次有人打开页面时实时查询，CRM 和社媒排期工具就是这样。没有连接器的工具，由几个小脚本每天早上拉取成每日文件，Google Analytics 和 LinkedIn 外联工具就是这样。页面同时读取这两类数据，处理方式完全一样。</p>
+<p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过 Model Context Protocol 连接数百种外部工具和数据源</a><sup class="fn"><a href="#source-2" aria-label="来源 2">2</a></sup>。实时查询使用每位读者自己的权限，所以没有 CRM 权限的同事看到的是空缺，绝不会看到别人的数据。</p>
+<p>Google Analytics 由一个脚本调用 <a class="go" href="https://developers.google.com/analytics/devguides/reporting/data/v1" target="_blank" rel="noopener">Google Analytics Data API，Google 把它描述为以编程方式访问与 Analytics 界面相同的报告数据</a><sup class="fn"><a href="#source-3" aria-label="来源 3">3</a></sup>。外联工具通过它自己的 MCP 服务器连接，读取它的脚本只允许调用只读工具：总体统计、活动、账号和对话。任何可能发送消息或修改活动的调用都在代码里被拒绝，所以无论怎么提示，报告都不可能在外联工具里执行操作。</p>
+
+<h2 id="how-do-you-connect-google-analytics-when-keys-are-blocked"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">密钥被禁用时，怎么接入 Google Analytics？</span></h2>
+<p>用媒体资源所有者自己的只读 Google 账号，走面向桌面应用的 OAuth 流程登录。最初的方案是带密钥文件的服务账号，结果被我们的 Google Cloud 组织默认拒绝了。桌面流程不需要密钥：在浏览器里登录一次，然后把刷新令牌保存在这台电脑上。</p>
+<p><a class="go" href="https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations" target="_blank" rel="noopener">Google Cloud 的“默认安全”页面说明，其安全基线约束（包括禁止用户创建持久服务账号密钥的那一条）对 2024年5月3日及之后创建的所有组织强制生效</a><sup class="fn"><a href="#source-4" aria-label="来源 4">4</a></sup>。为了一份报告去请管理员关掉它，等于用一项真实的安全控制去换方便。</p>
+<p><a class="go" href="https://developers.google.com/identity/protocols/oauth2/native-app" target="_blank" rel="noopener">Google 面向桌面应用的 OAuth 指南说明，用户在系统浏览器里同意授权，应用随后收到一个短期访问令牌和一个刷新令牌</a><sup class="fn"><a href="#source-5" aria-label="来源 5">5</a></sup>。脚本只申请 Analytics 的只读权限。如果登录失效，早上的任务会用一句话说明，然后等我重新登录，它不会尝试绕过去。</p>
+
+<h2 id="how-does-a-date-picker-compare-periods-fairly"><span class="sec-num" aria-hidden="true">05</span><span class="sec-title">日期选择器怎样公平地对比不同时段？</span></h2>
+<p>每个时段都和紧挨着的、长度相同的上一个时段对比，并且把对比对象写清楚。上周对比再上一周。一个自然月对比上一个月。年初至今对比去年同期。选择器会显示具体的对比日期，没有人需要去猜“对比之前”指的是什么。</p>
+<p>有三个细节让对比变得诚实：</p>
+<ol>
+  <li><b>停在最后一个完整的日子。</b>网站分析和外联数字每天早上才更新。截至今天的时段，会拿只有半天数据的今天去和完整的一天对比，所以这类时段停在昨天，对比时段也截成相同的天数。</li>
+  <li><b>每个时段里访客只算一次。</b><a class="go" href="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema" target="_blank" rel="noopener">Analytics Data API 把活跃用户定义为访问网站的不重复用户数</a><sup class="fn"><a href="#source-6" aria-label="来源 6">6</a></sup>，所以每天的访客数不能直接相加：周一和周五都来过的人会被算两次。早上的脚本会为每个快捷时段及其对比时段，直接向 Analytics 要不重复访客数。其他自定义时段由页面把每天的数相加，并在数字前标上 ≈。</li>
+  <li><b>长时段按周画图。</b>超过大约两个月，按天的柱子会糊成一片灰，所以图表改成按周显示，并写明这一点。</li>
+</ol>
+
+<h2 id="how-do-you-write-the-report-so-it-reads-like-marketing-wrote"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">怎样让报告读起来像营销团队自己写的？</span></h2>
+<p>把规则写下来，让页面去执行。每个渠道用它的数字组成一句简单的话，句子里的每个数字都链接回来源，先讲成绩，较低的数字用中性的方式陈述，并把对比数字放在旁边。报告从不猜测数字变化的原因，因为猜出来的原因会被当成事实转述。</p>
+<p>这些写作规则来自以同事的眼光重读第一版。下滑旁边的红色箭头读起来像在追责，所以下滑改成了灰色，句子里写出之前的数字（“对比8月的数字”），不再写下降的百分比。标题先写增长了什么，再写团队交付了什么，最后写下个月的重点。每月的 Slack 草稿遵循同样的规则。报告还附了一个简短的词汇表，因为“会话”“直接访问”“通过率”这些词，对大多数读者来说意义不大。</p>
+<p>每个数字都带着指向它来源那一行的链接，所以有人问“这个数从哪来的”，一下就能找到答案。比起任何样式上的选择，这一点对信任的影响更大。</p>
+
+<h2 id="what-broke-and-what-did-i-change"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">哪些地方出过问题，我改了什么？</span></h2>
+<p>出问题的大多是计数，每个修复现在都成了构建的一部分。数字以文本形式送达，一条内容按渠道被数了好几次，大部分网站访问显示为直接访问，竞品网站报出的页面日期毫无意义。这些问题粗看都看不出来，但每一个都改变了报告的结论。</p>
+
+<h3>以文本形式送达的数字</h3>
+<p>第一个上线版本说团队在零个渠道发布了内容。数据文件送到页面时，所有数字、列表和真假值都变成了文本。现在本地预览会故意先把每一行转成文本，再交给页面读取，同样的错误会先在我的电脑上暴露，而不是被别人看到。</p>
+
+<h3>一条内容被数了很多次</h3>
+<p>同一张卡片发到八个渠道，看起来像八条不同的内容，因为排期工具会给每个上传的文件加上一串 ID。现在，只要几条帖子属于同一组、去掉 ID 后封面图相同，或者同一个月里开头一句相同，图库就把它们当成一条内容。图库缩回到团队真正做出的内容，每一条都列出它发布过的所有渠道。</p>
+
+<h3>大部分访问显示为直接访问</h3>
+<p><a class="go" href="https://support.google.com/analytics/answer/9756891" target="_blank" rel="noopener">Google Analytics 把直接访问定义为通过已保存的链接或直接输入网址到达的访客</a><sup class="fn"><a href="#source-7" aria-label="来源 7">7</a></sup>，没打标签的社媒链接也会落到这里。<a class="go" href="https://support.google.com/analytics/answer/10917952" target="_blank" rel="noopener">Google 关于推广链接的指南要求始终设置 utm_source、utm_medium 和 utm_campaign</a><sup class="fn"><a href="#source-8" aria-label="来源 8">8</a></sup>。报告现在有一条常设建议：给每条帖子的链接打上标签，直到社媒带来的访问都带着标签进来为止。</p>
+
+<h3>毫无意义的竞品日期</h3>
+<p>竞品检查读取公开的站点地图、博客订阅源和首页，不用任何付费工具。有些网站每次重新构建都会给所有页面盖上新日期，所以新页面现在通过对比本月和上月的站点地图来判断，博客文章只在有真实发布日期的订阅源里才计数。</p>
+
+<h2 id="how-does-it-keep-running-without-me"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">它怎样在我不在的时候继续运行？</span></h2>
+<p>两个定时任务负责运行，两个都遵循同一个技能。每天早上，一个任务拉取网站分析和外联工具的数据，并重建当月的内容图库。每月1日，另一个任务结束上个月的工作：当月记录、竞品检查和一条 Slack 草稿。在我批准之前，什么都不会分享出去。</p>
+<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code 桌面版可以按你选定的时间和频率启动新会话</a><sup class="fn"><a href="#source-9" aria-label="来源 9">9</a></sup>。两个任务的说明都放在同一个技能里，包括操作手册、规则和检查。<a class="go" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic 的技能文档说明，Claude 会在技能相关时使用它，也可以按名字直接调用</a><sup class="fn"><a href="#source-10" aria-label="来源 10">10</a></sup>，所以每个任务的提示词只有一行：遵循这个技能。规则有变化时，我只需要改一个地方。</p>
+<p>每次修改页面都要经过本地预览：它会点遍每个快捷时段和一个自定义时段，检查错误，并给每个标签页截图。检查通过之后，才会执行发布这一步。</p>
+
+<h2 id="how-do-you-build-one-yourself"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">自己怎么做一份？</span></h2>
+<p>从团队常问的问题出发，一次接一个数据源。列出大家每个月要的数字，先接入装着最多数字的那个工具，发布一个只回答上个月问题的页面。这个页面没问题之后，再加日期选择器、文字说明和定时任务。</p>
+<ol>
+  <li><b>把问题写下来。</b>“上周 LinkedIn 上有多少人回复了？”比一张指标清单更适合当起点。</li>
+  <li><b>接入一个工具，只读。</b>有 MCP 连接器就用连接器，没有就写一个每天输出文件的小脚本。</li>
+  <li><b>只发布上个月。</b>在加任何东西之前，把每个数字和它所在的工具逐一核对。</li>
+  <li><b>加上日期选择器。</b>每个快捷时段只在一个地方定义一次，让脚本和页面共用这个定义。</li>
+  <li><b>写好写作规则。</b>在页面写出第一句话之前，先决定成绩、下滑和缺失数据分别怎么表述。</li>
+  <li><b>为拉取和月度收尾设定时任务。</b>在草稿和任何分享给团队的内容之间，始终留一个人。</li>
+</ol>
+<p>大多数<a class="go" href="/zh/blog/ai-agents-for-marketing">营销 AI 智能体</a>背后都是同一个模式：先只读，规则写下来，由人来批准。如果你对<a class="go" href="/zh/blog/what-is-an-ai-marketing-agent">AI 营销智能体</a>这个概念还不熟悉，可以从那篇开始。报告很适合作为<a class="go" href="/zh/glossary/#marketing-automation">营销自动化</a>的一条工作线，因为这项工作每个月都重复，规则也很少变。</p>
+
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">10</span><span class="sec-title">Flow AI 能在哪里帮上忙</span></h2>
+<p>Flow AI 为新西兰和澳大利亚的企业提供 AI 营销服务。Amber Lan 是奥克兰的 AI 营销工程师，她和你的团队一起搭建负责搜索、内容、主动外联和报告的 AI 智能体，然后交接给你。如果你在找<a class="go" href="/zh/ai-marketing-services/marketing-automation-consultant">营销自动化顾问</a>，想在自己的工具上搭一份这样的报告，那个页面介绍了合作是怎么进行的。</p>
+<p>团队可以委托搭建，从一份书面范围说明开始，按项目报价。如果你在招聘营销工程师或 GTM 工程师，我也愿意<a class="go" href="/zh/about#hire">聊聊资深岗位</a>。我公开搭建的技能都在 <a class="go" href="/zh/skills/">Flow AI 技能库</a>里。</p>
+
+<h2 id="the-short-version"><span class="sec-num" aria-hidden="true">11</span><span class="sec-title">简要总结</span></h2>
+<p>实时营销报告从存放数字的工具里读取数据：有连接器的地方实时读取，没有的地方靠每天早上的拉取。读者可以选择任意时段，页面把它和紧挨着的上一个时段对比，并用一句简单的话说明每个渠道，每个数字都链接到它的来源。</p>
+<p>大部分工作其实是诚实地计数：每个时段里访客只算一次，一条内容跨渠道只算一次，一天结束了才算这一天。写下来的语气规则，加上分享前由人批准，让这份报告值得信任。如果你想在自己的工具上搭一份，<a class="go" href="/zh/contact">和 Amber 聊聊</a>。</p>
+        </article>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span class="sec-num" aria-hidden="true">12</span><span class="sec-title">企业主常问的问题</span></h2>
+  <div class="faq__list">
+<details class="faq__item" open><summary><h3>做一份实时营销报告需要会写代码吗？</h3></summary><p>需要能读懂代码，写的部分没那么多。脚本和页面大多是 Claude Code 和我一起写的，但我必须足够了解每个数据源，才能发现数字不对，比如访客被重复计算，或者一条内容按渠道被数了好几次。判断每个数字代表什么，这是营销工作，也是最花时间的部分。</p></details>
+<details class="faq__item"><summary><h3>为什么不用 Looker Studio 做营销报告？</h3></summary><p>如果你的数字大多在 Google 的产品里，Looker Studio 是很好的选择，因为这些连接器是内置的。可一旦 CRM、社媒排期工具和外联工具都需要第三方合作伙伴连接器，每个都有各自的条款和收费方式，事情就变复杂了。而且它只展示数字，不解释数字，每个月还是要有人写总结。</p></details>
+<details class="faq__item"><summary><h3>没有服务账号密钥，怎么接入 Google Analytics？</h3></summary><p>使用面向桌面应用的 OAuth 流程，只申请只读权限。媒体资源的所有者在浏览器里登录一次并批准访问，脚本把刷新令牌保存在这台电脑上。2024年5月3日及之后创建的 Google Cloud 组织默认禁止创建服务账号密钥，走这条路就不用请管理员放宽这项安全策略。</p></details>
+<details class="faq__item"><summary><h3>营销报告应该多久更新一次？</h3></summary><p>按数据源本身的更新方式来定。CRM 和排期工具的数字可以在每次打开页面时实时读取。网站分析和外联工具的数字最好每天早上拉取一次，等前一天结束后再取。每天拉取也意味着，截至今天的时段会停在昨天，对比才能保持同口径。</p></details>
+<details class="faq__item"><summary><h3>报告能自己发到 Slack 吗？</h3></summary><p>它能起草，在我的设置里它就停在起草这一步。每月1日，一个定时任务会结束上个月的工作：写好当月记录，起草一条简短的 Slack 总结，然后等待。只有我书面批准之后才会发出，因为发给整个团队的报告，就是对团队工作的一份公开表态。</p></details>
+<details class="faq__item"><summary><h3>运行一份实时营销报告要花多少钱？</h3></summary><p>我的这份用的都是团队已经在付费的工具，再加上 Claude。网站分析、CRM 和排期工具都通过现有账号访问，竞品检查读的是公开网站和网页搜索，没有用付费关键词工具。真正的成本是搭建时间，以及每个月几分钟的审核，它替代了过去花一整天做幻灯片的工作。</p></details>
+  </div>
+</section>
+        <aside class="author-box" aria-label="关于作者">
+          <p class="author-box__label">作者</p>
+          <p class="author-box__name"><a href="/zh/about">Amber Lan</a></p>
+          <p>AI 营销工程师，常驻新西兰奥克兰。她用自己搭建的智能体系统运行完整的营销职能，并把这些系统公开在 <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">GitHub</a> 上。她以 Flow AI 为商号承接合同制搭建项目：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。</p>
+        </aside>
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title" class="sources__title">资料来源</h2>
+  <p class="sources__note">每个数据都附有一手来源链接，最近核对：2026年10月19日。</p>
+  <ol class="sources__list">
+<li id="source-1"><a href="https://developers.google.com/data-studio/connector/pscc-requirements" target="_blank" rel="noopener">Google 的合作伙伴连接器要求规定，每个第三方连接器都要声明自己的收费类型和服务条款</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-2"><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic 的 MCP 文档说明，Claude Code 可以通过 Model Context Protocol 连接数百种外部工具和数据源</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-3"><a href="https://developers.google.com/analytics/devguides/reporting/data/v1" target="_blank" rel="noopener">Google Analytics Data API，Google 把它描述为以编程方式访问与 Analytics 界面相同的报告数据</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-4"><a href="https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations" target="_blank" rel="noopener">Google Cloud 的“默认安全”页面说明，其安全基线约束（包括禁止用户创建持久服务账号密钥的那一条）对 2024年5月3日及之后创建的所有组织强制生效</a> <span class="src-host">docs.cloud.google.com</span></li>
+<li id="source-5"><a href="https://developers.google.com/identity/protocols/oauth2/native-app" target="_blank" rel="noopener">Google 面向桌面应用的 OAuth 指南说明，用户在系统浏览器里同意授权，应用随后收到一个短期访问令牌和一个刷新令牌</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-6"><a href="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema" target="_blank" rel="noopener">Analytics Data API 把活跃用户定义为访问网站的不重复用户数</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-7"><a href="https://support.google.com/analytics/answer/9756891" target="_blank" rel="noopener">Google Analytics 把直接访问定义为通过已保存的链接或直接输入网址到达的访客</a> <span class="src-host">support.google.com</span></li>
+<li id="source-8"><a href="https://support.google.com/analytics/answer/10917952" target="_blank" rel="noopener">Google 关于推广链接的指南要求始终设置 utm_source、utm_medium 和 utm_campaign</a> <span class="src-host">support.google.com</span></li>
+<li id="source-9"><a href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic 的定时任务文档说明，Claude Code 桌面版可以按你选定的时间和频率启动新会话</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-10"><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic 的技能文档说明，Claude 会在技能相关时使用它，也可以按名字直接调用</a> <span class="src-host">code.claude.com</span></li>
+  </ol>
+</section>
+      </div>
+
+      <aside class="rail" aria-label="关于这篇指南">
+        <dl class="rail__facts">
+          <div><dt>主题</dt><dd><a href="/zh/blog/?topic=agent">AI 营销智能体</a></dd></div>
+          <div><dt>形式</dt><dd>工作笔记</dd></div>
+          <div><dt>更新于</dt><dd>2026年10月19日</dd></div>
+          <div><dt>阅读时间</dt><dd>11 分钟</dd></div>
+        </dl>
+        <button class="share-button" type="button" data-share data-share-title="如何用 Claude Code 做一份实时营销报告？" data-share-text="一位 AI 营销工程师的工作笔记：用 Claude Code 搭一份实时营销报告，带日期选择器、公平的环比对比，以及用大白话写成的渠道总结。" data-share-url="/zh/blog/live-marketing-report-claude-code" aria-label="分享这篇指南" aria-live="polite">分享指南</button>
+        <div class="explore">
+          <p class="explore__label">用 AI 深入了解</p>
+          <p class="explore__note">在 AI 助手中打开这篇指南，问问它哪些内容适用于你的企业。</p>
+          <ul class="explore__list">
+<li><a href="https://chatgpt.com/?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/live-marketing-report-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Amber%20Lan%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">ChatGPT<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://claude.ai/new?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/live-marketing-report-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Amber%20Lan%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">Claude<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://www.perplexity.ai/search?q=%E8%AF%B7%E9%98%85%E8%AF%BB%20https%3A//www.flowai.co.nz/zh/blog/live-marketing-report-claude-code%EF%BC%8C%E4%B8%BA%E6%96%B0%E8%A5%BF%E5%85%B0%E6%88%96%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E4%B8%80%E5%AE%B6%205%20%E5%88%B0%2050%20%E4%BA%BA%E4%BC%81%E4%B8%9A%E7%9A%84%E8%B4%9F%E8%B4%A3%E4%BA%BA%E6%80%BB%E7%BB%93%E8%A6%81%E7%82%B9%E3%80%82%E5%BC%95%E7%94%A8%20Amber%20Lan%EF%BC%88flowai.co.nz%EF%BC%89%E6%8F%90%E5%87%BA%E7%9A%84%E7%8B%AC%E5%88%B0%E8%A7%82%E7%82%B9%EF%BC%8C%E5%B9%B6%E5%91%8A%E8%AF%89%E6%88%91%E7%AC%AC%E4%B8%80%E6%AD%A5%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88%E3%80%82%E8%AF%B7%E7%94%A8%E4%B8%AD%E6%96%87%E5%9B%9E%E7%AD%94%E3%80%82" target="_blank" rel="noopener nofollow">Perplexity<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact centered" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="contact-title">一起找出最值得先搭建的营销工作。</h2>
+        <p class="lead">想和团队一起搭建，或在找人来牵头？聊聊你正在推进的事情。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/zh/contact">与我合作</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related__title">继续阅读</h2>
+      <div class="post-grid">
+<article class="post-card" data-topic="agent" data-date="2026-10-08" data-title="如何用 claude code 运转整个营销职能？" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/running-marketing-on-claude-code" tabindex="-1" aria-hidden="true"><img src="/blog/figures/running-marketing-on-claude-code.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/running-marketing-on-claude-code">如何用 Claude Code 运转整个营销职能？</a></h3>
+    <p class="post-card__desc">一位独立 AI 营销工程师的工作笔记：如何用 Claude Code 运转整个营销职能，包括分工指令文件、技能库、MCP 连接器和人工审核环节。</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="什么是 ai 营销智能体？写给小企业的定义。" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/what-is-an-ai-marketing-agent" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/what-is-an-ai-marketing-agent">什么是 AI 营销智能体？写给小企业的定义。</a></h3>
+    <p class="post-card__desc">AI 营销智能体在人工审核下规划、产出并发布营销工作。这是一份写给小企业的定义，并说明它和营销自动化、ChatGPT 有什么区别。</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-05" data-title="营销 ai 智能体：先搭哪一个，怎么搭。" data-minutes="13">
+  <a class="post-card__figure" href="/zh/blog/ai-agents-for-marketing" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-agents-for-marketing.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>AI 营销智能体</span><span>13 分钟阅读</span></p>
+    <h3 class="post-card__title"><a href="/zh/blog/ai-agents-for-marketing">营销 AI 智能体：先搭哪一个，怎么搭。</a></h3>
+    <p class="post-card__desc">按工作职责梳理十个营销 AI 智能体，给出搭建顺序，并讲清如何稳妥地搭好一个：简报、数据权限、护栏规则、人工审核与效果衡量。</p>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/zh/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI 营销工程师，奥克兰</p>
+        <p class="site-footer__note">我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。</p>
+        <a class="site-footer__cta" href="/zh/contact">与我合作</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh/ai-marketing-services/">服务</a>
+      <a href="/zh/sprints/">合作方式</a>
+      <a href="/zh/work">作品</a>
+      <a href="/zh/blog/">指南</a>
+      <a href="/zh/templates/">免费模板</a>
+      <a href="/zh/about">关于我</a>
+      <a href="/zh/manifesto">宣言</a>
+      <a href="/zh/dot">这颗点</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/zh/" aria-label="Amber Lan 首页"><img class="site-footer__mark" src="/assets/flowai-mark.svg" width="18" height="18" alt="" aria-hidden="true"><span class="site-footer__wm">Amber Lan</span></a><span>&copy; 2026 · 新西兰奥克兰</span><a href="/zh/privacy">隐私政策</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan 的 LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan 的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="给 Amber Lan 发邮件" title="邮件"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

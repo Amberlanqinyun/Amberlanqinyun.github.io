@@ -5243,6 +5243,151 @@ AI-search optimisation helps AI assistants such as ChatGPT, Claude and Perplexit
 # Guides (full text)
 
 <!-- blog-full:start -->
+## How do you build a live marketing report with Claude Code?
+URL: https://www.flowai.co.nz/blog/live-marketing-report-claude-code
+Author: Amber Lan, AI marketing engineer, Auckland
+Updated: 2026-10-19
+
+Short answer: Connect Claude Code to the tools that hold your numbers, pull the ones without a live connector into daily files, and publish one page that reads both. Give it a date picker that compares each period with the one just before it, and have it write each channel's story in plain English. A person approves before anything is shared.
+
+What is a live marketing report?
+
+A live marketing report is a single page that reads current numbers from the tools where marketing happens, lets the reader choose any date range, compares it fairly with the period before, and explains each channel in plain sentences. Nobody rebuilds it by hand each month. The person who owns marketing reviews it and decides what gets shared.
+
+I run the whole marketing function at the AI startup where I work, alone, on Claude Code and agents I built. The notes on running marketing on Claude Code cover the wider setup. This report is one lane of it: outreach on LinkedIn, email follow-up in the CRM, the website, social posts, the content we published, a light competitor check, and the month's done and next lists, all on one page.
+
+Before this, the monthly report was a day of screenshots and copy-paste into slides, out of date by the time anyone read it. The new one stays current, answers questions about any week, and writes its own first draft of the story.
+
+Why not build it in Looker Studio?
+
+Looker Studio works well when your numbers live in Google products, because those connectors come built in. My numbers mostly live elsewhere: the CRM, the social scheduler and the LinkedIn outreach tool. Each would need a third-party connector, and a dashboard still leaves someone writing the summary by hand every month.
+
+Google's partner connector requirements ask each third-party connector to declare its fee type and its own terms of service, so cost and data handling vary by vendor. That is fine for one source. Across four it becomes a stack of subscriptions to manage before any reporting starts.
+
+  QuestionLooker Studio dashboardReport built with Claude Code
+
+  
+    Google AnalyticsBuilt-in connectorDaily pull through the Analytics Data API
+
+    CRM, scheduler, outreach toolThird-party connectors, each with its own termsLive queries through MCP connectors, or a daily pull by script
+
+    Date rangesStrong date picker and comparison controlsBuilt to match: quick ranges, custom dates, period before
+
+    The story behind the numbersWritten by a person each monthDrafted as sentences for each channel, reviewed by a person
+
+    Changing itDrag and drop in the editorAsk in plain English, then check the preview
+
+  
+
+I copied the part of Looker Studio people like most, the date picker with quick ranges on the right, and built the rest around the questions my team asks.
+
+How does the report get its numbers?
+
+It reads numbers two ways. Tools with a connector Claude can use are queried live each time someone opens the page, which covers the CRM and the social scheduler. Tools without one are pulled by small scripts every morning into daily files, which covers Google Analytics and the LinkedIn outreach tool. The page reads both and treats them the same.
+
+Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol. Live queries use each reader's own access, so a teammate without CRM access sees a gap, never someone else's data.
+
+For Google Analytics, a script calls the Google Analytics Data API, which Google describes as programmatic access to the same report data as the Analytics interface. The outreach tool connects over its own MCP server, and the script that reads it is allowed to call only the read tools: overall stats, campaigns, accounts and conversations. Anything that could send a message or change a campaign is refused in code, so the report can never act on the outreach tool, however it is prompted.
+
+How do you connect Google Analytics when keys are blocked?
+
+Sign in with the property owner's own read-only Google login through the OAuth flow for desktop apps. The first plan was a service account with a key file, which our Google Cloud organisation refused by default. The desktop flow needs no key: one browser sign-in, then a refresh token kept on the machine.
+
+Google Cloud's secure-by-default page says its security baseline constraints, including one that prevents users creating persistent service account keys, are enforced for all organisations created on or after 3 May 2024. Asking an administrator to switch that off for a report would trade a real control for convenience.
+
+Google's OAuth guide for desktop apps says the user consents in the system browser and the app receives a short-lived access token and a refresh token. The script asks only for read access to Analytics. If the sign-in ever lapses, the morning job says so in one line and waits for me to sign in again; it never tries to work around it.
+
+How does a date picker compare periods fairly?
+
+Compare every range with the period of the same length just before it, and make the comparison explicit. Last week compares with the week before. A calendar month compares with the previous month. Year to date compares with the same dates last year. The picker shows the exact comparison dates, so nobody has to guess what "vs before" means.
+
+Three details made the comparisons honest:
+
+  Stop at the last full day. Analytics and outreach numbers arrive each morning. A range that runs to today would compare a half-empty day with a full one, so those ranges stop at yesterday and the comparison is cut to the same number of days.
+
+  Count visitors once per range. The Analytics Data API defines active users as the number of distinct users who visited the site, so daily visitor counts cannot be added up: someone who came on Monday and Friday would count twice. The morning script asks Analytics for unique visitors for each quick range and its comparison period. For any other custom range the page adds up the days and marks the number with a ≈.
+
+  Draw long ranges by week. Past about two months, daily bars turn into a grey smear, so the charts switch to weekly bars and say so.
+
+How do you write the report so it reads like marketing wrote it?
+
+Write the rules down and let the page apply them. Each channel gets one plain sentence built from its numbers, every figure in it links back to its source, wins come first, and lower numbers are stated neutrally with the comparison beside them. The report never guesses why a number moved, because a guessed cause gets repeated as fact.
+
+The voice rules came from reading the first version as a teammate would. A red arrow next to a dip read as blame, so dips became grey, and the sentence gives the earlier figure ("against the August number") in place of a percentage drop. The headline names what grew, then what the team shipped, then the focus for next month. The same rules sit in the monthly Slack draft. The report also has a short glossary, because "sessions", "Direct" and "acceptance rate" mean little to most of the people reading it.
+
+Each figure carries a link to the row it came from, so when someone asks "where is that from?", the answer is one click away. That mattered more for trust than any styling choice.
+
+What broke, and what did I change?
+
+Most of what broke was counting, and each fix is now part of the build. Numbers arrived as text, one post was counted once per channel, most website visits showed up as Direct, and competitor sites reported page dates that meant nothing. None of these showed up in a quick look. All of them changed what the report said.
+
+Numbers that arrived as text
+
+The first live version said the team had published content on zero channels. The data files reached the page with every number, list and true or false value turned into text. The local preview now converts rows to text on purpose before the page reads them, so the same mistake fails on my machine before anyone sees it.
+
+One post counted many times
+
+A single card posted to eight channels looked like eight separate pieces of content, because the scheduler renames each uploaded file with an ID. The gallery now treats posts as one piece when they share a group, the same cover image once the ID is stripped, or the same opening line in the same month. The gallery shrank to the pieces the team actually made, each with every channel it ran on.
+
+Most visits arriving as Direct
+
+Google Analytics defines Direct as visitors arriving through a saved link or by typing the URL, and untagged links from social posts end up there too. Google's guidance on campaign URLs says to always set utm_source, utm_medium and utm_campaign. The report now carries a standing suggestion to tag every post link, and it stays until social visits arrive tagged.
+
+Competitor dates that meant nothing
+
+The competitor check reads public sitemaps, blog feeds and homepages, with no paid tool. Some sites stamp every page with a fresh date on each rebuild, so new pages now come from comparing this month's sitemap with last month's, and blog posts count only when a real feed carries a publish date.
+
+How does it keep running without me?
+
+Two scheduled tasks run it, and both follow one skill. Every morning a task pulls Analytics and the outreach tool and rebuilds the current month's content gallery. On the first of each month another closes the month: notes, the competitor check and a Slack draft. Nothing is shared until I approve it.
+
+Anthropic's scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose. The instructions for both tasks live in a single skill, with the runbooks, the rules and the checks. Anthropic's skills documentation says Claude uses a skill when it is relevant, or when you call it by name, so the task prompts are one line each: follow the skill. When a rule changes, I change it in one place.
+
+Every page change goes through a local preview that clicks through each quick range and a custom range, checks for errors, and takes a screenshot of every tab. The publish step only runs after that check passes.
+
+How do you build one yourself?
+
+Start from the questions your team asks, then wire one source at a time. List the numbers people request each month, connect the tool that holds the most of them, and publish a page that answers those questions for last month only. Add the date picker, the written story and the schedule once that page is right.
+
+  Write down the questions. "How many people replied on LinkedIn last week?" is a better starting spec than a list of metrics.
+
+  Connect one tool, read only. Use an MCP connector if one exists, or a small script that writes a daily file.
+
+  Publish last month only. Check every number against the tool it came from before adding anything else.
+
+  Add the date picker. Define each quick range once, in one place, and make the scripts and the page share that definition.
+
+  Write the voice rules. Decide how wins, dips and missing data are worded before the page writes a single sentence.
+
+  Schedule the pulls and the monthly close. Keep a person between the draft and anything shared with the team.
+
+The same pattern sits behind most AI agents for marketing: read access first, written rules, and a person who approves. If the idea of an AI marketing agent is new, start there. Reporting is a natural lane for marketing automation, because the work repeats every month and the rules rarely change.
+
+Where Flow AI fits
+
+Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. If you are looking for a marketing automation consultant to build a report like this on your own tools, that page explains how a build works.
+
+Teams can contract a build, which starts with a written scope and is priced per project. If you are hiring for a marketing engineer or GTM engineer role, I am open to conversations about senior roles. The skills I build in the open are in the Flow AI skill library.
+
+The short version
+
+A live marketing report reads its numbers from the tools that hold them, live where a connector exists and from a morning pull where it does not. It lets the reader pick any range, compares it with the period just before, and explains each channel in a plain sentence with a link to every number's source.
+
+Most of the work was counting things honestly: visitors once per range, a post once across channels, a day only once it has finished. Written voice rules and a person who approves before anything is shared kept the report trusted. If you want one built on your own tools, talk to Amber.
+
+Q: Do you need to code to build a live marketing report?
+A: You need to read code more than write it. Claude Code wrote most of the scripts and the page with me, but I had to understand each data source well enough to spot a wrong number, such as visitors counted twice or a post counted once per channel. The judgement about what each number means is marketing work, and it is the part that took longest.
+Q: Why not use Looker Studio for a marketing report?
+A: Looker Studio is a good choice when most of your numbers live in Google products, because those connectors are built in. It gets harder when the CRM, the social scheduler and the outreach tool need third-party partner connectors, each with its own terms and fee model. It also shows numbers without explaining them, so someone still writes the summary every month.
+Q: How do you connect Google Analytics without a service account key?
+A: Use the OAuth flow for desktop apps with a read-only scope. The person who owns the property signs in once in the browser and approves access, and the script keeps a refresh token on that machine. Google Cloud organisations created on or after 3 May 2024 block service account key creation by default, so this route avoids asking an administrator to weaken that policy.
+Q: How often should a marketing report refresh?
+A: Match the refresh to how the source updates. CRM and scheduler numbers can be read live each time the page opens. Analytics and outreach numbers are cleaner pulled once each morning, after the previous day has finished. A daily pull also means a range that runs to today stops at yesterday, so the comparison stays like for like.
+Q: Can the report post itself to Slack?
+A: It can draft the post, and in my setup it stops there. On the first of each month a scheduled task closes the month, writes the notes and drafts a short Slack summary, then waits. The post goes out only after I approve it in writing, because a report shared with the whole team is a public statement about the team's work.
+Q: What does a live marketing report cost to run?
+A: Mine runs on tools the team already pays for, plus Claude. The analytics, CRM and scheduler access comes through existing accounts, and the competitor check reads public websites and web search instead of a paid keyword tool. The real cost is the setup time and a few minutes of review each month, which replaced a day of building slides.
+
 ## n8n, Zapier, Make or Claude Code: which automation tool suits a small business?
 URL: https://www.flowai.co.nz/blog/n8n-vs-zapier-vs-make-vs-claude-code
 Author: Amber Lan, AI marketing engineer, Auckland
