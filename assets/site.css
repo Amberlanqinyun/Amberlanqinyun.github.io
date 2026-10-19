@@ -1,4 +1,4 @@
-/* Flow AI shared page system. One face, three inks, centered stacks, air.
+/* Amber Lan shared page system. One face, three inks, centered stacks, air.
    Loaded by every page after site-header.css and site-footer.css. Page-specific
    rules stay inline in the page and build on these tokens and classes. */
 
@@ -362,7 +362,7 @@ body::after { right: max(var(--gutter), calc(50% - (var(--measure) / 2))); }
   .versus-head { display: none; }
   .versus-them, .versus-us { padding-left: 0; padding-right: 0; border-right: 0; }
   .versus-them::before { content: "Agency: "; color: var(--soft); font-weight: 600; }
-  .versus-us::before { content: "Flow AI: "; color: var(--fg); font-weight: 600; }
+  .versus-us::before { content: "Amber Lan: "; color: var(--fg); font-weight: 600; }
   .versus-us { padding-top: var(--s-1); }
   .versus-label { padding-left: 0; padding-right: 0; }
 }

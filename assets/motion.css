@@ -1,4 +1,4 @@
-/* Flow AI shared motion layer.
+/* Amber Lan shared motion layer.
    Scroll reveals, grid stagger, image load-in, and card hover polish.
    Hidden states are applied by motion.js only when the browser supports
    IntersectionObserver and the visitor has not asked for reduced motion,

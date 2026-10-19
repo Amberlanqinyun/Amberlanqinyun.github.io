@@ -1,4 +1,4 @@
-/* Flow AI visual layer: sprint explorer tabs and figure reveal. */
+/* Amber Lan visual layer: sprint explorer tabs and figure reveal. */
 (function () {
   "use strict";
 

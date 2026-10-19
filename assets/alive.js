@@ -1,4 +1,4 @@
-/* Flow AI life layer.
+/* Amber Lan life layer.
 
    Four small jobs, all decorative, all fail-safe:
    1. Split headlines into words, then group the words by line, so the

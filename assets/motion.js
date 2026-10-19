@@ -1,4 +1,4 @@
-/* Flow AI shared motion layer.
+/* Amber Lan shared motion layer.
 
    Two jobs:
    1. Reveal page content on scroll, staggering grid children so a row of

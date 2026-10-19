@@ -1,4 +1,4 @@
-/* Flow AI island navigation.
+/* Amber Lan island navigation.
 
    On small screens the header's links fold into a full-screen menu behind a
    hamburger that turns into a cross. The menu is built here from the

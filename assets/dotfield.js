@@ -1,4 +1,4 @@
-/* Flow AI dot field.
+/* Amber Lan dot field.
 
    A perspective-projected wave surface drawn as dots on a canvas: the web
    version of the particle layer in the card kit. Nearer dots are larger and

@@ -1,4 +1,4 @@
-"""Flowcharts inside the Flow AI guides.
+"""Flowcharts inside Amber Lan's guides.
 
 A guide marks where a diagram goes with an empty placeholder in its body:
 

@@ -1,4 +1,4 @@
-/* Flow AI dot. The amber dot at the head of the mark is Flow Intelligence: a glass orb
+/* Amber Lan dot. The amber dot at the head of the mark is Flow Intelligence: a glass orb
    with the amber light inside it. The agents are made of the same glass, each its own
    soft shape, carrying that light into the work.
 
