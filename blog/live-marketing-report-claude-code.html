@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLHSQ2TQ');</script>
+  <!-- End Google Tag Manager -->
+<title>How to Build a Live Marketing Report with Claude Code</title>
+<meta name="description" content="Working notes from an AI marketing engineer: a live marketing report built with Claude Code, with a date picker, fair comparisons and plain-English summaries.">
+<meta name="author" content="Amber Lan">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code">
+<!-- i18n:start -->
+<link rel="alternate" hreflang="en" href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.flowai.co.nz/zh/blog/live-marketing-report-claude-code">
+<link rel="alternate" hreflang="x-default" href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code">
+<link rel="stylesheet" href="/assets/i18n.css?v=1">
+<script>(function(){try{var k='flowai-lang',d=document,c=/^zh/.test(d.documentElement.lang)?'zh':'en',p=localStorage.getItem(k);d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem(k,a.getAttribute('data-lang'))});if(p&&p!==c){var l=d.querySelector('link[rel=alternate][hreflang='+(p==='zh'?'zh-Hans':'en')+']');if(l){var u=new URL(l.href);if(u.pathname!==location.pathname)location.replace(u.pathname+location.search+location.hash)}}}catch(e){}})();</script>
+<!-- i18n:end -->
+<link rel="alternate" type="application/atom+xml" title="Amber Lan" href="https://www.flowai.co.nz/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="How to Build a Live Marketing Report with Claude Code">
+<meta property="og:description" content="Working notes from an AI marketing engineer: a live marketing report built with Claude Code, with a date picker, fair comparisons and plain-English summaries.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Amber Lan">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:url" content="https://www.flowai.co.nz/blog/live-marketing-report-claude-code">
+<meta property="og:image" content="https://www.flowai.co.nz/og.png">
+<meta property="article:published_time" content="2026-10-19T00:00:00+13:00">
+<meta property="article:modified_time" content="2026-10-19T00:00:00+13:00">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-header.css">
+<link rel="stylesheet" href="/assets/site-footer.css?v=2">
+<link rel="stylesheet" href="/assets/motion.css">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
+<script src="/assets/motion.js" defer></script>
+<script src="/assets/share.js" defer></script>
+<script src="/assets/blog.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code#article",
+      "headline": "How do you build a live marketing report with Claude Code?",
+      "description": "Working notes by Amber Lan, an Auckland AI marketing engineer, on building a live marketing report with Claude Code: how it pulls numbers from the CRM, the social scheduler, Google Analytics and the outreach tool, how its date picker compares periods fairly, how it writes each channel's story, what broke, and how it keeps running each morning.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "inLanguage": "en-NZ",
+      "articleSection": "The AI marketing agent",
+      "wordCount": 2565,
+      "timeRequired": "PT12M",
+      "image": "https://www.flowai.co.nz/blog/figures/live-marketing-report-claude-code.svg",
+      "author": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "publisher": {
+        "@id": "https://www.flowai.co.nz/#amber"
+      },
+      "isPartOf": {
+        "@id": "https://www.flowai.co.nz/blog/#blog"
+      },
+      "mainEntityOfPage": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".short-answer__text",
+          ".article-hero h1"
+        ]
+      },
+      "keywords": "live marketing report, automated marketing report, marketing dashboard, marketing reporting automation, claude code marketing report, looker studio alternative, monthly marketing report, marketing automation consultant, claude code consultant",
+      "about": {
+        "@id": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code#definedterm"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code#definedterm",
+      "name": "Live marketing report",
+      "description": "A live marketing report is a single page that reads current numbers from the tools where marketing happens, lets the reader choose any date range, compares it fairly with the period before, and explains each channel in plain sentences, without anyone rebuilding it by hand each month.",
+      "url": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code",
+      "inDefinedTermSet": {
+        "@id": "https://www.flowai.co.nz/glossary/#terms"
+      },
+      "alternateName": [
+        "Automated marketing report",
+        "Live marketing dashboard"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you need to code to build a live marketing report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need to read code more than write it. Claude Code wrote most of the scripts and the page with me, but I had to understand each data source well enough to spot a wrong number, such as visitors counted twice or a post counted once per channel. The judgement about what each number means is marketing work, and it is the part that took longest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why not use Looker Studio for a marketing report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Looker Studio is a good choice when most of your numbers live in Google products, because those connectors are built in. It gets harder when the CRM, the social scheduler and the outreach tool need third-party partner connectors, each with its own terms and fee model. It also shows numbers without explaining them, so someone still writes the summary every month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you connect Google Analytics without a service account key?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the OAuth flow for desktop apps with a read-only scope. The person who owns the property signs in once in the browser and approves access, and the script keeps a refresh token on that machine. Google Cloud organisations created on or after 3 May 2024 block service account key creation by default, so this route avoids asking an administrator to weaken that policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should a marketing report refresh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Match the refresh to how the source updates. CRM and scheduler numbers can be read live each time the page opens. Analytics and outreach numbers are cleaner pulled once each morning, after the previous day has finished. A daily pull also means a range that runs to today stops at yesterday, so the comparison stays like for like."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the report post itself to Slack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can draft the post, and in my setup it stops there. On the first of each month a scheduled task closes the month, writes the notes and drafts a short Slack summary, then waits. The post goes out only after I approve it in writing, because a report shared with the whole team is a public statement about the team's work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a live marketing report cost to run?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mine runs on tools the team already pays for, plus Claude. The analytics, CRM and scheduler access comes through existing accounts, and the competitor check reads public websites and web search instead of a paid keyword tool. The real cost is the setup time and a few minutes of review each month, which replaced a day of building slides."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Amber Lan",
+          "item": "https://www.flowai.co.nz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://www.flowai.co.nz/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The AI marketing agent",
+          "item": "https://www.flowai.co.nz/blog/?topic=agent"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How do you build a live marketing report with Claude Code?",
+          "item": "https://www.flowai.co.nz/blog/live-marketing-report-claude-code"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/claude.css?v=14">
+<link rel="stylesheet" href="/assets/highend.css?v=8">
+<script>document.documentElement.className += ' has-nav';</script>
+<script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
+</head>
+<body data-motion="auto">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHSQ2TQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#article">Skip to the guide</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="Amber Lan home">
+      <img class="site-header__brand-mark" src="/assets/flowai-mark.svg" width="24" height="24" alt="" aria-hidden="true">
+      <span class="site-header__brand-text">Amber Lan</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/ai-marketing-services/">Services</a>
+      <a href="/sprints/">How it works</a>
+      <a href="/blog/" aria-current="page">Guides</a>
+      <a href="/about">About</a>
+      <span class="lang-switch" role="group" aria-label="Language"><a href="/blog/live-marketing-report-claude-code" lang="en" hreflang="en" data-lang="en" aria-current="true">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/blog/live-marketing-report-claude-code" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh">中文</a></span>
+      <a class="site-header__cta" href="/contact">Work with me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero article-hero centered" aria-labelledby="article-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="eyebrow"><a href="/blog/">Guides</a><span aria-hidden="true"> / </span><a href="/blog/?topic=agent">The AI marketing agent</a></p>
+        <h1 id="article-title">How do you build a live marketing report with Claude Code?</h1>
+        <aside class="short-answer" aria-labelledby="short-answer-label">
+          <p class="short-answer__label" id="short-answer-label">The short answer</p>
+          <p class="short-answer__text">Connect Claude Code to the tools that hold your numbers, pull the ones without a live connector into daily files, and publish one page that reads both. Give it a date picker that compares each period with the one just before it, and have it write each channel&#x27;s story in plain English. A person approves before anything is shared.</p>
+        </aside>
+        <p class="lead">I report on a whole marketing function every month, and I wanted a report that stays current, shows any week or month, and explains itself. <b>These are my working notes on how I built it with Claude Code, including the parts that broke.</b></p>
+        <p class="byline small"><span><a href="/about">Amber Lan</a>, AI marketing engineer</span><span aria-hidden="true">·</span><span>Updated <time datetime="2026-10-19">19 October 2026</time></span><span aria-hidden="true">·</span><span>12 min read</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body" id="article" aria-label="Guide">
+    <div class="wrap article-grid">
+      <nav class="toc" aria-label="Contents">
+        <details class="toc__box" open>
+          <summary class="toc__label">Contents <span class="toc__left" data-minutes-left></span></summary>
+          <div class="toc__progress" aria-hidden="true"><span data-progress></span></div>
+          <ol class="toc__list">
+<li><a href="#what-is-a-live-marketing-report" data-toc="what-is-a-live-marketing-report"><span class="toc-num">01</span><span>What is a live marketing report?</span></a></li>
+<li><a href="#why-not-build-it-in-looker-studio" data-toc="why-not-build-it-in-looker-studio"><span class="toc-num">02</span><span>Why not build it in Looker Studio?</span></a></li>
+<li><a href="#how-does-the-report-get-its-numbers" data-toc="how-does-the-report-get-its-numbers"><span class="toc-num">03</span><span>How does the report get its numbers?</span></a></li>
+<li><a href="#how-do-you-connect-google-analytics-when-keys-are-blocked" data-toc="how-do-you-connect-google-analytics-when-keys-are-blocked"><span class="toc-num">04</span><span>How do you connect Google Analytics when keys are blocked?</span></a></li>
+<li><a href="#how-does-a-date-picker-compare-periods-fairly" data-toc="how-does-a-date-picker-compare-periods-fairly"><span class="toc-num">05</span><span>How does a date picker compare periods fairly?</span></a></li>
+<li><a href="#how-do-you-write-the-report-so-it-reads-like-marketing-wrote" data-toc="how-do-you-write-the-report-so-it-reads-like-marketing-wrote"><span class="toc-num">06</span><span>How do you write the report so it reads like marketing wrote it?</span></a></li>
+<li><a href="#what-broke-and-what-did-i-change" data-toc="what-broke-and-what-did-i-change"><span class="toc-num">07</span><span>What broke, and what did I change?</span></a></li>
+<li><a href="#how-does-it-keep-running-without-me" data-toc="how-does-it-keep-running-without-me"><span class="toc-num">08</span><span>How does it keep running without me?</span></a></li>
+<li><a href="#how-do-you-build-one-yourself" data-toc="how-do-you-build-one-yourself"><span class="toc-num">09</span><span>How do you build one yourself?</span></a></li>
+<li><a href="#where-flow-ai-fits" data-toc="where-flow-ai-fits"><span class="toc-num">10</span><span>Where Flow AI fits</span></a></li>
+<li><a href="#the-short-version" data-toc="the-short-version"><span class="toc-num">11</span><span>The short version</span></a></li>
+<li><a href="#faq" data-toc="faq"><span class="toc-num">12</span><span>Questions owners ask</span></a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <div class="article-main">
+        <figure class="article-figure"><img src="/blog/figures/live-marketing-report-claude-code.svg" width="960" height="540" alt=""></figure>
+        <article class="prose">
+<h2 id="what-is-a-live-marketing-report"><span class="sec-num" aria-hidden="true">01</span><span class="sec-title">What is a live marketing report?</span></h2>
+<p>A live marketing report is a single page that reads current numbers from the tools where marketing happens, lets the reader choose any date range, compares it fairly with the period before, and explains each channel in plain sentences. Nobody rebuilds it by hand each month. The person who owns marketing reviews it and decides what gets shared.</p>
+<p>I run the whole marketing function at the AI startup where I work, alone, on Claude Code and agents I built. The <a class="go" href="/blog/running-marketing-on-claude-code">notes on running marketing on Claude Code</a> cover the wider setup. This report is one lane of it: outreach on LinkedIn, email follow-up in the CRM, the website, social posts, the content we published, a light competitor check, and the month's done and next lists, all on one page.</p>
+<p>Before this, the monthly report was a day of screenshots and copy-paste into slides, out of date by the time anyone read it. The new one stays current, answers questions about any week, and writes its own first draft of the story.</p>
+
+<h2 id="why-not-build-it-in-looker-studio"><span class="sec-num" aria-hidden="true">02</span><span class="sec-title">Why not build it in Looker Studio?</span></h2>
+<p>Looker Studio works well when your numbers live in Google products, because those connectors come built in. My numbers mostly live elsewhere: the CRM, the social scheduler and the LinkedIn outreach tool. Each would need a third-party connector, and a dashboard still leaves someone writing the summary by hand every month.</p>
+<p><a class="go" href="https://developers.google.com/data-studio/connector/pscc-requirements" target="_blank" rel="noopener">Google's partner connector requirements ask each third-party connector to declare its fee type and its own terms of service</a><sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup>, so cost and data handling vary by vendor. That is fine for one source. Across four it becomes a stack of subscriptions to manage before any reporting starts.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Question</th><th>Looker Studio dashboard</th><th>Report built with Claude Code</th></tr></thead>
+  <tbody>
+    <tr><td><b>Google Analytics</b></td><td>Built-in connector</td><td>Daily pull through the Analytics Data API</td></tr>
+    <tr><td><b>CRM, scheduler, outreach tool</b></td><td>Third-party connectors, each with its own terms</td><td>Live queries through MCP connectors, or a daily pull by script</td></tr>
+    <tr><td><b>Date ranges</b></td><td>Strong date picker and comparison controls</td><td>Built to match: quick ranges, custom dates, period before</td></tr>
+    <tr><td><b>The story behind the numbers</b></td><td>Written by a person each month</td><td>Drafted as sentences for each channel, reviewed by a person</td></tr>
+    <tr><td><b>Changing it</b></td><td>Drag and drop in the editor</td><td>Ask in plain English, then check the preview</td></tr>
+  </tbody>
+</table></div>
+<p>I copied the part of Looker Studio people like most, the date picker with quick ranges on the right, and built the rest around the questions my team asks.</p>
+
+<h2 id="how-does-the-report-get-its-numbers"><span class="sec-num" aria-hidden="true">03</span><span class="sec-title">How does the report get its numbers?</span></h2>
+<p>It reads numbers two ways. Tools with a connector Claude can use are queried live each time someone opens the page, which covers the CRM and the social scheduler. Tools without one are pulled by small scripts every morning into daily files, which covers Google Analytics and the LinkedIn outreach tool. The page reads both and treats them the same.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic's MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol</a><sup class="fn"><a href="#source-2" aria-label="Source 2">2</a></sup>. Live queries use each reader's own access, so a teammate without CRM access sees a gap, never someone else's data.</p>
+<p>For Google Analytics, a script calls the <a class="go" href="https://developers.google.com/analytics/devguides/reporting/data/v1" target="_blank" rel="noopener">Google Analytics Data API, which Google describes as programmatic access to the same report data as the Analytics interface</a><sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup>. The outreach tool connects over its own MCP server, and the script that reads it is allowed to call only the read tools: overall stats, campaigns, accounts and conversations. Anything that could send a message or change a campaign is refused in code, so the report can never act on the outreach tool, however it is prompted.</p>
+
+<h2 id="how-do-you-connect-google-analytics-when-keys-are-blocked"><span class="sec-num" aria-hidden="true">04</span><span class="sec-title">How do you connect Google Analytics when keys are blocked?</span></h2>
+<p>Sign in with the property owner's own read-only Google login through the OAuth flow for desktop apps. The first plan was a service account with a key file, which our Google Cloud organisation refused by default. The desktop flow needs no key: one browser sign-in, then a refresh token kept on the machine.</p>
+<p><a class="go" href="https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations" target="_blank" rel="noopener">Google Cloud's secure-by-default page says its security baseline constraints, including one that prevents users creating persistent service account keys, are enforced for all organisations created on or after 3 May 2024</a><sup class="fn"><a href="#source-4" aria-label="Source 4">4</a></sup>. Asking an administrator to switch that off for a report would trade a real control for convenience.</p>
+<p><a class="go" href="https://developers.google.com/identity/protocols/oauth2/native-app" target="_blank" rel="noopener">Google's OAuth guide for desktop apps says the user consents in the system browser and the app receives a short-lived access token and a refresh token</a><sup class="fn"><a href="#source-5" aria-label="Source 5">5</a></sup>. The script asks only for read access to Analytics. If the sign-in ever lapses, the morning job says so in one line and waits for me to sign in again; it never tries to work around it.</p>
+
+<h2 id="how-does-a-date-picker-compare-periods-fairly"><span class="sec-num" aria-hidden="true">05</span><span class="sec-title">How does a date picker compare periods fairly?</span></h2>
+<p>Compare every range with the period of the same length just before it, and make the comparison explicit. Last week compares with the week before. A calendar month compares with the previous month. Year to date compares with the same dates last year. The picker shows the exact comparison dates, so nobody has to guess what "vs before" means.</p>
+<p>Three details made the comparisons honest:</p>
+<ol>
+  <li><b>Stop at the last full day.</b> Analytics and outreach numbers arrive each morning. A range that runs to today would compare a half-empty day with a full one, so those ranges stop at yesterday and the comparison is cut to the same number of days.</li>
+  <li><b>Count visitors once per range.</b> <a class="go" href="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema" target="_blank" rel="noopener">The Analytics Data API defines active users as the number of distinct users who visited the site</a><sup class="fn"><a href="#source-6" aria-label="Source 6">6</a></sup>, so daily visitor counts cannot be added up: someone who came on Monday and Friday would count twice. The morning script asks Analytics for unique visitors for each quick range and its comparison period. For any other custom range the page adds up the days and marks the number with a ≈.</li>
+  <li><b>Draw long ranges by week.</b> Past about two months, daily bars turn into a grey smear, so the charts switch to weekly bars and say so.</li>
+</ol>
+
+<h2 id="how-do-you-write-the-report-so-it-reads-like-marketing-wrote"><span class="sec-num" aria-hidden="true">06</span><span class="sec-title">How do you write the report so it reads like marketing wrote it?</span></h2>
+<p>Write the rules down and let the page apply them. Each channel gets one plain sentence built from its numbers, every figure in it links back to its source, wins come first, and lower numbers are stated neutrally with the comparison beside them. The report never guesses why a number moved, because a guessed cause gets repeated as fact.</p>
+<p>The voice rules came from reading the first version as a teammate would. A red arrow next to a dip read as blame, so dips became grey, and the sentence gives the earlier figure ("against the August number") in place of a percentage drop. The headline names what grew, then what the team shipped, then the focus for next month. The same rules sit in the monthly Slack draft. The report also has a short glossary, because "sessions", "Direct" and "acceptance rate" mean little to most of the people reading it.</p>
+<p>Each figure carries a link to the row it came from, so when someone asks "where is that from?", the answer is one click away. That mattered more for trust than any styling choice.</p>
+
+<h2 id="what-broke-and-what-did-i-change"><span class="sec-num" aria-hidden="true">07</span><span class="sec-title">What broke, and what did I change?</span></h2>
+<p>Most of what broke was counting, and each fix is now part of the build. Numbers arrived as text, one post was counted once per channel, most website visits showed up as Direct, and competitor sites reported page dates that meant nothing. None of these showed up in a quick look. All of them changed what the report said.</p>
+
+<h3>Numbers that arrived as text</h3>
+<p>The first live version said the team had published content on zero channels. The data files reached the page with every number, list and true or false value turned into text. The local preview now converts rows to text on purpose before the page reads them, so the same mistake fails on my machine before anyone sees it.</p>
+
+<h3>One post counted many times</h3>
+<p>A single card posted to eight channels looked like eight separate pieces of content, because the scheduler renames each uploaded file with an ID. The gallery now treats posts as one piece when they share a group, the same cover image once the ID is stripped, or the same opening line in the same month. The gallery shrank to the pieces the team actually made, each with every channel it ran on.</p>
+
+<h3>Most visits arriving as Direct</h3>
+<p><a class="go" href="https://support.google.com/analytics/answer/9756891" target="_blank" rel="noopener">Google Analytics defines Direct as visitors arriving through a saved link or by typing the URL</a><sup class="fn"><a href="#source-7" aria-label="Source 7">7</a></sup>, and untagged links from social posts end up there too. <a class="go" href="https://support.google.com/analytics/answer/10917952" target="_blank" rel="noopener">Google's guidance on campaign URLs says to always set utm_source, utm_medium and utm_campaign</a><sup class="fn"><a href="#source-8" aria-label="Source 8">8</a></sup>. The report now carries a standing suggestion to tag every post link, and it stays until social visits arrive tagged.</p>
+
+<h3>Competitor dates that meant nothing</h3>
+<p>The competitor check reads public sitemaps, blog feeds and homepages, with no paid tool. Some sites stamp every page with a fresh date on each rebuild, so new pages now come from comparing this month's sitemap with last month's, and blog posts count only when a real feed carries a publish date.</p>
+
+<h2 id="how-does-it-keep-running-without-me"><span class="sec-num" aria-hidden="true">08</span><span class="sec-title">How does it keep running without me?</span></h2>
+<p>Two scheduled tasks run it, and both follow one skill. Every morning a task pulls Analytics and the outreach tool and rebuilds the current month's content gallery. On the first of each month another closes the month: notes, the competitor check and a Slack draft. Nothing is shared until I approve it.</p>
+<p><a class="go" href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic's scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose</a><sup class="fn"><a href="#source-9" aria-label="Source 9">9</a></sup>. The instructions for both tasks live in a single skill, with the runbooks, the rules and the checks. <a class="go" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic's skills documentation says Claude uses a skill when it is relevant, or when you call it by name</a><sup class="fn"><a href="#source-10" aria-label="Source 10">10</a></sup>, so the task prompts are one line each: follow the skill. When a rule changes, I change it in one place.</p>
+<p>Every page change goes through a local preview that clicks through each quick range and a custom range, checks for errors, and takes a screenshot of every tab. The publish step only runs after that check passes.</p>
+
+<h2 id="how-do-you-build-one-yourself"><span class="sec-num" aria-hidden="true">09</span><span class="sec-title">How do you build one yourself?</span></h2>
+<p>Start from the questions your team asks, then wire one source at a time. List the numbers people request each month, connect the tool that holds the most of them, and publish a page that answers those questions for last month only. Add the date picker, the written story and the schedule once that page is right.</p>
+<ol>
+  <li><b>Write down the questions.</b> "How many people replied on LinkedIn last week?" is a better starting spec than a list of metrics.</li>
+  <li><b>Connect one tool, read only.</b> Use an MCP connector if one exists, or a small script that writes a daily file.</li>
+  <li><b>Publish last month only.</b> Check every number against the tool it came from before adding anything else.</li>
+  <li><b>Add the date picker.</b> Define each quick range once, in one place, and make the scripts and the page share that definition.</li>
+  <li><b>Write the voice rules.</b> Decide how wins, dips and missing data are worded before the page writes a single sentence.</li>
+  <li><b>Schedule the pulls and the monthly close.</b> Keep a person between the draft and anything shared with the team.</li>
+</ol>
+<p>The same pattern sits behind most <a class="go" href="/blog/ai-agents-for-marketing">AI agents for marketing</a>: read access first, written rules, and a person who approves. If the idea of an <a class="go" href="/blog/what-is-an-ai-marketing-agent">AI marketing agent</a> is new, start there. Reporting is a natural lane for <a class="go" href="/glossary/#marketing-automation">marketing automation</a>, because the work repeats every month and the rules rarely change.</p>
+
+<h2 id="where-flow-ai-fits"><span class="sec-num" aria-hidden="true">10</span><span class="sec-title">Where Flow AI fits</span></h2>
+<p>Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. If you are looking for a <a class="go" href="/ai-marketing-services/marketing-automation-consultant">marketing automation consultant</a> to build a report like this on your own tools, that page explains how a build works.</p>
+<p>Teams can contract a build, which starts with a written scope and is priced per project. If you are hiring for a marketing engineer or GTM engineer role, I am open to <a class="go" href="/about#hire">conversations about senior roles</a>. The skills I build in the open are in the <a class="go" href="/skills/">Flow AI skill library</a>.</p>
+
+<h2 id="the-short-version"><span class="sec-num" aria-hidden="true">11</span><span class="sec-title">The short version</span></h2>
+<p>A live marketing report reads its numbers from the tools that hold them, live where a connector exists and from a morning pull where it does not. It lets the reader pick any range, compares it with the period just before, and explains each channel in a plain sentence with a link to every number's source.</p>
+<p>Most of the work was counting things honestly: visitors once per range, a post once across channels, a day only once it has finished. Written voice rules and a person who approves before anything is shared kept the report trusted. If you want one built on your own tools, <a class="go" href="/contact">talk to Amber</a>.</p>
+        </article>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span class="sec-num" aria-hidden="true">12</span><span class="sec-title">Questions owners ask</span></h2>
+  <div class="faq__list">
+<details class="faq__item" open><summary><h3>Do you need to code to build a live marketing report?</h3></summary><p>You need to read code more than write it. Claude Code wrote most of the scripts and the page with me, but I had to understand each data source well enough to spot a wrong number, such as visitors counted twice or a post counted once per channel. The judgement about what each number means is marketing work, and it is the part that took longest.</p></details>
+<details class="faq__item"><summary><h3>Why not use Looker Studio for a marketing report?</h3></summary><p>Looker Studio is a good choice when most of your numbers live in Google products, because those connectors are built in. It gets harder when the CRM, the social scheduler and the outreach tool need third-party partner connectors, each with its own terms and fee model. It also shows numbers without explaining them, so someone still writes the summary every month.</p></details>
+<details class="faq__item"><summary><h3>How do you connect Google Analytics without a service account key?</h3></summary><p>Use the OAuth flow for desktop apps with a read-only scope. The person who owns the property signs in once in the browser and approves access, and the script keeps a refresh token on that machine. Google Cloud organisations created on or after 3 May 2024 block service account key creation by default, so this route avoids asking an administrator to weaken that policy.</p></details>
+<details class="faq__item"><summary><h3>How often should a marketing report refresh?</h3></summary><p>Match the refresh to how the source updates. CRM and scheduler numbers can be read live each time the page opens. Analytics and outreach numbers are cleaner pulled once each morning, after the previous day has finished. A daily pull also means a range that runs to today stops at yesterday, so the comparison stays like for like.</p></details>
+<details class="faq__item"><summary><h3>Can the report post itself to Slack?</h3></summary><p>It can draft the post, and in my setup it stops there. On the first of each month a scheduled task closes the month, writes the notes and drafts a short Slack summary, then waits. The post goes out only after I approve it in writing, because a report shared with the whole team is a public statement about the team&#x27;s work.</p></details>
+<details class="faq__item"><summary><h3>What does a live marketing report cost to run?</h3></summary><p>Mine runs on tools the team already pays for, plus Claude. The analytics, CRM and scheduler access comes through existing accounts, and the competitor check reads public websites and web search instead of a paid keyword tool. The real cost is the setup time and a few minutes of review each month, which replaced a day of building slides.</p></details>
+  </div>
+</section>
+        <aside class="author-box" aria-label="About the author">
+          <p class="author-box__label">Written by</p>
+          <p class="author-box__name"><a href="/about">Amber Lan</a></p>
+          <p>AI marketing engineer based in Auckland, New Zealand. She runs a whole marketing function on agent systems she builds herself and publishes them <a class="go" href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me">on GitHub</a>. She takes on contract builds under the trading name Flow AI: the strategy, the systems and the agents that run a marketing function, engineered end to end.</p>
+        </aside>
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title" class="sources__title">Sources</h2>
+  <p class="sources__note">Every figure links to its primary source. Checked 19 October 2026.</p>
+  <ol class="sources__list">
+<li id="source-1"><a href="https://developers.google.com/data-studio/connector/pscc-requirements" target="_blank" rel="noopener">Google&#x27;s partner connector requirements ask each third-party connector to declare its fee type and its own terms of service</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-2"><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Anthropic&#x27;s MCP documentation says Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-3"><a href="https://developers.google.com/analytics/devguides/reporting/data/v1" target="_blank" rel="noopener">Google Analytics Data API, which Google describes as programmatic access to the same report data as the Analytics interface</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-4"><a href="https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations" target="_blank" rel="noopener">Google Cloud&#x27;s secure-by-default page says its security baseline constraints, including one that prevents users creating persistent service account keys, are enforced for all organisations created on or after 3 May 2024</a> <span class="src-host">docs.cloud.google.com</span></li>
+<li id="source-5"><a href="https://developers.google.com/identity/protocols/oauth2/native-app" target="_blank" rel="noopener">Google&#x27;s OAuth guide for desktop apps says the user consents in the system browser and the app receives a short-lived access token and a refresh token</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-6"><a href="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema" target="_blank" rel="noopener">The Analytics Data API defines active users as the number of distinct users who visited the site</a> <span class="src-host">developers.google.com</span></li>
+<li id="source-7"><a href="https://support.google.com/analytics/answer/9756891" target="_blank" rel="noopener">Google Analytics defines Direct as visitors arriving through a saved link or by typing the URL</a> <span class="src-host">support.google.com</span></li>
+<li id="source-8"><a href="https://support.google.com/analytics/answer/10917952" target="_blank" rel="noopener">Google&#x27;s guidance on campaign URLs says to always set utm_source, utm_medium and utm_campaign</a> <span class="src-host">support.google.com</span></li>
+<li id="source-9"><a href="https://code.claude.com/docs/en/desktop-scheduled-tasks" target="_blank" rel="noopener">Anthropic&#x27;s scheduled tasks documentation says Claude Code Desktop can start a new session at a time and frequency you choose</a> <span class="src-host">code.claude.com</span></li>
+<li id="source-10"><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Anthropic&#x27;s skills documentation says Claude uses a skill when it is relevant, or when you call it by name</a> <span class="src-host">code.claude.com</span></li>
+  </ol>
+</section>
+      </div>
+
+      <aside class="rail" aria-label="About this guide">
+        <dl class="rail__facts">
+          <div><dt>Topic</dt><dd><a href="/blog/?topic=agent">The AI marketing agent</a></dd></div>
+          <div><dt>Format</dt><dd>Working notes</dd></div>
+          <div><dt>Updated</dt><dd>19 October 2026</dd></div>
+          <div><dt>Reading time</dt><dd>12 minutes</dd></div>
+        </dl>
+        <button class="share-button" type="button" data-share data-share-title="How do you build a live marketing report with Claude Code?" data-share-text="Working notes from an AI marketing engineer: a live marketing report built with Claude Code, with a date picker, fair comparisons and plain-English summaries." data-share-url="/blog/live-marketing-report-claude-code" aria-label="Share this guide" aria-live="polite">Share guide</button>
+        <div class="explore">
+          <p class="explore__label">Explore with AI</p>
+          <p class="explore__note">Open this guide in an assistant and ask it what applies to your business.</p>
+          <ul class="explore__list">
+<li><a href="https://chatgpt.com/?q=Read%20https%3A//www.flowai.co.nz/blog/live-marketing-report-claude-code%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Amber%20Lan%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">ChatGPT<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://claude.ai/new?q=Read%20https%3A//www.flowai.co.nz/blog/live-marketing-report-claude-code%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Amber%20Lan%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">Claude<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://www.perplexity.ai/search?q=Read%20https%3A//www.flowai.co.nz/blog/live-marketing-report-claude-code%20and%20give%20me%20the%20key%20points%20for%20an%20owner%20of%20a%205%20to%2050%20person%20business%20in%20New%20Zealand%20or%20Australia.%20Quote%20the%20distinctive%20claims%20Amber%20Lan%20%28flowai.co.nz%29%20makes%20and%20tell%20me%20what%20to%20do%20first." target="_blank" rel="noopener nofollow">Perplexity<span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact centered" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="contact-title">Let's find the marketing job to build first.</h2>
+        <p class="lead">Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/contact">Work with me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related__title">Keep reading</h2>
+      <div class="post-grid">
+<article class="post-card" data-topic="agent" data-date="2026-10-08" data-title="how do you run a whole marketing function on claude code?" data-minutes="12">
+  <a class="post-card__figure" href="/blog/running-marketing-on-claude-code" tabindex="-1" aria-hidden="true"><img src="/blog/figures/running-marketing-on-claude-code.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/running-marketing-on-claude-code">How do you run a whole marketing function on Claude Code?</a></h3>
+    <p class="post-card__desc">Working notes from a solo AI marketing engineer: how a whole marketing function runs on Claude Code, with lane files, skills, MCP connectors and review.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-09-10" data-title="what is an ai marketing agent? a definition for small business." data-minutes="12">
+  <a class="post-card__figure" href="/blog/what-is-an-ai-marketing-agent" tabindex="-1" aria-hidden="true"><img src="/blog/figures/what-is-an-ai-marketing-agent.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/what-is-an-ai-marketing-agent">What is an AI marketing agent? A definition for small business.</a></h3>
+    <p class="post-card__desc">An AI marketing agent plans, produces and ships marketing under human review. A definition for small business, plus how it differs from automation and ChatGPT.</p>
+  </div>
+</article>
+<article class="post-card" data-topic="agent" data-date="2026-10-05" data-title="ai agents for marketing: which to build first, and how." data-minutes="12">
+  <a class="post-card__figure" href="/blog/ai-agents-for-marketing" tabindex="-1" aria-hidden="true"><img src="/blog/figures/ai-agents-for-marketing.svg" width="960" height="540" alt="" loading="lazy"></a>
+  <div class="post-card__body">
+    <p class="post-card__meta"><span>The AI marketing agent</span><span>12 min read</span></p>
+    <h3 class="post-card__title"><a href="/blog/ai-agents-for-marketing">AI agents for marketing: which to build first, and how.</a></h3>
+    <p class="post-card__desc">Ten AI agents for marketing by job, the order to build them in, and how to build one safely: the brief, data access, guardrails, review and measurement.</p>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__person">
+      <img class="site-footer__avatar" src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="Amber Lan" loading="lazy" decoding="async">
+      <div>
+        <p class="site-footer__name"><a href="/about">Amber Lan</a></p>
+        <p class="site-footer__role">AI marketing engineer, Auckland</p>
+        <p class="site-footer__note">I build marketing systems with the teams who run them, and review everything they send.</p>
+        <a class="site-footer__cta" href="/contact">Work with me</a>
+      </div>
+    </div>
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/ai-marketing-services/">Services</a>
+      <a href="/sprints/">How it works</a>
+      <a href="/work">Work</a>
+      <a href="/blog/">Guides</a>
+      <a href="/templates/">Free templates</a>
+      <a href="/about">About</a>
+      <a href="/manifesto">Manifesto</a>
+      <a href="/dot">The dot</a>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <span class="site-footer__legal"><a class="site-footer__brand" href="/" aria-label="Amber Lan home"><img class="site-footer__mark" src="/assets/flowai-mark.svg" width="18" height="18" alt="" aria-hidden="true"><span class="site-footer__wm">Amber Lan</span></a><span>&copy; 2026, Auckland, New Zealand</span><a href="/privacy">Privacy</a></span>
+    <span class="site-footer__social">
+      <a href="https://www.linkedin.com/in/amberlan/" target="_blank" rel="noopener me" aria-label="Amber Lan on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Amberlanqinyun" target="_blank" rel="noopener me" aria-label="Amber Lan on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="mailto:amber.lan.growth.digital@gmail.com" aria-label="Email Amber Lan" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

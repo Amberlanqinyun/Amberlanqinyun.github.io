@@ -5,8 +5,17 @@
   <link href="https://www.flowai.co.nz/feed.xml" rel="self"/>
   <link href="https://www.flowai.co.nz/"/>
   <id>https://www.flowai.co.nz/</id>
-  <updated>2026-10-16T00:00:00+13:00</updated>
+  <updated>2026-10-19T00:00:00+13:00</updated>
   <author><name>Amber Lan</name></author>
+  <entry>
+    <title>How do you build a live marketing report with Claude Code?</title>
+    <link href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code"/>
+    <id>https://www.flowai.co.nz/blog/live-marketing-report-claude-code</id>
+    <published>2026-10-19T00:00:00+13:00</published>
+    <updated>2026-10-19T00:00:00+13:00</updated>
+    <summary>Working notes from an AI marketing engineer: a live marketing report built with Claude Code, with a date picker, fair comparisons and plain-English summaries.</summary>
+    <category term="The AI marketing agent"/>
+  </entry>
   <entry>
     <title>n8n, Zapier, Make or Claude Code: which automation tool suits a small business?</title>
     <link href="https://www.flowai.co.nz/blog/n8n-vs-zapier-vs-make-vs-claude-code"/>
