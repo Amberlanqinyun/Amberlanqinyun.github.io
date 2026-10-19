@@ -774,3 +774,8 @@ main.cv .more__body .logos .hero-proof { justify-content: flex-start; gap: var(-
   main.cv .cv-hero .profile__photo { aspect-ratio: 3 / 2; }
   main.cv .w3 { min-height: 0; padding: var(--s-6) var(--s-5); }
 }
+
+/* ---- Taste pass 2 (19 Oct 2026): the newest employer keeps its full name. --
+   The last segment is the shortest, so its label was clipping to an ellipsis. */
+main.cv .seg:last-child { min-width: 6.5rem; }
+main.cv .seg__org { white-space: normal; overflow: visible; text-overflow: clip; }

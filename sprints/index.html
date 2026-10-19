@@ -148,9 +148,9 @@
 <script src="/assets/visual.js?v=1" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=8">
+<link rel="stylesheet" href="/assets/highend.css?v=9">
 <script>document.documentElement.className += ' has-nav';</script>
-<script src="/assets/dot.js?v=8" defer></script>
+<script src="/assets/dot.js?v=9" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
@@ -237,9 +237,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="lead">Flow learns your business first. Together we pick where it starts, and a marketing engineer reviews everything before it ships.</p>
         </div>
         <figure class="diagram reveal">
-          <img src="/assets/diagram-process.svg" width="1600" height="900"
-               alt="Three steps on a single baseline. Read: you share what you sell and who buys it, and we agree a written scope in week one. Install: together we choose the system with the most to gain and build it with its assets, automation and tracking. Run: it runs monthly, a person reviews the output, and one short report says what shipped."
-               loading="lazy" decoding="async">
+          <svg viewBox="0 500 1600 250" role="img" aria-labelledby="process-svg-title process-svg-desc">
+            <title id="process-svg-title">Read and Install happen once, in week one. Run goes on every month.</title>
+            <desc id="process-svg-desc">Three steps on one baseline. Read and Install sit on a short finite segment marked once, in week one. Run sits on an amber dotted segment marked every month from then on, which runs off the right edge because the work does not end.</desc>
+            <g fill="none" stroke="currentColor">
+              <path d="M 96 640 L 720 640" stroke-opacity="0.2"/>
+              <path d="M 720 640 L 1504 640" stroke="#E4A43C" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+              <path d="M 96 554 L 96 582" stroke-opacity="0.14"/>
+              <path d="M 720 554 L 720 582" stroke-opacity="0.14"/>
+              <path d="M 240 594 L 240 626" stroke-opacity="0.17"/>
+              <path d="M 480 594 L 480 626" stroke-opacity="0.17"/>
+              <path d="M 860 594 L 860 626" stroke="#E4A43C" stroke-opacity="0.5"/>
+            </g>
+            <circle cx="240" cy="640" r="7" fill="currentColor" fill-opacity="0.34"/>
+            <circle cx="480" cy="640" r="7" fill="currentColor" fill-opacity="0.34"/>
+            <circle cx="860" cy="640" r="7" fill="#E4A43C"/>
+            <g fill="currentColor">
+              <text x="96" y="536" font-size="22" font-weight="450" fill-opacity="0.54">Once, in week one</text>
+              <text x="720" y="536" font-size="22" font-weight="450" fill-opacity="0.54">Every month, from then on</text>
+              <text x="240" y="578" font-size="20" font-weight="450" fill-opacity="0.54">01</text>
+              <text x="480" y="578" font-size="20" font-weight="450" fill-opacity="0.54">02</text>
+              <text x="860" y="578" font-size="20" font-weight="450" fill-opacity="0.54">03</text>
+              <text x="240" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">Read</text>
+              <text x="480" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">Install</text>
+              <text x="860" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">Run</text>
+            </g>
+          </svg>
         </figure>
         <div class="steps-cap reveal">
           <p><b>01 · Read</b>A written scope we agree inside week one, gaps ranked.</p>
@@ -397,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="offer reveal">
           <div class="offer__head">
             <p class="eyebrow">Flow Engine, monthly</p>
-            <p class="offer__price">Monthly<span>Cancel any time · full handover if you leave</span></p>
+            <p class="offer__price">Monthly<span>Cancel any time, with a full handover if you leave.</span></p>
             <p class="offer__lead">Your whole Flow Engine, running every month. In production these systems give back about 30 team-hours a week.</p>
           </div>
           <div class="offer__body">

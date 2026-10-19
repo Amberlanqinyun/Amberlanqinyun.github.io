@@ -254,8 +254,11 @@
     @media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
     .hero { padding-bottom: var(--section); }
     main .lead { max-width: 46ch; }
-    .svc-answer { max-width: 60ch; margin: 2rem auto 0; font-size: 1.02rem; line-height: 1.65; opacity: .82; }
-    .svc-places { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.5rem; margin-top: 1.75rem; }
+    .svc-intro { padding-block: 0; }
+    .svc-intro .narrow { margin-top: 0; }
+    .svc-answer { max-width: 60ch; margin: 0; font-size: 1.02rem; line-height: 1.65; opacity: .82; }
+    .svc-places { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-top: 1.25rem; }
+    @media (max-width: 640px) { .svc-dot { display: none; } }
     .svc-steps { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: clamp(2.5rem, 5vw, 3.5rem); text-align: left; }
     .svc-note { max-width: 60ch; margin: 1.25rem 0 0; }
     main .narrow { text-align: left; margin: clamp(2.5rem, 5vw, 3.5rem) 0 0; max-width: 52rem; }
@@ -268,9 +271,9 @@
 <script src="/assets/visual.js?v=1" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=8">
+<link rel="stylesheet" href="/assets/highend.css?v=9">
 <script>document.documentElement.className += ' has-nav';</script>
-<script src="/assets/dot.js?v=8" defer></script>
+<script src="/assets/dot.js?v=9" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
@@ -309,8 +312,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="btn btn-primary" href="/contact">Work with me</a>
             <a class="text-link" href="#services">Explore what the agents run</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="who" class="svc-intro centered" aria-label="Flow AI in one paragraph">
+      <div class="wrap">
+        <div class="narrow reveal">
           <p class="svc-answer">Flow AI provides AI marketing services for businesses in New Zealand and Australia. Amber Lan, an AI marketing engineer in Auckland, builds the AI agents that run search, content, outbound and reporting with your team, then hands them over. Each build starts with a written scope, and your team keeps every agent.</p>
-          <p class="svc-places small"><a class="text-link arrow-link" href="/ai-marketing-services/new-zealand">New Zealand</a> &middot; <a class="text-link arrow-link" href="/ai-marketing-services/australia">Australia</a> &middot; <a class="text-link arrow-link" href="/ai-marketing-services/auckland">Auckland</a></p>
+          <p class="svc-places small"><a class="text-link arrow-link" href="/ai-marketing-services/new-zealand">New Zealand</a> <span class="svc-dot" aria-hidden="true">&middot;</span> <a class="text-link arrow-link" href="/ai-marketing-services/australia">Australia</a> <span class="svc-dot" aria-hidden="true">&middot;</span> <a class="text-link arrow-link" href="/ai-marketing-services/auckland">Auckland</a></p>
         </div>
       </div>
     </section>

@@ -729,3 +729,41 @@ html.fdot-run { overflow-anchor: none; }
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(250, 248, 243, 0.015) 30%, rgba(250, 248, 243, 0.015) 80%, transparent);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
+
+/* ---- Taste pass 2 (19 Oct 2026) ------------------------------------------
+   Twelve small things the Taste Skill audit found after the glass pass,
+   shipped together on Amber's "all". Numbers follow the audit. */
+
+/* 1. The process diagram is inline now, so it sets in the site face. */
+.diagram svg { display: block; width: 100%; height: auto; }
+
+/* 2. The run on phones: the two closing bubbles stack instead of overlapping. */
+@media (max-width: 720px) {
+  .demo__run-msg--dot { bottom: 5.25rem; }
+  .demo__run-msg--ok { left: 1.5rem; right: 1.5rem; max-width: none; }
+}
+
+/* 3. System grids: the title sits under its number, so a row shares one line. */
+.dgrid b { margin-top: 0; padding-top: var(--s-5); }
+
+/* 5. The last two mono-caps labels read like every other label: sentence case, quiet. */
+.offer__price span { font-family: var(--font); font-size: 0.9375rem; font-weight: 450; letter-spacing: 0.005em; text-transform: none; line-height: 1.4; }
+.demo__run-eyebrow { font-family: var(--font); font-size: 0.8125rem; font-weight: 450; letter-spacing: 0.005em; }
+
+/* 6. Related lists on Contact and Work share their heading's left edge. */
+.narrow--left { margin-inline: 0; }
+
+/* 8. The review line is a plain panel like the rest, and agent names keep to one line. */
+.team__review { border-style: solid; border-color: var(--core-line); }
+.team__agents li { grid-template-columns: 6rem minmax(0, 1fr); }
+.pv-text b { white-space: nowrap; }
+.pv-conv .pv-up { display: none; }
+
+/* 11. Sprint tabs on phones keep the page gutter and fade out at the edge. */
+@media (max-width: 760px) {
+  .js .sx__tabs {
+    scroll-padding-inline: var(--gutter);
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 3.5rem), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 3.5rem), transparent);
+  }
+}
