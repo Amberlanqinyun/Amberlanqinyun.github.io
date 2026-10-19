@@ -220,7 +220,7 @@ def head(title, description, path, schema, og_type="website"):
 <script src="/assets/template-form.js?v={V}" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=9">
+<link rel="stylesheet" href="/assets/highend.css?v=10">
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
