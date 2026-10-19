@@ -254,8 +254,11 @@
     @media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
     .hero { padding-bottom: var(--section); }
     main .lead { max-width: 46ch; }
-    .svc-answer { max-width: 60ch; margin: 2rem auto 0; font-size: 1.02rem; line-height: 1.65; opacity: .82; }
-    .svc-places { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.5rem; margin-top: 1.75rem; }
+    .svc-intro { padding-block: 0; }
+    .svc-intro .narrow { margin-top: 0; }
+    .svc-answer { max-width: 60ch; margin: 0; font-size: 1.02rem; line-height: 1.65; opacity: .82; }
+    .svc-places { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-top: 1.25rem; }
+    @media (max-width: 640px) { .svc-dot { display: none; } }
     .svc-steps { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: clamp(2.5rem, 5vw, 3.5rem); text-align: left; }
     .svc-note { max-width: 60ch; margin: 1.25rem 0 0; }
     main .narrow { text-align: left; margin: clamp(2.5rem, 5vw, 3.5rem) 0 0; max-width: 52rem; }
@@ -268,9 +271,9 @@
 <script src="/assets/visual.js?v=1" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=8">
+<link rel="stylesheet" href="/assets/highend.css?v=9">
 <script>document.documentElement.className += ' has-nav';</script>
-<script src="/assets/dot.js?v=8" defer></script>
+<script src="/assets/dot.js?v=9" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
@@ -309,8 +312,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="btn btn-primary" href="/zh/contact">与我合作</a>
             <a class="text-link" href="#services">看看智能体负责什么</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="who" class="svc-intro centered" aria-label="一段话介绍 Flow AI">
+      <div class="wrap">
+        <div class="narrow reveal">
           <p class="svc-answer">Flow AI 为新西兰和澳大利亚的企业提供 AI 营销服务。Amber Lan 是奥克兰的 AI 营销工程师，她和你的团队一起搭建负责搜索、内容、主动外联和报告的 AI 智能体，然后交接给你。每个项目都从书面范围说明开始，所有智能体都归你的团队所有。</p>
-          <p class="svc-places small"><a class="text-link arrow-link" href="/zh/ai-marketing-services/new-zealand">新西兰</a> &middot; <a class="text-link arrow-link" href="/zh/ai-marketing-services/australia">澳大利亚</a> &middot; <a class="text-link arrow-link" href="/zh/ai-marketing-services/auckland">奥克兰</a></p>
+          <p class="svc-places small"><a class="text-link arrow-link" href="/zh/ai-marketing-services/new-zealand">新西兰</a> <span class="svc-dot" aria-hidden="true">&middot;</span> <a class="text-link arrow-link" href="/zh/ai-marketing-services/australia">澳大利亚</a> <span class="svc-dot" aria-hidden="true">&middot;</span> <a class="text-link arrow-link" href="/zh/ai-marketing-services/auckland">奥克兰</a></p>
         </div>
       </div>
     </section>

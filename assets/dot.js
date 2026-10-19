@@ -494,13 +494,13 @@ window.FlowDot = (function () {
       var ZH = /^zh/.test(document.documentElement.lang);
       var S = ZH ? {
         you: '找出人们向 AI 询问热水缸的问题，修好应该回答的页面。全部暂存。',
-        reply: '三个页面已暂存。等待你审核。', ok: '看起来不错。定价页先留着。', skip: '跳过', eyebrow: 'FLOW INTELLIGENCE · 一次运行',
+        reply: '三个页面已暂存。等待你审核。', ok: '看起来不错。定价页先留着。', skip: '跳过', eyebrow: 'Flow Intelligence · 一次运行',
         caps: ['一句大白话的指令', '它逐行读你的网站', '它给整个团队交代任务：十个智能体', '十个智能体，作为一个系统一起干活', '所有成果回到一处', '一切先暂存，等你审核', '没有你的同意，什么都不会发出', '你得到的是'],
         incl: ['掌握你定位的 Flow Intelligence', '十个智能体：搜索、内容、外联、报告等', '每一次发送都先暂存，等你批准', '每月一份报告'],
         cards: [['/services/hot-water-cylinders', '6 处修改'], ['/faq/plumber-cost-auckland', '新页面'], ['/areas/north-shore', '4 处修改']]
       } : {
         you: 'Find the questions people ask AI about hot water cylinders and fix the pages that answer them. Stage everything.',
-        reply: 'Three pages staged. Waiting for your review.', ok: 'Looks good. Hold the pricing page for now.', skip: 'Skip', eyebrow: 'FLOW INTELLIGENCE · ONE RUN',
+        reply: 'Three pages staged. Waiting for your review.', ok: 'Looks good. Hold the pricing page for now.', skip: 'Skip', eyebrow: 'Flow Intelligence · one run',
         caps: ['A brief, in plain words', 'It reads your site, line by line', 'It briefs the whole team: ten agents', 'Ten agents work as one system', 'Everything comes back to one place', 'Everything is staged for your review', 'Nothing ships without your yes', 'What you get'],
         incl: ['Flow Intelligence that holds your positioning', 'Ten agents: search, content, outbound, reporting and more', 'Every send staged for your approval', 'One report a month'],
         cards: [['/services/hot-water-cylinders', '6 changes'], ['/faq/plumber-cost-auckland', 'New page'], ['/areas/north-shore', '4 changes']]
@@ -534,7 +534,7 @@ window.FlowDot = (function () {
       var wires = sel('g', {}), pulsesG = sel('g', {}), labels = sel('g', { opacity: 0 }), crew = sel('g', {});
       rsvg.insertBefore(wires, rsvg.firstChild); rsvg.appendChild(pulsesG); rsvg.appendChild(labels); rsvg.appendChild(crew);
       labels.style.transition = 'opacity 600ms ease';
-      GROUPS.forEach(function (g) { var t = sel('text', { x: g[1], y: g[2], 'text-anchor': 'middle', 'font-size': 3.1, 'letter-spacing': 0.35, fill: 'rgba(250,248,243,.5)', 'font-family': 'ui-monospace, SFMono-Regular, Menlo, monospace' }); t.textContent = ZH ? g[0] : g[0].toUpperCase(); labels.appendChild(t); });
+      GROUPS.forEach(function (g) { var t = sel('text', { x: g[1], y: g[2], 'text-anchor': 'middle', 'font-size': 3.4, 'letter-spacing': 0.02, 'font-weight': 450, fill: 'rgba(250,248,243,.5)', 'font-family': 'inherit' }); t.textContent = g[0]; labels.appendChild(t); });
       var glass = (rsvg.getBoundingClientRect().width * AS / 100) >= 56;
       var agents = TEAM.map(function (a, i) {
         var ang = a[1] * Math.PI / 180, fx = CX + Math.cos(ang) * RX, fy = CY + Math.sin(ang) * RY;

@@ -148,9 +148,9 @@
 <script src="/assets/visual.js?v=1" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=8">
+<link rel="stylesheet" href="/assets/highend.css?v=9">
 <script>document.documentElement.className += ' has-nav';</script>
-<script src="/assets/dot.js?v=8" defer></script>
+<script src="/assets/dot.js?v=9" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
 <body data-motion="auto">
@@ -237,9 +237,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="lead">Flow 先熟悉你的业务。我们一起决定从哪里开始，所有内容上线前都由营销工程师审核。</p>
         </div>
         <figure class="diagram reveal">
-          <img src="/assets/diagram-process.svg" width="1600" height="900"
-               alt="同一条基线上的三个步骤。了解：你告诉我们你卖什么、谁在买，我们在第一周内确定书面范围说明。部署：我们一起选出最能带来收益的系统，连同素材、自动化和追踪一起搭建。运行：系统按月运行，由人审核产出，再用一份简短报告说明上线了什么。"
-               loading="lazy" decoding="async">
+          <svg viewBox="0 500 1600 250" role="img" aria-labelledby="process-svg-title process-svg-desc">
+            <title id="process-svg-title">了解和部署在第一周完成一次，运行之后每月持续。</title>
+            <desc id="process-svg-desc">三个步骤在同一条基线上。了解和部署落在一段短的有限线段上，标注为第一周内完成一次。运行落在一段琥珀色的点线上，标注为之后每月持续，这段线延伸到右边缘之外，因为工作不会结束。</desc>
+            <g fill="none" stroke="currentColor">
+              <path d="M 96 640 L 720 640" stroke-opacity="0.2"/>
+              <path d="M 720 640 L 1504 640" stroke="#E4A43C" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+              <path d="M 96 554 L 96 582" stroke-opacity="0.14"/>
+              <path d="M 720 554 L 720 582" stroke-opacity="0.14"/>
+              <path d="M 240 594 L 240 626" stroke-opacity="0.17"/>
+              <path d="M 480 594 L 480 626" stroke-opacity="0.17"/>
+              <path d="M 860 594 L 860 626" stroke="#E4A43C" stroke-opacity="0.5"/>
+            </g>
+            <circle cx="240" cy="640" r="7" fill="currentColor" fill-opacity="0.34"/>
+            <circle cx="480" cy="640" r="7" fill="currentColor" fill-opacity="0.34"/>
+            <circle cx="860" cy="640" r="7" fill="#E4A43C"/>
+            <g fill="currentColor">
+              <text x="96" y="536" font-size="22" font-weight="450" fill-opacity="0.54">只做一次，在第一周</text>
+              <text x="720" y="536" font-size="22" font-weight="450" fill-opacity="0.54">之后每月持续</text>
+              <text x="240" y="578" font-size="20" font-weight="450" fill-opacity="0.54">01</text>
+              <text x="480" y="578" font-size="20" font-weight="450" fill-opacity="0.54">02</text>
+              <text x="860" y="578" font-size="20" font-weight="450" fill-opacity="0.54">03</text>
+              <text x="240" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">了解</text>
+              <text x="480" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">部署</text>
+              <text x="860" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">运行</text>
+            </g>
+          </svg>
         </figure>
         <div class="steps-cap reveal">
           <p><b>01 · 了解</b>第一周内确定书面范围说明，并按优先级列出差距。</p>
@@ -397,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="offer reveal">
           <div class="offer__head">
             <p class="eyebrow">Flow Engine 按月服务</p>
-            <p class="offer__price">按月<span>随时可取消 · 离开时完整交接</span></p>
+            <p class="offer__price">按月<span>随时可取消，离开时完整交接。</span></p>
             <p class="offer__lead">你的整个 Flow Engine，每月持续运行。在实际运行中，这些系统每周为团队省回约 30 个工时。</p>
           </div>
           <div class="offer__body">
