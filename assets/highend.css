@@ -767,3 +767,110 @@ html.fdot-run { overflow-anchor: none; }
     mask-image: linear-gradient(90deg, #000 calc(100% - 3.5rem), transparent);
   }
 }
+
+/* ---- Home story pass (20 Oct 2026) ---------------------------------------
+   The home page reads as one story: the promise, one run, who it is for,
+   the receipts and the person behind them, the three steps, then what you
+   get. New pieces only. Nothing above this block moves. */
+
+/* Hero: four quiet facts under the buttons, hairline dots between. */
+.hero .stack > .hero-facts {
+  list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--s-2) var(--s-6); margin: var(--s-7) auto 0; padding: 0;
+  color: var(--soft); font-size: var(--t-small); font-variant-numeric: tabular-nums;
+}
+.hero-facts li { position: relative; }
+.hero-facts li + li::before {
+  content: ""; position: absolute; left: calc(var(--s-6) / -2); top: 50%;
+  width: 3px; height: 3px; border-radius: 50%; background: var(--hair-strong); transform: translateY(-50%);
+}
+
+/* The run: a kicker and one sentence above the window, three steps below it. */
+.demo__head { max-width: 68rem; margin: 0 auto var(--s-6); }
+.demo__kicker { margin: 0; color: var(--soft); font-size: 0.9375rem; font-weight: 450; }
+.demo__story {
+  margin: var(--s-2) 0 0; max-width: 52ch; color: var(--fg);
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem); line-height: 1.45; letter-spacing: -0.008em; text-wrap: pretty;
+}
+.demo__legend {
+  list-style: none; margin: var(--s-6) auto 0; padding: 0; max-width: 68rem;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6);
+  counter-reset: leg;
+}
+.demo__legend li {
+  counter-increment: leg; padding-top: var(--s-4); border-top: 1px solid var(--hair);
+  color: var(--muted); font-size: var(--t-small); line-height: 1.5;
+}
+.demo__legend li::before {
+  content: counter(leg, decimal-leading-zero); display: block; margin-bottom: var(--s-2);
+  color: var(--soft); font-size: 0.75rem; font-variant-numeric: tabular-nums;
+}
+.demo__legend b { color: var(--fg); font-weight: 500; }
+.demo__legend + .demo__note { margin-top: var(--s-6); }
+
+/* Which one are you: three doors in one panel, each a link. */
+.doors {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--space-block);
+  border: 1px solid var(--core-line); border-radius: var(--r-lg);
+  background: var(--core); box-shadow: var(--highlight); overflow: hidden;
+}
+.door {
+  display: flex; flex-direction: column; gap: var(--s-4);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  color: inherit; text-decoration: none; border-bottom: 0;
+  transition: background-color 320ms var(--ease-out);
+}
+.door + .door { border-left: 1px solid var(--hair); }
+.door:hover { background: rgba(250, 248, 243, 0.03); }
+.door__who { margin: 0; color: var(--soft); font-size: var(--t-small); }
+.door h3 {
+  margin: 0; max-width: 20ch; color: var(--fg);
+  font-size: clamp(1.3rem, 1.75vw, 1.65rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.18; text-wrap: balance;
+}
+.door p:not(.door__who) { margin: 0; color: var(--muted); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
+.door .text-link { margin-top: auto; align-self: flex-start; padding-top: var(--s-3); }
+.door:hover .text-link { border-color: var(--fg); }
+@media (prefers-reduced-motion: no-preference) { .door:hover .arrow-link::after { transform: translateX(3px); } }
+@media (max-width: 900px) {
+  .doors { grid-template-columns: 1fr; }
+  .door + .door { border-left: 0; border-top: 1px solid var(--hair); }
+}
+
+/* The person behind the receipts: a small portrait and two lines, inside the band. */
+.who {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--s-6) var(--s-7); align-items: center;
+  margin-top: var(--space-block); padding-top: var(--space-tight); border-top: 1px solid var(--hair); text-align: left;
+}
+.who__img { display: block; width: 88px; height: 88px; border-radius: var(--r-md); object-fit: cover; }
+.who__name { margin: 0; color: var(--fg); font-weight: 500; }
+.who__text p:not(.who__name) { margin: var(--s-2) 0 0; max-width: 62ch; color: var(--muted); text-wrap: pretty; }
+.who__text .text-link { display: inline-block; margin-top: var(--s-4); }
+@media (max-width: 540px) { .who { grid-template-columns: 1fr; } }
+
+/* Read, install, run: three steps on one hairline row. */
+.steps {
+  list-style: none; margin: var(--space-block) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8);
+}
+.steps li { padding-top: var(--s-5); border-top: 1px solid var(--hair); }
+.steps__n { display: block; color: var(--soft); font-size: 0.8125rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.steps h3 { margin: var(--s-3) 0 0; color: var(--fg); font-size: clamp(1.3rem, 1.75vw, 1.65rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.18; }
+.steps p { margin: var(--s-3) 0 0; max-width: 38ch; color: var(--muted); font-size: var(--t-body); line-height: 1.55; text-wrap: pretty; }
+.steps + .cta-row { margin-top: var(--s-8); }
+@media (max-width: 760px) {
+  .steps { grid-template-columns: 1fr; gap: var(--s-6); }
+  .demo__legend { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+
+/* Steps in the split: number and name share the title cell. */
+.pillars.steps-split { list-style: none; margin: 0; padding: 0; }
+.pillars.steps-split .pillar h3 { display: flex; align-items: baseline; gap: var(--s-3); }
+.pillars.steps-split .steps__n { display: inline; }
+@media (max-width: 900px) { .pillars.steps-split { margin-top: var(--s-6); } }
+
+/* Phones: the hero is left-aligned there, so the facts sit in two quiet columns, no dots. */
+@media (max-width: 640px) {
+  .hero .stack > .hero-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
+  .hero-facts li + li::before { display: none; }
+}
