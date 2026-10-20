@@ -84,12 +84,12 @@ SERVICES = {
 STEPS = {
     "en": [
         ("Scope", "Together we agree in writing what we build, which data the agents may read, where your team reviews, and how we measure success. The price follows from that scope."),
-        ("Build", "I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer."),
+        ("Build", "I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer."),
         ("Hand over", "A documented handover, so your team runs the system with confidence and owns every agent, prompt and file. Ongoing support stays available whenever you want it."),
     ],
     "zh": [
         ("书面范围", "我们一起用文字说清楚：搭建什么、智能体能读取哪些数据、你的团队在哪个环节审核、怎样衡量成效。价格依据这份范围确定。"),
-        ("一起搭建", "我和你的团队一起，在你自己的账号里逐个搭建智能体。任何内容在触达客户之前，都由你的团队审核。"),
+        ("一起搭建", "我和你的团队一起，在你自己的账号里搭建智能体，每一套都建立在前一套之上。任何内容在触达客户之前，都由你的团队审核。"),
         ("交接", "完整的交接文档，让你的团队从容运行系统，每个智能体、提示词和文件都归你所有。需要持续支持时，我随时都在。"),
     ],
 }
@@ -112,7 +112,7 @@ PROOF = {
 UI = {
     "en": dict(
         lang="en-NZ", services_eyebrow="What the agents run", services_h2="Every part of marketing, one agent each.",
-        services_lead="Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.",
+        services_lead="Together we map your whole marketing function, then bring each part online until the system runs end to end.",
         how_eyebrow="How a build runs", how_h2="Built together with your team, then yours to keep.",
         proof_eyebrow="Explore the work", proof_h2="Every system is public.",
         proof_lead="The systems behind this practice are public, so you can judge the craft before we begin.",
@@ -126,7 +126,7 @@ UI = {
     ),
     "zh": dict(
         lang="zh-Hans", services_eyebrow="智能体负责什么", services_h2="营销的每个环节，各由一个智能体负责。",
-        services_lead="我们一起从最大的缺口开始，搭建第一个智能体。它运行稳定后，再加下一个。",
+        services_lead="我们一起规划完整的营销职能，再把每个环节逐步接入，直到整套系统端到端运转。",
         how_eyebrow="搭建流程", how_h2="和你的团队一起搭建，然后由你长期拥有。",
         proof_eyebrow="探索作品", proof_h2="每个系统都是公开的。",
         proof_lead="这个工作室背后的系统都是公开的，开始合作之前，你可以先评判它的工艺。",
@@ -152,7 +152,7 @@ PAGES = [
             eyebrow="AI marketing services · New Zealand and Australia",
             h1="AI marketing services for New Zealand and Australian businesses.",
             answer=DEFINITION + " Each build starts with a written scope, and your team keeps every agent.",
-            lead="Let's build your marketing team together, one AI agent at a time, and hand it to your people to run with confidence.",
+            lead="Let's rebuild your marketing around AI agents, from strategy to the monthly report, and hand the whole system to your people to run with confidence.",
             local=None,
             places=[("New Zealand", "/ai-marketing-services/new-zealand", "Privacy Act 2020, spam law and what Kiwi buyers search."),
                     ("Australia", "/ai-marketing-services/australia", "Spam Act and privacy rules, AUD, and working across the Tasman."),
@@ -173,7 +173,7 @@ PAGES = [
             eyebrow="AI 营销服务 · 新西兰和澳大利亚",
             h1="面向新西兰和澳大利亚企业的 AI 营销服务。",
             answer="Amber Lan 为新西兰和澳大利亚的企业提供 AI 营销服务。Amber Lan 是奥克兰的 AI 营销工程师，她和你的团队一起搭建负责搜索、内容、主动外联和报告的 AI 智能体，然后交接给你。每个项目都从书面范围说明开始，所有智能体都归你的团队所有。",
-            lead="一起搭建你的营销团队，一次一个 AI 智能体，再交给你的团队从容运行。",
+            lead="一起围绕 AI 智能体重建你的营销，从策略到每月报告，再把整套系统交给你的团队从容运行。",
             local=None,
             places=[("新西兰", "/ai-marketing-services/new-zealand", "《2020 年隐私法》、垃圾邮件法，以及新西兰买家怎么搜索。"),
                     ("澳大利亚", "/ai-marketing-services/australia", "《垃圾邮件法》和隐私规则、澳元，以及跨塔斯曼海合作。"),
@@ -567,7 +567,7 @@ PAGES += [
             answer="Amber Lan is a marketing automation practice in Auckland for New Zealand and Australian businesses. Amber Lan, an AI marketing engineer who has architected HubSpot from scratch, builds the workflows that follow up leads, keep the CRM current, produce content and report results, with AI agents drafting and your team approving.",
             lead="Let's connect your CRM, email and content into one system your team trusts and keeps improving.",
             services_eyebrow="What the system covers", services_h2="What we automate together.",
-            services_lead="We start where leads slow down, then extend the system one workflow at a time.",
+            services_lead="We map the whole lead journey, then connect each workflow until the system runs end to end.",
             services_link="Explore what we automate",
             services=[
                 ("Lead capture and routing", "Forms and enquiries tracked into the CRM with their source, and routed to the right owner.", "/sprints/analytics"),
@@ -606,7 +606,7 @@ PAGES += [
             answer="Amber Lan 是一家奥克兰的营销自动化工作室，服务新西兰和澳大利亚的企业。曾从零搭建 HubSpot 架构的 AI 营销工程师 Amber Lan，负责搭建跟进线索、维护 CRM、生产内容和报告结果的工作流，由 AI 智能体起草，你的团队批准。",
             lead="一起把你的 CRM、邮件和内容连成一套系统，让团队信得过，也能不断改进。",
             services_eyebrow="系统包括什么", services_h2="我们一起自动化的工作。",
-            services_lead="从线索停滞的地方开始，再一次一个工作流地扩展系统。",
+            services_lead="我们先梳理完整的线索旅程，再把每个工作流接起来，直到整套系统端到端运转。",
             services_link="看看我们自动化什么",
             services=[
                 ("线索获取与分配", "表单和咨询连同来源记录进 CRM，再分给合适的负责人。", "/sprints/analytics"),
