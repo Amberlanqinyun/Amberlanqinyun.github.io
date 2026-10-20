@@ -9,6 +9,7 @@
   var RUNS = {
     search: {
       steps: ["Reading your 38 service pages", "Matching 120 questions people ask AI", "Checking which pages AI cites today", "Drafting fixes, staged only"],
+      story: "You want to come up when someone asks ChatGPT who to call.",
       title: "AI search fixes", agent: "Search agent", status: "Waiting for your review",
       ask: "Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.",
       reply: "Checked 38 pages against 120 questions people ask. Rewrote 5 pages and drafted 2 new answers. Everything is staged as a draft.",
@@ -18,6 +19,7 @@
     },
     content: {
       steps: ["Reading four job notes", "Applying your voice rules", "Drafting 12 pieces across channels", "Checking each line against the voice gate"],
+      story: "You want this month’s jobs turned into posts, in your voice.",
       title: "October content", agent: "Content agent", status: "12 drafts ready",
       ask: "Turn this month's job notes into posts and an email. Keep my voice, no jargon.",
       reply: "Drafted 12 pieces from 4 job notes. Each one passed your voice rules before it reached you.",
@@ -27,6 +29,7 @@
     },
     outbound: {
       steps: ["Scanning Auckland property managers", "Finding a recent maintenance signal", "Holding poor fits back", "Drafting 20 first messages in your voice"],
+      story: "You want more property managers calling you.",
       title: "Outbound lane", agent: "Outbound agent", status: "Sending paused",
       ask: "Find property managers in Auckland who posted about maintenance this month. Write to 20 of them, softly.",
       reply: "Found 23 with a recent signal. Drafted 20 first messages and held 3 that looked like a poor fit. Sending stays paused until you approve.",
@@ -36,6 +39,7 @@
     },
     report: {
       steps: ["Joining enquiries to their source", "Comparing channels month on month", "Checking what each hour produced", "Writing one page with a recommendation"],
+      story: "You want to know what paid off last month.",
       title: "September report", agent: "Reporting agent", status: "Ready",
       ask: "What paid off last month, and what should change?",
       reply: "Search brought the most enquiries. Outbound booked three calls. Content drew views but few enquiries. Suggest moving two hours a week from social to the FAQ pages.",
@@ -50,6 +54,7 @@
   if (ZH) RUNS = {
     search: {
       steps: ["正在读取你的 38 个服务页面", "匹配大家向 AI 提出的 120 个问题", "检查 AI 目前引用了哪些页面", "起草修改，只放入待审区"],
+      story: "你希望有人问 ChatGPT 该找谁时，答案里有你。",
       title: "AI 搜索优化", agent: "搜索智能体", status: "等待你审核",
       ask: "找出大家向 AI 询问奥克兰热水器时会问的问题，并修改应该回答这些问题的页面。全部放入待审区，先不要发布。",
       reply: "已用 120 个常见问题核对 38 个页面。改写了 5 个页面，并起草了 2 个新回答。所有内容都已保存为草稿。",
@@ -59,6 +64,7 @@
     },
     content: {
       steps: ["正在阅读四份工单记录", "套用你的品牌语调规则", "为各个渠道起草 12 篇内容", "逐句通过语调关卡检查"],
+      story: "你希望这个月的工单变成帖子，用你自己的语气。",
       title: "10月内容", agent: "内容智能体", status: "12 篇草稿已就绪",
       ask: "把这个月的工单记录整理成社媒帖子和一封邮件。保持我的语调，不要用行话。",
       reply: "根据 4 份工单记录起草了 12 篇内容。每一篇在交给你之前都通过了你的语调规则。",
@@ -68,6 +74,7 @@
     },
     outbound: {
       steps: ["正在筛选奥克兰的物业经理", "寻找近期的维修需求信号", "暂缓不太匹配的对象", "用你的语调起草 20 条首次联系消息"],
+      story: "你希望更多物业经理主动打电话给你。",
       title: "主动外联", agent: "外联智能体", status: "发送已暂停",
       ask: "找出本月发过维修相关内容的奥克兰物业经理。给其中 20 位写信，语气温和一些。",
       reply: "找到 23 位有近期信号的联系人。起草了 20 条首次联系消息，另有 3 位看起来不太匹配，已暂缓。在你批准之前不会发送。",
@@ -77,6 +84,7 @@
     },
     report: {
       steps: ["把每条咨询对应到来源", "逐月对比各个渠道", "核算每小时投入带来的产出", "写成一页报告并附上建议"],
+      story: "你想知道上个月哪些投入有回报。",
       title: "9月报告", agent: "报告智能体", status: "已就绪",
       ask: "上个月哪些投入有回报，接下来应该调整什么？",
       reply: "搜索带来的咨询最多。主动外联约到了三次通话。内容获得了浏览量，但咨询不多。建议每周从社媒挪出两小时，投入到常见问题页面。",
@@ -93,6 +101,7 @@
       .observe(thread, { childList: true, subtree: true });
   }
   var titleEl = root.querySelector(".demo__title");
+  var storyEl = root.querySelector("[data-story]");
   var statusEl = root.querySelector(".demo__status");
   var buttons = Array.prototype.slice.call(root.querySelectorAll("[data-run]"));
   var timers = [];
@@ -110,6 +119,7 @@
     timers.forEach(function (x) { clearTimeout(x); clearInterval(x); }); timers = [];
     buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.run === key ? "true" : "false"); });
     titleEl.textContent = r.title;
+    if (storyEl) storyEl.textContent = r.story;
     statusEl.textContent = ZH ? "运行中" : "Working";
     statusEl.classList.add("is-working");
     thread.innerHTML = "";
