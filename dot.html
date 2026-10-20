@@ -601,7 +601,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <tr><td>Material</td><td class="m">56 px</td><td class="m">threshold</td><td>Glass from 56 px up: translucent body, top rim light, soft highlight, warm pool. Below that, agents turn solid cream so the face still reads.</td></tr>
       <tr><td>Halo</td><td class="m">2.1 r · 0.85 to 1.0</td><td class="m">sine, half rate</td><td>The light breathes in intensity, not size. Brighter by 0.15 while waiting for review. Night state drops to 0.08.</td></tr>
       <tr><td>Review ring</td><td class="m">2.9 s period</td><td class="m">sine</td><td>A 1.5-unit amber ring breathes between r + 6 and r + 18, opacity 0.2 to 0.9.</td></tr>
-      <tr><td>Reduced motion</td><td class="m">—</td><td class="m">—</td><td>Gaze jumps without springs, no saccades, no blink, no breathing. States still read.</td></tr>
+      <tr><td>Reduced motion</td><td class="m">0 ms</td><td class="m">Instant</td><td>Gaze jumps without springs, no saccades, no blink, no breathing. States still read.</td></tr>
     </tbody>
   </table></div>
   <h3 style="margin-top:2.5rem">API</h3>
@@ -622,7 +622,7 @@ fi.blink(true);            <b>// double</b>
 FlowDot.mount(li.querySelector('svg'), { role: 'agent', agent: 'search' });
 
 <b>// the dark state follows Auckland time on its own</b>
-FlowDot.autoNight(fi);     <b>// 22:00–06:00 Pacific/Auckland</b>
+FlowDot.autoNight(fi);     <b>// 22:00-06:00 Pacific/Auckland</b>
 
 <b>// every mounted dot shares one requestAnimationFrame loop and
 // pauses off screen. Nothing is hidden if the script fails:

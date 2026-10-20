@@ -294,7 +294,6 @@ def gallery():
   <section id="how" class="centered" aria-labelledby="how-title">
     <div class="wrap">
       <div class="stack reveal">
-        <p class="eyebrow">How a run works</p>
         <h2 id="how-title">One agent, then a person's review.</h2>
         <p class="lead">Each template is one agent with one fixed job. Tell it where to look. A person checks the result before you see it.</p>
       </div>
@@ -344,7 +343,7 @@ def template_page(t):
     steps = t["steps"] + [REVIEW]
     review_cls = ' class="is-review"'
     steps_html = "\n".join(
-        f'        <li{review_cls if (title, text) == REVIEW else ""}><span class="eyebrow">{i + 1:02d}</span><div><b>{esc(title)}</b><span>{esc(text)}</span></div></li>'
+        f'        <li{review_cls if (title, text) == REVIEW else ""}><div><b>{esc(title)}</b><span>{esc(text)}</span></div></li>'
         for i, (title, text) in enumerate(steps))
     needs = "\n".join(f"            <li>{esc(x)}</li>" for x in t["needs"])
     returns = "\n".join(f"            <li>{esc(x)}</li>" for x in t["returns"])
@@ -445,7 +444,6 @@ def template_page(t):
   <section id="steps" class="centered" aria-labelledby="steps-title">
     <div class="wrap">
       <div class="stack reveal">
-        <p class="eyebrow">How it runs</p>
         <h2 id="steps-title">Step by step, then a person checks it.</h2>
       </div>
       <ol class="tpl-steps reveal">
@@ -457,7 +455,6 @@ def template_page(t):
   <section id="io" class="centered" aria-labelledby="io-title">
     <div class="wrap">
       <div class="stack reveal">
-        <p class="eyebrow">In and out</p>
         <h2 id="io-title">What it needs, and what it returns.</h2>
       </div>
       <div class="tpl-io reveal">
@@ -480,7 +477,6 @@ def template_page(t):
   <section id="related" class="centered" aria-labelledby="related-title">
     <div class="wrap">
       <div class="stack reveal">
-        <p class="eyebrow">More templates</p>
         <h2 id="related-title">Run the next one.</h2>
       </div>
       <div class="narrow reveal tpl-related" style="text-align:left; margin-left:0">

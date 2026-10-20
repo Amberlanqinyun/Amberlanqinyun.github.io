@@ -773,10 +773,10 @@ html.fdot-run { overflow-anchor: none; }
    the receipts and the person behind them, the three steps, then what you
    get. New pieces only. Nothing above this block moves. */
 
-/* Hero: four quiet facts under the buttons, hairline dots between. */
-.hero .stack > .hero-facts {
+/* Home: four quiet facts between the hero and the demo, hairline dots between. */
+.hero .hero-facts {
   list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
-  gap: var(--s-2) var(--s-6); margin: var(--s-7) auto 0; padding: 0;
+  gap: var(--s-2) var(--s-6); margin: var(--s-8) auto 0; padding: 0;
   color: var(--soft); font-size: var(--t-small); font-variant-numeric: tabular-nums;
 }
 .hero-facts li { position: relative; }
@@ -809,10 +809,6 @@ html.fdot-run { overflow-anchor: none; }
 .demo__legend li {
   counter-increment: leg; padding-top: var(--s-4); border-top: 1px solid var(--hair);
   color: var(--muted); font-size: var(--t-small); line-height: 1.5;
-}
-.demo__legend li::before {
-  content: counter(leg, decimal-leading-zero); display: block; margin-bottom: var(--s-2);
-  color: var(--soft); font-size: 0.75rem; font-variant-numeric: tabular-nums;
 }
 .demo__legend b { color: var(--fg); font-weight: 500; }
 .demo__legend + .demo__note { margin-top: var(--s-6); }
@@ -880,14 +876,13 @@ html.fdot-run { overflow-anchor: none; }
 
 /* Phones: the hero is left-aligned there, so the facts sit in two quiet columns, no dots. */
 @media (max-width: 640px) {
-  .hero .stack > .hero-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
+  .hero .hero-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
   .hero-facts li + li::before { display: none; }
 }
 
 /* ---- First-job offer (20 Oct 2026, mock) ------------------------------------
    The offer is one job, the button is the plan, and the form lives on the page. */
 .hero .stack > .cta-note { max-width: 46ch; margin: var(--s-4) auto 0; color: var(--soft); font-size: var(--t-small); line-height: 1.5; }
-.hero .stack > .cta-note + .hero-facts { margin-top: var(--s-7); }
 
 .jobs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: var(--space-block); }
 .job {
@@ -939,3 +934,28 @@ html.fdot-run { overflow-anchor: none; }
 
 .form-note { margin: 0; }
 .contact-form .form-note { color: var(--soft); font-size: var(--t-small); }
+
+/* ---- Taste pass 3 (20 Oct 2026) ----------------------------------------------
+   Home hero on two lines, the facts out of the hero, one wide door for owners. */
+.hero--home { padding-top: clamp(4.5rem, 7vw, 6rem); }
+.hero--home .stack { max-width: 64rem; }
+.hero--home h1 { max-width: 24ch; text-wrap: balance; }
+.hero--home .stack > .lead { max-width: 44ch; }
+
+/* How it starts: the button follows the left-aligned copy above it. */
+.why-split .cta-row { justify-content: flex-start; }
+
+/* Which one are you: business owners get the wide door, the other two stack beside it. */
+.doors { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.door:first-child {
+  grid-row: span 2; justify-content: flex-end; gap: var(--s-5);
+  padding: clamp(2.25rem, 4vw, 3.5rem);
+  background: radial-gradient(120% 90% at 0% 100%, rgba(250, 248, 243, 0.045), transparent 60%);
+}
+.door:first-child h3 { max-width: 16ch; font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 1.08; }
+.door:first-child p:not(.door__who) { max-width: 46ch; }
+.door:nth-child(3) { border-top: 1px solid var(--hair); }
+@media (max-width: 900px) {
+  .doors { grid-template-columns: 1fr; }
+  .door:first-child { grid-row: auto; }
+}

@@ -77,13 +77,11 @@
 
 /* ---- Steps and in/out lists ------------------------------------------- */
 .tpl-steps { margin: var(--space-band) 0 0; padding: 0; list-style: none; width: min(100%, 52rem); text-align: left; }
-.tpl-steps li { display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); gap: var(--s-4); padding: var(--s-5) 0; border-top: 1px solid var(--hair); }
+.tpl-steps li { padding: var(--s-5) 0; border-top: 1px solid var(--hair); }
 .tpl-steps li:last-child { border-bottom: 1px solid var(--hair); }
-.tpl-steps .eyebrow { padding-top: 0.3em; }
 .tpl-steps b { display: block; color: var(--fg); font-weight: 500; }
 .tpl-steps span { display: block; margin-top: var(--s-1); color: var(--muted); line-height: 1.55; text-wrap: pretty; }
-.tpl-steps li.is-review b { color: var(--fg); }
-.tpl-steps li.is-review .eyebrow { color: var(--accent); }
+.tpl-steps li.is-review b { color: var(--accent); }
 .tpl-io { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-9); margin-top: var(--space-band); text-align: left; }
 .tpl-io h3 { font-size: clamp(1.2rem, 1.5vw, 1.4rem); font-weight: 500; color: rgba(250, 248, 243, 0.9); }
 .tpl-io ul { margin: var(--s-5) 0 0; padding: 0; list-style: none; }
