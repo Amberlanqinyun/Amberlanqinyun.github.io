@@ -314,7 +314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/blog/">Guides</a>
       <a href="/about">About</a>
       <span class="lang-switch" role="group" aria-label="Language"><a href="/" lang="en" hreflang="en" data-lang="en" aria-current="true">EN</a><span class="lang-switch__sep" aria-hidden="true">|</span><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh">中文</a></span>
-      <a class="site-header__cta" href="#plan">Get your written plan</a>
+      <a class="site-header__cta" href="/contact">Work with me</a>
     </nav>
   </div>
 </header>
@@ -327,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h1 id="hero-title" data-words>Pick the marketing job you'd hand over first.</h1>
           <p class="lead">I build the agent that does it with your team in a week, then check every send before a customer sees it. Written plan and price first. Your team keeps everything.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#plan">Get your written plan</a>
+            <a class="btn btn-primary" href="#plan">Work with me</a>
             <a class="text-link arrow-link" href="/about#hire">Hiring? Let's talk</a>
           </div>
           <p class="cta-note">One message about your biggest gap. Within two working days: the first job to build, what week one delivers, and the price.</p>
@@ -459,7 +459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="how-title">Day 0, day 2, week 1.</h2>
           <p class="lead">You write one message. I write the plan. The agent goes live with your team.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#plan">Get your written plan</a>
+            <a class="btn btn-primary" href="#plan">Work with me</a>
           </div>
         </div>
         <ol class="pillars steps-split reveal">
@@ -653,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="contact-title">Let's find the marketing job to build first.</h2>
           <p class="lead">One message. Within two working days you have a written plan and a price. I read every message myself.</p>
         </div>
-        <form class="plan-form reveal" id="plan" novalidate aria-label="Get your written plan">
+        <form class="plan-form reveal" id="plan" novalidate aria-label="Work with me">
           <div class="plan-form__row">
             <div class="field"><label for="p-name">Your name</label><input id="p-name" name="name" type="text" autocomplete="name" required></div>
             <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="name@company.co.nz"></div>
@@ -662,7 +662,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="field"><label for="p-job">The job you'd hand over first</label><textarea id="p-job" name="message" required placeholder="e.g. We want to show up when someone asks ChatGPT for a plumber in Auckland."></textarea></div>
           <div class="hp" aria-hidden="true"><label for="p-hp">Leave this field empty</label><input id="p-hp" name="company-role" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="plan-form__actions">
-            <button class="btn btn-primary" type="submit">Get my written plan</button>
+            <button class="btn btn-primary" type="submit">Send</button>
             <a class="text-link arrow-link" href="/about#hire">Hiring? Let's talk</a>
           </div>
           <p class="small plan-form__note">Priced per project from the written plan. Your team keeps every agent, prompt and file.</p>
@@ -670,7 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </form>
       </div>
     </section>
-    <div class="sticky-cta" id="sticky-cta" aria-hidden="true"><a class="btn btn-primary" href="#plan">Get your written plan</a></div>
+    <div class="sticky-cta" id="sticky-cta" aria-hidden="true"><a class="btn btn-primary" href="#plan">Work with me</a></div>
   </main>
 
   <script>
@@ -803,7 +803,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         f.querySelector('.form-thanks').focus();
       })
       .catch(function () {
-        btn.disabled = false; btn.textContent = 'Get my written plan';
+        btn.disabled = false; btn.textContent = 'Send';
         var href = 'mailto:' + TO + '?subject=' + encodeURIComponent('Plan request from ' + d.name) + '&body=' + encodeURIComponent('Website: ' + d.website + '\n\nThe job: ' + d.message);
         st.innerHTML = 'The form could not send. <a class="text-link" href="' + href + '">Email the same message</a> and it reaches me the same way.';
       });

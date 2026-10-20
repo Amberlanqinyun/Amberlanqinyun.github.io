@@ -927,3 +927,6 @@ html.fdot-run { overflow-anchor: none; }
 @media (max-width: 640px) { .sticky-cta { display: block; } .sticky-cta.is-on { transform: none; } }
 
 .pillars.steps-split .steps__n { white-space: nowrap; }
+
+.form-note { margin: 0; }
+.contact-form .form-note { color: var(--soft); font-size: var(--t-small); }

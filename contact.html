@@ -193,7 +193,7 @@
   </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=10">
+<link rel="stylesheet" href="/assets/highend.css?v=11">
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
@@ -229,21 +229,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap">
         <div class="stack">
           <p class="eyebrow">Contact</p>
-          <h1 id="contact-title">Build it with your team, or hire for it.</h1>
-          <p class="lead">Tell me what you are working on. I read every message myself and reply within two working days.</p>
+          <h1 id="contact-title">Let's find the marketing job to build first.</h1>
+          <p class="lead">One message. Within two working days you have a written plan and a price. I read every message myself.</p>
         </div>
 
         <div class="contact-form">
           <form id="contact-form" novalidate>
-            <div class="field">
-              <label for="topic">What is this about?</label>
-              <select id="topic" name="topic">
-                <option value="Contract a build">Contract a build</option>
-                <option value="A full-time role">A full-time role</option>
-                <option value="Something else">Something else</option>
-              </select>
-            </div>
-
             <div class="field-row">
               <div class="field">
                 <label for="name">Your name</label>
@@ -261,9 +252,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="What you are building, or the role you are hiring for. A few lines is plenty."></textarea>
+              <label for="message">The job you'd hand over first, or the role you're hiring for</label>
+              <textarea id="message" name="message" required placeholder="e.g. We want to show up when someone asks ChatGPT for a plumber in Auckland. A few lines is plenty."></textarea>
               
+            </div>
+
+            <div class="field">
+              <label for="topic">This is about</label>
+              <select id="topic" name="topic">
+                <option value="Contract a build">Contract a build</option>
+                <option value="A full-time role">A full-time role</option>
+                <option value="Something else">Something else</option>
+              </select>
             </div>
 
             <div class="hp" aria-hidden="true">
@@ -275,6 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <button class="btn btn-primary" type="submit" id="submit-button">Send</button>
             </div>
 
+            <p class="small form-note">Priced per project from the written plan. Your team keeps every agent, prompt and file.</p>
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -290,18 +291,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="grid grid-3 reveal" style="text-align:left">
           <div class="step">
             <span class="small">01</span>
-            <h3>I read your message</h3>
-            <p>I read what you sent and look at your site or the role.</p>
+            <h3>Day 0: your message</h3>
+            <p>I read it the same day and look at your site or the role.</p>
           </div>
           <div class="step">
             <span class="small">02</span>
-            <h3>I reply in writing</h3>
-            <p>For a build, a short written scope. For a role, my availability.</p>
+            <h3>Day 2: a written plan</h3>
+            <p>For a build: the first agent to build, what week one delivers, what your team keeps, and the price. For a role: my availability.</p>
           </div>
           <div class="step">
             <span class="small">03</span>
-            <h3>We agree the next step</h3>
-            <p>If it is a fit, we set up a call. If it is not, you hear that too.</p>
+            <h3>Week 1: live, with your team</h3>
+            <p>If it is a fit, we build it on your own accounts with your team. If it is not, you hear that too.</p>
           </div>
         </div>
       </div>
@@ -328,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="faq" class="centered" aria-labelledby="faq-title">
       <div class="wrap">
         <div class="stack reveal">
-          <h2 id="faq-title">Good questions.</h2>
+          <h2 id="faq-title">FAQ</h2>
         </div>
         <div class="faq reveal">
                   <details>
@@ -590,5 +591,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </span>
   </div>
 </footer>
+  <script>(function(){var f=document.getElementById('contact-form');if(!f)return;var s=false;f.addEventListener('focusin',function(){if(!s){s=true;if(window.dataLayer)window.dataLayer.push({event:'form_start',form_name:'contact'});}});})();</script>
 </body>
 </html>
