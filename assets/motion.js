@@ -149,25 +149,29 @@
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -6% 0px' }
+      { threshold: 0, rootMargin: '0px 0px 35% 0px' }
     );
 
     units.forEach(function (unit) {
       var rect = unit.el.getBoundingClientRect();
-      // Anything already on screen at load reveals right away, so the first
-      // viewport is never blank.
-      if (rect.top < window.innerHeight * 0.92) {
+      // Anything on screen or just below it at load reveals right away, so
+      // the first viewport is never blank.
+      if (rect.top < window.innerHeight * 1.35) {
         window.requestAnimationFrame(function () { show(unit.el); });
         return;
       }
       observer.observe(unit.el);
     });
 
-    // Failsafe: never leave content hidden.
-    window.setTimeout(function () {
+    // Failsafe: never leave content hidden. A jump (anchor link, find in
+    // page, fast scroll to the end) or two and a half seconds shows it all.
+    var showAll = function () {
       units.forEach(function (unit) { show(unit.el); });
       observer.disconnect();
-    }, 10000);
+    };
+    window.setTimeout(showAll, 2500);
+    window.addEventListener('hashchange', showAll, { once: true });
+    window.addEventListener('beforeprint', showAll, { once: true });
   }
 
   /* ---------- card hover ---------- */

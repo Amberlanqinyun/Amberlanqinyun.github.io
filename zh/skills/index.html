@@ -3014,7 +3014,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (!reduceMotion && 'IntersectionObserver' in window) {
         var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
         items.forEach(function (item) {
-          if (item.getBoundingClientRect().top > window.innerHeight * 0.94) item.classList.add('is-hidden');
+          if (item.getBoundingClientRect().top > window.innerHeight * 1.35) item.classList.add('is-hidden');
         });
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
@@ -3022,8 +3022,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
           });
-        }, { threshold: 0.1, rootMargin: '0px 0px -4% 0px' });
+        }, { threshold: 0, rootMargin: '0px 0px 35% 0px' });
         items.forEach(function (item) { observer.observe(item); });
+        window.setTimeout(function () { items.forEach(function (item) { item.classList.add('is-visible'); }); observer.disconnect(); }, 2500);
       }
     }());
   </script>

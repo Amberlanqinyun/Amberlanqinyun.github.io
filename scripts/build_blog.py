@@ -299,7 +299,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
-<body data-motion="auto">
+<body>
 {partial('gtm-body').rstrip()}
 """
 
