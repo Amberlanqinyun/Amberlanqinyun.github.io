@@ -81,8 +81,8 @@
 
     function problem() {
       var e = email.value.trim(), s = site.value.trim();
-      if (!e) return { field: email, say: ZH ? '请填写你的邮箱，方便把结果发给你。' : 'Could you add your email, so the result can reach you?' };
-      if (e.indexOf('@') < 1 || e.indexOf('.', e.indexOf('@')) < 0) return { field: email, say: ZH ? '这个邮箱地址好像不完整，可以再确认一下吗？' : 'That email looks incomplete. Worth a second look?' };
+      if (!e) return { field: email, say: ZH ? '请填写你的邮箱，以便发送结果。' : 'Please add your email so the result can be delivered.' };
+      if (e.indexOf('@') < 1 || e.indexOf('.', e.indexOf('@')) < 0) return { field: email, say: ZH ? '邮箱地址似乎不完整，请再核对一下。' : 'Please check the email address, as it looks incomplete.' };
       if (!s) return { field: site, say: site.getAttribute('data-missing') || (ZH ? '要在哪个网站上运行？' : 'Which site should it run on?') };
       return null;
     }
@@ -91,8 +91,8 @@
       var body = 'Please run the ' + name + ' template on ' + s + '.\n\nSend the result to ' + e + '.';
       var href = 'mailto:' + TO + '?subject=' + encodeURIComponent('Template run: ' + name) + '&body=' + encodeURIComponent(body);
       show('error', ZH
-        ? '这次没有发送成功，但内容都还在：<a href="' + href + '">用你的邮箱应用发送同样的请求</a>，或直接发邮件到 <a href="mailto:' + TO + '">' + TO + '</a>。'
-        : 'That did not send, and nothing was lost: <a href="' + href + '">send the same request from your email app</a>, or email <a href="mailto:' + TO + '">' + TO + '</a> directly.');
+        ? '请求未能发送，你填写的内容仍然保留：<a href="' + href + '">用你的邮箱应用发送同样的请求</a>，或直接发邮件到 <a href="mailto:' + TO + '">' + TO + '</a>。'
+        : 'The request did not go through, and your details are intact: <a href="' + href + '">send the same request from your email app</a>, or email <a href="mailto:' + TO + '">' + TO + '</a> directly.');
     }
 
     form.addEventListener('submit', function (event) {
@@ -116,8 +116,8 @@
           _template: 'table',
           _captcha: 'false',
           _autoresponse: ZH
-            ? '感谢你让 Amber Lan 在 ' + s + ' 上运行这个模板。每一份结果都会先由 Amber 审核再发出，你会在两个工作日内收到。如有任何疑问，直接回复这封邮件即可。'
-            : 'Thanks for asking Amber Lan to run the ' + name + ' on ' + s + '. Amber reviews every result before it is sent, and yours will reach you within two working days. If anything is unclear, just reply to this email.',
+            ? '感谢你让 Amber Lan 在 ' + s + ' 上运行这个模板。结果将在两个工作日内送达。如有任何疑问，请直接回复这封邮件。'
+            : 'Thank you for asking Amber Lan to run the ' + name + ' on ' + s + '. Your result will arrive within two working days. For any questions, reply to this email.',
           language: ZH ? 'zh' : 'en',
           template: name,
           template_id: id,
@@ -133,8 +133,8 @@
         form.reset();
         button.textContent = ZH ? '请求已发送' : 'Request sent';
         show('ok', ZH
-          ? '<b>已加入运行队列。</b>Amber Lan 会在 ' + s.replace(/</g, '&lt;') + ' 上运行这个模板，Amber 审核后，结果会在两个工作日内发到你的邮箱。'
-          : '<b>Your run is queued.</b> Amber Lan runs the ' + name + ' on ' + s.replace(/</g, '&lt;') + ', Amber reviews it, and the result reaches you within two working days.');
+          ? '<b>已加入运行队列。</b>Amber Lan 会在 ' + s.replace(/</g, '&lt;') + ' 上运行这个模板，并在两个工作日内把结果发到你的邮箱。'
+          : '<b>Your run is queued.</b> Amber Lan will run the ' + name + ' on ' + s.replace(/</g, '&lt;') + ' and deliver the result within two working days.');
       }).catch(function () {
         button.disabled = false;
         button.textContent = label;

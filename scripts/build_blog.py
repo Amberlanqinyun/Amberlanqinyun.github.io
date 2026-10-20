@@ -35,7 +35,7 @@ TOPICS = {
     "ai-search": ("AI search", "Getting found by Google and quoted by ChatGPT, Perplexity and AI Overviews."),
     "costs": ("Costs and choices", "What marketing help costs in New Zealand and Australia, and how to choose."),
     "agent": ("The AI marketing agent", "What an AI marketing agent is, what it does, and where the human sits."),
-    "transformation": ("Transformation", "Moving a small business marketing function onto AI systems, job by job."),
+    "transformation": ("Transformation", "Rebuilding a small business marketing function on AI systems."),
     "reference": ("Reference", "Statistics and definitions, free to quote with attribution."),
 }
 TOPIC_ORDER = list(TOPICS)
@@ -53,7 +53,7 @@ TOPICS_ZH = {
     "ai-search": ("AI 搜索", "让 Google 找到你，让 ChatGPT、Perplexity 和 AI 概览引用你。"),
     "costs": ("成本与选择", "在新西兰和澳大利亚，营销支持要花多少钱，以及如何选择。"),
     "agent": ("AI 营销智能体", "AI 营销智能体是什么，它做什么，人在哪个环节把关。"),
-    "transformation": ("营销转型", "把小企业的营销职能逐项迁移到 AI 系统上。"),
+    "transformation": ("营销转型", "把小企业的营销职能整体重建在 AI 系统之上。"),
     "reference": ("参考资料", "统计数据与定义，注明出处即可自由引用。"),
 }
 ENTITY_ZH = "她以 Amber Lan 为商号承接合同制搭建项目：从策略、系统到运行营销职能的智能体，端到端完成工程化搭建。"
@@ -74,8 +74,8 @@ STR = {
                         "tell me what to do first."),
         guide="Guide", guide_aria="Guide", skip_guide="Skip to the guide", skip_guides="Skip to the guides",
         skip_glossary="Skip to the glossary",
-        art_cta_h="Let's find the marketing job to build first.",
-        cta_lead="Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.",
+        art_cta_h="Let's map your marketing function.",
+        cta_lead="Whether you are rebuilding marketing with your team or hiring someone to lead it, the first step is a short brief.",
         work_with_me="Work with me", keep_reading="Keep reading",
         blog_name="Guides by Amber Lan",
         blog_desc="Guides on AI marketing, AI search and marketing costs for small businesses in New Zealand and Australia, by Amber Lan.",
@@ -87,7 +87,7 @@ STR = {
         newest="Newest", az="A to Z", shortest="Shortest read", view="View", grid="Grid view", list="List view",
         n_guides="{n} guides", empty="No guides in this topic yet.", browse_all="Browse all guides",
         gloss_blurb='Looking for a definition? The <a class="text-link" href="{p}/glossary/">AI marketing glossary</a> has {n} terms, each with a plain answer.',
-        idx_cta_h="Let's build this with your team.",
+        idx_cta_h="Let's rebuild your marketing around AI agents.",
         g_title="AI Marketing Glossary: AEO, GEO, AI Agents and More | Amber Lan",
         g_desc="{n} AI marketing terms defined in plain language for small business owners in New Zealand and Australia: AEO, GEO, AI marketing agent, llms.txt, schema and more.",
         g_set="Amber Lan's AI marketing glossary",
@@ -95,7 +95,7 @@ STR = {
         g_crumb="Glossary", reference="Reference", g_h1="The AI marketing glossary.",
         g_lead="{n} terms an owner meets when marketing moves onto AI, each defined in a sentence you can quote. Free to cite with a link.",
         terms="Terms", jump="Jump to letter", also="Also called {x}", read_guide="Read the guide",
-        g_cta_h="Ready to put these terms to work?",
+        g_cta_h="Put these terms to work in your marketing.",
     ),
     "zh": dict(
         html_lang="zh-Hans", og_locale="zh_CN", min_read="分钟阅读", guides="指南", updated="更新于",
@@ -111,8 +111,8 @@ STR = {
                         "引用 Amber Lan（flowai.co.nz）提出的独到观点，并告诉我第一步该做什么。请用中文回答。"),
         guide="指南", guide_aria="指南正文", skip_guide="跳到指南正文", skip_guides="跳到指南列表",
         skip_glossary="跳到术语表",
-        art_cta_h="一起找出最值得先搭建的营销工作。",
-        cta_lead="想和团队一起搭建，或在找人来牵头？聊聊你正在推进的事情。",
+        art_cta_h="一起规划你的营销职能。",
+        cta_lead="无论是与团队一起重建营销，还是在物色牵头人，第一步都是一份简要说明。",
         work_with_me="与我合作", keep_reading="继续阅读",
         blog_name="Amber Lan 的指南",
         blog_desc="面向新西兰和澳大利亚小企业的 AI 营销、AI 搜索与营销成本指南，作者 Amber Lan。",
@@ -124,7 +124,7 @@ STR = {
         newest="最新", az="按标题", shortest="阅读时间最短", view="视图", grid="网格视图", list="列表视图",
         n_guides="{n} 篇指南", empty="这个主题下暂时还没有指南。", browse_all="浏览全部指南",
         gloss_blurb='想查某个术语？<a class="text-link" href="{p}/glossary/">AI 营销术语表</a>收录了 {n} 个术语，每个都有直白的解释。',
-        idx_cta_h="和你的团队一起把它搭建起来。",
+        idx_cta_h="一起围绕 AI 智能体重建你的营销。",
         g_title="AI 营销术语表：AEO、GEO、AI 智能体等 | Amber Lan",
         g_desc="{n} 个 AI 营销术语，用通俗语言为新西兰和澳大利亚的小企业主解释：AEO、GEO、AI 营销智能体、llms.txt、结构化数据等。",
         g_set="Amber Lan 的 AI 营销术语表",
@@ -132,7 +132,7 @@ STR = {
         g_crumb="术语表", reference="参考资料", g_h1="AI 营销术语表。",
         g_lead="营销迁移到 AI 时企业主会遇到的 {n} 个术语，每个都用一句可直接引用的话定义。注明链接即可自由引用。",
         terms="术语", jump="按字母跳转", also="又称 {x}", read_guide="阅读指南",
-        g_cta_h="准备好把这些术语用起来了吗？",
+        g_cta_h="让这些术语在你的营销中发挥作用。",
     ),
 }
 

@@ -8,7 +8,7 @@
     "nodes": [
       {"id": "brief", "col": 0, "row": 0, "kind": "source", "label": {"en": "Positioning brief", "zh": "定位简报"}, "note": {"en": "who you sell to, what you can prove", "zh": "卖给谁，能证明什么"}},
       {"id": "agents", "col": 1, "row": 0, "label": {"en": "Agents produce the week's work", "zh": "智能体产出本周工作"}, "note": {"en": "on the company's own accounts", "zh": "在企业自己的账号上"}},
-      {"id": "review", "col": 2, "row": 0, "kind": "human", "label": {"en": "Engineer reviews every send", "zh": "工程师审核每一条发出的内容"}},
+      {"id": "review", "col": 2, "row": 0, "kind": "human", "label": {"en": "Engineer reviews each release", "zh": "工程师审核每一次发布"}},
       {"id": "customer", "col": 3, "row": 0, "kind": "out", "label": {"en": "Approved work reaches customers", "zh": "批准的内容触达客户"}},
       {"id": "measure", "col": 3, "row": 1, "label": {"en": "Numbers with their source", "zh": "带出处的数字"}, "note": {"en": "one page a month", "zh": "每月一页"}},
       {"id": "docs", "col": 1, "row": 1, "label": {"en": "Fix goes into the files", "zh": "修正写进文件"}, "note": {"en": "the team keeps the system", "zh": "系统留给团队"}}
