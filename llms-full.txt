@@ -564,7 +564,7 @@ AI marketing services · New Zealand and Australia
 
 # AI marketing services for New Zealand and Australian businesses.
 
-Let's build your marketing team together, one AI agent at a time, and hand it to your people to run with confidence.
+Let's rebuild your marketing around AI agents, from strategy to the monthly report, and hand the whole system to your people to run with confidence.
 
 Work with meExplore what the agents run
 
@@ -576,7 +576,7 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
+Together we map your whole marketing function, then bring each part online until the system runs end to end.
 
 - 01Positioning
 
@@ -636,7 +636,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -753,7 +753,7 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
+Together we map your whole marketing function, then bring each part online until the system runs end to end.
 
 - 01Positioning
 
@@ -813,7 +813,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -944,7 +944,7 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
+Together we map your whole marketing function, then bring each part online until the system runs end to end.
 
 - 01Positioning
 
@@ -1004,7 +1004,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -1135,7 +1135,7 @@ What the agents run
 
 ## Every part of marketing, one agent each.
 
-Together we begin with the agent that closes your biggest gap, then add the next once the first is running well.
+Together we map your whole marketing function, then bring each part online until the system runs end to end.
 
 - 01Positioning
 
@@ -1195,7 +1195,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -1366,7 +1366,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -1535,7 +1535,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -1664,7 +1664,7 @@ What the system covers
 
 ## What we automate together.
 
-We start where leads slow down, then extend the system one workflow at a time.
+We map the whole lead journey, then connect each workflow until the system runs end to end.
 
 - 01Lead capture and routing
 
@@ -1704,7 +1704,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -1873,7 +1873,7 @@ Together we agree in writing what we build, which data the agents may read, wher
 
 ### Build
 
-I build the agents with your team, one at a time, on your accounts. Your people approve everything before it reaches a customer.
+I build the agents with your team on your own accounts, each one building on the last. Your people approve everything before it reaches a customer.
 
 03
 
@@ -1987,9 +1987,9 @@ Author: Amber Lan, AI marketing engineer, Auckland
 
 How it works · Read, install, run
 
-# Let’s build your marketing team, one agent at a time.
+# Your marketing function, rebuilt to run on agents.
 
-Flow reads your business, then builds the agent with the most to gain alongside your team in one week. After that it runs monthly, and a marketing engineer reviews every send.
+Flow maps your whole marketing function, then builds the agents with your team, a new system live each week. A marketing engineer reviews every send.
 
 Work with meExplore the five sprints
 
@@ -2031,11 +2031,11 @@ The three steps
 
 ## Read. Install. Run.
 
-Flow learns your business first. Together we pick where it starts, and a marketing engineer reviews everything before it ships.
+Flow learns your business first. Together we map the whole function, and a marketing engineer reviews everything before it ships.
 
 01 · ReadA written scope we agree inside week one, gaps ranked.
 
-02 · InstallThe agent with the most to gain goes live, built with your team.
+InstallThe agents go live system by system, built with your team.
 
 03 · RunRuns monthly with human review and a short report for your team.
 
@@ -2095,9 +2095,9 @@ A marketing engineer reviews every send before it reaches a customer.
 
 The five sprints
 
-## Let’s start with one agent.
+## Five sprints, one marketing function.
 
-One week per agent, built with your team: six fixed deliverables and a documented handover.
+Each sprint takes a week with your team and ships six fixed deliverables with a documented handover. Together they make up the whole function.
 
 01Positioning02AI search03Content04Outbound05AnalyticsSprint 01 · Flow Intelligence · one week
 
@@ -2331,9 +2331,9 @@ Report. We read your first one-page report together, from live data.
 
 Run monthly
 
-## A sprint builds one agent with your team. Monthly, Flow runs the whole engine.
+## Each sprint adds a system with your team. Monthly, Flow runs the whole engine.
 
-Start with a sprint and your team keeps the agent, fully documented. Or let Flow run the whole Flow Engine monthly.
+Your team keeps every system the sprints build, fully documented. Or let Flow run the whole Flow Engine monthly.
 
 Flow Engine, monthly
 

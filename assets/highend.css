@@ -939,7 +939,7 @@ html.fdot-run { overflow-anchor: none; }
    Home hero on two lines, the facts out of the hero, one wide door for owners. */
 .hero--home { padding-top: clamp(4.5rem, 7vw, 6rem); }
 .hero--home .stack { max-width: 64rem; }
-.hero--home h1 { max-width: 24ch; text-wrap: balance; }
+.hero--home h1, .hero--wide h1 { max-width: 24ch; text-wrap: balance; }
 .hero--home .stack > .lead { max-width: 44ch; }
 
 /* How it starts: the button follows the left-aligned copy above it. */
