@@ -76,14 +76,14 @@
 
 .site-header__nav a:focus-visible,
 .site-header__brand:focus-visible {
-  outline: 2px solid #e4a43c;
+  outline: 2px solid #f2b93f;
   outline-offset: 4px;
 }
 
 .site-header__nav .site-header__cta {
   padding: var(--s-3) var(--s-5);
   border-radius: var(--pill);
-  background: #e4a43c;
+  background: #f2b93f;
   color: #0e0e0d;
   font-weight: 650;
   transition: filter 200ms ease;

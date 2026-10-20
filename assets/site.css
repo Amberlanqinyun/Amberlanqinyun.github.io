@@ -21,8 +21,8 @@
   --soft: rgba(250, 248, 243, 0.54);
   --hair: rgba(250, 248, 243, 0.09);
   --hair-strong: rgba(250, 248, 243, 0.2);
-  --accent: #e4a43c;
-  --accent-soft: rgba(228, 164, 60, 0.14);
+  --accent: #f2b93f;
+  --accent-soft: rgba(242, 185, 63, 0.14);
   --ink: #0e0e0d;
   --font: "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --display: clamp(2.75rem, 5.6vw, 5rem);        /* 80px at desktop */

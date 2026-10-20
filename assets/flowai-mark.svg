@@ -3,9 +3,9 @@
        behind it (Get found, Get leads, Keep customers), all in the same glass. -->
   <defs>
     <radialGradient id="fm-tint" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#f2b64f" stop-opacity=".62"/><stop offset=".72" stop-color="#e8a83e" stop-opacity=".46"/><stop offset="1" stop-color="#d4922f" stop-opacity=".78"/></radialGradient>
-    <radialGradient id="fm-light" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6e2"/><stop offset=".35" stop-color="#f8d590" stop-opacity=".95"/><stop offset=".7" stop-color="#eeb04c" stop-opacity=".5"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="fm-light" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6e2"/><stop offset=".35" stop-color="#f8d590" stop-opacity=".95"/><stop offset=".7" stop-color="#eeb04c" stop-opacity=".5"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>
     <linearGradient id="fm-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset=".5" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity=".22"/></linearGradient>
-    <radialGradient id="fm-pool" cx="60%" cy="96%" r="70%"><stop offset="0" stop-color="#f3c572" stop-opacity=".62"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="fm-pool" cx="60%" cy="96%" r="70%"><stop offset="0" stop-color="#f3c572" stop-opacity=".62"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>
     <radialGradient id="fm-sheen"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
     <path id="fm-tri" d="M0 -1C.24 -1 .36 -.88 .48 -.68L1 .22C1.16 .5 1 .96 .6 .96H-.6C-1 .96 -1.16 .5 -1 .22L-.48 -.68C-.36 -.88 -.24 -1 0 -1Z"/>
     <rect id="fm-pill" x="-1.3" y="-.62" width="2.6" height="1.24" rx=".62"/>

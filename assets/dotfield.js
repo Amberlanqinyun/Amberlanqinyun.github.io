@@ -26,7 +26,7 @@
   var TAU = Math.PI * 2;
   var D2R = Math.PI / 180;
   var INK = 'rgb(250, 248, 243)';
-  var AMBER = 'rgb(228, 164, 60)';
+  var AMBER = 'rgb(242, 185, 63)';
 
   /* One surface per placement. Angles in degrees, positions as fractions of
      the host, dot radii in CSS pixels, alphas 0..1. */

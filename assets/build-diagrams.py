@@ -16,7 +16,7 @@ import pathlib
 # ---- Inks (design-system/colors.json) -------------------------------------
 INK = "#0E0E0D"      # substrate, Warm Ink
 CREAM = "#FAF8F3"    # dominant plate
-AMBER = "#E4A43C"    # accent plate, one job per image
+AMBER = "#F2B93F"    # accent plate, one job per image
 
 FONT = "'Google Sans Flex','Google Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
 

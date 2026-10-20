@@ -23,7 +23,7 @@ window.FlowDot = (function () {
   'use strict';
   var NS = 'http://www.w3.org/2000/svg';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var INK = '#0e0e0d', CREAM = '#faf8f3', AMBER = '#e4a43c';
+  var INK = '#0e0e0d', CREAM = '#faf8f3', AMBER = '#f2b93f';
   var uid = 0;
   function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
 
@@ -35,19 +35,19 @@ window.FlowDot = (function () {
     svg.innerHTML =
       '<defs>' +
       /* the light inside Flow Intelligence, and the glow it throws */
-      '<radialGradient id="flowdot-core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6e2"/><stop offset=".32" stop-color="#f8d590" stop-opacity=".95"/><stop offset=".66" stop-color="#eeb04c" stop-opacity=".55"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="flowdot-core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6e2"/><stop offset=".32" stop-color="#f8d590" stop-opacity=".95"/><stop offset=".66" stop-color="#eeb04c" stop-opacity=".55"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>' +
       /* a solid amber for static marks (the logo trail, small sizes) */
       '<radialGradient id="flowdot-amber" cx="50%" cy="60%" r="55%"><stop offset="0" stop-color="#fbe0a8"/><stop offset=".5" stop-color="#f1bb5a"/><stop offset=".85" stop-color="#df9c36"/><stop offset="1" stop-color="#c47f27"/></radialGradient>' +
       '<radialGradient id="flowdot-tint" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#f2b64f" stop-opacity=".5"/><stop offset=".72" stop-color="#e8a83e" stop-opacity=".34"/><stop offset="1" stop-color="#d4922f" stop-opacity=".62"/></radialGradient>' +
       '<radialGradient id="flowdot-tint-night" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#2a2417" stop-opacity=".55"/><stop offset="1" stop-color="#16140f" stop-opacity=".8"/></radialGradient>' +
       '<filter id="flowdot-bloom" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.2"/></filter>' +
-      '<radialGradient id="flowdot-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".42"/><stop offset=".45" stop-color="#e4a43c" stop-opacity=".14"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
-      '<radialGradient id="flowdot-core-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".22"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
-      '<radialGradient id="flowdot-halo-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e4a43c" stop-opacity=".08"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="flowdot-halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f2b93f" stop-opacity=".42"/><stop offset=".45" stop-color="#f2b93f" stop-opacity=".14"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="flowdot-core-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f2b93f" stop-opacity=".22"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="flowdot-halo-night" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f2b93f" stop-opacity=".08"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>' +
       /* glass: body, rim light (top bright, sides gone, a little bounce at the bottom), warm pool */
       '<linearGradient id="flowdot-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".3"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".1"/><stop offset="1" stop-color="#ffffff" stop-opacity=".16"/></linearGradient>' +
       '<linearGradient id="flowdot-rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset=".28" stop-color="#ffffff" stop-opacity=".16"/><stop offset=".62" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#ffe2ad" stop-opacity=".34"/></linearGradient>' +
-      '<radialGradient id="flowdot-pool" cx="60%" cy="96%" r="70%"><stop offset="0" stop-color="#f3c572" stop-opacity=".62"/><stop offset="1" stop-color="#e4a43c" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="flowdot-pool" cx="60%" cy="96%" r="70%"><stop offset="0" stop-color="#f3c572" stop-opacity=".62"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>' +
       '<radialGradient id="flowdot-sheen" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffffff" stop-opacity=".75"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>' +
       /* eyes: a white with a soft fall-off at the bottom, a glossy pupil */
       '<radialGradient id="flowdot-white" cx="44%" cy="36%" r="66%"><stop offset="0" stop-color="#ffffff"/><stop offset=".72" stop-color="#f7f3ec"/><stop offset="1" stop-color="#ddd4c4"/></radialGradient>' +
@@ -540,7 +540,7 @@ window.FlowDot = (function () {
         var ang = a[1] * Math.PI / 180, fx = CX + Math.cos(ang) * RX, fy = CY + Math.sin(ang) * RY;
         var dx = fx - CX, dy = fy - CY, len = Math.hypot(dx, dy), ux = dx / len, uy = dy / len;
         var x1 = CX + ux * (run.r + 2.5), y1 = CY + uy * (run.r + 2.5), x2 = fx - ux * AS * 0.38, y2 = fy - uy * AS * 0.38, L = Math.hypot(x2 - x1, y2 - y1);
-        var wire = sel('line', { x1: x1, y1: y1, x2: x2, y2: y2, stroke: '#e4a43c', 'stroke-opacity': 0.32, 'stroke-width': 0.35, 'stroke-linecap': 'round', 'stroke-dasharray': L, 'stroke-dashoffset': L });
+        var wire = sel('line', { x1: x1, y1: y1, x2: x2, y2: y2, stroke: '#f2b93f', 'stroke-opacity': 0.32, 'stroke-width': 0.35, 'stroke-linecap': 'round', 'stroke-dasharray': L, 'stroke-dashoffset': L });
         wires.appendChild(wire);
         var wrap = sel('g', { opacity: 0 }), inner = sel('svg', { x: fx - AS / 2, y: fy - AS / 2, width: AS, height: AS, viewBox: '0 0 100 100', overflow: 'visible' });
         wrap.appendChild(inner); crew.appendChild(wrap);

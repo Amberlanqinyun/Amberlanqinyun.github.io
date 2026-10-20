@@ -90,7 +90,7 @@ h2 { letter-spacing: -0.032em; }
 .btn-primary, .site-header__nav .site-header__cta, .site-menu .site-header__cta {
   padding: 0 0.4rem 0 1.3rem;
   background: var(--accent); color: var(--ink);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 12px 30px -14px rgba(228, 164, 60, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 12px 30px -14px rgba(242, 185, 63, 0.6);
 }
 .btn-primary::before, .site-header__nav .site-header__cta::before { content: none; }
 .btn-primary::after, .site-header__nav .site-header__cta::after, .site-menu .site-header__cta::after {
@@ -107,9 +107,9 @@ h2 { letter-spacing: -0.032em; }
   transition: transform 560ms var(--ease-spring), background-color 320ms var(--ease-out);
 }
 .btn-primary:hover, .hero .btn-primary:hover, .site-header__nav .site-header__cta:hover, .site-menu .site-header__cta:hover {
-  filter: none; background: #ebb04a; color: var(--ink);
+  filter: none; background: #f5c45a; color: var(--ink);
   transform: translateY(-1px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), 0 16px 36px -14px rgba(228, 164, 60, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), 0 16px 36px -14px rgba(242, 185, 63, 0.7);
 }
 .btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
   transform: translate(2px, -2px) scale(1.06);
@@ -306,7 +306,7 @@ h2 { letter-spacing: -0.032em; }
   left: 50%; bottom: -14%;
   width: min(92vw, 72rem); height: 62%;
   transform: translateX(-50%);
-  background: radial-gradient(closest-side, rgba(228, 164, 60, 0.17), rgba(228, 164, 60, 0.05) 48%, transparent 74%);
+  background: radial-gradient(closest-side, rgba(242, 185, 63, 0.17), rgba(242, 185, 63, 0.05) 48%, transparent 74%);
 }
 .hero::after {
   left: 14%; top: 4%;
@@ -361,7 +361,7 @@ h2 { letter-spacing: -0.032em; }
 }
 .outcome:nth-child(1) {
   grid-column: span 7;
-  background: radial-gradient(60% 55% at 100% 0%, rgba(228, 164, 60, 0.09), transparent 70%), var(--core);
+  background: radial-gradient(60% 55% at 100% 0%, rgba(242, 185, 63, 0.09), transparent 70%), var(--core);
 }
 .outcome:nth-child(2) { grid-column: span 5; }
 .outcome:nth-child(3) {
@@ -412,7 +412,7 @@ h2 { letter-spacing: -0.032em; }
   left: 50%; top: 50%; width: min(92vw, 60rem); height: 72%;
   transform: translate(-50%, -50%);
   border: 0; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(closest-side, rgba(228, 164, 60, 0.15), transparent 72%);
+  background: radial-gradient(closest-side, rgba(242, 185, 63, 0.15), transparent 72%);
 }
 .contact > .wrap { position: relative; z-index: 1; }
 
@@ -473,7 +473,7 @@ input, textarea, select { border-radius: var(--r-md); }
 .demo__run {
   position: absolute; inset: 0; z-index: 6;
   display: grid; grid-template-rows: auto 1fr auto;
-  background: radial-gradient(60% 50% at 50% 55%, rgba(228, 164, 60, 0.08), transparent 70%), #121211;
+  background: radial-gradient(60% 50% at 50% 55%, rgba(242, 185, 63, 0.08), transparent 70%), #121211;
   opacity: 1; transition: opacity 640ms var(--ease-out);
 }
 .demo__run.is-done { opacity: 0; pointer-events: none; }
@@ -486,7 +486,7 @@ input, textarea, select { border-radius: var(--r-md); }
 .demo__run-msg { position: absolute; max-width: min(60%, 26rem); padding: 0.6rem 0.85rem; border-radius: 12px; font-size: 0.8125rem; line-height: 1.45; opacity: 0; transform: translateY(6px); transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out); }
 .demo__run-msg.is-on { opacity: 1; transform: none; }
 .demo__run-msg--you { top: 1.25rem; right: 1.5rem; background: #1b1b19; color: var(--fg); border: 1px solid rgba(250, 248, 243, 0.1); }
-.demo__run-msg--dot { bottom: 1.25rem; left: 1.5rem; background: rgba(228, 164, 60, 0.12); color: var(--fg); border: 1px solid rgba(228, 164, 60, 0.25); }
+.demo__run-msg--dot { bottom: 1.25rem; left: 1.5rem; background: rgba(242, 185, 63, 0.12); color: var(--fg); border: 1px solid rgba(242, 185, 63, 0.25); }
 .demo__run-foot { display: grid; gap: 0.5rem; padding: 0.8rem 1.25rem 1rem; border-top: 1px solid rgba(250, 248, 243, 0.08); }
 .demo__run-cap { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg); min-height: 1em; }
 .demo__run-bar { display: block; height: 2px; background: rgba(250, 248, 243, 0.1); border-radius: 2px; overflow: hidden; }
@@ -500,7 +500,7 @@ input, textarea, select { border-radius: var(--r-md); }
 .demo__run-card.is-on { opacity: 1; transform: none; }
 .demo__run-card span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem; color: var(--fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .demo__run-card em { font-style: normal; color: var(--soft); white-space: nowrap; }
-.demo__run-card.is-ok { border-color: rgba(228, 164, 60, 0.45); }
+.demo__run-card.is-ok { border-color: rgba(242, 185, 63, 0.45); }
 .demo__run-card.is-ok em { color: var(--accent); }
 .demo__run-card.is-ok em::before { content: "\2713\00a0"; }
 @media (max-width: 720px) { .demo__run-cards { display: none; } .demo__run-msg--ok { max-width: 60%; } }
@@ -531,42 +531,40 @@ html.fdot-run { overflow-anchor: none; }
 .fdot--hero { width: 132px; height: 132px; margin: 0 auto 0.5rem; }
 @media (max-width: 720px) { .fdot--sprint { width: 76px; height: 76px; } .fdot--hero { width: 108px; height: 108px; } }
 
-/* ---- Primary buttons in glass ------------------------------------------
-   The same material as the dot: amber-tinted glass the page shows through,
-   lit along the top edge, warm light pooling at the bottom, cream text, no
-   outline. The arrow sits in a small glass bead. */
+/* ---- Primary buttons in lit glass ---------------------------------------
+   The same material as the dot, at full strength: a golden amber body, lit
+   along the top edge, warm light pooling at the bottom, ink text. Amber has
+   one job on each screen, and this is it. The arrow sits in a small bead. */
 .btn-primary, .hero .btn-primary, .site-header__nav .site-header__cta, .site-menu .site-header__cta {
   background:
-    radial-gradient(120% 150% at 50% 125%, rgba(243, 197, 114, 0.5), rgba(228, 164, 60, 0) 62%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0.07)),
-    rgba(228, 164, 60, 0.22);
-  color: var(--fg);
-  -webkit-backdrop-filter: blur(14px) saturate(1.5);
-  backdrop-filter: blur(14px) saturate(1.5);
+    radial-gradient(120% 150% at 50% 125%, rgba(247, 210, 130, 0.9), rgba(242, 185, 63, 0) 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.04) 52%, rgba(0, 0, 0, 0.06)),
+    var(--accent);
+  color: var(--ink);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 226, 173, 0.22),
-    0 10px 28px -14px rgba(228, 164, 60, 0.55);
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 14px 34px -14px rgba(242, 185, 63, 0.75);
 }
 .btn-primary:hover, .hero .btn-primary:hover, .site-header__nav .site-header__cta:hover, .site-menu .site-header__cta:hover {
   background:
-    radial-gradient(120% 150% at 50% 125%, rgba(246, 207, 134, 0.62), rgba(228, 164, 60, 0) 64%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.09)),
-    rgba(228, 164, 60, 0.3);
-  color: var(--fg);
+    radial-gradient(120% 150% at 50% 125%, rgba(250, 222, 158, 0.95), rgba(242, 185, 63, 0) 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.06) 52%, rgba(0, 0, 0, 0.04)),
+    #f5c45a;
+  color: var(--ink);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    inset 0 -1px 0 rgba(255, 226, 173, 0.3),
-    0 14px 34px -14px rgba(228, 164, 60, 0.7);
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 18px 40px -14px rgba(242, 185, 63, 0.85);
 }
 .btn-primary::after, .site-header__nav .site-header__cta::after, .site-menu .site-header__cta::after {
-  background: radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.1) 70%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-  color: var(--fg);
+  background: rgba(14, 14, 13, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: var(--ink);
 }
 /* the glance: on hover the bead becomes the glass orb's face for a moment */
 .btn-primary:hover::after, .site-header__nav .site-header__cta:hover::after, .site-menu .site-header__cta:hover::after {
-  background-color: rgba(243, 197, 114, 0.4);
+  background-color: rgba(247, 210, 130, 0.4);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='10.6' cy='13.6' r='3.7' fill='%23fff'/%3E%3Ccircle cx='19.4' cy='13.6' r='3.7' fill='%23fff'/%3E%3Ccircle cx='11' cy='14.5' r='1.9' fill='%230e0e0d'/%3E%3Ccircle cx='19.8' cy='14.5' r='1.9' fill='%230e0e0d'/%3E%3Cpath d='M12.4 19.4Q15 21.6 17.6 19.4' fill='none' stroke='%230e0e0d' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-size: 100% 100%;
 }
@@ -578,9 +576,9 @@ html.fdot-run { overflow-anchor: none; }
   display: inline-block; margin-left: -0.08em;
   padding: 0.08em 0.32em 0.1em; border-radius: 0.42em;
   background:
-    radial-gradient(120% 150% at 50% 125%, rgba(243, 197, 114, 0.5), rgba(228, 164, 60, 0) 62%),
+    radial-gradient(120% 150% at 50% 125%, rgba(247, 210, 130, 0.5), rgba(242, 185, 63, 0) 62%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04) 55%, rgba(255, 255, 255, 0.08)),
-    rgba(228, 164, 60, 0.24);
+    rgba(242, 185, 63, 0.24);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(255, 226, 173, 0.22);
   color: var(--fg, #faf8f3); line-height: 1; letter-spacing: -0.01em; vertical-align: 0.02em;
 }
@@ -696,10 +694,10 @@ html.fdot-run { overflow-anchor: none; }
 :root {
   --glass-amber:
     linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.06) 48%, rgba(255, 255, 255, 0) 60%),
-    radial-gradient(120% 140% at 50% 120%, rgba(255, 214, 140, 0.75), rgba(228, 164, 60, 0) 65%),
-    rgba(228, 164, 60, 0.62);
+    radial-gradient(120% 140% at 50% 120%, rgba(255, 214, 140, 0.75), rgba(242, 185, 63, 0) 65%),
+    rgba(242, 185, 63, 0.62);
   --glass-amber-edge: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(255, 226, 173, 0.25);
-  --glass-amber-glow: 0 0 14px -2px rgba(228, 164, 60, 0.55);
+  --glass-amber-glow: 0 0 14px -2px rgba(242, 185, 63, 0.55);
   --glass-clear:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015) 55%),
     rgba(250, 248, 243, 0.03);
@@ -714,7 +712,7 @@ html.fdot-run { overflow-anchor: none; }
 .hours i.on { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
 .js .fig:not(.is-in) .hours i.on { background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
 .stat .hours:not(.hours--wide) { gap: 4px; }
-.hours--wide i.on { box-shadow: var(--glass-amber-edge), 0 0 8px -2px rgba(228, 164, 60, 0.6); }
+.hours--wide i.on { box-shadow: var(--glass-amber-edge), 0 0 8px -2px rgba(242, 185, 63, 0.6); }
 
 /* Bars: a clear glass tube, filled with grey or amber glass. */
 .bar__track { height: 12px; background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
@@ -725,7 +723,7 @@ html.fdot-run { overflow-anchor: none; }
 /* The band itself reads as one sheet of glass, lit along its top edge. */
 #value::after {
   background:
-    radial-gradient(60% 80% at 15% 0%, rgba(228, 164, 60, 0.06), transparent 70%),
+    radial-gradient(60% 80% at 15% 0%, rgba(242, 185, 63, 0.06), transparent 70%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(250, 248, 243, 0.015) 30%, rgba(250, 248, 243, 0.015) 80%, transparent);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
