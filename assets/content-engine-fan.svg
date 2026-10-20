@@ -12,19 +12,19 @@
   </g>
   <!-- the gate -->
   <g transform="translate(560 170)">
-    <rect width="16" height="260" rx="8" fill="#e4a43c" fill-opacity=".9"/>
+    <rect width="16" height="260" rx="8" fill="#f2b93f" fill-opacity=".9"/>
   </g>
   <!-- source into gate -->
-  <path d="M290 300C400 300 460 300 560 300" stroke="#e4a43c" stroke-width="2.5" fill="none"/>
+  <path d="M290 300C400 300 460 300 560 300" stroke="#f2b93f" stroke-width="2.5" fill="none"/>
   <!-- fan out -->
-  <g fill="none" stroke="#e4a43c" stroke-width="2" stroke-opacity=".85">
+  <g fill="none" stroke="#f2b93f" stroke-width="2" stroke-opacity=".85">
     <path d="M576 300C700 300 760 140 880 140"/>
     <path d="M576 300C700 300 760 220 880 220"/>
     <path d="M576 300C700 300 760 300 880 300"/>
     <path d="M576 300C700 300 760 380 880 380"/>
     <path d="M576 300C700 300 760 460 880 460"/>
   </g>
-  <g fill="#e4a43c"><circle cx="880" cy="140" r="5"/><circle cx="880" cy="220" r="5"/><circle cx="880" cy="300" r="5"/><circle cx="880" cy="380" r="5"/><circle cx="880" cy="460" r="5"/></g>
+  <g fill="#f2b93f"><circle cx="880" cy="140" r="5"/><circle cx="880" cy="220" r="5"/><circle cx="880" cy="300" r="5"/><circle cx="880" cy="380" r="5"/><circle cx="880" cy="460" r="5"/></g>
   <g font-family="Google Sans Flex, -apple-system, Segoe UI, sans-serif" font-size="22" fill="#faf8f3" fill-opacity=".82">
     <text x="904" y="148">LinkedIn</text>
     <text x="904" y="228">X</text>

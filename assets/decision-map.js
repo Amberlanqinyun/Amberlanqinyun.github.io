@@ -149,7 +149,7 @@
     state.picked.forEach(function (n, k) {
       var s = state.scores[n], key = s.r + "-" + s.v, off = (seen[key] = (seen[key] || 0) + 1) - 1;
       var rr = 7 + s.f * 2.2, ang = off * 2.4, dist = off ? 14 + off * 6 : 0, cx = x(s.r) + Math.cos(ang) * dist, cy = y(s.v) - Math.sin(ang) * dist, ln = lane(s);
-      var fill = ln === "you" ? "#e4a43c" : ln === "draft" ? "rgba(250,248,243,.72)" : "rgba(250,248,243,.3)";
+      var fill = ln === "you" ? "#f2b93f" : ln === "draft" ? "rgba(250,248,243,.72)" : "rgba(250,248,243,.3)";
       svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + rr + '" fill="' + fill + '" fill-opacity=".85"><title>' + esc(n) + "</title></circle>";
       svg += '<text x="' + cx + '" y="' + (cy + 4) + '" text-anchor="middle" style="fill:' + (ln === "you" ? "#0e0e0d" : ln === "draft" ? "#0e0e0d" : "#faf8f3") + ';font-size:11px;font-weight:600">' + (k + 1) + "</text>";
     });

@@ -404,8 +404,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     g+='<path d="'+pts.map(function(p,k){return (k?'L':'M')+xs(p.P).toFixed(1)+','+ys(p.idx).toFixed(1);}).join('')+'" fill="none" stroke="#faf8f3" stroke-width="3"/>';
     if(isFinite(q.opt)&&q.opt<PMAX&&q.opt>PMIN){
-      g+='<circle cx="'+xs(q.opt)+'" cy="'+ys(Math.max(-15,profitIdx(q.opt,q)/best*100))+'" r="5" fill="#e4a43c"/>';
-      g+='<text x="'+Math.max(xs(q.opt),ML+80)+'" y="'+(ys(100)-8)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#e4a43c">optimum '+moneyK(q.opt)+'</text>';
+      g+='<circle cx="'+xs(q.opt)+'" cy="'+ys(Math.max(-15,profitIdx(q.opt,q)/best*100))+'" r="5" fill="#f2b93f"/>';
+      g+='<text x="'+Math.max(xs(q.opt),ML+80)+'" y="'+(ys(100)-8)+'" text-anchor="middle" font-size="10" font-weight="700" fill="#f2b93f">optimum '+moneyK(q.opt)+'</text>';
     }
     var yv=Math.max(-15,profitIdx(state.price,q)/best*100);
     g+='<line x1="'+xs(state.price)+'" y1="'+MT+'" x2="'+xs(state.price)+'" y2="'+(H-MB)+'" stroke="rgba(250,248,243,0.55)" stroke-width="1.3"/>';
