@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
       items.forEach(function (item) {
-        if (item.getBoundingClientRect().top > window.innerHeight * 0.94) {
+        if (item.getBoundingClientRect().top > window.innerHeight * 1.35) {
           item.classList.add('is-hidden');
         }
       });
@@ -177,7 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           entry.target.classList.remove('is-hidden');
           observer.unobserve(entry.target);
         });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      }, { rootMargin: '0px 0px 35% 0px', threshold: 0 });
 
       items.forEach(function (item) {
         if (item.classList.contains('is-hidden')) observer.observe(item);
@@ -186,7 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       window.setTimeout(function () {
         items.forEach(function (item) { item.classList.remove('is-hidden'); });
         observer.disconnect();
-      }, 12000);
+      }, 2500);
     }());
   </script>
 <footer class="site-footer">
