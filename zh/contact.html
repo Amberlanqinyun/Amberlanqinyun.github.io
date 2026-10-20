@@ -193,7 +193,7 @@
 </script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
-<link rel="stylesheet" href="/assets/highend.css?v=10">
+<link rel="stylesheet" href="/assets/highend.css?v=11">
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
@@ -229,21 +229,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="wrap">
         <div class="stack">
           <p class="eyebrow">联系</p>
-          <h1 id="contact-title">和你的团队一起搭建，或者为此招聘。</h1>
-          <p class="lead">说说你正在做的事。每条消息我都会亲自阅读，并在两个工作日内回复。</p>
+          <h1 id="contact-title">一起找出最先该搭的那件营销工作。</h1>
+          <p class="lead">一条消息。两个工作日内，你会收到书面方案和报价。每条消息我都亲自读。</p>
         </div>
 
         <div class="contact-form">
           <form id="contact-form" novalidate>
-            <div class="field">
-              <label for="topic">想聊什么？</label>
-              <select id="topic" name="topic">
-                <option value="项目制搭建">项目制搭建</option>
-                <option value="全职岗位">全职岗位</option>
-                <option value="其他事项">其他事项</option>
-              </select>
-            </div>
-
             <div class="field-row">
               <div class="field">
                 <label for="name">你的名字</label>
@@ -261,9 +252,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="field">
-              <label for="message">留言</label>
-              <textarea id="message" name="message" required placeholder="你在搭建什么，或在招聘什么岗位。写几句就够了。"></textarea>
+              <label for="message">你最想交出去的那件事，或你在招的岗位</label>
+              <textarea id="message" name="message" required placeholder="例如：有人问 ChatGPT 奥克兰的水管工该找谁时，我们希望出现在答案里。写几句就够了。"></textarea>
               
+            </div>
+
+            <div class="field">
+              <label for="topic">这是关于</label>
+              <select id="topic" name="topic">
+                <option value="项目制搭建">项目制搭建</option>
+                <option value="全职岗位">全职岗位</option>
+                <option value="其他事项">其他事项</option>
+              </select>
             </div>
 
             <div class="hp" aria-hidden="true">
@@ -275,6 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <button class="btn btn-primary" type="submit" id="submit-button">发送</button>
             </div>
 
+            <p class="small form-note">按项目报价，依据书面方案。每一个智能体、提示词和文件都归你的团队。</p>
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -290,18 +291,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="grid grid-3 reveal" style="text-align:left">
           <div class="step">
             <span class="small">01</span>
-            <h3>我阅读你的消息</h3>
-            <p>我会读完你发来的内容，再看看你的网站或岗位信息。</p>
+            <h3>第 0 天：你的消息</h3>
+            <p>当天我就会读，并看看你的网站或岗位。</p>
           </div>
           <div class="step">
             <span class="small">02</span>
-            <h3>我书面回复</h3>
-            <p>如果是搭建项目，我会发一份简短的书面范围说明；如果是岗位机会，我会告诉你我的时间安排。</p>
+            <h3>第 2 天：一份书面方案</h3>
+            <p>如果是搭建：最先该搭的智能体、第一周交付什么、你的团队留下什么，以及报价。如果是岗位：我的档期。</p>
           </div>
           <div class="step">
             <span class="small">03</span>
-            <h3>一起商定下一步</h3>
-            <p>如果合适，我们约一次通话；如果不合适，我也会如实告诉你。</p>
+            <h3>第 1 周：上线，和你的团队一起</h3>
+            <p>合适的话，我们和你的团队一起，在你自己的账号上把它搭好。不合适，我也会直接告诉你。</p>
           </div>
         </div>
       </div>
@@ -328,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="faq" class="centered" aria-labelledby="faq-title">
       <div class="wrap">
         <div class="stack reveal">
-          <h2 id="faq-title">好问题。</h2>
+          <h2 id="faq-title">常见问题</h2>
         </div>
         <div class="faq reveal">
                   <details>
@@ -590,5 +591,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </span>
   </div>
 </footer>
+  <script>(function(){var f=document.getElementById('contact-form');if(!f)return;var s=false;f.addEventListener('focusin',function(){if(!s){s=true;if(window.dataLayer)window.dataLayer.push({event:'form_start',form_name:'contact'});}});})();</script>
 </body>
 </html>

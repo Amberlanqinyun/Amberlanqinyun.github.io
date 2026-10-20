@@ -439,11 +439,13 @@ Author: Amber Lan, AI marketing engineer, Auckland
 
 Amber Lan · AI marketing engineer · Auckland, working across New Zealand and Australia
 
-# Let's run your marketing on AI agents.
+# Pick the marketing job you'd hand over first.
 
-I've run a whole marketing function this way since April, on my own. I can build the same with your team, and I check everything before a customer sees it.
+I build the agent that does it with your team in a week, then check every send before a customer sees it. Written plan and price first. Your team keeps everything.
 
 Work with me · Hiring? Let's talk
+
+One message about your biggest gap. Within two working days: the first job to build, what week one delivers, and the price.
 
 10 years in marketing · 3 years building agents · 126 skills on GitHub · Replies within two working days
 
@@ -461,53 +463,15 @@ Find the questions people ask AI about hot water cylinders in Auckland and fix t
 
 An illustrative demo. Pick a run under Recents. Meet the dot, the character behind Flow Intelligence.
 
-Is this for you?
-
-## Which one are you?
-
-Three kinds of people usually land here. Pick the one that sounds like you.
-
-You run a business in New Zealand or Australia
-
-### Come up when people ask Google or ChatGPT, and get more enquiries from it.
-
-We start by writing a scope together, so you know what you're paying for. The first agent goes live in a week, and I check everything it sends before a customer sees it.
-
-Explore the services
-
-You lead a marketing team
-
-### Get a lot more out of a small team, and keep the final say.
-
-The agents handle the research, first drafts, scheduling and follow-up. Your people decide what goes out. When I hand over, everything is written down so your team can keep it running.
-
-Read how it works
-
-You're hiring a senior marketing engineer
-
-### Hire someone who already runs marketing this way.
-
-I run eight marketing lanes on my own, from strategy to the monthly report. The systems are on GitHub, and my CV is on the About page.
-
-Hiring? Let's talk
-
-Why it pays
-
-## Hours back, with receipts.
-
-Every number here comes with its source attached.
-
-10
+10 hrs
 
 back every week from content creation.
 
 Measured in production
 
-20
+20 hrs
 
 a week saved on outbound, across three people.
-
-Measured in production
 
 < 1 salary
 
@@ -515,119 +479,39 @@ runs several channels. One in-house hire costs AUD 8,700 to 10,800 a month.
 
 Sourced in the cost guide
 
-up to 40
+up to 40%
 
 more AI-search visibility for optimised pages.
 
 Aggarwal et al., KDD 2024
 
-Time figures come from these systems in production at an enterprise AI company. The six-month case
+Time figures come from these systems in production at an enterprise AI company. The six-month case shows the whole machine.
 
-Amber Lan · AI marketing engineer · Auckland
+### Day 0One message
 
-I've spent ten years in marketing and the last three building agents. Right now I run the whole marketing function at an enterprise AI company this way, which is where the hours above were measured.
+You tell me the marketing job you'd hand over first, and your website. A few lines is plenty.
 
-More about me
+### Day 2A written plan
 
-How it works
+The first agent to build, what week one delivers, what your team keeps, and the price. Yours to keep either way.
 
-## Read. Install. Run.
+### Week 1Live, with your team
 
-We write the scope first, then put one agent live in a week. From there it runs every month, I check what goes out, and your team keeps everything we built.
+We build it on your own accounts. I check every send. From then on it runs every month with a one-page report.
 
-Explore the five sprints
-
-### 01
-
-In the first week we write the scope together. It names the gap we close first, the agent that closes it, and what your team keeps running after I hand over.
-
-### 02
-
-We build that first agent with your team, on your own accounts, and it goes live in a week.
-
-### 03
-
-From then on it runs every month. I check every send, and you get a one-page note on what worked and what's next.
-
-What you get
-
-## From first search to repeat customer.
-
-Pick the outcome you want most. The rest can follow, one agent at a time.
-
-### Get found
+### Seven more jobs, when you are ready: positioning, social, conversion, launches, paid media checks, community and reporting.
 
 Be the answer on Google and inside ChatGPT, Claude and AI Overviews.
 
-Positioning
-
-Who you sell to and what to say, with the budget pointed at both.
-
-Search and AI search
-
-Technical SEO through to answer engine optimisation, so assistants cite you.
-
-Content
-
-One strong idea becomes a month of content your team only has to approve.
-
-Social
-
-Posts and threads in your voice, on a calendar that holds.
-
 Explore the AI search sprint
-
-### Get leads
 
 Turn attention into enquiries, with a person checking every message.
 
-Outbound
-
-The right hundred buyers, researched and reached personally.
-
-Growth and conversion
-
-Offers and landing pages, tested and tuned every month.
-
-Launch
-
-Product and campaign launches sequenced across every channel.
-
-Paid
-
-Ad creative and audiences, with the numbers behind them.
-
 Explore the outbound sprint
-
-### Keep customers
 
 Stay close to customers, and see which effort started each conversation.
 
-Community
-
-Honest answers on Reddit and in forums, posted while the question is fresh.
-
-Measurement
-
-Tracking wired properly, so next month's budget goes where it worked.
-
-Reporting
-
-One short monthly read on what shipped and what comes next.
-
 Explore the analytics sprint
-
-Instead of an agency
-
-## Partner with the engineer who builds it.
-
-I build the systems with your team, and I check every send myself.
-
-A marketing agency
-
-Who does the work
-
-A team you rarely meet, often juniors behind a senior pitch
 
 Agents, with the engineer who built them approving every send
 
@@ -661,89 +545,13 @@ The work stops
 
 Your team keeps the documented systems running
 
-Agencies still win on big paid media and brand campaigns. Compare what each option costs
+Agencies still win on big paid media and brand campaigns. Compare what each option costs.
 
-Proof
+Open sourcegeo-seo-claudeThe toolkit I run on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.Open on GitHub
 
-## Explore the work in the open.
+Open sourceContent engineOne source becomes a month of on-voice content for every channel.Read the case
 
-Start with the systems, and judge the strategy by what they build.
-
-### geo-seo-claude
-
-The toolkit I run on client sites: citability scoring and AI-crawler analysis, plus structured-data workflows.
-
-Open on GitHub
-
-### Content engine
-
-One source becomes a month of on-voice content for every channel.
-
-Read the case
-
-### Three demand engines. One pipeline.
-
-An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.
-
-Read the case
-
-npx skills add Amberlanqinyun/geo-seo-claude
-
-Open source and open to inspect, one of 126 skills in the library
-
-Manifesto
-
-## Marketing finally has its engineering layer.
-
-Every other function built one. Marketing kept hiring. Now Flow Intelligence, the system I built, holds your positioning and briefs ten agents from it.
-
-Read the manifesto
-
-## FAQ
-
-The questions people ask before they write to me.
-
-### Who is Amber Lan?
-
-Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the agents that run a marketing function, starting from strategy, with ten years in marketing and three building agents behind her. She builds each system with the team that will run it, and the work is open to inspect. Her contract builds run.
-
-### How is this different from hiring an agency?
-
-I build the systems with your team and review every send myself. An agency bills monthly for people: an account manager, a strategist, a writer and a media buyer. We agree the scope up front, and everything I build is documented and open to inspect.
-
-### How does a contract build start?
-
-Every contract build starts with a written scope: the gap to close first, the system that closes it, and what your team keeps running after handover.
-
-### How is a build priced?
-
-Each build is priced per project, from the written scope we agree first, so you know the cost before anything gets built. Your team keeps every system after handover.
-
-### Who reviews the work before it goes out?
-
-A marketing engineer reviews every send before it reaches a customer. Agents produce the work, and a person decides what ships. That review lets a small team run this much marketing and stand behind every send.
-
-### Where do you work?
-
-I'm based in Auckland and work with businesses across New Zealand and Australia. Auckland teams can meet in person; everywhere else the build runs remotely on your own accounts. My published research covers both markets, with sourced pricing and adoption statistics.
-
-### Is this an AI marketing agency?
-
-I cover what people hire an AI marketing agency for: AI search, content, outbound and reporting. AI agents do the work, and I review every send. It works as a contract build with your team, and everything built is documented and handed over. Explore the AI marketing services
-
-### What is AI marketing transformation?
-
-AI marketing transformation rebuilds a marketing function around AI agents. Agents take the recurring production: research, first drafts, scheduling, tracking and follow-up. People keep the judgement. I install one agent per one-week sprint, and the whole Flow Engine then runs monthly.
-
-### Do you help marketers use AI?
-
-Yes. Marketing leads bring me in to put AI agents to work in their own team. The agents take production, and the marketer keeps strategy and review. Every system is documented at handover, and the open-source skill library shows how each agent works.
-
-## Build it with your team, or hire for it.
-
-Tell me what you are building, or the role you are hiring for. I reply personally within two working days.
-
-Hiring? Let's talk
+Case studyThree demand engines. One pipeline.An enterprise AI launch: positioning and channel design on one operating cadence, feeding one pipeline. Sanitised case.Read the case
 
 ---
 
