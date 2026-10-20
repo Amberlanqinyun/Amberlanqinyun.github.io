@@ -54,8 +54,8 @@ HEADER_ZH = [
 ]
 FOOTER_ZH = HEADER_ZH + [
     ('>AI marketing engineer, Auckland<', '>AI 营销工程师，奥克兰<'),
-    ('>I build marketing systems with the teams who run them, and review everything they send.<',
-     '>我与负责运营的团队一起搭建营销系统，并审核系统发出的每一项内容。<'),
+    ('>I rebuild marketing functions around AI agents, working with the teams who run them.<',
+     '>我围绕 AI 智能体重建企业的营销职能，并与负责运营的团队协作。<'),
     ('aria-label="Footer"', 'aria-label="页脚"'),
     ('>Work</a>', '>作品</a>'),
     ('>Free templates</a>', '>免费模板</a>'),
