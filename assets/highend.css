@@ -709,7 +709,7 @@ html.fdot-run { overflow-anchor: none; }
     rgba(250, 248, 243, 0.2);
 }
 
-/* Hours back, with receipts: lit hours are glass beads, the rest clear glass. */
+/* The business case: lit hours are glass beads, the rest clear glass. */
 .hours i { background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
 .hours i.on { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
 .js .fig:not(.is-in) .hours i.on { background: var(--glass-clear); box-shadow: var(--glass-clear-edge); }
@@ -785,12 +785,21 @@ html.fdot-run { overflow-anchor: none; }
   width: 3px; height: 3px; border-radius: 50%; background: var(--hair-strong); transform: translateY(-50%);
 }
 
-/* The run: a kicker and one sentence above the window, three steps below it. */
-.demo__head { max-width: 68rem; margin: 0 auto var(--s-6); }
-.demo__kicker { margin: 0; color: var(--soft); font-size: 0.9375rem; font-weight: 450; }
+/* The run: centred under the hero. The case stays fixed; the story line swaps with each run. */
+.demo__head { max-width: 68rem; margin: 0 auto var(--s-6); text-align: center; }
+.demo__kicker { margin: 0; color: var(--soft); font-size: var(--t-small); font-weight: 450; letter-spacing: 0.02em; }
+.demo__case {
+  margin: var(--s-3) 0 0; color: var(--fg);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance;
+}
 .demo__story {
-  margin: var(--s-2) 0 0; max-width: 52ch; color: var(--fg);
+  margin: var(--s-3) auto 0; max-width: 52ch; color: var(--soft);
   font-size: clamp(1.0625rem, 1.3vw, 1.25rem); line-height: 1.45; letter-spacing: -0.008em; text-wrap: pretty;
+}
+/* Phones: the hero reads from the left, so the run does too. */
+@media (max-width: 640px) {
+  .demo__head { text-align: left; }
+  .demo__story { margin-inline: 0; }
 }
 .demo__legend {
   list-style: none; margin: var(--s-6) auto 0; padding: 0; max-width: 68rem;

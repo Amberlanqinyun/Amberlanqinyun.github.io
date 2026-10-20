@@ -403,7 +403,7 @@ Open this guide in an assistant and ask it what applies to your business.
 
 - Perplexity↗
 
-## Let's find the marketing job to build first.
+## Let's map your marketing function.
 
 Building this with your team, or hiring someone to lead it? Let's talk through what you are working on.
 
@@ -439,19 +439,17 @@ Author: Amber Lan, AI marketing engineer, Auckland
 
 Amber Lan · AI marketing engineer · Auckland, working across New Zealand and Australia
 
-# Pick the marketing job you'd hand over first.
+# Rebuild your marketing around AI agents.
 
-I build the agent that does it with your team in a week, then check every send before a customer sees it. Written plan and price first. Your team keeps everything.
+I redesign how your marketing runs, from strategy to the monthly report, then build the agents that do the work alongside your team. Every send is checked before a customer sees it, and your team owns all of it.
 
 Work with me · Hiring? Let's talk
 
-One message about your biggest gap. Within two working days: the first job to build, what week one delivers, and the price.
-
 10 years in marketing · 3 years building agents · 126 skills on GitHub · Replies within two working days
 
-What one run looks like
+One run, start to finish.
 
-Say you're a plumber in Auckland and you want to come up when someone asks ChatGPT who to call. You type that in. This is what comes back.
+Say you're a plumber in Auckland. You want to come up when someone asks ChatGPT who to call.
 
 Your business · Flow Intelligence · Agents 10 · Approvals 3 · Reports · Recents: AI search fixes, October content, Outbound lane, September report
 
@@ -489,17 +487,17 @@ Time figures come from these systems in production at an enterprise AI company. 
 
 ### Day 0One message
 
-You tell me the marketing job you'd hand over first, and your website. A few lines is plenty.
+Where you want the business to grow, and your website. A few lines is plenty.
 
 ### Day 2A written plan
 
-The first agent to build, what week one delivers, what your team keeps, and the price. Yours to keep either way.
+Your marketing function mapped end to end, the first agents to build, what your team keeps, and the price. Yours to keep either way.
 
 ### Week 1Live, with your team
 
-We build it on your own accounts. I check every send. From then on it runs every month with a one-page report.
+The first agents go live on your own accounts, and I check every send. Each month adds the next system, with a one-page report.
 
-### Seven more jobs, when you are ready: positioning, social, conversion, launches, paid media checks, community and reporting.
+### Seven more systems complete the function: positioning, social, conversion, launches, paid media checks, community and reporting.
 
 Be the answer on Google and inside ChatGPT, Claude and AI Overviews.
 
