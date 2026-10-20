@@ -1,0 +1,49 @@
+{
+  "role-loop": {
+    "caption": {
+      "en": "The five parts of the job in the order they happen each week. The amber step is where the engineer's time goes, and every rejection there flows back into the brief and the agents' instructions.",
+      "zh": "这份工作的五个部分，按每周发生的顺序排列。琥珀色一步是工程师时间花得最多的地方，每一次退回都会流回定位简报和智能体的指令里。"
+    },
+    "cols": 4,
+    "nodes": [
+      {"id": "brief", "col": 0, "row": 0, "kind": "source", "label": {"en": "Positioning brief", "zh": "定位简报"}, "note": {"en": "who you sell to, what you can prove", "zh": "卖给谁，能证明什么"}},
+      {"id": "agents", "col": 1, "row": 0, "label": {"en": "Agents produce the week's work", "zh": "智能体产出本周工作"}, "note": {"en": "on the company's own accounts", "zh": "在企业自己的账号上"}},
+      {"id": "review", "col": 2, "row": 0, "kind": "human", "label": {"en": "Engineer reviews every send", "zh": "工程师审核每一条发出的内容"}},
+      {"id": "customer", "col": 3, "row": 0, "kind": "out", "label": {"en": "Approved work reaches customers", "zh": "批准的内容触达客户"}},
+      {"id": "measure", "col": 3, "row": 1, "label": {"en": "Numbers with their source", "zh": "带出处的数字"}, "note": {"en": "one page a month", "zh": "每月一页"}},
+      {"id": "docs", "col": 1, "row": 1, "label": {"en": "Fix goes into the files", "zh": "修正写进文件"}, "note": {"en": "the team keeps the system", "zh": "系统留给团队"}}
+    ],
+    "edges": [
+      ["brief", "agents"],
+      ["agents", "review"],
+      ["review", "customer"],
+      ["customer", "measure"],
+      ["review", "docs", {"en": "reject", "zh": "退回"}],
+      ["docs", "brief"]
+    ]
+  },
+  "which-seat": {
+    "caption": {
+      "en": "Which seat a New Zealand or Australian business needs depends on how much marketing has to run every week and who can own the rules. Most 5 to 50 person businesses start with one system and hire later.",
+      "zh": "新西兰或澳大利亚的企业需要哪种安排，取决于每周有多少营销必须运转，以及谁能为规则负责。大多数 5 到 50 人的企业先搭一套系统，之后再招人。"
+    },
+    "cols": 4,
+    "nodes": [
+      {"id": "start", "col": 0, "row": 0, "kind": "source", "label": {"en": "Marketing that must run every week", "zh": "每周必须运转的营销"}},
+      {"id": "owner", "col": 1, "row": 0, "kind": "human", "label": {"en": "One owner sets the rules and approves", "zh": "一位负责人定规则、做审批"}},
+      {"id": "one", "col": 2, "row": 0, "label": {"en": "Recurring work, under 50 people", "zh": "重复性工作，50 人以下"}},
+      {"id": "build", "col": 3, "row": 0, "kind": "out", "label": {"en": "Contract one system first", "zh": "先委托搭一套系统"}, "note": {"en": "built on your accounts, your team keeps it", "zh": "搭在你的账号上，归你的团队"}},
+      {"id": "many", "col": 2, "row": 1, "label": {"en": "Several systems running weekly", "zh": "多套系统每周运转"}},
+      {"id": "hire", "col": 3, "row": 1, "kind": "out", "label": {"en": "Hire a marketing engineer", "zh": "招一位营销工程师"}},
+      {"id": "agency", "col": 3, "row": 2, "kind": "out", "label": {"en": "Large paid media: an agency", "zh": "大额付费媒体：代理机构"}}
+    ],
+    "edges": [
+      ["start", "owner"],
+      ["owner", "one"],
+      ["one", "build"],
+      ["owner", "many"],
+      ["many", "hire"],
+      ["owner", "agency", {"en": "big budgets", "zh": "大预算"}]
+    ]
+  }
+}
