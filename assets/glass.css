@@ -317,3 +317,97 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
 .article-hero .lead { color: var(--tier-voice); }
 .article-hero .byline { margin-top: var(--s-5); }
 @media (prefers-reduced-transparency: reduce) { .short-answer { background: #16141e; -webkit-backdrop-filter: none; backdrop-filter: none; } }
+
+/* ---- 8. The hero frame opens at its foot ---------------------------------------
+   The stage used to stop on a hard edge with the liquid cut off against it.
+   The frame now lives on ::before and fades out over the lower third, and the
+   liquid and its floor light fade with it, so the stage dissolves into the page. */
+.liquid-stage { border-color: transparent; background: none; box-shadow: none; }
+.liquid-stage::before {
+  border: 1px solid rgba(255, 255, 255, 0.09); border-radius: inherit;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cg fill='%23fff'%3E%3Ccircle cx='44' cy='98' r='.8' opacity='.6'/%3E%3Ccircle cx='190' cy='36' r='.6' opacity='.45'/%3E%3Ccircle cx='331' cy='141' r='.9' opacity='.55'/%3E%3Ccircle cx='468' cy='60' r='.6' opacity='.4'/%3E%3Ccircle cx='402' cy='300' r='.7' opacity='.45'/%3E%3Ccircle cx='96' cy='352' r='.6' opacity='.4'/%3E%3Ccircle cx='255' cy='447' r='.8' opacity='.5'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 520px 520px,
+    radial-gradient(70% 60% at 0% 0%, rgba(var(--g-lilac), 0.3), transparent 62%),
+    radial-gradient(50% 40% at 100% 0%, rgba(var(--g-indigo), 0.18), transparent 70%),
+    linear-gradient(180deg, rgba(16, 15, 21, 0.92), rgba(9, 9, 12, 0.97));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  -webkit-mask-image: linear-gradient(to bottom, #000 56%, rgba(0, 0, 0, 0.6) 76%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 56%, rgba(0, 0, 0, 0.6) 76%, transparent 100%);
+}
+.liquid-stage__floor .liquid-orb, .liquid-stage__floor::before {
+  -webkit-mask-image: linear-gradient(to bottom, #000 46%, transparent 94%);
+  mask-image: linear-gradient(to bottom, #000 46%, transparent 94%);
+}
+
+/* ---- 9. Air -----------------------------------------------------------------------
+   The stage breathes above and below its copy, the run sits well clear of it,
+   and sections sit a little further apart again now that each one is lighter. */
+:root { --section: clamp(6.5rem, 12vw, 10rem); }
+.liquid-stage { padding-top: clamp(4rem, 8vw, 6.5rem); }
+.hero .liquid-stage .stack > h1 + .lead { margin-top: var(--s-7); }
+.hero .liquid-stage .stack > .cta-row { margin-top: var(--s-8); }
+.liquid-stage__floor { margin-top: clamp(1.5rem, 3.5vw, 3rem); }
+.hero--home > .wrap > .demo { margin-top: clamp(6rem, 11vw, 10rem); }
+.demo__head { margin-bottom: var(--s-8); }
+.hero--home .demo__legend, .hero--home .demo__note { margin-top: var(--s-7); }
+@media (max-width: 720px) { .hero--home > .wrap > .demo { margin-top: clamp(4rem, 14vw, 6rem); } }
+
+/* ---- 10. Fewer words, more drawing -----------------------------------------------
+   Where a block was carrying its idea in sentences, it now carries it in a line
+   drawing or a diagram and the sentence becomes the caption. */
+
+/* The four sprints: each card opens on a drawing in the figure language. */
+.job__art {
+  display: block; height: clamp(104px, 9vw, 128px); margin: -0.25rem 0 var(--s-2);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+}
+.job__art svg { display: block; width: 100%; height: 100%; }
+.job:hover .job__art { background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0)); }
+
+/* Day 0, day 2, week 1: a rail with three beads, the last one lit. */
+.pillars.steps-split { position: relative; padding-left: 2.25rem; }
+.pillars.steps-split::before {
+  content: ""; position: absolute; left: 4px; top: 2rem; bottom: 2rem; width: 1px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(var(--g-gold), 0.7));
+}
+.pillars.steps-split .pillar { position: relative; border: 0; padding: var(--s-5) 0; }
+.pillars.steps-split .pillar::before {
+  content: ""; position: absolute; left: -2.25rem; top: calc(var(--s-5) + 0.45em); width: 9px; height: 9px; border-radius: 50%;
+  background: var(--glass-clear); box-shadow: var(--glass-clear-edge), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+.pillars.steps-split .pillar:last-child::before { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+
+/* Numbered steps elsewhere (Contact, Templates, Services): a bead on each hairline, the last one lit. */
+.grid > .step { position: relative; }
+.grid > .step::before {
+  content: ""; position: absolute; left: 0; top: -5px; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--glass-clear); box-shadow: var(--glass-clear-edge), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+.grid > .step:last-child::before { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+
+/* The manifesto in one line: marketing, the layer, the agents. */
+.layer-flow {
+  display: flex; align-items: center; justify-content: flex-start; gap: var(--s-3);
+  margin-top: var(--s-7); text-align: left;
+}
+.layer-flow__node {
+  display: grid; gap: 2px; padding: 0.8rem 1.1rem; min-width: 9.5rem;
+  border: 1px solid var(--pane-line); border-radius: 14px;
+  background: var(--pane); box-shadow: var(--pane-edge);
+  color: var(--fg); font-size: 0.95rem; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2;
+}
+.layer-flow__node small { color: var(--tier-meta); font-size: var(--t-meta); font-weight: 450; letter-spacing: 0.005em; }
+.layer-flow__node.is-core { border-color: rgba(var(--g-gold), 0.45); box-shadow: var(--pane-edge), inset 0 0 0 1px rgba(var(--g-gold), 0.12), 0 0 24px -8px rgba(var(--g-gold), 0.35); }
+.layer-flow__arrow { position: relative; flex: 1 1 2.5rem; max-width: 5rem; height: 1px; background: rgba(255, 255, 255, 0.22); }
+.layer-flow__arrow::after {
+  content: ""; position: absolute; right: -1px; top: 50%; width: 7px; height: 7px;
+  border-top: 1px solid rgba(255, 255, 255, 0.45); border-right: 1px solid rgba(255, 255, 255, 0.45);
+  transform: translateY(-50%) rotate(45deg);
+}
+.layer-flow + .cta-row { margin-top: var(--s-6); }
+@media (max-width: 720px) {
+  .layer-flow { flex-direction: column; align-items: stretch; }
+  .layer-flow__arrow { flex: none; width: 1px; height: 1.5rem; max-width: none; margin-left: 1.5rem; }
+  .layer-flow__arrow::after { right: auto; left: 50%; top: auto; bottom: -1px; transform: translateX(-50%) rotate(135deg); }
+}
