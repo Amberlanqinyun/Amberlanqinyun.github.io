@@ -201,43 +201,43 @@
   },
   "zh/ai-marketing-services/ai-agent-development.html": {
     "source": "ai-marketing-services/ai-agent-development.html",
-    "sha": "83efc228c214"
+    "sha": "f694c56e2b80"
   },
   "zh/ai-marketing-services/ai-automation-consultant.html": {
     "source": "ai-marketing-services/ai-automation-consultant.html",
-    "sha": "bb3cd3b71c71"
+    "sha": "cbdff8811608"
   },
   "zh/ai-marketing-services/auckland.html": {
     "source": "ai-marketing-services/auckland.html",
-    "sha": "5744794aff60"
+    "sha": "7f78a5e21494"
   },
   "zh/ai-marketing-services/australia.html": {
     "source": "ai-marketing-services/australia.html",
-    "sha": "ff2d1b862fae"
+    "sha": "d303dbf487b5"
   },
   "zh/ai-marketing-services/claude-code-consultant.html": {
     "source": "ai-marketing-services/claude-code-consultant.html",
-    "sha": "44ed4f8ba1dd"
+    "sha": "229fd8aeb071"
   },
   "zh/ai-marketing-services/index.html": {
     "source": "ai-marketing-services/index.html",
-    "sha": "abb842c45c58"
+    "sha": "e07d740a9dd7"
   },
   "zh/ai-marketing-services/marketing-automation-consultant.html": {
     "source": "ai-marketing-services/marketing-automation-consultant.html",
-    "sha": "ac6872c903e0"
+    "sha": "4358bcdbd31c"
   },
   "zh/ai-marketing-services/new-zealand.html": {
     "source": "ai-marketing-services/new-zealand.html",
-    "sha": "e78dcf0c00cb"
+    "sha": "ef456815e6e6"
   },
   "zh/cases.html": {
     "source": "cases.html",
-    "sha": "1032b9d817dc"
+    "sha": "1b341442004f"
   },
   "zh/contact.html": {
     "source": "contact.html",
-    "sha": "0b4e43e9bfd8"
+    "sha": "9aada0df9ee4"
   },
   "zh/dot.html": {
     "source": "dot.html",
@@ -249,7 +249,7 @@
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
-    "sha": "ae4a72994d8f"
+    "sha": "467e499b5b78"
   },
   "zh/privacy.html": {
     "source": "privacy.html",
@@ -257,31 +257,31 @@
   },
   "zh/skills/index.html": {
     "source": "skills/index.html",
-    "sha": "49104bb81324"
+    "sha": "24906ee793c3"
   },
   "zh/sprints/ai-search.html": {
     "source": "sprints/ai-search.html",
-    "sha": "16f35b94dcd0"
+    "sha": "7c3646d8abfc"
   },
   "zh/sprints/analytics.html": {
     "source": "sprints/analytics.html",
-    "sha": "967a3659354a"
+    "sha": "79645765a1c9"
   },
   "zh/sprints/content-engine.html": {
     "source": "sprints/content-engine.html",
-    "sha": "22b1b08059af"
+    "sha": "3f927f2bbeee"
   },
   "zh/sprints/index.html": {
     "source": "sprints/index.html",
-    "sha": "6fedac706a5e"
+    "sha": "95d9ca47ac89"
   },
   "zh/sprints/outbound.html": {
     "source": "sprints/outbound.html",
-    "sha": "6fa1bc3e076e"
+    "sha": "e6cf38c83104"
   },
   "zh/sprints/positioning.html": {
     "source": "sprints/positioning.html",
-    "sha": "e3d4491f73f0"
+    "sha": "3b322bd76c45"
   },
   "zh/templates/ai-citability.html": {
     "source": "templates/ai-citability.html",
@@ -305,7 +305,7 @@
   },
   "zh/templates/index.html": {
     "source": "templates/index.html",
-    "sha": "d6d4226abdfe"
+    "sha": "ecdd69fcfcac"
   },
   "zh/templates/reddit-opportunities.html": {
     "source": "templates/reddit-opportunities.html",
@@ -313,7 +313,7 @@
   },
   "zh/tools/benchmark.html": {
     "source": "tools/benchmark.html",
-    "sha": "063e7ca7d783"
+    "sha": "aeca5bfafe8e"
   },
   "zh/tools/decision-map.html": {
     "source": "tools/decision-map.html",
@@ -321,26 +321,26 @@
   },
   "zh/tools/pricing.html": {
     "source": "tools/pricing.html",
-    "sha": "38bd07a95f54"
+    "sha": "bef81112f496"
   },
   "zh/work.html": {
     "source": "work.html",
-    "sha": "4033f5b02aad"
+    "sha": "2afd9f1c744a"
   },
   "zh/work/content-engine.html": {
     "source": "work/content-engine.html",
-    "sha": "7d8df7a9dd70"
+    "sha": "dd229c3bb688"
   },
   "zh/work/enterprise-gtm.html": {
     "source": "work/enterprise-gtm.html",
-    "sha": "a3ab2bfe6fce"
+    "sha": "d7dcc47c40a4"
   },
   "zh/work/geo-seo-toolkit.html": {
     "source": "work/geo-seo-toolkit.html",
-    "sha": "f6375b380627"
+    "sha": "f61a0d5c475c"
   },
   "zh/work/six-month-marketing-function.html": {
     "source": "work/six-month-marketing-function.html",
-    "sha": "5582a43a6ca6"
+    "sha": "14223ec4133a"
   }
 }

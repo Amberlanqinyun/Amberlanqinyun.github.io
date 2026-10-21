@@ -235,3 +235,85 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
       radial-gradient(60% 36% at 90% 85%, rgba(var(--g-indigo), 0.13), transparent 72%);
   }
 }
+
+/* ---- 5. Inner heroes: one glass fact card ---------------------------------------
+   The home stage floats two cards over the liquid. Every other hero now carries
+   one, over the orb's crown, so each landing reads the same in five seconds.
+   It is a .liquid-card, so liquid.js gives it the same sheen and tilt. */
+.hero .hero-fact {
+  position: absolute; z-index: 2;
+  right: clamp(1.25rem, 11vw, 13rem); bottom: clamp(2rem, 6vw, 6rem);
+  width: clamp(190px, 17vw, 236px); text-align: left;
+}
+.hero.has-orb .hero-fact { bottom: clamp(3rem, 7.5vw, 7.5rem); }
+.hero-fact .liquid-card__big { margin-top: var(--s-3); font-size: clamp(1.5rem, 2vw, 1.85rem); white-space: nowrap; }
+.hero-fact .liquid-card__label, .hero-fact .liquid-card__note { grid-column: 1 / -1; }
+/* The card is a direct child of the hero, outside .wrap, so it measures from the hero's own foot. */
+@media (max-width: 900px) {
+  .hero .hero-fact, .hero.has-orb .hero-fact {
+    position: static; width: min(100% - (var(--gutter) * 2), 22rem); margin: var(--s-7) auto 0;
+  }
+  .hero.has-orb { padding-bottom: clamp(6rem, 14vw, 10rem); }
+}
+@media (max-width: 640px) { .hero .hero-fact { margin-inline: var(--gutter); } }
+
+/* ---- 6. Long lists breathe: a sticky rail for the skill library and the glossary ---- */
+@media (min-width: 1081px) {
+  .library > .wrap {
+    display: grid; grid-template-columns: 15rem minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 5vw, 5rem); align-items: start;
+  }
+  .library > .wrap > .stack { grid-column: 1 / -1; }
+  .library .controls {
+    grid-column: 1; position: sticky; top: 6rem; z-index: 2;
+    margin-top: var(--space-block); padding: 0; border: 0; background: none; overflow: visible;
+  }
+  .library .controls-top { grid-template-columns: 1fr; gap: var(--s-3); }
+  .library .result-count { white-space: normal; font-size: var(--t-meta); color: var(--tier-meta); }
+  .library .filters { flex-direction: column; align-items: stretch; gap: 2px; margin-top: var(--s-5); }
+  .library .filter {
+    text-align: left; padding: 0.55rem 0.8rem; border-color: transparent; border-radius: 10px;
+    font-size: 0.9rem; font-weight: 450; color: var(--tier-voice);
+  }
+  .library .filter:hover { border-color: transparent; background: rgba(255, 255, 255, 0.05); color: var(--fg); }
+  .library .filter[aria-pressed="true"] { border-color: transparent; background: rgba(255, 255, 255, 0.08); color: var(--fg); font-weight: 500; box-shadow: inset 2px 0 0 var(--accent); }
+  .library .skills-grid, .library .empty-state { grid-column: 2; margin-top: var(--space-block); }
+
+  .glossary > .wrap {
+    display: grid; grid-template-columns: 9.5rem minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 5vw, 5rem); align-items: start;
+  }
+  .glossary__jump {
+    position: sticky; top: 6rem; display: grid; grid-template-columns: repeat(4, 2.25rem); gap: 2px;
+    justify-content: start; margin: 0;
+  }
+  .glossary__jump a {
+    display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 8px;
+    color: var(--tier-voice); font-size: 0.8125rem; font-weight: 500; text-decoration: none;
+    transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out);
+  }
+  .glossary__jump a:hover { background: rgba(255, 255, 255, 0.06); color: var(--fg); }
+  .glossary__jump a[aria-current="true"] { background: rgba(255, 255, 255, 0.09); color: var(--fg); box-shadow: inset 0 -2px 0 var(--accent); }
+  .glossary__list.narrow { margin-inline: 0; }
+  .glossary__letter:first-child { margin-top: 0; }
+}
+.library .search {
+  padding: 0.7rem 0.9rem; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09); font-size: 0.95rem;
+}
+.library .search:focus { border-color: rgba(255, 255, 255, 0.3); }
+
+/* ---- 7. Guides open on the answer: the short answer is a glass card under the title ---- */
+.short-answer {
+  border: 1px solid var(--pane-line); border-radius: var(--pane-r);
+  background: var(--sheen), var(--pane);
+  -webkit-backdrop-filter: var(--pane-blur); backdrop-filter: var(--pane-blur);
+  box-shadow: var(--pane-edge), var(--pane-shadow);
+  padding: clamp(1.25rem, 2.4vw, 1.75rem) clamp(1.5rem, 3vw, 2rem);
+}
+.short-answer__label { font-size: var(--t-meta); color: var(--tier-meta); font-weight: 500; letter-spacing: 0.005em; text-transform: none; }
+.short-answer__text { margin-top: var(--s-2); color: var(--fg); font-size: clamp(1.0625rem, 1.3vw, 1.1875rem); line-height: 1.55; }
+.article-hero .lead { color: var(--tier-voice); }
+.article-hero .byline { margin-top: var(--s-5); }
+@media (prefers-reduced-transparency: reduce) { .short-answer { background: #16141e; -webkit-backdrop-filter: none; backdrop-filter: none; } }
