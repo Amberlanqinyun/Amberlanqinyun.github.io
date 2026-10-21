@@ -9,9 +9,9 @@ import hashlib
 import math
 import random
 
-INK = "#171715"
-CREAM = "#5f5e5a"   # cream at ~35% over Warm Ink: present, never louder than the title
-AMBER = "#6e5428"   # amber at ~40% over Warm Ink
+INK = "#1a1824"     # knockouts match the glass tile; the ground itself is transparent (22 Oct 2026)
+CREAM = "#a09d94"   # cream at ~35% over Warm Ink: present, never louder than the title
+AMBER = "#c2903a"   # amber at ~40% over Warm Ink
 W, H = 960, 540
 SW = 7  # stroke width in canvas units (the card shows the canvas at ~0.4x)
 
@@ -297,4 +297,4 @@ def figure_svg(slug, topic):
     shape(c, W / 2, H / 2, s, r)
     defs = f"<defs>{''.join(c.defs)}</defs>" if c.defs else ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-hidden="true">'
-            f'{defs}<rect width="{W}" height="{H}" fill="{INK}"/>{"".join(c.body)}</svg>\n')
+            f'{defs}<rect width="{W}" height="{H}" fill="none"/>{"".join(c.body)}</svg>\n')
