@@ -1,0 +1,237 @@
+/* Amber Lan · glass system (22 Oct 2026).
+
+   Loaded last on every page, after liquid.css, with assets/glass.js.
+   Removing those two tags puts the site back exactly as it was.
+
+   The hero stage already spoke this language: lit glass over a violet sky.
+   The rest of the site did not. This layer carries it through.
+
+   1. Light under every section, so glass has something to refract. The
+      sky's lilac and indigo return behind each block, alternating sides,
+      and drift a little as the page scrolls.
+   2. One panel. Every card, tray and tile on the site is the hero card:
+      clear glass, lilac in its shadow, a line of light along the top edge.
+   3. Three tiers of text. A headline, one voice line beneath it, and quiet
+      meta for labels and sources. Nothing else competes.
+   4. Rhythm. Less air between sections, more air inside them.
+
+   Buttons do not change: amber stays the one action colour. */
+
+@property --gx { syntax: "<percentage>"; inherits: false; initial-value: 10%; }
+
+:root {
+  --g-lilac: 132, 112, 168;
+  --g-indigo: 70, 64, 128;
+  --g-gold: 242, 185, 63;
+
+  /* 2. one glass */
+  --pane:
+    linear-gradient(90deg, transparent 10%, rgba(255, 255, 255, 0.55) 50%, transparent 90%) top / 100% 1px no-repeat,
+    linear-gradient(160deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.025) 56%, rgba(var(--g-lilac), 0.07)),
+    rgba(20, 18, 28, 0.22);
+  --pane-hover:
+    linear-gradient(90deg, transparent 10%, rgba(255, 255, 255, 0.75) 50%, transparent 90%) top / 100% 1px no-repeat,
+    linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04) 56%, rgba(var(--g-lilac), 0.09)),
+    rgba(24, 22, 34, 0.26);
+  --pane-line: rgba(255, 255, 255, 0.13);
+  --pane-line-hover: rgba(255, 255, 255, 0.24);
+  --pane-edge: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.07), inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  --pane-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.72);
+  --pane-blur: blur(18px) saturate(170%);
+  --pane-r: 22px;
+  --sheen: radial-gradient(360px circle at var(--mx, -999px) var(--my, -999px), rgba(255, 255, 255, 0.10), rgba(var(--g-lilac), 0.05) 36%, transparent 64%);
+
+  /* 3. three tiers of text */
+  --tier-voice: rgba(240, 238, 248, 0.66);
+  --tier-meta: rgba(240, 238, 248, 0.48);
+  --t-meta: 0.8125rem;
+  --t-voice: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  --t-card: clamp(1.2rem, 1.5vw, 1.45rem);
+  --h2: clamp(2rem, 3.3vw, 2.875rem);
+
+  /* 4. rhythm */
+  --section: clamp(5.5rem, 10vw, 8.5rem);
+  --space-block: clamp(3rem, 6vw, 4.5rem);
+  --space-band: clamp(2.5rem, 5vw, 3.5rem);
+  --space-tight: clamp(2rem, 4vw, 3rem);
+}
+
+/* ---- 1. Light under every section ------------------------------------------ */
+main > section:not(.hero):not(.contact) {
+  background:
+    radial-gradient(42% 58% at var(--gx, 10%) 26%, rgba(var(--g-lilac), 0.2), transparent 70%),
+    radial-gradient(36% 50% at calc(100% - var(--gx, 10%)) 78%, rgba(var(--g-indigo), 0.16), transparent 72%);
+}
+main > section:not(.hero):not(.contact):nth-of-type(even) {
+  background:
+    radial-gradient(42% 58% at calc(100% - var(--gx, 10%)) 26%, rgba(var(--g-lilac), 0.18), transparent 70%),
+    radial-gradient(36% 50% at var(--gx, 10%) 78%, rgba(var(--g-indigo), 0.16), transparent 72%);
+}
+/* The light moves with the page: slowly, and only where the browser can tie motion to scroll. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main > section:not(.hero):not(.contact) {
+      animation: glass-drift linear both;
+      animation-timeline: view();
+    }
+    @keyframes glass-drift { from { --gx: 0%; } to { --gx: 22%; } }
+  }
+}
+/* The stats band stops being a flat strip; the figures sit on the light like everything else. */
+#value::after { display: none; }
+/* The closer keeps its lilac pool, a little wider. */
+.contact::before {
+  width: min(96vw, 72rem); height: 84%;
+  background: radial-gradient(closest-side, rgba(var(--g-gold), 0.07), rgba(var(--g-lilac), 0.16) 42%, transparent 74%);
+}
+
+/* ---- 2. One panel ------------------------------------------------------------- */
+.doors, .job, .install, .outcome, .offer, .flagship, .form-thanks, .sx__doc,
+.team__hq, .team__col, .team__review, .dgrid, .buys-band .fig,
+.grid > .part.case, .proof-card, .tpl-card, .path, .glass, .compound,
+.poss, .rule, .split__col, .pv-card,
+.receipt, .qa-card, .work-card,
+.pp-card, .pp-table, .pp-contact,
+.post-card__figure, .article-figure, .featured, .versus::before {
+  border: 1px solid var(--pane-line);
+  border-radius: var(--pane-r);
+  background: var(--sheen), var(--pane);
+  -webkit-backdrop-filter: var(--pane-blur); backdrop-filter: var(--pane-blur);
+  box-shadow: var(--pane-edge), var(--pane-shadow);
+}
+/* Tiles in a grid carry no drop shadow of their own; the grid is one sheet. */
+.team__col, .poss, .rule, .path, .glass, .compound, .split__col, .pv-card, .receipt, .qa-card, .post-card__figure, .article-figure, .door {
+  box-shadow: var(--pane-edge);
+}
+.doors { overflow: hidden; }
+.door + .door { border-left-color: rgba(255, 255, 255, 0.08); }
+.door:hover { background: rgba(255, 255, 255, 0.035); }
+.versus::before { border-radius: var(--pane-r); }
+/* Guide figures are drawn on a transparent ground (scripts/figures.py), so the line sits on the glass. */
+.post-card__figure, .article-figure { border-radius: var(--pane-r); }
+
+/* Linked panels lift and brighten. */
+a.job, a.part.case, a.proof-card, a.path, a.flagship, a.tpl-card, .tpl-card, .post-card__figure {
+  transition: transform 560ms var(--ease-spring), border-color 320ms var(--ease-out), background 320ms var(--ease-out), box-shadow 560ms var(--ease-spring);
+}
+a.job:hover, a.part.case:hover, a.proof-card:hover, a.path:hover, a.flagship:hover, a.tpl-card:hover, .tpl-card:hover, .post-card:hover .post-card__figure, .glass:hover {
+  border-color: var(--pane-line-hover);
+  background: var(--sheen), var(--pane-hover);
+  transform: translateY(-3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  a.job:hover, a.part.case:hover, a.proof-card:hover, a.path:hover, a.flagship:hover, .tpl-card:hover, .post-card:hover .post-card__figure { transform: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .doors, .job, .install, .outcome, .offer, .flagship, .form-thanks, .sx__doc, .team__hq, .team__col, .team__review, .dgrid,
+  .buys-band .fig, .grid > .part.case, .proof-card, .tpl-card, .path, .glass, .compound, .poss, .rule, .split__col, .pv-card,
+  .receipt, .qa-card, .work-card, .pp-card, .pp-table, .pp-contact, .post-card__figure, .featured, .versus::before {
+    background: #16141e; -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+}
+
+/* Fields are the same glass, lit along the top edge. */
+.plan-form input, .plan-form textarea, .contact-form input, .contact-form textarea, .tool input, .tool select, .calc input {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+.plan-form input:focus, .plan-form textarea:focus, .contact-form input:focus, .contact-form textarea:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+}
+
+/* The install line: code in a clear pill, the copy button beside it. */
+.install code { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.12); }
+
+/* Disclosure rows stay hairlines, but the marker is a glass bead. */
+.faq summary::after, .more-jobs > summary::after {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+/* ---- 3. Three tiers of text ------------------------------------------------------ */
+h2 { font-size: var(--h2); font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; text-wrap: balance; max-width: 22ch; }
+/* Inside the page, every section reads from the left edge; only the hero and the closer are centred. */
+main > section:not(.hero):not(.contact) .stack, main > section:not(.hero):not(.contact).centered { text-align: left; }
+main > section:not(.hero):not(.contact) .stack > .lead, main > section:not(.hero):not(.contact) .stack > .small { margin-inline: 0; }
+main > section:not(.hero):not(.contact) .stack > .cta-row { justify-content: flex-start; }
+.hero h2, .contact h2 { margin-inline: auto; }
+
+/* The voice line: one sentence under a headline. */
+.stack > .lead, .lead { font-size: var(--t-voice); color: var(--tier-voice); line-height: 1.5; max-width: 44ch; letter-spacing: -0.005em; }
+.stack > h2 + .lead { margin-top: var(--s-5); }
+.hero .stack > .lead { font-size: clamp(1.125rem, 1.45vw, 1.3125rem); color: var(--muted); max-width: 42ch; }
+.hero .stack > h1 + .lead { margin-top: var(--s-6); }
+.stack > .lead + .cta-row, .stack > h2 + .cta-row { margin-top: var(--s-7); }
+
+/* Meta: labels, sources, notes. Small, quiet, sentence case. */
+.stack > .eyebrow,
+.door__who, .job__who, .job__receipt, .proof-row__kind, .steps__n, .stat-src, .small, .plan-form__note,
+.demo__kicker, .demo__note, .who__name, .post-card__meta, .skill-meta, .byline, .vlabel,
+.more-jobs > summary, .versus-label, .versus-head, .tpl-crumb, .pillars .pillar .steps__n {
+  font-size: var(--t-meta); color: var(--tier-meta); font-weight: 450; letter-spacing: 0.005em; line-height: 1.45; text-transform: none;
+}
+.stack > .eyebrow { font-weight: 500; }
+.stack > .eyebrow + h2 { margin-top: var(--s-4); }
+.hero .stack > .eyebrow { font-size: var(--t-meta); color: var(--muted); }
+.who__name { color: var(--fg); font-size: 0.9375rem; font-weight: 500; }
+.versus-us-head { color: var(--fg); font-weight: 500; }
+.post-card__meta { letter-spacing: 0.005em; }
+
+/* Card headline: one mid-weight line. */
+.door h3, .job h3, .outcome h3, .proof-row__body h3, .pillars .pillar h3, .steps h3,
+.team__col h3, .part h3, .tpl-card h3, .poss h3, .rule h3, .flagship h3, .post-card__title, .split__col h3 {
+  font-size: var(--t-card); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance;
+}
+.post-card--lead .post-card__title { font-size: clamp(1.75rem, 2.8vw, 2.4rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.08; }
+.post-card__title { font-weight: 500; }
+
+/* Card body: one voice line, never a paragraph. */
+.door p:not(.door__who), .job__week, .proof-row__body p, .pillars .pillar p, .steps p, .outcome > p,
+.part p, .tpl-card p, .poss p, .rule p, .team__col > p, .post-card__desc, .flagship p, .split__col p, .who__text p:not(.who__name), .stat-label {
+  font-size: 0.9375rem; color: var(--tier-voice); line-height: 1.5; letter-spacing: -0.003em;
+}
+.job__week b { color: var(--fg); font-weight: 500; }
+.job { gap: var(--s-4); padding: clamp(1.5rem, 2.6vw, 2.1rem); }
+.job .text-link, .door .text-link { font-size: 0.9375rem; }
+.door { gap: var(--s-4); padding: clamp(1.5rem, 2.6vw, 2.1rem); }
+.door h3 { font-size: clamp(1.25rem, 1.6vw, 1.5rem); }
+
+/* The four figures: the number leads, the label is one line. */
+.stat-num { font-weight: 500; letter-spacing: -0.035em; }
+.stat .stat-label { max-width: 24ch; }
+
+/* The comparison table: quieter cells. */
+.versus-them, .versus-us { font-size: 0.9375rem; line-height: 1.5; }
+.versus-us { color: var(--fg); }
+
+/* The run beneath the hero: the case line is the headline, the story its voice line. */
+.demo__case { font-weight: 500; letter-spacing: -0.025em; }
+.demo__story { color: var(--tier-voice); }
+.demo__note { margin-top: var(--s-5); }
+
+/* ---- 4. Rhythm --------------------------------------------------------------------- */
+section { padding-block: var(--section) calc(var(--section) * 0.9); }
+.stack > * + * { margin-top: var(--s-5); }
+.doors, .jobs, .grid, .proof-list, .versus, .faq, .steps { margin-top: var(--space-block); }
+.who { margin-top: var(--space-block); padding-top: var(--space-tight); }
+.who__img { width: 72px; height: 72px; }
+.why-split { gap: clamp(2.5rem, 6vw, 5rem); }
+.pillars .pillar { padding: var(--s-5) 0; }
+.hero--home > .wrap > .demo { margin-top: clamp(4rem, 7vw, 6rem); }
+.proof-row { padding: var(--s-5) 0; }
+.more-jobs { margin-top: var(--s-6); }
+
+/* ---- Phones --------------------------------------------------------------------- */
+@media (max-width: 720px) {
+  :root { --pane-r: 18px; }
+  h2 { max-width: none; }
+  main > section:not(.hero):not(.contact),
+  main > section:not(.hero):not(.contact):nth-of-type(even) {
+    background:
+      radial-gradient(70% 40% at 20% 20%, rgba(var(--g-lilac), 0.16), transparent 70%),
+      radial-gradient(60% 36% at 90% 85%, rgba(var(--g-indigo), 0.13), transparent 72%);
+  }
+}

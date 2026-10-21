@@ -245,7 +245,7 @@
   },
   "zh/index.html": {
     "source": "index.html",
-    "sha": "8993d84633eb"
+    "sha": "8004bfd7e0c5"
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
@@ -273,7 +273,7 @@
   },
   "zh/sprints/index.html": {
     "source": "sprints/index.html",
-    "sha": "ce21e10fece9"
+    "sha": "6fedac706a5e"
   },
   "zh/sprints/outbound.html": {
     "source": "sprints/outbound.html",
@@ -325,7 +325,7 @@
   },
   "zh/work.html": {
     "source": "work.html",
-    "sha": "dddc8436fba0"
+    "sha": "4033f5b02aad"
   },
   "zh/work/content-engine.html": {
     "source": "work/content-engine.html",
