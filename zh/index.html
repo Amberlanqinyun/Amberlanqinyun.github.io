@@ -281,6 +281,8 @@
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=14">
+<link rel="stylesheet" href="/assets/liquid.css?v=1">
+<script src="/assets/liquid.js?v=1" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 <script src="/assets/dot.js?v=9" defer></script>
@@ -314,7 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main id="main">
     <section class="hero hero--home centered" aria-labelledby="hero-title">
-      <div class="wrap">
+      <div class="liquid-stage">
         <div class="stack">
           <p class="eyebrow">Amber Lan · 奥克兰 AI 营销工程师，服务新西兰和澳大利亚</p>
           <h1 id="hero-title" data-words>围绕 AI 智能体，重建你的营销。</h1>
@@ -323,13 +325,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="btn btn-primary" href="#plan">与我合作</a>
             <a class="text-link arrow-link" href="/zh/about#hire">招聘方请看这里</a>
           </div>
+          <ul class="hero-facts" aria-label="简要"><li>两个工作日内回复</li></ul>
         </div>
-        <ul class="hero-facts" aria-label="简要">
-            <li>10 年营销经验</li>
-            <li>3 年搭建智能体</li>
-            <li>GitHub 上 126 个技能</li>
-            <li>两个工作日内回复</li>
-          </ul>
+        <div class="liquid-stage__floor">
+          <div class="liquid-orb" data-liquid aria-hidden="true"></div>
+          <a class="liquid-card liquid-card--left" href="/zh/skills/">
+            <span class="liquid-card__label">GitHub 上的技能</span>
+            <span class="liquid-card__go" aria-hidden="true">&#8599;</span>
+            <b class="liquid-card__big">126</b>
+          </a>
+          <div class="liquid-card liquid-card--right">
+            <span class="liquid-card__label">营销经验</span>
+            <b class="liquid-card__big">10 年</b>
+            <span class="liquid-card__bar" aria-hidden="true"><i></i></span>
+            <span class="liquid-card__note">其中 3 年搭建智能体</span>
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
         <div class="demo" data-demo aria-label="Flow 工作演示">
           <div class="demo__head">
             <p class="demo__kicker">一次完整的运行。</p>

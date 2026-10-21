@@ -39,6 +39,7 @@ Last updated: 2026-08-20
 - `llms.txt` at root and `/.well-known/llms.txt` mirror the site structure; update both when pages change.
 - `.nojekyll` must stay in the repo root or GitHub Pages stops serving `.well-known/`.
 - `assets/highend.css` is the last stylesheet on every page and `assets/nav.js` the last script (both added just before `</head>`, also in the head templates of `scripts/build_blog.py` and `tools/build-templates.py`). They carry the high-end treatment from October 2026: the floating island header and its phone menu, pill buttons with the nested arrow, double-bezel panels, the amber light behind the hero and the closer, and spring-eased reveals. Remove those two tags to go back to the plain layout; nothing else depends on them. Its last block, "Taste pass (16 Oct 2026)", sets one panel style (single hairline, one container radius), plain sentence-case section labels, the Home stats band and proof list, and left-aligned hero copy on phones; it can be read or removed as one change.
+- `assets/liquid.css` and `assets/liquid.js` load right after `highend.css` on every page (and in the three page builders). They carry the liquid glass look from 21 October 2026: a violet night ground with still stars, clear frosted glass panels, white pill primary buttons, the WebGL liquid orb in the home stage, and a quieter orb behind other heroes (not on guides, articles or the profile). Remove those two tags to go back to the warm-ink look; nothing else depends on them.
 
 ## Two languages: English at `/`, Simplified Chinese at `/zh/` (since 2026-10-08)
 
