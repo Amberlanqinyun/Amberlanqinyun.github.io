@@ -879,3 +879,15 @@ body::before {
   mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 48%, transparent 94%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
   -webkit-mask-composite: source-in; mask-composite: intersect;
 }
+
+/* ---- 20. The light pools, softer (23 Oct 2026) --------------------------------------
+   The pool behind the closer and behind inner heroes read as a grey disc with
+   an edge. Same brightness at the heart, a long falloff, and a blur so no
+   edge ever shows. */
+.contact::before, .hero::before {
+  background: radial-gradient(closest-side,
+    rgba(255, 238, 205, 0.17) 0%, rgba(255, 255, 255, 0.1) 16%, rgba(255, 255, 255, 0.055) 32%,
+    rgba(255, 255, 255, 0.025) 50%, rgba(255, 255, 255, 0.008) 66%, transparent 80%);
+  filter: blur(22px);
+}
+.contact::before { width: min(100vw, 80rem); height: 96%; }
