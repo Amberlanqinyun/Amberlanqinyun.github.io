@@ -1047,11 +1047,12 @@ body::before {
 /* ---- 24. The dot page shares the site's light (23 Oct 2026) ------------------------
    Its sections are the page column itself, so the section light was squeezed
    into the column and the page edges sat empty. The light now spans the page. */
-.dotpage main { background:
+/* main itself carries the .dotpage class, so the light goes on main and comes off its column-wide sections. */
+main.dotpage { background:
   radial-gradient(42% 58% at 10% 18%, rgba(var(--g-lilac), 0.16), transparent 70%),
   radial-gradient(36% 50% at 92% 62%, rgba(var(--g-indigo), 0.13), transparent 72%),
   radial-gradient(40% 40% at 20% 96%, rgba(var(--g-lilac), 0.1), transparent 72%); }
-.dotpage main > section { background: none; }
+main.dotpage > section.wrap, main.dotpage > section.wrap:nth-of-type(even), main.dotpage > section.wrap:nth-of-type(odd) { background: none; }
 
 /* ---- 25. Phone pass (23 Oct 2026) --------------------------------------------------
    From a screen-by-screen audit of twenty-one pages at 390px: nothing runs
