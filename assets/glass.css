@@ -582,12 +582,26 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
 @media (max-width: 480px) { .plan-sheet__agents li { grid-template-columns: 4.2rem minmax(0, 1fr); } }
 
 /* The services page: the one-paragraph answer stays for answer engines, as a quiet line. */
+/* The services page: the one-paragraph answer for answer engines, set as a
+   quiet row after the agents grid: a label on the left, the paragraph and
+   three place chips on the right, everything on the section's own left edge. */
 .svc-intro { padding-block: 0 var(--space-block); }
-.svc-intro .narrow { margin-inline: 0; text-align: left; }
-.svc-intro .svc-answer { margin-inline: 0; }
-.svc-intro .svc-answer { max-width: 60ch; margin-inline: auto; color: var(--tier-meta); font-size: var(--t-meta); line-height: 1.6; }
-.svc-intro .svc-places { margin-top: var(--s-3); }
-.svc-intro .svc-places .text-link { font-size: var(--t-meta); }
+.svc-intro__row {
+  display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: var(--s-4) clamp(2rem, 5vw, 4rem); align-items: start;
+  padding-top: var(--space-tight); border-top: 1px solid var(--hair); text-align: left;
+}
+.svc-intro__k { margin: 0; font-size: var(--t-meta); color: var(--tier-meta); font-weight: 500; line-height: 1.5; }
+.svc-intro .svc-answer { margin: 0; max-width: 62ch; color: var(--tier-voice); font-size: 1rem; line-height: 1.6; text-wrap: pretty; }
+.svc-intro .svc-places { display: flex; flex-wrap: wrap; gap: 8px; margin: var(--s-4) 0 0; }
+.svc-intro .chip {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 0 0.95rem;
+  border: 1px solid var(--pane-line); border-radius: 999px; background: var(--pane); box-shadow: var(--pane-edge);
+  color: var(--fg); font-size: 0.875rem; text-decoration: none;
+  transition: border-color 200ms var(--ease-out), background 200ms var(--ease-out);
+}
+.svc-intro .chip:hover { border-color: var(--pane-line-hover); background: var(--pane-hover); }
+@media (max-width: 720px) { .svc-intro__row { grid-template-columns: 1fr; gap: var(--s-3); } }
 
 /* Inner heroes hand over the way the home does: the hero pins, the copy lifts
    away, the quiet orb shrinks and fades, and the next frame rises over it.
