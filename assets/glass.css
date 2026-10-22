@@ -1052,3 +1052,59 @@ body::before {
   radial-gradient(36% 50% at 92% 62%, rgba(var(--g-indigo), 0.13), transparent 72%),
   radial-gradient(40% 40% at 20% 96%, rgba(var(--g-lilac), 0.1), transparent 72%); }
 .dotpage main > section { background: none; }
+
+/* ---- 25. Phone pass (23 Oct 2026) --------------------------------------------------
+   From a screen-by-screen audit of twenty-one pages at 390px: nothing runs
+   off the right edge, nothing reads under 12px, every control is at least
+   40px tall, long tables hint that they scroll, and sections sit closer. */
+@media (max-width: 720px) {
+  :root { --section: clamp(4.5rem, 13vw, 6rem); --space-block: clamp(2.5rem, 8vw, 3.5rem); }
+
+  /* The dot page: one column of agents, a header mock that fits, a 12px floor, tables that hint they scroll. */
+  .dotpage .dgrid.g5, .dotpage .dgrid.g3, .dotpage .dgrid.g2 { grid-template-columns: 1fr; }
+  .dotpage .pillnav { white-space: normal; flex-wrap: wrap; gap: 0.5rem 0.8rem; border-radius: 22px; max-width: 100%; }
+  .dotpage .pillnav > span:not(.brand):not(.cta) { display: none; }
+  .dotpage .spec th, .dotpage .size .lbl, .dotpage .agent .sig, .dotpage .mono, .dotpage .eyebrow, .dotpage .panel .eyebrow, .dotpage .ctl-group .eyebrow, .dotpage .agent span, .dotpage .spec td.m { font-size: 12px; }
+  .dotpage .tablewrap { -webkit-mask-image: linear-gradient(to right, #000 88%, transparent); mask-image: linear-gradient(to right, #000 88%, transparent); padding-bottom: 4px; }
+  .dotpage .sizes { gap: 1.5rem; padding: 1.25rem; justify-content: center; }
+  .dotpage .cta { max-width: 100%; }
+
+  /* About: the before-and-after bars stay inside their card, and the lane tabs are tappable. */
+  .ba { max-width: 100%; }
+  .ba__row { grid-template-columns: minmax(0, 1fr) 3rem; }
+  .lane-tab, .lane-tabs button { min-height: 40px; }
+  .lsplit__who, .stage, .receipt em, .cvsheet dt { font-size: 12px; }
+
+  /* Guides: topic chips wrap instead of running off the edge; glossary and footnote links are tappable. */
+  .topic-links { flex-wrap: wrap; overflow: visible; justify-content: flex-start; }
+  .glossary__entry a.go, .explore__list a, .faq__item a.go { display: inline-flex; align-items: center; min-height: 40px; }
+  .prose .tablewrap, .prose table { -webkit-mask-image: linear-gradient(to right, #000 90%, transparent); mask-image: linear-gradient(to right, #000 90%, transparent); }
+
+  /* Case studies and sprint pages: text links are tappable. */
+  .part .text-link, .phases .text-link, .buys-band .text-link { display: inline-flex; align-items: center; min-height: 40px; }
+
+  /* Hero fact cards: the label never drops under 12px. */
+  .liquid-card__label, .liquid-card__note { font-size: 12px; }
+}
+@media (max-width: 720px) {
+  /* About: one receipt per row on phones; no column borders. */
+  .receipts, .receipts.receipts--six { grid-template-columns: 1fr; }
+  .receipt, .receipt:not(:nth-child(3n + 1)), .receipt:nth-child(even) { padding: var(--s-5) 0; border-left: 0; }
+  .receipt:not(:first-child) { border-top: 1px solid var(--hair); }
+  /* The dot page: in-page links and small labels at phone size. */
+  .dotpage .toc a, .dotpage nav a { display: inline-flex; align-items: center; min-height: 40px; }
+  .dotpage em, .dotpage .cap b { font-size: 12px; }
+  /* Glossary and guide labels: the heading link carries a tap-sized hit area without moving the layout. */
+  .glossary__entry h3 a, .eyebrow a { display: inline-block; padding: 8px 0; margin: -8px 0; }
+}
+@media (max-width: 720px) {
+  /* About: the eight lane tabs wrap into rows and are tappable; small source links carry a hit area. */
+  .lanes { flex-wrap: wrap; overflow: visible; }
+  .lanes .lane-tab, button.lane-tab { min-height: 44px; padding-block: 10px; }
+  .receipt__src a, .site-footer__name a { display: inline-block; padding: 10px 0; margin: -10px 0; }
+}
+@media (max-width: 720px) {
+  /* Every list button and small action link reaches 40px on phones. */
+  main li > button, .print-cv, .end-links a { min-height: 40px; }
+  .print-cv, .end-links a { display: inline-flex; align-items: center; }
+}
