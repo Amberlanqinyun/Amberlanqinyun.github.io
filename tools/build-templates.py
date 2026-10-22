@@ -204,7 +204,7 @@ def head(title, description, path, schema, og_type="website"):
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Amber Lan">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/og.png">
+<meta property="og:image" content="{SITE}/og.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {json.dumps(schema, indent=2, ensure_ascii=False)}
@@ -223,8 +223,8 @@ def head(title, description, path, schema, og_type="website"):
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=14">
-<script src="/assets/glass.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/glass.css?v=16">
+<script src="/assets/glass.js?v=3" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>

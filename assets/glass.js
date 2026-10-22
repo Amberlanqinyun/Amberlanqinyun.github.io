@@ -53,7 +53,7 @@ document.documentElement.classList.add('has-glass');
 
 /* The hero is the run: scroll progress through the pinned hero, written as --p. */
 (function () {
-  var tracks = Array.prototype.slice.call(document.querySelectorAll('.hero--run, .rise-track'));
+  var tracks = Array.prototype.slice.call(document.querySelectorAll('.hero--run, .rise-track, .scene'));
   if (!tracks.length || !window.matchMedia) return;
   var mq = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
   var raf = 0;
@@ -73,5 +73,16 @@ document.documentElement.classList.add('has-glass');
   window.addEventListener('resize', ask);
   if (mq.addEventListener) mq.addEventListener('change', ask);
   paint();
+}());
+
+/* The chapter rail on How it works marks the scene in view. */
+(function () {
+  var rail = document.querySelector('.chapters');
+  if (!rail || !('IntersectionObserver' in window)) return;
+  var links = {}; rail.querySelectorAll('a[data-for]').forEach(function (a) { links[a.getAttribute('data-for')] = a; });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { Object.keys(links).forEach(function (k) { links[k].classList.toggle('is-here', k === e.target.id); }); } });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  document.querySelectorAll('.scene[id]').forEach(function (sc) { io.observe(sc); });
 }());
 

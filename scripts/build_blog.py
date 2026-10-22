@@ -283,7 +283,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <meta property="og:site_name" content="Amber Lan">
 <meta property="og:locale" content="{S('og_locale')}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE}/og.png">
+<meta property="og:image" content="{SITE}/og.png?v=2">
 {times}<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/site-header.css">
@@ -298,8 +298,8 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=14">
-<script src="/assets/glass.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/glass.css?v=16">
+<script src="/assets/glass.js?v=3" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>

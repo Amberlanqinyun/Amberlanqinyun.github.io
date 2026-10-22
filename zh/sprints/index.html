@@ -29,7 +29,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Amber Lan">
   <meta property="og:url" content="https://www.flowai.co.nz/zh/sprints/">
-  <meta property="og:image" content="https://www.flowai.co.nz/og.png">
+  <meta property="og:image" content="https://www.flowai.co.nz/og.png?v=2">
   <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
 {
@@ -161,13 +161,14 @@
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
 <script src="/assets/visual.js?v=1" defer></script>
+<script src="/assets/demo.js?v=7" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=15">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=14">
-<script src="/assets/glass.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/glass.css?v=16">
+<script src="/assets/glass.js?v=3" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/dot.js?v=9" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
@@ -203,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="stack">
           <p class="eyebrow">合作方式 · 了解、部署、运行</p>
           <h1 id="hero-title" data-words>你的营销职能，围绕智能体重建。</h1>
-          <p class="lead">Flow 规划出完整的营销职能，再和你的团队一起搭建其中的智能体，每周上线一套新系统。</p>
+          <p class="lead">完整的营销职能与你的团队一起规划，每周上线一套系统。</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/zh/contact">与我合作</a>
             <a class="text-link arrow-link" href="#sprints">查看五个冲刺</a>
@@ -218,13 +219,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     </div>
 
-    <section id="film" class="centered" aria-labelledby="film-title">
-      <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="film-title">一分钟看懂整个系统。</h2>
-          <p class="lead">跟着一次完整的运行，从定位一路走到月度报告。短片为无声版本。</p>
+    <section class="scene scene--plan" id="plan" data-scene aria-labelledby="plan-title">
+      <div class="scene__pin">
+        <div class="scene__cap at" style="--t:0"><p class="scene__act">第 0 天到第 2 天</p><h2 class="scene__line" id="plan-title">简要说明后两个工作日：营销职能规划完成，搭建顺序排定，报价固定。</h2></div>
+        <div class="scene__art">
+          <div class="plan-sheet plan-sheet--full" role="img" aria-label="书面方案：规划好的营销职能、按周排列的搭建顺序和固定报价">
+            <div class="plan-sheet__top at" style="--t:.02"><b>营销职能规划</b><span>为你的企业编制</span></div>
+            <div class="plan-sheet__cols at" style="--t:.12">
+              <div><span class="plan-sheet__k">被找到</span><ul class="plan-sheet__agents"><li><b>搜索</b><i style="--w:88%"></i></li><li><b>内容</b><i style="--w:70%"></i></li><li><b>社交媒体</b><i style="--w:54%"></i></li></ul></div>
+              <div><span class="plan-sheet__k">获取潜在客户</span><ul class="plan-sheet__agents"><li><b>外联</b><i style="--w:82%"></i></li><li><b>转化</b><i style="--w:60%"></i></li><li><b>发布</b><i style="--w:46%"></i></li><li><b>付费投放</b><i style="--w:38%"></i></li></ul></div>
+              <div><span class="plan-sheet__k">留住客户</span><ul class="plan-sheet__agents"><li><b>社群</b><i style="--w:64%"></i></li><li><b>效果衡量</b><i style="--w:76%"></i></li><li><b>报告</b><i style="--w:58%"></i></li></ul></div>
+            </div>
+            <span class="plan-sheet__k at" style="--t:.26">搭建顺序</span>
+            <ol class="plan-sheet__seq at" style="--t:.3">
+              <li><span>第 1 周</span><b>定位</b><i style="--w:22%"></i></li>
+              <li><span>第 2 周</span><b>AI 搜索</b><i style="--w:40%"></i></li>
+              <li><span>第 3 周</span><b>内容</b><i style="--w:58%"></i></li>
+              <li><span>第 4 周</span><b>主动外联</b><i style="--w:76%"></i></li>
+              <li><span>第 5 周</span><b>效果衡量</b><i style="--w:94%"></i></li>
+            </ol>
+            <div class="plan-sheet__price at" style="--t:.46"><span>固定报价</span><i class="sk hl"></i></div>
+            <p class="plan-sheet__sign at" style="--t:.54">Amber Lan 编制 · 两个工作日内</p>
+          </div>
         </div>
-        <figure class="film reveal">
+      </div>
+    </section>
+
+    <section class="scene scene--strip" id="weeks" data-scene aria-labelledby="weeks-title">
+      <div class="scene__pin">
+        <div class="scene__cap at" style="--t:0"><p class="scene__act">第 1 周到第 5 周</p><h2 class="scene__line" id="weeks-title">每周上线一套系统，与你的团队一起，建在你自己的账号上。</h2></div>
+        <div class="scene__art">
+          <div class="strip">
+            <div class="strip__item at" style="--t:0.04"><span class="strip__k">第 1 周 · 定位</span><div class="strip__doc"><div class="paper" role="img" aria-label="示意用的一页定位表：品类、面向谁、核心主张，以及背后的证据。"><div class="paper__top"><b>定位</b><span>一页纸</span></div><div class="pos-row"><span>品类</span><span><i class="sk" style="width:70%"></i></span></div><div class="pos-row"><span>面向</span><span><i class="sk" style="width:88%"></i><i class="sk" style="width:52%"></i></span></div><div class="pos-row"><span>我们的主张</span><span><i class="sk hl" style="width:92%"></i><i class="sk hl" style="width:60%"></i></span></div><div class="pos-row"><span>证据</span><span><i class="sk" style="width:80%"></i><i class="sk" style="width:66%"></i><i class="sk" style="width:44%"></i></span></div><p class="paper__note"><b>每个智能体</b>动笔之前都会先读这一页。</p></div><figcaption>定位表，示意版式</figcaption></div></div>
+            <div class="strip__item at" style="--t:0.16"><span class="strip__k">第 2 周 · AI 搜索</span><div class="strip__doc"><div class="paper" role="img" aria-label="示意用的 AI 答案：在来源中点名并引用你的企业。"><div class="paper__top"><b>AI 答案</b><span>示意</span></div><div class="answer"><span class="ask">这件事，我附近应该找谁聊？</span><div style="margin-top:.8rem"><i class="sk" style="width:94%"></i><i class="sk" style="width:86%"></i><i class="sk" style="width:58%"></i></div><span class="cite">你的企业，被引用</span><div style="margin-top:.6rem"><i class="sk" style="width:78%"></i><i class="sk" style="width:40%"></i></div></div><div class="sources"><span class="is-you">yoursite.co.nz</span><span>目录网站</span><span>点评网站</span></div></div><figcaption>引用你的 AI 答案，示意图</figcaption></div></div>
+            <div class="strip__item at" style="--t:0.28"><span class="strip__k">第 3 周 · 内容</span><div class="strip__doc"><div class="paper" role="img" aria-label="示意用的内容日历：一个月的帖子已起草，大部分已审批。"><div class="paper__top"><b>下个月</b><span>已起草</span></div><div class="cal"><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="ok"></i><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="ok"></i><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="off"></i><i class="ok"></i><i></i><i class="off"></i></div><p class="paper__note"><b>你来审批。</b>其余时间由引擎起草。</p></div><figcaption>内容日历，示意图</figcaption></div></div>
+            <div class="strip__item at" style="--t:0.40"><span class="strip__k">第 4 周 · 主动外联</span><div class="strip__doc"><div class="paper" role="img" aria-label="示意用的外联对话：第一条消息、一次跟进、买家回复，然后转交给人工。"><div class="paper__top"><b>一条通道</b><span>示意</span></div><div class="msg"><small>第 1 天 · 首次触达</small><i class="sk" style="width:92%"></i><i class="sk" style="width:70%"></i></div><div class="msg"><small>第 4 天 · 跟进</small><i class="sk" style="width:80%"></i></div><div class="msg in"><small>回复</small><i class="sk" style="width:86%"></i><i class="sk" style="width:50%"></i></div><p class="handoff-tag">已转交给你的团队。自动化已暂停。</p></div><figcaption>一条外联通道，示意图</figcaption></div></div>
+            <div class="strip__item at" style="--t:0.52"><span class="strip__k">第 5 周 · 效果衡量</span><div class="strip__doc"><div class="paper" role="img" aria-label="示意用的一页月度报告：按渠道列出咨询来源、上线了什么，以及下个月的预算投向哪里。"><div class="paper__top"><b>月度报告</b><span>一页纸</span></div><h4>咨询从哪里来</h4><ul class="report__rows"><li class="is-top">搜索<i style="--w:86%"></i></li><li>主动外联<i style="--w:58%"></i></li><li>内容<i style="--w:41%"></i></li><li>转介绍<i style="--w:24%"></i></li></ul><h4>上线了什么</h4><div style="margin-top:.45rem"><i class="sk" style="width:92%"></i><i class="sk" style="width:76%"></i><i class="sk" style="width:60%"></i></div><p class="paper__note"><b>下个月：</b>把预算移向带来回报的渠道。</p></div><figcaption>月度报告，示意版式</figcaption></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene--run" id="film" data-scene aria-labelledby="film-title">
+      <div class="scene__pin">
+        <div class="scene__cap at" style="--t:0"><p class="scene__act">一次运行</p><h2 class="scene__line" id="film-title">假设你在奥克兰经营一家会计师事务所。一条指令进去，完成的工作出来，等你批准。</h2></div>
+        <div class="scene__art">
+          <div class="run at" style="--t:.04" data-run-sheet aria-label="一次完整的运行：示意演示">
+          <div class="rs">
+            <div class="rs__top"><span class="rs__agent"><span class="rs__dot" data-rs-dot aria-hidden="true"><i class="rs__bead"></i></span><b data-rs-agent>搜索智能体</b></span><span class="rs__status" data-rs-status aria-live="polite">已暂存，等你审核</span></div>
+            <p class="rs__k">你的指令</p>
+            <p class="rs__brief" data-rs-brief>让企业主向 AI 询问奥克兰会计师时，能找到我们。</p>
+            <ol class="rs__rail" data-rs-rail>
+              <li class="is-on">读取了 38 个服务页面</li>
+              <li class="is-on">匹配了企业主向 AI 提出的 120 个问题</li>
+              <li class="is-on">起草修改，只放入待审区</li>
+            </ol>
+            <p class="rs__k" data-rs-outk>返回的结果</p>
+            <div class="rs__rows" data-rs-rows>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/services/small-business-accounting</span><span class="rs__meta">6 处改动</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/services/xero-bookkeeping</span><span class="rs__meta">3 处改动</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/faq/accountant-cost-auckland</span><span class="rs__meta">新页面</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/areas/north-shore</span><span class="rs__meta">4 处改动</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/llms.txt</span><span class="rs__meta">已更新</span><i class="rs__tick" aria-hidden="true"></i></div>
+            </div>
+            <div class="rs__bar is-on"><span class="rs__note" data-rs-note>你批准之前，什么都不会发布。</span><button class="btn btn-primary rs__approve" type="button" data-rs-approve>全部批准</button></div>
+          </div>
+          <p class="rs__tabs-k">回放一次运行。选一个智能体。</p>
+          <div class="rs__tabs" aria-label="回放一次运行">
+            <button type="button" data-replay="search" aria-pressed="true"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="search" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>AI 搜索</span></button>
+            <button type="button" data-replay="content" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="content" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>内容</span></button>
+            <button type="button" data-replay="outbound" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="outbound" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>主动外联</span></button>
+            <button type="button" data-replay="report" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="reporting" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>报告</span></button>
+          </div>
+          </div>
+          <details class="film-more at" style="--t:.1"><summary>观看一分钟短片</summary>
+          <figure class="film">
           <video id="flow-film" controls playsinline preload="none" width="1280" height="720"
                  poster="/assets/film/flowai-film-poster-16x9.webp" aria-label="Amber Lan 短片：智能体团队的一分钟">
             <source src="/assets/film/flowai-film-16x9.mp4" type="video/mp4">
@@ -251,89 +320,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="small">片中的商家和买家是演示内容。每周省下 10 小时是生产环境中的实测数据。</span>
           </details>
         </figure>
-      </div>
-    </section>
-
-    <section id="process" class="centered" aria-labelledby="process-title">
-      <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="process-title">了解。部署。运行。</h2>
-            <p class="lead">第一周与你的团队一起规划完整的营销职能，之后系统每月运行并持续优化。</p>
-        </div>
-        <figure class="diagram reveal">
-          <svg viewBox="0 500 1600 250" role="img" aria-labelledby="process-svg-title process-svg-desc">
-            <title id="process-svg-title">了解和部署在第一周完成一次，运行之后每月持续。</title>
-            <desc id="process-svg-desc">三个步骤在同一条基线上。了解和部署落在一段短的有限线段上，标注为第一周内完成一次。运行落在一段琥珀色的点线上，标注为之后每月持续，这段线延伸到右边缘之外，因为工作不会结束。</desc>
-            <g fill="none" stroke="currentColor">
-              <path d="M 96 640 L 720 640" stroke-opacity="0.2"/>
-              <path d="M 720 640 L 1504 640" stroke="#F2B93F" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
-              <path d="M 96 554 L 96 582" stroke-opacity="0.14"/>
-              <path d="M 720 554 L 720 582" stroke-opacity="0.14"/>
-              <path d="M 240 594 L 240 626" stroke-opacity="0.17"/>
-              <path d="M 480 594 L 480 626" stroke-opacity="0.17"/>
-              <path d="M 860 594 L 860 626" stroke="#F2B93F" stroke-opacity="0.5"/>
-            </g>
-            <circle cx="240" cy="640" r="7" fill="currentColor" fill-opacity="0.34"/>
-            <circle cx="480" cy="640" r="7" fill="currentColor" fill-opacity="0.34"/>
-            <circle cx="860" cy="640" r="7" fill="#F2B93F"/>
-            <g fill="currentColor">
-              <text x="96" y="536" font-size="22" font-weight="450" fill-opacity="0.54">只做一次，在第一周</text>
-              <text x="720" y="536" font-size="22" font-weight="450" fill-opacity="0.54">之后每月持续</text>
-              <text x="240" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">了解</text>
-              <text x="480" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">部署</text>
-              <text x="860" y="718" font-size="44" font-weight="500" letter-spacing="-0.02em">运行</text>
-            </g>
-          </svg>
-        </figure>
-        <div class="steps-cap reveal">
-          <p><b>了解</b>第一周内确定书面范围说明，并为每一项差距排出优先级。</p>
-          <p><b>部署</b>和你的团队一起搭建智能体，一套接一套上线。</p>
-          <p><b>运行</b>引擎按月运行，并用一页纸向你的团队汇报。</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <section id="system" class="centered" aria-labelledby="system-title">
-      <div class="wrap">
-        <div class="stack reveal">
-          <h2 id="system-title">十个智能体，一位工程师。</h2>
-            <p class="lead">Flow Intelligence 掌握你的定位，并据此为十个专业智能体下达简报，让每个渠道讲述同一个故事。</p>
-          <div class="cta-row">
-            <a class="text-link arrow-link" href="/zh/templates/">在你的网站上免费试用智能体</a>
+    <section class="scene scene--agents" id="system" data-scene aria-labelledby="system-title">
+      <div class="scene__pin">
+        <div class="scene__cap at" style="--t:0"><p class="scene__act">十个智能体，一位工程师</p><h2 class="scene__line" id="system-title">Flow Intelligence 掌握你的定位，并据此为每个智能体下达简报。</h2></div>
+        <div class="scene__art">
+          <div class="agents">
+            <div class="agents__core at" style="--t:.03"><span class="agents__face" aria-hidden="true"><svg class="fdot fdot--flow" data-fdot="flow" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><b>Flow Intelligence</b><span>掌握你的定位</span></div>
+            <svg class="agents__lines at" style="--t:.08" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true"><path d="M600 0 V20 M200 56 V36 Q200 20 216 20 H984 Q1000 20 1000 36 V56 M600 20 V56"/></svg>
+            <div class="agents__cols">
+              <div class="agents__col at" style="--t:0.14"><h3>被找到</h3><p>成为买家找到的答案。</p><ul><li class="at" style="--t:0.18"><svg class="fdot fdot--mini" data-fdot="search" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>搜索智能体</li><li class="at" style="--t:0.23"><svg class="fdot fdot--mini" data-fdot="content" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>内容智能体</li><li class="at" style="--t:0.27"><svg class="fdot fdot--mini" data-fdot="social" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>社交媒体智能体</li></ul></div>
+              <div class="agents__col at" style="--t:0.30"><h3>获取潜在客户</h3><p>把关注变成咨询。</p><ul><li class="at" style="--t:0.35"><svg class="fdot fdot--mini" data-fdot="outbound" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>外联智能体</li><li class="at" style="--t:0.39"><svg class="fdot fdot--mini" data-fdot="conversion" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>转化智能体</li><li class="at" style="--t:0.44"><svg class="fdot fdot--mini" data-fdot="launch" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>发布智能体</li><li class="at" style="--t:0.48"><svg class="fdot fdot--mini" data-fdot="paid" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>付费投放智能体</li></ul></div>
+              <div class="agents__col at" style="--t:0.51"><h3>留住客户</h3><p>清楚哪些投入有回报。</p><ul><li class="at" style="--t:0.56"><svg class="fdot fdot--mini" data-fdot="community" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>社群智能体</li><li class="at" style="--t:0.60"><svg class="fdot fdot--mini" data-fdot="measurement" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>效果衡量智能体</li><li class="at" style="--t:0.65"><svg class="fdot fdot--mini" data-fdot="reporting" data-r="36" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>报告智能体</li></ul></div>
+            </div>
+            <p class="agents__review at" style="--t:.7"><i aria-hidden="true"></i>每一项产出都经过资深营销工程师审核，然后才会发布。</p>
           </div>
         </div>
-        <figure class="team reveal" aria-label="Flow Engine：Flow Intelligence 为分属三个环节的十个智能体下达简报">
-          <ul class="team__hq-list"><li class="is-core"><div class="team__hq"><div class="pv pv-hq"><span class="pv-k">面向</span><i class="pv-l" style="width:70%"></i><span class="pv-k">主张</span><i class="pv-l is-hl" style="width:88%"></i><span class="pv-k">证据</span><i class="pv-l" style="width:60%"></i></div><span class="team__hq-ico"><svg class="fdot fdot--ico" data-fdot="flow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg></span><div><b>Flow Intelligence</b><span class="small">定位</span><p>把你的定位和预算集中在一处，并据此为每个智能体下达简报。<a class="text-link arrow-link" href="/zh/templates/#hq">免费模板</a></p></div></div></li></ul>
-          <svg class="team__lines" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true"><path d="M600 0 V20 M200 56 V36 Q200 20 216 20 H984 Q1000 20 1000 36 V56 M600 20 V56"/></svg>
-          <div class="team__cols">
-          <div class="team__col" role="group" data-col="found" aria-labelledby="team-found">
-            <header class="team__head"><h3 id="team-found">被找到</h3><p>在 Google 和 AI 助手里，成为买家找到的答案。</p><span class="team__count">3 个智能体</span></header>
-            <ul class="team__agents">
-              <li data-group="found"><div class="pv pv-search"><span class="pv-q">奥克兰哪家会计师好？</span><i class="pv-l" style="width:90%"></i><i class="pv-l" style="width:70%"></i><span class="pv-chip is-you">yoursite.co.nz</span><span class="pv-chip">目录网站</span></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="search" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>搜索智能体</b><span class="pv-out">被 AI 答案引用</span><p class="visually-hidden">从技术 SEO（搜索引擎优化）到 AEO（答案引擎优化），让 AI 助手引用你。<a class="text-link arrow-link" href="/zh/templates/#search">免费模板</a></p></div></li>
-              <li data-group="found"><div class="pv pv-content"><div class="pv-card"><i class="pv-l" style="width:80%"></i><i class="pv-l" style="width:55%"></i><b class="pv-ok"></b></div><div class="pv-card"><i class="pv-l" style="width:70%"></i><i class="pv-l" style="width:60%"></i><b class="pv-ok"></b></div><div class="pv-card"><i class="pv-l" style="width:85%"></i><i class="pv-l" style="width:40%"></i></div></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="content" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>内容智能体</b><span class="pv-out">一个月的稿件，已审批</span><p class="visually-hidden">一个好想法，变成一个月符合你品牌语调的内容。<a class="text-link arrow-link" href="/zh/templates/#content">免费模板</a></p></div></li>
-              <li data-group="found"><div class="pv pv-social"><div class="pv-row"><i class="pv-av"></i><i class="pv-l" style="width:40%"></i></div><i class="pv-l" style="width:95%"></i><i class="pv-l" style="width:75%"></i><div class="pv-img"></div><span class="pv-time">周四 9:00</span></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="social" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>社交媒体智能体</b><span class="pv-out">准时发出的帖子</span><p class="visually-hidden">用你的品牌语调写帖子和串文，按一份靠得住的日历发布。</p></div></li>
-            </ul>
+      </div>
+    </section>
+
+    <section class="scene scene--report" id="monthly" data-scene aria-labelledby="monthly-title">
+      <div class="scene__pin">
+        <div class="scene__cap at" style="--t:0"><p class="scene__act">每个月</p><h2 class="scene__line" id="monthly-title">一页纸说明哪些投入有回报，以及下一步调整。</h2></div>
+        <div class="scene__art">
+          <div class="rs rs--report at" style="--t:.03">
+            <div class="rs__top"><span class="rs__agent"><span class="rs__dot" aria-hidden="true"><svg class="fdot fdot--rs" data-fdot="reporting" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><b>报告智能体</b></span><span class="rs__status">10月</span></div>
+            <p class="rs__k">咨询来源</p>
+            <div class="rs__rows">
+              <div class="rs__row rs__row--bar rs__row--top is-on at" style="--t:0.10"><span class="rs__path">搜索</span><span class="rs__track"><i style="--w:82%"></i></span><span class="rs__meta">41%</span></div>
+              <div class="rs__row rs__row--bar is-on at" style="--t:0.17"><span class="rs__path">主动外联</span><span class="rs__track"><i style="--w:44%"></i></span><span class="rs__meta">22%</span></div>
+              <div class="rs__row rs__row--bar is-on at" style="--t:0.24"><span class="rs__path">转介绍</span><span class="rs__track"><i style="--w:38%"></i></span><span class="rs__meta">19%</span></div>
+              <div class="rs__row rs__row--bar is-on at" style="--t:0.31"><span class="rs__path">内容</span><span class="rs__track"><i style="--w:22%"></i></span><span class="rs__meta">11%</span></div>
+              <div class="rs__row rs__row--bar is-on at" style="--t:0.38"><span class="rs__path">其他</span><span class="rs__track"><i style="--w:14%"></i></span><span class="rs__meta">7%</span></div>
+            </div>
+            <div class="rs__bar is-on at" style="--t:.5"><span class="rs__note">建议每周从社媒挪出两小时，投入常见问题页面。</span></div>
           </div>
-          <div class="team__col" role="group" data-col="leads" aria-labelledby="team-leads">
-            <header class="team__head"><h3 id="team-leads">获取潜在客户</h3><p>把关注转化为咨询，充实你的销售管线。</p><span class="team__count">4 个智能体</span></header>
-            <ul class="team__agents">
-              <li data-group="leads"><div class="pv pv-out"><div class="pv-msg"><i class="pv-l" style="width:85%"></i><i class="pv-l" style="width:60%"></i></div><div class="pv-msg is-in"><i class="pv-l" style="width:75%"></i></div><span class="pv-tag">已转交给你</span></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="outbound" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>外联智能体</b><span class="pv-out">来自对的买家的回复</span><p class="visually-hidden">找准一百位对的买家，逐一研究，亲自联系。</p></div></li>
-              <li data-group="leads"><div class="pv pv-conv"><i class="pv-l is-h" style="width:70%"></i><i class="pv-l" style="width:90%"></i><i class="pv-l" style="width:60%"></i><span class="pv-btn">预约通话</span><span class="pv-up">+ 表单已测试</span></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="conversion" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>转化智能体</b><span class="pv-out">更多访客变成咨询</span><p class="visually-hidden">产品方案、落地页和转化漏斗，每月测试和优化。</p></div></li>
-              <li data-group="leads"><div class="pv pv-launch"><div class="pv-track"><i></i><i></i><i></i><i class="is-go"></i></div><div class="pv-days"><span>邮件</span><span>社交</span><span>网站</span><span>上线</span></div></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="launch" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>发布智能体</b><span class="pv-out">在每个渠道都落地的发布</span><p class="visually-hidden">产品发布和营销活动，在所有渠道按顺序推进。</p></div></li>
-              <li data-group="leads"><div class="pv pv-paid"><span class="pv-spons">赞助内容</span><div class="pv-img"></div><i class="pv-l" style="width:80%"></i><span class="pv-btn is-sm">了解更多</span></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="paid" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>付费投放智能体</b><span class="pv-out">有数据支撑的广告</span><p class="visually-hidden">广告创意和受众定向，背后都有数据支撑。</p></div></li>
-            </ul>
-          </div>
-          <div class="team__col" role="group" data-col="keep" aria-labelledby="team-keep">
-            <header class="team__head"><h3 id="team-keep">留住客户</h3><p>和客户保持紧密联系，清楚哪些投入有回报。</p><span class="team__count">3 个智能体</span></header>
-            <ul class="team__agents">
-              <li data-group="keep"><div class="pv pv-comm"><div class="pv-row"><i class="pv-av"></i><i class="pv-l" style="width:65%"></i></div><div class="pv-ans"><span class="pv-chip is-you">你</span><i class="pv-l" style="width:90%"></i><i class="pv-l" style="width:70%"></i></div></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="community" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>社群智能体</b><span class="pv-out">在买家提问的地方给出有用的回答</span><p class="visually-hidden">在 Reddit 帖子和论坛里，及时给出专业的回答。<a class="text-link arrow-link" href="/zh/templates/#community">免费模板</a></p></div></li>
-              <li data-group="keep"><div class="pv pv-meas"><div class="pv-ev"><span>form_submit</span><b class="pv-ok"></b></div><div class="pv-ev"><span>call_click</span><b class="pv-ok"></b></div><div class="pv-ev"><span>booking</span><b class="pv-ok"></b></div></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="measurement" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>效果衡量智能体</b><span class="pv-out">每一条咨询都能追溯到来源</span><p class="visually-hidden">端到端配置追踪，让下个月的预算投向真正有效的地方。</p></div></li>
-              <li data-group="keep"><div class="pv pv-rep"><b class="pv-title">10月</b><div class="pv-bars"><i style="width:84%" class="is-top"></i><i style="width:55%"></i><i style="width:36%"></i></div><i class="pv-l" style="width:80%"></i></div><div class="pv-text"><b><svg class="fdot fdot--ico" data-fdot="reporting" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>报告智能体</b><span class="pv-out">一页纸：哪些有效，下一步做什么</span><p class="visually-hidden">每月一份简短报告，说明上线了什么、接下来做什么。</p></div></li>
-            </ul>
-          </div>
-          </div>
-          <div class="team__review"><span class="team__dot" aria-hidden="true"></span><p><b>每一项产出都经过资深营销工程师审核</b>，然后才会发布。</p></div>
-        </figure>
+        </div>
       </div>
     </section>
 
@@ -348,82 +374,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="sx__tabs" role="tablist" aria-label="五个冲刺"><button class="sx__tab" role="tab" id="sx-tab-positioning" aria-controls="sx-positioning" data-slug="positioning"><span class="sx__num">01</span><b>定位</b></button><button class="sx__tab" role="tab" id="sx-tab-ai-search" aria-controls="sx-ai-search" data-slug="ai-search"><span class="sx__num">02</span><b>AI 搜索</b></button><button class="sx__tab" role="tab" id="sx-tab-content-engine" aria-controls="sx-content-engine" data-slug="content-engine"><span class="sx__num">03</span><b>内容</b></button><button class="sx__tab" role="tab" id="sx-tab-outbound" aria-controls="sx-outbound" data-slug="outbound"><span class="sx__num">04</span><b>主动外联</b></button><button class="sx__tab" role="tab" id="sx-tab-analytics" aria-controls="sx-analytics" data-slug="analytics"><span class="sx__num">05</span><b>数据分析</b></button></div>
           <div class="sx__panel" role="tabpanel" id="sx-positioning" aria-labelledby="sx-tab-positioning">
             <div class="sx__top">
-              <div class="sx__lead"><svg class="fdot fdot--sprint" data-fdot="flow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
-                <span class="vlabel">冲刺 01 · Flow Intelligence · 一周</span>
+              <div class="sx__lead">                <span class="vlabel">冲刺 01 · Flow Intelligence · 一周</span>
                 <h3>一周，确立清晰的定位。</h3>
-                <p class="sx__start"><b>适合</b>准备把定位写成文字、让每个渠道都能直接使用的团队。</p>
                 <p class="sx__outcome"><b>一页纸</b>，每个智能体都从这里获取简报，你的故事在每个渠道都保持一致。</p>
                 <p class="sx__links"><a class="text-link arrow-link" href="/zh/sprints/positioning">查看固定范围</a><span>下一步：冲刺 02，AI 搜索</span></p>
               </div>
               <figure class="sx__doc"><div class="paper" role="img" aria-label="示意用的一页定位表：品类、面向谁、核心主张，以及背后的证据。"><div class="paper__top"><b>定位</b><span>一页纸</span></div><div class="pos-row"><span>品类</span><span><i class="sk" style="width:70%"></i></span></div><div class="pos-row"><span>面向</span><span><i class="sk" style="width:88%"></i><i class="sk" style="width:52%"></i></span></div><div class="pos-row"><span>我们的主张</span><span><i class="sk hl" style="width:92%"></i><i class="sk hl" style="width:60%"></i></span></div><div class="pos-row"><span>证据</span><span><i class="sk" style="width:80%"></i><i class="sk" style="width:66%"></i><i class="sk" style="width:44%"></i></span></div><p class="paper__note"><b>每个智能体</b>动笔之前都会先读这一页。</p></div><figcaption>定位表，示意版式</figcaption></figure>
             </div>
-            <div class="sx__cols">
-              <div><h4 class="sx__h">我们一起搭建的内容</h4><ol class="sx__list"><li>主张清单</li><li>一页定位</li><li>信息架构</li><li>竞品主张地图</li><li>首页首屏改写</li><li>90 天渠道计划</li></ol></div>
-              <div><h4 class="sx__h">这一周怎么安排</h4><ol class="sx__days"><li><span>周一</span><p><b>了解。</b>我研究你的网站、资料和市场，然后我们聊 30 分钟。</p></li><li><span>周三</span><p><b>起草。</b>我们一起梳理主张清单和定位页：你批注，我修改。</p></li><li><span>周五</span><p><b>交接。</b>最终文档、首屏文案和 90 天渠道计划全部就绪，供每个智能体据此获取简报。</p></li></ol></div>
-            </div>
           </div>
           <div class="sx__panel" role="tabpanel" id="sx-ai-search" aria-labelledby="sx-tab-ai-search">
             <div class="sx__top">
-              <div class="sx__lead"><svg class="fdot fdot--sprint" data-fdot="search" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
-                <span class="vlabel">冲刺 02 · 搜索智能体 · 一周</span>
+              <div class="sx__lead">                <span class="vlabel">冲刺 02 · 搜索智能体 · 一周</span>
                 <h3>在 Google 和 AI 答案里被找到。</h3>
-                <p class="sx__start"><b>适合</b>买家会在 Google 和 ChatGPT 上研究这个品类的企业。</p>
                 <p class="sx__outcome">按这种方式优化的页面，AI 搜索可见度<b>最高提升 40%</b>（Aggarwal 等，KDD 2024）。</p>
                 <p class="sx__links"><a class="text-link arrow-link" href="/zh/sprints/ai-search">查看固定范围</a><span>下一步：冲刺 03，内容</span></p>
               </div>
               <figure class="sx__doc"><div class="paper" role="img" aria-label="示意用的 AI 答案：在来源中点名并引用你的企业。"><div class="paper__top"><b>AI 答案</b><span>示意</span></div><div class="answer"><span class="ask">这件事，我附近应该找谁聊？</span><div style="margin-top:.8rem"><i class="sk" style="width:94%"></i><i class="sk" style="width:86%"></i><i class="sk" style="width:58%"></i></div><span class="cite">你的企业，被引用</span><div style="margin-top:.6rem"><i class="sk" style="width:78%"></i><i class="sk" style="width:40%"></i></div></div><div class="sources"><span class="is-you">yoursite.co.nz</span><span>目录网站</span><span>点评网站</span></div></div><figcaption>引用你的 AI 答案，示意图</figcaption></figure>
             </div>
-            <div class="sx__cols">
-              <div><h4 class="sx__h">我们一起搭建的内容</h4><ol class="sx__list"><li>AI 爬虫访问</li><li>llms.txt 上线</li><li>结构化数据</li><li>可引用性优化</li><li>站点地图整理</li><li>搜索引擎提交</li></ol></div>
-              <div><h4 class="sx__h">这一周怎么安排</h4><ol class="sx__days"><li><span>周一</span><p><b>审计。</b>做一次抓取和可引用性审计，像答案引擎那样读你的网站。</p></li><li><span>周三</span><p><b>上线。</b>爬虫访问、结构化数据（schema）、llms.txt 和页面修复全部上线。</p></li><li><span>周五</span><p><b>交接。</b>一份前后对比报告和已完成的提交记录，并附上适用于每个新页面的检查清单。</p></li></ol></div>
-            </div>
           </div>
           <div class="sx__panel" role="tabpanel" id="sx-content-engine" aria-labelledby="sx-tab-content-engine">
             <div class="sx__top">
-              <div class="sx__lead"><svg class="fdot fdot--sprint" data-fdot="content" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
-                <span class="vlabel">冲刺 03 · 内容智能体 · 一周</span>
+              <div class="sx__lead">                <span class="vlabel">冲刺 03 · 内容智能体 · 一周</span>
                 <h3>一份源文档，变成一个月符合你品牌语调的内容。</h3>
-                <p class="sx__start"><b>适合</b>希望以自己的语调保持稳定发布节奏的团队。</p>
                 <p class="sx__outcome"><b>每周省回约 10 小时</b>写作时间，实际运行中测得。</p>
                 <p class="sx__links"><a class="text-link arrow-link" href="/zh/sprints/content-engine">查看固定范围</a><span>下一步：冲刺 04，主动外联</span></p>
               </div>
               <figure class="sx__doc"><div class="paper" role="img" aria-label="示意用的内容日历：一个月的帖子已起草，大部分已审批。"><div class="paper__top"><b>下个月</b><span>已起草</span></div><div class="cal"><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="ok"></i><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="ok"></i><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="ok"></i><i></i><i class="off"></i><i class="ok"></i><i></i><i class="off"></i></div><p class="paper__note"><b>你来审批。</b>其余时间由引擎起草。</p></div><figcaption>内容日历，示意图</figcaption></figure>
             </div>
-            <div class="sx__cols">
-              <div><h4 class="sx__h">我们一起搭建的内容</h4><ol class="sx__list"><li>品牌语调规则化</li><li>引擎配置完成</li><li>首月内容起草</li><li>发布日历</li><li>素材收集习惯</li><li>运营手册</li></ol></div>
-              <div><h4 class="sx__h">这一周怎么安排</h4><ol class="sx__days"><li><span>周一</span><p><b>倾听。</b>一次品牌语调访谈，并收集你欣赏和希望避免的文字样本。</p></li><li><span>周三</span><p><b>运行。</b>引擎处理你的第一份源文档，我们按你的语调逐篇调校稿件。</p></li><li><span>周五</span><p><b>交接。</b>一个月已审批的内容排期完成，运营手册同步就位。</p></li></ol></div>
-            </div>
           </div>
           <div class="sx__panel" role="tabpanel" id="sx-outbound" aria-labelledby="sx-tab-outbound">
             <div class="sx__top">
-              <div class="sx__lead"><svg class="fdot fdot--sprint" data-fdot="outbound" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
-                <span class="vlabel">冲刺 04 · 外联智能体 · 一周</span>
+              <div class="sx__lead">                <span class="vlabel">冲刺 04 · 外联智能体 · 一周</span>
                 <h3>主动外联一周上线，触达对的买家。</h3>
-                <p class="sx__start"><b>适合</b>准备主动选择下一批目标客户的 B2B 团队。</p>
                 <p class="sx__outcome">实际运行中<b>回复率约 30%</b>，行业基准中位数约为五分之一（<a class="text-link" href="https://www.heyreach.io/blog/linkedin-outreach-benchmark-report-2026" target="_blank" rel="noopener">HeyReach 2026</a>）。</p>
                 <p class="sx__links"><a class="text-link arrow-link" href="/zh/sprints/outbound">查看固定范围</a><span>下一步：冲刺 05，数据分析</span></p>
               </div>
               <figure class="sx__doc"><div class="paper" role="img" aria-label="示意用的外联对话：第一条消息、一次跟进、买家回复，然后转交给人工。"><div class="paper__top"><b>一条通道</b><span>示意</span></div><div class="msg"><small>第 1 天 · 首次触达</small><i class="sk" style="width:92%"></i><i class="sk" style="width:70%"></i></div><div class="msg"><small>第 4 天 · 跟进</small><i class="sk" style="width:80%"></i></div><div class="msg in"><small>回复</small><i class="sk" style="width:86%"></i><i class="sk" style="width:50%"></i></div><p class="handoff-tag">已转交给你的团队。自动化已暂停。</p></div><figcaption>一条外联通道，示意图</figcaption></figure>
             </div>
-            <div class="sx__cols">
-              <div><h4 class="sx__h">我们一起搭建的内容</h4><ol class="sx__list"><li>ICP 与信号清单</li><li>一套序列</li><li>安全发送上限</li><li>人工接管</li><li>CRM 销售管线</li><li>首批发送上线</li></ol></div>
-              <div><h4 class="sx__h">这一周怎么安排</h4><ol class="sx__days"><li><span>周一</span><p><b>定义。</b>一起开一次 ICP（理想客户画像）讨论会：谁会买，哪些信号能把他们找出来。</p></li><li><span>周三</span><p><b>搭建。</b>我们在安全发送上限内搭建名单和序列，全部采用你的语调。</p></li><li><span>周五</span><p><b>上线。</b>通道上线，合格的回复直接转给你的团队。</p></li></ol></div>
-            </div>
           </div>
           <div class="sx__panel" role="tabpanel" id="sx-analytics" aria-labelledby="sx-tab-analytics">
             <div class="sx__top">
-              <div class="sx__lead"><svg class="fdot fdot--sprint" data-fdot="measurement" viewBox="0 0 100 100" aria-hidden="true" focusable="false"></svg>
-                <span class="vlabel">冲刺 05 · 效果衡量智能体 · 一周</span>
+              <div class="sx__lead">                <span class="vlabel">冲刺 05 · 效果衡量智能体 · 一周</span>
                 <h3>每月一页纸，看清哪个渠道带来回报。</h3>
-                <p class="sx__start"><b>适合</b>准备把每一笔营销预算都投向真正带来回报的渠道的团队。</p>
                 <p class="sx__outcome"><b>每月一页纸</b>，用你的实时数据说明哪个渠道带来了回报。</p>
                 <p class="sx__links"><a class="text-link arrow-link" href="/zh/sprints/analytics">查看固定范围</a><span>下一步：冲刺 01，定位</span></p>
               </div>
               <figure class="sx__doc"><div class="paper" role="img" aria-label="示意用的一页月度报告：按渠道列出咨询来源、上线了什么，以及下个月的预算投向哪里。"><div class="paper__top"><b>月度报告</b><span>一页纸</span></div><h4>咨询从哪里来</h4><ul class="report__rows"><li class="is-top">搜索<i style="--w:86%"></i></li><li>主动外联<i style="--w:58%"></i></li><li>内容<i style="--w:41%"></i></li><li>转介绍<i style="--w:24%"></i></li></ul><h4>上线了什么</h4><div style="margin-top:.45rem"><i class="sk" style="width:92%"></i><i class="sk" style="width:76%"></i><i class="sk" style="width:60%"></i></div><p class="paper__note"><b>下个月：</b>把预算移向带来回报的渠道。</p></div><figcaption>月度报告，示意版式</figcaption></figure>
-            </div>
-            <div class="sx__cols">
-              <div><h4 class="sx__h">我们一起搭建的内容</h4><ol class="sx__list"><li>隐私优先的数据分析</li><li>转化事件</li><li>渠道归因</li><li>月度报告</li><li>AI 就绪度复盘</li><li>营销活动检查清单</li></ol></div>
-              <div><h4 class="sx__h">这一周怎么安排</h4><ol class="sx__days"><li><span>周一</span><p><b>审计。</b>我们检查哪些追踪正常触发，哪些缺失或有误。</p></li><li><span>周三</span><p><b>部署。</b>追踪和事件部署到位，并用真实流量测试。</p></li><li><span>周五</span><p><b>报告。</b>我们一起解读你的第一份一页纸报告，全部基于实时数据。</p></li></ol></div>
             </div>
           </div>
         </div>
@@ -433,14 +429,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="engine" class="centered" aria-labelledby="engine-title">
       <div class="wrap">
         <div class="stack reveal">
-          <h2 id="engine-title">每个冲刺和你的团队一起加上一套系统。按月合作，由 Flow 运行整个引擎。</h2>
-            <p class="lead">每个冲刺都会在你的业务中留下一套有完整文档、持续运行的系统。</p>
+          <h2 id="engine-title">之后，由 Flow 按月运行整个引擎。</h2>
         </div>
         <div class="offer reveal">
           <div class="offer__head">
             <p class="eyebrow">Flow Engine 按月服务</p>
             <p class="offer__price">按月<span>随时可取消。系统、提示词和文档的全部所有权归你的团队。</span></p>
-            <p class="offer__lead">整个 Flow Engine 每月持续运行。在实际运行中，这些系统每周为团队省回约 30 个工时。</p>
+            <p class="offer__lead">实际运行中，每周为团队省回约 30 个工时。</p>
           </div>
           <div class="offer__body">
             <ol class="offer__list">
@@ -451,13 +446,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li><span>一份清晰的报告，用来重新校准定位</span></li>
             </ol>
             <div class="cta-row">
-              <a class="btn btn-primary" href="/zh/contact">与我合作</a>
+              <a class="btn btn-primary" href="/zh/contact">获取书面方案</a>
               <a class="text-link arrow-link" href="/zh/work">看看实际运行中的引擎</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <nav class="chapters" aria-label="Chapters"><a href="#plan" data-for="plan"><span class="chapters__label">方案</span></a><a href="#weeks" data-for="weeks"><span class="chapters__label">五周</span></a><a href="#film" data-for="film"><span class="chapters__label">运行</span></a><a href="#system" data-for="system"><span class="chapters__label">智能体</span></a><a href="#monthly" data-for="monthly"><span class="chapters__label">每月</span></a></nav>
   </main>
 <footer class="site-footer">
   <div class="site-footer__inner">
