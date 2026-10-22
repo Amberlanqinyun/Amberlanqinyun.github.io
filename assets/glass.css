@@ -508,32 +508,32 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
 @media (max-width: 900px), (prefers-reduced-motion: reduce) { .run-hint { display: none; } }
 
 @media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
-  .glass .hero--run { padding-top: 0; }
-  .glass .hero--run .run-track { height: calc(100vh + 230vh); }
-  .glass .hero--run .run-pin {
+  .has-glass .hero--run { padding-top: 0; }
+  .has-glass .hero--run .run-track { height: calc(100vh + 230vh); }
+  .has-glass .hero--run .run-pin {
     position: sticky; top: 0; height: 100vh; overflow: hidden;
     display: grid; align-content: start;
     padding-top: clamp(4.5rem, 7vh, 6rem);
   }
   /* The stage at rest, then lifting away. */
-  .glass .hero--run .liquid-stage { padding-top: clamp(2rem, 5vh, 3.5rem); }
-  .glass .hero--run .liquid-stage__floor { height: clamp(240px, 32vh, 400px); margin-top: clamp(0.5rem, 2vh, 1.5rem); }
-  .glass .hero--run .liquid-stage > .stack {
+  .has-glass .hero--run .liquid-stage { padding-top: clamp(2rem, 5vh, 3.5rem); }
+  .has-glass .hero--run .liquid-stage__floor { height: clamp(240px, 32vh, 400px); margin-top: clamp(0.5rem, 2vh, 1.5rem); }
+  .has-glass .hero--run .liquid-stage > .stack {
     transform: translateY(calc(var(--a) * -56px));
     opacity: clamp(0, calc(1 - var(--a) * 1.25), 1);
   }
-  .glass .hero--run .liquid-stage::before, .glass .hero--run .liquid-stage::after { opacity: clamp(0, calc(1 - var(--a) * 1.3), 1); }
-  .glass .hero--run .run-hint { opacity: clamp(0, calc(1 - var(--a) * 3), 1); }
+  .has-glass .hero--run .liquid-stage::before, .has-glass .hero--run .liquid-stage::after { opacity: clamp(0, calc(1 - var(--a) * 1.3), 1); }
+  .has-glass .hero--run .run-hint { opacity: clamp(0, calc(1 - var(--a) * 3), 1); }
   /* The liquid shrinks toward the centre of the screen and gives way to the dot. */
-  .glass .hero--run .liquid-stage__floor {
+  .has-glass .hero--run .liquid-stage__floor {
     transform-origin: 50% 45%;
     transform: translateY(calc(var(--o) * -34vh)) scale(calc(1 - var(--o) * 0.66));
     opacity: clamp(0, calc(1 - var(--o) * 1.1), 1);
   }
   /* The two cards shrink away first; their own keyframes own opacity, so scale does the work. */
-  .glass .hero--run .liquid-stage__floor .liquid-card { scale: clamp(0, calc(1 - var(--a) * 1.6), 1); transform-origin: 50% 50%; }
+  .has-glass .hero--run .liquid-stage__floor .liquid-card { scale: clamp(0, calc(1 - var(--a) * 1.6), 1); transform-origin: 50% 50%; }
   /* The workspace rises from the foot of the screen to the centre. */
-  .glass .hero--run .run-wrap {
+  .has-glass .hero--run .run-wrap {
     position: absolute; inset: 0; z-index: 3;
     display: grid; align-content: center; justify-items: stretch;
     padding-top: clamp(4.5rem, 7vh, 6rem);
@@ -541,16 +541,16 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
     opacity: var(--w);
     pointer-events: none;
   }
-  .glass .hero--run.is-run .run-wrap { pointer-events: auto; }
-  .glass .hero--run .run-wrap > .demo { margin-top: 0; width: 100%; }
-  .glass .hero--run .demo__head { margin-bottom: var(--s-4); }
-  .glass .hero--run .demo__case { font-size: clamp(1.4rem, 2.3vw, 1.9rem); }
-  .glass .hero--run .demo__story { margin-top: var(--s-2); font-size: clamp(0.95rem, 1.1vw, 1.0625rem); }
-  .glass .hero--run .demo__note { margin-top: var(--s-4); }
+  .has-glass .hero--run.is-run .run-wrap { pointer-events: auto; }
+  .has-glass .hero--run .run-wrap > .demo { margin-top: 0; width: 100%; }
+  .has-glass .hero--run .demo__head { margin-bottom: var(--s-4); }
+  .has-glass .hero--run .demo__case { font-size: clamp(1.4rem, 2.3vw, 1.9rem); }
+  .has-glass .hero--run .demo__story { margin-top: var(--s-2); font-size: clamp(0.95rem, 1.1vw, 1.0625rem); }
+  .has-glass .hero--run .demo__note { margin-top: var(--s-4); }
   /* The sheet fits a short viewport. */
-  .glass .hero--run .rs { --rs-row: 0.42rem; --rs-gap: var(--s-4); padding-top: clamp(1.1rem, 2vh, 1.6rem); padding-bottom: clamp(1rem, 1.6vh, 1.3rem); }
-  .glass .hero--run .rs__brief { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
-  .glass .hero--run .rs__tabs { margin-top: var(--s-4); }
+  .has-glass .hero--run .rs { --rs-row: 0.42rem; --rs-gap: var(--s-4); padding-top: clamp(1.1rem, 2vh, 1.6rem); padding-bottom: clamp(1rem, 1.6vh, 1.3rem); }
+  .has-glass .hero--run .rs__brief { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
+  .has-glass .hero--run .rs__tabs { margin-top: var(--s-4); }
 }
 
 /* ---- 13. The mark, and no face on the button (23 Oct 2026) ----------------------
@@ -594,24 +594,24 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
    glass.js writes --p on .rise-track. Phones and reduced motion keep the page as it was. */
 .rise-track { position: relative; }
 @media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
-  .glass .rise-track {
+  .has-glass .rise-track {
     --p: 0;
     --a: clamp(0, calc((var(--p) - 0.06) / 0.3), 1);
     --o: clamp(0, calc((var(--p) - 0.25) / 0.55), 1);
     height: calc(100vh + 70vh);
   }
-  .glass .rise-track > .hero, .glass .rise-track > .hero.has-orb {
+  .has-glass .rise-track > .hero, .has-glass .rise-track > .hero.has-orb {
     position: sticky; top: 0; height: 100vh; box-sizing: border-box; margin: 0;
     padding-top: clamp(6.5rem, 12vh, 9rem); padding-bottom: 0; overflow: hidden;
   }
-  .glass .rise-track > .hero > .wrap {
+  .has-glass .rise-track > .hero > .wrap {
     transform: translateY(calc(var(--a) * -56px));
     opacity: clamp(0, calc(1 - var(--a) * 1.25), 1);
   }
-  .glass .rise-track > .hero .hero-fact { scale: clamp(0, calc(1 - var(--a) * 1.6), 1); transform-origin: 50% 50%; }
+  .has-glass .rise-track > .hero .hero-fact { scale: clamp(0, calc(1 - var(--a) * 1.6), 1); transform-origin: 50% 50%; }
   /* The quiet orb is centred with margins instead of a transform, so the scroll can
      scale it about its own centre; its entrance is its own, on filter and translate. */
-  .glass .rise-track > .hero .liquid-orb--quiet {
+  .has-glass .rise-track > .hero .liquid-orb--quiet {
     left: 0; right: 0; margin-inline: auto; transform: none; opacity: 0.7;
     transform-origin: 50% 70%;
     translate: 0 calc(var(--o) * -12vh);
@@ -620,11 +620,11 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
     animation: rise-orb-in 1600ms var(--ease-spring) 300ms both;
   }
   @keyframes rise-orb-in { from { filter: opacity(0); translate: 0 24px; } }
-  .glass .rise-track > .hero .hero-fact, .glass .rise-track > .hero.has-orb .hero-fact { bottom: clamp(5rem, 12vh, 9rem); }
+  .has-glass .rise-track > .hero .hero-fact, .has-glass .rise-track > .hero.has-orb .hero-fact { bottom: clamp(5rem, 12vh, 9rem); }
   /* The next frame starts rising while the hero is still pinned. */
-  .glass .rise-track + section { position: relative; z-index: 2; margin-top: -70vh; background: none; }
+  .has-glass .rise-track + section { position: relative; z-index: 2; margin-top: -70vh; background: none; }
   /* Its light is painted on a layer that fades in from the top, so no edge shows as it rises over the hero. */
-  .glass .rise-track + section::before {
+  .has-glass .rise-track + section::before {
     content: ""; display: block; position: absolute; inset: 0; z-index: -1; pointer-events: none;
     width: auto; height: auto; left: 0; transform: none; border: 0;
     background:

@@ -1,4 +1,4 @@
-document.documentElement.classList.add('glass');
+document.documentElement.classList.add('has-glass');
 
 /* Amber Lan · glass system (22 Oct 2026).
    The sheen on every glass panel follows the pointer, the way it already
