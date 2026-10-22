@@ -819,3 +819,30 @@ body::before {
   .has-nav .site-header__menu { width: 40px; height: 40px; flex: none; }
   .site-menu .site-header__cta { display: inline-flex; }
 }
+
+/* ---- 17. One icon per system on the services grid (23 Oct 2026) --------------
+   Eleven fine-line marks in the figure language: grey line, one gold accent
+   each, in a small glass bead at the top of every cell. */
+.sys-ico {
+  display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: var(--s-4);
+  border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  color: var(--tier-voice);
+  transition: color 240ms var(--ease-out), border-color 240ms var(--ease-out);
+}
+.sys-ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.sys-ico .g { stroke: var(--accent); }
+.sys-ico .f { fill: currentColor; stroke: none; }
+.sys-ico .gf { fill: var(--accent); stroke: none; }
+.dgrid li:hover .sys-ico { color: var(--fg); border-color: rgba(255, 255, 255, 0.2); }
+.dgrid li > .sys-ico + .vlabel { display: none; }
+.dgrid li > .sys-ico ~ b { padding-top: 0; }
+
+/* ---- 18. The four sprint drawings (23 Oct 2026) ----------------------------------
+   One object per card, set in air: soft glass shapes with a single gold
+   element lit from within. The gold brightens a touch on hover. */
+.job__art { height: clamp(116px, 10.5vw, 150px); }
+.job__art svg { overflow: visible; }
+.job__art .gold { transition: filter 300ms var(--ease-out); }
+.job:hover .job__art .gold { filter: brightness(1.08); }
