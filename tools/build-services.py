@@ -795,7 +795,7 @@ def render(page, lang):
   <meta name="theme-color" content="#0e0e0d">
   <link rel="canonical" href="{url}">
   <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
   <meta property="og:title" content="{esc(d['title'])}">
   <meta property="og:description" content="{esc(d['description'])}">
   <meta property="og:type" content="website">

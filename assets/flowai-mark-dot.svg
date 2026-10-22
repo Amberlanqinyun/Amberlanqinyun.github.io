@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Amber Lan">
+  <!-- The mark: the family. Flow Intelligence in front, one agent from each team
+       behind it (Get found, Get leads, Keep customers), all in the same glass. -->
+  <defs>
+    <radialGradient id="fm-tint" cx="50%" cy="54%" r="52%"><stop offset="0" stop-color="#f2b64f" stop-opacity=".62"/><stop offset=".72" stop-color="#e8a83e" stop-opacity=".46"/><stop offset="1" stop-color="#d4922f" stop-opacity=".78"/></radialGradient>
+    <radialGradient id="fm-light" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6e2"/><stop offset=".35" stop-color="#f8d590" stop-opacity=".95"/><stop offset=".7" stop-color="#eeb04c" stop-opacity=".5"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fm-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset=".5" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity=".22"/></linearGradient>
+    <radialGradient id="fm-pool" cx="60%" cy="96%" r="70%"><stop offset="0" stop-color="#f3c572" stop-opacity=".62"/><stop offset="1" stop-color="#f2b93f" stop-opacity="0"/></radialGradient>
+    <radialGradient id="fm-sheen"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <path id="fm-tri" d="M0 -1C.24 -1 .36 -.88 .48 -.68L1 .22C1.16 .5 1 .96 .6 .96H-.6C-1 .96 -1.16 .5 -1 .22L-.48 -.68C-.36 -.88 -.24 -1 0 -1Z"/>
+    <rect id="fm-pill" x="-1.3" y="-.62" width="2.6" height="1.24" rx=".62"/>
+    <path id="fm-blob" d="M0 -1C.62 -1.04 1.04 -.5 .98 .1C.92 .74 .4 1.02 -.12 .96C-.7 .9 -1.04 .4 -.92 -.16C-.82 -.62 -.46 -.98 0 -1Z"/>
+  </defs>
+  <g transform="translate(19 22) scale(9)"><use href="#fm-tri" fill="#e9e3d6" fill-opacity=".46"/><use href="#fm-tri" fill="url(#fm-glass)"/><use href="#fm-tri" fill="url(#fm-pool)"/><ellipse cx="-.12" cy="-.5" rx=".22" ry=".13" fill="url(#fm-sheen)"/></g>
+  <g transform="translate(17 46) rotate(-16) scale(7.4)"><use href="#fm-pill" fill="#e9e3d6" fill-opacity=".46"/><use href="#fm-pill" fill="url(#fm-glass)"/><use href="#fm-pill" fill="url(#fm-pool)"/><ellipse cx="-.55" cy="-.32" rx=".4" ry=".12" fill="url(#fm-sheen)"/></g>
+  <g transform="translate(49 49) scale(9)"><use href="#fm-blob" fill="#e9e3d6" fill-opacity=".46"/><use href="#fm-blob" fill="url(#fm-glass)"/><use href="#fm-blob" fill="url(#fm-pool)"/><ellipse cx="-.3" cy="-.55" rx=".32" ry=".15" fill="url(#fm-sheen)"/></g>
+  <g transform="translate(35 33) scale(16)">
+    <circle r="1" fill="url(#fm-tint)"/><circle cy=".08" r=".82" fill="url(#fm-light)"/><circle r="1" fill="url(#fm-glass)"/>
+    <ellipse cx="-.3" cy="-.55" rx=".42" ry=".2" fill="url(#fm-sheen)"/><circle cx="-.52" cy="-.5" r=".07" fill="#fff"/>
+    <circle cx="-.3" cy="-.08" r=".22" fill="#fff"/><circle cx=".3" cy="-.08" r=".22" fill="#fff"/>
+    <circle cx="-.28" cy="-.03" r=".11" fill="#0e0e0d"/><circle cx=".32" cy="-.03" r=".11" fill="#0e0e0d"/>
+    <path d="M-.2 .32Q0 .46 .2 .32" fill="none" stroke="#0e0e0d" stroke-width=".085" stroke-linecap="round"/>
+  </g>
+</svg>
