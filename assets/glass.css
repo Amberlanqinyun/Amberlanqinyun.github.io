@@ -411,3 +411,77 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
   .layer-flow__arrow { flex: none; width: 1px; height: 1.5rem; max-width: none; margin-left: 1.5rem; }
   .layer-flow__arrow::after { right: auto; left: 50%; top: auto; bottom: -1px; transform: translateX(-50%) rotate(135deg); }
 }
+
+/* ---- 11. Conversion pass (23 Oct 2026) --------------------------------------------
+   The offer is a written plan with a fixed price, in two working days. The page
+   now says so where people decide: the button asks for the plan, the hero cards
+   carry the offer and the proof, the plan itself appears as a document, the
+   figures become the page's big moment, and the form asks for the plan too. */
+
+/* The offer, one line under the buttons; the hiring link stays, quietly. */
+.hero .stack > .cta-row + .hero-offer { margin-top: var(--s-5); }
+.hero-offer {
+  max-width: none; margin-inline: auto; color: var(--tier-meta);
+  font-size: var(--t-meta); font-weight: 450; letter-spacing: 0.005em; line-height: 1.6; text-wrap: balance;
+}
+.hero-offer__alt { margin-left: var(--s-3); color: var(--tier-voice); border-bottom: 1px solid rgba(255, 255, 255, 0.2); text-decoration: none; white-space: nowrap; }
+.hero-offer__alt:hover { color: var(--fg); border-color: var(--fg); }
+@media (max-width: 640px) { .hero-offer { margin-inline: 0; } .hero-offer__alt { display: inline-block; margin: var(--s-2) 0 0; } }
+
+/* Hero cards: the offer and the proof, both links, no stray bar. */
+.liquid-card__note { display: block; }
+.liquid-card--right .liquid-card__bar { display: none; }
+
+/* The written plan, as a document you can see. */
+.plan-sheet {
+  position: relative; justify-self: center; width: min(100%, 30rem);
+  padding: clamp(1.5rem, 2.6vw, 2.1rem) clamp(1.5rem, 2.8vw, 2.25rem) clamp(1.25rem, 2.2vw, 1.75rem);
+  border: 1px solid var(--pane-line); border-radius: var(--pane-r);
+  background: var(--sheen), var(--pane);
+  -webkit-backdrop-filter: var(--pane-blur); backdrop-filter: var(--pane-blur);
+  box-shadow: var(--pane-edge), var(--pane-shadow);
+  color: var(--fg); font-size: 0.8125rem; line-height: 1.4; text-align: left;
+}
+.plan-sheet .sk { display: block; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.12); }
+.plan-sheet .sk + .sk { margin-top: 6px; }
+.plan-sheet .sk.hl { width: 4.5rem; height: 8px; background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+.plan-sheet__top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-4); padding-bottom: var(--s-4); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.plan-sheet__top b { font-size: 1.05rem; font-weight: 500; letter-spacing: -0.015em; }
+.plan-sheet__top span, .plan-sheet__k { color: var(--tier-meta); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.005em; }
+.plan-sheet__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); margin: var(--s-5) 0; }
+.plan-sheet__cols .plan-sheet__k { display: block; margin-bottom: 8px; color: var(--fg); font-weight: 500; }
+.plan-sheet > .plan-sheet__k { display: block; margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.plan-sheet__seq { list-style: none; margin: var(--s-3) 0 0; padding: 0; display: grid; gap: 6px; }
+.plan-sheet__seq li { display: grid; grid-template-columns: 3.6rem 6rem minmax(0, 1fr); gap: var(--s-3); align-items: center; }
+.plan-sheet__seq span { color: var(--tier-meta); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+.plan-sheet__seq b { font-weight: 500; }
+.plan-sheet__seq i { display: block; height: 6px; width: var(--w, 50%); border-radius: 3px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(var(--g-gold), 0.55)); transition: width 1.2s var(--ease-out); }
+.js .plan-sheet.is-hidden .plan-sheet__seq i, .js .reveal.is-hidden .plan-sheet__seq i { width: 0; }
+.plan-sheet__price { display: flex; justify-content: space-between; align-items: center; margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.plan-sheet__price span { color: var(--fg); font-weight: 500; }
+.plan-sheet__sign { margin: var(--s-4) 0 0; color: var(--tier-meta); font-size: 0.75rem; }
+.plan-sheet::after {
+  content: ""; position: absolute; left: 12%; right: 12%; top: -1px; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+/* In the split, the steps sit in the narrow column: title above its line. */
+.why-split > .stack > .pillars.plan-steps { margin-top: var(--s-6); }
+.pillars.plan-steps .pillar { grid-template-columns: 1fr; gap: var(--s-2); padding: var(--s-4) 0; }
+.pillars.plan-steps .pillar h3 { font-size: 1.05rem; }
+.pillars.plan-steps .pillar p { font-size: 0.9375rem; }
+.pillars.plan-steps .pillar::before { top: calc(var(--s-4) + 0.4em); }
+.pillars.plan-steps::before { top: 1.4rem; bottom: 1.4rem; }
+.why-split > .stack > .pillars + .cta-row { margin-top: var(--s-6); }
+@media (max-width: 900px) { .plan-sheet { justify-self: stretch; width: 100%; margin-top: var(--s-6); } }
+@media (max-width: 480px) { .plan-sheet__cols { grid-template-columns: 1fr; gap: var(--s-3); } .plan-sheet__seq li { grid-template-columns: 3.4rem 5rem minmax(0, 1fr); } }
+
+/* The business case: the figures are the page's big moment, two to a row so each has room. */
+.stat-num { font-size: clamp(3rem, 5.6vw, 5.25rem); letter-spacing: -0.045em; line-height: 0.98; white-space: nowrap; }
+.stat .fig__art { margin-bottom: var(--s-5); }
+.stat .stat-label { max-width: 30ch; }
+@media (min-width: 901px) {
+  #value .value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-9) var(--s-9); }
+  #value .value-grid .stat { padding: 0; border-left: 0; }
+  #value .value-grid .stat:nth-child(even) { padding-left: var(--s-8); border-left: 1px solid var(--hair); }
+  #value .value-grid .stat:nth-child(n + 3) { padding-top: var(--s-8); border-top: 1px solid var(--hair); }
+}
