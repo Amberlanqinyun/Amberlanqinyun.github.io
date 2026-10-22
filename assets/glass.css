@@ -839,16 +839,10 @@ body::before {
 .dgrid li > .sys-ico + .vlabel { display: none; }
 .dgrid li > .sys-ico ~ b { padding-top: 0; }
 
-/* ---- 18. The four sprint drawings, as scenes (23 Oct 2026) ----------------------
-   Each card opens on a small scene rather than an icon: a second card for
-   depth, one lit element with a soft glow, hairline traces for what connects.
-   On hover the lit stroke draws itself and the back card lifts. */
+/* ---- 18. The four sprint drawings (23 Oct 2026) ----------------------------------
+   One object per card, set in air: soft glass shapes with a single gold
+   element lit from within. The gold brightens a touch on hover. */
 .job__art { height: clamp(116px, 10.5vw, 150px); }
 .job__art svg { overflow: visible; }
-.job__art .back { transition: transform 600ms var(--ease-out); }
-.job:hover .job__art .back { transform: translate(-3px, -4px); }
-@media (prefers-reduced-motion: no-preference) {
-  .job__art .draw { stroke-dasharray: 420; stroke-dashoffset: 0; }
-  .job:hover .job__art .draw { animation: art-draw 1100ms var(--ease-out); }
-  @keyframes art-draw { from { stroke-dashoffset: 420; } to { stroke-dashoffset: 0; } }
-}
+.job__art .gold { transition: filter 300ms var(--ease-out); }
+.job:hover .job__art .gold { filter: brightness(1.08); }
