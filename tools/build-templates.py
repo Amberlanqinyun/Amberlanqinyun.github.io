@@ -198,7 +198,7 @@ def head(title, description, path, schema, og_type="website"):
 <meta name="theme-color" content="#0e0e0d">
 <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
 <link rel="canonical" href="{url}">
-<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
