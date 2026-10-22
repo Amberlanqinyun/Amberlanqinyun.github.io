@@ -891,3 +891,66 @@ body::before {
   filter: blur(22px);
 }
 .contact::before { width: min(100vw, 80rem); height: 96%; }
+
+/* ---- 21. The business case as one family of cards (23 Oct 2026) ----------------
+   Four equal tonal cards: a label, the figure in display type, one line, the
+   same linear pair of bars in each, and the source as a caption. */
+.kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); margin-top: var(--space-block); text-align: left; }
+.kpi {
+  display: flex; flex-direction: column; padding: clamp(1.5rem, 2.6vw, 2.2rem);
+  border: 1px solid var(--pane-line); border-radius: var(--pane-r);
+  background: var(--sheen), var(--pane);
+  -webkit-backdrop-filter: var(--pane-blur); backdrop-filter: var(--pane-blur);
+  box-shadow: var(--pane-edge), var(--pane-shadow);
+}
+.kpi__k { margin: 0; font-size: var(--t-meta); color: var(--tier-meta); font-weight: 500; }
+.kpi__n { margin: var(--s-3) 0 0; font-size: clamp(2.6rem, 4.4vw, 4rem); font-weight: 500; letter-spacing: -0.04em; line-height: 1; color: var(--fg); font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.kpi__line { margin: var(--s-2) 0 0; font-size: 1rem; color: var(--tier-voice); }
+.kpi__bars { display: grid; gap: 10px; margin-top: var(--s-6); }
+.kpi__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; }
+.kpi__lab { grid-column: 1; font-size: var(--t-meta); color: var(--tier-meta); }
+.kpi__val { grid-column: 2; grid-row: 1; justify-self: end; font-size: var(--t-meta); color: var(--tier-meta); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.kpi__track { grid-column: 1 / -1; display: block; height: 8px; border-radius: 4px; background: var(--glass-clear); box-shadow: var(--glass-clear-edge); overflow: hidden; }
+.kpi__track i { display: block; height: 100%; width: var(--w, 50%); border-radius: inherit; background: var(--glass-grey); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); transition: width 1100ms var(--ease-out); }
+.kpi__row.is-us .kpi__track i { background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+.kpi__row.is-us .kpi__lab, .kpi__row.is-us .kpi__val { color: var(--fg); }
+.has-glass .kpi.fig:not(.is-in) .kpi__track i { width: 0; }
+.kpi__src { margin: auto 0 0; padding-top: var(--s-5); font-size: var(--t-meta); color: var(--tier-meta); }
+.kpi__src .text-link { font-size: inherit; }
+@media (max-width: 720px) { .kpis { grid-template-columns: 1fr; gap: var(--s-4); } .kpi__n { font-size: 2.6rem; } }
+
+/* ---- 22. The manifesto teaser: the flow as the section's object -----------------
+   Three larger nodes: the old way, the layer that holds your positioning (lit,
+   wearing Flow Intelligence), and the agents who work from it. A bead of light
+   travels along each connector. */
+.layer-flow--v2 { justify-content: center; margin-top: var(--s-8); gap: 0; }
+.layer-flow--v2 .layer-flow__node { position: relative; display: grid; gap: 3px; justify-items: start; min-width: 15rem; padding: 1.1rem 1.3rem 1.15rem; border-radius: 18px; }
+.layer-flow--v2 .layer-flow__node b { font-size: 1.05rem; font-weight: 500; letter-spacing: -0.01em; }
+.layer-flow--v2 .layer-flow__node small { font-size: var(--t-meta); }
+.layer-flow--v2 .layer-flow__node.is-core { min-width: 16rem; padding: 1.25rem 1.5rem 1.3rem; }
+.layer-flow__glyph { display: flex; gap: 4px; height: 32px; align-items: flex-end; margin-bottom: 8px; }
+.layer-flow__glyph i { display: block; width: 10px; border-radius: 3px 3px 1px 1px; background: rgba(255, 255, 255, 0.16); }
+.layer-flow__glyph i:nth-child(1) { height: 14px; } .layer-flow__glyph i:nth-child(2) { height: 22px; } .layer-flow__glyph i:nth-child(3) { height: 30px; }
+.layer-flow__face { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 8px; border-radius: 50%; background: rgba(var(--g-gold), 0.12); }
+.layer-flow__face .fdot--flow { display: block; width: 34px; height: 34px; overflow: visible; }
+.layer-flow__face [fill^="url(#flowdot-halo"] { display: none; }
+.layer-flow__faces { display: flex; align-items: center; height: 32px; margin-bottom: 8px; }
+.layer-flow__faces .fdot--mini { display: block; width: 28px; height: 28px; overflow: visible; margin-right: -8px; }
+.layer-flow__faces em { margin-left: 14px; font-style: normal; font-size: var(--t-meta); color: var(--tier-meta); }
+.layer-flow--v2 .layer-flow__arrow { flex: 0 0 clamp(2.5rem, 6vw, 5.5rem); max-width: none; overflow: visible; }
+.layer-flow--v2 .layer-flow__arrow::before {
+  content: ""; position: absolute; top: 50%; left: 0; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%;
+  background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .layer-flow--v2 .layer-flow__arrow::before { animation: flow-bead 2.4s var(--ease-out) infinite; }
+  .layer-flow--v2 .layer-flow__arrow + .is-core + .layer-flow__arrow::before { animation-delay: 1.2s; }
+  @keyframes flow-bead { 0% { left: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { left: calc(100% - 7px); opacity: 0; } }
+}
+@media (prefers-reduced-motion: reduce) { .layer-flow--v2 .layer-flow__arrow::before { display: none; } }
+@media (max-width: 720px) {
+  .layer-flow--v2 .layer-flow__node, .layer-flow--v2 .layer-flow__node.is-core { min-width: 0; width: 100%; }
+  .layer-flow--v2 .layer-flow__arrow { flex: none; width: 1px; height: 2rem; margin-left: 1.9rem; }
+  .layer-flow--v2 .layer-flow__arrow::before { left: -3px; top: 0; margin-top: 0; }
+  @media (prefers-reduced-motion: no-preference) { @keyframes flow-bead { 0% { top: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { top: calc(100% - 7px); opacity: 0; } } }
+}
