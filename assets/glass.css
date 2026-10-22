@@ -954,3 +954,101 @@ body::before {
   .layer-flow--v2 .layer-flow__arrow::before { left: -3px; top: 0; margin-top: 0; }
   @media (prefers-reduced-motion: no-preference) { @keyframes flow-bead { 0% { top: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { top: calc(100% - 7px); opacity: 0; } } }
 }
+
+/* ---- 23. How it works as a film (23 Oct 2026) ------------------------------------
+   Five scenes, each pinned for a screen and a half of scroll on wide
+   screens: the plan assembling itself, five weeks as five documents, one run
+   playing, the ten agents lighting up under Flow Intelligence, the monthly
+   page. glass.js writes --p on each scene; every .at element has a --t
+   threshold and fades up as --p passes it. A chapter rail on the right marks
+   where you are. Phones and reduced motion read the same scenes stacked. */
+.scene { position: relative; padding-block: var(--space-block); }
+.scene__pin { width: min(100% - (var(--gutter) * 2), var(--measure)); margin-inline: auto; }
+.scene__cap { text-align: left; max-width: 44rem; }
+.scene__act { margin: 0 0 var(--s-3); font-size: var(--t-meta); color: var(--tier-meta); font-weight: 500; }
+.scene__line { margin: 0; font-size: clamp(1.75rem, 2.8vw, 2.5rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.12; max-width: 24ch; text-wrap: balance; }
+.scene__art { margin-top: var(--s-7); text-align: left; }
+.scene--plan .plan-sheet { width: min(100%, 34rem); margin: 0; }
+.strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); align-items: start; }
+.strip__k { display: block; margin-bottom: var(--s-3); font-size: var(--t-meta); color: var(--tier-meta); font-weight: 500; white-space: nowrap; }
+.strip__doc { padding: 1rem; border: 1px solid var(--pane-line); border-radius: 16px; background: var(--pane); box-shadow: var(--pane-edge); }
+.strip__doc .paper { max-width: none; font-size: 0.72rem; }
+.scene--run .rs { margin: 0; max-width: 58rem; }
+.scene--run .rs__tabs { justify-content: flex-start; }
+.scene--run .rs__tabs-k { text-align: left; }
+.film-more { margin-top: var(--s-6); max-width: 58rem; }
+.film-more > summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 10px; color: var(--tier-voice); font-size: 0.9375rem; }
+.film-more > summary::-webkit-details-marker { display: none; }
+.film-more > summary::before { content: "\25B6"; font-size: 0.7rem; color: var(--accent); }
+.film-more[open] > summary { color: var(--fg); margin-bottom: var(--s-4); }
+.film-more .film { margin: 0; }
+.film-more .film video { width: 100%; height: auto; border-radius: var(--pane-r); border: 1px solid var(--pane-line); }
+.agents { max-width: 68rem; }
+.agents__core { display: inline-grid; grid-template-columns: auto auto; gap: 2px 12px; align-items: center; padding: 0.9rem 1.2rem; border: 1px solid rgba(var(--g-gold), 0.5); border-radius: 16px; background: var(--pane); box-shadow: var(--pane-edge), 0 0 32px -10px rgba(var(--g-gold), 0.5); margin-left: calc(50% - 8.5rem); }
+.agents__core b { grid-column: 2; font-size: 1.05rem; font-weight: 500; }
+.agents__core > span:last-child { grid-column: 2; font-size: var(--t-meta); color: var(--tier-meta); }
+.agents__face { grid-row: 1 / span 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(var(--g-gold), 0.12); }
+.agents__face .fdot--flow { display: block; width: 34px; height: 34px; overflow: visible; }
+.agents__face [fill^="url(#flowdot-halo"] { display: none; }
+.agents__lines { display: block; width: 100%; height: 44px; margin: 2px 0; fill: none; stroke: rgba(var(--g-gold), 0.45); stroke-width: 1.2; }
+.agents__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); }
+.agents__col { padding: 1.1rem 1.25rem 1.25rem; border: 1px solid var(--pane-line); border-radius: 18px; background: var(--pane); box-shadow: var(--pane-edge); }
+.agents__col h3 { margin: 0; font-size: 1.05rem; font-weight: 500; }
+.agents__col p { margin: 2px 0 var(--s-4); font-size: var(--t-meta); color: var(--tier-meta); }
+.agents__col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.agents__col li { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px solid rgba(255, 255, 255, 0.07); font-size: 0.9375rem; color: var(--fg); }
+.agents__col li .fdot--mini { display: block; width: 26px; height: 26px; overflow: visible; flex: none; }
+.agents__review { display: flex; align-items: center; gap: 10px; margin: var(--s-5) 0 0; font-size: var(--t-meta); color: var(--tier-voice); }
+.agents__review i { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
+.rs--report { max-width: 40rem; margin: 0; }
+.rs--report .rs__dot .fdot--rs { display: block; width: 30px; height: 30px; overflow: visible; }
+.chapters { display: none; }
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .has-glass .scene { --p: 0; height: 175vh; padding: 0; }
+  .has-glass .scene__pin { position: sticky; top: 0; height: 100vh; box-sizing: border-box; display: grid; align-content: center; padding-top: 4.5rem; overflow: hidden; }
+  .has-glass .scene .at { --k: clamp(0, calc((var(--p) - var(--t, 0)) / 0.16), 1); opacity: var(--k); translate: 0 calc((1 - var(--k)) * 22px); }
+  .has-glass .scene--plan .plan-sheet__seq i, .has-glass .scene--report .rs__track i { transition: none; }
+  .has-glass .scene--plan .plan-sheet__agents i { width: var(--w, 50%); }
+  /* the first scene rises over the pinned hero like the sections before it did */
+  .has-glass .rise-track + .scene { margin-top: -70vh; }
+  .has-glass .chapters {
+    display: grid; gap: 14px; position: fixed; right: 22px; top: 50%; z-index: 20; translate: 0 -50%;
+  }
+  .has-glass .chapters a { position: relative; display: block; width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.22); transition: background 300ms, transform 300ms; }
+  .has-glass .chapters a.is-here { background: var(--accent); transform: scale(1.25); box-shadow: var(--glass-amber-glow); }
+  .has-glass .chapters__label { position: absolute; right: 18px; top: 50%; translate: 0 -50%; padding: 4px 9px; border-radius: 8px; background: rgba(0, 0, 0, 0.7); color: var(--fg); font-size: 12px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 200ms; }
+  .has-glass .chapters a:hover .chapters__label, .has-glass .chapters a.is-here .chapters__label { opacity: 1; }
+}
+@media (max-width: 900px) {
+  .strip { grid-template-columns: 1fr; gap: var(--s-3); }
+  .strip__doc .paper { font-size: 0.8125rem; }
+  .agents__core { margin-left: 0; }
+  .agents__lines { display: none; }
+  .agents__cols { grid-template-columns: 1fr; }
+  .scene__art { margin-top: var(--s-6); }
+}
+
+/* The run scene holds a taller object: it sits from the top, compact, and the
+   film link waits at the top right. Opening the film unpins the scene so the
+   video reads at full size. */
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .has-glass .scene--run .scene__pin { align-content: start; padding-top: 5.5rem; }
+  .has-glass .scene--run .scene__art { margin-top: var(--s-5); }
+  .has-glass .scene--run .scene__line { font-size: clamp(1.5rem, 2.2vw, 2rem); max-width: 30ch; }
+  .has-glass .scene--run .rs { --rs-row: 0.4rem; --rs-gap: var(--s-4); padding-top: 1.1rem; padding-bottom: 1rem; }
+  .has-glass .scene--run .rs__brief { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
+  .has-glass .scene--run .rs__tabs-k { margin: var(--s-4) 0 var(--s-2); }
+  .has-glass .scene--run .film-more { position: absolute; right: 0; top: 5.5rem; margin: 0; }
+  .has-glass .scene--run:has(.film-more[open]) .scene__pin { position: relative; height: auto; overflow: visible; }
+  .has-glass .scene--run:has(.film-more[open]) .film-more { position: static; margin-top: var(--s-6); }
+  .has-glass .scene--run:has(.film-more[open]) .at { opacity: 1; translate: none; }
+}
+
+/* ---- 24. The dot page shares the site's light (23 Oct 2026) ------------------------
+   Its sections are the page column itself, so the section light was squeezed
+   into the column and the page edges sat empty. The light now spans the page. */
+.dotpage main { background:
+  radial-gradient(42% 58% at 10% 18%, rgba(var(--g-lilac), 0.16), transparent 70%),
+  radial-gradient(36% 50% at 92% 62%, rgba(var(--g-indigo), 0.13), transparent 72%),
+  radial-gradient(40% 40% at 20% 96%, rgba(var(--g-lilac), 0.1), transparent 72%); }
+.dotpage main > section { background: none; }
