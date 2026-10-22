@@ -276,7 +276,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="{canonical}">
 <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
-<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}">
@@ -297,9 +297,9 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
-<script src="/assets/liquid.js?v=1" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=1">
-<script src="/assets/glass.js?v=1" defer></script>
+<script src="/assets/liquid.js?v=2" defer></script>
+<link rel="stylesheet" href="/assets/glass.css?v=2">
+<script src="/assets/glass.js?v=2" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
 </head>
