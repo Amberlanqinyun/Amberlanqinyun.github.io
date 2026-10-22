@@ -870,4 +870,5 @@ body::before {
    The stage no longer sits in a bordered panel; like the services hero it is
    open on the page, the copy centred and the liquid rising beneath it. */
 .liquid-stage, .liquid-stage::before { border: 0; background: none; box-shadow: none; }
-.liquid-stage::before { display: none; }
+.liquid-stage::before, .liquid-stage::after { display: none; }
+.liquid-stage { border-radius: 0; }
