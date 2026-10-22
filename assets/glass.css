@@ -550,7 +550,7 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
   /* The sheet fits a short viewport. */
   .has-glass .hero--run .rs { --rs-row: 0.42rem; --rs-gap: var(--s-4); padding-top: clamp(1.1rem, 2vh, 1.6rem); padding-bottom: clamp(1rem, 1.6vh, 1.3rem); }
   .has-glass .hero--run .rs__brief { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
-  .has-glass .hero--run .rs__tabs { margin-top: var(--s-4); }
+  .has-glass .hero--run .rs__tabs-k { margin: var(--s-4) 0 var(--s-2); }
 }
 
 /* ---- 13. The mark, and no face on the button (23 Oct 2026) ----------------------
@@ -712,14 +712,27 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
 .rs__approve { min-height: 40px; font-size: 0.9rem; white-space: nowrap; }
 .rs__approve::after { content: "\2713"; }
 .rs__approve:disabled { opacity: 0.92; cursor: default; transform: none; }
-.rs__tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; margin-top: var(--s-5); }
+/* The replay row reads as controls: a label, then four glass buttons, each
+   carrying its agent's character; the one playing is ringed in amber. */
+.rs__tabs-k { margin: var(--s-6) 0 var(--s-3); text-align: center; font-size: var(--t-meta); color: var(--tier-meta); font-weight: 500; }
+.rs__tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 0; }
 .rs__tabs button {
-  appearance: none; border: 1px solid transparent; background: none; color: var(--tier-voice); cursor: pointer;
-  font: inherit; font-size: 0.875rem; padding: 0.45rem 0.95rem; border-radius: 999px;
-  transition: color 200ms, background-color 200ms, border-color 200ms;
+  appearance: none; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 1.1rem 0 0.55rem;
+  border: 1px solid var(--pane-line); border-radius: 999px; background: var(--pane); box-shadow: var(--pane-edge);
+  color: var(--fg); cursor: pointer; font: inherit; font-size: 0.9375rem; font-weight: 500;
+  transition: transform 400ms var(--ease-out), border-color 200ms, background 200ms, box-shadow 400ms var(--ease-out);
 }
-.rs__tabs button:hover { color: var(--fg); background: rgba(255, 255, 255, 0.05); }
-.rs__tabs button[aria-pressed="true"] { color: var(--fg); border-color: rgba(255, 255, 255, 0.14); background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14); }
+.rs__tabs button:hover { border-color: var(--pane-line-hover); background: var(--pane-hover); transform: translateY(-2px); }
+.rs__tabs button[aria-pressed="true"] {
+  border-color: rgba(var(--g-gold), 0.6);
+  box-shadow: var(--pane-edge), inset 0 0 0 1px rgba(var(--g-gold), 0.22), 0 0 28px -8px rgba(var(--g-gold), 0.5);
+}
+.rs__tab-face { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); transition: background 200ms; }
+.rs__tab-face .fdot--tab { display: block; width: 28px; height: 28px; overflow: visible; }
+.rs__tabs button[aria-pressed="true"] .rs__tab-face { background: rgba(var(--g-gold), 0.16); }
+.rs__tabs button::after { content: "\21BB"; margin-left: 2px; color: var(--tier-meta); font-size: 0.95rem; transition: color 200ms; }
+.rs__tabs button:hover::after, .rs__tabs button[aria-pressed="true"]::after { color: var(--accent); }
+@media (max-width: 640px) { .rs__tabs { display: grid; grid-template-columns: 1fr 1fr; } .rs__tabs button { justify-content: flex-start; } }
 .rs__tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @keyframes rs-caret { to { opacity: 0; } }
 @keyframes rs-pulse { to { opacity: 0.35; } }
@@ -852,3 +865,17 @@ body::before {
 .job__art svg { overflow: visible; }
 .job__art .gold { transition: filter 300ms var(--ease-out); }
 .job:hover .job__art .gold { filter: brightness(1.08); }
+
+/* ---- 19. The home hero without its frame (23 Oct 2026) ---------------------------
+   The stage no longer sits in a bordered panel; like the services hero it is
+   open on the page, the copy centred and the liquid rising beneath it. */
+.liquid-stage, .liquid-stage::before { border: 0; background: none; box-shadow: none; }
+.liquid-stage::before, .liquid-stage::after { display: none; }
+.liquid-stage { border-radius: 0; }
+/* Against the open black the liquid's canvas showed its own edge; it now fades on every side,
+   so only the liquid is visible. */
+.liquid-stage__floor .liquid-orb {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 48%, transparent 94%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 48%, transparent 94%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}

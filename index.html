@@ -290,7 +290,7 @@
 <link rel="stylesheet" href="/assets/highend.css?v=14">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=8">
+<link rel="stylesheet" href="/assets/glass.css?v=12">
 <script src="/assets/glass.js?v=2" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
@@ -380,13 +380,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="rs__bar is-on"><span class="rs__note" data-rs-note>Nothing publishes until you approve.</span><button class="btn btn-primary rs__approve" type="button" data-rs-approve>Approve all</button></div>
           </div>
+          <p class="rs__tabs-k">Replay a run. Pick an agent.</p>
           <div class="rs__tabs" aria-label="Replay a run">
-            <button type="button" data-replay="search" aria-pressed="true">AI search</button>
-            <button type="button" data-replay="content" aria-pressed="false">Content</button>
-            <button type="button" data-replay="outbound" aria-pressed="false">Outbound</button>
-            <button type="button" data-replay="report" aria-pressed="false">Report</button>
+            <button type="button" data-replay="search" aria-pressed="true"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="search" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>AI search</span></button>
+            <button type="button" data-replay="content" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="content" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>Content</span></button>
+            <button type="button" data-replay="outbound" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="outbound" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>Outbound</span></button>
+            <button type="button" data-replay="report" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="reporting" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>Report</span></button>
           </div>
-          <p class="demo__note">An illustrative run. Choose another to replay it.</p>
+          <p class="demo__note">An illustrative run.</p>
         </div>
       </div>
       </div>
