@@ -283,7 +283,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <meta property="og:site_name" content="Amber Lan">
 <meta property="og:locale" content="{S('og_locale')}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE}/og.png?v=2">
+<meta property="og:image" content="{SITE}/og.png?v=3">
 {times}<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/site-header.css">
