@@ -9,7 +9,7 @@ import hashlib
 import math
 import random
 
-INK = "#1a1824"     # knockouts match the glass tile; the ground itself is transparent (22 Oct 2026)
+INK = "#141414"     # knockouts match the glass tile; the ground itself is transparent (22 Oct 2026)
 CREAM = "#a09d94"   # cream at ~35% over Warm Ink: present, never louder than the title
 AMBER = "#c2903a"   # amber at ~40% over Warm Ink
 W, H = 960, 540

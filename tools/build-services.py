@@ -795,7 +795,7 @@ def render(page, lang):
   <meta name="theme-color" content="#0e0e0d">
   <link rel="canonical" href="{url}">
   <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
-  <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
   <meta property="og:title" content="{esc(d['title'])}">
   <meta property="og:description" content="{esc(d['description'])}">
   <meta property="og:type" content="website">
@@ -818,7 +818,7 @@ def render(page, lang):
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
-<script src="/assets/liquid.js?v=1" defer></script>
+<script src="/assets/liquid.js?v=2" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/dot.js?v=8" defer></script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>

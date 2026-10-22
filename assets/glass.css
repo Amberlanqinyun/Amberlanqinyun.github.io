@@ -724,3 +724,84 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
   .rs__row, .rs__bar, .rs__track i, .rs__rail li, .rs__rail li::before, .rs__rail li::after { transition: none; }
   .rs__caret, .rs.is-working .rs__status::before { animation: none; }
 }
+
+/* ---- 16. Black and grey (23 Oct 2026) ---------------------------------------------
+   The violet night becomes a true black ground, and every tint that was lilac
+   or indigo becomes neutral grey: the sky's haze, the light under each
+   section, the glass in every panel, the header, the menu, the stage. Amber
+   stays the one colour. */
+:root {
+  --bg: #000; --ink: #000;
+  --fg: #f5f5f5;
+  --muted: rgba(245, 245, 245, 0.74);
+  --soft: rgba(245, 245, 245, 0.56);
+  --tier-voice: rgba(245, 245, 245, 0.66);
+  --tier-meta: rgba(245, 245, 245, 0.48);
+  --lilac: 176, 176, 176; --indigo: 128, 128, 128;
+  --g-lilac: 176, 176, 176; --g-indigo: 128, 128, 128;
+  --core: rgba(22, 22, 22, 0.42);
+  --ambient: 0 32px 80px -40px rgba(0, 0, 0, 0.9), 0 12px 32px -20px rgba(0, 0, 0, 0.7);
+  --glass:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015) 42%, rgba(255, 255, 255, 0.02)),
+    rgba(20, 20, 20, 0.4);
+  --pane:
+    linear-gradient(90deg, transparent 10%, rgba(255, 255, 255, 0.55) 50%, transparent 90%) top / 100% 1px no-repeat,
+    linear-gradient(160deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.025) 56%, rgba(255, 255, 255, 0.05)),
+    rgba(18, 18, 18, 0.24);
+  --pane-hover:
+    linear-gradient(90deg, transparent 10%, rgba(255, 255, 255, 0.75) 50%, transparent 90%) top / 100% 1px no-repeat,
+    linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04) 56%, rgba(255, 255, 255, 0.07)),
+    rgba(24, 24, 24, 0.28);
+}
+html { background: #000; }
+body::before {
+  background:
+    radial-gradient(70% 55% at 0% 0%, rgba(255, 255, 255, 0.075), transparent 70%),
+    radial-gradient(55% 50% at 100% 8%, rgba(255, 255, 255, 0.045), transparent 72%),
+    radial-gradient(60% 45% at 50% 100%, rgba(255, 255, 255, 0.03), transparent 75%),
+    linear-gradient(180deg, #0b0b0b 0%, #050505 40%, #000 100%);
+}
+.liquid-stage::before {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cg fill='%23fff'%3E%3Ccircle cx='44' cy='98' r='.8' opacity='.6'/%3E%3Ccircle cx='190' cy='36' r='.6' opacity='.45'/%3E%3Ccircle cx='331' cy='141' r='.9' opacity='.55'/%3E%3Ccircle cx='468' cy='60' r='.6' opacity='.4'/%3E%3Ccircle cx='402' cy='300' r='.7' opacity='.45'/%3E%3Ccircle cx='96' cy='352' r='.6' opacity='.4'/%3E%3Ccircle cx='255' cy='447' r='.8' opacity='.5'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 520px 520px,
+    radial-gradient(70% 60% at 0% 0%, rgba(255, 255, 255, 0.09), transparent 62%),
+    radial-gradient(50% 40% at 100% 0%, rgba(255, 255, 255, 0.05), transparent 70%),
+    linear-gradient(180deg, rgba(12, 12, 12, 0.92), rgba(2, 2, 2, 0.97));
+}
+.liquid-card {
+  background:
+    radial-gradient(220px circle at var(--mx, -999px) var(--my, -999px), rgba(255, 255, 255, 0.14), transparent 65%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.025) 58%, rgba(255, 255, 255, 0.05)),
+    rgba(18, 18, 18, 0.16);
+}
+.site-header__inner { background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)), rgba(12, 12, 12, 0.55); }
+@media (max-width: 820px) { .site-menu { background: rgba(4, 4, 4, 0.88); } }
+.sticky-cta { background: rgba(4, 4, 4, 0.78); }
+.site-footer { background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); }
+.liquid-orb--static::before {
+  background:
+    radial-gradient(38% 22% at 34% 16%, rgba(255, 196, 96, 0.75), transparent 70%),
+    radial-gradient(30% 18% at 70% 22%, rgba(255, 214, 140, 0.55), transparent 70%),
+    radial-gradient(40% 30% at 62% 78%, rgba(200, 200, 210, 0.22), transparent 70%),
+    radial-gradient(closest-side, #050505 82%, rgba(255, 255, 255, 0.85) 96%, transparent 100%);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .shell, .outcome, .proof-card.proof-text, .install, .offer, .sx__doc, .form-thanks, .flagship, .team__hq, .dgrid, .demo__win,
+  .team__col, .poss, .rule, .pp-card, .path, .glass, .tpl-card, .grid > .part.case, .split__col, .buys-band .fig, .pp-table, .pp-contact,
+  .compound, .team__review, .doors, .job, .proof-card, .receipt, .qa-card, .work-card, .post-card__figure, .article-figure, .featured,
+  .versus::before, .short-answer, .plan-sheet, .rs, .site-header__inner { background: #141414; }
+}
+
+/* The phone header: brand, button and hamburger share one pill without overlapping. */
+/* On phones the pill holds the mark, the name, the hamburger. The amber button
+   lives in the menu and in the sticky bar that rises once the hero has passed,
+   so one amber action is on screen at a time. */
+@media (max-width: 820px) {
+  .has-nav .site-header__inner { gap: 8px; padding: 5px 5px 5px 12px; }
+  .site-header__brand { min-width: 0; flex: 1 1 auto; }
+  .site-header__brand-text { white-space: nowrap; font-size: 15px; }
+  .has-nav .site-header__nav .site-header__cta { display: none; }
+  .has-nav .site-header__nav { flex: none; }
+  .has-nav .site-header__menu { width: 40px; height: 40px; flex: none; }
+  .site-menu .site-header__cta { display: inline-flex; }
+}

@@ -58,8 +58,8 @@
     '  c+=vec3(.95,.62,.25)*box(r,normalize(vec3(.05,1.,.15)),Z,vec2(.8,.35),.45)*.4;',
     '  c+=vec3(1.)*box(r,normalize(vec3(-1.,.1,-.15)),Y,vec2(.1,1.6),.08)*2.2;',
     '  c+=vec3(1.,.97,.94)*box(r,normalize(vec3(1.,-.05,-.25)),Y,vec2(.08,1.6),.07)*1.8;',
-    '  c+=vec3(.12,.32,1.)*box(r,normalize(vec3(.1,-.95,.3)),Z,vec2(.9,.35),.45)*.7;',
-    '  c+=vec3(.35,.25,.75)*box(r,normalize(vec3(-.2,-.3,-1.)),Y,vec2(1.,.6),.6)*.12;',
+    '  c+=vec3(.58,.6,.66)*box(r,normalize(vec3(.1,-.95,.3)),Z,vec2(.9,.35),.45)*.7;',
+    '  c+=vec3(.4,.4,.44)*box(r,normalize(vec3(-.2,-.3,-1.)),Y,vec2(1.,.6),.6)*.12;',
     '  return c;',
     '}',
     'void main(){',
@@ -78,11 +78,11 @@
     '    float ndv=max(dot(n,-rd),0.);float g=1.-ndv;',
     '    float F=.04+.96*pow(g,5.);',
     '    vec3 refl=env(reflect(rd,n));',
-    '    vec3 tran=env(refract(rd,n,.67))*vec3(.3,.45,1.)*.1;',
+    '    vec3 tran=env(refract(rd,n,.67))*vec3(.6,.62,.66)*.1;',
     '    col=mix(tran,refl,clamp(F*1.3+.22,0.,1.));',
     /* the blue light living inside the lower body, drifting */
     '    float lo=smoothstep(-1.1,-2.5,p.y);',
-    '    col+=vec3(.08,.22,1.)*lo*(.55+.45*sin(p.x*1.6+uTime*.5))*(1.-F)*.55;',
+    '    col+=vec3(.5,.52,.58)*lo*(.55+.45*sin(p.x*1.6+uTime*.5))*(1.-F)*.55;',
     '    col+=vec3(.9,.5,.15)*smoothstep(-.8,.5,p.y)*(.5+.5*sin(p.x*2.1-uTime*.4))*(1.-F)*.05;',
     /* thin-film colour at grazing angles, then the bright rim */
     '    vec3 film=.5+.5*cos(6.2831*(vec3(0.,.33,.67)+g*1.4+.12+uTime*.02));',
@@ -91,7 +91,7 @@
     '  }',
     '  float glow=exp(-max(dm,0.)*8.)*.32*(1.-a);',
     '  col=(col*(2.51*col+.03))/(col*(2.43*col+.59)+.14);',
-    '  vec3 gc=mix(vec3(1.,.9,.75),vec3(.75,.8,1.),smoothstep(-1.,-2.4,(ro+rd*tm).y))*glow;',
+    '  vec3 gc=mix(vec3(1.,.9,.75),vec3(.85,.86,.9),smoothstep(-1.,-2.4,(ro+rd*tm).y))*glow;',
     '  gl_FragColor=vec4(clamp(col,0.,1.)*a+gc,a+glow*.7);',
     '}'
   ].join('\n');

@@ -198,7 +198,7 @@ def head(title, description, path, schema, og_type="website"):
 <meta name="theme-color" content="#0e0e0d">
 <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
 <link rel="canonical" href="{url}">
-<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="{og_type}">
@@ -222,7 +222,7 @@ def head(title, description, path, schema, og_type="website"):
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
-<script src="/assets/liquid.js?v=1" defer></script>
+<script src="/assets/liquid.js?v=2" defer></script>
 <link rel="stylesheet" href="/assets/glass.css?v=1">
 <script src="/assets/glass.js?v=1" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
