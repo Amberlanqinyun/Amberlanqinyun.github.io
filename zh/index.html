@@ -283,7 +283,7 @@
 <link rel="stylesheet" href="/assets/highend.css?v=14">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=8">
+<link rel="stylesheet" href="/assets/glass.css?v=10">
 <script src="/assets/glass.js?v=2" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
@@ -373,13 +373,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="rs__bar is-on"><span class="rs__note" data-rs-note>你批准之前，什么都不会发布。</span><button class="btn btn-primary rs__approve" type="button" data-rs-approve>全部批准</button></div>
           </div>
+          <p class="rs__tabs-k">回放一次运行。选一个智能体。</p>
           <div class="rs__tabs" aria-label="回放一次运行">
-            <button type="button" data-replay="search" aria-pressed="true">AI 搜索</button>
-            <button type="button" data-replay="content" aria-pressed="false">内容</button>
-            <button type="button" data-replay="outbound" aria-pressed="false">主动外联</button>
-            <button type="button" data-replay="report" aria-pressed="false">报告</button>
+            <button type="button" data-replay="search" aria-pressed="true"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="search" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>AI 搜索</span></button>
+            <button type="button" data-replay="content" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="content" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>内容</span></button>
+            <button type="button" data-replay="outbound" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="outbound" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>主动外联</span></button>
+            <button type="button" data-replay="report" aria-pressed="false"><span class="rs__tab-face" aria-hidden="true"><svg class="fdot fdot--tab" data-fdot="reporting" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span>报告</span></button>
           </div>
-          <p class="demo__note">示意运行。选择另一项即可回放。</p>
+          <p class="demo__note">示意运行。</p>
         </div>
       </div>
       </div>
