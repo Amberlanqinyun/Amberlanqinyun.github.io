@@ -841,6 +841,8 @@ body::before {
 .dgrid li > .sys-ico + .vlabel { display: none; }
 .dgrid li > .sys-ico ~ b { padding-top: 0; }
 .sys-ico .fdot--sys { display: block; width: 32px; height: 32px; overflow: visible; }
+/* In the bead, Flow Intelligence keeps its light inside the glass: no round halo behind it. */
+.sys-ico .fdot--sys [fill="url(#flowdot-halo)"], .sys-ico .fdot--sys [fill="url(#flowdot-halo-night)"] { display: none; }
 .dgrid-meet { margin: var(--s-6) 0 0; text-align: left; }
 
 /* ---- 18. The four sprint drawings (23 Oct 2026) ----------------------------------
