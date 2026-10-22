@@ -241,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <form id="contact-form" novalidate>
             <div class="field-row">
               <div class="field">
-                <label for="name">你的名字</label>
+                <label for="name">姓名</label>
                 <input id="name" name="name" type="text" autocomplete="name" enterkeyhint="next" required>
               </div>
               <div class="field">
@@ -251,23 +251,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="field">
-              <label for="website">公司网站 <span>选填</span></label>
-              <input id="website" name="website" type="text" autocomplete="url" inputmode="url" enterkeyhint="next" placeholder="company.co.nz">
+              <label for="website">公司</label>
+              <input id="website" name="company" type="text" autocomplete="organization" enterkeyhint="next">
             </div>
 
             <div class="field">
-              <label for="message">你的营销目标，或你正在招聘的岗位</label>
-              <textarea id="message" name="message" required placeholder="例如：有人问 ChatGPT 奥克兰的会计师该找谁时，我们希望被推荐。"></textarea>
+              <label for="message">目标</label>
+              <textarea id="message" name="message" required></textarea>
               
-            </div>
-
-            <div class="field">
-              <label for="topic">这是关于</label>
-              <select id="topic" name="topic">
-                <option value="项目制搭建">项目制搭建</option>
-                <option value="全职岗位">招聘营销工程师</option>
-                <option value="其他事项">其他事项</option>
-              </select>
             </div>
 
             <div class="hp" aria-hidden="true">
@@ -278,8 +269,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="form-actions">
               <button class="btn btn-primary" type="submit" id="submit-button">发送</button>
             </div>
-
-            <p class="small form-note">每次搭建依据书面方案按项目报价。系统、提示词和文档的全部所有权归你的团队。</p>
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -381,7 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          visitor's email client so nothing is lost.
       ------------------------------------------------------------------ */
       var TO = 'amber.lan.growth.digital@gmail.com';
-      var FIELDS = ['topic', 'name', 'email', 'website', 'message'];
+      var FIELDS = ['name', 'email', 'company', 'message'];
 
       var form = document.getElementById('contact-form');
       var button = document.getElementById('submit-button');
@@ -411,15 +400,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
 
       function asText(d) {
-        return '主题：' + (d.topic || '未填写')
-          + '\n网站：' + (d.website || '未填写')
+        return '公司：' + (d.company || '未填写')
           + '\n\n留言：\n' + d.message
           + '\n\n来自：' + d.name + '（' + d.email + '）';
       }
 
       function mailtoFallback(d) {
         var href = 'mailto:' + TO
-          + '?subject=' + encodeURIComponent('flowai.co.nz 咨询（' + d.topic + '），来自 ' + d.name)
+          + '?subject=' + encodeURIComponent('flowai.co.nz 咨询，来自 ' + d.name)
           + '&body=' + encodeURIComponent(asText(d));
         show('error', '消息未能发送。<a href="' + href + '">请在你的邮件应用中打开并发送</a>，'
           + '或直接发邮件到 <a href="mailto:' + TO + '">' + TO + '</a>。');
@@ -486,13 +474,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
-            _subject: 'flowai.co.nz 咨询（' + d.topic + '），来自 ' + d.name,
+            _subject: 'flowai.co.nz 咨询，来自 ' + d.name,
             _template: 'table',
             _captcha: 'false',
-            topic: d.topic,
             name: d.name,
             email: d.email,
-            website: d.website || '未填写',
+            company: d.company || '未填写',
             message: d.message
           })
         }).then(function (response) {
