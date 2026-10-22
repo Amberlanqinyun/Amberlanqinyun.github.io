@@ -204,7 +204,7 @@ def head(title, description, path, schema, og_type="website"):
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Amber Lan">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/og.png?v=2">
+<meta property="og:image" content="{SITE}/og.png?v=3">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {json.dumps(schema, indent=2, ensure_ascii=False)}
