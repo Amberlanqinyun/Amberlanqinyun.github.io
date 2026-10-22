@@ -668,6 +668,8 @@ section { padding-block: var(--section) calc(var(--section) * 0.9); }
 .rs__top { display: flex; justify-content: space-between; align-items: center; gap: var(--s-4); padding-bottom: var(--s-4); border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size: var(--t-meta); color: var(--tier-meta); }
 .rs__agent { display: inline-flex; align-items: center; gap: 9px; color: var(--fg); font-weight: 500; white-space: nowrap; }
 .rs__agent b { font-weight: 500; }
+.rs__dot { display: inline-grid; place-items: center; width: 30px; height: 30px; margin: -4px 0; }
+.rs__dot .fdot--rs { display: block; width: 30px; height: 30px; overflow: visible; }
 .rs__bead { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-amber); box-shadow: var(--glass-amber-edge), var(--glass-amber-glow); }
 .rs__status { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .rs__status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.35); transition: background-color 300ms; }
@@ -820,9 +822,9 @@ body::before {
   .site-menu .site-header__cta { display: inline-flex; }
 }
 
-/* ---- 17. One icon per system on the services grid (23 Oct 2026) --------------
-   Eleven fine-line marks in the figure language: grey line, one gold accent
-   each, in a small glass bead at the top of every cell. */
+/* ---- 17. One character per system on the services grid (23 Oct 2026) ---------
+   Each cell opens on the agent's own dot character, drawn by dot.js from the
+   data-fdot markup (see /dot), in a small glass bead. */
 .sys-ico {
   display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: var(--s-4);
   border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;
@@ -838,6 +840,8 @@ body::before {
 .dgrid li:hover .sys-ico { color: var(--fg); border-color: rgba(255, 255, 255, 0.2); }
 .dgrid li > .sys-ico + .vlabel { display: none; }
 .dgrid li > .sys-ico ~ b { padding-top: 0; }
+.sys-ico .fdot--sys { display: block; width: 32px; height: 32px; overflow: visible; }
+.dgrid-meet { margin: var(--s-6) 0 0; text-align: left; }
 
 /* ---- 18. The four sprint drawings (23 Oct 2026) ----------------------------------
    One object per card, set in air: soft glass shapes with a single gold

@@ -76,6 +76,21 @@
   var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-replay]"));
   var timers = [], current = "search";
 
+  /* The agent's own character sits by its name (drawn by dot.js, see /dot) and
+     its mood follows the run: working while the steps light, waiting at review,
+     satisfied once you approve. Without dot.js the amber bead stays. */
+  var AGENT = { search: "search", content: "content", outbound: "outbound", report: "reporting" };
+  var dotHost = q("[data-rs-dot]"), dot = null;
+  function mountDot(key) {
+    var F = window.FlowDot; if (!F || !dotHost) return;
+    if (dot) { dot.destroy(); dot = null; }
+    dotHost.innerHTML = "";
+    var svg = F.make("fdot--rs"); dotHost.appendChild(svg);
+    dot = F.mount(svg, { role: "agent", agent: AGENT[key], r: 36, state: "work" });
+    dot.attach(sheet);
+  }
+  function mood(m) { if (dot) dot.set(m); }
+
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function later(fn, ms) { timers.push(setTimeout(fn, reduce ? 0 : ms)); }
   function clear() { timers.forEach(clearTimeout); timers = []; }
@@ -83,6 +98,7 @@
   function render(key) {
     var r = RUNS[key]; current = key; clear();
     sheet.classList.remove("is-approved"); sheet.classList.add("is-working");
+    mountDot(key);
     tabs.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-replay") === key ? "true" : "false"); });
     agentEl.textContent = r.agent; statusEl.textContent = r.working;
     if (storyEl) storyEl.textContent = r.story;
@@ -129,12 +145,14 @@
     });
     later(function () {
       bar.classList.add("is-on"); statusEl.textContent = r.status; sheet.classList.remove("is-working");
+      mood(r.bars ? "done" : "review");
     }, doneAt + items.length * 110 + 250);
   }
 
   approve.addEventListener("click", function () {
     var r = RUNS[current];
     sheet.classList.add("is-approved"); approve.textContent = r.approved; approve.disabled = true;
+    mood("done"); if (dot) dot.greet();
     later(function () { statusEl.textContent = r.done; }, 900);
   });
   tabs.forEach(function (b) { b.addEventListener("click", function () { render(b.getAttribute("data-replay")); }); });
