@@ -195,7 +195,7 @@
 <link rel="stylesheet" href="/assets/texture.css?v=11">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/visual.js?v=1" defer></script>
-<script src="/assets/demo.js?v=5" defer></script>
+<script src="/assets/demo.js?v=6" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
   <script type="application/ld+json">
@@ -349,36 +349,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="run-hint" aria-hidden="true">向下滚动，观看一次运行</p>
       </div>
       <div class="wrap run-wrap">
-        <div class="demo" data-demo aria-label="Flow 工作演示">
+        <div class="demo" data-run-sheet aria-label="一次完整的运行：示意演示">
           <div class="demo__head">
             <p class="demo__kicker">一次完整的运行。</p>
-            <p class="demo__case">假设你是奥克兰的一位水管工。</p>
-            <p class="demo__story" data-story>你希望有人问 ChatGPT 该找谁时，答案里有你。</p>
+            <p class="demo__case">假设你在奥克兰经营一家会计师事务所。</p>
+            <p class="demo__story" data-story>你希望企业主向 AI 询问时，找到的是你的事务所。</p>
           </div>
-          <div class="bezel">
-          <div class="demo__win">
-            <aside class="demo__side">
-              <p class="demo__ws">你的企业</p>
-              <p class="demo__nav is-here"><span>Flow Intelligence</span><span></span></p>
-              <p class="demo__nav"><span>智能体</span><span>10</span></p>
-              <p class="demo__nav"><span>待审批</span><span>3</span></p>
-              <p class="demo__nav"><span>报告</span><span></span></p>
-              <p class="demo__label">最近</p>
-              <button type="button" data-run="search" aria-pressed="true">AI 搜索优化</button>
-              <button type="button" data-run="content" aria-pressed="false">10月内容</button>
-              <button type="button" data-run="outbound" aria-pressed="false">主动外联</button>
-              <button type="button" data-run="report" aria-pressed="false">9月报告</button>
-            </aside>
-            <div class="demo__main">
-              <div class="demo__bar"><span class="demo__title">AI 搜索优化</span><span class="demo__status">等待你审核</span></div>
-              <div class="demo__thread" aria-live="polite">
-                <div class="demo__msg demo__msg--you"><p>找出奥克兰的人们向 AI 询问热水器的问题，修改本该回答这些问题的页面。全部先存为草稿，一律不发布。</p></div>
-              </div>
-              <div class="demo__input" aria-hidden="true"><span>向 Flow Intelligence 提出需求</span><span>&uarr;</span></div>
+          <div class="rs">
+            <div class="rs__top"><span class="rs__agent"><i class="rs__bead" aria-hidden="true"></i><b data-rs-agent>搜索智能体</b></span><span class="rs__status" data-rs-status aria-live="polite">已暂存，等你审核</span></div>
+            <p class="rs__k">你的指令</p>
+            <p class="rs__brief" data-rs-brief>让企业主向 AI 询问奥克兰会计师时，能找到我们。</p>
+            <ol class="rs__rail" data-rs-rail>
+              <li class="is-on">读取了 38 个服务页面</li>
+              <li class="is-on">匹配了企业主向 AI 提出的 120 个问题</li>
+              <li class="is-on">起草修改，只放入待审区</li>
+            </ol>
+            <p class="rs__k" data-rs-outk>返回的结果</p>
+            <div class="rs__rows" data-rs-rows>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/services/small-business-accounting</span><span class="rs__meta">6 处改动</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/services/xero-bookkeeping</span><span class="rs__meta">3 处改动</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/faq/accountant-cost-auckland</span><span class="rs__meta">新页面</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/areas/north-shore</span><span class="rs__meta">4 处改动</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/llms.txt</span><span class="rs__meta">已更新</span><i class="rs__tick" aria-hidden="true"></i></div>
             </div>
+            <div class="rs__bar is-on"><span class="rs__note" data-rs-note>你批准之前，什么都不会发布。</span><button class="btn btn-primary rs__approve" type="button" data-rs-approve>全部批准</button></div>
           </div>
+          <div class="rs__tabs" aria-label="回放一次运行">
+            <button type="button" data-replay="search" aria-pressed="true">AI 搜索</button>
+            <button type="button" data-replay="content" aria-pressed="false">内容</button>
+            <button type="button" data-replay="outbound" aria-pressed="false">主动外联</button>
+            <button type="button" data-replay="report" aria-pressed="false">报告</button>
           </div>
-          <p class="demo__note">示意演示。在“最近”中选择一次运行即可回放。<a class="text-link" href="/zh/dot">认识这颗点，Flow Intelligence 背后的角色</a>。</p>
+          <p class="demo__note">示意运行。选择另一项即可回放。</p>
         </div>
       </div>
       </div>
@@ -669,7 +671,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="field"><label for="p-email">邮箱</label><input id="p-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="name@company.co.nz"></div>
           </div>
           <div class="field"><label for="p-site">你的网站 <span>选填</span></label><input id="p-site" name="website" type="text" inputmode="url" placeholder="company.co.nz"></div>
-          <div class="field"><label for="p-job">你希望营销把企业带到哪里</label><textarea id="p-job" name="message" required placeholder="例如：无论大家在哪里找，我们都希望成为奥克兰人第一个想到的水管工。"></textarea></div>
+          <div class="field"><label for="p-job">你希望营销把企业带到哪里</label><textarea id="p-job" name="message" required placeholder="例如：我们希望奥克兰的企业主向 AI 询问会计师时，找到的是我们。"></textarea></div>
           <div class="hp" aria-hidden="true"><label for="p-hp">此栏请留空</label><input id="p-hp" name="company-role" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="plan-form__actions">
             <button class="btn btn-primary" type="submit">获取方案</button>

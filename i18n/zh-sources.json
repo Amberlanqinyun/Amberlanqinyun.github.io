@@ -245,11 +245,11 @@
   },
   "zh/index.html": {
     "source": "index.html",
-    "sha": "0176cfde576b"
+    "sha": "6610758702ba"
   },
   "zh/manifesto.html": {
     "source": "manifesto.html",
-    "sha": "467e499b5b78"
+    "sha": "7306d54c2479"
   },
   "zh/privacy.html": {
     "source": "privacy.html",
@@ -273,7 +273,7 @@
   },
   "zh/sprints/index.html": {
     "source": "sprints/index.html",
-    "sha": "95d9ca47ac89"
+    "sha": "2e948f751a17"
   },
   "zh/sprints/outbound.html": {
     "source": "sprints/outbound.html",

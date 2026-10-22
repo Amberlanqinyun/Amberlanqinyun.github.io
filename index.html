@@ -202,7 +202,7 @@
 <link rel="stylesheet" href="/assets/texture.css?v=11">
 <script src="/assets/motion.js" defer></script>
 <script src="/assets/visual.js?v=1" defer></script>
-<script src="/assets/demo.js?v=5" defer></script>
+<script src="/assets/demo.js?v=6" defer></script>
 <script src="/assets/dotfield.js?v=11" defer></script>
 <script src="/assets/alive.js?v=8" defer></script>
   <script type="application/ld+json">
@@ -356,36 +356,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="run-hint" aria-hidden="true">Scroll to watch one run</p>
       </div>
       <div class="wrap run-wrap">
-        <div class="demo" data-demo aria-label="Flow at work: an illustrative demo">
+        <div class="demo" data-run-sheet aria-label="One run, start to finish: an illustrative demo">
           <div class="demo__head">
             <p class="demo__kicker">One run, start to finish.</p>
-            <p class="demo__case">Say you're a plumber in Auckland.</p>
-            <p class="demo__story" data-story>You want to come up when someone asks ChatGPT who to call.</p>
+            <p class="demo__case">Say you run an accounting firm in Auckland.</p>
+            <p class="demo__story" data-story>You want to be the firm business owners find when they ask AI.</p>
           </div>
-          <div class="bezel">
-          <div class="demo__win">
-            <aside class="demo__side">
-              <p class="demo__ws">Your business</p>
-              <p class="demo__nav is-here"><span>Flow Intelligence</span><span></span></p>
-              <p class="demo__nav"><span>Agents</span><span>10</span></p>
-              <p class="demo__nav"><span>Approvals</span><span>3</span></p>
-              <p class="demo__nav"><span>Reports</span><span></span></p>
-              <p class="demo__label">Recents</p>
-              <button type="button" data-run="search" aria-pressed="true">AI search fixes</button>
-              <button type="button" data-run="content" aria-pressed="false">October content</button>
-              <button type="button" data-run="outbound" aria-pressed="false">Outbound lane</button>
-              <button type="button" data-run="report" aria-pressed="false">September report</button>
-            </aside>
-            <div class="demo__main">
-              <div class="demo__bar"><span class="demo__title">AI search fixes</span><span class="demo__status">Waiting for your review</span></div>
-              <div class="demo__thread" aria-live="polite">
-                <div class="demo__msg demo__msg--you"><p>Find the questions people ask AI about hot water cylinders in Auckland and fix the pages that should answer them. Stage everything, publish nothing.</p></div>
-              </div>
-              <div class="demo__input" aria-hidden="true"><span>Ask Flow Intelligence for something</span><span>&uarr;</span></div>
+          <div class="rs">
+            <div class="rs__top"><span class="rs__agent"><i class="rs__bead" aria-hidden="true"></i><b data-rs-agent>Search agent</b></span><span class="rs__status" data-rs-status aria-live="polite">Staged for your review</span></div>
+            <p class="rs__k">Your brief</p>
+            <p class="rs__brief" data-rs-brief>Get us found when business owners ask AI for an accountant in Auckland.</p>
+            <ol class="rs__rail" data-rs-rail>
+              <li class="is-on">Read 38 service pages</li>
+              <li class="is-on">Matched 120 questions owners ask AI</li>
+              <li class="is-on">Drafted fixes, staged only</li>
+            </ol>
+            <p class="rs__k" data-rs-outk>What came back</p>
+            <div class="rs__rows" data-rs-rows>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/services/small-business-accounting</span><span class="rs__meta">6 changes</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/services/xero-bookkeeping</span><span class="rs__meta">3 changes</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/faq/accountant-cost-auckland</span><span class="rs__meta">New page</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/areas/north-shore</span><span class="rs__meta">4 changes</span><i class="rs__tick" aria-hidden="true"></i></div>
+              <div class="rs__row rs__row--mono is-on"><span class="rs__path">/llms.txt</span><span class="rs__meta">Updated</span><i class="rs__tick" aria-hidden="true"></i></div>
             </div>
+            <div class="rs__bar is-on"><span class="rs__note" data-rs-note>Nothing publishes until you approve.</span><button class="btn btn-primary rs__approve" type="button" data-rs-approve>Approve all</button></div>
           </div>
+          <div class="rs__tabs" aria-label="Replay a run">
+            <button type="button" data-replay="search" aria-pressed="true">AI search</button>
+            <button type="button" data-replay="content" aria-pressed="false">Content</button>
+            <button type="button" data-replay="outbound" aria-pressed="false">Outbound</button>
+            <button type="button" data-replay="report" aria-pressed="false">Report</button>
           </div>
-          <p class="demo__note">An illustrative demo. Choose a run under Recents to replay it. <a class="text-link" href="/dot">Meet the dot, the character behind Flow Intelligence</a>.</p>
+          <p class="demo__note">An illustrative run. Choose another to replay it.</p>
         </div>
       </div>
       </div>
@@ -676,7 +678,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="name@company.co.nz"></div>
           </div>
           <div class="field"><label for="p-site">Your website <span>optional</span></label><input id="p-site" name="website" type="text" inputmode="url" placeholder="company.co.nz"></div>
-          <div class="field"><label for="p-job">Where you want marketing to take the business</label><textarea id="p-job" name="message" required placeholder="e.g. We want to be the first plumber Auckland calls, wherever people look."></textarea></div>
+          <div class="field"><label for="p-job">Where you want marketing to take the business</label><textarea id="p-job" name="message" required placeholder="e.g. We want to be the accountant Auckland business owners find, wherever they ask."></textarea></div>
           <div class="hp" aria-hidden="true"><label for="p-hp">Leave this field empty</label><input id="p-hp" name="company-role" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="plan-form__actions">
             <button class="btn btn-primary" type="submit">Get my plan</button>
