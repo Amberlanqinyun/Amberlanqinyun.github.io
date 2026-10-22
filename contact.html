@@ -196,7 +196,7 @@
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=2">
+<link rel="stylesheet" href="/assets/glass.css?v=3">
 <script src="/assets/glass.js?v=2" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
@@ -241,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <form id="contact-form" novalidate>
             <div class="field-row">
               <div class="field">
-                <label for="name">Your name</label>
+                <label for="name">Name</label>
                 <input id="name" name="name" type="text" autocomplete="name" enterkeyhint="next" required>
               </div>
               <div class="field">
@@ -251,23 +251,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="field">
-              <label for="website">Company website <span>optional</span></label>
-              <input id="website" name="website" type="text" autocomplete="url" inputmode="url" enterkeyhint="next" placeholder="company.co.nz">
+              <label for="website">Company</label>
+              <input id="website" name="company" type="text" autocomplete="organization" enterkeyhint="next">
             </div>
 
             <div class="field">
-              <label for="message">Your marketing goals, or the role you are hiring for</label>
-              <textarea id="message" name="message" required placeholder="e.g. We want ChatGPT to recommend us when a business owner asks for an accountant in Auckland."></textarea>
+              <label for="message">Goals</label>
+              <textarea id="message" name="message" required></textarea>
               
-            </div>
-
-            <div class="field">
-              <label for="topic">This is about</label>
-              <select id="topic" name="topic">
-                <option value="Contract a build">Contract a build</option>
-                <option value="A full-time role">Hiring a marketing engineer</option>
-                <option value="Something else">Something else</option>
-              </select>
             </div>
 
             <div class="hp" aria-hidden="true">
@@ -278,8 +269,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="form-actions">
               <button class="btn btn-primary" type="submit" id="submit-button">Send</button>
             </div>
-
-            <p class="small form-note">Each build is priced per project from the written plan. Your team retains full ownership of the systems, prompts and documentation.</p>
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -381,7 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          visitor's email client so nothing is lost.
       ------------------------------------------------------------------ */
       var TO = 'amber.lan.growth.digital@gmail.com';
-      var FIELDS = ['topic', 'name', 'email', 'website', 'message'];
+      var FIELDS = ['name', 'email', 'company', 'message'];
 
       var form = document.getElementById('contact-form');
       var button = document.getElementById('submit-button');
@@ -411,15 +400,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
 
       function asText(d) {
-        return 'Topic: ' + (d.topic || 'not given')
-          + '\nWebsite: ' + (d.website || 'not given')
+        return 'Company: ' + (d.company || 'not given')
           + '\n\nMessage:\n' + d.message
           + '\n\nFrom: ' + d.name + ' (' + d.email + ')';
       }
 
       function mailtoFallback(d) {
         var href = 'mailto:' + TO
-          + '?subject=' + encodeURIComponent('flowai.co.nz enquiry (' + d.topic + ') from ' + d.name)
+          + '?subject=' + encodeURIComponent('flowai.co.nz enquiry from ' + d.name)
           + '&body=' + encodeURIComponent(asText(d));
         show('error', 'Your message could not be sent. <a href="' + href + '">Open it in your email app</a>, '
           + 'or email <a href="mailto:' + TO + '">' + TO + '</a> directly.');
@@ -486,13 +474,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
-            _subject: 'flowai.co.nz enquiry (' + d.topic + ') from ' + d.name,
+            _subject: 'flowai.co.nz enquiry from ' + d.name,
             _template: 'table',
             _captcha: 'false',
-            topic: d.topic,
             name: d.name,
             email: d.email,
-            website: d.website || 'not given',
+            company: d.company || 'not given',
             message: d.message
           })
         }).then(function (response) {
