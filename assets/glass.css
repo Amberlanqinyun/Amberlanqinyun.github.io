@@ -1109,3 +1109,10 @@ main.dotpage > section.wrap, main.dotpage > section.wrap:nth-of-type(even), main
   main li > button, .print-cv, .end-links a { min-height: 40px; }
   .print-cv, .end-links a { display: inline-flex; align-items: center; }
 }
+
+/* ---- 26. The dot page's stages fill their column (23 Oct 2026) ------------------
+   The stage was centred with auto margins inside a grid cell, so its width
+   collapsed to the width of its caption line (about 300px) at every screen
+   size. It now fills the column, so the character reads at the size the
+   layout always intended. */
+.dotpage .stage { width: min(100%, 560px); max-width: none; }
