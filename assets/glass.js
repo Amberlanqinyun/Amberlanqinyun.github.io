@@ -1,3 +1,5 @@
+document.documentElement.classList.add('glass');
+
 /* Amber Lan · glass system (22 Oct 2026).
    The sheen on every glass panel follows the pointer, the way it already
    does on the two hero cards. Panels are the selectors in glass.css. */
@@ -51,18 +53,20 @@
 
 /* The hero is the run: scroll progress through the pinned hero, written as --p. */
 (function () {
-  var hero = document.querySelector('.hero--run');
-  if (!hero || !window.matchMedia) return;
+  var tracks = Array.prototype.slice.call(document.querySelectorAll('.hero--run, .rise-track'));
+  if (!tracks.length || !window.matchMedia) return;
   var mq = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
   var raf = 0;
   function paint() {
     raf = 0;
-    if (!mq.matches) { hero.style.removeProperty('--p'); hero.classList.remove('is-run'); return; }
-    var r = hero.getBoundingClientRect();
-    var total = r.height - window.innerHeight;
-    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
-    hero.style.setProperty('--p', p.toFixed(4));
-    hero.classList.toggle('is-run', p > 0.5);
+    tracks.forEach(function (hero) {
+      if (!mq.matches) { hero.style.removeProperty('--p'); hero.classList.remove('is-run'); return; }
+      var r = hero.getBoundingClientRect();
+      var total = r.height - window.innerHeight;
+      var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+      hero.style.setProperty('--p', p.toFixed(4));
+      hero.classList.toggle('is-run', p > 0.5);
+    });
   }
   function ask() { if (!raf) raf = requestAnimationFrame(paint); }
   window.addEventListener('scroll', ask, { passive: true });

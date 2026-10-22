@@ -276,7 +276,7 @@ def head(title, desc, canonical, og_type="article", extra_head="", published=Non
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="{canonical}">
 <link rel="alternate" type="application/atom+xml" title="Amber Lan" href="{SITE}/feed.xml">
-<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}">
