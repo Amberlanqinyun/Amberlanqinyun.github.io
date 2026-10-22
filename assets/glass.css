@@ -872,3 +872,10 @@ body::before {
 .liquid-stage, .liquid-stage::before { border: 0; background: none; box-shadow: none; }
 .liquid-stage::before, .liquid-stage::after { display: none; }
 .liquid-stage { border-radius: 0; }
+/* Against the open black the liquid's canvas showed its own edge; it now fades on every side,
+   so only the liquid is visible. */
+.liquid-stage__floor .liquid-orb {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 48%, transparent 94%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 48%, transparent 94%), linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}
