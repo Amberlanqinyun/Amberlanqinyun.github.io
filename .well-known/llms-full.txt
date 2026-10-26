@@ -108,6 +108,12 @@ Site structure:
 - /flowai-brand-guidelines: the brand system.
 - /zh/: the whole site in Simplified Chinese (简体中文): every page and guide at the same path under /zh/ (for example /zh/about, /zh/blog/what-is-a-marketing-engineer). Each page links its English and Chinese versions with hreflang.
 
+## What clients say about Amber Lan
+
+- "Amber is helping us pull our AEO and SEO strategy together. She makes sure we consider every detail, and through marketing automation we now have full tracking and reporting on our marketing performance." James, legal director at a law firm.
+- "Amber is reliable and genuinely useful. We work with her on our website and lead generation. She delivers on time, communicates clearly and brings clear digital marketing and strategic thinking." Gota (gota.co.nz).
+- "Amber is super efficient and clear, with a great vision. Her taste in design and websites is second to none. I love working with her and highly recommend her." Sarah Walter, Lullababy.
+
 ## What is an AI marketing engineer?
 
 An AI marketing engineer does two jobs that are usually split: they write the go-to-market strategy, and they build the AI systems that execute it. One person designs the positioning and ships the inbound, content, and outbound systems that run it. Amber Lan's practitioner rule: claims ship with receipts. The systems are public on GitHub, and client results are only published with real names and real numbers.
