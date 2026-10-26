@@ -1116,3 +1116,90 @@ main.dotpage > section.wrap, main.dotpage > section.wrap:nth-of-type(even), main
    size. It now fills the column, so the character reads at the size the
    layout always intended. */
 .dotpage .stage { width: min(100%, 560px); max-width: none; }
+
+/* ---- 27. About: the function as one board (27 Oct 2026) -----------------------
+   "One person, a whole marketing function" drawn as what it says: Amber at the
+   top, one line branching to the eight lanes, each lane carrying its agent's
+   character in a glass bead. A lane opens its detail in the board below. The
+   four-step loop sits on one rail under it, the judging step lit in amber. */
+.fnb {
+  position: relative; margin-top: var(--space-block); padding: clamp(1.75rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--pane-line); border-radius: var(--pane-r);
+  background: var(--pane); box-shadow: var(--pane-edge), var(--pane-shadow);
+  -webkit-backdrop-filter: var(--pane-blur); backdrop-filter: var(--pane-blur);
+}
+.fnb__me { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0.85rem; padding-bottom: 2.5rem; text-align: center; }
+.fnb__me img {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 0 6px rgba(var(--g-gold), 0.12), 0 0 44px rgba(var(--g-gold), 0.28);
+}
+.fnb__me p { margin: 0; }
+.fnb__me b { display: block; color: var(--fg); font-size: 1.0625rem; font-weight: 500; }
+.fnb__me span { display: block; margin-top: 0.2rem; color: var(--tier-voice); font-size: 0.9375rem; }
+.fnb__me::after {
+  content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 1.6rem;
+  background: linear-gradient(rgba(var(--g-gold), 0.75), rgba(255, 255, 255, 0.24));
+}
+.fnb__groups { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 5fr) minmax(0, 2fr); }
+/* The branch runs from the first group's stem to the last group's, through the trunk. */
+.fnb__groups::before { content: ""; position: absolute; top: 0; left: 6.25%; right: 12.5%; height: 1px; background: rgba(255, 255, 255, 0.2); }
+.fnb__group { position: relative; padding: 1.4rem 0.25rem 0; text-align: center; }
+.fnb__group::before { content: ""; position: absolute; top: 0; left: 50%; width: 1px; height: 0.8rem; background: rgba(255, 255, 255, 0.24); }
+.fnb__label { margin: 0 0 0.9rem; color: var(--tier-meta); font-size: var(--t-meta); letter-spacing: 0.02em; }
+.fnb__group ul { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+.fnb__group li { min-width: 0; }
+.fnb button.fnb__lane {
+  display: flex; flex-direction: column; align-items: center; gap: 0.75rem; width: 100%; height: 100%; min-height: 0;
+  padding: 1rem 0.4rem 1.1rem; border: 1px solid transparent; border-radius: 16px; background: none;
+  color: var(--fg); font: inherit; font-size: 0.875rem; line-height: 1.3; text-align: center; cursor: pointer;
+  transition: border-color 240ms var(--ease-out), background-color 240ms var(--ease-out);
+}
+.fnb button.fnb__lane:hover, .fnb button.fnb__lane:focus-visible { border-color: var(--pane-line-hover); background: rgba(255, 255, 255, 0.04); }
+.fnb button.fnb__lane:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fnb__lane .sys-ico { width: 54px; height: 54px; margin: 0; border-radius: 16px; }
+.fnb__lane .sys-ico .fdot--sys { width: 40px; height: 40px; }
+.fnb__lane:hover .sys-ico { border-color: rgba(255, 255, 255, 0.22); }
+.fnb__name { text-wrap: balance; }
+.fnb__loop {
+  position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem;
+  margin: 2.5rem 0 0; padding: 1.6rem 0 0; border-top: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none; counter-reset: fnb;
+}
+.fnb__loop li { position: relative; padding-top: 1.35rem; color: var(--tier-voice); font-size: 0.9375rem; counter-increment: fnb; }
+.fnb__loop li::before { content: "0" counter(fnb); position: absolute; top: 0; left: 0; color: var(--tier-meta); font-size: 12px; letter-spacing: 0.08em; }
+.fnb__loop li::after { content: ""; position: absolute; top: calc(-1.6rem - 4px); left: 0; width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); }
+.fnb__loop li.is-me { color: var(--fg); }
+.fnb__loop li.is-me::before { color: var(--accent); }
+.fnb__loop li.is-me::after { background: var(--accent); box-shadow: 0 0 0 4px rgba(var(--g-gold), 0.16), 0 0 18px rgba(var(--g-gold), 0.6); }
+.fnb + .lanes-more { margin-top: var(--s-6); }
+@media (max-width: 900px) {
+  .fnb__groups { grid-template-columns: 1fr; gap: 1.5rem; }
+  .fnb__groups::before { display: none; }
+  .fnb__me { padding-bottom: 1.75rem; }
+  .fnb__me::after, .fnb__group::before { display: none; }
+  .fnb__group { padding: 1.25rem 0 0; border-top: 1px solid rgba(255, 255, 255, 0.12); text-align: left; }
+  .fnb__group ul { grid-template-columns: repeat(auto-fill, minmax(min(100%, 136px), 1fr)); gap: 0.25rem; }
+  .fnb button.fnb__lane { flex-direction: row; justify-content: flex-start; gap: 0.7rem; padding: 0.45rem; text-align: left; min-height: 56px; }
+  .fnb__lane .sys-ico { width: 44px; height: 44px; border-radius: 13px; }
+  .fnb__lane .sys-ico .fdot--sys { width: 32px; height: 32px; }
+  .fnb__loop { grid-template-columns: 1fr 1fr; row-gap: 1.5rem; padding-top: 0; border-top: 0; }
+  .fnb__loop li { padding-top: 2.1rem; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+  .fnb__loop li::before { top: 0.8rem; }
+  .fnb__loop li::after { display: none; }
+  .fnb__loop li.is-me { border-top-color: var(--accent); }
+}
+
+/* ---- 28. About: career, the result as the figure (27 Oct 2026) ------------------
+   The track's amber already meant something (how much of each role ran on
+   systems) but nothing said so: a small key under the track now does. Each
+   role's result sits at display size, the one thing a reader should keep. */
+.cvc__key { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: var(--s-5) 0 0; color: var(--tier-meta); font-size: 12px; letter-spacing: 0.02em; }
+.cvc__key i { width: 84px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, rgba(250, 248, 243, 0.16), var(--accent)); }
+.cvc__key em { margin-left: 0.6rem; padding-left: 0.85rem; border-left: 1px solid rgba(255, 255, 255, 0.14); font-style: normal; }
+/* Years line up when a company name wraps to two lines. */
+main.cv .seg { align-content: start; }
+main.cv .role-panel__win { padding-left: var(--s-5); color: var(--tier-voice); font-size: 0.875rem; }
+main.cv .role-panel__win b { margin-bottom: 0.35rem; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1; letter-spacing: -0.035em; }
+@media (max-width: 720px) {
+  .cvc__key em { flex-basis: 100%; margin: 0; padding: 0; border: 0; }
+}
