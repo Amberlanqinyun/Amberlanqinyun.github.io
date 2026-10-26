@@ -7,7 +7,7 @@ const { execFileSync } = require('child_process');
 const pw = require(process.env.PLAYWRIGHT_PATH || path.join(process.env.HOME, '.claude/skills/social-studio/scripts/node_modules/playwright'));
 
 const base = process.argv[2] || 'http://localhost:8791';
-const jobs = [['/src/cv/cv-en.html', 'assets/amber-lan-cv.pdf']];
+const jobs = [['/src/cv/cv-en.html', 'assets/amber-lan-cv.pdf'], ['/src/cv/cv-zh.html', 'assets/amber-lan-cv-zh.pdf']];
 
 (async () => {
   const browser = await pw.chromium.launch();
