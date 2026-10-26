@@ -309,12 +309,13 @@
 <script src="/assets/visual.js?v=1" defer></script>
 <script src="/assets/cv.js?v=6" defer></script>
 <script src="/assets/cv-fx.js?v=7" defer></script>
+<script src="/assets/dot.js?v=9" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=22">
+<link rel="stylesheet" href="/assets/glass.css?v=23">
 <script src="/assets/glass.js?v=3" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
@@ -356,7 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="lead">I'm Amber Lan, an AI marketing engineer in Auckland, New Zealand. I run a whole marketing function, strategy and execution, on AI agents I build.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/contact">Work with me</a>
-            <a class="btn btn-secondary" href="/assets/amber-lan-cv.pdf" download="Amber-Lan-CV.pdf" data-cv>Get my CV</a>
+            <a class="btn btn-secondary btn-cv" href="/assets/amber-lan-cv.pdf" download="Amber-Lan-CV.pdf" data-cv><img src="/assets/amber-lan-cv-p1.webp" width="24" height="34" alt="" decoding="async">Get my CV <small>PDF, 2 pages</small></a>
           </div>
         </div>
         <figure class="profile__photo">
@@ -387,14 +388,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="function" class="sec" aria-labelledby="function-title">
     <div class="wrap">
       <div class="min-head reveal"><p class="eyebrow">What I do</p><h2 id="function-title">One person, a whole marketing function.</h2></div>
-      <div class="map reveal" aria-label="The marketing function">
-        <div class="map__col"><p class="map__group">Strategy</p><ul><li><button type="button" data-lane="claims">Positioning and messaging</button></li></ul></div>
-        <div class="map__col map__col--wide"><p class="map__group">Demand</p><ul><li><button type="button" data-lane="content">Content marketing</button></li><li><button type="button" data-lane="search">SEO and AEO</button></li><li><button type="button" data-lane="voices">Thought leadership</button></li><li><button type="button" data-lane="outbound">Outbound and ABM</button></li><li><button type="button" data-lane="events">Events</button></li></ul></div>
-        <div class="map__col"><p class="map__group">Engine</p><ul><li><button type="button" data-lane="design">Brand and creative</button></li><li><button type="button" data-lane="ops">Ops and analytics</button></li></ul></div>
+      <div class="fnb reveal" data-fdot-host>
+        <div class="fnb__me"><img src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="" loading="lazy" decoding="async"><p><b>Amber Lan</b><span>Sets the strategy and judges what ships.</span></p></div>
+        <div class="fnb__groups" aria-label="The marketing function">
+          <div class="fnb__group" style="--n:1"><p class="fnb__label">Strategy</p><ul><li><button type="button" class="fnb__lane" data-lane="claims"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="flow" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Positioning</span></button></li></ul></div>
+          <div class="fnb__group" style="--n:5"><p class="fnb__label">Demand</p><ul><li><button type="button" class="fnb__lane" data-lane="content"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="content" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Content</span></button></li><li><button type="button" class="fnb__lane" data-lane="search"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="search" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">SEO and AEO</span></button></li><li><button type="button" class="fnb__lane" data-lane="voices"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="social" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Thought leadership</span></button></li><li><button type="button" class="fnb__lane" data-lane="outbound"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="outbound" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Outbound and ABM</span></button></li><li><button type="button" class="fnb__lane" data-lane="events"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="launch" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Events</span></button></li></ul></div>
+          <div class="fnb__group" style="--n:2"><p class="fnb__label">Engine</p><ul><li><button type="button" class="fnb__lane" data-lane="design"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="conversion" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Brand and creative</span></button></li><li><button type="button" class="fnb__lane" data-lane="ops"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="measurement" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">Ops and analytics</span></button></li></ul></div>
+        </div>
+        <ol class="fnb__loop" aria-label="How every lane runs"><li>I set the strategy</li><li>Agents execute</li><li class="is-me">I judge what ships</li><li>Measured on results</li></ol>
       </div>
-      <ol class="loop reveal" aria-label="How every lane runs">
-        <li>I set the strategy</li><li>Agents execute</li><li class="me">I judge what ships</li><li class="kpi">Measured on results</li>
-      </ol>
       <details class="lanes-more">
         <summary>Explore how each lane runs</summary>
         <div class="board" data-board data-spot>
@@ -539,6 +541,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="min-head reveal no-print"><p class="eyebrow">Career</p><h2 id="career-title">Six roles, 2017 to now.</h2></div>
       <div class="cvc reveal no-print" data-career>
         <div class="cvc__track" role="tablist" aria-label="Roles, 2017 to now"><button class="seg" role="tab" id="t-r1" aria-controls="p-r1" aria-selected="false" style="--grow:1.17;--sys:0.12"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2017</span><span class="seg__org">Barfoot &amp; Thompson</span></button><button class="seg" role="tab" id="t-r2" aria-controls="p-r2" aria-selected="false" style="--grow:1.67;--sys:0.22"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2019</span><span class="seg__org">DFS Group</span></button><button class="seg" role="tab" id="t-r3" aria-controls="p-r3" aria-selected="false" style="--grow:1.25;--sys:0.34"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2020</span><span class="seg__org">Rockfort Markets</span></button><button class="seg" role="tab" id="t-r4" aria-controls="p-r4" aria-selected="false" style="--grow:3.50;--sys:0.5"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2021</span><span class="seg__org">Sime Motors New Zealand</span></button><button class="seg" role="tab" id="t-r5" aria-controls="p-r5" aria-selected="false" style="--grow:0.83;--sys:0.78"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2025</span><span class="seg__org">Ipiphany AI</span></button><button class="seg" role="tab" id="t-r6" aria-controls="p-r6" aria-selected="false" style="--grow:0.55;--sys:1.0"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2026</span><span class="seg__org">Novamind Labs</span></button></div>
+        <p class="cvc__key" aria-hidden="true"><span>By hand</span><i></i><span>By agents</span><em>Share of the work running on systems</em></p>
         <div class="cvc__panels">
           <div class="role-panel" role="tabpanel" id="p-r1" aria-labelledby="t-r1">
             <div class="role-panel__head"><p class="role-panel__when">Nov 2017 to Jan 2019</p><h3>Marketing Specialist</h3><p class="role-panel__org">Barfoot &amp; Thompson · Auckland</p></div>

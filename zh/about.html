@@ -309,12 +309,13 @@
 <script src="/assets/visual.js?v=1" defer></script>
 <script src="/assets/cv.js?v=6" defer></script>
 <script src="/assets/cv-fx.js?v=7" defer></script>
+<script src="/assets/dot.js?v=9" defer></script>
 <link rel="preload" href="/fonts/google-sans-flex-vf.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/claude.css?v=14">
 <link rel="stylesheet" href="/assets/highend.css?v=11">
 <link rel="stylesheet" href="/assets/liquid.css?v=1">
 <script src="/assets/liquid.js?v=2" defer></script>
-<link rel="stylesheet" href="/assets/glass.css?v=22">
+<link rel="stylesheet" href="/assets/glass.css?v=23">
 <script src="/assets/glass.js?v=3" defer></script>
 <script>document.documentElement.className += ' has-nav';</script>
 <script src="/assets/nav.js?v=1" defer onerror="document.documentElement.classList.remove('has-nav')"></script>
@@ -387,14 +388,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="function" class="sec" aria-labelledby="function-title">
     <div class="wrap">
       <div class="min-head reveal"><p class="eyebrow">我做什么</p><h2 id="function-title">一个人，一整个营销职能。</h2></div>
-      <div class="map reveal" aria-label="营销职能">
-        <div class="map__col"><p class="map__group">策略</p><ul><li><button type="button" data-lane="claims">定位与核心信息</button></li></ul></div>
-        <div class="map__col map__col--wide"><p class="map__group">需求</p><ul><li><button type="button" data-lane="content">内容营销</button></li><li><button type="button" data-lane="search">SEO 与 AEO</button></li><li><button type="button" data-lane="voices">思想领导力</button></li><li><button type="button" data-lane="outbound">主动外联与 ABM</button></li><li><button type="button" data-lane="events">活动</button></li></ul></div>
-        <div class="map__col"><p class="map__group">引擎</p><ul><li><button type="button" data-lane="design">品牌与创意</button></li><li><button type="button" data-lane="ops">运营与数据分析</button></li></ul></div>
+      <div class="fnb reveal" data-fdot-host>
+        <div class="fnb__me"><img src="/assets/amber-lan-avatar.webp?v=5" width="56" height="56" alt="" loading="lazy" decoding="async"><p><b>Amber Lan</b><span>定策略，判断什么可以发布。</span></p></div>
+        <div class="fnb__groups" aria-label="营销职能">
+          <div class="fnb__group" style="--n:1"><p class="fnb__label">策略</p><ul><li><button type="button" class="fnb__lane" data-lane="claims"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="flow" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">定位与核心信息</span></button></li></ul></div>
+          <div class="fnb__group" style="--n:5"><p class="fnb__label">需求</p><ul><li><button type="button" class="fnb__lane" data-lane="content"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="content" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">内容营销</span></button></li><li><button type="button" class="fnb__lane" data-lane="search"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="search" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">SEO 与 AEO</span></button></li><li><button type="button" class="fnb__lane" data-lane="voices"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="social" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">思想领导力</span></button></li><li><button type="button" class="fnb__lane" data-lane="outbound"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="outbound" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">主动外联与 ABM</span></button></li><li><button type="button" class="fnb__lane" data-lane="events"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="launch" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">活动</span></button></li></ul></div>
+          <div class="fnb__group" style="--n:2"><p class="fnb__label">引擎</p><ul><li><button type="button" class="fnb__lane" data-lane="design"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="conversion" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">品牌与创意</span></button></li><li><button type="button" class="fnb__lane" data-lane="ops"><span class="sys-ico" aria-hidden="true"><svg class="fdot fdot--sys" data-fdot="measurement" data-r="36" viewBox="0 0 100 100" focusable="false"></svg></span><span class="fnb__name">运营与数据分析</span></button></li></ul></div>
+        </div>
+        <ol class="fnb__loop" aria-label="每条业务线如何运转"><li>我来定策略</li><li>智能体执行</li><li class="is-me">我判断什么可以发布</li><li>用结果衡量</li></ol>
       </div>
-      <ol class="loop reveal" aria-label="每条业务线如何运转">
-        <li>我来定策略</li><li>智能体执行</li><li class="me">我判断什么可以发布</li><li class="kpi">用结果衡量</li>
-      </ol>
       <details class="lanes-more">
         <summary>看看每条业务线如何运转</summary>
         <div class="board" data-board data-spot>
@@ -539,6 +541,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="min-head reveal no-print"><p class="eyebrow">职业经历</p><h2 id="career-title">六段经历，2017年至今。</h2></div>
       <div class="cvc reveal no-print" data-career>
         <div class="cvc__track" role="tablist" aria-label="职位经历，2017年至今"><button class="seg" role="tab" id="t-r1" aria-controls="p-r1" aria-selected="false" style="--grow:1.17;--sys:0.12"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2017</span><span class="seg__org">Barfoot &amp; Thompson</span></button><button class="seg" role="tab" id="t-r2" aria-controls="p-r2" aria-selected="false" style="--grow:1.67;--sys:0.22"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2019</span><span class="seg__org">DFS Group</span></button><button class="seg" role="tab" id="t-r3" aria-controls="p-r3" aria-selected="false" style="--grow:1.25;--sys:0.34"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2020</span><span class="seg__org">Rockfort Markets</span></button><button class="seg" role="tab" id="t-r4" aria-controls="p-r4" aria-selected="false" style="--grow:3.50;--sys:0.5"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2021</span><span class="seg__org">Sime Motors New Zealand</span></button><button class="seg" role="tab" id="t-r5" aria-controls="p-r5" aria-selected="false" style="--grow:0.83;--sys:0.78"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2025</span><span class="seg__org">Ipiphany AI</span></button><button class="seg" role="tab" id="t-r6" aria-controls="p-r6" aria-selected="false" style="--grow:0.55;--sys:1.0"><span class="seg__bar" aria-hidden="true"></span><span class="seg__when">2026</span><span class="seg__org">Novamind Labs</span></button></div>
+        <p class="cvc__key" aria-hidden="true"><span>手工</span><i></i><span>智能体</span><em>由系统完成的工作占比</em></p>
         <div class="cvc__panels">
           <div class="role-panel" role="tabpanel" id="p-r1" aria-labelledby="t-r1">
             <div class="role-panel__head"><p class="role-panel__when">2017年11月至2019年1月</p><h3>市场营销专员</h3><p class="role-panel__org">Barfoot &amp; Thompson · 奥克兰</p></div>
