@@ -5125,145 +5125,6 @@ AI-search optimisation helps AI assistants such as ChatGPT, Claude and Perplexit
 # Guides (full text)
 
 <!-- blog-full:start -->
-## What is a marketing engineer? A role guide for New Zealand and Australia.
-URL: https://www.flowai.co.nz/blog/marketing-engineer-new-zealand-australia
-Author: Amber Lan, AI marketing engineer, Auckland
-Updated: 2026-10-20
-
-Short answer: A marketing engineer builds the AI systems that produce a company's marketing, runs them every week on the company's own accounts, and keeps the judgement over what reaches a customer. In New Zealand and Australia the title is still rare in job ads, while the work is already advertised under marketing technology and lifecycle titles.
-
-The role in one sentence
-
-A marketing engineer is a marketer who builds the AI systems that produce a company's marketing, runs them on the company's own accounts, and keeps the judgement over what reaches a customer. The first half is engineering. The second half is the marketing taste that decides whether the output is any good.
-
-That is my working definition. I have done this job since April 2026, running a whole marketing function solo at an Auckland company on agents I built, and the definition is written from the inside. It is also a young title. No statistics agency in New Zealand or Australia counts it yet, and I am going to resist inventing a market to make it look inevitable. The evidence is the work: more marketing production is handed to AI systems every quarter, and someone has to be accountable for how those systems behave in front of customers.
-
-Two neighbours are worth separating before going further. A GTM engineer builds the systems that feed sales, such as prospect lists, enrichment and sequencing. A marketing automation specialist wires up the tools a marketing team already uses. The marketing engineer's object is heavier than either: the system that plans, produces, checks and reports the marketing itself. The full definition and the GTM comparison sit in their own guide. This one is about the role as it is done here, in New Zealand and Australia.
-
-What a marketing engineer actually does
-
-Five things make up the work. Take any one away and you have a different job: an analyst, an automation contractor, or a marketer with a new title. The five are writing the positioning into the system, building the agents on the company's accounts, reviewing every output, measuring with numbers that carry their source, and documenting the system so the team keeps it.
-
-Diagram, read as a list: Positioning brief (who you sell to, what you can prove) leads to Agents produce the week's work. Agents produce the week's work (on the company's own accounts) leads to Engineer reviews each release. Engineer reviews each release leads to Approved work reaches customers, Fix goes into the files. Approved work reaches customers leads to Numbers with their source. Numbers with their source (one page a month). Fix goes into the files (the team keeps the system) leads to Positioning brief.
-The five parts of the job in the order they happen each week. The amber step is where the engineer's time goes, and every rejection there flows back into the brief and the agents' instructions. The amber box is the step where a person decides.
-
-  Writing the positioning into the system. Who the company sells to, what it claims and what it can prove live in one brief that every agent reads before it writes a word. When the brief is wrong the agents are wrong in the same way fifty times, so this is the piece I spend the most time getting right with a founder.
-
-  Building the agents on the company's own accounts. A search agent that fixes how the business appears in Google and in AI answers. A content engine that turns one idea into a month of drafts. An outbound agent that researches a hundred buyers and stops the moment one replies. A reporting agent that reads the analytics and writes one page. Each lives in the business's own tools, so nothing walks out the door with the engineer.
-
-  Reviewing every output. Agents produce drafts. A named person decides what ships. In my own function that person is me, and the review takes more of the week than the building does. KPMG and the University of Melbourne found 51% of New Zealand employees had relied on AI output at work without evaluating its accuracy (surveyed over summer 2024-25). The human in the loop is the part of this role a business is paying for.
-
-  Measuring with numbers that carry their source. Every figure in a report says where it came from: the analytics property, the ad platform, the CRM, or a model, with its date range. A number without a basis is treated as a rumour, and the agent that produced it is corrected.
-
-  Documenting the system so the team keeps it. The instructions, the review rules and the prompts live in files the team can read, change and hand to the next person. When a run fails, the fix goes into the files, so the system improves instead of one person's memory improving.
-
-None of this guarantees a result. A well-built system still depends on a human deciding what the business should do next. What it does guarantee is that the deciding happens on evidence you can inspect.
-
-Marketing engineer vs the roles New Zealand and Australian businesses already hire
-
-Most local businesses already employ or contract one of five roles for their marketing. The marketing engineer overlaps with each and replaces none of them outright. The difference is the object of the work: the others direct people or tools, while the engineer builds and runs the system that does the producing, then stands behind what it sends.
-
-  
-    RoleWhat they ownWhat they produceWhere the marketing engineer differs
-
-  
-  
-    Marketing managerPlan, budget, people and agenciesDecisions and reportsBuilds the system that produces the work, then reviews it
-
-    Digital marketing specialistChannels: paid, social, emailCampaigns, by handTurns the recurring parts of those channels into agents
-
-    Marketing automation specialistHubSpot, Braze or similarWorkflows and triggersOwns the positioning and the review, as well as the plumbing
-
-    GTM engineerLists, enrichment, sequencingPipeline for salesCovers the marketing side: search, content, launches, reporting
-
-    AgencyA retainer and a teamWork you rarely see madeBuilds on your accounts and hands over, so the system stays yours
-
-  
-
-In a large organisation these can be separate seats. In a 5 to 50 person business they collapse into one or two people, which is exactly why the role is useful there. A marketing manager who can also engineer the system runs a function that used to need a team. The guide to agency, freelancer or in-house hire sets out what each option costs in New Zealand.
-
-The system behind the role
-
-The marketing engineer's central artefact is a system, and a good one has four layers: the context the agents reason from, the bounded jobs they may do, the checks that catch what they got wrong, and the review where a person decides. A stronger model helps. Only a stronger system makes the work inspectable and safe to hand to someone else.
-
-In my function the context layer is a positioning brief and a set of written voice rules. The jobs are ten agents, one per marketing job, from AI search to reporting. The checks are small and dull: a banned-word scan, a claims check against a register of what the company can prove, a link check, a source check on every number. The review is mine, on everything that reaches a customer. Running marketing on Claude Code is the working-notes version of how that is set up, and how a build runs shows the same system as a client would meet it.
-
-What I leave out of public writing is the operational detail: the exact thresholds, the gate checklists, the client-specific rules. Those encode judgement that belongs to the business that paid for it. The method publishes. The recipes stay with the client.
-
-Skills and tools, in order of weight
-
-Three capabilities carry the role, and the tool list matters less than the order. First, marketing judgement: knowing what good output looks like, and when a system should send nothing at all. Second, verification design: turning "looks right" into a check that can fail. Third, enough building skill to make and fix agents in production.
-
-  Marketing judgement. Positioning, editorial standards, what a claim needs behind it. This is the half most engineering candidates lack, and it is the half that keeps a business out of trouble. Salesforce's State of Marketing, surveying 4,450 marketers in late 2025, found only 13% using agentic AI, so most teams are still deciding what good looks like.
-
-  Verification design. A schema check, a character limit, a prohibited-claim scan, a read-back that compares what shipped with what was approved. This is the skill that separates engineering from enthusiasm, and the one I would test for first in an interview.
-
-  Building in an agentic environment. Comfort in a command-line tool such as Claude Code, where context, permissions and checks are plain files that can be versioned and reviewed. Comfort with APIs and a scripting language. Comfort inside the marketing tools themselves: GA4, Search Console, HubSpot or whatever CRM the business runs, the ad platforms, LinkedIn.
-
-Businesses hiring for the build half of this role often search for an Claude Code consultant or an AI agent developer before they search for a marketing engineer. Both are fair descriptions of the work, and both pages describe how a build with me runs.
-
-What the role pays in New Zealand and Australia
-
-There is no published salary band for the marketing engineer title in either country, so the honest answer is a range built from the roles either side of it. On SEEK New Zealand in October 2026, a marketing manager was advertised at NZ$105,000 to NZ$125,000. Recruiter estimates for senior AI roles sit near NZ$195,000. A marketing engineer lands between those, depending on how much of the role is building.
-
-  SEEK New Zealand put the advertised marketing manager band at NZ$105,000 to NZ$125,000 in October 2026, with a median of NZ$115,000.
-
-  Talent International's March 2026 list of the highest-paying technology jobs in New Zealand gives indicative estimates of around NZ$195,000 for senior AI roles such as agent architect, and labels them estimates.
-
-  For a sense of where the ceiling sits overseas, Figma's Marketing Engineer, AI Deployment ad lists a US$127,000 to US$296,000 base. Local pay will not match that, and local cost of living and spend levels explain most of the gap.
-
-The full table, with Australian bands for neighbouring roles and the methodology behind each number, is in the marketing engineer jobs data page, checked at source in October 2026. The guide to what AI marketing costs in Australia and New Zealand puts those salaries next to agency and contract prices.
-
-Where the jobs are, and what the ads call them
-
-The title is rare in local job ads and the work is common. SEEK's August 2026 New Zealand Employment Report found AI skills in 4.0% of all job ads, with mentions up 93.3% year on year, and the Marketing and Communications category runs well ahead of that average. Employers describe the job with the tools and the outcome rather than the title.
-
-Two Auckland examples from October 2026 show the pattern. Air New Zealand's Marketing Data and Technology Specialist ad asks for experience applying AI and automation, plus SQL, and its Customer Lifecycle Marketing Specialist ad asks the hire to apply conversation design to AI and LLM-powered customer journeys. Neither says marketing engineer. Both are hiring one. In Sydney, Lorikeet's GTM Engineer ad sat inside the marketing team and asked for building with Claude Code or Cursor, which is as close as an Australian listing has come to naming the role.
-
-New Zealand is slightly ahead of Australia on this measure. SEEK's July 2026 report put AI mentions at 3.7% of New Zealand ads against 2.1% in Australia. The skills lag the use, though: Hays New Zealand reported in September 2026 that 60% of technology professionals regularly use AI tools and only 22% have had formal training or support. If you are job hunting, search the tool names. If you are hiring, name the systems you want built in the ad, and the right people will recognise the job.
-
-When a New Zealand or Australian business needs one
-
-The role earns its cost under three conditions: marketing that has to run every week whether or not anyone has time, an owner who will set the rules and approve changes in writing, and enough recurring work that building a system beats doing it by hand. Below that, a good marketer with simple tools is the better buy.
-
-Diagram, read as a list: Marketing that must run every week leads to One owner sets the rules and approves. One owner sets the rules and approves leads to Recurring work, under 50 people, Several systems running weekly, Large paid media: an agency. Recurring work, under 50 people leads to Contract one system first. Contract one system first (built on your accounts, your team keeps it). Several systems running weekly leads to Hire a marketing engineer. Hire a marketing engineer. Large paid media: an agency.
-Which seat a New Zealand or Australian business needs depends on how much marketing has to run every week and who can own the rules. Most 5 to 50 person businesses start with one system and hire later. The amber box is the step where a person decides.
-
-  Weekly marketing with nobody spare to do it. Content that should go out every week, enquiries that should be answered the same day, a search presence that should be maintained. If these slip whenever the business gets busy, a system is the answer and a marketing engineer builds it.
-
-  One owner for the rules. Someone on the business side sets what the agents may touch and signs off the positioning, and answers in writing when a change falls outside the rules. If every decision needs a meeting, the system's speed advantage disappears into the calendar.
-
-  Enough recurring work to pay for a build. A one-off campaign does not need an engineer. A month of content every month does. Gartner predicts over 40% of agentic AI projects will be cancelled by the end of 2027 due to escalating costs, unclear business value or inadequate risk controls. Most of those will be projects that had no recurring job to pay them back.
-
-For a 5 to 50 person business, the order that works is one system first, built on your own accounts with someone inside trained to review it, then a full-time seat once several systems run weekly and need constant tuning. Large paid media budgets and production-heavy brand campaigns still belong with an agency. The guide to what an AI marketing agent is explains what one of those systems looks like from the inside.
-
-Where Amber Lan fits
-
-Amber Lan is an AI marketing engineer in Auckland who rebuilds the marketing function of businesses in New Zealand and Australia around AI agents. Her agents run search, content, outbound and reporting alongside the client's team. The role described above is the one I do, and this site is its public record: the skill library is open, the agent templates run on your site, and the six-month case shows the whole function running on one person.
-
-There are two ways to work together. Teams contract a build, which starts with a written plan setting the order of the rebuild, what week one delivers and the price. Companies hiring for a senior marketing engineer role can talk to me about it. Either way, ask me the questions this guide implies: where the review gates sit, what basis each number carries, who approves each release, and what reads back after it ships.
-
-The short version
-
-A marketing engineer builds the systems that produce a company's marketing, runs them on the company's own accounts and keeps the judgement over what ships. In New Zealand and Australia the title is still rare in job ads while the work is already being hired under marketing technology and lifecycle titles, and pay sits between a marketing manager's band and a senior AI role.
-
-Judge the person by the system. Ask to see one running, ask who reviews each release, and ask what the numbers in the last report were based on. For a small business, one system built first and a hire later is the order that pays back.
-
-To rebuild your marketing function around AI agents, talk to Amber.
-
-Q: What does a marketing engineer do in New Zealand?
-A: The same job as anywhere else, on a smaller market. A marketing engineer writes the company's positioning into a system, builds the agents that do the recurring marketing work on the company's own accounts, reviews every output before release, measures with sourced numbers, and documents the system so the team can run it. In New Zealand the work usually sits inside a 5 to 50 person business or a contract build.
-Q: Is there a marketing engineer job market in New Zealand or Australia yet?
-A: Under that title, barely. SEEK New Zealand searches in October 2026 found no live ad with the exact title in the leading results, and Australian ads are few. The work is advertised under neighbouring titles: marketing data and technology specialist, lifecycle marketing specialist, growth manager and GTM engineer. Search for the tools named in the ad, such as SQL, HubSpot, Braze or Claude Code, rather than the title.
-Q: What does a marketing engineer earn in New Zealand and Australia?
-A: There is no published band for the title in either country. The nearest advertised bands on SEEK New Zealand in October 2026 put a marketing manager at NZ$105,000 to NZ$125,000, and Talent International gives indicative estimates near NZ$195,000 for senior AI roles. Expect a marketing engineer to sit between those, depending on how much building the role carries.
-Q: How is a marketing engineer different from a marketing manager?
-A: A marketing manager directs people and agencies to produce the marketing and reports on the result. A marketing engineer builds the system that produces it, so the recurring work runs without a team behind every piece, and then reviews what the system sends. Many small businesses need the second role before they can afford the first one properly.
-Q: Does a small business in NZ or Australia need a full-time marketing engineer?
-A: Usually not at first. A business of 5 to 50 people gets more from one system built on its own accounts, with someone inside trained to review it, than from a full-time seat. A full-time hire pays off once several systems run every week and need constant tuning. A large paid media budget still belongs with an agency.
-Q: How do I tell a real marketing engineer from someone who has renamed their title?
-A: Ask to see a system that is running now: what it reads, what it produces each week, who approves the output, what broke last month and how it was fixed. A real one can show you the files and the review record. A relabelled marketer can show you a deck.
-
 ## How do you build a live marketing report with Claude Code?
 URL: https://www.flowai.co.nz/blog/live-marketing-report-claude-code
 Author: Amber Lan, AI marketing engineer, Auckland
@@ -8637,7 +8498,7 @@ A: Usually it cannot. The pilot excludes general software or product development
 ## What is a marketing engineer, and how is it different from a GTM engineer?
 URL: https://www.flowai.co.nz/blog/what-is-a-marketing-engineer
 Author: Amber Lan, AI marketing engineer, Auckland
-Updated: 2026-10-08
+Updated: 2026-10-27
 
 Short answer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content and reporting, and keeps the judgement over what ships. A GTM engineer builds the systems that feed sales: prospect lists, enrichment, sequencing and CRM automation. Either way, a real one can show you a running system.
 
@@ -8813,6 +8674,49 @@ For most small businesses the permanent hire comes last. The systems come first,
 A full-time hire makes sense when several systems run and someone senior can sign off positioning. Before that, a part-time engineer or a service can build the first marketing agents and train a person inside to review them. If the question is who plans the work above the agents, the guide to the AI CMO covers that layer.
 
 Either way, every system and prompt should live on accounts the business owns.
+
+Marketing engineers in New Zealand and Australia
+
+Most local businesses already employ or contract one of five roles for their marketing. The marketing engineer overlaps with each and replaces none of them outright. The difference is the object of the work: the others direct people or tools, while the engineer builds and runs the system that does the producing, then stands behind what it sends.
+
+  
+    RoleWhat they ownWhat they produceWhere the marketing engineer differs
+
+  
+  
+    Marketing managerPlan, budget, people and agenciesDecisions and reportsBuilds the system that produces the work, then reviews it
+
+    Digital marketing specialistChannels: paid, social, emailCampaigns, by handTurns the recurring parts of those channels into agents
+
+    Marketing automation specialistHubSpot, Braze or similarWorkflows and triggersOwns the positioning and the review, as well as the plumbing
+
+    GTM engineerLists, enrichment, sequencingPipeline for salesCovers the marketing side: search, content, launches, reporting
+
+    AgencyA retainer and a teamWork you rarely see madeBuilds on your accounts and hands over, so the system stays yours
+
+  
+
+In a large organisation these can be separate seats. In a 5 to 50 person business they collapse into one or two people, which is exactly why the role is useful there. A marketing manager who can also engineer the system runs a function that used to need a team. The guide to agency, freelancer or in-house hire sets out what each option costs in New Zealand.
+
+What the role pays
+
+There is no published salary band for the marketing engineer title in either country, so the honest answer is a range built from the roles either side of it. On SEEK New Zealand in October 2026, a marketing manager was advertised at NZ$105,000 to NZ$125,000. Recruiter estimates for senior AI roles sit near NZ$195,000. A marketing engineer lands between those, depending on how much of the role is building.
+
+  SEEK New Zealand put the advertised marketing manager band at NZ$105,000 to NZ$125,000 in October 2026, with a median of NZ$115,000.
+
+  Talent International's March 2026 list of the highest-paying technology jobs in New Zealand gives indicative estimates of around NZ$195,000 for senior AI roles such as agent architect, and labels them estimates.
+
+  For a sense of where the ceiling sits overseas, Figma's Marketing Engineer, AI Deployment ad lists a US$127,000 to US$296,000 base. Local pay will not match that, and local cost of living and spend levels explain most of the gap.
+
+The full table, with Australian bands for neighbouring roles and the methodology behind each number, is in the marketing engineer jobs data page, checked at source in October 2026. The guide to what AI marketing costs in Australia and New Zealand puts those salaries next to agency and contract prices.
+
+Where the jobs are, and what the ads call them
+
+The title is rare in local job ads and the work is common. SEEK's August 2026 New Zealand Employment Report found AI skills in 4.0% of all job ads, with mentions up 93.3% year on year, and the Marketing and Communications category runs well ahead of that average. Employers describe the job with the tools and the outcome rather than the title.
+
+Two Auckland examples from October 2026 show the pattern. Air New Zealand's Marketing Data and Technology Specialist ad asks for experience applying AI and automation, plus SQL, and its Customer Lifecycle Marketing Specialist ad asks the hire to apply conversation design to AI and LLM-powered customer journeys. Neither says marketing engineer. Both are hiring one. In Sydney, Lorikeet's GTM Engineer ad sat inside the marketing team and asked for building with Claude Code or Cursor, which is as close as an Australian listing has come to naming the role.
+
+New Zealand is slightly ahead of Australia on this measure. SEEK's July 2026 report put AI mentions at 3.7% of New Zealand ads against 2.1% in Australia. The skills lag the use, though: Hays New Zealand reported in September 2026 that 60% of technology professionals regularly use AI tools and only 22% have had formal training or support. If you are job hunting, search the tool names. If you are hiring, name the systems you want built in the ad, and the right people will recognise the job.
 
 Where Amber Lan fits
 
