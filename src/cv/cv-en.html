@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amber Lan · CV</title>
+<meta name="robots" content="noindex">
+<!-- Source for /assets/amber-lan-cv.pdf. Render with: node scripts/cv_pdf.js (see that file). -->
+<style>
+@font-face { font-family: "Google Sans Flex"; src: url("/fonts/google-sans-flex-vf.woff2") format("woff2"); font-weight: 100 1000; font-display: block; }
+@page { size: A4; margin: 0; }
+:root {
+  --ink: #121212; --body: #2b2a28; --muted: #6b6862; --faint: #9a968e; --hair: #e6e2da;
+  --gold: #b8862e; --gold-soft: #f4ead6; --paper: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #d9d6cf; color: var(--body); font-family: "Google Sans Flex", system-ui, sans-serif; font-size: 9.6pt; line-height: 1.45; font-variation-settings: "GRAD" 0; }
+a { color: inherit; text-decoration: none; }
+.page { position: relative; width: 210mm; height: 297mm; margin: 0 auto 10mm; padding: 13mm 16mm 14mm; background: var(--paper); overflow: hidden; }
+@media print { body { background: none; } .page { margin: 0; break-after: page; } .page:last-child { break-after: auto; } }
+
+/* header */
+.top { display: grid; grid-template-columns: 1fr auto; gap: 8mm; align-items: end; padding-bottom: 5mm; border-bottom: 0.6pt solid var(--ink); }
+.mark { display: block; width: 10mm; height: auto; margin-bottom: 3.5mm; }
+.name { color: var(--ink); font-size: 30pt; font-weight: 500; line-height: 1; letter-spacing: -0.025em; }
+.role { margin-top: 2.2mm; color: var(--ink); font-size: 11.5pt; letter-spacing: -0.005em; }
+.where { margin-top: 1mm; color: var(--muted); font-size: 9.2pt; }
+.contact { list-style: none; text-align: right; font-size: 8.8pt; line-height: 1.7; color: var(--body); }
+.contact a { border-bottom: 0.5pt solid var(--hair); }
+
+.summary { margin-top: 5mm; max-width: 172mm; color: var(--ink); font-size: 10.4pt; line-height: 1.5; letter-spacing: -0.003em; }
+
+/* results */
+.results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 5mm; margin-top: 5.5mm; }
+.r { padding-top: 2.6mm; border-top: 0.6pt solid var(--hair); }
+.r:first-child { border-top-color: var(--gold); }
+.r b { display: block; color: var(--ink); font-size: 20pt; font-weight: 500; line-height: 1.05; letter-spacing: -0.03em; }
+.r span { display: block; margin-top: 1.4mm; color: var(--body); font-size: 8.6pt; line-height: 1.35; }
+.r em { display: block; margin-top: 0.8mm; color: var(--faint); font-size: 7.8pt; font-style: normal; }
+
+/* sections */
+.sec { margin-top: 6.5mm; }
+.label { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3.5mm; color: var(--gold); font-size: 8.4pt; font-weight: 500; letter-spacing: 0.06em; }
+.key { display: inline-flex; align-items: center; gap: 2mm; color: var(--faint); font-size: 7.6pt; font-weight: 400; letter-spacing: 0.01em; }
+.key i { display: inline-block; width: 14mm; height: 1.3mm; border-radius: 1mm; background: linear-gradient(90deg, #e9e5dd, var(--gold)); }
+
+/* roles */
+.job { display: grid; grid-template-columns: 37mm 1fr; gap: 0 5mm; padding: 3.2mm 0 3.2mm; border-top: 0.5pt solid var(--hair); break-inside: avoid; }
+.job:first-of-type { border-top: 0; padding-top: 0; }
+.when { color: var(--muted); font-size: 8.4pt; white-space: nowrap; font-variant-numeric: tabular-nums; line-height: 1.4; }
+.sys { display: block; width: 22mm; height: 1.3mm; margin-top: 2.2mm; border-radius: 1mm; background: #ece8e1; overflow: hidden; }
+.sys i { display: block; height: 100%; width: calc(var(--s) * 100%); border-radius: 1mm; background: linear-gradient(90deg, #d9cdb4, var(--gold)); }
+.title { color: var(--ink); font-size: 11pt; font-weight: 500; letter-spacing: -0.01em; }
+.org { margin-top: 0.4mm; color: var(--muted); font-size: 8.9pt; }
+.job ul { margin-top: 1.9mm; list-style: none; }
+.job li { position: relative; padding-left: 3.6mm; margin-top: 0.8mm; font-size: 9.1pt; line-height: 1.42; }
+.job li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 1.3mm; height: 0.5pt; background: var(--faint); }
+.job li b { color: var(--ink); font-weight: 500; }
+
+/* work */
+.work { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; }
+.w { padding: 3mm 0 0; border-top: 0.5pt solid var(--hair); break-inside: avoid; }
+.w b { display: block; color: var(--ink); font-size: 9.8pt; font-weight: 500; line-height: 1.35; }
+.w span { display: block; margin-top: 0.8mm; font-size: 8.8pt; color: var(--body); }
+.w a { display: inline-block; margin-top: 1mm; color: var(--gold); font-size: 8.2pt; }
+
+/* columns */
+.cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 6mm; }
+.cols h3 { margin-bottom: 1.6mm; color: var(--ink); font-size: 9.4pt; font-weight: 500; }
+.cols ul { list-style: none; }
+.cols li { margin-bottom: 1mm; font-size: 8.6pt; line-height: 1.38; }
+.cols p { font-size: 8.6pt; line-height: 1.48; }
+.cols .c { padding-top: 3mm; border-top: 0.5pt solid var(--hair); }
+
+.foot { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; color: var(--faint); font-size: 7.6pt; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <header class="top">
+    <div>
+      <img class="mark" src="/assets/al-monogram.svg" alt="">
+      <h1 class="name">Amber Lan</h1>
+      <p class="role">AI marketing engineer and GTM engineer</p>
+      <p class="where">Auckland, New Zealand · English and Mandarin, both native</p>
+    </div>
+    <ul class="contact">
+      <li><a href="mailto:amber.lan.growth.digital@gmail.com">amber.lan.growth.digital@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/amberlan/">linkedin.com/in/amberlan</a></li>
+      <li><a href="https://www.flowai.co.nz/about">flowai.co.nz/about</a></li>
+      <li><a href="https://github.com/Amberlanqinyun">github.com/Amberlanqinyun</a></li>
+    </ul>
+  </header>
+
+  <p class="summary">I run a whole marketing function on AI agents I build, and I keep the judgement on everything that ships: positioning, launches, content, executive voices, AI search, outbound, events and reporting. Nine years across B2B SaaS, regulated finance, automotive and luxury retail; the last three spent building the systems that run marketing.</p>
+
+  <div class="results">
+    <div class="r"><b>1 person</b><span>running the whole marketing function</span><em>Novamind Labs, 2026</em></div>
+    <div class="r"><b>70%+</b><span>less content production effort</span><em>Ipiphany AI, 2025 to 2026</em></div>
+    <div class="r"><b>+40%</b><span>paid media performance, with cost per acquisition down 30%</span><em>Sime Motors, 2021 to 2025</em></div>
+    <div class="r"><b>+150%</b><span>organic traffic in 12 months</span><em>Rockfort Markets, 2020 to 2021</em></div>
+  </div>
+
+  <div class="sec">
+    <p class="label">Experience <span class="key">By hand <i></i> by agents</span></p>
+
+    <article class="job">
+      <div><p class="when">Apr 2026 to now</p><span class="sys" style="--s:1"><i></i></span></div>
+      <div>
+        <p class="title">AI Product Marketing &amp; Growth Lead</p>
+        <p class="org">Novamind Labs · Auckland · AI-native B2B SaaS, founding marketer</p>
+        <ul>
+          <li>Run the <b>entire marketing function solo</b> on an agent stack I built in Claude Code: content, three executive voices, AI search, outbound, events and reporting.</li>
+          <li>Own category, positioning and messaging from scratch, tested in conversations with design partners.</li>
+          <li>Own the launch end to end: beachhead, sequencing, launch surfaces and the first 90-day demand motion.</li>
+          <li>Built the brand and the launch site as one system, with every claim traced to a source.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><p class="when">Jun 2025 to Apr 2026</p><span class="sys" style="--s:.78"><i></i></span></div>
+      <div>
+        <p class="title">Senior Marketing Manager</p>
+        <p class="org">Ipiphany AI · Auckland · B2B SaaS entering a new category</p>
+        <ul>
+          <li>Built the demand and ABM engine from zero: LinkedIn and Google Ads, Apollo and HeyReach outbound, SEO and content, run on weekly experiments tied to pipeline.</li>
+          <li>Architected HubSpot from scratch: lead scoring, lifecycle stages, attribution and the pipeline dashboards sales trusted.</li>
+          <li>Automated brief to draft to publish across HubSpot, Apollo, HeyReach and n8n, cutting <b>content production effort by 70%+</b>.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><p class="when">Dec 2021 to Jun 2025</p><span class="sys" style="--s:.5"><i></i></span></div>
+      <div>
+        <p class="title">Digital Marketing Specialist</p>
+        <p class="org">Sime Motors New Zealand · Auckland · multi-brand automotive group</p>
+        <ul>
+          <li>Lifted <b>paid media performance 40%</b> through structured testing of audiences, bidding, creative and landing pages across Google, Meta and display.</li>
+          <li>Cut <b>cost per acquisition 30%</b> by rebuilding campaign structures and moving spend to the channels that converted.</li>
+          <li>Built automated attribution and reporting in GA4 and Google Tag Manager, replacing more than ten hours a week of manual work.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <footer class="foot"><span>Amber Lan · CV</span><span>1 / 2</span></footer>
+</section>
+
+<section class="page">
+  <div class="sec" style="margin-top:0">
+    <p class="label">Experience, continued</p>
+
+    <article class="job">
+      <div><p class="when">Sep 2020 to Dec 2021</p><span class="sys" style="--s:.34"><i></i></span></div>
+      <div>
+        <p class="title">Digital Marketing Manager</p>
+        <p class="org">Rockfort Markets · regulated financial services</p>
+        <ul>
+          <li>Owned the full marketing function: strategy, budget, the website, SEO and omnichannel.</li>
+          <li>Grew <b>organic traffic 150% in 12 months</b> through keyword strategy, site architecture and technical SEO, reaching first place for core trading keywords.</li>
+          <li>Cut acquisition cost 30% within two quarters through paid media optimisation and funnel fixes, and led the website rebuild through to the SEO migration.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><p class="when">Jan 2019 to Sep 2020</p><span class="sys" style="--s:.22"><i></i></span></div>
+      <div>
+        <p class="title">Consumer Marketing Specialist</p>
+        <p class="org">DFS Group · Auckland · luxury travel retail, New Zealand and APAC</p>
+        <ul>
+          <li>Ran integrated campaigns across paid social, CRM, email and in-store to drive repeat purchase and basket value.</li>
+          <li>Built bilingual growth for Mandarin-speaking customers on WeChat, Weibo and Xiaohongshu.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div><p class="when">Nov 2017 to Jan 2019</p><span class="sys" style="--s:.12"><i></i></span></div>
+      <div>
+        <p class="title">Marketing Specialist</p>
+        <p class="org">Barfoot &amp; Thompson · Auckland · one of New Zealand's largest real-estate agencies</p>
+        <ul>
+          <li>Delivered lead generation and brand campaigns across property listings, social and paid digital.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <div class="sec">
+    <p class="label">Selected work</p>
+    <div class="work">
+      <div class="w"><b>Six months, one operator, a whole marketing function.</b><span>How the Novamind function runs on agents, with what worked and what did not.</span><a href="https://www.flowai.co.nz/work/six-month-marketing-function">flowai.co.nz/work/six-month-marketing-function</a></div>
+      <div class="w"><b>One document in, a month of posts out.</b><span>A content engine with a codified brand voice and a quality gate.</span><a href="https://www.flowai.co.nz/work/content-engine">flowai.co.nz/work/content-engine</a></div>
+      <div class="w"><b>An SEO toolkit built for AI citations.</b><span>Open source, for being found by Google and cited by answer engines.</span><a href="https://www.flowai.co.nz/work/geo-seo-toolkit">flowai.co.nz/work/geo-seo-toolkit</a></div>
+      <div class="w"><b>126 open-source marketing skills, 16 of them mine.</b><span>A public library of agent skills for marketing work.</span><a href="https://www.flowai.co.nz/skills/">flowai.co.nz/skills</a></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="label">Skills and education</p>
+    <div class="cols">
+      <div class="c"><h3>Capabilities</h3><ul>
+        <li>Marketing engineering: Claude Code, agents, skills and MCP</li>
+        <li>Positioning, launch and founder go-to-market</li>
+        <li>Demand generation, ABM and outbound</li>
+        <li>AI search: SEO through to AEO and GEO</li>
+        <li>Lifecycle, attribution and RevOps</li>
+        <li>Marketing analytics in SQL on BigQuery, GA4 and CRM data</li>
+      </ul></div>
+      <div class="c"><h3>Stack</h3><p>Claude Code, MCP, Python, TypeScript, SQL, React and Next.js, Playwright, HubSpot, Apollo, HeyReach, n8n, Zapier, GA4, Google Tag Manager, BigQuery, Webflow, Figma, Google, Meta and LinkedIn Ads, Vercel, GitHub.</p></div>
+      <div class="c"><h3>Education</h3><ul>
+        <li>Master of Applied Computing, Lincoln University</li>
+        <li>Master of Management Studies (Marketing), University of Waikato</li>
+        <li>BA, PR and Communication, Fujian Normal University</li>
+        <li>Certified: Google Analytics 4, Advanced SEO, Data Science Foundations</li>
+      </ul></div>
+    </div>
+  </div>
+  <footer class="foot"><span>Amber Lan · CV</span><span>2 / 2</span></footer>
+</section>
+
+</body>
+</html>

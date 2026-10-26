@@ -1203,3 +1203,12 @@ main.cv .role-panel__win b { margin-bottom: 0.35rem; font-size: clamp(2rem, 3.4v
 @media (max-width: 720px) {
   .cvc__key em { flex-basis: 100%; margin: 0; padding: 0; border: 0; }
 }
+
+/* ---- 29. About: the CV button shows the CV (27 Oct 2026) -----------------------
+   A hiring manager sees the first page before they download it: a small page
+   inside the button that lifts on hover. */
+.btn-cv { gap: 0.7rem; padding-left: 0.6rem; }
+.btn-cv img { width: 24px; height: 34px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 6px 14px -6px rgba(0, 0, 0, 0.8); transform: rotate(-4deg); transition: transform 280ms var(--ease-out); }
+.btn-cv:hover img, .btn-cv:focus-visible img { transform: rotate(0deg) translateY(-2px) scale(1.08); }
+.btn-cv small { color: var(--tier-meta); font-size: 12px; font-weight: 400; }
+@media (max-width: 420px) { .btn-cv small { display: none; } }
