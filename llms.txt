@@ -85,7 +85,6 @@ Site structure:
   - /blog/ai-marketing-automation-small-business: AI marketing automation is software that runs marketing steps on triggers, such as a welcome email after a sign-up, with AI writing, sorting and personalising the content inside each step. A small business should start with six: a welcome sequence, enquiry follow-up, quote follow-up, review requests, abandoned bookings or carts, and re-engagement.
   - /blog/claude-code-for-marketing-agencies: Start with a brief file for each client, then build research packs, first drafts, an SEO and AEO audit and monthly reporting, in that order. Keep each client in its own folder with its own connectors, put a person on review before the client sees anything, and use a commercial plan so client data stays out of model training.
   - /blog/live-marketing-report-claude-code: Connect Claude Code to the tools that hold your numbers, pull the ones without a live connector into daily files, and publish one page that reads both. Give it a date picker that compares each period with the one just before it, and have it write each channel's story in plain English. A person approves before anything is shared.
-  - /blog/marketing-engineer-new-zealand-australia: A marketing engineer builds the AI systems that produce a company's marketing, runs them every week on the company's own accounts, and keeps the judgement over what reaches a customer. In New Zealand and Australia the title is still rare in job ads, while the work is already advertised under marketing technology and lifecycle titles.
   - /blog/n8n-vs-zapier-vs-make-vs-claude-code: Choose Zapier when non-technical staff need simple app-to-app automations quickly. Choose Make for visual multi-step scenarios at a lower entry price. Choose n8n when someone technical wants self-hosting or high volumes billed per run. Choose Claude Code when the work needs judgement, such as drafting a weekly report, and someone is comfortable working with files.
   - /blog/running-marketing-on-claude-code: You give each lane of marketing work its own instruction file, turn every repeated procedure into a versioned skill, connect the agent to the tools where marketing lives through MCP, and schedule the recurring briefs. The agents research and draft. One person reviews everything and approves what ships, so the judgement stays human.
   - /blog/what-is-a-marketing-engineer: A marketing engineer is a marketer who builds and runs the AI systems that produce a company's marketing, such as agents for search, content and reporting, and keeps the judgement over what ships. A GTM engineer builds the systems that feed sales: prospect lists, enrichment, sequencing and CRM automation. Either way, a real one can show you a running system.
@@ -109,6 +108,12 @@ Site structure:
 - /tools/decision-map: free marketing decision map toolkit. List your marketing decisions, score value, risk and frequency, see which ones AI can make, which it drafts for approval and which stay human, then write one-page decision rules. Runs in the browser; nothing is sent.
 - /flowai-brand-guidelines: the brand system.
 - /zh/: the whole site in Simplified Chinese (简体中文): every page and guide at the same path under /zh/ (for example /zh/about, /zh/blog/what-is-a-marketing-engineer). Each page links its English and Chinese versions with hreflang.
+
+## What clients say about Amber Lan
+
+- "Amber is helping us pull our AEO and SEO strategy together. She makes sure we consider every detail, and through marketing automation we now have full tracking and reporting on our marketing performance." James, legal director at a law firm.
+- "Amber is reliable and genuinely useful. We work with her on our website and lead generation. She delivers on time, communicates clearly and brings clear digital marketing and strategic thinking." Gota (gota.co.nz).
+- "Amber is super efficient and clear, with a great vision. Her taste in design and websites is second to none. I love working with her and highly recommend her." Sarah Walter, Lullababy.
 
 ## What is an AI marketing engineer?
 
