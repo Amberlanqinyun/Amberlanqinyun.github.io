@@ -31,6 +31,7 @@ Site structure:
 - /ai-marketing-services/marketing-automation-consultant: Marketing automation consultant in New Zealand: HubSpot and CRM workflows, consent-based follow-up, attribution and reporting, under NZ and Australian spam law.
 - /ai-marketing-services/claude-code-consultant: Claude Code consultant for marketing teams: lane files, skills library, MCP connectors, review gates and client separation for agencies.
 - /ai-marketing-services/gtm-engineer: GTM engineer for NZ and Australian teams: target account lists, enrichment, outbound, HubSpot architecture, automation and pipeline reporting. Hire for a senior role, contract a build or work fractionally.
+- /ai-marketing-services/fractional-cmo: Fractional CMO in Auckland and New Zealand: positioning, plan and budget, direction for the team and agencies and a monthly report to the owner, a set number of days each month, with the function running on AI agents between them.
 - / (landing): what Amber Lan builds, an illustrative demo, the systems, free tools and FAQ. Two routes: work with Amber on a build, or talk about a role.
 - /work: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
 - /cases: evidence library of working marketing systems, open source tools, and human-centred product builds, with honest project status and direct repository links.
@@ -10570,7 +10571,7 @@ What is the notice period? Packaged services often run month to month, while Mae
 
 Where Amber Lan fits
 
-Amber Lan is an AI marketing engineer in Auckland who rebuilds a company's marketing function around AI agents and runs it with the client's team. Her work covers the production and reporting side that a fractional manager directs, and she builds the systems herself. It can sit under a fractional manager or come before one.
+Amber Lan is an AI marketing engineer in Auckland who rebuilds a company's marketing function around AI agents and runs it with the client's team. Her work covers the production and reporting side that a fractional manager directs, and she builds the systems herself. It can sit under a fractional manager or come before one. She also takes the role herself as a fractional CMO in Auckland, leading the plan and building the system that runs it.
 
 It starts with a written scope that sets the order of the rebuild. Each build is scoped and priced per project. The sprints page lists what each one installs.
 
@@ -10725,7 +10726,7 @@ For an AI CMO, ask what it reads before planning, what it produces each week and
 
 Where Amber Lan fits
 
-Amber Lan is an AI marketing engineer in Auckland who rebuilds a company's marketing function around AI agents and runs it with the client's team. Her model sits on the AI side of this comparison, with the planning and the production built as systems on the business's own accounts.
+Amber Lan is an AI marketing engineer in Auckland who rebuilds a company's marketing function around AI agents and runs it with the client's team. Her model sits on the AI side of this comparison, with the planning and the production built as systems on the business's own accounts. She also takes the role herself as a fractional CMO in Auckland, leading the plan and building the system that runs it.
 
 She can work alongside a fractional CMO where a business has one. The written scope sets the order of the rebuild. Each build is scoped and priced per project. The sprints page lists what each install covers.
 

@@ -31,6 +31,7 @@ Site structure:
 - /ai-marketing-services/marketing-automation-consultant: Marketing automation consultant in New Zealand: HubSpot and CRM workflows, consent-based follow-up, attribution and reporting, under NZ and Australian spam law.
 - /ai-marketing-services/claude-code-consultant: Claude Code consultant for marketing teams: lane files, skills library, MCP connectors, review gates and client separation for agencies.
 - /ai-marketing-services/gtm-engineer: GTM engineer for NZ and Australian teams: target account lists, enrichment, outbound, HubSpot architecture, automation and pipeline reporting. Hire for a senior role, contract a build or work fractionally.
+- /ai-marketing-services/fractional-cmo: Fractional CMO in Auckland and New Zealand: positioning, plan and budget, direction for the team and agencies and a monthly report to the owner, a set number of days each month, with the function running on AI agents between them.
 - / (landing): what Amber Lan builds, an illustrative demo, the systems, free tools and FAQ. Two routes: work with Amber on a build, or talk about a role.
 - /work: full body of work organised as the go-to-market machine: Strategy, Demand engines, Built to ship.
 - /cases: evidence library of working marketing systems, open source tools, and human-centred product builds, with honest project status and direct repository links.
