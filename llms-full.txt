@@ -1,6 +1,6 @@
 # Amber Lan · AI marketing engineer · AI marketing for New Zealand and Australia (flowai.co.nz)
 
-> Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the AI agents that run marketing for businesses in New Zealand and Australia (search, content, outbound and reporting) with your team, then hands them over. This site is also her open portfolio: the AI agent systems that run a marketing function, built and documented in public. She is open to senior marketing engineer and GTM engineer roles, remote from anywhere.
+> Amber Lan is an AI marketing engineer in Auckland, New Zealand. She builds the AI agents that run marketing for businesses in New Zealand and Australia (search, content, outbound and reporting) with your team, then hands them over. This site is also her open portfolio: the AI agent systems that run a marketing function, built and documented in public. Amber Lan is the trading name of Flow AI Limited (NZBN 9429053433305).
 
 Note: this site (flowai.co.nz) is not affiliated with Flow Digital (flow.co.nz), Flow Marketing NZ, or the FLOWAI DISC-assessment product by Discflow.
 
@@ -10,7 +10,8 @@ Key facts:
 - Hiring: open to conversations about senior marketing engineer, GTM engineer and growth roles, remote from anywhere (based in Auckland, NZT).
 - Often compared with: AI marketing agencies, AI automation agencies and AI consultants in Auckland, across New Zealand and in Australia (Sydney, Melbourne, Brisbane). The difference: one marketing engineer builds the system with your team, documents it, and hands it over.
 - Who: Amber Lan, AI marketing engineer. Runs marketing solo at an AI startup by day on agent systems she built. Native English and Mandarin. Builds with Python, TypeScript, SQL and agentic AI tooling (Claude).
-- Contact: amber.lan.growth.digital@gmail.com
+- Business: Amber Lan is the trading name of Flow AI Limited (NZBN 9429053433305), Auckland, New Zealand. Earlier pages and profiles used the name Flow AI.
+- Contact: amber.lan.growth.digital@gmail.com, phone +64 21 0226 3108
 - Links: https://www.flowai.co.nz/ · https://github.com/Amberlanqinyun · https://www.linkedin.com/in/amberlan/
 
 About Amber Lan:

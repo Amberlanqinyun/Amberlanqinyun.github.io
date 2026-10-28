@@ -62,7 +62,7 @@ FOOTER_ZH = HEADER_ZH + [
     ('>Manifesto</a>', '>宣言</a>'),
     ('>The dot</a>', '>这颗点</a>'),
     ('>Privacy</a>', '>隐私政策</a>'),
-    ('&copy; 2026, Auckland, New Zealand', '&copy; 2026 · 新西兰奥克兰'),
+    ('&copy; 2026 Flow AI Limited, trading as Amber Lan. Auckland, New Zealand.', '&copy; 2026 Flow AI Limited，以 Amber Lan 为商号经营。新西兰奥克兰。'),
     ('aria-label="Amber Lan on LinkedIn"', 'aria-label="Amber Lan 的 LinkedIn"'),
     ('aria-label="Amber Lan on GitHub"', 'aria-label="Amber Lan 的 GitHub"'),
     ('aria-label="Email Amber Lan"', 'aria-label="给 Amber Lan 发邮件"'),

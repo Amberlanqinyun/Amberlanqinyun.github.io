@@ -1241,3 +1241,16 @@ main.cv .role-panel__win b { margin-bottom: 0.35rem; font-size: clamp(2rem, 3.4v
   .hero .svc-answer { max-width: 50ch; }
   .hero .hero-fact, .hero.has-orb .hero-fact { right: clamp(1.25rem, 3.2vw, 3rem); }
 }
+
+/* ---- 32. The business line on Contact: the trading name in the quiet meta tier ---- */
+/* Left-aligned under the form and kept to the form's left half, so the hero fact card never covers it. */
+.contact-entity {
+  margin: 1.5rem auto 0;
+  width: min(100%, 40rem);
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--tier-meta);
+  text-align: left;
+}
+@media (min-width: 901px) { .contact-entity { padding-right: min(8rem, 20%); } }
