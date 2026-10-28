@@ -1,0 +1,25 @@
+{
+  "one-record": {
+    "caption": {
+      "en": "One master record of the business feeds both systems. The map pack reads it mainly from the profiles and reviews; AI answers read it from the profiles, directories, lists and your own pages.",
+      "zh": "同一份企业主记录同时供给两套系统。地图结果主要从商家资料和评论中读取；AI 答案则从商家资料、目录、榜单和你自己的网页中读取。"
+    },
+    "cols": 3,
+    "nodes": [
+      {"id": "record", "col": 0, "row": 0, "span": 2, "kind": "human",
+       "label": {"en": "One master record", "zh": "一份主记录"},
+       "note": {"en": "name, area, phone, site", "zh": "名称、区域、电话、网站"}},
+      {"id": "profiles", "col": 1, "row": 0, "kind": "source",
+       "label": {"en": "Google, Bing, Apple profiles", "zh": "Google、Bing、Apple 商家资料"}},
+      {"id": "elsewhere", "col": 1, "row": 1, "kind": "source",
+       "label": {"en": "Directories, lists, reviews, pages", "zh": "目录、榜单、评论、网页"}},
+      {"id": "maps", "col": 2, "row": 0, "kind": "out",
+       "label": {"en": "Map pack", "zh": "地图结果"},
+       "note": {"en": "relevance, distance, prominence", "zh": "相关性、距离、知名度"}},
+      {"id": "answers", "col": 2, "row": 1, "kind": "out",
+       "label": {"en": "AI answers", "zh": "AI 答案"},
+       "note": {"en": "names it can confirm", "zh": "能核实的商家名字"}}
+    ],
+    "edges": [["record", "profiles"], ["record", "elsewhere"], ["profiles", "maps"], ["profiles", "answers"], ["elsewhere", "answers"]]
+  }
+}
