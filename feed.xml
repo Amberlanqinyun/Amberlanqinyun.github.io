@@ -5,8 +5,17 @@
   <link href="https://www.flowai.co.nz/feed.xml" rel="self"/>
   <link href="https://www.flowai.co.nz/"/>
   <id>https://www.flowai.co.nz/</id>
-  <updated>2026-10-27T00:00:00+13:00</updated>
+  <updated>2026-10-28T00:00:00+13:00</updated>
   <author><name>Amber Lan</name></author>
+  <entry>
+    <title>How do New Zealand and Australian businesses rank higher in local search and AI answers?</title>
+    <link href="https://www.flowai.co.nz/blog/local-search-ai-answers-nz-australia"/>
+    <id>https://www.flowai.co.nz/blog/local-search-ai-answers-nz-australia</id>
+    <published>2026-10-28T00:00:00+13:00</published>
+    <updated>2026-10-28T00:00:00+13:00</updated>
+    <summary>How NZ and Australian businesses rank higher in Google Maps, Bing and AI answers: profiles, the NZBN and ABN record, lawful reviews, lists, with an Auckland section.</summary>
+    <category term="AI search"/>
+  </entry>
   <entry>
     <title>How do you build a live marketing report with Claude Code?</title>
     <link href="https://www.flowai.co.nz/blog/live-marketing-report-claude-code"/>
